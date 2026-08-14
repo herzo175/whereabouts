@@ -26,9 +26,7 @@ function Home() {
       aria-busy="true"
       className="grid min-h-screen place-items-center bg-background px-6 text-paper"
     >
-      <output aria-live="polite">
-        Opening today’s briefing…
-      </output>
+      <output aria-live="polite">Opening today’s briefing…</output>
     </main>
   );
 }
