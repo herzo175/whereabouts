@@ -1,15 +1,8 @@
+/// <reference types="vite/client" />
+
 import manifest from '../content/manifest.json' with { type: 'json' };
 
 import { type DailyCase, dailyCaseSchema } from './schema.js';
-
-declare global {
-  interface ImportMeta {
-    glob(
-      pattern: string,
-      options: { eager: true; import: 'default' },
-    ): Record<string, unknown>;
-  }
-}
 
 type ManifestEntry = {
   caseNumber: number;
