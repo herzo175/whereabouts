@@ -36,7 +36,7 @@ describe('PoiPicker', () => {
     render(<PoiPicker pois={pois} onGuess={vi.fn()} />);
 
     await user.type(
-      screen.getByRole('textbox', { name: /search locations/i }),
+      screen.getByRole('searchbox', { name: /search locations/i }),
       query,
     );
 
