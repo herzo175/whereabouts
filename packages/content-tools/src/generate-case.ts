@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import {
   access,
   mkdir,
@@ -5,7 +6,7 @@ import {
   rename,
 } from 'node:fs/promises';
 import { dirname } from 'node:path';
-import { openai } from '@ai-sdk/openai';
+import { createOpenRouter } from '@openrouter/ai-sdk-provider';
 import {
   type DailyCase,
   dailyCaseSchema,
@@ -50,6 +51,24 @@ export const generatedCaseDraftSchema = z.object({
 });
 export type GeneratedCaseDraft = z.infer<typeof generatedCaseDraftSchema>;
 
+function orderPoisForDisplay(
+  pois: Poi[],
+  seed: { date: string; revision: number; caseNumber: number },
+): Poi[] {
+  const prefix = `${seed.date}:${seed.revision}:${seed.caseNumber}`;
+  return pois
+    .map((poi) => ({
+      poi,
+      key: createHash('sha256').update(`${prefix}:${poi.id}`).digest('hex'),
+    }))
+    .sort((left, right) =>
+      left.key === right.key
+        ? left.poi.id.localeCompare(right.poi.id)
+        : left.key.localeCompare(right.key),
+    )
+    .map(({ poi }) => poi);
+}
+
 type GenerateDependencies = {
   date: string;
   revision: number;
@@ -62,18 +81,38 @@ type GenerateDependencies = {
   writeFile?: (path: string, data: string) => Promise<void>;
 };
 
+type GenerationEnvironment = Readonly<Record<string, string | undefined>>;
+
+export function resolveGenerationConfig(environment: GenerationEnvironment): {
+  apiKey: string;
+  model: string;
+} {
+  const apiKey = environment.OPENROUTER_API_KEY?.trim();
+  if (!apiKey) throw new Error('OPENROUTER_API_KEY is required for generation');
+  return {
+    apiKey,
+    model:
+      environment.WHEREABOUTS_MODEL?.trim() ||
+      'deepseek/deepseek-v4-flash-0731',
+  };
+}
+
 async function defaultGenerate(
   pois: Poi[],
   extracts: WikipediaExtract[],
 ): Promise<unknown> {
   requireProductionUserAgent();
-  // ai@5.0.x exposes the v5 structured-output option under this compatibility name.
+  const config = resolveGenerationConfig(process.env);
+  const openrouter = createOpenRouter({
+    apiKey: config.apiKey,
+    appName: 'Whereabouts',
+  });
   const result = await generateText({
-    model: openai(process.env.WHEREABOUTS_MODEL ?? 'gpt-5-mini'),
-    experimental_output: Output.object({ schema: generatedCaseDraftSchema }),
+    model: openrouter.chat(config.model),
+    output: Output.object({ schema: generatedCaseDraftSchema }),
     prompt: buildCasePrompt(pois, extracts),
   });
-  return result.experimental_output;
+  return result.output;
 }
 
 function sourceId(index: number): string {
@@ -124,7 +163,11 @@ export async function generateCase(
     revision: input.revision,
     caseNumber: input.caseNumber,
     target: { poiId: target.id, destinationName: target.name },
-    pois: input.pois,
+    pois: orderPoisForDisplay(input.pois, {
+      date: input.date,
+      revision: input.revision,
+      caseNumber: input.caseNumber,
+    }),
     ...draft,
     sources,
   });

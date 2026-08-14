@@ -87,11 +87,7 @@ export function AppShell({
   return (
     <>
       {caseData ? (
-        <GameScreen
-          caseData={caseData}
-          onOpenArchive={() => setArchiveOpen(true)}
-          onShare={shareCase}
-        />
+        <GameScreen caseData={caseData} onShare={shareCase} />
       ) : (
         <BriefingUnavailable
           date={date}

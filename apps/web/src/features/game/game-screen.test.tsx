@@ -47,12 +47,28 @@ describe('GameScreen', () => {
     await guess(user, 'Place 10');
 
     expect(storage.setItem).toHaveBeenCalledTimes(1);
-    expect(screen.getByText(/warm relationship/i)).toBeInTheDocument();
+    expect(screen.getByRole('dialog', { name: /place 10/i })).toBeVisible();
+    expect(screen.getByText(/^warm$/i)).toBeInTheDocument();
+    expect(screen.queryByText(/relationship/i)).toBeNull();
     expect(
       screen.getByText(caseData.contextualResponses[9].text),
     ).toBeInTheDocument();
+    expect(screen.getByText('Clue 2')).toBeInTheDocument();
     expect(screen.getByText(caseData.clues[1].text)).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /place 10/i })).toBeDisabled();
+    expect(
+      screen
+        .getAllByRole('button', { name: /place 10/i })
+        .some((button) => button.hasAttribute('disabled')),
+    ).toBe(true);
+
+    await user.click(screen.getByRole('button', { name: /close report/i }));
+    await user.click(
+      screen.getByRole('button', {
+        name: /attempt 1, warm, place 10/i,
+      }),
+    );
+    expect(screen.getByRole('dialog', { name: /place 10/i })).toBeVisible();
+    await user.click(screen.getByRole('button', { name: /close report/i }));
 
     await guess(user, 'Target Place');
 
@@ -65,6 +81,11 @@ describe('GameScreen', () => {
     expect(
       screen.getByText(caseData.reveal.clueExplanation),
     ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {
+        name: /attempt 2, case solved, target place/i,
+      }),
+    ).toBeVisible();
     expect(
       screen.getByRole('link', { name: /fixture source source-01/i }),
     ).toHaveAttribute('href', 'https://example.com/source-01');

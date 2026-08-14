@@ -29,7 +29,7 @@ export function buildShareText(
   const normalizedOrigin = origin.replace(/\/+$/, '');
 
   return [
-    `WHEREABOUTS ${String(caseData.caseNumber).padStart(3, '0')}  ${score}`,
+    `WHEREABOUTS ${score}`,
     tokens.map((token) => tokenEmoji[token]).join(' '),
     `${normalizedOrigin}/${caseData.publicationDate}`,
   ].join('\n');

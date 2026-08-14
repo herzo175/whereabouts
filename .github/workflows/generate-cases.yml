@@ -29,9 +29,9 @@ jobs:
         run: echo "start=$(date -u -d '+14 days' +%F)" >> "$GITHUB_OUTPUT"
       - name: Generate seven upcoming cases
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           WIKIMEDIA_USER_AGENT: ${{ secrets.WIKIMEDIA_USER_AGENT }}
-          WHEREABOUTS_MODEL: ${{ vars.WHEREABOUTS_MODEL || 'gpt-5-mini' }}
+          WHEREABOUTS_MODEL: ${{ vars.WHEREABOUTS_MODEL || 'deepseek/deepseek-v4-flash-0731' }}
         run: pnpm content:generate-range -- --from "${{ steps.dates.outputs.start }}" --days 7
       - name: Validate generated content
         run: pnpm content:validate

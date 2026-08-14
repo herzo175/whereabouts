@@ -1,0 +1,14 @@
+.git
+.github
+.turbo
+.worktrees
+.superpowers
+node_modules
+**/node_modules
+**/dist
+.env
+.env.*
+!.env.example
+playwright-report
+test-results
+package-lock.json

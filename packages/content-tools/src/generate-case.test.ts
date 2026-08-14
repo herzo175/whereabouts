@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import fixture from '../fixtures/model-output.json' with { type: 'json' };
-import { generateCase } from './generate-case.js';
+import { generateCase, resolveGenerationConfig } from './generate-case.js';
 
 const pois = Array.from({ length: 25 }, (_, index) => ({
   id: `poi-${String(index).padStart(2, '0')}`,
@@ -19,6 +19,28 @@ const extracts = pois.map((poi) => ({
 }));
 
 describe('generateCase', () => {
+  it('uses an OpenRouter model identifier and requires its API key', () => {
+    expect(
+      resolveGenerationConfig({ OPENROUTER_API_KEY: 'openrouter-test-key' }),
+    ).toEqual({
+      apiKey: 'openrouter-test-key',
+      model: 'deepseek/deepseek-v4-flash-0731',
+    });
+    expect(() => resolveGenerationConfig({})).toThrow('OPENROUTER_API_KEY');
+  });
+
+  it('allows the OpenRouter model to be selected through the environment', () => {
+    expect(
+      resolveGenerationConfig({
+        OPENROUTER_API_KEY: 'openrouter-test-key',
+        WHEREABOUTS_MODEL: 'anthropic/claude-sonnet-4',
+      }),
+    ).toEqual({
+      apiKey: 'openrouter-test-key',
+      model: 'anthropic/claude-sonnet-4',
+    });
+  });
+
   it('converts a recorded structured draft using only fetched source IDs', async () => {
     const result = await generateCase({
       date: '2026-08-15',
@@ -32,6 +54,36 @@ describe('generateCase', () => {
     expect(result.caseData.clues).toHaveLength(6);
     expect(result.caseData.contextualResponses).toHaveLength(24);
     expect(result.caseData.sources).toHaveLength(25);
+  });
+
+  it('does not expose the private target-first prompt order to players', async () => {
+    const first = await generateCase({
+      date: '2026-08-14',
+      revision: 2,
+      caseNumber: 1,
+      pois,
+      extracts,
+      generate: async () => fixture,
+      write: false,
+    });
+    const repeated = await generateCase({
+      date: '2026-08-14',
+      revision: 2,
+      caseNumber: 1,
+      pois,
+      extracts,
+      generate: async () => fixture,
+      write: false,
+    });
+
+    expect(first.caseData.target.poiId).toBe('poi-00');
+    expect(first.caseData.pois[0]?.id).not.toBe('poi-00');
+    expect(first.caseData.pois.map((poi) => poi.id)).toEqual(
+      repeated.caseData.pois.map((poi) => poi.id),
+    );
+    expect(first.caseData.pois.map((poi) => poi.id).sort()).toEqual(
+      pois.map((poi) => poi.id).sort(),
+    );
   });
 
   it('fails closed when the model uses an unsupported source ID', async () => {

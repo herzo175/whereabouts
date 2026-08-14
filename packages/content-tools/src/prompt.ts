@@ -1,7 +1,7 @@
 import type { Poi } from '@whereabouts/case-content';
 import type { WikipediaExtract } from './wikipedia.js';
 
-export const PROMPT_VERSION = 1;
+export const PROMPT_VERSION = 2;
 
 export function buildCasePrompt(
   pois: Poi[],
@@ -12,5 +12,28 @@ export function buildCasePrompt(
     poi: { id: poi.id, name: poi.name, city: poi.city, country: poi.country },
     extract: extracts[index]?.extract ?? '',
   }));
-  return `You write a Whereabouts geography case from the supplied catalog records and extracts only.\n\nReturn exactly six clues, ordered from coldest to most specific, exactly 24 contextual responses (one for every non-target POI), and a reveal. Cold means weak or distant thematic/geographic connection; warm means meaningful partial connection; hot means strongly related but not identifying. Use concise spy-briefing prose. Before the reveal, never state or spell the target POI name, destination, city, or country. Each sourceIds field may contain only the supplied source IDs. Do not invent facts.\n\nCATALOG AND SOURCES:\n${JSON.stringify(sourceRows)}\n\nThe target is the first catalog record. The draft must use its ID only where a target or POI ID is required.`;
+  return `You are the case writer for Whereabouts, a difficult daily geography deduction game. The player sees all 25 candidate POIs before reading the first clue. Write only from the supplied catalog records and extracts.
+
+Return exactly six clues, exactly 24 contextual responses (one for every non-target POI), and a reveal. Use concise intelligence-briefing prose. Every factual statement must be supported by its sourceIds, and each sourceIds field may contain only supplied source IDs. Do not invent facts.
+
+DIFFICULTY CONTRACT
+Before writing, silently compare the target with all 24 distractors. For each clue, estimate how many candidates a careful but non-expert player could still reasonably defend. Do not output that analysis or the candidate count.
+
+- Clue 1: incredibly vague but not impossible. It must be true, useful in hindsight, and plausibly fit at least 8 of the 25 candidates. Use one broad theme about historical role, changing use, cultural exchange, engineering purpose, landscape, or public meaning. Do not use proper nouns, named people, named empires, exact century, year, dynasty, religion, language, demonym, continent, country, city, region, architectural style, signature architectural feature, superlative, or unique geographic configuration. Do not mention continents, borders, straits, rivers, seas, coastlines, or cardinal directions. Do not combine individually broad facts when their combination fingerprints the answer.
+- Clue 2: 6–10 plausible candidates. Add one different broad dimension, but retain all Clue 1 restrictions on names, dates, signature features, and unique geography.
+- Clue 3: 4–7 plausible candidates. Introduce a sourced historical relationship, broad era, or functional transition. One proper noun or broad geographic fact is allowed only if it does not identify the target by itself.
+- Clue 4: 3–5 plausible candidates. Add a distinguishing historical or cultural connection, but avoid the target's most famous identifying phrase or feature.
+- Clue 5: 2–3 plausible candidates. Use a strong diagnostic relationship or feature that rewards informed players without stating the answer.
+- Clue 6: 1–2 plausible candidates. Make the answer confirmable to an attentive player while still omitting the target POI, destination, city, and country names.
+
+Read the six clues together before returning them. Rewrite any early clue whose combination of geography, era, function, and architecture makes a famous answer obvious. Each clue must add new information rather than paraphrasing an earlier clue.
+
+CONTEXTUAL RESPONSES
+For every non-target POI, explain a factual relationship between the guessed POI and the target. Cold means weak or distant connection, warm means meaningful partial connection, and hot means strong shared history, function, culture, geography, or design. A response must teach the player why the relationship has that tier, not merely say that the guess is elsewhere or has a different identity. Cite sources for both sides whenever the comparison makes claims about both.
+
+SPOILER RULES
+Before the reveal, never state or spell the target POI name, destination name, city, or country. Do not hide those names through initials, wordplay, translations, coordinates, or near-identical aliases. The reveal may name the answer. The target is the first catalog record; use its ID only where a target or POI ID is required.
+
+CATALOG AND SOURCES:
+${JSON.stringify(sourceRows)}`;
 }

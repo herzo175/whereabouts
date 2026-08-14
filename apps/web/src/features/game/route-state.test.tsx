@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import { makeCase } from '@whereabouts/case-content/testing';
 import type { GameProgress } from '@whereabouts/game-engine';
 import { describe, expect, it, vi } from 'vitest';
@@ -17,9 +16,7 @@ const completedProgress: GameProgress = {
 };
 
 describe('route state', () => {
-  it('opens the published-case archive from the active briefing', async () => {
-    const user = userEvent.setup();
-
+  it('keeps archive controls out of the active briefing', () => {
     render(
       <AppShell
         caseData={makeCase()}
@@ -29,15 +26,9 @@ describe('route state', () => {
       />,
     );
 
-    await user.click(
-      screen.getByRole('button', { name: /open case archive/i }),
-    );
-
-    expect(screen.getByRole('dialog', { name: /case archive/i })).toBeVisible();
-    expect(screen.getByRole('link', { name: /case 001/i })).toHaveAttribute(
-      'href',
-      '/2026-08-14',
-    );
+    expect(
+      screen.queryByRole('button', { name: /open case archive/i }),
+    ).toBeNull();
   });
 
   it('presents an unpublished valid date as an unavailable briefing', () => {
@@ -65,7 +56,7 @@ describe('route state', () => {
     });
 
     expect(share).toHaveBeenCalledWith({
-      text: 'WHEREABOUTS 001  2/6\n🔵 🟢\nhttps://whereabouts.test/2026-08-14',
+      text: 'WHEREABOUTS 2/6\n🔵 🟢\nhttps://whereabouts.test/2026-08-14',
     });
     expect(onStatus).toHaveBeenCalledWith('shared');
   });

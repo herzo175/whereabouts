@@ -12,7 +12,7 @@ Verified on 2026-08-14:
 Required before a public launch:
 
 - [ ] Review the interface manually at 320×568, 375×667, and 390×844, at 200% zoom, and with a physical keyboard/screen reader.
-- [ ] Configure `OPENAI_API_KEY` and a contact-bearing `WIKIMEDIA_USER_AGENT` in the publishing environment.
+- [ ] Configure `OPENROUTER_API_KEY` and a contact-bearing `WIKIMEDIA_USER_AGENT` in the publishing environment.
 - [ ] Generate the remaining 29 launch cases from 2026-08-15, inspect every review packet, and merge only approved immutable artifacts.
 - [ ] Configure the canonical production origin and run the deployed smoke test.
 

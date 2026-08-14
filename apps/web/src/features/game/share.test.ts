@@ -70,7 +70,7 @@ describe('buildShareText', () => {
     );
 
     expect(text).toBe(
-      'WHEREABOUTS 042  4/6\n🔵 🟡 🟠 🟢\nhttps://whereabouts.test/2026-08-14',
+      'WHEREABOUTS 4/6\n🔵 🟡 🟠 🟢\nhttps://whereabouts.test/2026-08-14',
     );
     expect(text).not.toContain('Target POI');
     expect(text).not.toContain('Hidden city');
@@ -95,7 +95,7 @@ describe('buildShareText', () => {
         }),
         'https://whereabouts.test',
       ),
-    ).toContain('WHEREABOUTS 042  X/6');
+    ).toContain('WHEREABOUTS X/6');
   });
 
   it('refuses to share an unfinished game', () => {

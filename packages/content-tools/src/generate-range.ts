@@ -1,3 +1,4 @@
+import { loadLocalEnvironment } from './environment.js';
 import { generateCase } from './generate-case.js';
 import {
   fetchWikipediaExtracts,
@@ -67,8 +68,10 @@ export async function generateRange(arguments_: string[]): Promise<void> {
 if (
   process.argv[1] &&
   new URL(`file://${process.argv[1]}`).href === import.meta.url
-)
+) {
+  loadLocalEnvironment();
   generateRange(process.argv.slice(2)).catch((error: unknown) => {
     console.error(error instanceof Error ? error.message : error);
     process.exitCode = 1;
   });
+}

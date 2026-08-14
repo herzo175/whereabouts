@@ -4,6 +4,8 @@ Future cases remain private repository artifacts until a reviewed manifest entry
 
 ## Generate and validate
 
+For local generation, copy `.env.example` to `.env` and set `OPENROUTER_API_KEY` plus a contact-bearing `WIKIMEDIA_USER_AGENT`. The generation CLI loads the repository-root `.env` when it exists.
+
 Generate one case for a future date:
 
 ```sh
@@ -64,4 +66,4 @@ To withdraw a broken case immediately, remove only its date entry from `manifest
 
 ## Environment and AI boundary
 
-Generation needs `OPENAI_API_KEY`, `WIKIMEDIA_USER_AGENT`, and optionally `WHEREABOUTS_MODEL` (the workflow defaults it to `gpt-5-mini`). AI is permitted only before human review, during candidate generation. It is not a reviewer, approver, or publisher.
+Generation needs `OPENROUTER_API_KEY`, `WIKIMEDIA_USER_AGENT`, and optionally `WHEREABOUTS_MODEL` (the workflow defaults it to `deepseek/deepseek-v4-flash-0731`). The provider call uses OpenRouter through AI SDK. AI is permitted only before human review, during candidate generation. It is not a reviewer, approver, or publisher.

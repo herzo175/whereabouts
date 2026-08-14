@@ -36,7 +36,7 @@
     "content:generate": {
       "cache": false,
       "passThroughEnv": [
-        "OPENAI_API_KEY",
+        "OPENROUTER_API_KEY",
         "WIKIMEDIA_USER_AGENT",
         "WHEREABOUTS_MODEL"
       ]
@@ -44,7 +44,7 @@
     "content:generate-range": {
       "cache": false,
       "passThroughEnv": [
-        "OPENAI_API_KEY",
+        "OPENROUTER_API_KEY",
         "WIKIMEDIA_USER_AGENT",
         "WHEREABOUTS_MODEL"
       ]

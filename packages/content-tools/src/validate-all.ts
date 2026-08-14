@@ -22,6 +22,14 @@ function canonicalDate(value: string): boolean {
   );
 }
 
+export function shouldRejectUnreferencedArtifact(
+  date: string,
+  publicationCeiling: string,
+  manifestDates: ReadonlySet<string>,
+): boolean {
+  return date <= publicationCeiling && !manifestDates.has(date);
+}
+
 async function json(path: string): Promise<unknown> {
   return JSON.parse(await readFile(path, 'utf8'));
 }
@@ -65,6 +73,7 @@ export async function validateAll(
   if (!manifest.cases || typeof manifest.cases !== 'object') {
     return [{ path: 'manifest.cases', message: 'must be an object' }];
   }
+  const manifestDates = new Set(Object.keys(manifest.cases));
   const cases: unknown[] = [];
   const referenced = new Set<string>();
   for (const [date, entry] of Object.entries(manifest.cases)) {
@@ -139,7 +148,9 @@ export async function validateAll(
     if (referenced.has(file)) continue;
     const date =
       relative(resolve(caseContentRoot, 'cases'), file).split('/')[0] || '';
-    if (date <= publicationCeiling)
+    if (
+      shouldRejectUnreferencedArtifact(date, publicationCeiling, manifestDates)
+    )
       issues.push({
         path: relative(caseContentRoot, file),
         message: 'is an unreferenced published case artifact',

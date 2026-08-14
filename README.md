@@ -40,12 +40,30 @@ pnpm --filter @whereabouts/web exec playwright install chromium
 
 ## Environment variables
 
-- `OPENAI_API_KEY` — required only to generate candidate cases.
+Copy `.env.example` to `.env` for local case generation. The generation CLI loads that root file when present; CI continues to use repository secrets.
+
+- `OPENROUTER_API_KEY` — required only to generate candidate cases through OpenRouter.
 - `WIKIMEDIA_USER_AGENT` — required for generation; use a contactable product identifier for Wikimedia requests.
-- `WHEREABOUTS_MODEL` — optional generation model override; CI defaults to `gpt-5-mini`.
+- `WHEREABOUTS_MODEL` — optional OpenRouter model identifier; CI defaults to `deepseek/deepseek-v4-flash-0731`.
 - `PUBLICATION_CEILING` — optional UTC ISO date used by content validation to enforce the public manifest boundary.
 
 AI is used only during pre-generation of candidate content. Human review approves facts, fairness, variety, and tone; publication is a manifest change and never calls a model.
+
+## Deployment
+
+The production app runs on Fly.io at `whereabouts-herzo175.fly.dev`. A push to
+`main` runs the quality suite and deploys the Docker image through
+`.github/workflows/deploy-fly.yml`.
+
+The GitHub repository needs an app-scoped `FLY_API_TOKEN` Actions secret. Create
+one with `flyctl tokens create deploy -a whereabouts-herzo175`, then add it with
+`gh secret set FLY_API_TOKEN --repo herzo175/whereabouts`.
+
+Deploy manually from the repository root with:
+
+```sh
+flyctl deploy --remote-only
+```
 
 ## Monorepo
 

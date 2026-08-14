@@ -10,12 +10,14 @@ const clues = Array.from({ length: 6 }, (_, index) => ({
 }));
 
 describe('BriefingLayout', () => {
-  it('shows the current case, one unlocked clue, and the attempts remaining', () => {
+  it('shows a quiet header, attempt bubbles, and one unlocked clue', () => {
     render(
       <BriefingLayout
-        attemptsRemaining={6}
-        caseNumber={14}
-        onOpenArchive={vi.fn()}
+        attempts={[
+          { poiName: 'Place 01', tier: 'cold' },
+          { poiName: 'Place 02', tier: 'hot' },
+        ]}
+        onSelectAttempt={vi.fn()}
         visibleClues={clues.slice(0, 1)}
       >
         <button type="button">Choose a location</button>
@@ -23,14 +25,21 @@ describe('BriefingLayout', () => {
     );
 
     expect(screen.getByRole('heading', { name: 'Whereabouts' })).toBeDefined();
-    expect(screen.getByText('Case 14')).toBeDefined();
+    expect(screen.getByText('Clue 1')).toBeDefined();
     expect(screen.getByText(/fixture clue 1/i)).toBeDefined();
     for (const clue of clues.slice(1)) {
       expect(screen.queryByText(clue.text)).toBeNull();
     }
-    expect(screen.getByText('6 attempts remaining')).toBeDefined();
+    expect(screen.queryByText(/attempts remaining/i)).toBeNull();
+    expect(screen.queryByText(/field intelligence/i)).toBeNull();
     expect(
-      screen.getByRole('button', { name: /open case archive/i }),
+      screen.queryByRole('button', { name: /open case archive/i }),
+    ).toBeNull();
+    expect(
+      screen.getByRole('button', {
+        name: /attempt 1, cold, place 01/i,
+      }),
     ).toBeDefined();
+    expect(screen.getAllByTestId('empty-attempt')).toHaveLength(4);
   });
 });
