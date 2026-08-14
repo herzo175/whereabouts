@@ -1,0 +1,752 @@
+[
+  {
+    "id": "statue-of-liberty",
+    "name": "Statue of Liberty",
+    "city": "New York",
+    "country": "United States",
+    "latitude": 40.6892,
+    "longitude": -74.0445,
+    "wikipediaTitle": "Statue of Liberty",
+    "region": "North America"
+  },
+  {
+    "id": "golden-gate-bridge",
+    "name": "Golden Gate Bridge",
+    "city": "San Francisco",
+    "country": "United States",
+    "latitude": 37.8199,
+    "longitude": -122.4783,
+    "wikipediaTitle": "Golden Gate Bridge",
+    "region": "North America"
+  },
+  {
+    "id": "mount-rushmore",
+    "name": "Mount Rushmore",
+    "city": "Keystone",
+    "country": "United States",
+    "latitude": 43.8791,
+    "longitude": -103.4591,
+    "wikipediaTitle": "Mount Rushmore",
+    "region": "North America"
+  },
+  {
+    "id": "cn-tower",
+    "name": "CN Tower",
+    "city": "Toronto",
+    "country": "Canada",
+    "latitude": 43.6426,
+    "longitude": -79.3871,
+    "wikipediaTitle": "CN Tower",
+    "region": "North America"
+  },
+  {
+    "id": "chichen-itza",
+    "name": "Chichen Itza",
+    "city": "Yucatan",
+    "country": "Mexico",
+    "latitude": 20.6843,
+    "longitude": -88.5678,
+    "wikipediaTitle": "Chichen Itza",
+    "region": "North America"
+  },
+  {
+    "id": "teotihuacan",
+    "name": "Teotihuacan",
+    "city": "San Juan Teotihuacan",
+    "country": "Mexico",
+    "latitude": 19.6925,
+    "longitude": -98.8438,
+    "wikipediaTitle": "Teotihuacan",
+    "region": "North America"
+  },
+  {
+    "id": "canal-de-panama",
+    "name": "Panama Canal",
+    "city": "Panama City",
+    "country": "Panama",
+    "latitude": 9.08,
+    "longitude": -79.68,
+    "wikipediaTitle": "Panama Canal",
+    "region": "Central America"
+  },
+  {
+    "id": "tikal",
+    "name": "Tikal",
+    "city": "Flores",
+    "country": "Guatemala",
+    "latitude": 17.222,
+    "longitude": -89.6237,
+    "wikipediaTitle": "Tikal",
+    "region": "Central America"
+  },
+  {
+    "id": "cristo-redentor",
+    "name": "Christ the Redeemer",
+    "city": "Rio de Janeiro",
+    "country": "Brazil",
+    "latitude": -22.9519,
+    "longitude": -43.2105,
+    "wikipediaTitle": "Christ the Redeemer (statue)",
+    "region": "South America"
+  },
+  {
+    "id": "machu-picchu",
+    "name": "Machu Picchu",
+    "city": "Cusco",
+    "country": "Peru",
+    "latitude": -13.1631,
+    "longitude": -72.545,
+    "wikipediaTitle": "Machu Picchu",
+    "region": "South America"
+  },
+  {
+    "id": "iguazu-falls",
+    "name": "Iguazu Falls",
+    "city": "Puerto Iguazu",
+    "country": "Argentina",
+    "latitude": -25.6953,
+    "longitude": -54.4367,
+    "wikipediaTitle": "Iguazu Falls",
+    "region": "South America"
+  },
+  {
+    "id": "salar-de-uyuni",
+    "name": "Salar de Uyuni",
+    "city": "Uyuni",
+    "country": "Bolivia",
+    "latitude": -20.1338,
+    "longitude": -67.4891,
+    "wikipediaTitle": "Salar de Uyuni",
+    "region": "South America"
+  },
+  {
+    "id": "easter-island-moai",
+    "name": "Moai",
+    "city": "Hanga Roa",
+    "country": "Chile",
+    "latitude": -27.1212,
+    "longitude": -109.3664,
+    "wikipediaTitle": "Moai",
+    "region": "South America"
+  },
+  {
+    "id": "eiffel-tower",
+    "name": "Eiffel Tower",
+    "city": "Paris",
+    "country": "France",
+    "latitude": 48.8584,
+    "longitude": 2.2945,
+    "wikipediaTitle": "Eiffel Tower",
+    "region": "Europe"
+  },
+  {
+    "id": "colosseum",
+    "name": "Colosseum",
+    "city": "Rome",
+    "country": "Italy",
+    "latitude": 41.8902,
+    "longitude": 12.4922,
+    "wikipediaTitle": "Colosseum",
+    "region": "Europe"
+  },
+  {
+    "id": "acropolis-athens",
+    "name": "Acropolis of Athens",
+    "city": "Athens",
+    "country": "Greece",
+    "latitude": 37.9715,
+    "longitude": 23.7267,
+    "wikipediaTitle": "Acropolis of Athens",
+    "region": "Europe"
+  },
+  {
+    "id": "sagrada-familia",
+    "name": "Sagrada Familia",
+    "city": "Barcelona",
+    "country": "Spain",
+    "latitude": 41.4036,
+    "longitude": 2.1744,
+    "wikipediaTitle": "Sagrada Familia",
+    "region": "Europe"
+  },
+  {
+    "id": "tower-of-london",
+    "name": "Tower of London",
+    "city": "London",
+    "country": "United Kingdom",
+    "latitude": 51.5081,
+    "longitude": -0.0759,
+    "wikipediaTitle": "Tower of London",
+    "region": "Europe"
+  },
+  {
+    "id": "neuschwanstein-castle",
+    "name": "Neuschwanstein Castle",
+    "city": "Schwangau",
+    "country": "Germany",
+    "latitude": 47.5576,
+    "longitude": 10.7498,
+    "wikipediaTitle": "Neuschwanstein Castle",
+    "region": "Europe"
+  },
+  {
+    "id": "alhambra",
+    "name": "Alhambra",
+    "city": "Granada",
+    "country": "Spain",
+    "latitude": 37.1761,
+    "longitude": -3.5881,
+    "wikipediaTitle": "Alhambra",
+    "region": "Europe"
+  },
+  {
+    "id": "stonehenge",
+    "name": "Stonehenge",
+    "city": "Salisbury",
+    "country": "United Kingdom",
+    "latitude": 51.1789,
+    "longitude": -1.8262,
+    "wikipediaTitle": "Stonehenge",
+    "region": "Europe"
+  },
+  {
+    "id": "matterhorn",
+    "name": "Matterhorn",
+    "city": "Zermatt",
+    "country": "Switzerland",
+    "latitude": 45.9763,
+    "longitude": 7.6586,
+    "wikipediaTitle": "Matterhorn",
+    "region": "Europe"
+  },
+  {
+    "id": "parthenon",
+    "name": "Parthenon",
+    "city": "Athens",
+    "country": "Greece",
+    "latitude": 37.9715,
+    "longitude": 23.7267,
+    "wikipediaTitle": "Parthenon",
+    "region": "Europe"
+  },
+  {
+    "id": "blue-mosque",
+    "name": "Sultan Ahmed Mosque",
+    "city": "Istanbul",
+    "country": "Turkey",
+    "latitude": 41.0054,
+    "longitude": 28.9768,
+    "wikipediaTitle": "Sultan Ahmed Mosque",
+    "region": "Europe"
+  },
+  {
+    "id": "hagia-sophia",
+    "name": "Hagia Sophia",
+    "city": "Istanbul",
+    "country": "Turkey",
+    "latitude": 41.0086,
+    "longitude": 28.9802,
+    "wikipediaTitle": "Hagia Sophia",
+    "region": "Europe"
+  },
+  {
+    "id": "pyramids-of-giza",
+    "name": "Pyramids of Giza",
+    "city": "Giza",
+    "country": "Egypt",
+    "latitude": 29.9792,
+    "longitude": 31.1342,
+    "wikipediaTitle": "Giza pyramid complex",
+    "region": "Africa"
+  },
+  {
+    "id": "abu-simbel",
+    "name": "Abu Simbel temples",
+    "city": "Abu Simbel",
+    "country": "Egypt",
+    "latitude": 22.3372,
+    "longitude": 31.6258,
+    "wikipediaTitle": "Abu Simbel temples",
+    "region": "Africa"
+  },
+  {
+    "id": "table-mountain",
+    "name": "Table Mountain",
+    "city": "Cape Town",
+    "country": "South Africa",
+    "latitude": -33.9628,
+    "longitude": 18.4098,
+    "wikipediaTitle": "Table Mountain",
+    "region": "Africa"
+  },
+  {
+    "id": "serengeti",
+    "name": "Serengeti National Park",
+    "city": "Seronera",
+    "country": "Tanzania",
+    "latitude": -2.3333,
+    "longitude": 34.8333,
+    "wikipediaTitle": "Serengeti National Park",
+    "region": "Africa"
+  },
+  {
+    "id": "mount-kilimanjaro",
+    "name": "Mount Kilimanjaro",
+    "city": "Moshi",
+    "country": "Tanzania",
+    "latitude": -3.0674,
+    "longitude": 37.3556,
+    "wikipediaTitle": "Mount Kilimanjaro",
+    "region": "Africa"
+  },
+  {
+    "id": "lalibela",
+    "name": "Rock-Hewn Churches of Lalibela",
+    "city": "Lalibela",
+    "country": "Ethiopia",
+    "latitude": 12.0319,
+    "longitude": 39.0473,
+    "wikipediaTitle": "Rock-Hewn Churches, Lalibela",
+    "region": "Africa"
+  },
+  {
+    "id": "victoria-falls",
+    "name": "Victoria Falls",
+    "city": "Livingstone",
+    "country": "Zambia",
+    "latitude": -17.9243,
+    "longitude": 25.8572,
+    "wikipediaTitle": "Victoria Falls",
+    "region": "Africa"
+  },
+  {
+    "id": "petra",
+    "name": "Petra",
+    "city": "Wadi Musa",
+    "country": "Jordan",
+    "latitude": 30.3285,
+    "longitude": 35.4444,
+    "wikipediaTitle": "Petra",
+    "region": "Middle East"
+  },
+  {
+    "id": "burj-khalifa",
+    "name": "Burj Khalifa",
+    "city": "Dubai",
+    "country": "United Arab Emirates",
+    "latitude": 25.1972,
+    "longitude": 55.2744,
+    "wikipediaTitle": "Burj Khalifa",
+    "region": "Middle East"
+  },
+  {
+    "id": "dome-of-the-rock",
+    "name": "Dome of the Rock",
+    "city": "Jerusalem",
+    "country": "Israel",
+    "latitude": 31.778,
+    "longitude": 35.2354,
+    "wikipediaTitle": "Dome of the Rock",
+    "region": "Middle East"
+  },
+  {
+    "id": "persepolis",
+    "name": "Persepolis",
+    "city": "Marvdasht",
+    "country": "Iran",
+    "latitude": 29.9355,
+    "longitude": 52.8916,
+    "wikipediaTitle": "Persepolis",
+    "region": "Middle East"
+  },
+  {
+    "id": "wadi-rum",
+    "name": "Wadi Rum",
+    "city": "Wadi Rum",
+    "country": "Jordan",
+    "latitude": 29.5321,
+    "longitude": 35.421,
+    "wikipediaTitle": "Wadi Rum",
+    "region": "Middle East"
+  },
+  {
+    "id": "taj-mahal",
+    "name": "Taj Mahal",
+    "city": "Agra",
+    "country": "India",
+    "latitude": 27.1751,
+    "longitude": 78.0421,
+    "wikipediaTitle": "Taj Mahal",
+    "region": "South Asia"
+  },
+  {
+    "id": "golden-temple",
+    "name": "Golden Temple",
+    "city": "Amritsar",
+    "country": "India",
+    "latitude": 31.62,
+    "longitude": 74.8765,
+    "wikipediaTitle": "Golden Temple",
+    "region": "South Asia"
+  },
+  {
+    "id": "sigiriya",
+    "name": "Sigiriya",
+    "city": "Dambulla",
+    "country": "Sri Lanka",
+    "latitude": 7.957,
+    "longitude": 80.7603,
+    "wikipediaTitle": "Sigiriya",
+    "region": "South Asia"
+  },
+  {
+    "id": "everest",
+    "name": "Mount Everest",
+    "city": "Namche Bazaar",
+    "country": "Nepal",
+    "latitude": 27.9881,
+    "longitude": 86.925,
+    "wikipediaTitle": "Mount Everest",
+    "region": "South Asia"
+  },
+  {
+    "id": "bhaktapur-durbar-square",
+    "name": "Bhaktapur Durbar Square",
+    "city": "Bhaktapur",
+    "country": "Nepal",
+    "latitude": 27.672,
+    "longitude": 85.4298,
+    "wikipediaTitle": "Bhaktapur Durbar Square",
+    "region": "South Asia"
+  },
+  {
+    "id": "great-wall",
+    "name": "Great Wall of China",
+    "city": "Beijing",
+    "country": "China",
+    "latitude": 40.4319,
+    "longitude": 116.5704,
+    "wikipediaTitle": "Great Wall of China",
+    "region": "East Asia"
+  },
+  {
+    "id": "forbidden-city",
+    "name": "Forbidden City",
+    "city": "Beijing",
+    "country": "China",
+    "latitude": 39.9163,
+    "longitude": 116.3972,
+    "wikipediaTitle": "Forbidden City",
+    "region": "East Asia"
+  },
+  {
+    "id": "terracotta-army",
+    "name": "Terracotta Army",
+    "city": "Xi'an",
+    "country": "China",
+    "latitude": 34.3853,
+    "longitude": 109.2739,
+    "wikipediaTitle": "Terracotta Army",
+    "region": "East Asia"
+  },
+  {
+    "id": "mount-fuji",
+    "name": "Mount Fuji",
+    "city": "Fujinomiya",
+    "country": "Japan",
+    "latitude": 35.3606,
+    "longitude": 138.7274,
+    "wikipediaTitle": "Mount Fuji",
+    "region": "East Asia"
+  },
+  {
+    "id": "fushimi-inari",
+    "name": "Fushimi Inari-taisha",
+    "city": "Kyoto",
+    "country": "Japan",
+    "latitude": 34.9671,
+    "longitude": 135.7727,
+    "wikipediaTitle": "Fushimi Inari-taisha",
+    "region": "East Asia"
+  },
+  {
+    "id": "gyeongbokgung",
+    "name": "Gyeongbokgung",
+    "city": "Seoul",
+    "country": "South Korea",
+    "latitude": 37.5796,
+    "longitude": 126.977,
+    "wikipediaTitle": "Gyeongbokgung",
+    "region": "East Asia"
+  },
+  {
+    "id": "angkor-wat",
+    "name": "Angkor Wat",
+    "city": "Siem Reap",
+    "country": "Cambodia",
+    "latitude": 13.4125,
+    "longitude": 103.867,
+    "wikipediaTitle": "Angkor Wat",
+    "region": "Southeast Asia"
+  },
+  {
+    "id": "ha-long-bay",
+    "name": "Ha Long Bay",
+    "city": "Ha Long",
+    "country": "Vietnam",
+    "latitude": 20.9101,
+    "longitude": 107.1839,
+    "wikipediaTitle": "Ha Long Bay",
+    "region": "Southeast Asia"
+  },
+  {
+    "id": "marina-bay-sands",
+    "name": "Marina Bay Sands",
+    "city": "Singapore",
+    "country": "Singapore",
+    "latitude": 1.2834,
+    "longitude": 103.8607,
+    "wikipediaTitle": "Marina Bay Sands",
+    "region": "Southeast Asia"
+  },
+  {
+    "id": "grand-palace",
+    "name": "Grand Palace",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "latitude": 13.75,
+    "longitude": 100.4913,
+    "wikipediaTitle": "Grand Palace",
+    "region": "Southeast Asia"
+  },
+  {
+    "id": "borobudur",
+    "name": "Borobudur",
+    "city": "Magelang",
+    "country": "Indonesia",
+    "latitude": -7.6079,
+    "longitude": 110.2038,
+    "wikipediaTitle": "Borobudur",
+    "region": "Southeast Asia"
+  },
+  {
+    "id": "petronas-towers",
+    "name": "Petronas Towers",
+    "city": "Kuala Lumpur",
+    "country": "Malaysia",
+    "latitude": 3.1579,
+    "longitude": 101.7117,
+    "wikipediaTitle": "Petronas Towers",
+    "region": "Southeast Asia"
+  },
+  {
+    "id": "sydney-opera-house",
+    "name": "Sydney Opera House",
+    "city": "Sydney",
+    "country": "Australia",
+    "latitude": -33.8568,
+    "longitude": 151.2153,
+    "wikipediaTitle": "Sydney Opera House",
+    "region": "Oceania"
+  },
+  {
+    "id": "uluru",
+    "name": "Uluru",
+    "city": "Yulara",
+    "country": "Australia",
+    "latitude": -25.3444,
+    "longitude": 131.0369,
+    "wikipediaTitle": "Uluru",
+    "region": "Oceania"
+  },
+  {
+    "id": "great-barrier-reef",
+    "name": "Great Barrier Reef",
+    "city": "Cairns",
+    "country": "Australia",
+    "latitude": -18.2871,
+    "longitude": 147.6992,
+    "wikipediaTitle": "Great Barrier Reef",
+    "region": "Oceania"
+  },
+  {
+    "id": "milford-sound",
+    "name": "Milford Sound",
+    "city": "Te Anau",
+    "country": "New Zealand",
+    "latitude": -44.6713,
+    "longitude": 167.9256,
+    "wikipediaTitle": "Milford Sound",
+    "region": "Oceania"
+  },
+  {
+    "id": "aoraki",
+    "name": "Aoraki / Mount Cook",
+    "city": "Aoraki Mount Cook",
+    "country": "New Zealand",
+    "latitude": -43.595,
+    "longitude": 170.141,
+    "wikipediaTitle": "Aoraki / Mount Cook",
+    "region": "Oceania"
+  },
+  {
+    "id": "bora-bora",
+    "name": "Bora Bora",
+    "city": "Vaitape",
+    "country": "French Polynesia",
+    "latitude": -16.5004,
+    "longitude": -151.7415,
+    "wikipediaTitle": "Bora Bora",
+    "region": "Oceania"
+  },
+  {
+    "id": "st-basils-cathedral",
+    "name": "Saint Basil's Cathedral",
+    "city": "Moscow",
+    "country": "Russia",
+    "latitude": 55.7525,
+    "longitude": 37.6231,
+    "wikipediaTitle": "Saint Basil's Cathedral",
+    "region": "Eastern Europe"
+  },
+  {
+    "id": "church-savior-blood",
+    "name": "Church of the Savior on Spilled Blood",
+    "city": "Saint Petersburg",
+    "country": "Russia",
+    "latitude": 59.9401,
+    "longitude": 30.3288,
+    "wikipediaTitle": "Church of the Savior on Spilled Blood",
+    "region": "Eastern Europe"
+  },
+  {
+    "id": "bran-castle",
+    "name": "Bran Castle",
+    "city": "Bran",
+    "country": "Romania",
+    "latitude": 45.5156,
+    "longitude": 25.3672,
+    "wikipediaTitle": "Bran Castle",
+    "region": "Eastern Europe"
+  },
+  {
+    "id": "charles-bridge",
+    "name": "Charles Bridge",
+    "city": "Prague",
+    "country": "Czech Republic",
+    "latitude": 50.0865,
+    "longitude": 14.4114,
+    "wikipediaTitle": "Charles Bridge",
+    "region": "Eastern Europe"
+  },
+  {
+    "id": "buda-castle",
+    "name": "Buda Castle",
+    "city": "Budapest",
+    "country": "Hungary",
+    "latitude": 47.4969,
+    "longitude": 19.0399,
+    "wikipediaTitle": "Buda Castle",
+    "region": "Eastern Europe"
+  },
+  {
+    "id": "mont-saint-michel",
+    "name": "Mont-Saint-Michel",
+    "city": "Le Mont-Saint-Michel",
+    "country": "France",
+    "latitude": 48.636,
+    "longitude": -1.5115,
+    "wikipediaTitle": "Mont-Saint-Michel",
+    "region": "Western Europe"
+  },
+  {
+    "id": "palace-of-westminster",
+    "name": "Palace of Westminster",
+    "city": "London",
+    "country": "United Kingdom",
+    "latitude": 51.4995,
+    "longitude": -0.1248,
+    "wikipediaTitle": "Palace of Westminster",
+    "region": "Western Europe"
+  },
+  {
+    "id": "leaning-tower-pisa",
+    "name": "Leaning Tower of Pisa",
+    "city": "Pisa",
+    "country": "Italy",
+    "latitude": 43.723,
+    "longitude": 10.3966,
+    "wikipediaTitle": "Leaning Tower of Pisa",
+    "region": "Western Europe"
+  },
+  {
+    "id": "brandenburg-gate",
+    "name": "Brandenburg Gate",
+    "city": "Berlin",
+    "country": "Germany",
+    "latitude": 52.5163,
+    "longitude": 13.3777,
+    "wikipediaTitle": "Brandenburg Gate",
+    "region": "Western Europe"
+  },
+  {
+    "id": "atomium",
+    "name": "Atomium",
+    "city": "Brussels",
+    "country": "Belgium",
+    "latitude": 50.8949,
+    "longitude": 4.3416,
+    "wikipediaTitle": "Atomium",
+    "region": "Western Europe"
+  },
+  {
+    "id": "marrakesh-medina",
+    "name": "Medina of Marrakesh",
+    "city": "Marrakesh",
+    "country": "Morocco",
+    "latitude": 31.6295,
+    "longitude": -7.9811,
+    "wikipediaTitle": "Medina of Marrakesh",
+    "region": "Africa"
+  },
+  {
+    "id": "great-zimbabwe",
+    "name": "Great Zimbabwe",
+    "city": "Masvingo",
+    "country": "Zimbabwe",
+    "latitude": -20.2675,
+    "longitude": 30.9333,
+    "wikipediaTitle": "Great Zimbabwe",
+    "region": "Africa"
+  },
+  {
+    "id": "basilica-guadalupe",
+    "name": "Basilica of Our Lady of Guadalupe",
+    "city": "Mexico City",
+    "country": "Mexico",
+    "latitude": 19.484,
+    "longitude": -99.1176,
+    "wikipediaTitle": "Basilica of Our Lady of Guadalupe",
+    "region": "North America"
+  },
+  {
+    "id": "torres-del-paine",
+    "name": "Torres del Paine National Park",
+    "city": "Puerto Natales",
+    "country": "Chile",
+    "latitude": -51.2535,
+    "longitude": -72.3517,
+    "wikipediaTitle": "Torres del Paine National Park",
+    "region": "South America"
+  },
+  {
+    "id": "jokulsarlon",
+    "name": "Jokulsarlon",
+    "city": "Hofn",
+    "country": "Iceland",
+    "latitude": 64.0485,
+    "longitude": -16.1799,
+    "wikipediaTitle": "Jokulsarlon",
+    "region": "Northern Europe"
+  }
+]
