@@ -42,22 +42,22 @@ describe('route state', () => {
     ).toBeVisible();
   });
 
-  it('builds and shares the current route result using the browser origin', async () => {
-    const share = vi.fn().mockResolvedValue(undefined);
+  it('builds and copies the current route result using the browser origin', async () => {
+    const writeText = vi.fn().mockResolvedValue(undefined);
     const onStatus = vi.fn();
 
     await shareCurrentResult({
       caseData: makeCase(),
       date: '2026-08-14',
-      navigatorValue: { share },
+      navigatorValue: { clipboard: { writeText } },
       origin: 'https://whereabouts.test',
       progress: completedProgress,
       onStatus,
     });
 
-    expect(share).toHaveBeenCalledWith({
-      text: 'WHEREABOUTS 2/6\n🔵 🟢\nhttps://whereabouts.test/2026-08-14',
-    });
-    expect(onStatus).toHaveBeenCalledWith('shared');
+    expect(writeText).toHaveBeenCalledWith(
+      'WHEREABOUTS 2/6\n🔵 🟢\nhttps://whereabouts.test/2026-08-14',
+    );
+    expect(onStatus).toHaveBeenCalledWith('copied');
   });
 });

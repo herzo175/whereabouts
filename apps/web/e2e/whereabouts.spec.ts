@@ -88,20 +88,20 @@ test.describe('Whereabouts desktop journeys', () => {
     page,
   }) => {
     await openCase(page);
-    await submitLead(page, 'Hagia Sophia');
+    await submitLead(page, 'Convent of the Barefoot Trinitarians');
 
     await expect(
       page.getByRole('heading', { name: 'Case closed' }),
     ).toBeVisible();
-    await page.getByRole('button', { name: 'Share result' }).click();
-    await expect(page.getByText('Result copied to clipboard.')).toBeVisible();
+    await page.getByRole('button', { name: 'Copy result' }).click();
+    await expect(page.getByRole('button', { name: 'Copied' })).toBeVisible();
 
     const shareText = await page.evaluate(() => navigator.clipboard.readText());
     expect(shareText).toBe(
-      `WHEREABOUTS 001  1/6\n🟢\nhttp://127.0.0.1:3000/${CASE_DATE}`,
+      `WHEREABOUTS 1/6\n🟢\nhttp://127.0.0.1:3000/${CASE_DATE}`,
     );
-    expect(shareText).not.toContain('Hagia Sophia');
-    expect(shareText).not.toContain('Istanbul');
+    expect(shareText).not.toContain('Convent of the Barefoot Trinitarians');
+    expect(shareText).not.toContain('Madrid');
   });
 
   test('shows a six-attempt loss from saved progress', async ({ page }) => {

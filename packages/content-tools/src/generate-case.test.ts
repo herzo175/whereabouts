@@ -54,6 +54,8 @@ describe('generateCase', () => {
     expect(result.caseData.clues).toHaveLength(6);
     expect(result.caseData.contextualResponses).toHaveLength(24);
     expect(result.caseData.sources).toHaveLength(25);
+    expect(result.caseData.pois.every((poi) => poi.blurb)).toBe(true);
+    expect(result.caseData.pois[0]?.blurb).toContain('Source material');
   });
 
   it('does not expose the private target-first prompt order to players', async () => {

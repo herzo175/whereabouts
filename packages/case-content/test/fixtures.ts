@@ -12,6 +12,7 @@ export function makeCase(overrides: Partial<DailyCase> = {}): DailyCase {
     latitude: index,
     longitude: index,
     wikipediaTitle: `Place ${index}`,
+    blurb: `Place ${index} is a notable site in Exampleland with a documented history used for fixture testing.`,
   }));
   const sourceIds = ['source-01', 'source-02'];
   const value: DailyCase = {

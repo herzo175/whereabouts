@@ -51,6 +51,26 @@ export const generatedCaseDraftSchema = z.object({
 });
 export type GeneratedCaseDraft = z.infer<typeof generatedCaseDraftSchema>;
 
+export function buildPoiBlurb(extract: string, maximumLength = 280): string {
+  const normalized = extract.replace(/\s+/g, ' ').trim();
+  if (!normalized) throw new Error('cannot build a POI blurb without context');
+  if (normalized.length <= maximumLength) return normalized;
+
+  const sentences = normalized.split(/(?<=[.!?])\s+/);
+  let blurb = '';
+  for (const sentence of sentences) {
+    const candidate = blurb ? `${blurb} ${sentence}` : sentence;
+    if (candidate.length > maximumLength) break;
+    blurb = candidate;
+    if (blurb.length >= 120) return blurb;
+  }
+  if (blurb) return blurb;
+
+  const shortened = normalized.slice(0, maximumLength - 1);
+  const finalSpace = shortened.lastIndexOf(' ');
+  return `${shortened.slice(0, finalSpace > 80 ? finalSpace : undefined)}…`;
+}
+
 const modelCaseDraftSchema = z.object({
   clues: z.array(
     z.object({
@@ -183,7 +203,11 @@ export async function generateCase(
     retrievedAt: extract.retrievedAt,
   }));
   assertSupportedSourceIds(draft, new Set(sources.map((source) => source.id)));
-  const target = input.pois[0];
+  const poisWithBlurbs = input.pois.map((poi, index) => ({
+    ...poi,
+    blurb: buildPoiBlurb(input.extracts[index]?.extract ?? ''),
+  }));
+  const target = poisWithBlurbs[0];
   if (!target) throw new Error('target POI is required');
   const caseData = dailyCaseSchema.parse({
     schemaVersion: 1,
@@ -191,7 +215,7 @@ export async function generateCase(
     revision: input.revision,
     caseNumber: input.caseNumber,
     target: { poiId: target.id, destinationName: target.name },
-    pois: orderPoisForDisplay(input.pois, {
+    pois: orderPoisForDisplay(poisWithBlurbs, {
       date: input.date,
       revision: input.revision,
       caseNumber: input.caseNumber,

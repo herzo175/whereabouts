@@ -1,6 +1,6 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 
-import { selectPoisForDate } from './generate-range.js';
+import { attachWikipediaImages, selectPoisForDate } from './generate-range.js';
 
 const catalog = Array.from({ length: 75 }, (_, index) => ({
   id: `poi-${String(index).padStart(2, '0')}`,
@@ -50,5 +50,31 @@ describe('selectPoisForDate', () => {
     }
 
     expect(Math.max(...regionCounts.values())).toBeLessThanOrEqual(3);
+  });
+});
+
+describe('attachWikipediaImages', () => {
+  it('enriches every candidate with its available attributed image', async () => {
+    const selected = catalog.slice(0, 3);
+    const fetchImage = vi.fn(async (title: string) =>
+      title === 'Place 1'
+        ? undefined
+        : {
+            url: `https://upload.wikimedia.org/${title}.jpg`,
+            alt: title,
+            attribution: 'Example contributor · CC BY-SA 4.0',
+            licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+          },
+    );
+
+    const enriched = await attachWikipediaImages(selected, fetchImage);
+
+    expect(fetchImage).toHaveBeenCalledTimes(3);
+    expect(fetchImage).toHaveBeenNthCalledWith(1, 'Place 0');
+    expect(fetchImage).toHaveBeenNthCalledWith(2, 'Place 1');
+    expect(fetchImage).toHaveBeenNthCalledWith(3, 'Place 2');
+    expect(enriched[0]?.image?.alt).toBe('Place 0');
+    expect(enriched[1]?.image).toBeUndefined();
+    expect(enriched[2]?.image?.alt).toBe('Place 2');
   });
 });

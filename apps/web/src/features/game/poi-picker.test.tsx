@@ -14,6 +14,8 @@ const pois: Poi[] = [
     latitude: 41.4036,
     longitude: 2.1744,
     wikipediaTitle: 'Sagrada_Família',
+    blurb:
+      'The Sagrada Família is a large unfinished basilica designed by architect Antoni Gaudí in Barcelona.',
   },
   {
     id: 'table-mountain',
@@ -23,6 +25,8 @@ const pois: Poi[] = [
     latitude: -33.9628,
     longitude: 18.4098,
     wikipediaTitle: 'Table_Mountain',
+    blurb:
+      'Table Mountain is a flat-topped mountain overlooking Cape Town and the surrounding Atlantic coast.',
   },
 ];
 
@@ -64,6 +68,9 @@ describe('PoiPicker', () => {
     ).toBeDefined();
     expect(
       screen.getByRole('button', { name: /submit this lead/i }),
+    ).toBeDefined();
+    expect(
+      screen.getByText(/large unfinished basilica designed by architect/i),
     ).toBeDefined();
   });
 

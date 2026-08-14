@@ -96,7 +96,7 @@ describe('GameScreen', () => {
       screen.queryByRole('searchbox', { name: /search locations/i }),
     ).toBeNull();
 
-    await user.click(screen.getByRole('button', { name: /share result/i }));
+    await user.click(screen.getByRole('button', { name: /copy result/i }));
     expect(onShare).toHaveBeenCalledWith(
       caseData,
       expect.objectContaining({
@@ -104,6 +104,9 @@ describe('GameScreen', () => {
         guessedPoiIds: ['poi-10', 'poi-00'],
       }),
     );
+    expect(
+      screen.getByRole('button', { name: /^copied$/i }),
+    ).toBeInTheDocument();
   });
 
   it('closes the trail after six wrong leads', async () => {

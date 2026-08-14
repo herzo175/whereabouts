@@ -121,6 +121,11 @@ export function PoiDossier({
           <p className="text-base text-muted-foreground" id={descriptionId}>
             {poi.city}, {poi.country}
           </p>
+          {poi.blurb ? (
+            <p className="pt-2 text-sm leading-relaxed text-foreground/85">
+              {poi.blurb}
+            </p>
+          ) : null}
         </div>
 
         <div className="flex flex-col-reverse gap-2 border-t border-foreground/10 p-4 sm:flex-row sm:justify-end">

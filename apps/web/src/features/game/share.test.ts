@@ -114,15 +114,15 @@ describe('buildShareText', () => {
 });
 
 describe('shareResult', () => {
-  it('uses native sharing when it is available', async () => {
+  it('copies plain text even when native sharing is available', async () => {
     const share = vi.fn().mockResolvedValue(undefined);
-    const writeText = vi.fn();
+    const writeText = vi.fn().mockResolvedValue(undefined);
 
     await expect(
       shareResult('result', { share, clipboard: { writeText } }),
-    ).resolves.toBe('shared');
-    expect(share).toHaveBeenCalledWith({ text: 'result' });
-    expect(writeText).not.toHaveBeenCalled();
+    ).resolves.toBe('copied');
+    expect(writeText).toHaveBeenCalledWith('result');
+    expect(share).not.toHaveBeenCalled();
   });
 
   it('copies when native sharing is unsupported', async () => {
@@ -134,39 +134,7 @@ describe('shareResult', () => {
     expect(writeText).toHaveBeenCalledWith('result');
   });
 
-  it('does not copy when native sharing is cancelled', async () => {
-    const share = vi
-      .fn()
-      .mockRejectedValue(new DOMException('Cancelled', 'AbortError'));
-    const writeText = vi.fn();
-
-    await expect(
-      shareResult('result', { share, clipboard: { writeText } }),
-    ).resolves.toBe('cancelled');
-    expect(writeText).not.toHaveBeenCalled();
-  });
-
-  it('recognizes AbortError from browsers that do not expose DOMException', async () => {
-    const share = vi.fn().mockRejectedValue({ name: 'AbortError' });
-    const writeText = vi.fn();
-
-    await expect(
-      shareResult('result', { share, clipboard: { writeText } }),
-    ).resolves.toBe('cancelled');
-    expect(writeText).not.toHaveBeenCalled();
-  });
-
-  it('copies after a native-share failure', async () => {
-    const share = vi.fn().mockRejectedValue(new Error('Share failed'));
-    const writeText = vi.fn().mockResolvedValue(undefined);
-
-    await expect(
-      shareResult('result', { share, clipboard: { writeText } }),
-    ).resolves.toBe('copied');
-    expect(writeText).toHaveBeenCalledWith('result');
-  });
-
   it('throws a useful error if no sharing method works', async () => {
-    await expect(shareResult('result', {})).rejects.toThrow(/share or copy/i);
+    await expect(shareResult('result', {})).rejects.toThrow(/copy/i);
   });
 });

@@ -1,5 +1,6 @@
 import type { DailyCase } from '@whereabouts/case-content';
 import type { GameProgress } from '@whereabouts/game-engine';
+import { useState } from 'react';
 
 type ResultPanelProps = {
   caseData: DailyCase;
@@ -11,7 +12,20 @@ type ResultPanelProps = {
 };
 
 export function ResultPanel({ caseData, progress, onShare }: ResultPanelProps) {
+  const [copyState, setCopyState] = useState<
+    'idle' | 'copying' | 'copied' | 'error'
+  >('idle');
   if (progress.outcome === 'playing') return null;
+
+  const copyResult = async () => {
+    setCopyState('copying');
+    try {
+      await onShare(caseData, progress);
+      setCopyState('copied');
+    } catch {
+      setCopyState('error');
+    }
+  };
 
   const target = caseData.pois.find((poi) => poi.id === caseData.target.poiId);
   const sources = caseData.reveal.sourceIds.flatMap((sourceId) => {
@@ -85,10 +99,17 @@ export function ResultPanel({ caseData, progress, onShare }: ResultPanelProps) {
 
       <button
         className="min-h-12 w-full border border-brass bg-brass px-5 text-sm font-bold tracking-[0.12em] text-ink uppercase hover:bg-paper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto"
-        onClick={() => void onShare(caseData, progress)}
+        disabled={copyState === 'copying'}
+        onClick={() => void copyResult()}
         type="button"
       >
-        Share result
+        {copyState === 'copied'
+          ? 'Copied'
+          : copyState === 'error'
+            ? 'Copy failed'
+            : copyState === 'copying'
+              ? 'Copying…'
+              : 'Copy result'}
       </button>
     </section>
   );

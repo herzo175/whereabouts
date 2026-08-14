@@ -47,14 +47,10 @@ type AppShellProps = {
 
 function shareStatusMessage(status: ShareStatus): string {
   switch (status) {
-    case 'shared':
-      return 'Result shared.';
     case 'copied':
       return 'Result copied to clipboard.';
-    case 'cancelled':
-      return 'Sharing cancelled.';
     case 'error':
-      return 'Unable to share the result.';
+      return 'Unable to copy the result.';
     default:
       return '';
   }
@@ -81,6 +77,7 @@ export function AppShell({
       });
     } catch {
       setShareStatus('error');
+      throw new Error('Unable to copy the result.');
     }
   };
 

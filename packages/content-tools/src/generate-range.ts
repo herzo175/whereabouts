@@ -97,6 +97,18 @@ export function selectPoisForDate(
   throw new Error('catalog could not produce 25 unique POIs');
 }
 
+export async function attachWikipediaImages(
+  pois: CatalogPoi[],
+  fetchImage: typeof fetchWikipediaImage = fetchWikipediaImage,
+): Promise<CatalogPoi[]> {
+  const sourcedPois: CatalogPoi[] = [];
+  for (const poi of pois) {
+    const image = await fetchImage(poi.wikipediaTitle);
+    sourcedPois.push(image ? { ...poi, image } : poi);
+  }
+  return sourcedPois;
+}
+
 export async function generateRange(arguments_: string[]): Promise<void> {
   const { from, days, revision } = parse(arguments_);
   requireProductionUserAgent();
@@ -128,12 +140,7 @@ export async function generateRange(arguments_: string[]): Promise<void> {
       if (!entry) throw new Error(`corpus context missing for ${poi.id}`);
       return entry;
     });
-    const targetImage = await fetchWikipediaImage(
-      pois[0]?.wikipediaTitle ?? '',
-    );
-    const sourcedPois = pois.map((poi, index) =>
-      index === 0 && targetImage ? { ...poi, image: targetImage } : poi,
-    );
+    const sourcedPois = await attachWikipediaImages(pois);
     await generateCase({
       date,
       revision,
