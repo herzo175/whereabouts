@@ -1,80 +1,89 @@
 # Whereabouts Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILLS: Use superpowers:subagent-driven-development and superpowers:dispatching-parallel-agents. Execute the foundation gates and parallel waves in this plan; do not execute tasks in simple numeric order. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Build a mobile-first daily geography deduction game with a tappable 3D globe, browser-owned progress, dated cases, spoiler-free sharing, and a source-backed AI-assisted publishing pipeline.
 
-**Architecture:** TanStack Start serves repository-native, revisioned case JSON through a server-function boundary. A pure TypeScript game engine owns all rules, a local-storage adapter owns progress, and React components built with Tailwind CSS and shadcn/ui render the briefing, globe/list selector, feedback, archive, and reveal. A separate TypeScript command uses Wikimedia source material and AI SDK structured output to produce case artifacts that must pass deterministic publication checks.
+**Architecture:** A pnpm workspace managed by Turborepo contains one TanStack Start app and four private, source-exporting packages: case content/schema, the pure game engine, browser state, and offline content tooling. The app serves revisioned case JSON through a server-function boundary and renders the Tailwind/shadcn briefing, globe/list selector, feedback, archive, and reveal. Only the content-tools package can access Wikimedia or the AI SDK; no application package depends on it.
 
-**Tech Stack:** TypeScript, React 19, TanStack Start, Tailwind CSS v4, shadcn/ui with Radix primitives, Zod, react-globe.gl/Three.js, Vitest, Testing Library, Playwright, AI SDK Core, `@ai-sdk/openai`, and pnpm.
+**Tech Stack:** TypeScript, React 19, TanStack Start, pnpm workspaces, Turborepo, Biome, Tailwind CSS v4, shadcn/ui with Radix primitives, Zod, react-globe.gl/Three.js, Vitest, Testing Library, Playwright, AI SDK Core, and `@ai-sdk/openai`.
 
 ---
 
 ## Execution note
 
-Execute this plan in a dedicated Git worktree created from `main`. Do not implement directly in the brainstorming worktree. The repository currently contains only the approved design, `.gitignore`, and this plan.
+The coordinator executes each foundation gate in a dedicated Git worktree created from `main`, then creates one isolated worktree per parallel workstream from the named green checkpoint. Subagents edit only their assigned paths and return a commit hash, changed-file list, tests run, and unresolved assumptions. Only the coordinator may change root configuration, install dependencies, update `pnpm-lock.yaml`, cherry-pick workstream commits, resolve integration issues, or start the next wave.
 
 ## File map
 
 ### Application foundation
 
-- `package.json` — scripts and dependencies
-- `vite.config.ts` — TanStack Start and Tailwind build configuration
-- `vitest.config.ts` — jsdom test configuration
-- `playwright.config.ts` — desktop/mobile browser projects and local web server
-- `src/styles.css` — Tailwind import, intelligence-console theme tokens, global motion rules
-- `src/routes/__root.tsx` — document shell, metadata, and global error/not-found surfaces
-- `src/routes/index.tsx` — browser-local-date resolution and redirect
-- `src/routes/$date.tsx` — canonical daily/historical case route
+- `package.json` — private workspace scripts and pinned package manager
+- `pnpm-workspace.yaml` — `apps/*` and `packages/*`, shared lockfile, cycle protection
+- `turbo.json` — cached build/test/typecheck graph and uncached external/content tasks
+- `biome.json` — repository-wide formatting, linting, and import organization
+- `tsconfig.base.json` — shared strict TypeScript options for internal packages
+- `apps/web/package.json` — TanStack Start application dependencies and scripts
+- `apps/web/vite.config.ts` — TanStack Start and Tailwind build configuration
+- `apps/web/vitest.config.ts` — jsdom test configuration
+- `apps/web/playwright.config.ts` — desktop/mobile browser projects and local web server
+- `apps/web/src/styles.css` — Tailwind import, intelligence-console theme tokens, global motion rules
+- `apps/web/src/routes/__root.tsx` — document shell, metadata, and global error/not-found surfaces
+- `apps/web/src/routes/index.tsx` — browser-local-date resolution and redirect
+- `apps/web/src/routes/$date.tsx` — canonical daily/historical case route
 
 ### Case content
 
-- `src/features/cases/schema.ts` — Zod schemas and inferred case types
-- `src/features/cases/case-loader.server.ts` — server-only manifest and revision loader
-- `src/features/cases/case-functions.ts` — validated TanStack server function
-- `content/manifest.json` — published date-to-revision mapping
-- `content/cases/YYYY-MM-DD/vN.json` — immutable case artifacts
-- `content/catalog/pois.json` — curated POI catalog used by generation
-- `src/test/fixtures/case.ts` — complete deterministic case factory for tests
+- `packages/case-content/package.json` — browser-safe schema export plus server-only loader export
+- `packages/case-content/src/schema.ts` — Zod schemas and inferred case types
+- `packages/case-content/src/loader.server.ts` — server-only manifest and revision loader
+- `apps/web/src/features/cases/case-functions.ts` — validated TanStack server function
+- `packages/case-content/content/manifest.json` — published date-to-revision mapping
+- `packages/case-content/content/cases/YYYY-MM-DD/vN.json` — immutable case artifacts
+- `packages/content-tools/catalog/pois.json` — curated POI catalog used by generation
+- `packages/case-content/test/fixtures.ts` — complete deterministic case factory for tests
 
 ### Game domain and persistence
 
-- `src/features/game/engine.ts` — pure transition and derived-state functions
-- `src/features/game/engine.test.ts` — game rule tests
-- `src/features/game/progress-schema.ts` — persisted progress schema
-- `src/features/game/storage.ts` — safe local-storage adapter and revision handling
-- `src/features/game/storage.test.ts` — persistence, corruption, and revision tests
-- `src/features/game/date.ts` — strict route-date and local-date helpers
-- `src/features/game/date.test.ts` — date edge cases
+- `packages/game-engine/package.json` — pure rule package; depends only on case-content
+- `packages/game-engine/src/engine.ts` — pure transition and derived-state functions
+- `packages/game-engine/src/engine.test.ts` — game rule tests
+- `packages/game-engine/src/progress-schema.ts` — persisted progress schema
+- `packages/browser-state/package.json` — browser persistence/date package
+- `packages/browser-state/src/storage.ts` — safe local-storage adapter and revision handling
+- `packages/browser-state/src/storage.test.ts` — persistence, corruption, and revision tests
+- `packages/browser-state/src/date.ts` — strict route-date and local-date helpers
+- `packages/browser-state/src/date.test.ts` — date edge cases
 
 ### Player interface
 
-- `src/features/game/game-screen.tsx` — coordinates case data, browser progress, and modal state
-- `src/features/game/case-header.tsx` — brand, case number, attempt indicator, archive action
-- `src/features/game/clue-card.tsx` — current universal clue
-- `src/features/game/poi-picker.tsx` — globe/list mode and POI selection contract
-- `src/features/game/poi-search.tsx` — accessible searchable POI list
-- `src/features/game/poi-dossier.tsx` — shadcn Drawer confirmation surface
-- `src/features/game/feedback-panel.tsx` — wrong-guess relationship explanation
-- `src/features/game/result-panel.tsx` — win/loss reveal, citations, and sharing
-- `src/features/game/share.ts` — deterministic share text and Web Share/clipboard fallback
-- `src/features/game/share.test.ts` — spoiler-free output tests
-- `src/features/globe/globe-picker.tsx` — lazy client-only boundary and fallback
-- `src/features/globe/globe-canvas.client.tsx` — react-globe.gl adapter
-- `src/features/globe/webgl.ts` — WebGL capability probe
-- `src/features/globe/webgl.test.ts` — capability tests
+- `apps/web/src/features/game/game-screen.tsx` — coordinates case data, browser progress, and modal state
+- `apps/web/src/features/game/case-header.tsx` — brand, case number, attempt indicator, archive action
+- `apps/web/src/features/game/clue-card.tsx` — current universal clue
+- `apps/web/src/features/game/poi-picker.tsx` — globe/list mode and POI selection contract
+- `apps/web/src/features/game/poi-search.tsx` — accessible searchable POI list
+- `apps/web/src/features/game/poi-dossier.tsx` — shadcn Drawer confirmation surface
+- `apps/web/src/features/game/feedback-panel.tsx` — wrong-guess relationship explanation
+- `apps/web/src/features/game/result-panel.tsx` — win/loss reveal, citations, and sharing
+- `apps/web/src/features/game/share.ts` — deterministic share text and Web Share/clipboard fallback
+- `apps/web/src/features/game/share.test.ts` — spoiler-free output tests
+- `apps/web/src/features/globe/globe-picker.tsx` — lazy client-only boundary and fallback
+- `apps/web/src/features/globe/globe-canvas.client.tsx` — react-globe.gl adapter
+- `apps/web/src/features/globe/webgl.ts` — WebGL capability probe
+- `apps/web/src/features/globe/webgl.test.ts` — capability tests
 
 ### Content pipeline
 
-- `scripts/content/wikipedia.ts` — MediaWiki Action API client with attribution and user-agent policy
-- `scripts/content/prompt.ts` — stable source-grounded generation prompt
-- `scripts/content/generate-case.ts` — AI SDK structured generation command
-- `scripts/content/generate-range.ts` — scheduled batch command
-- `scripts/content/validate-case.ts` — deterministic publication validation
-- `scripts/content/validate-all.ts` — manifest-wide checks and recent-repeat policy
-- `scripts/content/review-case.ts` — prints a human-review packet
-- `scripts/content/review-range.ts` — writes review packets for a date range
-- `scripts/content/*.test.ts` — recorded-response and validation tests
+- `packages/content-tools/package.json` — the only package with AI SDK and Wikimedia tooling
+- `packages/content-tools/src/wikipedia.ts` — MediaWiki Action API client with attribution and user-agent policy
+- `packages/content-tools/src/prompt.ts` — stable source-grounded generation prompt
+- `packages/content-tools/src/generate-case.ts` — AI SDK structured generation command
+- `packages/content-tools/src/generate-range.ts` — scheduled batch command
+- `packages/content-tools/src/validate-case.ts` — deterministic publication validation
+- `packages/content-tools/src/validate-all.ts` — manifest-wide checks and recent-repeat policy
+- `packages/content-tools/src/review-case.ts` — prints a human-review packet
+- `packages/content-tools/src/review-range.ts` — writes review packets for a date range
+- `packages/content-tools/src/*.test.ts` — recorded-response and validation tests
 - `.env.example` — publishing-only environment variables
 - `docs/content-publishing.md` — generation, review, correction, and publication runbook
 - `.github/workflows/quality.yml` — application and content checks
@@ -83,89 +92,403 @@ Execute this plan in a dedicated Git worktree created from `main`. Do not implem
 
 ### End-to-end coverage
 
-- `e2e/whereabouts.spec.ts` — win, loss, resume, routes, share, and list-only flows
-- `e2e/helpers.ts` — deterministic date, local-storage, and WebGL controls
+- `apps/web/e2e/whereabouts.spec.ts` — win, loss, resume, routes, share, and list-only flows
+- `apps/web/e2e/helpers.ts` — deterministic date, local-storage, and WebGL controls
 
-## Task 1: Scaffold TanStack Start, shadcn/ui, Tailwind, and the test harness
+## Parallel execution contract
+
+### Package dependency rules
+
+```text
+@whereabouts/web ──────────┬─> @whereabouts/case-content
+                           ├─> @whereabouts/game-engine
+                           └─> @whereabouts/browser-state
+
+@whereabouts/browser-state ──> @whereabouts/game-engine ──> @whereabouts/case-content
+
+@whereabouts/content-tools ──> @whereabouts/case-content
+```
+
+Use `workspace:*` for every internal dependency. Never use cross-package relative imports. `@whereabouts/case-content` exposes browser-safe schema/types from its root export and the artifact loader only from `@whereabouts/case-content/server`. Nothing may depend on `@whereabouts/content-tools`.
+
+### Foundation gates
+
+These gates are sequential and coordinator-owned.
+
+1. **F0 — Task 1:** Create the pnpm/Turbo/Biome workspace, scaffold `apps/web`, install every dependency needed by Tasks 1–14, generate shadcn components, and commit the lockfile. No later subagent may install packages.
+2. **F1 — Task 2:** Establish the case schema, testing fixture, first complete case, manifest, and package exports. Every Wave 1 worktree branches from the exact F1 integration commit.
+
+F1 checkpoint:
+
+```bash
+pnpm check:ci
+pnpm --filter @whereabouts/case-content test
+pnpm typecheck
+git diff --check
+```
+
+### Wave 1 — Independent domain foundations
+
+Dispatch four subagents concurrently from F1:
+
+| Workstream | Scope | Exclusive ownership |
+|---|---|---|
+| Engine | Task 3 | `packages/game-engine/**` |
+| Browser date utilities | Task 4 date half | `packages/browser-state/src/date*` and an index exporting only date APIs |
+| Case loader | Task 5 except `case-functions.ts` | `packages/case-content/src/loader.server*` and server export changes |
+| Publication validation | Task 12 | `packages/content-tools/src/validate-*`, validation tests, `packages/content-tools/catalog/**` |
+
+Merge engine, browser date utilities, loader, then validation. Coordinator checkpoint:
+
+```bash
+pnpm check:ci
+pnpm test
+pnpm typecheck
+pnpm content:validate
+git diff --check
+```
+
+### Wave 2 — Independent player surfaces and generation
+
+Dispatch six subagents concurrently from the Wave 1 integration commit:
+
+| Workstream | Scope | Exclusive ownership |
+|---|---|---|
+| Browser persistence | Task 4 storage half | `packages/browser-state/src/storage*` and expansion of its index |
+| Briefing UI | Task 7 | `apps/web/src/styles.css`, `case-header*`, `clue-card*`, `briefing-layout*` |
+| POI selection | Task 8 | `poi-search*`, `poi-dossier*`, `poi-picker*` |
+| Globe | Task 9 except its `poi-picker.tsx` integration | `apps/web/src/features/globe/**` |
+| Share/archive core | Task 11 primitives only | `share*`, `archive-drawer*`; do not edit `case-header.tsx` or `result-panel.tsx` |
+| Generation pipeline | Task 13 | all remaining `packages/content-tools/**` and `.env.example` |
+
+The coordinator integrates the globe adapter into `poi-picker.tsx` after merging the POI and globe commits. Any genuine missing dependency is added by the coordinator in one lockfile commit after the wave. Checkpoint:
+
+```bash
+pnpm check:ci
+pnpm test
+pnpm typecheck
+pnpm content:validate
+pnpm build
+git diff --check
+```
+
+### Gate I1 — Gameplay composition
+
+Task 10 is sequential because it integrates the engine, browser state, briefing, POI picker, globe, feedback, persistence, and reveal. One integration owner exclusively controls `feedback-panel.tsx`, `result-panel.tsx`, `game-screen.tsx`, `game-screen.test.tsx`, and `briefing-layout.tsx`.
+
+```bash
+pnpm --filter @whereabouts/web test -- src/features/game/game-screen.test.tsx
+pnpm quality
+git diff --check
+```
+
+### Wave 3 — Routing, result wiring, and operations drafts
+
+Dispatch three subagents concurrently from I1:
+
+| Workstream | Scope | Exclusive ownership |
+|---|---|---|
+| Routing | Task 6 | `apps/web/src/routes/**`, `briefing-unavailable.tsx`, `route-state.test.tsx`, `case-functions.ts` |
+| Sharing integration | Task 11 wiring | modifications only to `result-panel.tsx` and `case-header.tsx` |
+| Operations drafts | Task 15 Steps 1–5 | `.github/workflows/**`, `docs/content-publishing.md`, `README.md` |
+
+Task 6 is deliberately executed after Task 10 so its canonical route can import an existing `GameScreen` and pass type checking. Merge routing, sharing integration, then operations drafts.
+
+### Gate I2 — Playwright and operational integration
+
+Execute Task 14 after Wave 3. The E2E owner exclusively controls `apps/web/playwright.config.ts` and `apps/web/e2e/**` and may not edit manifests, workspace configuration, or the lockfile. After Playwright is green, the coordinator completes Task 15 verification.
+
+```bash
+pnpm --filter @whereabouts/web exec playwright install chromium
+pnpm test:e2e
+pnpm quality
+git diff --check
+```
+
+### Gate L1 — Launch verification
+
+Task 16 is sequential. Its owner may repair files implicated by measured accessibility or performance failures, so it cannot run beside another writer. Generate 29 cases beginning 2026-08-15 because Task 2 already owns the 2026-08-14 case:
+
+```bash
+pnpm content:generate-range -- --from 2026-08-15 --days 29
+pnpm content:validate
+pnpm content:review-range -- --from 2026-08-14 --days 30 --out artifacts/review
+pnpm quality
+pnpm test:e2e
+git diff --check
+git status --short
+```
+
+### Subagent handoff template
+
+Every workstream prompt must name its checkpoint commit, exclusive file set, required tests, and forbidden shared files. Every result must report:
+
+```text
+Commit: report the actual commit SHA
+Changed files: list every changed path
+Verification: list each command and its observed outcome
+Assumptions: write “none” or enumerate each unresolved assumption
+```
+
+Subagents never merge, rebase, broadly format the repository, modify another workstream's files, or change root/package manifests. The coordinator cherry-picks in the stated order and makes integration fixes in separate coordinator-only commits.
+
+## Task 1: Scaffold the pnpm, Turborepo, Biome, TanStack Start, and shadcn foundation
 
 **Files:**
 - Create/modify: `package.json`
-- Create/modify: `vite.config.ts`
-- Create: `vitest.config.ts`
-- Create: `src/test/setup.ts`
-- Create: `src/test/foundation.test.ts`
-- Create/modify: `src/styles.css`
-- Create: `components.json`
+- Create: `pnpm-workspace.yaml`
+- Create: `turbo.json`
+- Create: `biome.json`
+- Create: `tsconfig.base.json`
+- Create: `packages/case-content/package.json`, `tsconfig.json`, `vitest.config.ts`
+- Create: `packages/game-engine/package.json`, `tsconfig.json`, `vitest.config.ts`
+- Create: `packages/browser-state/package.json`, `tsconfig.json`, `vitest.config.ts`
+- Create: `packages/content-tools/package.json`, `tsconfig.json`, `vitest.config.ts`
+- Create/modify through shadcn: `apps/web/**`
 - Modify: `.gitignore`
-- Create via shadcn: `src/components/ui/button.tsx`, `drawer.tsx`, `command.tsx`, `badge.tsx`, `separator.tsx`, `scroll-area.tsx`
 
-- [ ] **Step 1: Scaffold the current directory with the official TanStack Start shadcn template**
-
-Run from the repository root:
+- [ ] **Step 1: Initialize the private root package and pin pnpm**
 
 ```bash
-pnpm dlx shadcn@latest init -t start --base radix --no-monorepo --pointer -c .
+pnpm init
+corepack enable
+corepack use pnpm@latest
 ```
 
-Expected: a TanStack Start app using React, TypeScript, Tailwind CSS v4, the `@/*` alias, and shadcn configuration. Preserve the existing `docs/` directory and `.gitignore` entries.
+Expected: root `package.json` exists and contains an exact `packageManager` value. Set `private` to `true` in Step 2; `pnpm-lock.yaml` will become the workspace's only lockfile.
 
-- [ ] **Step 2: Add only the shadcn components required by the approved flow**
+- [ ] **Step 2: Create the pnpm workspace contract**
 
-```bash
-pnpm dlx shadcn@latest add button drawer command badge separator scroll-area -y
+Create `pnpm-workspace.yaml`:
+
+```yaml
+packages:
+  - "apps/*"
+  - "packages/*"
+
+sharedWorkspaceLockfile: true
+disallowWorkspaceCycles: true
+failIfNoMatch: true
 ```
 
-Expected: component source files under `src/components/ui/`; do not add a general component library or all shadcn components.
-
-- [ ] **Step 3: Install runtime and test dependencies**
-
-```bash
-pnpm add zod react-globe.gl three ai @ai-sdk/openai
-pnpm add -D vitest jsdom @testing-library/react @testing-library/jest-dom @testing-library/user-event @playwright/test tsx
-```
-
-Expected: dependencies recorded in `package.json` and a current `pnpm-lock.yaml`.
-
-- [ ] **Step 4: Ignore generated test and editorial artifacts**
-
-Append these exact entries to `.gitignore`:
-
-```gitignore
-artifacts/
-playwright-report/
-test-results/
-coverage/
-```
-
-- [ ] **Step 5: Add explicit scripts to `package.json`**
-
-Merge these commands into the generated scripts:
+Create the root `package.json` scripts while retaining the exact tool versions and package-manager pin written by pnpm:
 
 ```json
 {
+  "name": "whereabouts",
+  "private": true,
   "scripts": {
-    "dev": "vite dev --port 3000",
-    "build": "vite build",
-    "typecheck": "tsc --noEmit",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "test:e2e": "playwright test",
-    "content:generate": "tsx scripts/content/generate-case.ts",
-    "content:generate-range": "tsx scripts/content/generate-range.ts",
-    "content:validate": "tsx scripts/content/validate-all.ts",
-    "content:review": "tsx scripts/content/review-case.ts",
-    "content:review-range": "tsx scripts/content/review-range.ts",
-    "quality": "pnpm typecheck && pnpm test && pnpm content:validate && pnpm build"
+    "dev": "turbo run dev --filter=@whereabouts/web",
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
+    "test:e2e": "turbo run test:e2e --filter=@whereabouts/web",
+    "content:generate": "turbo run content:generate --filter=@whereabouts/content-tools",
+    "content:generate-range": "turbo run content:generate-range --filter=@whereabouts/content-tools",
+    "content:validate": "turbo run content:validate --filter=@whereabouts/content-tools",
+    "content:review": "turbo run content:review --filter=@whereabouts/content-tools",
+    "content:review-range": "turbo run content:review-range --filter=@whereabouts/content-tools",
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "check": "biome check .",
+    "check:fix": "biome check --write .",
+    "check:ci": "biome ci .",
+    "quality": "turbo run check:ci typecheck test content:validate build"
   }
 }
 ```
 
-- [ ] **Step 6: Write the failing foundation test**
+- [ ] **Step 3: Define the Turbo task graph**
 
-Create `src/test/foundation.test.ts`:
+Create `turbo.json`:
+
+```json
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "//#check:ci": { "outputs": [] },
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "env": ["VITE_CANONICAL_ORIGIN"]
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".output/**"],
+      "env": ["VITE_CANONICAL_ORIGIN"]
+    },
+    "typecheck": { "dependsOn": ["^typecheck"], "outputs": [] },
+    "test": { "outputs": [] },
+    "test:watch": { "cache": false, "persistent": true, "interactive": true },
+    "test:e2e": { "cache": false },
+    "content:validate": {
+      "cache": false,
+      "env": ["PUBLICATION_CEILING"]
+    },
+    "content:generate": {
+      "cache": false,
+      "passThroughEnv": ["OPENAI_API_KEY", "WIKIMEDIA_USER_AGENT", "WHEREABOUTS_MODEL"]
+    },
+    "content:generate-range": {
+      "cache": false,
+      "passThroughEnv": ["OPENAI_API_KEY", "WIKIMEDIA_USER_AGENT", "WHEREABOUTS_MODEL"]
+    },
+    "content:review": { "cache": false },
+    "content:review-range": { "cache": false }
+  }
+}
+```
+
+Keep generation, review, E2E, and time-dependent publication validation uncached. After the first successful app build, remove either `dist/**` or `.output/**` if the selected TanStack deployment adapter does not emit it.
+
+- [ ] **Step 4: Configure Biome once at the workspace root**
+
+Create `biome.json`:
+
+```json
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true,
+    "defaultBranch": "main"
+  },
+  "files": {
+    "ignoreUnknown": true,
+    "includes": [
+      "**",
+      "!**/src/routeTree.gen.ts",
+      "!!**/node_modules",
+      "!!**/.turbo",
+      "!!**/.output",
+      "!!**/.vinxi",
+      "!!**/.tanstack",
+      "!!**/dist",
+      "!!**/coverage",
+      "!!**/playwright-report",
+      "!!**/test-results",
+      "!!**/artifacts"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100,
+    "lineEnding": "lf"
+  },
+  "linter": { "enabled": true, "rules": { "preset": "recommended" } },
+  "assist": {
+    "enabled": true,
+    "actions": { "source": { "organizeImports": "on" } }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double",
+      "jsxQuoteStyle": "double",
+      "semicolons": "asNeeded",
+      "trailingCommas": "all"
+    }
+  },
+  "css": {
+    "parser": { "tailwindDirectives": true },
+    "formatter": { "enabled": true }
+  }
+}
+```
+
+Biome owns formatting, style/syntax linting, and import organization. TypeScript owns type correctness. Do not add ESLint, Prettier, import-sorting plugins, or a Tailwind Prettier plugin. Keep shadcn source in Biome scope.
+
+- [ ] **Step 5: Scaffold the app and add the approved shadcn components**
+
+```bash
+pnpm add --workspace-root --save-dev --save-exact turbo @biomejs/biome
+pnpm dlx shadcn@latest init -t start --base radix --no-monorepo --pointer -c apps/web
+pnpm dlx shadcn@latest add button drawer command badge separator scroll-area -y -c apps/web
+```
+
+`--no-monorepo` controls shadcn's component layout inside `apps/web`; the surrounding repository remains a pnpm/Turbo workspace. Rename the generated app package to `@whereabouts/web` and keep shadcn components app-local.
+Verify the scaffold did not create an `apps/web/pnpm-lock.yaml`; remove that generated nested lockfile if present and retain only the root lockfile. Remove any generated ESLint or Prettier configuration and their package dependencies before the first install; Biome is the sole formatter/linter.
+
+- [ ] **Step 6: Create private package manifests and source exports**
+
+Every internal package is `private`, uses `type: module`, and exposes TypeScript source for workspace consumption. Use these dependency edges:
+
+```json
+{
+  "@whereabouts/case-content": {
+    "exports": {
+      ".": "./src/schema.ts",
+      "./server": "./src/loader.server.ts",
+      "./testing": "./test/fixtures.ts"
+    }
+  },
+  "@whereabouts/game-engine": {
+    "dependencies": { "@whereabouts/case-content": "workspace:*" },
+    "exports": { ".": "./src/index.ts" }
+  },
+  "@whereabouts/browser-state": {
+    "dependencies": {
+      "@whereabouts/case-content": "workspace:*",
+      "@whereabouts/game-engine": "workspace:*"
+    },
+    "exports": { ".": "./src/index.ts" }
+  },
+  "@whereabouts/content-tools": {
+    "dependencies": { "@whereabouts/case-content": "workspace:*" },
+    "private": true
+  }
+}
+```
+
+Each package defines `typecheck: tsc --noEmit`, `test: vitest run`, and `test:watch: vitest`. `content-tools` additionally defines:
+
+```json
+{
+  "scripts": {
+    "content:generate": "tsx src/generate-case.ts",
+    "content:generate-range": "tsx src/generate-range.ts",
+    "content:validate": "tsx src/validate-all.ts",
+    "content:review": "tsx src/review-case.ts",
+    "content:review-range": "tsx src/review-range.ts"
+  }
+}
+```
+
+`apps/web` defines `dev`, `build`, `typecheck`, `test`, `test:watch`, and `test:e2e`. No package imports another workspace through a relative path.
+
+- [ ] **Step 7: Install dependencies into their owning packages**
+
+```bash
+pnpm --filter @whereabouts/case-content add zod
+pnpm --filter @whereabouts/game-engine add "@whereabouts/case-content@workspace:*" zod
+pnpm --filter @whereabouts/browser-state add "@whereabouts/case-content@workspace:*" "@whereabouts/game-engine@workspace:*"
+pnpm --filter @whereabouts/web add "@whereabouts/case-content@workspace:*" "@whereabouts/game-engine@workspace:*" "@whereabouts/browser-state@workspace:*" zod react-globe.gl three
+pnpm --filter @whereabouts/content-tools add "@whereabouts/case-content@workspace:*" ai @ai-sdk/openai zod
+pnpm --filter @whereabouts/web add --save-dev vitest jsdom @testing-library/react @testing-library/jest-dom @testing-library/user-event @playwright/test
+pnpm --filter @whereabouts/case-content --filter @whereabouts/game-engine --filter @whereabouts/browser-state --filter @whereabouts/content-tools add --save-dev vitest typescript
+pnpm --filter @whereabouts/browser-state add --save-dev jsdom
+pnpm --filter @whereabouts/case-content add --save-dev vite
+pnpm --filter @whereabouts/content-tools add --save-dev tsx @types/node
+```
+
+AI SDK packages and `tsx` belong only to content-tools. No later workstream may install a dependency or modify a package manifest without coordinator approval.
+
+- [ ] **Step 8: Add shared TypeScript and app test configuration**
+
+Create `tsconfig.base.json` with `strict: true`, `noEmit: true`, `module: ESNext`, `moduleResolution: Bundler`, `target: ES2022`, and `skipLibCheck: true`. Package configs extend it and include `src`, `test`, and their `vitest.config.ts`. Do not enable TypeScript `noUnusedLocals` or `noUnusedParameters`; Biome owns those diagnostics.
+
+Configure `apps/web/vitest.config.ts` with jsdom, `@/*` resolving to `apps/web/src`, `apps/web/src/test/setup.ts`, and app-local `src/**/*.test.{ts,tsx}`. Case-content, game-engine, and content-tools Vitest configs use Node; browser-state uses jsdom for `Storage` tests. Create `src/index.ts` containing `export {}` in each internal package so the F0 typecheck has a valid module before the owning feature task replaces or expands that entrypoint.
+
+- [ ] **Step 9: Write and run the foundation smoke test**
+
+Create `apps/web/src/test/foundation.test.ts`:
 
 ```ts
 import { describe, expect, it } from "vitest"
+
 import { cn } from "@/lib/utils"
 
 describe("application foundation", () => {
@@ -175,63 +498,51 @@ describe("application foundation", () => {
 })
 ```
 
-- [ ] **Step 7: Configure Vitest and run the foundation test**
-
-Create `vitest.config.ts`:
-
-```ts
-import path from "node:path"
-import { defineConfig } from "vitest/config"
-
-export default defineConfig({
-  resolve: { alias: { "@": path.resolve(__dirname, "src") } },
-  test: {
-    environment: "jsdom",
-    setupFiles: ["./src/test/setup.ts"],
-    include: ["src/**/*.test.{ts,tsx}", "scripts/**/*.test.ts"],
-  },
-})
-```
-
-Create `src/test/setup.ts`:
-
-```ts
-import "@testing-library/jest-dom/vitest"
-```
-
-Run:
+Run the initial mutating Biome pass once, before feature branches exist:
 
 ```bash
-pnpm test -- src/test/foundation.test.ts
+pnpm check:fix
+pnpm check:ci
+pnpm --filter @whereabouts/web test -- src/test/foundation.test.ts
 pnpm typecheck
+pnpm build
+git diff --check
 ```
 
-Expected: one passing test and no TypeScript errors.
+- [ ] **Step 10: Ignore generated outputs and commit F0**
 
-- [ ] **Step 8: Commit the foundation**
+Ensure `.gitignore` contains:
+
+```gitignore
+.turbo/
+artifacts/
+playwright-report/
+test-results/
+coverage/
+```
 
 ```bash
-git add package.json pnpm-lock.yaml components.json vite.config.ts vitest.config.ts src
-git commit -m "chore: scaffold Whereabouts application"
+git add package.json pnpm-workspace.yaml pnpm-lock.yaml turbo.json biome.json tsconfig.base.json apps packages .gitignore
+git commit -m "chore: scaffold Whereabouts pnpm workspace"
 ```
 
 ## Task 2: Define the case contract, complete fixtures, and publication manifest
 
 **Files:**
-- Create: `src/features/cases/schema.ts`
-- Create: `src/features/cases/schema.test.ts`
-- Create: `src/test/fixtures/case.ts`
-- Create: `content/manifest.json`
-- Create: `content/cases/2026-08-14/v1.json`
+- Create: `packages/case-content/src/schema.ts`
+- Create: `packages/case-content/src/schema.test.ts`
+- Create: `packages/case-content/test/fixtures.ts`
+- Create: `packages/case-content/content/manifest.json`
+- Create: `packages/case-content/content/cases/2026-08-14/v1.json`
 
 - [ ] **Step 1: Write schema tests before the schema**
 
-Create `src/features/cases/schema.test.ts`:
+Create `packages/case-content/src/schema.test.ts`:
 
 ```ts
 import { describe, expect, it } from "vitest"
 import { dailyCaseSchema } from "./schema"
-import { makeCase } from "@/test/fixtures/case"
+import { makeCase } from "@whereabouts/case-content/testing"
 
 describe("dailyCaseSchema", () => {
   it("accepts one target, 24 distractors, six clues, and 24 responses", () => {
@@ -255,14 +566,14 @@ describe("dailyCaseSchema", () => {
 - [ ] **Step 2: Run the tests to verify they fail**
 
 ```bash
-pnpm test -- src/features/cases/schema.test.ts
+pnpm --filter @whereabouts/case-content test -- src/schema.test.ts
 ```
 
 Expected: FAIL because `schema.ts` and the fixture do not exist.
 
 - [ ] **Step 3: Implement the exact case schema**
 
-Create `src/features/cases/schema.ts` with these public types and invariants:
+Create `packages/case-content/src/schema.ts` with these public types and invariants:
 
 ```ts
 import { z } from "zod"
@@ -345,13 +656,13 @@ export type RelationshipTier = DailyCase["contextualResponses"][number]["tier"]
 
 - [ ] **Step 4: Add a deterministic 25-POI fixture factory**
 
-Create `src/test/fixtures/case.ts`. Export `makeCase(overrides?: Partial<DailyCase>): DailyCase`; build 25 POIs with `Array.from`, make `poi-00` the target, create six source-backed clues, and create responses for `poi-01` through `poi-24`. Use valid URLs and fixed ISO timestamps. Return a deep mutable object so tests may alter it without cross-test leakage.
+Create `packages/case-content/test/fixtures.ts`. Export `makeCase(overrides?: Partial<DailyCase>): DailyCase`; build 25 POIs with `Array.from`, make `poi-00` the target, create six source-backed clues, and create responses for `poi-01` through `poi-24`. Use valid URLs and fixed ISO timestamps. Return a deep mutable object so tests may alter it without cross-test leakage.
 
 - [ ] **Step 5: Add one complete hand-authored development case and manifest**
 
-Create `content/cases/2026-08-14/v1.json` using the production schema. Use Istanbul as the target destination, Hagia Sophia as the target POI, and 24 globally distributed, recognizable distractors. Every pre-reveal statement must omit `Istanbul`, `Turkey`, and `Hagia Sophia`; every factual section must cite at least one source record.
+Create `packages/case-content/content/cases/2026-08-14/v1.json` using the production schema. Use Istanbul as the target destination, Hagia Sophia as the target POI, and 24 globally distributed, recognizable distractors. Every pre-reveal statement must omit `Istanbul`, `Turkey`, and `Hagia Sophia`; every factual section must cite at least one source record.
 
-Create `content/manifest.json`:
+Create `packages/case-content/content/manifest.json`:
 
 ```json
 {
@@ -360,7 +671,7 @@ Create `content/manifest.json`:
     "2026-08-14": {
       "caseNumber": 1,
       "revision": 1,
-      "file": "/content/cases/2026-08-14/v1.json"
+      "file": "./cases/2026-08-14/v1.json"
     }
   }
 }
@@ -369,8 +680,8 @@ Create `content/manifest.json`:
 - [ ] **Step 6: Run schema tests and validate the development artifact**
 
 ```bash
-pnpm test -- src/features/cases/schema.test.ts
-pnpm exec tsx -e "import c from './content/cases/2026-08-14/v1.json' with { type: 'json' }; import { dailyCaseSchema } from './src/features/cases/schema.ts'; dailyCaseSchema.parse(c)"
+pnpm --filter @whereabouts/case-content test
+pnpm --filter @whereabouts/case-content typecheck
 ```
 
 Expected: all schema tests pass and the one-off parser exits 0.
@@ -378,16 +689,17 @@ Expected: all schema tests pass and the one-off parser exits 0.
 - [ ] **Step 7: Commit the case contract**
 
 ```bash
-git add src/features/cases src/test/fixtures content
+git add packages/case-content
 git commit -m "feat: define revisioned daily case format"
 ```
 
 ## Task 3: Implement the pure game engine with TDD
 
 **Files:**
-- Create: `src/features/game/progress-schema.ts`
-- Create: `src/features/game/engine.ts`
-- Create: `src/features/game/engine.test.ts`
+- Create: `packages/game-engine/src/progress-schema.ts`
+- Create: `packages/game-engine/src/engine.ts`
+- Create: `packages/game-engine/src/engine.test.ts`
+- Create: `packages/game-engine/src/index.ts`
 
 - [ ] **Step 1: Write the complete rule tests**
 
@@ -409,7 +721,7 @@ Use `makeCase()` and compare complete progress objects, not implementation detai
 - [ ] **Step 2: Run the engine tests to verify failure**
 
 ```bash
-pnpm test -- src/features/game/engine.test.ts
+pnpm --filter @whereabouts/game-engine test -- src/engine.test.ts
 ```
 
 Expected: FAIL because progress and engine modules do not exist.
@@ -444,10 +756,12 @@ export function getShareTokens(caseData: DailyCase, progress: GameProgress): Arr
 
 Implement all functions as pure operations. `applyGuess` must return a new object, verify the POI exists, reject duplicates and ended games, win on the target, and lose only when the sixth wrong ID is appended.
 
+Create `src/index.ts` to export only the progress schema/types and public engine API; do not export test helpers or package internals.
+
 - [ ] **Step 4: Run engine tests and type checking**
 
 ```bash
-pnpm test -- src/features/game/engine.test.ts
+pnpm --filter @whereabouts/game-engine test -- src/engine.test.ts
 pnpm typecheck
 ```
 
@@ -456,17 +770,18 @@ Expected: eight passing engine tests and no TypeScript errors.
 - [ ] **Step 5: Commit the game engine**
 
 ```bash
-git add src/features/game/progress-schema.ts src/features/game/engine.ts src/features/game/engine.test.ts
+git add packages/game-engine/src
 git commit -m "feat: add pure Whereabouts game engine"
 ```
 
 ## Task 4: Add safe browser persistence and date helpers
 
 **Files:**
-- Create: `src/features/game/storage.ts`
-- Create: `src/features/game/storage.test.ts`
-- Create: `src/features/game/date.ts`
-- Create: `src/features/game/date.test.ts`
+- Create: `packages/browser-state/src/storage.ts`
+- Create: `packages/browser-state/src/storage.test.ts`
+- Create: `packages/browser-state/src/date.ts`
+- Create: `packages/browser-state/src/date.test.ts`
+- Create: `packages/browser-state/src/index.ts`
 
 - [ ] **Step 1: Write storage and date tests**
 
@@ -483,7 +798,7 @@ For storage, use jsdom `localStorage` and assert that a valid matching revision 
 - [ ] **Step 2: Run tests to verify failure**
 
 ```bash
-pnpm test -- src/features/game/storage.test.ts src/features/game/date.test.ts
+pnpm --filter @whereabouts/browser-state test -- src/storage.test.ts src/date.test.ts
 ```
 
 Expected: FAIL because both modules are missing.
@@ -504,10 +819,12 @@ export function clearProgress(caseDate: string, storage: Storage = window.localS
 
 `loadProgress` must parse with `gameProgressSchema.safeParse`, verify date and revision, and call `createProgress(caseData)` on any failure. It must never throw because of storage access; catch `SecurityError` and quota-related exceptions.
 
+Create `src/index.ts` that exports the storage and date APIs. Keep DOM access inside function bodies so importing the package during server rendering is safe.
+
 - [ ] **Step 5: Run focused tests**
 
 ```bash
-pnpm test -- src/features/game/storage.test.ts src/features/game/date.test.ts
+pnpm --filter @whereabouts/browser-state test -- src/storage.test.ts src/date.test.ts
 ```
 
 Expected: all persistence and calendar tests pass.
@@ -515,16 +832,15 @@ Expected: all persistence and calendar tests pass.
 - [ ] **Step 6: Commit persistence**
 
 ```bash
-git add src/features/game/storage.ts src/features/game/storage.test.ts src/features/game/date.ts src/features/game/date.test.ts
+git add packages/browser-state/src
 git commit -m "feat: persist dated game progress in browser"
 ```
 
 ## Task 5: Load only published cases through a TanStack server boundary
 
 **Files:**
-- Create: `src/features/cases/case-loader.server.ts`
-- Create: `src/features/cases/case-loader.server.test.ts`
-- Create: `src/features/cases/case-functions.ts`
+- Create: `packages/case-content/src/loader.server.ts`
+- Create: `packages/case-content/src/loader.server.test.ts`
 
 - [ ] **Step 1: Write loader tests**
 
@@ -536,65 +852,47 @@ it("returns null for a syntactically valid unpublished date")
 it("rejects a manifest entry whose artifact date or revision differs")
 ```
 
-Use a fixture manifest and a map keyed by `/content/cases/2026-08-14/v1.json`.
+Use a fixture manifest and a map keyed by `../content/cases/2026-08-14/v1.json`.
 
 - [ ] **Step 2: Run the loader tests to verify failure**
 
 ```bash
-pnpm test -- src/features/cases/case-loader.server.test.ts
+pnpm --filter @whereabouts/case-content test -- src/loader.server.test.ts
 ```
 
 Expected: FAIL because the loader does not exist.
 
 - [ ] **Step 3: Implement the injected loader and production sources**
 
-`case-loader.server.ts` must use:
+`loader.server.ts` must use:
 
 ```ts
-const caseModules = import.meta.glob("/content/cases/**/*.json", {
+const caseModules = import.meta.glob("../content/cases/**/*.json", {
   eager: true,
   import: "default",
 }) as Record<string, unknown>
 ```
 
-Parse `content/manifest.json` with a Zod manifest schema. Export `loadPublishedCase(date)` plus a dependency-injected `createCaseLoader(manifest, modules)` used by tests. Verify the artifact's date and revision match the manifest entry. Return `null` rather than throwing for a date absent from the public manifest; throw a typed `CaseContentError` for a corrupt published artifact. Future artifacts may exist privately in the repository, but they are unreachable until the publication workflow adds them to the manifest.
+Parse `packages/case-content/content/manifest.json` with a Zod manifest schema. Export `loadPublishedCase(date)` plus a dependency-injected `createCaseLoader(manifest, modules)` used by tests. Verify the artifact's date and revision match the manifest entry. Return `null` rather than throwing for a date absent from the public manifest; throw a typed `CaseContentError` for a corrupt published artifact. Future artifacts may exist privately in the repository, but they are unreachable until the publication workflow adds them to the manifest.
 
-- [ ] **Step 4: Expose the loader with a validated server function**
-
-Create `case-functions.ts`:
-
-```ts
-import { createServerFn } from "@tanstack/react-start"
-import { z } from "zod"
-import { listPublishedCases, loadPublishedCase } from "./case-loader.server"
-
-export const getPublishedCase = createServerFn({ method: "GET" })
-  .validator(z.object({ date: z.string().date() }))
-  .handler(async ({ data }) => loadPublishedCase(data.date))
-
-export const getPublishedCaseIndex = createServerFn({ method: "GET" })
-  .handler(async () => listPublishedCases())
-```
-
-`listPublishedCases()` returns only `{ date, caseNumber }` records, newest first. The manifest is the publication boundary. Task 12 validates that it contains no date later than the configured publication ceiling, and Task 15 adds reviewed entries only when their release date arrives.
-
-- [ ] **Step 5: Run tests and commit**
+- [ ] **Step 4: Run loader tests and commit the Wave 1 package**
 
 ```bash
-pnpm test -- src/features/cases/case-loader.server.test.ts
+pnpm --filter @whereabouts/case-content test -- src/loader.server.test.ts
 pnpm typecheck
-git add src/features/cases
-git commit -m "feat: load published cases through server functions"
+git add packages/case-content/src/loader.server.ts packages/case-content/src/loader.server.test.ts packages/case-content/package.json
+git commit -m "feat: load revisioned published cases"
 ```
 
 ## Task 6: Build canonical date routing and briefing-unavailable states
 
 **Files:**
-- Modify: `src/routes/__root.tsx`
-- Modify: `src/routes/index.tsx`
-- Create: `src/routes/$date.tsx`
-- Create: `src/features/game/briefing-unavailable.tsx`
-- Create: `src/features/game/route-state.test.tsx`
+- Modify: `apps/web/src/routes/__root.tsx`
+- Modify: `apps/web/src/routes/index.tsx`
+- Create: `apps/web/src/routes/$date.tsx`
+- Create: `apps/web/src/features/cases/case-functions.ts`
+- Create: `apps/web/src/features/game/briefing-unavailable.tsx`
+- Create: `apps/web/src/features/game/route-state.test.tsx`
 
 - [ ] **Step 1: Write route-level component tests**
 
@@ -603,34 +901,55 @@ Use a memory router or test the extracted route components. Assert that `/` rend
 - [ ] **Step 2: Run tests to verify failure**
 
 ```bash
-pnpm test -- src/features/game/route-state.test.tsx
+pnpm --filter @whereabouts/web test -- src/features/game/route-state.test.tsx
 ```
 
-- [ ] **Step 3: Implement `/` as a client-local-date redirect**
+- [ ] **Step 3: Expose case loading through validated server functions**
 
-`index.tsx` should call `formatLocalDate(new Date())` in an effect and navigate with `replace: true` to `/$date`. During SSR and hydration it renders a compact `Preparing today’s briefing…` shell, preventing a server-timezone mismatch.
+Create `case-functions.ts`:
 
-- [ ] **Step 4: Implement the canonical `$date` route**
+```ts
+import { createServerFn } from "@tanstack/react-start"
+import { z } from "zod"
 
-Validate the parameter with `parseCaseDate` before calling `getPublishedCase` from the route loader. Return `{ caseData }`; render `BriefingUnavailable` for `null`; render `<GameScreen caseData={caseData} />` otherwise. Supply route metadata using the string template ``Whereabouts — ${date}`` without revealing the answer.
+import { listPublishedCases, loadPublishedCase } from "@whereabouts/case-content/server"
 
-- [ ] **Step 5: Run route tests, type checking, and commit**
+export const getPublishedCase = createServerFn({ method: "GET" })
+  .validator(z.object({ date: z.string().date() }))
+  .handler(async ({ data }) => loadPublishedCase(data.date))
+
+export const getPublishedCaseIndex = createServerFn({ method: "GET" }).handler(async () =>
+  listPublishedCases(),
+)
+```
+
+`listPublishedCases()` returns only `{ date, caseNumber }` records, newest first. The manifest is the publication boundary; Task 12 rejects future entries and Task 15 adds reviewed cases on release.
+
+- [ ] **Step 4: Implement `/` as a client-local-date redirect**
+
+`index.tsx` imports `formatLocalDate` from `@whereabouts/browser-state`, calls it with `new Date()` in an effect, and navigates with `replace: true` to `/$date`. During SSR and hydration it renders a compact `Preparing today’s briefing…` shell, preventing a server-timezone mismatch.
+
+- [ ] **Step 5: Implement the canonical `$date` route**
+
+Import `parseCaseDate` from `@whereabouts/browser-state`. Validate the parameter before calling `getPublishedCase` from the route loader. Return `{ caseData }`; render `BriefingUnavailable` for `null`; render `<GameScreen caseData={caseData} />` otherwise. Supply route metadata using the string template ``Whereabouts — ${date}`` without revealing the answer.
+
+- [ ] **Step 6: Run route tests, type checking, and commit**
 
 ```bash
-pnpm test -- src/features/game/route-state.test.tsx
+pnpm --filter @whereabouts/web test -- src/features/game/route-state.test.tsx
 pnpm typecheck
-git add src/routes src/features/game/briefing-unavailable.tsx src/features/game/route-state.test.tsx
+git add apps/web/src/routes apps/web/src/features/cases/case-functions.ts apps/web/src/features/game/briefing-unavailable.tsx apps/web/src/features/game/route-state.test.tsx
 git commit -m "feat: add canonical daily and historical routes"
 ```
 
 ## Task 7: Establish the Whereabouts Tailwind theme and static briefing components
 
 **Files:**
-- Modify: `src/styles.css`
-- Create: `src/features/game/case-header.tsx`
-- Create: `src/features/game/clue-card.tsx`
-- Create: `src/features/game/briefing-layout.tsx`
-- Create: `src/features/game/briefing-layout.test.tsx`
+- Modify: `apps/web/src/styles.css`
+- Create: `apps/web/src/features/game/case-header.tsx`
+- Create: `apps/web/src/features/game/clue-card.tsx`
+- Create: `apps/web/src/features/game/briefing-layout.tsx`
+- Create: `apps/web/src/features/game/briefing-layout.test.tsx`
 
 - [ ] **Step 1: Write the briefing component test**
 
@@ -639,12 +958,12 @@ Render the static layout with fixture data and progress. Assert the accessible h
 - [ ] **Step 2: Run the test to verify failure**
 
 ```bash
-pnpm test -- src/features/game/briefing-layout.test.tsx
+pnpm --filter @whereabouts/web test -- src/features/game/briefing-layout.test.tsx
 ```
 
 - [ ] **Step 3: Define the visual tokens in Tailwind CSS v4**
 
-Add semantic variables to `src/styles.css` using OKLCH:
+Add semantic variables to `apps/web/src/styles.css` using OKLCH:
 
 ```css
 @import "tailwindcss";
@@ -686,19 +1005,19 @@ Use Tailwind utilities and shadcn `Badge`/`Separator`; do not create a second st
 - [ ] **Step 5: Verify and commit**
 
 ```bash
-pnpm test -- src/features/game/briefing-layout.test.tsx
+pnpm --filter @whereabouts/web test -- src/features/game/briefing-layout.test.tsx
 pnpm typecheck
-git add src/styles.css src/features/game
+git add apps/web/src/styles.css apps/web/src/features/game
 git commit -m "feat: add mobile intelligence briefing design"
 ```
 
 ## Task 8: Build the accessible POI search and confirmation dossier
 
 **Files:**
-- Create: `src/features/game/poi-search.tsx`
-- Create: `src/features/game/poi-dossier.tsx`
-- Create: `src/features/game/poi-picker.tsx`
-- Create: `src/features/game/poi-picker.test.tsx`
+- Create: `apps/web/src/features/game/poi-search.tsx`
+- Create: `apps/web/src/features/game/poi-dossier.tsx`
+- Create: `apps/web/src/features/game/poi-picker.tsx`
+- Create: `apps/web/src/features/game/poi-picker.test.tsx`
 
 - [ ] **Step 1: Write interaction tests**
 
@@ -707,7 +1026,7 @@ With Testing Library and `userEvent`, assert that a user can search by POI, city
 - [ ] **Step 2: Run the tests to verify failure**
 
 ```bash
-pnpm test -- src/features/game/poi-picker.test.tsx
+pnpm --filter @whereabouts/web test -- src/features/game/poi-picker.test.tsx
 ```
 
 - [ ] **Step 3: Implement `PoiSearch` with shadcn `Command`**
@@ -735,20 +1054,20 @@ The picker owns only `selectedPoi`; it does not own game progress. Both globe an
 - [ ] **Step 6: Verify and commit**
 
 ```bash
-pnpm test -- src/features/game/poi-picker.test.tsx
+pnpm --filter @whereabouts/web test -- src/features/game/poi-picker.test.tsx
 pnpm typecheck
-git add src/features/game/poi-search.tsx src/features/game/poi-dossier.tsx src/features/game/poi-picker.tsx src/features/game/poi-picker.test.tsx
+git add apps/web/src/features/game/poi-search.tsx apps/web/src/features/game/poi-dossier.tsx apps/web/src/features/game/poi-picker.tsx apps/web/src/features/game/poi-picker.test.tsx
 git commit -m "feat: add accessible POI selection flow"
 ```
 
 ## Task 9: Add the lazy 3D globe and dependable list-only fallback
 
 **Files:**
-- Create: `src/features/globe/webgl.ts`
-- Create: `src/features/globe/webgl.test.ts`
-- Create: `src/features/globe/globe-picker.tsx`
-- Create: `src/features/globe/globe-canvas.client.tsx`
-- Modify: `src/features/game/poi-picker.tsx`
+- Create: `apps/web/src/features/globe/webgl.ts`
+- Create: `apps/web/src/features/globe/webgl.test.ts`
+- Create: `apps/web/src/features/globe/globe-picker.tsx`
+- Create: `apps/web/src/features/globe/globe-canvas.client.tsx`
+- Modify: `apps/web/src/features/game/poi-picker.tsx`
 
 - [ ] **Step 1: Write WebGL and fallback tests**
 
@@ -757,7 +1076,7 @@ Mock `HTMLCanvasElement.getContext` to return `null` and assert `supportsWebGl()
 - [ ] **Step 2: Run the tests to verify failure**
 
 ```bash
-pnpm test -- src/features/globe/webgl.test.ts
+pnpm --filter @whereabouts/web test -- src/features/globe/webgl.test.ts
 ```
 
 - [ ] **Step 3: Implement the capability probe**
@@ -784,20 +1103,20 @@ Load `globe-canvas.client.tsx` with `React.lazy` only after mount and only when 
 - [ ] **Step 6: Verify and commit**
 
 ```bash
-pnpm test -- src/features/globe/webgl.test.ts src/features/game/poi-picker.test.tsx
+pnpm --filter @whereabouts/web test -- src/features/globe/webgl.test.ts src/features/game/poi-picker.test.tsx
 pnpm typecheck
-git add src/features/globe src/features/game/poi-picker.tsx
+git add apps/web/src/features/globe apps/web/src/features/game/poi-picker.tsx
 git commit -m "feat: add interactive globe with list fallback"
 ```
 
 ## Task 10: Compose gameplay, contextual feedback, and the final reveal
 
 **Files:**
-- Create: `src/features/game/feedback-panel.tsx`
-- Create: `src/features/game/result-panel.tsx`
-- Create: `src/features/game/game-screen.tsx`
-- Create: `src/features/game/game-screen.test.tsx`
-- Modify: `src/features/game/briefing-layout.tsx`
+- Create: `apps/web/src/features/game/feedback-panel.tsx`
+- Create: `apps/web/src/features/game/result-panel.tsx`
+- Create: `apps/web/src/features/game/game-screen.tsx`
+- Create: `apps/web/src/features/game/game-screen.test.tsx`
+- Modify: `apps/web/src/features/game/briefing-layout.tsx`
 
 - [ ] **Step 1: Write complete screen-flow tests**
 
@@ -806,7 +1125,7 @@ Test one wrong guess followed by a correct guess. Assert: progress is saved afte
 - [ ] **Step 2: Run the tests to verify failure**
 
 ```bash
-pnpm test -- src/features/game/game-screen.test.tsx
+pnpm --filter @whereabouts/web test -- src/features/game/game-screen.test.tsx
 ```
 
 - [ ] **Step 3: Implement feedback and reveal components**
@@ -815,26 +1134,26 @@ pnpm test -- src/features/game/game-screen.test.tsx
 
 - [ ] **Step 4: Implement `GameScreen` as the orchestration boundary**
 
-Initialize with `loadProgress(caseData)` in a client-safe lazy state initializer. Derive clues, latest feedback, and remaining attempts through engine functions. On confirmation, call `applyGuess`, update React state, then `saveProgress`. Do not duplicate rule logic in JSX.
+Import rules from `@whereabouts/game-engine` and persistence from `@whereabouts/browser-state`. Initialize with `loadProgress(caseData)` in a client-safe lazy state initializer. Derive clues, latest feedback, and remaining attempts through engine functions. On confirmation, call `applyGuess`, update React state, then `saveProgress`. Do not duplicate rule logic in JSX.
 
 - [ ] **Step 5: Verify and commit**
 
 ```bash
-pnpm test -- src/features/game/game-screen.test.tsx
+pnpm --filter @whereabouts/web test -- src/features/game/game-screen.test.tsx
 pnpm typecheck
-git add src/features/game
+git add apps/web/src/features/game
 git commit -m "feat: connect daily case gameplay and reveal"
 ```
 
 ## Task 11: Add deterministic sharing and the historical archive
 
 **Files:**
-- Create: `src/features/game/share.ts`
-- Create: `src/features/game/share.test.ts`
-- Create: `src/features/game/archive-drawer.tsx`
-- Create: `src/features/game/archive-drawer.test.tsx`
-- Modify: `src/features/game/result-panel.tsx`
-- Modify: `src/features/game/case-header.tsx`
+- Create: `apps/web/src/features/game/share.ts`
+- Create: `apps/web/src/features/game/share.test.ts`
+- Create: `apps/web/src/features/game/archive-drawer.tsx`
+- Create: `apps/web/src/features/game/archive-drawer.test.tsx`
+- Modify: `apps/web/src/features/game/result-panel.tsx`
+- Modify: `apps/web/src/features/game/case-header.tsx`
 
 - [ ] **Step 1: Write share and archive tests**
 
@@ -851,7 +1170,7 @@ Also assert a loss uses `X/6`, no POI/city/country names appear, `navigator.shar
 - [ ] **Step 2: Run tests to verify failure**
 
 ```bash
-pnpm test -- src/features/game/share.test.ts src/features/game/archive-drawer.test.tsx
+pnpm --filter @whereabouts/web test -- src/features/game/share.test.ts src/features/game/archive-drawer.test.tsx
 ```
 
 - [ ] **Step 3: Implement share text and platform fallback**
@@ -865,26 +1184,27 @@ export async function shareResult(text: string, navigatorValue: Pick<Navigator, 
 
 Map tokens to `🔵`, `🟡`, `🟠`, and `🟢`. Treat `AbortError` as cancellation and do not copy; use clipboard for unsupported APIs and non-cancellation failures.
 
-- [ ] **Step 4: Implement the secondary archive drawer**
+- [ ] **Step 4: Implement the secondary archive drawer as a data-in component**
 
-Call `getPublishedCaseIndex()` through the existing case server boundary. Render newest first in a shadcn Drawer, mark today, and link with `to="/$date"` and `{ date }` params. Do not show target names or future cases.
+Accept `publishedCases: Array<{ date: string; caseNumber: number }>` and `today: string` as props. Render newest first in a shadcn Drawer, mark today, and link with `to="/$date"` and `{ date }` params. Do not fetch inside this primitive and do not show target names. Wave 3 routing loads `getPublishedCaseIndex()` and passes the public records into the game shell.
 
 - [ ] **Step 5: Verify and commit**
 
 ```bash
-pnpm test -- src/features/game/share.test.ts src/features/game/archive-drawer.test.tsx
+pnpm --filter @whereabouts/web test -- src/features/game/share.test.ts src/features/game/archive-drawer.test.tsx
 pnpm typecheck
-git add src/features/game src/features/cases
+git add apps/web/src/features/game apps/web/src/features/cases
 git commit -m "feat: add spoiler-free sharing and case archive"
 ```
 
 ## Task 12: Build deterministic content validation before AI generation
 
 **Files:**
-- Create: `scripts/content/validate-case.ts`
-- Create: `scripts/content/validate-case.test.ts`
-- Create: `scripts/content/validate-all.ts`
-- Create: `content/catalog/pois.json`
+- Create: `packages/content-tools/src/validate-case.ts`
+- Create: `packages/content-tools/src/validate-case.test.ts`
+- Create: `packages/content-tools/src/validate-all.ts`
+- Create: `packages/content-tools/src/paths.ts`
+- Create: `packages/content-tools/catalog/pois.json`
 
 - [ ] **Step 1: Write publication-validation tests**
 
@@ -893,7 +1213,7 @@ Test valid content and separate failures for target-name leakage, city leakage, 
 - [ ] **Step 2: Run tests to verify failure**
 
 ```bash
-pnpm test -- scripts/content/validate-case.test.ts
+pnpm --filter @whereabouts/content-tools test -- src/validate-case.test.ts
 ```
 
 - [ ] **Step 3: Implement deterministic validation**
@@ -914,28 +1234,37 @@ Create at least 75 globally distributed catalog entries with the exact `poiSchem
 
 - [ ] **Step 5: Implement the manifest-wide CLI**
 
-`validate-all.ts` loads every artifact referenced by the manifest, rejects missing artifacts, rejects unreferenced artifacts whose publication date is at or before the ceiling, allows unreferenced future artifacts awaiting publication, calls collection validation with `PUBLICATION_CEILING` or today's UTC date, prints one issue per line, and exits 1 if any issue exists.
+Create `paths.ts` with a module-relative, absolute `caseContentRoot` and a `resolveCaseArtifact(date, revision)` helper that validates the date/revision and rejects any resolved path outside that root:
+
+```ts
+export const caseContentRoot = fileURLToPath(
+  new URL("../../case-content/content/", import.meta.url),
+)
+```
+
+`validate-all.ts` uses this helper to load every artifact referenced by the manifest, rejects missing artifacts, rejects unreferenced artifacts whose publication date is at or before the ceiling, allows unreferenced future artifacts awaiting publication, calls collection validation with `PUBLICATION_CEILING` or today's UTC date, prints one issue per line, and exits 1 if any issue exists.
 
 - [ ] **Step 6: Verify and commit**
 
 ```bash
-pnpm test -- scripts/content/validate-case.test.ts
+pnpm --filter @whereabouts/content-tools test -- src/validate-case.test.ts
 pnpm content:validate
-git add scripts/content/validate-case.ts scripts/content/validate-case.test.ts scripts/content/validate-all.ts content/catalog/pois.json
+git add packages/content-tools/src/validate-case.ts packages/content-tools/src/validate-case.test.ts packages/content-tools/src/validate-all.ts packages/content-tools/src/paths.ts packages/content-tools/catalog/pois.json
 git commit -m "feat: enforce case publication safeguards"
 ```
 
 ## Task 13: Implement Wikipedia retrieval and AI SDK structured generation
 
 **Files:**
-- Create: `scripts/content/wikipedia.ts`
-- Create: `scripts/content/wikipedia.test.ts`
-- Create: `scripts/content/prompt.ts`
-- Create: `scripts/content/generate-case.ts`
-- Create: `scripts/content/generate-case.test.ts`
-- Create: `scripts/content/generate-range.ts`
-- Create: `scripts/content/review-case.ts`
-- Create: `scripts/content/fixtures/model-output.json`
+- Create: `packages/content-tools/src/wikipedia.ts`
+- Create: `packages/content-tools/src/wikipedia.test.ts`
+- Create: `packages/content-tools/src/prompt.ts`
+- Create: `packages/content-tools/src/generate-case.ts`
+- Create: `packages/content-tools/src/generate-case.test.ts`
+- Create: `packages/content-tools/src/generate-range.ts`
+- Create: `packages/content-tools/src/review-case.ts`
+- Create: `packages/content-tools/src/review-range.ts`
+- Create: `packages/content-tools/src/fixtures/model-output.json`
 - Create: `.env.example`
 
 - [ ] **Step 1: Write recorded pipeline tests**
@@ -945,7 +1274,7 @@ Mock `fetch` and the model call. Assert that Wikipedia requests use `https://en.
 - [ ] **Step 2: Run tests to verify failure**
 
 ```bash
-pnpm test -- scripts/content/wikipedia.test.ts scripts/content/generate-case.test.ts
+pnpm --filter @whereabouts/content-tools test -- src/wikipedia.test.ts src/generate-case.test.ts
 ```
 
 - [ ] **Step 3: Implement the policy-compliant Wikipedia client**
@@ -980,7 +1309,7 @@ const result = await generateText({
 const draft = result.output
 ```
 
-Join trusted catalog metadata and source records into the draft rather than asking the model to reproduce coordinates or URLs. Parse the final object with `dailyCaseSchema`, then call `validateCaseForPublication`. Write to the interpolated path ``content/cases/${date}/v1.json`` only when both pass. Refuse to overwrite an existing revision.
+Join trusted catalog metadata and source records into the draft rather than asking the model to reproduce coordinates or URLs. Import `resolveCaseArtifact` from `paths.ts`; never resolve output from the caller's working directory. Parse the final object with `dailyCaseSchema`, then call `validateCaseForPublication`. Write only to the validated artifact path when both pass. Refuse to overwrite an existing revision.
 
 - [ ] **Step 6: Implement batch generation and review output**
 
@@ -1002,29 +1331,28 @@ The example communicates the required Wikimedia contact format; actual deploymen
 - [ ] **Step 8: Verify recorded tests and commit**
 
 ```bash
-pnpm test -- scripts/content/wikipedia.test.ts scripts/content/generate-case.test.ts
+pnpm --filter @whereabouts/content-tools test -- src/wikipedia.test.ts src/generate-case.test.ts
 pnpm content:validate
-git add scripts/content .env.example package.json
+git add packages/content-tools .env.example
 git commit -m "feat: generate source-backed cases with AI SDK"
 ```
 
 ## Task 14: Add Playwright end-to-end coverage for desktop and mobile
 
 **Files:**
-- Create: `playwright.config.ts`
-- Create: `e2e/helpers.ts`
-- Create: `e2e/whereabouts.spec.ts`
-- Modify: `package.json`
+- Create: `apps/web/playwright.config.ts`
+- Create: `apps/web/e2e/helpers.ts`
+- Create: `apps/web/e2e/whereabouts.spec.ts`
 
 - [ ] **Step 1: Install the Chromium browser used in local and CI tests**
 
 ```bash
-pnpm exec playwright install chromium
+pnpm --filter @whereabouts/web exec playwright install chromium
 ```
 
 - [ ] **Step 2: Configure Playwright**
 
-Create `playwright.config.ts`:
+Create `apps/web/playwright.config.ts`:
 
 ```ts
 import { defineConfig, devices } from "@playwright/test"
@@ -1080,7 +1408,7 @@ Expected: all scenarios pass in desktop Chromium and the iPhone 13 emulation pro
 - [ ] **Step 6: Commit Playwright coverage**
 
 ```bash
-git add playwright.config.ts e2e package.json pnpm-lock.yaml
+git add apps/web/playwright.config.ts apps/web/e2e
 git commit -m "test: cover Whereabouts journeys with Playwright"
 ```
 
@@ -1095,7 +1423,7 @@ git commit -m "test: cover Whereabouts journeys with Playwright"
 
 - [ ] **Step 1: Add the quality workflow**
 
-On pull requests and pushes to `main`, use Node 22 and pnpm, run `pnpm install --frozen-lockfile`, `pnpm exec playwright install --with-deps chromium`, `pnpm quality`, and `pnpm test:e2e`. Give the workflow read-only repository permissions.
+On pull requests and pushes to `main`, use Node 22 and pnpm, run `pnpm install --frozen-lockfile`, `pnpm --filter @whereabouts/web exec playwright install --with-deps chromium`, `pnpm quality`, and `pnpm test:e2e`. Give the workflow read-only repository permissions. `pnpm quality` invokes Biome's read-only `ci` command through the Turbo root task.
 
 - [ ] **Step 2: Add the minimum viable scheduled publisher**
 
@@ -1105,7 +1433,7 @@ The generation job must read `OPENAI_API_KEY` and `WIKIMEDIA_USER_AGENT` from re
 
 - [ ] **Step 3: Add the daily publication workflow**
 
-Run daily and by `workflow_dispatch`. Compute the UTC calendar date, verify that `content/cases/$DATE/v1.json` already exists on `main`, add only that reviewed artifact to `content/manifest.json`, run `PUBLICATION_CEILING=$DATE pnpm content:validate`, commit with `content: publish Whereabouts case $DATE`, and push to `main`. If the artifact is absent or the date is already published, exit successfully without changing the repository. This workflow does not call a model and never publishes an unreviewed artifact.
+Run daily and by `workflow_dispatch`. Compute the UTC calendar date, verify that `packages/case-content/content/cases/$DATE/v1.json` already exists on `main`, add only that reviewed artifact to `packages/case-content/content/manifest.json`, run `PUBLICATION_CEILING=$DATE pnpm content:validate`, commit with `content: publish Whereabouts case $DATE`, and push to `main`. If the artifact is absent or the date is already published, exit successfully without changing the repository. This workflow does not call a model and never publishes an unreviewed artifact.
 
 - [ ] **Step 4: Write the editorial runbook**
 
@@ -1159,7 +1487,7 @@ Confirm the globe chunk is lazy-loaded, no AI SDK/provider code appears in the b
 With publishing credentials configured:
 
 ```bash
-pnpm content:generate-range -- --from 2026-08-14 --days 30
+pnpm content:generate-range -- --from 2026-08-15 --days 29
 pnpm content:validate
 pnpm content:review-range -- --from 2026-08-14 --days 30 --out artifacts/review
 ```
@@ -1180,13 +1508,18 @@ Expected: every automated check passes and status contains only the reviewed lau
 - [ ] **Step 6: Commit the launch-ready build**
 
 ```bash
-git add content docs/launch-checklist.md
+git add packages/case-content/content docs/launch-checklist.md
 git commit -m "content: prepare Whereabouts launch cases"
 ```
 
 ## Reference documentation
 
 - [TanStack Start getting started](https://tanstack.com/start/latest/docs/framework/react/getting-started)
+- [pnpm workspaces and `workspace:*`](https://pnpm.io/workspaces)
+- [Turborepo repository structure](https://turborepo.com/docs/crafting-your-repository/structuring-a-repository)
+- [Turborepo task configuration](https://turborepo.com/docs/crafting-your-repository/configuring-tasks)
+- [Biome configuration](https://biomejs.dev/reference/configuration/)
+- [Biome continuous integration](https://biomejs.dev/recipes/continuous-integration/)
 - [TanStack Start server functions](https://tanstack.com/start/latest/docs/framework/react/guide/server-functions)
 - [TanStack Start execution model](https://tanstack.com/start/latest/docs/framework/react/guide/execution-model)
 - [shadcn/ui for TanStack Start](https://ui.shadcn.com/docs/installation/tanstack)
