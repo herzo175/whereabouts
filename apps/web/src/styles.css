@@ -1,13 +1,41 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: oklch(0.985 0.002 250);
-  --color-foreground: oklch(0.2 0.02 255);
-  --color-muted-foreground: oklch(0.48 0.02 255);
+  --color-background: oklch(0.18 0.024 224);
+  --color-foreground: oklch(0.94 0.018 87);
+  --color-muted-foreground: oklch(0.7 0.026 219);
+  --color-ink: oklch(0.21 0.026 230);
+  --color-paper: oklch(0.92 0.026 86);
+  --color-brass: oklch(0.75 0.12 79);
+  --color-cyan: oklch(0.72 0.045 218);
+  --color-rule: oklch(0.52 0.035 218 / 0.5);
+  --font-serif: Georgia, Cambria, "Times New Roman", serif;
 }
 
 @layer base {
+  :root {
+    color-scheme: dark;
+  }
+
   body {
     @apply bg-background text-foreground antialiased;
+    background-image:
+      linear-gradient(oklch(0.72 0.045 218 / 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(0.72 0.045 218 / 0.045) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      transition-duration: 0.01ms;
+      animation-duration: 0.01ms;
+      animation-iteration-count: 1;
+    }
+
+    html {
+      scroll-behavior: auto;
+    }
   }
 }
