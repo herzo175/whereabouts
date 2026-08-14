@@ -12,7 +12,12 @@
     "test": "vitest run --passWithNoTests",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
+  "dependencies": {
+    "@whereabouts/case-content": "workspace:*",
+    "@whereabouts/game-engine": "workspace:*"
+  },
   "devDependencies": {
+    "jsdom": "27.0.0",
     "vitest": "4.0.18"
   }
 }

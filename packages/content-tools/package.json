@@ -10,13 +10,23 @@
     "build": "tsc -p tsconfig.json",
     "dev": "tsc -p tsconfig.json --watch",
     "test": "vitest run --passWithNoTests",
+    "test:watch": "vitest",
+    "content:generate": "tsx src/generate-case.ts",
+    "content:generate-range": "tsx src/generate-range.ts",
+    "content:validate": "tsx src/validate-all.ts",
+    "content:review": "tsx src/review-case.ts",
+    "content:review-range": "tsx src/review-range.ts",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
     "@ai-sdk/openai": "2.0.84",
-    "ai": "5.0.122"
+    "@whereabouts/case-content": "workspace:*",
+    "ai": "5.0.122",
+    "zod": "4.1.11"
   },
   "devDependencies": {
+    "@types/node": "24.0.0",
+    "tsx": "4.20.6",
     "vitest": "4.0.18"
   }
 }

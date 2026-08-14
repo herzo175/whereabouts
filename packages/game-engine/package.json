@@ -12,6 +12,10 @@
     "test": "vitest run",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
+  "dependencies": {
+    "@whereabouts/case-content": "workspace:*",
+    "zod": "4.1.11"
+  },
   "devDependencies": {
     "vitest": "4.0.18"
   }
