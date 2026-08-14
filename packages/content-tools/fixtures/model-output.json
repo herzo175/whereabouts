@@ -1,0 +1,186 @@
+{
+  "clues": [
+    {
+      "id": "clue-1",
+      "text": "A layered past made this place a strategic hinge between different worlds.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "id": "clue-2",
+      "text": "Its story includes major changes in religious and civic use over many centuries.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "id": "clue-3",
+      "text": "A monumental interior and ambitious dome became lasting symbols of its builders.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "id": "clue-4",
+      "text": "It has repeatedly been reshaped by empires competing for a crucial crossing.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "id": "clue-5",
+      "text": "Its architecture influenced sacred buildings far beyond its immediate surroundings.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "id": "clue-6",
+      "text": "Look for a former imperial church later associated with a large mosque complex.",
+      "sourceIds": ["source-01"]
+    }
+  ],
+  "contextualResponses": [
+    {
+      "poiId": "poi-01",
+      "tier": "cold",
+      "text": "This landmark has a different national story and an engineering-led identity.",
+      "sourceIds": ["source-02"]
+    },
+    {
+      "poiId": "poi-02",
+      "tier": "cold",
+      "text": "This site shares a long past but belongs to a distinct monumental tradition.",
+      "sourceIds": ["source-03"]
+    },
+    {
+      "poiId": "poi-03",
+      "tier": "cold",
+      "text": "This candidate is better known for a separate regional history and landscape.",
+      "sourceIds": ["source-04"]
+    },
+    {
+      "poiId": "poi-04",
+      "tier": "cold",
+      "text": "This monument reflects another courtly tradition and different building materials.",
+      "sourceIds": ["source-05"]
+    },
+    {
+      "poiId": "poi-05",
+      "tier": "cold",
+      "text": "This candidate is rooted in another ancient urban culture and period.",
+      "sourceIds": ["source-06"]
+    },
+    {
+      "poiId": "poi-06",
+      "tier": "cold",
+      "text": "This location has a separate colonial and environmental setting.",
+      "sourceIds": ["source-07"]
+    },
+    {
+      "poiId": "poi-07",
+      "tier": "cold",
+      "text": "This landmark belongs to a different desert civilization and ritual landscape.",
+      "sourceIds": ["source-08"]
+    },
+    {
+      "poiId": "poi-08",
+      "tier": "warm",
+      "text": "Both have strong spiritual associations, though their histories developed apart.",
+      "sourceIds": ["source-09"]
+    },
+    {
+      "poiId": "poi-09",
+      "tier": "warm",
+      "text": "Both are celebrated monuments, but their purposes and eras diverge.",
+      "sourceIds": ["source-10"]
+    },
+    {
+      "poiId": "poi-10",
+      "tier": "warm",
+      "text": "Both draw visitors through architectural ambition rather than matching origins.",
+      "sourceIds": ["source-11"]
+    },
+    {
+      "poiId": "poi-11",
+      "tier": "warm",
+      "text": "Both are icons in prominent harbor-side settings with unlike histories.",
+      "sourceIds": ["source-12"]
+    },
+    {
+      "poiId": "poi-12",
+      "tier": "warm",
+      "text": "Both preserve traces of powerful past societies in very different climates.",
+      "sourceIds": ["source-13"]
+    },
+    {
+      "poiId": "poi-13",
+      "tier": "warm",
+      "text": "Both have ancient foundations, but one emphasizes a separate classical legacy.",
+      "sourceIds": ["source-14"]
+    },
+    {
+      "poiId": "poi-14",
+      "tier": "warm",
+      "text": "Both are highly recognizable sacred buildings with distinct design languages.",
+      "sourceIds": ["source-15"]
+    },
+    {
+      "poiId": "poi-15",
+      "tier": "warm",
+      "text": "Both sit within important capitals, yet their functions are quite different.",
+      "sourceIds": ["source-16"]
+    },
+    {
+      "poiId": "poi-16",
+      "tier": "hot",
+      "text": "Both are major heritage destinations tied to complex religious histories.",
+      "sourceIds": ["source-17"]
+    },
+    {
+      "poiId": "poi-17",
+      "tier": "hot",
+      "text": "Both are defining landmarks whose silhouettes shape their wider regions.",
+      "sourceIds": ["source-18"]
+    },
+    {
+      "poiId": "poi-18",
+      "tier": "hot",
+      "text": "Both combine powerful architecture with a long record of changing public meaning.",
+      "sourceIds": ["source-19"]
+    },
+    {
+      "poiId": "poi-19",
+      "tier": "hot",
+      "text": "Both are renowned historic structures that have been preserved through political change.",
+      "sourceIds": ["source-20"]
+    },
+    {
+      "poiId": "poi-20",
+      "tier": "hot",
+      "text": "Both are landmark complexes that reveal overlapping cultural influences.",
+      "sourceIds": ["source-21"]
+    },
+    {
+      "poiId": "poi-21",
+      "tier": "hot",
+      "text": "Both are associated with old religious communities and distinctive ceremonial spaces.",
+      "sourceIds": ["source-22"]
+    },
+    {
+      "poiId": "poi-22",
+      "tier": "hot",
+      "text": "Both pair an exceptional setting with a story extending across several eras.",
+      "sourceIds": ["source-23"]
+    },
+    {
+      "poiId": "poi-23",
+      "tier": "hot",
+      "text": "Both are major cultural symbols whose construction altered their surrounding cityscape.",
+      "sourceIds": ["source-24"]
+    },
+    {
+      "poiId": "poi-24",
+      "tier": "hot",
+      "text": "Both have become international emblems of remarkable historical architecture.",
+      "sourceIds": ["source-25"]
+    }
+  ],
+  "reveal": {
+    "title": "Case reveal",
+    "summary": "The target is a major historic monument whose long record of changing religious and civic roles explains the clues.",
+    "clueExplanation": "The clues move from broad imperial context and religious change toward the target's distinctive architectural and ceremonial history.",
+    "sourceIds": ["source-01"]
+  }
+}
