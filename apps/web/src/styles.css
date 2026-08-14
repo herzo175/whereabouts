@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: oklch(0.985 0.002 250);
+  --color-foreground: oklch(0.2 0.02 255);
+  --color-muted-foreground: oklch(0.48 0.02 255);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}

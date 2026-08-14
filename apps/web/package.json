@@ -1,0 +1,33 @@
+{
+  "name": "@whereabouts/web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite dev",
+    "test": "vitest run --passWithNoTests",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@tanstack/react-router": "1.170.28",
+    "@tanstack/react-start": "1.168.45",
+    "@whereabouts/game-engine": "workspace:*",
+    "@vitejs/plugin-react": "6.0.5",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "lucide-react": "0.546.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "tailwind-merge": "3.3.0",
+    "tailwindcss": "4.3.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.3.3",
+    "@types/node": "24.0.0",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "vite": "8.2.1",
+    "vitest": "4.0.18"
+  }
+}

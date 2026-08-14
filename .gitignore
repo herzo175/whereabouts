@@ -1,6 +1,8 @@
 .superpowers/
 .worktrees/
+.turbo/
 node_modules/
+dist/
 .output/
 .vinxi/
 .env
