@@ -1,7 +1,11 @@
-export type GameEngine = {
-  status: 'ready';
-};
-
-export function createGameEngine(): GameEngine {
-  return { status: 'ready' };
-}
+export {
+  applyGuess,
+  createProgress,
+  GameRuleError,
+  getAttemptsRemaining,
+  getLatestFeedback,
+  getShareTokens,
+  getVisibleClues,
+} from './engine.js';
+export type { GameProgress } from './progress-schema.js';
+export { gameProgressSchema } from './progress-schema.js';
