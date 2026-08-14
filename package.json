@@ -13,6 +13,8 @@
     "typecheck": "turbo typecheck",
     "content:generate": "turbo run content:generate --filter=@whereabouts/content-tools",
     "content:generate-range": "turbo run content:generate-range --filter=@whereabouts/content-tools",
+    "content:expand-catalog": "turbo run content:expand-catalog --filter=@whereabouts/content-tools",
+    "content:bootstrap-corpus": "turbo run content:bootstrap-corpus --filter=@whereabouts/content-tools",
     "content:validate": "turbo run content:validate --filter=@whereabouts/content-tools",
     "content:review": "turbo run content:review --filter=@whereabouts/content-tools",
     "content:review-range": "turbo run content:review-range --filter=@whereabouts/content-tools",

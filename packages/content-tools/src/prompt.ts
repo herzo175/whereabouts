@@ -1,7 +1,14 @@
 import type { Poi } from '@whereabouts/case-content';
 import type { WikipediaExtract } from './wikipedia.js';
 
-export const PROMPT_VERSION = 2;
+export const PROMPT_VERSION = 3;
+
+function compactExtract(extract: string, limit: number): string {
+  if (extract.length <= limit) return extract;
+  const headLength = Math.floor(limit * 0.75);
+  const tailLength = limit - headLength;
+  return `${extract.slice(0, headLength)}\n[…source excerpt compacted…]\n${extract.slice(-tailLength)}`;
+}
 
 export function buildCasePrompt(
   pois: Poi[],
@@ -10,7 +17,10 @@ export function buildCasePrompt(
   const sourceRows = pois.map((poi, index) => ({
     sourceId: `source-${String(index + 1).padStart(2, '0')}`,
     poi: { id: poi.id, name: poi.name, city: poi.city, country: poi.country },
-    extract: extracts[index]?.extract ?? '',
+    extract: compactExtract(
+      extracts[index]?.extract ?? '',
+      index === 0 ? 30_000 : 3_500,
+    ),
   }));
   return `You are the case writer for Whereabouts, a difficult daily geography deduction game. The player sees all 25 candidate POIs before reading the first clue. Write only from the supplied catalog records and extracts.
 
@@ -30,6 +40,9 @@ Read the six clues together before returning them. Rewrite any early clue whose 
 
 CONTEXTUAL RESPONSES
 For every non-target POI, explain a factual relationship between the guessed POI and the target. Cold means weak or distant connection, warm means meaningful partial connection, and hot means strong shared history, function, culture, geography, or design. A response must teach the player why the relationship has that tier, not merely say that the guess is elsewhere or has a different identity. Cite sources for both sides whenever the comparison makes claims about both.
+
+REVEAL
+Write a concise factual summary of the answer. For clueExplanation, walk through all six clues in order and explain the specific fact each clue encoded and how that fact narrowed the candidate field. Name the decisive historical, geographic, functional, or architectural connection behind each clue. Do not use generic filler such as "each clue narrows the field," and do not discuss only the final clue.
 
 SPOILER RULES
 Before the reveal, never state or spell the target POI name, destination name, city, or country. Do not hide those names through initials, wordplay, translations, coordinates, or near-identical aliases. The reveal may name the answer. The target is the first catalog record; use its ID only where a target or POI ID is required.

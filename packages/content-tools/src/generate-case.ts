@@ -51,6 +51,30 @@ export const generatedCaseDraftSchema = z.object({
 });
 export type GeneratedCaseDraft = z.infer<typeof generatedCaseDraftSchema>;
 
+const modelCaseDraftSchema = z.object({
+  clues: z.array(
+    z.object({
+      id: z.string(),
+      text: z.string(),
+      sourceIds: z.array(z.string()),
+    }),
+  ),
+  contextualResponses: z.array(
+    z.object({
+      poiId: z.string(),
+      tier: z.enum(['cold', 'warm', 'hot']),
+      text: z.string(),
+      sourceIds: z.array(z.string()),
+    }),
+  ),
+  reveal: z.object({
+    title: z.string(),
+    summary: z.string(),
+    clueExplanation: z.string(),
+    sourceIds: z.array(z.string()),
+  }),
+});
+
 function orderPoisForDisplay(
   pois: Poi[],
   seed: { date: string; revision: number; caseNumber: number },
@@ -91,9 +115,7 @@ export function resolveGenerationConfig(environment: GenerationEnvironment): {
   if (!apiKey) throw new Error('OPENROUTER_API_KEY is required for generation');
   return {
     apiKey,
-    model:
-      environment.WHEREABOUTS_MODEL?.trim() ||
-      'deepseek/deepseek-v4-flash-0731',
+    model: environment.WHEREABOUTS_MODEL?.trim() || 'openai/gpt-5.6-luna',
   };
 }
 
@@ -109,7 +131,13 @@ async function defaultGenerate(
   });
   const result = await generateText({
     model: openrouter.chat(config.model),
-    output: Output.object({ schema: generatedCaseDraftSchema }),
+    abortSignal: AbortSignal.timeout(180_000),
+    maxRetries: 0,
+    maxOutputTokens: 10_000,
+    providerOptions: {
+      openrouter: { reasoning: { effort: 'low' } },
+    },
+    output: Output.object({ schema: modelCaseDraftSchema }),
     prompt: buildCasePrompt(pois, extracts),
   });
   return result.output;

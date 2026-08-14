@@ -22,7 +22,7 @@ describe('buildCasePrompt', () => {
   it('requires an intentionally vague first clue and a measured narrowing ladder', () => {
     const prompt = buildCasePrompt(pois, extracts);
 
-    expect(PROMPT_VERSION).toBe(2);
+    expect(PROMPT_VERSION).toBe(3);
     expect(prompt).toContain('at least 8 of the 25 candidates');
     expect(prompt).toContain('Clue 2: 6–10 plausible candidates');
     expect(prompt).toContain('Clue 6: 1–2 plausible candidates');
@@ -45,5 +45,25 @@ describe('buildCasePrompt', () => {
       'relationship between the guessed POI and the target',
     );
     expect(prompt).toContain('not merely say that the guess is elsewhere');
+  });
+
+  it('requires a concrete clue-by-clue reveal explanation', () => {
+    const prompt = buildCasePrompt(pois, extracts);
+
+    expect(prompt).toContain('walk through all six clues in order');
+    expect(prompt).toContain('Do not use generic filler');
+  });
+
+  it('bounds cached corpus context before sending the daily model request', () => {
+    const largeExtracts = extracts.map((extract, index) => ({
+      ...extract,
+      extract: `${String(index).repeat(50_000)}TAIL-${index}`,
+    }));
+
+    const prompt = buildCasePrompt(pois, largeExtracts);
+
+    expect(prompt.length).toBeLessThan(140_000);
+    expect(prompt).toContain('TAIL-0');
+    expect(prompt).toContain('TAIL-24');
   });
 });

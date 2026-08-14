@@ -78,9 +78,8 @@ describe('GameScreen', () => {
     ).toBeInTheDocument();
     expect(screen.getByText(/target place/i)).toBeInTheDocument();
     expect(screen.getByText(caseData.reveal.summary)).toBeInTheDocument();
-    expect(
-      screen.getByText(caseData.reveal.clueExplanation),
-    ).toBeInTheDocument();
+    expect(screen.queryByText(caseData.reveal.title)).toBeNull();
+    expect(screen.queryByText(caseData.reveal.clueExplanation)).toBeNull();
     expect(
       screen.getByRole('button', {
         name: /attempt 2, case solved, target place/i,
@@ -89,6 +88,9 @@ describe('GameScreen', () => {
     expect(
       screen.getByRole('link', { name: /fixture source source-01/i }),
     ).toHaveAttribute('href', 'https://example.com/source-01');
+    expect(
+      screen.getByRole('heading', { name: /^sources$/i }),
+    ).toBeInTheDocument();
     expect(screen.queryByRole('link', { name: /source-02/i })).toBeNull();
     expect(
       screen.queryByRole('searchbox', { name: /search locations/i }),

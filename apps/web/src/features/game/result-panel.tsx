@@ -36,7 +36,6 @@ export function ResultPanel({ caseData, progress, onShare }: ResultPanelProps) {
         <h3 className="text-xs font-bold tracking-[0.18em] text-brass uppercase">
           {caseData.target.destinationName}
         </h3>
-        <p className="text-sm text-cyan">{caseData.reveal.title}</p>
       </div>
 
       {target?.image ? (
@@ -58,29 +57,15 @@ export function ResultPanel({ caseData, progress, onShare }: ResultPanelProps) {
             </a>
           </figcaption>
         </figure>
-      ) : (
-        <div
-          aria-label="Archival image unavailable"
-          className="h-36 border border-rule bg-[linear-gradient(135deg,rgba(29,78,70,0.95),rgba(13,25,36,1)_52%,rgba(135,104,44,0.72))]"
-          role="img"
-        />
-      )}
+      ) : null}
 
-      <div className="space-y-4 text-paper">
-        <p className="text-base leading-relaxed">{caseData.reveal.summary}</p>
-        <div className="border-l-2 border-brass pl-4">
-          <h3 className="text-xs font-bold tracking-[0.16em] text-brass uppercase">
-            How the clues connect
-          </h3>
-          <p className="mt-2 text-sm leading-relaxed">
-            {caseData.reveal.clueExplanation}
-          </p>
-        </div>
-      </div>
+      <p className="text-base leading-relaxed text-paper">
+        {caseData.reveal.summary}
+      </p>
 
       <div className="space-y-3 border-t border-rule pt-4">
         <h3 className="text-xs font-bold tracking-[0.16em] text-cyan uppercase">
-          Reveal sources
+          Sources
         </h3>
         <ul className="space-y-2 text-sm">
           {sources.map((source) => (

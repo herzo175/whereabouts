@@ -30,7 +30,7 @@ jobs:
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           WIKIMEDIA_USER_AGENT: ${{ secrets.WIKIMEDIA_USER_AGENT }}
-          WHEREABOUTS_MODEL: ${{ vars.WHEREABOUTS_MODEL || 'deepseek/deepseek-v4-flash-0731' }}
+          WHEREABOUTS_MODEL: ${{ vars.WHEREABOUTS_MODEL || 'openai/gpt-5.6-luna' }}
         run: pnpm content:generate-range -- --from "${{ steps.dates.outputs.start }}" --days 7
       - name: Validate generated content
         run: pnpm content:validate

@@ -113,7 +113,13 @@ export function GlobePicker({
         setFailed(true);
       }}
     >
-      <Suspense fallback={null}>
+      <Suspense
+        fallback={
+          <output className="flex min-h-60 items-center justify-center rounded-lg border border-cyan/30 bg-navy text-sm font-bold uppercase tracking-[0.18em] text-cyan">
+            Loading globe…
+          </output>
+        }
+      >
         <LazyGlobeCanvas
           disabledPoiIds={disabledPoiIds}
           onSelect={onSelect}

@@ -5,6 +5,10 @@ import { describe, expect, it, vi } from 'vitest';
 import { PoiPicker } from '../game/poi-picker';
 import { GlobePicker } from './globe-picker';
 
+vi.mock('./globe-canvas', () => ({
+  GlobeCanvas: () => <div data-testid="globe-canvas" />,
+}));
+
 const pois: Poi[] = [
   {
     id: 'sagrada-familia',
@@ -18,6 +22,19 @@ const pois: Poi[] = [
 ];
 
 describe('GlobePicker', () => {
+  it('loads the interactive globe automatically', async () => {
+    render(
+      <GlobePicker
+        disabledPoiIds={new Set()}
+        onSelect={vi.fn()}
+        pois={pois}
+        supported
+      />,
+    );
+
+    expect(await screen.findByTestId('globe-canvas')).toBeInTheDocument();
+  });
+
   it('announces fallback while preserving the location search control', () => {
     render(
       <GlobePicker

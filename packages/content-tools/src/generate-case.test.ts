@@ -24,7 +24,7 @@ describe('generateCase', () => {
       resolveGenerationConfig({ OPENROUTER_API_KEY: 'openrouter-test-key' }),
     ).toEqual({
       apiKey: 'openrouter-test-key',
-      model: 'deepseek/deepseek-v4-flash-0731',
+      model: 'openai/gpt-5.6-luna',
     });
     expect(() => resolveGenerationConfig({})).toThrow('OPENROUTER_API_KEY');
   });
