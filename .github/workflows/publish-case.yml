@@ -1,0 +1,89 @@
+name: Publish reviewed case
+
+on:
+  schedule:
+    - cron: '5 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Enable the pinned pnpm release
+        run: |
+          corepack enable
+          corepack install
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Calculate the UTC publication date
+        id: date
+        run: echo "value=$(date -u +%F)" >> "$GITHUB_OUTPUT"
+      - name: Add today's reviewed artifact to the manifest
+        id: publish
+        env:
+          DATE: ${{ steps.date.outputs.value }}
+        run: |
+          node <<'NODE'
+          import { readFile, writeFile } from 'node:fs/promises';
+
+          const date = process.env.DATE;
+          if (!/^\d{4}-\d{2}-\d{2}$/.test(date))
+            throw new Error(`Invalid UTC publication date: ${date}`);
+          const manifestPath = 'packages/case-content/content/manifest.json';
+          const artifactPath = `packages/case-content/content/cases/${date}/v1.json`;
+          const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
+          if (manifest.cases?.[date]) {
+            console.log(`${date} is already published.`);
+            await writeFile(process.env.GITHUB_OUTPUT, 'publish=false\n');
+            process.exit(0);
+          }
+          let artifact;
+          try {
+            artifact = JSON.parse(await readFile(artifactPath, 'utf8'));
+          } catch (error) {
+            if (error?.code === 'ENOENT') {
+              console.log(`No reviewed v1 artifact exists for ${date}.`);
+              await writeFile(process.env.GITHUB_OUTPUT, 'publish=false\n');
+              process.exit(0);
+            }
+            throw error;
+          }
+          if (
+            artifact.publicationDate !== date ||
+            !Number.isInteger(artifact.revision) || artifact.revision < 1 ||
+            !Number.isInteger(artifact.caseNumber) || artifact.caseNumber < 1
+          ) {
+            throw new Error(`Invalid publication metadata in ${artifactPath}`);
+          }
+          manifest.cases ??= {};
+          manifest.cases[date] = {
+            caseNumber: artifact.caseNumber,
+            revision: artifact.revision,
+            file: `./cases/${date}/v${artifact.revision}.json`,
+          };
+          await writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
+          await writeFile(process.env.GITHUB_OUTPUT, 'publish=true\n');
+          NODE
+      - name: Validate the publication boundary
+        if: steps.publish.outputs.publish == 'true'
+        env:
+          PUBLICATION_CEILING: ${{ steps.date.outputs.value }}
+        run: pnpm content:validate
+      - name: Commit the manifest entry
+        if: steps.publish.outputs.publish == 'true'
+        env:
+          DATE: ${{ steps.date.outputs.value }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add packages/case-content/content/manifest.json
+          git commit -m "content: publish Whereabouts case ${DATE}"
+          git push origin main

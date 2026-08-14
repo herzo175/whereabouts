@@ -1,0 +1,31 @@
+name: Quality
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Enable the pinned pnpm release
+        run: |
+          corepack enable
+          corepack install
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Install Chromium
+        run: pnpm --filter @whereabouts/web exec playwright install --with-deps chromium
+      - name: Run quality checks
+        run: pnpm quality
+      - name: Run browser tests
+        run: pnpm test:e2e

@@ -1,0 +1,59 @@
+name: Generate upcoming cases
+
+on:
+  schedule:
+    - cron: '0 14 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Enable the pinned pnpm release
+        run: |
+          corepack enable
+          corepack install
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Calculate the upcoming range
+        id: dates
+        run: echo "start=$(date -u -d '+14 days' +%F)" >> "$GITHUB_OUTPUT"
+      - name: Generate seven upcoming cases
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          WIKIMEDIA_USER_AGENT: ${{ secrets.WIKIMEDIA_USER_AGENT }}
+          WHEREABOUTS_MODEL: ${{ vars.WHEREABOUTS_MODEL || 'gpt-5-mini' }}
+        run: pnpm content:generate-range -- --from "${{ steps.dates.outputs.start }}" --days 7
+      - name: Validate generated content
+        run: pnpm content:validate
+      - name: Produce human review packets
+        run: pnpm content:review-range -- --from "${{ steps.dates.outputs.start }}" --days 7 --out artifacts/review
+      - name: Upload review packets
+        uses: actions/upload-artifact@v4
+        with:
+          name: whereabouts-review-${{ steps.dates.outputs.start }}
+          path: artifacts/review
+          if-no-files-found: error
+      - name: Create the review pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          START_DATE: ${{ steps.dates.outputs.start }}
+        run: |
+          branch="content/upcoming-${START_DATE}"
+          git switch -C "$branch"
+          git add packages/case-content/content/cases
+          git diff --cached --quiet && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "content: add upcoming Whereabouts cases"
+          git push --force-with-lease --set-upstream origin "$branch"
+          gh pr view "$branch" --json url >/dev/null 2>&1 || gh pr create --base main --head "$branch" --title "content: add upcoming Whereabouts cases" --body "Generated cases from ${START_DATE}; review the uploaded packets before merging."
