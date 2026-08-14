@@ -8,7 +8,9 @@ describe('loadLocalEnvironment', () => {
     loadLocalEnvironment(load);
 
     expect(load).toHaveBeenCalledOnce();
-    expect(String(load.mock.calls[0]?.[0])).toMatch(/\/geography-bee\/\.env$/);
+    expect(load).toHaveBeenCalledWith(
+      new URL('../../../.env', import.meta.url),
+    );
   });
 
   it('allows CI to omit the local env file', () => {
