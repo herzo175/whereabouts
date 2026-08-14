@@ -1,21 +1,59 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
+    "//#check:ci": {
+      "outputs": []
+    },
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".output/**"]
+      "outputs": ["dist/**", ".output/**"],
+      "env": ["VITE_CANONICAL_ORIGIN"]
     },
     "dev": {
       "cache": false,
-      "persistent": true
+      "persistent": true,
+      "env": ["VITE_CANONICAL_ORIGIN"]
     },
     "test": {
-      "dependsOn": ["^build"],
       "outputs": []
     },
+    "test:watch": {
+      "cache": false,
+      "persistent": true,
+      "interactive": true
+    },
+    "test:e2e": {
+      "cache": false
+    },
     "typecheck": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["^typecheck"],
       "outputs": []
+    },
+    "content:validate": {
+      "cache": false,
+      "env": ["PUBLICATION_CEILING"]
+    },
+    "content:generate": {
+      "cache": false,
+      "passThroughEnv": [
+        "OPENAI_API_KEY",
+        "WIKIMEDIA_USER_AGENT",
+        "WHEREABOUTS_MODEL"
+      ]
+    },
+    "content:generate-range": {
+      "cache": false,
+      "passThroughEnv": [
+        "OPENAI_API_KEY",
+        "WIKIMEDIA_USER_AGENT",
+        "WHEREABOUTS_MODEL"
+      ]
+    },
+    "content:review": {
+      "cache": false
+    },
+    "content:review-range": {
+      "cache": false
     }
   }
 }
