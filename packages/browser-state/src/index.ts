@@ -3,3 +3,4 @@ export type BrowserState = {
 };
 
 export { formatLocalDate, parseCaseDate } from './date.js';
+export { clearProgress, loadProgress, saveProgress } from './storage.js';
