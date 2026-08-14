@@ -26,14 +26,12 @@ export function makeCase(overrides: Partial<DailyCase> = {}): DailyCase {
       text: `This is fixture clue number ${index + 1}, with enough useful detail.`,
       sourceIds: ['source-01'],
     })),
-    contextualResponses: pois
-      .slice(1)
-      .map((poi, index) => ({
-        poiId: poi.id,
-        tier: index < 8 ? 'cold' : index < 16 ? 'warm' : 'hot',
-        text: `Fixture response for ${poi.name} explains a meaningful comparison.`,
-        sourceIds: ['source-02'],
-      })),
+    contextualResponses: pois.slice(1).map((poi, index) => ({
+      poiId: poi.id,
+      tier: index < 8 ? 'cold' : index < 16 ? 'warm' : 'hot',
+      text: `Fixture response for ${poi.name} explains a meaningful comparison.`,
+      sourceIds: ['source-02'],
+    })),
     reveal: {
       title: 'Fixture reveal',
       summary:
