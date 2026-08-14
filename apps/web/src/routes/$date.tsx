@@ -26,8 +26,25 @@ export const Route = createFileRoute('/$date')({
 
     return { caseData, publishedCases };
   },
+  notFoundComponent: InvalidDate,
   component: CaseRoute,
 });
+
+function InvalidDate() {
+  return (
+    <main className="grid min-h-screen place-items-center bg-background px-6 text-paper">
+      <section className="max-w-md space-y-3 border border-rule bg-ink/70 p-6">
+        <p className="text-xs font-bold tracking-[0.18em] text-brass uppercase">
+          Invalid case file
+        </p>
+        <h1 className="font-serif text-3xl">Briefing not found</h1>
+        <a className="inline-block text-cyan underline" href="/">
+          Open today’s briefing
+        </a>
+      </section>
+    </main>
+  );
+}
 
 function CaseRoute() {
   const { caseData, publishedCases } = Route.useLoaderData();

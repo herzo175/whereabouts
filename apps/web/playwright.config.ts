@@ -5,10 +5,13 @@ export default defineConfig({
   timeout: 120_000,
   use: {
     baseURL: 'http://127.0.0.1:3000',
+    launchOptions: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH
+      ? { executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH }
+      : undefined,
     trace: 'retain-on-failure',
   },
   webServer: {
-    command: 'pnpm dev -- --host 127.0.0.1 --port 3000',
+    command: 'pnpm exec vite dev --host 127.0.0.1 --port 3000',
     cwd: '.',
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
@@ -16,6 +19,9 @@ export default defineConfig({
   },
   projects: [
     { name: 'desktop', use: { ...devices['Desktop Chrome'] } },
-    { name: 'mobile', use: { ...devices['iPhone 13'] } },
+    {
+      name: 'mobile',
+      use: { ...devices['iPhone 13'], browserName: 'chromium' },
+    },
   ],
 });

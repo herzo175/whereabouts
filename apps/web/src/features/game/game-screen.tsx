@@ -10,7 +10,7 @@ import {
   getLatestFeedback,
   getVisibleClues,
 } from '@whereabouts/game-engine';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { GlobePicker } from '../globe/globe-picker';
 import { BriefingLayout } from './briefing-layout';
@@ -29,12 +29,6 @@ type GameScreenProps = {
   globeSupported?: boolean;
 };
 
-function initialProgress(caseData: DailyCase, storage?: Storage): GameProgress {
-  if (storage) return loadProgress(caseData, storage);
-  if (typeof window === 'undefined') return createProgress(caseData);
-  return loadProgress(caseData, window.localStorage);
-}
-
 export function GameScreen({
   caseData,
   storage,
@@ -42,9 +36,16 @@ export function GameScreen({
   onOpenArchive = () => undefined,
   globeSupported,
 }: GameScreenProps) {
-  const [progress, setProgress] = useState(() =>
-    initialProgress(caseData, storage),
-  );
+  const [progress, setProgress] = useState(() => createProgress(caseData));
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    const nextProgress = storage
+      ? loadProgress(caseData, storage)
+      : loadProgress(caseData, window.localStorage);
+    setProgress(nextProgress);
+    setIsReady(true);
+  }, [caseData, storage]);
   const visibleClues = getVisibleClues(caseData, progress);
   const latestFeedback = getLatestFeedback(caseData, progress);
   const guessedPoiIds = new Set(progress.guessedPoiIds);
@@ -69,7 +70,11 @@ export function GameScreen({
     >
       <div className="space-y-5">
         <FeedbackPanel feedback={latestFeedback} />
-        {isComplete ? (
+        {!isReady ? (
+          <output aria-live="polite" className="text-sm text-cyan">
+            Opening case file…
+          </output>
+        ) : isComplete ? (
           <ResultPanel
             caseData={caseData}
             onShare={onShare}

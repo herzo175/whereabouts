@@ -36,7 +36,9 @@ export async function seedProgress(
 
   await page.addInitScript(
     ({ key, value }) => {
-      localStorage.setItem(key, JSON.stringify(value));
+      if (localStorage.getItem(key) === null) {
+        localStorage.setItem(key, JSON.stringify(value));
+      }
     },
     { key: CASE_STORAGE_KEY, value: storedProgress },
   );
