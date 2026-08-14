@@ -2,6 +2,7 @@ import type { Poi } from '@whereabouts/case-content';
 import type { ReactNode } from 'react';
 import { useMemo, useState } from 'react';
 
+import { GlobePicker } from '../globe/globe-picker';
 import { PoiDossier } from './poi-dossier';
 import { PoiSearch } from './poi-search';
 
@@ -40,6 +41,14 @@ export function PoiPicker({
   return (
     <section className="space-y-4" aria-label="Choose a location">
       {globe ? globe(selectPoi) : null}
+      {!globe ? (
+        <GlobePicker
+          disabledPoiIds={eliminatedPoiIds}
+          onSelect={selectPoi}
+          pois={pois}
+          selectedPoiId={selectedPoi?.id ?? null}
+        />
+      ) : null}
       <PoiSearch
         disabledPoiIds={eliminatedPoiIds}
         onSelect={selectPoi}
