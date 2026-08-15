@@ -67,6 +67,9 @@ jobs:
           WHEREABOUTS_MODEL: ${{ vars.WHEREABOUTS_MODEL || vars.whereabouts_model || 'openai/gpt-5.6-luna' }}
         run: pnpm content:generate-range -- --from "${{ steps.dates.outputs.start }}" --days 1 --revision "${{ steps.revision.outputs.value }}"
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
+        name: Format generated case content
+        run: pnpm exec biome format --write "packages/case-content/content/cases/${{ steps.dates.outputs.start }}/v${{ steps.revision.outputs.value }}.json"
+      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
         name: Validate generated content
         run: pnpm content:validate
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'

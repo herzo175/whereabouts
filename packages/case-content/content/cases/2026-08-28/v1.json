@@ -413,44 +413,32 @@
     {
       "id": "clue-1",
       "text": "This place embodies a sacred or civic function that outlasted major changes in how the surrounding landscape was used.",
-      "sourceIds": [
-        "source-01"
-      ]
+      "sourceIds": ["source-01"]
     },
     {
       "id": "clue-2",
       "text": "Its significance is tied less to a single monument than to an institution that once organized community life and regional activity.",
-      "sourceIds": [
-        "source-01"
-      ]
+      "sourceIds": ["source-01"]
     },
     {
       "id": "clue-3",
       "text": "The institution began as a monastic foundation during the early second millennium, in an era when religious houses also helped structure local society.",
-      "sourceIds": [
-        "source-01"
-      ]
+      "sourceIds": ["source-01"]
     },
     {
       "id": "clue-4",
       "text": "Its early history includes destruction by seaborne raiders and subsequent rebuilding, linking devotion with the insecurity of medieval travel.",
-      "sourceIds": [
-        "source-01"
-      ]
+      "sourceIds": ["source-01"]
     },
     {
       "id": "clue-5",
       "text": "A young royal resident of the area later supported the restoration through a substantial donation, turning personal connection into institutional recovery.",
-      "sourceIds": [
-        "source-01"
-      ]
+      "sourceIds": ["source-01"]
     },
     {
       "id": "clue-6",
       "text": "The surviving religious building is the remnant of a Benedictine monastery established near a settlement now associated with pilgrimage and historic memory.",
-      "sourceIds": [
-        "source-01"
-      ]
+      "sourceIds": ["source-01"]
     }
   ],
   "contextualResponses": [
@@ -458,226 +446,152 @@
       "poiId": "bikini-atoll",
       "tier": "cold",
       "text": "Both are UNESCO-recognized places whose present meaning is shaped by a major change from earlier community use: monastic life here, nuclear testing and forced relocation there.",
-      "sourceIds": [
-        "source-01",
-        "source-02"
-      ]
+      "sourceIds": ["source-01", "source-02"]
     },
     {
       "poiId": "hatra",
       "tier": "warm",
       "text": "Both were regional centers with religious significance and defensive or strategic importance; the target was a monastery, while Hatra was a fortified caravan and religious city.",
-      "sourceIds": [
-        "source-01",
-        "source-03"
-      ]
+      "sourceIds": ["source-01", "source-03"]
     },
     {
       "poiId": "mogao-caves",
       "tier": "warm",
       "text": "Both are religious complexes developed over long periods and later preserved as heritage sites; the target began as a Benedictine monastery, while Mogao grew as Buddhist meditation, worship, and pilgrimage caves.",
-      "sourceIds": [
-        "source-01",
-        "source-04"
-      ]
+      "sourceIds": ["source-01", "source-04"]
     },
     {
       "poiId": "bhimbetka-rock-shelters",
       "tier": "warm",
       "text": "Both preserve evidence of changing human use across time. The target moved from monastic foundation toward heritage value, while Bhimbetka records settlement, subsistence change, and prehistoric spirituality.",
-      "sourceIds": [
-        "source-01",
-        "source-05"
-      ]
+      "sourceIds": ["source-01", "source-05"]
     },
     {
       "poiId": "borobudur-temple-compounds",
       "tier": "hot",
       "text": "Both are historic religious complexes whose significance extends beyond a single structure. The target was a Benedictine monastery; Borobudur comprises three Buddhist temples linked by a possible ritual relationship.",
-      "sourceIds": [
-        "source-01",
-        "source-06"
-      ]
+      "sourceIds": ["source-01", "source-06"]
     },
     {
       "poiId": "calatrava-la-vieja",
       "tier": "hot",
       "text": "Both are medieval religious institutions in the Iberian Peninsula whose roles changed after conflict and relocation. The target monastery was restored after destruction, while Calatrava became the nucleus of a military religious order before its order moved elsewhere.",
-      "sourceIds": [
-        "source-01",
-        "source-07"
-      ]
+      "sourceIds": ["source-01", "source-07"]
     },
     {
       "poiId": "salvador-bahia",
       "tier": "warm",
       "text": "Both have heritage significance rooted in religion and cultural exchange. The target reflects Benedictine monastic history, while Salvador's historic center reflects Portuguese colonization and strong African influence.",
-      "sourceIds": [
-        "source-01",
-        "source-08"
-      ]
+      "sourceIds": ["source-01", "source-08"]
     },
     {
       "poiId": "shulgan-tash-cave",
       "tier": "warm",
       "text": "Both are protected places whose meaning combines human shelter with cultural memory. The target was a rebuilt monastery, while Shulgan-Tash preserves prehistoric paintings and later use as wartime refuge.",
-      "sourceIds": [
-        "source-01",
-        "source-09"
-      ]
+      "sourceIds": ["source-01", "source-09"]
     },
     {
       "poiId": "chateau-de-chambord",
       "tier": "warm",
       "text": "Both are prominent historic buildings whose functions changed over time. The target developed from a monastery into a heritage church, while Chambord began as a royal hunting lodge and later became a public attraction.",
-      "sourceIds": [
-        "source-01",
-        "source-10"
-      ]
+      "sourceIds": ["source-01", "source-10"]
     },
     {
       "poiId": "machu-picchu",
       "tier": "warm",
       "text": "Both are archaeological heritage places associated with a former elite or institutional order and later abandonment or rediscovery. The target preserves a former monastery, while Machu Picchu preserves an Inca citadel abandoned after occupation.",
-      "sourceIds": [
-        "source-01",
-        "source-11"
-      ]
+      "sourceIds": ["source-01", "source-11"]
     },
     {
       "poiId": "historical-monuments-of-mtskheta",
       "tier": "hot",
       "text": "Both are heritage places centered on historic Christianity and important religious buildings. The target preserves a Benedictine monastic church, while Mtskheta is a major Christian center with several churches and cultural monuments.",
-      "sourceIds": [
-        "source-01",
-        "source-12"
-      ]
+      "sourceIds": ["source-01", "source-12"]
     },
     {
       "poiId": "alt-tempelhof-berlin-u-bahn",
       "tier": "cold",
       "text": "Both demonstrate layers of construction and changing use, but the target is a medieval religious foundation whereas Alt-Tempelhof is a twentieth-century transport station built after wartime delays.",
-      "sourceIds": [
-        "source-01",
-        "source-13"
-      ]
+      "sourceIds": ["source-01", "source-13"]
     },
     {
       "poiId": "bryggen",
       "tier": "warm",
       "text": "Both preserve a historic institution that organized regional activity and later became a heritage attraction. The target was a monastery; Bryggen was a Hanseatic commercial center with warehouses and administrative buildings.",
-      "sourceIds": [
-        "source-01",
-        "source-14"
-      ]
+      "sourceIds": ["source-01", "source-14"]
     },
     {
       "poiId": "kyoto-prefecture",
       "tier": "warm",
       "text": "Both retain long religious and political histories. The target was a Benedictine monastery, while Kyoto's historic capital area contains longstanding temples and shrines alongside imperial and political history.",
-      "sourceIds": [
-        "source-01",
-        "source-15"
-      ]
+      "sourceIds": ["source-01", "source-15"]
     },
     {
       "poiId": "mount-fuji",
       "tier": "warm",
       "text": "Both have enduring sacred meaning and attract visitors for cultural reasons. The target is a historic Christian monastic church, while Mount Fuji has been an object of pilgrimage and artistic inspiration for centuries.",
-      "sourceIds": [
-        "source-01",
-        "source-16"
-      ]
+      "sourceIds": ["source-01", "source-16"]
     },
     {
       "poiId": "soltaniyeh",
       "tier": "warm",
       "text": "Both are associated with religious institutions and shifting political importance. The target was a Benedictine monastery later restored, while Soltaniyeh was a capital whose history included a medieval archdiocese and later decline.",
-      "sourceIds": [
-        "source-01",
-        "source-17"
-      ]
+      "sourceIds": ["source-01", "source-17"]
     },
     {
       "poiId": "loen-church",
       "tier": "hot",
       "text": "Both are historic churches with earlier buildings replaced or rebuilt on the same religious site. The target followed a destroyed monastery with later restoration, while Loen Church replaced earlier wooden church buildings.",
-      "sourceIds": [
-        "source-01",
-        "source-18"
-      ]
+      "sourceIds": ["source-01", "source-18"]
     },
     {
       "poiId": "historic-town-of-grand-bassam",
       "tier": "warm",
       "text": "Both are heritage places documenting changing institutional and social roles. The target preserves monastic history, while Grand-Bassam preserves a former colonial capital organized into commercial, administrative, and residential quarters.",
-      "sourceIds": [
-        "source-01",
-        "source-19"
-      ]
+      "sourceIds": ["source-01", "source-19"]
     },
     {
       "poiId": "teotihuacan",
       "tier": "warm",
       "text": "Both were major religiously meaningful places whose functions extended into regional organization. The target was a monastery, while Teotihuacan began as a religious center and became a large urban and political complex.",
-      "sourceIds": [
-        "source-01",
-        "source-20"
-      ]
+      "sourceIds": ["source-01", "source-20"]
     },
     {
       "poiId": "statue-of-liberty",
       "tier": "cold",
       "text": "Both are internationally recognized heritage symbols whose meaning was shaped by construction, preservation, and public interpretation. The target carries monastic memory; the statue carries a message of freedom and welcome.",
-      "sourceIds": [
-        "source-01",
-        "source-21"
-      ]
+      "sourceIds": ["source-01", "source-21"]
     },
     {
       "poiId": "archaeological-site-of-carthage",
       "tier": "warm",
       "text": "Both are heritage places where later preservation efforts protect remnants of earlier religious or civic power. The target preserves a former monastery, while Carthage preserves dispersed remains of an ancient city and later religious monument.",
-      "sourceIds": [
-        "source-01",
-        "source-22"
-      ]
+      "sourceIds": ["source-01", "source-22"]
     },
     {
       "poiId": "bora-bora",
       "tier": "warm",
       "text": "Both experienced major changes in outside control and public function. The target was attacked and later restored as a religious site, while Bora Bora shifted from an independent kingdom and wartime supply base toward international tourism.",
-      "sourceIds": [
-        "source-01",
-        "source-23"
-      ]
+      "sourceIds": ["source-01", "source-23"]
     },
     {
       "poiId": "national-history-park",
       "tier": "hot",
       "text": "Both preserve religious and political history in a complex of historic buildings. The target is a former Benedictine monastic church, while the park includes palace ruins, a citadel, and associated buildings tied to Haiti's national history.",
-      "sourceIds": [
-        "source-01",
-        "source-24"
-      ]
+      "sourceIds": ["source-01", "source-24"]
     },
     {
       "poiId": "tikal",
       "tier": "warm",
       "text": "Both are former centers of organized religious life that later became archaeological heritage sites. The target was a Benedictine monastery, while Tikal was a powerful ancient city with temples, palaces, and dynastic monuments.",
-      "sourceIds": [
-        "source-01",
-        "source-25"
-      ]
+      "sourceIds": ["source-01", "source-25"]
     }
   ],
   "reveal": {
     "title": "Church of San Xulián de Moraime",
     "summary": "The target is the Church of San Julián de Moraime in the Moraime area of Muxia, Galicia, Spain. It was originally established as the Benedictine Mosteiro de Moraime in the early twelfth century, destroyed by Norman pirates in 1105 and later by Saxons, then restored in 1119 through a donation from Alfonso Raimúndez, the future Alfonso VII.",
     "clueExplanation": "Clue 1 encoded the site's enduring sacred and heritage meaning despite changing circumstances: it survives as a church after the monastery's history. Clue 2 pointed to an institution rather than an isolated monument, identifying the former monastery as the source of the site's regional significance. Clue 3 placed that institutional origin in the early second millennium and specified its monastic character. Clue 4 encoded the unusual sequence of destruction by Norman pirates and Saxons followed by rebuilding. Clue 5 referred to the young royal resident, Alfonso Raimúndez, whose 1119 donation enabled restoration. Clue 6 confirmed the final context: a surviving religious building near Muxia that represents the former Benedictine monastery.",
-    "sourceIds": [
-      "source-01"
-    ]
+    "sourceIds": ["source-01"]
   },
   "sources": [
     {
