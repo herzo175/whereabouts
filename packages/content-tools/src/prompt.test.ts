@@ -19,13 +19,16 @@ const extracts = pois.map((poi) => ({
 }));
 
 describe('buildCasePrompt', () => {
-  it('requires an intentionally vague first clue and a measured narrowing ladder', () => {
+  it('keeps the late clue ladder probabilistic rather than guaranteeing a solve', () => {
     const prompt = buildCasePrompt(pois, extracts);
 
-    expect(PROMPT_VERSION).toBe(3);
+    expect(PROMPT_VERSION).toBe(4);
     expect(prompt).toContain('at least 8 of the 25 candidates');
     expect(prompt).toContain('Clue 2: 6–10 plausible candidates');
-    expect(prompt).toContain('Clue 6: 1–2 plausible candidates');
+    expect(prompt).toContain('Clue 4: 4–7 plausible candidates');
+    expect(prompt).toContain('Clue 5: 3–5 plausible candidates');
+    expect(prompt).toContain('Clue 6: 2–4 plausible candidates');
+    expect(prompt).toContain('never a single decisive fact');
     expect(prompt).toContain('Do not combine individually broad facts');
   });
 

@@ -1,7 +1,7 @@
 import type { Poi } from '@whereabouts/case-content';
 import type { WikipediaExtract } from './wikipedia.js';
 
-export const PROMPT_VERSION = 3;
+export const PROMPT_VERSION = 4;
 
 function compactExtract(extract: string, limit: number): string {
   if (extract.length <= limit) return extract;
@@ -31,10 +31,10 @@ Before writing, silently compare the target with all 24 distractors. For each cl
 
 - Clue 1: incredibly vague but not impossible. It must be true, useful in hindsight, and plausibly fit at least 8 of the 25 candidates. Use one broad theme about historical role, changing use, cultural exchange, engineering purpose, landscape, or public meaning. Do not use proper nouns, named people, named empires, exact century, year, dynasty, religion, language, demonym, continent, country, city, region, architectural style, signature architectural feature, superlative, or unique geographic configuration. Do not mention continents, borders, straits, rivers, seas, coastlines, or cardinal directions. Do not combine individually broad facts when their combination fingerprints the answer.
 - Clue 2: 6–10 plausible candidates. Add one different broad dimension, but retain all Clue 1 restrictions on names, dates, signature features, and unique geography.
-- Clue 3: 4–7 plausible candidates. Introduce a sourced historical relationship, broad era, or functional transition. One proper noun or broad geographic fact is allowed only if it does not identify the target by itself.
-- Clue 4: 3–5 plausible candidates. Add a distinguishing historical or cultural connection, but avoid the target's most famous identifying phrase or feature.
-- Clue 5: 2–3 plausible candidates. Use a strong diagnostic relationship or feature that rewards informed players without stating the answer.
-- Clue 6: 1–2 plausible candidates. Make the answer confirmable to an attentive player while still omitting the target POI, destination, city, and country names.
+- Clue 3: 5–8 plausible candidates. Introduce a sourced historical relationship, broad era, or functional transition. One proper noun or broad geographic fact is allowed only if it does not identify the target by itself.
+- Clue 4: 4–7 plausible candidates. Add a still non-unique historical or cultural connection. Do not use a named person, exact event, unique artifact, or the target's most famous identifying phrase or feature.
+- Clue 5: 3–5 plausible candidates. Add a useful relationship or feature that narrows a shortlist without proving the answer. Avoid a famous individual, singular incident, quotation, or one-of-a-kind object.
+- Clue 6: 2–4 plausible candidates. Offer a final confirmation context, never a single decisive fact. At least two candidates must remain reasonably defensible from the six clues alone; the player should need their earlier guess feedback to separate them. Still omit the target POI, destination, city, and country names.
 
 Read the six clues together before returning them. Rewrite any early clue whose combination of geography, era, function, and architecture makes a famous answer obvious. Each clue must add new information rather than paraphrasing an earlier clue.
 
