@@ -64,7 +64,7 @@ export function targetExclusionsForDate(
   date: string,
 ): Set<string> {
   const previousDates = [...history.keys()]
-    .filter((candidate) => candidate < date)
+    .filter((candidate) => candidate <= date)
     .sort((left, right) => right.localeCompare(left))
     .slice(0, 30);
   return new Set(
@@ -96,14 +96,17 @@ export function selectPoisForDate(
   catalog: CatalogPoi[],
   date: string,
   excludedTargetIds: ReadonlySet<string> = new Set(),
+  revision = 1,
 ): CatalogPoi[] {
   if (catalog.length < 25)
     throw new Error('catalog must contain at least 25 POIs');
+  if (!Number.isInteger(revision) || revision < 1)
+    throw new Error('revision must be a positive integer');
 
   const day = Math.floor(Date.parse(`${date}T00:00:00Z`) / 86_400_000);
   const targetOrder = [...catalog].sort((left, right) =>
-    hashOrder('whereabouts-target-v2', left).localeCompare(
-      hashOrder('whereabouts-target-v2', right),
+    hashOrder(`whereabouts-target-v3:${date}:v${revision}`, left).localeCompare(
+      hashOrder(`whereabouts-target-v3:${date}:v${revision}`, right),
     ),
   );
   const targetCandidates = targetOrder.filter(
@@ -133,8 +136,11 @@ export function selectPoisForDate(
   const ranked = catalog
     .filter((poi) => !targets.some((target) => target?.id === poi.id))
     .sort((left, right) =>
-      hashOrder(`whereabouts-candidates-v2:${date}`, left).localeCompare(
-        hashOrder(`whereabouts-candidates-v2:${date}`, right),
+      hashOrder(
+        `whereabouts-candidates-v3:${date}:v${revision}`,
+        left,
+      ).localeCompare(
+        hashOrder(`whereabouts-candidates-v3:${date}:v${revision}`, right),
       ),
     );
   const selected = targets.filter((target): target is CatalogPoi =>
@@ -178,6 +184,7 @@ export async function ensureImageBackedPois(
   date: string,
   fetchImage: typeof fetchWikipediaImage = fetchWikipediaImage,
   excludedTargetIds: ReadonlySet<string> = new Set(),
+  revision = 1,
 ): Promise<CatalogPoi[]> {
   const targetSize = selected.length;
   const enriched = await attachWikipediaImages(selected, fetchImage);
@@ -185,8 +192,14 @@ export async function ensureImageBackedPois(
   const replacements = catalog
     .filter((poi) => !usedIds.has(poi.id) && !excludedTargetIds.has(poi.id))
     .sort((left, right) =>
-      hashOrder(`whereabouts-image-replacement-v1:${date}`, left).localeCompare(
-        hashOrder(`whereabouts-image-replacement-v1:${date}`, right),
+      hashOrder(
+        `whereabouts-image-replacement-v2:${date}:v${revision}`,
+        left,
+      ).localeCompare(
+        hashOrder(
+          `whereabouts-image-replacement-v2:${date}:v${revision}`,
+          right,
+        ),
       ),
     );
 
@@ -269,13 +282,14 @@ export async function generateRange(arguments_: string[]): Promise<void> {
   for (let offset = 0; offset < days; offset++) {
     const date = dateAfter(from, offset);
     const excludedTargetIds = targetExclusionsForDate(history, date);
-    const pois = selectPoisForDate(catalog, date, excludedTargetIds);
+    const pois = selectPoisForDate(catalog, date, excludedTargetIds, revision);
     const sourcedPois = await ensureImageBackedPois(
       pois,
       catalog,
       date,
       fetchWikipediaImage,
       excludedTargetIds,
+      revision,
     );
     const extracts = sourcedPois.map((poi) => {
       const entry = knowledgeByPoi.get(poi.id);

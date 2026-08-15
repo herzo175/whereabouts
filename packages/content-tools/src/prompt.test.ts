@@ -22,11 +22,12 @@ describe('buildCasePrompt', () => {
   it('requests five concrete, one-shot round clues without leaking answers', () => {
     const prompt = buildCasePrompt(pois, extracts);
 
-    expect(PROMPT_VERSION).toBe(6);
+    expect(PROMPT_VERSION).toBe(8);
     expect(prompt).toContain('exactly five rounds');
     expect(prompt).toContain('first five catalog records');
     expect(prompt).toContain('one concrete, useful clue');
     expect(prompt).toContain('target POI name, city, or country');
+    expect(prompt).toContain('Geographic labels are answer markers');
   });
 
   it('requires sourced numeric similarity scores for deterministic tier bucketing', () => {
@@ -39,6 +40,15 @@ describe('buildCasePrompt', () => {
     expect(prompt).toContain(
       'source IDs for both the guessed POI and the target',
     );
+  });
+
+  it('redacts target answer markers from the model context', () => {
+    const prompt = buildCasePrompt(pois, extracts);
+
+    expect(prompt).not.toContain('Target Place');
+    expect(prompt).not.toContain('City 0');
+    expect(prompt).not.toContain('Country 0');
+    expect(prompt).toContain('"id":"poi-0"');
   });
 
   it('bounds cached corpus context before sending the daily model request', () => {
