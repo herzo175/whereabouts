@@ -1,0 +1,1392 @@
+{
+  "schemaVersion": 2,
+  "publicationDate": "2026-08-15",
+  "revision": 3,
+  "caseNumber": 20680,
+  "pois": [
+    {
+      "id": "beaufort-castle-lebanon",
+      "name": "Beaufort Castle, Lebanon",
+      "city": "Arnoun",
+      "country": "Lebanon",
+      "latitude": 33.324715,
+      "longitude": 35.532148,
+      "wikipediaTitle": "Beaufort Castle, Lebanon",
+      "blurb": "Beaufort or Belfort Castle, known locally as Qal'at al-Shaqif (Arabic: قلعة الشقيف, romanized: Qalʿat al-Shaqīf, lit.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/The_ruins_of_Beaufort_Castle_in_2022..jpg/1280px-The_ruins_of_Beaufort_Castle_in_2022..jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Beaufort Castle, Lebanon",
+        "attribution": "ElysianEzryn · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "maulbronn-monastery",
+      "name": "Maulbronn Monastery",
+      "city": "Maulbronn",
+      "country": "Germany",
+      "latitude": 49.0011,
+      "longitude": 8.8129,
+      "wikipediaTitle": "Maulbronn Monastery",
+      "blurb": "Maulbronn Monastery (German: Kloster Maulbronn) is a former Cistercian abbey and ecclesiastical state in the Holy Roman Empire located at Maulbronn, Baden-Württemberg.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Courtyard_facade_-_Maulbronn_Monastery.jpg/1280px-Courtyard_facade_-_Maulbronn_Monastery.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Maulbronn Monastery",
+        "attribution": "H. Zell · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "hampi",
+      "name": "Hampi",
+      "city": "Vijayanagara District",
+      "country": "India",
+      "latitude": 15.334547,
+      "longitude": 76.462162,
+      "wikipediaTitle": "Hampi",
+      "blurb": "Hampi or Hampe (Kannada: [hɐmpe]), also referred to as the Group of Monuments at Hampi, is a UNESCO World Heritage Site located in the town of Hampi in Vijayanagara district, east-central Karnataka, India.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wide_angle_of_Galigopuram_of_Virupaksha_Temple%2C_Hampi_%2804%29_%28cropped%29.jpg/1280px-Wide_angle_of_Galigopuram_of_Virupaksha_Temple%2C_Hampi_%2804%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Hampi",
+        "attribution": "iMahesh · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "borobudur-temple-compounds",
+      "name": "Borobudur Temple Compounds",
+      "city": "Central Java",
+      "country": "Indonesia",
+      "latitude": -7.60778,
+      "longitude": 110.20361,
+      "wikipediaTitle": "Borobudur Temple Compounds",
+      "blurb": "Borobudur Temple Compounds is the World Heritage designation of the area of three Buddhist temples in Central Java, Indonesia.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Borobudur-Temple-Park_Indonesia_Stupas-of-Borobudur-04.jpg/1280px-Borobudur-Temple-Park_Indonesia_Stupas-of-Borobudur-04.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Borobudur Temple Compounds",
+        "attribution": "CEphoto, Uwe Aranas · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "koh-ker",
+      "name": "Koh Ker",
+      "city": "Preah Vihear Province",
+      "country": "Cambodia",
+      "latitude": 13.78333333,
+      "longitude": 104.53333333,
+      "wikipediaTitle": "Koh Ker",
+      "blurb": "Koh Ker (Khmer: ប្រាសាទកោះកេរ្ដិ៍, Prasat Kaôh Kértĕ [praːsaːt kɑh keː]) is a remote archaeological site in northern Cambodia about 120 kilometres (75 mi) away from Siem Reap and the ancient site of Angkor.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/0505280017PThompyramid.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Koh Ker",
+        "attribution": "(WT-en) Peaceofangkor at English Wikivoyage · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:0505280017PThompyramid.jpg"
+      }
+    },
+    {
+      "id": "imperial-tombs-of-the-ming-and-qing-dynasties",
+      "name": "Imperial Tombs of the Ming and Qing Dynasties",
+      "city": "People's Republic of China",
+      "country": "People's Republic of China",
+      "latitude": 31.01666667,
+      "longitude": 112.65,
+      "wikipediaTitle": "Imperial Tombs of the Ming and Qing Dynasties",
+      "blurb": "Imperial Tombs of the Ming and Qing Dynasties (simplified Chinese: 明清皇家陵寝; traditional Chinese: 明清皇家陵寢; pinyin: Míng Qīng Huángjiā Língqǐn) is the designation under which the UNESCO has included several tombs and burial complexes in the list of World Heritage Sites.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Beiling_Park_24617-Shenyang_%2849052226601%29.jpg/1280px-Beiling_Park_24617-Shenyang_%2849052226601%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Imperial Tombs of the Ming and Qing Dynasties",
+        "attribution": "xiquinhosilva · CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "id": "storholmen-lighthouse",
+      "name": "Storholmen Lighthouse",
+      "city": "Giske Municipality",
+      "country": "Norway",
+      "latitude": 62.64305556,
+      "longitude": 5.92361111,
+      "wikipediaTitle": "Storholmen Lighthouse",
+      "blurb": "Storholmen Lighthouse (Norwegian: Storholmen fyr) is an active lighthouse in Giske Municipality in Møre og Romsdal county on the west coast of Norway.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Storholmen%2C_Giske_-_S-1602U2_064.jpg/1280px-Storholmen%2C_Giske_-_S-1602U2_064.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Storholmen Lighthouse",
+        "attribution": "Unknown authorUnknown author · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Storholmen,_Giske_-_S-1602U2_064.jpg"
+      }
+    },
+    {
+      "id": "alejandro-de-humboldt-national-park",
+      "name": "Alejandro de Humboldt National Park",
+      "city": "Holguín Province",
+      "country": "Cuba",
+      "latitude": 20.496745,
+      "longitude": -74.857897,
+      "wikipediaTitle": "Alejandro de Humboldt National Park",
+      "blurb": "Alejandro de Humboldt National Park (Spanish: Parque Nacional Alejandro de Humboldt) is a national park in the Cuban provinces of Holguín and Guantánamo.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Alejandro_de_Humboldt_National_Park.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Alejandro de Humboldt National Park",
+        "attribution": "Antonio Núñez Jiménez · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    },
+    {
+      "id": "historic-town-of-grand-bassam",
+      "name": "Historic Town of Grand-Bassam",
+      "city": "Grand-Bassam",
+      "country": "Ivory Coast",
+      "latitude": 5.1965,
+      "longitude": -3.7368,
+      "wikipediaTitle": "Historic Town of Grand-Bassam",
+      "blurb": "The Historic Town of Grand-Bassam is the old part of the city of Grand-Bassam in Ivory Coast. It was listed as a UNESCO World Heritage Site in 2012.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Centre_c%C3%A9ramique_de_Grand-Bassam_2.jpg/1280px-Centre_c%C3%A9ramique_de_Grand-Bassam_2.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Historic Town of Grand-Bassam",
+        "attribution": "Aristidek5maya · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "tsodilo",
+      "name": "Tsodilo",
+      "city": "North-West District",
+      "country": "Botswana",
+      "latitude": -18.771666666,
+      "longitude": 21.754166666,
+      "wikipediaTitle": "Tsodilo",
+      "blurb": "The Tsodilo Hills (Tswana: Lefelo la Tsodilo) are a UNESCO World Heritage Site (WHS), consisting of rock art, rock shelters, depressions, and caves in Botswana, Southern Africa.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Tsodilo_rock_paintings_1.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Tsodilo",
+        "attribution": "cj Huo · CC BY-SA 1.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/1.0"
+      }
+    },
+    {
+      "id": "st-basils-cathedral",
+      "name": "Saint Basil's Cathedral",
+      "city": "Moscow",
+      "country": "Russia",
+      "latitude": 55.7525,
+      "longitude": 37.6231,
+      "wikipediaTitle": "Saint Basil's Cathedral",
+      "blurb": "The Cathedral of Vasily the Blessed (Russian: Собор Василия Блаженного, romanized: Sobor Vasiliya Blazhennogo), commonly known as Saint Basil's Cathedral, is a Russian Orthodox church on Red Square in the historic centre of Moscow.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Saint_Basil%27s_Cathedral_in_Moscow.jpg/1280px-Saint_Basil%27s_Cathedral_in_Moscow.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Saint Basil's Cathedral",
+        "attribution": "Tsy1980 · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "buildings-and-architecture-of-bath",
+      "name": "Buildings and architecture of Bath",
+      "city": "Bath",
+      "country": "United Kingdom",
+      "latitude": 51.3667,
+      "longitude": -2.35,
+      "wikipediaTitle": "Buildings and architecture of Bath",
+      "blurb": "The buildings and architecture of Bath, a city in Somerset in the south west of England, reveal significant examples of the architecture of England, from the Roman Baths (including their significant Celtic presence), to the present day.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Aerial.view.of.bath.arp.jpg/1280px-Aerial.view.of.bath.arp.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Buildings and architecture of Bath",
+        "attribution": "Wikimedia Commons contributor · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Aerial.view.of.bath.arp.jpg"
+      }
+    },
+    {
+      "id": "struve-geodetic-arc",
+      "name": "Struve Geodetic Arc",
+      "city": "Enontekiö",
+      "country": "Latvia",
+      "latitude": 52.289444444,
+      "longitude": 25.649444444,
+      "wikipediaTitle": "Struve Geodetic Arc",
+      "blurb": "The Struve Geodetic Arc is a chain of survey triangulations stretching from Hammerfest in Norway to the Black Sea, through ten countries and over 2,820 kilometres (1,750 mi), which yielded the first accurate measurement of a meridian arc.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Hammerfest%2C_fuglenes%2C_memoriale_per_l%27arco_geodetico_di_struve%2C_misurato_a_partire_da_qui%2C_colonna_02.jpg/1280px-Hammerfest%2C_fuglenes%2C_memoriale_per_l%27arco_geodetico_di_struve%2C_misurato_a_partire_da_qui%2C_colonna_02.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Struve Geodetic Arc",
+        "attribution": "Francesco Bini · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "agra-fort",
+      "name": "Agra Fort",
+      "city": "Agra",
+      "country": "India",
+      "latitude": 27.179583333,
+      "longitude": 78.021297222,
+      "wikipediaTitle": "Agra Fort",
+      "blurb": "The Agra Fort (Qila Agra) is a historical Mughal fort in the city of Agra, also known as Agra's Red Fort. Mughal emperor Humayun was crowned at this fort in 1530.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Agra_03-2016_10_Agra_Fort.jpg/1280px-Agra_03-2016_10_Agra_Fort.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Agra Fort",
+        "attribution": "A.Savin · FAL",
+        "licenseUrl": "http://artlibre.org/licence/lal/en"
+      }
+    },
+    {
+      "id": "old-city-of-sana-a",
+      "name": "Old City of Sana'a",
+      "city": "Sanaa",
+      "country": "Yemen",
+      "latitude": 15.3551,
+      "longitude": 44.2145,
+      "wikipediaTitle": "Old City of Sana'a",
+      "blurb": "The Old City of Sanaʽa is a recognised UNESCO World Heritage Site in the Amanat Al Asimah Governorate, Yemen. As of 2003, the district had a population of 63,398 inhabitants.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/San%27a03_flickr.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Old City of Sanaa",
+        "attribution": "ai@ce · CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "id": "murujuga-national-park",
+      "name": "Murujuga National Park",
+      "city": "Pilbara",
+      "country": "Australia",
+      "latitude": -20.58333333,
+      "longitude": 116.83333333,
+      "wikipediaTitle": "Murujuga National Park",
+      "blurb": "Murujuga National Park is a national park on Burrup Peninsula in the Pilbara region in the north-west of Western Australia, covering an area of 48.51 km2 (18.73 sq mi).",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Ancient_and_Modern_4%2C000_years.jpg/1280px-Ancient_and_Modern_4%2C000_years.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Murujuga National Park",
+        "attribution": "Marius Fenger · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "iate-tenis-clube",
+      "name": "Iate Tênis Clube",
+      "city": "Pampulha",
+      "country": "Brazil",
+      "latitude": -19.85417,
+      "longitude": -43.97569,
+      "wikipediaTitle": "Iate Tênis Clube",
+      "blurb": "The Iate Tênis Clube (English: Yacht Tennis Club) is a recreational club located on the shore of the Lake Pampulha in Belo Horizonte.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Vista_do_Museu_da_Arte_da_Pampulha_para_a_Lagoa_da_Pampulha_e_o_Iate_Club_de_Pampulha.jpg/1280px-Vista_do_Museu_da_Arte_da_Pampulha_para_a_Lagoa_da_Pampulha_e_o_Iate_Club_de_Pampulha.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Iate Tênis Clube",
+        "attribution": "Carmeladgl · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "convento-de-san-pascual-aranjuez",
+      "name": "Convento de San Pascual, Aranjuez",
+      "city": "Aranjuez",
+      "country": "Spain",
+      "latitude": 40.029452777,
+      "longitude": -3.600277777,
+      "wikipediaTitle": "Convento de San Pascual, Aranjuez",
+      "blurb": "The Convento de San Pascual is a royal monastery in Aranjuez, in the Community of Madrid, Spain, founded by King Charles III of Spain as a Franciscan monastery and built from 1765 to 1770.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Convento_san_pascual_aranjuez.jpg/1280px-Convento_san_pascual_aranjuez.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Convento de San Pascual, Aranjuez",
+        "attribution": "Ángel Serrano Sánchez de León · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    },
+    {
+      "id": "noel-kempff-mercado-national-park",
+      "name": "Noel Kempff Mercado National Park",
+      "city": "Santa Cruz Department",
+      "country": "Bolivia",
+      "latitude": -14.23028,
+      "longitude": -60.84667,
+      "wikipediaTitle": "Noel Kempff Mercado National Park",
+      "blurb": "Noel Kempff Mercado National Park (Spanish: Parque nacional Noel Kempff Mercado) is a national park in northeast Santa Cruz Department, Province of José Miguel de Velasco, Bolivia, on the border with Brazil.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Vista_a%C3%A9rea_de_la_Cascada_Arco%C3%ADris%2C_Parque_Nacional_Noel_Kempff_Mercado%2C_Bolivia.jpg/1280px-Vista_a%C3%A9rea_de_la_Cascada_Arco%C3%ADris%2C_Parque_Nacional_Noel_Kempff_Mercado%2C_Bolivia.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Noel Kempff Mercado National Park",
+        "attribution": "Estefania PlazaPonte · CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "id": "copan",
+      "name": "Copán",
+      "city": "Copán Ruinas",
+      "country": "Honduras",
+      "latitude": 14.837963888,
+      "longitude": -89.142441666,
+      "wikipediaTitle": "Copán",
+      "blurb": "Copán is an archaeological site of the Maya civilization in the Copán Department of western Honduras, not far from the border with Guatemala.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Copan_sculpture.jpg/1280px-Copan_sculpture.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Copán",
+        "attribution": "Adalberto Hernandez Vega from Copan Ruinas, Honduras · CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "id": "hellevik-lighthouse",
+      "name": "Hellevik Lighthouse",
+      "city": "Ålesund Municipality",
+      "country": "Norway",
+      "latitude": 62.636277777,
+      "longitude": 6.176166666,
+      "wikipediaTitle": "Hellevik Lighthouse",
+      "blurb": "Hellevik Lighthouse (Norwegian: Hellevik fyr) is a coastal lighthouse in Haram Municipality in Møre og Romsdal, Norway. It was first established in 1880, and was automated in 1973.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Hellevik%2C_Haram_-_S-1602U2_068.jpg/1280px-Hellevik%2C_Haram_-_S-1602U2_068.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Hellevik Lighthouse",
+        "attribution": "Unknown authorUnknown author · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Hellevik,_Haram_-_S-1602U2_068.jpg"
+      }
+    },
+    {
+      "id": "yellowstone-national-park",
+      "name": "Yellowstone National Park",
+      "city": "Montana",
+      "country": "United States",
+      "latitude": 44.6,
+      "longitude": -110.5,
+      "wikipediaTitle": "Yellowstone National Park",
+      "blurb": "Yellowstone National Park is a national park of the United States located in the northwest corner of the state of Wyoming, with small portions of it extending into Montana and Idaho.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Grand_Canyon_of_the_Yellowstone_Lower_Falls_%2895819p%29.jpg/1280px-Grand_Canyon_of_the_Yellowstone_Lower_Falls_%2895819p%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Yellowstone National Park",
+        "attribution": "Rhododendrites · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "cn-tower",
+      "name": "CN Tower",
+      "city": "Toronto",
+      "country": "Canada",
+      "latitude": 43.6426,
+      "longitude": -79.3871,
+      "wikipediaTitle": "CN Tower",
+      "blurb": "The CN Tower is a 553.3-metre-high (1,815.3 ft) communications and observation tower in Toronto, Ontario, Canada. Completed in 1976, it is located in downtown Toronto, built on the former Railway Lands.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/48/CN_Tower_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "CN Tower",
+        "attribution": "Unknown authorUnknown author · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:CN_Tower_logo.png"
+      }
+    },
+    {
+      "id": "philippi",
+      "name": "Philippi",
+      "city": "Kavala Municipality",
+      "country": "Greece",
+      "latitude": 41.012072,
+      "longitude": 24.284576,
+      "wikipediaTitle": "Philippi",
+      "blurb": "Philippi (; Ancient Greek: Φίλιπποι, Phílippoi) was a major mainland Greek city northwest of the nearby island, Thasos. Its original name was Crenides (Ancient Greek: Κρηνῖδες, Krēnĩdes \"Fountains\").",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Philippi_city_center.jpg/1280px-Philippi_city_center.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Philippi",
+        "attribution": "No machine-readable author provided. Marsyas assumed (based on copyright claims). · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    },
+    {
+      "id": "gyeongbokgung",
+      "name": "Gyeongbokgung",
+      "city": "Seoul",
+      "country": "South Korea",
+      "latitude": 37.5796,
+      "longitude": 126.977,
+      "wikipediaTitle": "Gyeongbokgung",
+      "blurb": "Gyeongbokgung (Korean: 경복궁; Hanja: 景福宮; pronounced [kjʌŋbok̚k͈uŋ]) is a former royal palace in Seoul, South Korea. Established in 1395, it was the first royal palace of the Joseon dynasty, and is now one of the most significant tourist attractions in the country.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/%EA%B4%91%ED%99%94%EB%AC%B8_%EC%9B%94%EB%8C%80.jpg/1280px-%EA%B4%91%ED%99%94%EB%AC%B8_%EC%9B%94%EB%8C%80.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Gyeongbokgung",
+        "attribution": "서울관광 아카이브 · KOGL Type 1",
+        "licenseUrl": "http://www.kogl.or.kr/info/licenseType1.do"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "round-1",
+      "targetPoiId": "gyeongbokgung",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/%EA%B4%91%ED%99%94%EB%AC%B8_%EC%9B%94%EB%8C%80.jpg/1280px-%EA%B4%91%ED%99%94%EB%AC%B8_%EC%9B%94%EB%8C%80.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Gyeongbokgung",
+        "attribution": "서울관광 아카이브 · KOGL Type 1",
+        "licenseUrl": "http://www.kogl.or.kr/info/licenseType1.do"
+      },
+      "clue": {
+        "text": "This former royal palace was burned during a late-16th-century war, later suffered systematic colonial dismantling, and has undergone major restoration since the 1980s.",
+        "sourceIds": ["source-01"]
+      },
+      "results": [
+        {
+          "poiId": "gyeongbokgung",
+          "tier": "correct",
+          "text": "Correct: a former royal palace established in 1395, burned in 1592, dismantled during colonial rule, and restored since the 1980s.",
+          "sourceIds": ["source-01"]
+        },
+        {
+          "poiId": "imperial-tombs-of-the-ming-and-qing-dynasties",
+          "tier": "hot",
+          "text": "Both are major heritage complexes associated with imperial dynasties and elaborate architectural traditions.",
+          "sourceIds": ["source-01", "source-02"]
+        },
+        {
+          "poiId": "agra-fort",
+          "tier": "hot",
+          "text": "Both are monumental royal complexes associated with long imperial rule and later heritage conservation.",
+          "sourceIds": ["source-01", "source-08"]
+        },
+        {
+          "poiId": "st-basils-cathedral",
+          "tier": "hot",
+          "text": "Both are prominent historic monuments tied to powerful rulers and later preserved as cultural attractions.",
+          "sourceIds": ["source-01", "source-14"]
+        },
+        {
+          "poiId": "hampi",
+          "tier": "hot",
+          "text": "Both preserve the remains of a former South Asian royal capital or courtly center after political upheaval.",
+          "sourceIds": ["source-01", "source-18"]
+        },
+        {
+          "poiId": "maulbronn-monastery",
+          "tier": "warm",
+          "text": "Both are large historic complexes that changed function over time and are protected as heritage sites.",
+          "sourceIds": ["source-01", "source-12"]
+        },
+        {
+          "poiId": "beaufort-castle-lebanon",
+          "tier": "warm",
+          "text": "Both are fortified historic sites that experienced wartime damage and later conservation interest.",
+          "sourceIds": ["source-01", "source-03"]
+        },
+        {
+          "poiId": "convento-de-san-pascual-aranjuez",
+          "tier": "warm",
+          "text": "Both are historic religious or royal-associated complexes with protected architectural value.",
+          "sourceIds": ["source-01", "source-09"]
+        },
+        {
+          "poiId": "borobudur-temple-compounds",
+          "tier": "warm",
+          "text": "Both are monumental architectural complexes with multiple structures and major heritage recognition.",
+          "sourceIds": ["source-01", "source-10"]
+        },
+        {
+          "poiId": "historic-town-of-grand-bassam",
+          "tier": "warm",
+          "text": "Both reflect historic political power and have undergone preservation as culturally significant built environments.",
+          "sourceIds": ["source-01", "source-13"]
+        },
+        {
+          "poiId": "buildings-and-architecture-of-bath",
+          "tier": "warm",
+          "text": "Both are heritage sites where architectural ensembles and urban or spatial relationships are central to their significance.",
+          "sourceIds": ["source-01", "source-24"]
+        },
+        {
+          "poiId": "philippi",
+          "tier": "warm",
+          "text": "Both are archaeological heritage places whose surviving structures document earlier political centers.",
+          "sourceIds": ["source-01", "source-11"]
+        },
+        {
+          "poiId": "koh-ker",
+          "tier": "warm",
+          "text": "Both include extensive historic remains associated with former royal power and ambitious building programs.",
+          "sourceIds": ["source-01", "source-17"]
+        },
+        {
+          "poiId": "copan",
+          "tier": "cold",
+          "text": "Both are archaeological sites revealing the history of powerful dynastic or royal societies.",
+          "sourceIds": ["source-01", "source-21"]
+        },
+        {
+          "poiId": "old-city-of-sana-a",
+          "tier": "cold",
+          "text": "Both contain dense historic architecture and longstanding cultural institutions protected for heritage value.",
+          "sourceIds": ["source-01", "source-06"]
+        },
+        {
+          "poiId": "tsodilo",
+          "tier": "cold",
+          "text": "Both are UNESCO-listed cultural places with evidence of long human history and symbolic traditions.",
+          "sourceIds": ["source-01", "source-22"]
+        },
+        {
+          "poiId": "murujuga-national-park",
+          "tier": "cold",
+          "text": "Both are protected cultural landscapes containing significant historic traces and conservation concerns.",
+          "sourceIds": ["source-01", "source-20"]
+        },
+        {
+          "poiId": "cn-tower",
+          "tier": "cold",
+          "text": "Both are highly prominent visitor attractions whose physical presence is an important public symbol.",
+          "sourceIds": ["source-01", "source-15"]
+        },
+        {
+          "poiId": "yellowstone-national-park",
+          "tier": "cold",
+          "text": "Both are major attractions protected for historic or cultural significance and visited by large numbers of people.",
+          "sourceIds": ["source-01", "source-23"]
+        },
+        {
+          "poiId": "alejandro-de-humboldt-national-park",
+          "tier": "cold",
+          "text": "Both are UNESCO-recognized places with ongoing preservation and public-visitor importance.",
+          "sourceIds": ["source-01", "source-25"]
+        },
+        {
+          "poiId": "noel-kempff-mercado-national-park",
+          "tier": "cold",
+          "text": "Both are UNESCO World Heritage sites that have undergone long-term conservation efforts.",
+          "sourceIds": ["source-01", "source-07"]
+        },
+        {
+          "poiId": "iate-tenis-clube",
+          "tier": "cold",
+          "text": "Both are protected architectural attractions associated with restoration or management of a significant complex.",
+          "sourceIds": ["source-01", "source-04"]
+        },
+        {
+          "poiId": "struve-geodetic-arc",
+          "tier": "cold",
+          "text": "Both are internationally recognized heritage properties represented through multiple preserved structures or markers.",
+          "sourceIds": ["source-01", "source-16"]
+        },
+        {
+          "poiId": "hellevik-lighthouse",
+          "tier": "cold",
+          "text": "Both are historic structures whose original form or function has changed through later rebuilding or replacement.",
+          "sourceIds": ["source-01", "source-05"]
+        },
+        {
+          "poiId": "storholmen-lighthouse",
+          "tier": "cold",
+          "text": "Both are historic built sites that have been altered and maintained across different periods.",
+          "sourceIds": ["source-01", "source-19"]
+        }
+      ]
+    },
+    {
+      "id": "round-2",
+      "targetPoiId": "imperial-tombs-of-the-ming-and-qing-dynasties",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Beiling_Park_24617-Shenyang_%2849052226601%29.jpg/1280px-Beiling_Park_24617-Shenyang_%2849052226601%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Imperial Tombs of the Ming and Qing Dynasties",
+        "attribution": "xiquinhosilva · CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "clue": {
+        "text": "This UNESCO property groups imperial burial complexes whose planning uses mountains, rivers, Feng Shui, dragon motifs, and ordered emperor–consort tomb sequences.",
+        "sourceIds": ["source-02"]
+      },
+      "results": [
+        {
+          "poiId": "imperial-tombs-of-the-ming-and-qing-dynasties",
+          "tier": "correct",
+          "text": "Correct: a UNESCO designation covering Ming and Qing imperial tombs and burial complexes.",
+          "sourceIds": ["source-02"]
+        },
+        {
+          "poiId": "gyeongbokgung",
+          "tier": "hot",
+          "text": "Both are monumental complexes connected with East Asian imperial or royal dynasties and heritage preservation.",
+          "sourceIds": ["source-02", "source-01"]
+        },
+        {
+          "poiId": "agra-fort",
+          "tier": "hot",
+          "text": "Both are major imperial-era architectural properties associated with dynastic rule.",
+          "sourceIds": ["source-02", "source-08"]
+        },
+        {
+          "poiId": "hampi",
+          "tier": "hot",
+          "text": "Both document former dynastic power through extensive monumental remains.",
+          "sourceIds": ["source-02", "source-18"]
+        },
+        {
+          "poiId": "st-basils-cathedral",
+          "tier": "hot",
+          "text": "Both are grand historic complexes whose construction commemorated and expressed state power.",
+          "sourceIds": ["source-02", "source-14"]
+        },
+        {
+          "poiId": "maulbronn-monastery",
+          "tier": "warm",
+          "text": "Both are carefully planned, extensive heritage complexes with multiple buildings and a long institutional history.",
+          "sourceIds": ["source-02", "source-12"]
+        },
+        {
+          "poiId": "beaufort-castle-lebanon",
+          "tier": "warm",
+          "text": "Both occupy strategically meaningful elevated settings and preserve fortified historic architecture.",
+          "sourceIds": ["source-02", "source-03"]
+        },
+        {
+          "poiId": "borobudur-temple-compounds",
+          "tier": "warm",
+          "text": "Both are protected monumental complexes whose layout and architecture express religious cosmology.",
+          "sourceIds": ["source-02", "source-10"]
+        },
+        {
+          "poiId": "convento-de-san-pascual-aranjuez",
+          "tier": "warm",
+          "text": "Both are heritage-associated complexes founded or shaped under royal patronage.",
+          "sourceIds": ["source-02", "source-09"]
+        },
+        {
+          "poiId": "historic-town-of-grand-bassam",
+          "tier": "warm",
+          "text": "Both preserve built environments that reflect organized political and social structures.",
+          "sourceIds": ["source-02", "source-13"]
+        },
+        {
+          "poiId": "buildings-and-architecture-of-bath",
+          "tier": "warm",
+          "text": "Both are heritage properties whose significance depends on integrated architecture and spatial planning.",
+          "sourceIds": ["source-02", "source-24"]
+        },
+        {
+          "poiId": "philippi",
+          "tier": "warm",
+          "text": "Both preserve historic sites shaped by successive political powers and formal urban planning.",
+          "sourceIds": ["source-02", "source-11"]
+        },
+        {
+          "poiId": "koh-ker",
+          "tier": "warm",
+          "text": "Both feature monumental construction associated with a royal dynasty and a planned sacred landscape.",
+          "sourceIds": ["source-02", "source-17"]
+        },
+        {
+          "poiId": "copan",
+          "tier": "cold",
+          "text": "Both reveal dynastic history through monumental architecture and archaeological remains.",
+          "sourceIds": ["source-02", "source-21"]
+        },
+        {
+          "poiId": "old-city-of-sana-a",
+          "tier": "cold",
+          "text": "Both contain dense historic architecture and religious structures preserved as cultural heritage.",
+          "sourceIds": ["source-02", "source-06"]
+        },
+        {
+          "poiId": "tsodilo",
+          "tier": "cold",
+          "text": "Both are UNESCO cultural sites with religious or spiritual significance and long human use.",
+          "sourceIds": ["source-02", "source-22"]
+        },
+        {
+          "poiId": "murujuga-national-park",
+          "tier": "cold",
+          "text": "Both protect culturally significant landscapes containing extensive evidence of past societies.",
+          "sourceIds": ["source-02", "source-20"]
+        },
+        {
+          "poiId": "yellowstone-national-park",
+          "tier": "cold",
+          "text": "Both are UNESCO properties protected through large-scale heritage management.",
+          "sourceIds": ["source-02", "source-23"]
+        },
+        {
+          "poiId": "alejandro-de-humboldt-national-park",
+          "tier": "cold",
+          "text": "Both are UNESCO-listed properties valued for distinctive landscapes and long-term protection.",
+          "sourceIds": ["source-02", "source-25"]
+        },
+        {
+          "poiId": "cn-tower",
+          "tier": "cold",
+          "text": "Both are nationally prominent landmarks recognized for monumental scale and symbolic importance.",
+          "sourceIds": ["source-02", "source-15"]
+        },
+        {
+          "poiId": "iate-tenis-clube",
+          "tier": "cold",
+          "text": "Both belong to recognized heritage ensembles in which architecture and setting are important.",
+          "sourceIds": ["source-02", "source-04"]
+        },
+        {
+          "poiId": "struve-geodetic-arc",
+          "tier": "cold",
+          "text": "Both are transnational UNESCO properties assembled from multiple components or marked locations.",
+          "sourceIds": ["source-02", "source-16"]
+        },
+        {
+          "poiId": "hellevik-lighthouse",
+          "tier": "cold",
+          "text": "Both are historic structures whose original facilities have been modified or replaced over time.",
+          "sourceIds": ["source-02", "source-05"]
+        },
+        {
+          "poiId": "storholmen-lighthouse",
+          "tier": "cold",
+          "text": "Both are preserved historic properties with infrastructure adapted across different eras.",
+          "sourceIds": ["source-02", "source-19"]
+        },
+        {
+          "poiId": "noel-kempff-mercado-national-park",
+          "tier": "cold",
+          "text": "Both are UNESCO properties managed to protect significant natural or cultural heritage.",
+          "sourceIds": ["source-02", "source-07"]
+        }
+      ]
+    },
+    {
+      "id": "round-3",
+      "targetPoiId": "beaufort-castle-lebanon",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/The_ruins_of_Beaufort_Castle_in_2022..jpg/1280px-The_ruins_of_Beaufort_Castle_in_2022..jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Beaufort Castle, Lebanon",
+        "attribution": "ElysianEzryn · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "This medieval fortress stands on a roughly 300-metre cliff above a river and has remained militarily useful from the Crusader period into modern warfare.",
+        "sourceIds": ["source-03"]
+      },
+      "results": [
+        {
+          "poiId": "beaufort-castle-lebanon",
+          "tier": "correct",
+          "text": "Correct: a Crusader fortress on a steep cliff above the Litani River, later used as a modern military base.",
+          "sourceIds": ["source-03"]
+        },
+        {
+          "poiId": "gyeongbokgung",
+          "tier": "hot",
+          "text": "Both are major historic complexes that suffered destruction during warfare and later restoration or reconstruction.",
+          "sourceIds": ["source-03", "source-01"]
+        },
+        {
+          "poiId": "agra-fort",
+          "tier": "hot",
+          "text": "Both are imposing fortified complexes that served rulers and were shaped by successive political powers.",
+          "sourceIds": ["source-03", "source-08"]
+        },
+        {
+          "poiId": "hampi",
+          "tier": "hot",
+          "text": "Both are extensive fortified historic sites later left in ruins after military defeat.",
+          "sourceIds": ["source-03", "source-18"]
+        },
+        {
+          "poiId": "imperial-tombs-of-the-ming-and-qing-dynasties",
+          "tier": "hot",
+          "text": "Both contain monumental architecture associated with powerful dynasties and strategic landscape planning.",
+          "sourceIds": ["source-03", "source-02"]
+        },
+        {
+          "poiId": "st-basils-cathedral",
+          "tier": "warm",
+          "text": "Both are prominent historic monuments tied to state power and major political events.",
+          "sourceIds": ["source-03", "source-14"]
+        },
+        {
+          "poiId": "philippi",
+          "tier": "warm",
+          "text": "Both are archaeological sites whose strategic positions and fortifications shaped regional history.",
+          "sourceIds": ["source-03", "source-11"]
+        },
+        {
+          "poiId": "koh-ker",
+          "tier": "warm",
+          "text": "Both preserve monumental remains associated with former political centers and periods of conflict.",
+          "sourceIds": ["source-03", "source-17"]
+        },
+        {
+          "poiId": "copan",
+          "tier": "warm",
+          "text": "Both document the rise and disruption of powerful historic polities through surviving ruins.",
+          "sourceIds": ["source-03", "source-21"]
+        },
+        {
+          "poiId": "maulbronn-monastery",
+          "tier": "warm",
+          "text": "Both are enclosed historic complexes with substantial walls, gates, and long institutional histories.",
+          "sourceIds": ["source-03", "source-12"]
+        },
+        {
+          "poiId": "convento-de-san-pascual-aranjuez",
+          "tier": "warm",
+          "text": "Both are protected historic complexes built under the influence of powerful ruling institutions.",
+          "sourceIds": ["source-03", "source-09"]
+        },
+        {
+          "poiId": "old-city-of-sana-a",
+          "tier": "warm",
+          "text": "Both feature defensive walls and dense historic architecture preserved as heritage.",
+          "sourceIds": ["source-03", "source-06"]
+        },
+        {
+          "poiId": "buildings-and-architecture-of-bath",
+          "tier": "warm",
+          "text": "Both are heritage properties where historic architecture and urban setting are central to their significance.",
+          "sourceIds": ["source-03", "source-24"]
+        },
+        {
+          "poiId": "historic-town-of-grand-bassam",
+          "tier": "cold",
+          "text": "Both preserve historic built environments that reflect changing political and military histories.",
+          "sourceIds": ["source-03", "source-13"]
+        },
+        {
+          "poiId": "tsodilo",
+          "tier": "cold",
+          "text": "Both are UNESCO cultural sites with long records of human use and distinctive elevated landscapes.",
+          "sourceIds": ["source-03", "source-22"]
+        },
+        {
+          "poiId": "murujuga-national-park",
+          "tier": "cold",
+          "text": "Both protect culturally important landscapes with extensive evidence of earlier human activity.",
+          "sourceIds": ["source-03", "source-20"]
+        },
+        {
+          "poiId": "yellowstone-national-park",
+          "tier": "cold",
+          "text": "Both are major protected attractions with historic significance and managed visitor access.",
+          "sourceIds": ["source-03", "source-23"]
+        },
+        {
+          "poiId": "alejandro-de-humboldt-national-park",
+          "tier": "cold",
+          "text": "Both are protected areas whose distinctive terrain contributes strongly to their significance.",
+          "sourceIds": ["source-03", "source-25"]
+        },
+        {
+          "poiId": "cn-tower",
+          "tier": "cold",
+          "text": "Both are prominent landmarks whose elevated structures provide wide views over surrounding areas.",
+          "sourceIds": ["source-03", "source-15"]
+        },
+        {
+          "poiId": "iate-tenis-clube",
+          "tier": "cold",
+          "text": "Both are architecturally notable visitor sites associated with prominent designed settings.",
+          "sourceIds": ["source-03", "source-04"]
+        },
+        {
+          "poiId": "struve-geodetic-arc",
+          "tier": "cold",
+          "text": "Both involve elevated points used for strategic or surveying purposes and are internationally recognized.",
+          "sourceIds": ["source-03", "source-16"]
+        },
+        {
+          "poiId": "hellevik-lighthouse",
+          "tier": "cold",
+          "text": "Both are elevated structures designed to serve practical functions over surrounding terrain or waters.",
+          "sourceIds": ["source-03", "source-05"]
+        },
+        {
+          "poiId": "storholmen-lighthouse",
+          "tier": "cold",
+          "text": "Both occupy difficult, exposed sites and require specialized access or infrastructure.",
+          "sourceIds": ["source-03", "source-19"]
+        },
+        {
+          "poiId": "noel-kempff-mercado-national-park",
+          "tier": "cold",
+          "text": "Both are protected places whose remote terrain contributes to their character and management challenges.",
+          "sourceIds": ["source-03", "source-07"]
+        },
+        {
+          "poiId": "borobudur-temple-compounds",
+          "tier": "cold",
+          "text": "Both are monumental heritage sites set within distinctive landscapes and visited for their architecture.",
+          "sourceIds": ["source-03", "source-10"]
+        }
+      ]
+    },
+    {
+      "id": "round-4",
+      "targetPoiId": "iate-tenis-clube",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Vista_do_Museu_da_Arte_da_Pampulha_para_a_Lagoa_da_Pampulha_e_o_Iate_Club_de_Pampulha.jpg/1280px-Vista_do_Museu_da_Arte_da_Pampulha_para_a_Lagoa_da_Pampulha_e_o_Iate_Club_de_Pampulha.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Iate Tênis Clube",
+        "attribution": "Carmeladgl · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "Designed by Oscar Niemeyer in the early 1940s, this still-operating recreational club has a boat shelter, a Portinari Room, and gardens by Roberto Burle Marx.",
+        "sourceIds": ["source-04"]
+      },
+      "results": [
+        {
+          "poiId": "iate-tenis-clube",
+          "tier": "correct",
+          "text": "Correct: a Niemeyer-designed recreational club with boat facilities, a Portinari Room, and Burle Marx gardens.",
+          "sourceIds": ["source-04"]
+        },
+        {
+          "poiId": "buildings-and-architecture-of-bath",
+          "tier": "hot",
+          "text": "Both are heritage-recognized architectural ensembles in which buildings, gardens, and urban or landscape setting are important.",
+          "sourceIds": ["source-04", "source-24"]
+        },
+        {
+          "poiId": "convento-de-san-pascual-aranjuez",
+          "tier": "hot",
+          "text": "Both are architecturally significant institutional buildings with notable designers and protected status.",
+          "sourceIds": ["source-04", "source-09"]
+        },
+        {
+          "poiId": "maulbronn-monastery",
+          "tier": "hot",
+          "text": "Both are functioning or reused complexes whose architecture has received international heritage recognition.",
+          "sourceIds": ["source-04", "source-12"]
+        },
+        {
+          "poiId": "historic-town-of-grand-bassam",
+          "tier": "hot",
+          "text": "Both emphasize planned architecture, gardens or open spaces, and distinct functional areas within a heritage setting.",
+          "sourceIds": ["source-04", "source-13"]
+        },
+        {
+          "poiId": "gyeongbokgung",
+          "tier": "warm",
+          "text": "Both are prominent architectural complexes with extensive restoration or preservation and public visitation.",
+          "sourceIds": ["source-04", "source-01"]
+        },
+        {
+          "poiId": "imperial-tombs-of-the-ming-and-qing-dynasties",
+          "tier": "warm",
+          "text": "Both are planned architectural landscapes whose buildings and surrounding setting convey institutional power.",
+          "sourceIds": ["source-04", "source-02"]
+        },
+        {
+          "poiId": "borobudur-temple-compounds",
+          "tier": "warm",
+          "text": "Both comprise architecturally related structures whose spatial relationships are important to their heritage value.",
+          "sourceIds": ["source-04", "source-10"]
+        },
+        {
+          "poiId": "st-basils-cathedral",
+          "tier": "warm",
+          "text": "Both are distinctive architectural landmarks recognized for unusual design and strong visual identity.",
+          "sourceIds": ["source-04", "source-14"]
+        },
+        {
+          "poiId": "agra-fort",
+          "tier": "warm",
+          "text": "Both are major architectural attractions shaped by prominent patrons and preserved for visitors.",
+          "sourceIds": ["source-04", "source-08"]
+        },
+        {
+          "poiId": "old-city-of-sana-a",
+          "tier": "warm",
+          "text": "Both contain distinctive architecture, decorative details, and buildings used for cultural or public purposes.",
+          "sourceIds": ["source-04", "source-06"]
+        },
+        {
+          "poiId": "philippi",
+          "tier": "warm",
+          "text": "Both preserve organized architectural ensembles with buildings serving different civic or religious functions.",
+          "sourceIds": ["source-04", "source-11"]
+        },
+        {
+          "poiId": "koh-ker",
+          "tier": "warm",
+          "text": "Both are composed of multiple related structures whose layout contributes to their cultural significance.",
+          "sourceIds": ["source-04", "source-17"]
+        },
+        {
+          "poiId": "hampi",
+          "tier": "cold",
+          "text": "Both include extensive architectural remains with religious, civic, and open-space components.",
+          "sourceIds": ["source-04", "source-18"]
+        },
+        {
+          "poiId": "copan",
+          "tier": "cold",
+          "text": "Both are heritage sites where surviving architecture, public spaces, and artistic decoration are central.",
+          "sourceIds": ["source-04", "source-21"]
+        },
+        {
+          "poiId": "tsodilo",
+          "tier": "cold",
+          "text": "Both are UNESCO cultural sites with designed or decorated spaces important to local cultural history.",
+          "sourceIds": ["source-04", "source-22"]
+        },
+        {
+          "poiId": "murujuga-national-park",
+          "tier": "cold",
+          "text": "Both combine cultural significance with managed visitor infrastructure and conservation concerns.",
+          "sourceIds": ["source-04", "source-20"]
+        },
+        {
+          "poiId": "yellowstone-national-park",
+          "tier": "cold",
+          "text": "Both are major visitor destinations with designed facilities within a protected setting.",
+          "sourceIds": ["source-04", "source-23"]
+        },
+        {
+          "poiId": "alejandro-de-humboldt-national-park",
+          "tier": "cold",
+          "text": "Both are protected sites where landscape setting and public management are significant.",
+          "sourceIds": ["source-04", "source-25"]
+        },
+        {
+          "poiId": "cn-tower",
+          "tier": "cold",
+          "text": "Both are landmark attractions designed for public recreation and visitation.",
+          "sourceIds": ["source-04", "source-15"]
+        },
+        {
+          "poiId": "struve-geodetic-arc",
+          "tier": "cold",
+          "text": "Both are internationally recognized properties represented by designed or constructed components.",
+          "sourceIds": ["source-04", "source-16"]
+        },
+        {
+          "poiId": "hellevik-lighthouse",
+          "tier": "cold",
+          "text": "Both are purpose-built structures that remain associated with practical use and public interest.",
+          "sourceIds": ["source-04", "source-05"]
+        },
+        {
+          "poiId": "storholmen-lighthouse",
+          "tier": "cold",
+          "text": "Both are specialized structures maintained for ongoing function and reached through particular access arrangements.",
+          "sourceIds": ["source-04", "source-19"]
+        },
+        {
+          "poiId": "beaufort-castle-lebanon",
+          "tier": "cold",
+          "text": "Both are architecturally notable sites whose setting and construction strongly shape visitor experience.",
+          "sourceIds": ["source-04", "source-03"]
+        },
+        {
+          "poiId": "noel-kempff-mercado-national-park",
+          "tier": "cold",
+          "text": "Both are protected attractions requiring management of a distinctive setting and visitor facilities.",
+          "sourceIds": ["source-04", "source-07"]
+        }
+      ]
+    },
+    {
+      "id": "round-5",
+      "targetPoiId": "hellevik-lighthouse",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Hellevik%2C_Haram_-_S-1602U2_068.jpg/1280px-Hellevik%2C_Haram_-_S-1602U2_068.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Hellevik Lighthouse",
+        "attribution": "Unknown authorUnknown author · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Hellevik,_Haram_-_S-1602U2_068.jpg"
+      },
+      "clue": {
+        "text": "First established in 1880, this coastal light was automated in 1973 and replaced by a smaller automated light in 1988; its present tower is six metres tall.",
+        "sourceIds": ["source-05"]
+      },
+      "results": [
+        {
+          "poiId": "hellevik-lighthouse",
+          "tier": "correct",
+          "text": "Correct: a coastal lighthouse established in 1880, automated in 1973, and replaced by a smaller automated light in 1988.",
+          "sourceIds": ["source-05"]
+        },
+        {
+          "poiId": "storholmen-lighthouse",
+          "tier": "hot",
+          "text": "Both are active coastal lighthouses in the same county, with automated lighting and challenging maritime settings.",
+          "sourceIds": ["source-05", "source-19"]
+        },
+        {
+          "poiId": "beaufort-castle-lebanon",
+          "tier": "hot",
+          "text": "Both are historic structures occupying elevated positions where visibility over surrounding terrain or water is important.",
+          "sourceIds": ["source-05", "source-03"]
+        },
+        {
+          "poiId": "cn-tower",
+          "tier": "hot",
+          "text": "Both are tall or elevated structures built to provide an important signal, view, or communication function.",
+          "sourceIds": ["source-05", "source-15"]
+        },
+        {
+          "poiId": "struve-geodetic-arc",
+          "tier": "hot",
+          "text": "Both use fixed points or structures to support precise geographic orientation, measurement, or navigation.",
+          "sourceIds": ["source-05", "source-16"]
+        },
+        {
+          "poiId": "gyeongbokgung",
+          "tier": "warm",
+          "text": "Both are historic attractions with facilities or ceremonies that continue to support public visitation.",
+          "sourceIds": ["source-05", "source-01"]
+        },
+        {
+          "poiId": "imperial-tombs-of-the-ming-and-qing-dynasties",
+          "tier": "warm",
+          "text": "Both preserve historic structures whose forms and functions changed across long periods of maintenance.",
+          "sourceIds": ["source-05", "source-02"]
+        },
+        {
+          "poiId": "iate-tenis-clube",
+          "tier": "warm",
+          "text": "Both are purpose-built facilities that remain associated with an ongoing practical or recreational function.",
+          "sourceIds": ["source-05", "source-04"]
+        },
+        {
+          "poiId": "yellowstone-national-park",
+          "tier": "warm",
+          "text": "Both are managed attractions with infrastructure supporting visitors in distinctive natural settings.",
+          "sourceIds": ["source-05", "source-23"]
+        },
+        {
+          "poiId": "alejandro-de-humboldt-national-park",
+          "tier": "warm",
+          "text": "Both are protected places where difficult terrain and environmental conditions affect access and management.",
+          "sourceIds": ["source-05", "source-25"]
+        },
+        {
+          "poiId": "noel-kempff-mercado-national-park",
+          "tier": "warm",
+          "text": "Both are remote managed sites whose distinctive landscapes influence their practical use and visitor access.",
+          "sourceIds": ["source-05", "source-07"]
+        },
+        {
+          "poiId": "murujuga-national-park",
+          "tier": "warm",
+          "text": "Both require ongoing protection and managed access in exposed coastal environments.",
+          "sourceIds": ["source-05", "source-20"]
+        },
+        {
+          "poiId": "old-city-of-sana-a",
+          "tier": "warm",
+          "text": "Both contain historic structures maintained as attractions and recognized for distinctive built form.",
+          "sourceIds": ["source-05", "source-06"]
+        },
+        {
+          "poiId": "buildings-and-architecture-of-bath",
+          "tier": "cold",
+          "text": "Both are heritage places where historic buildings and their setting are important to visitors.",
+          "sourceIds": ["source-05", "source-24"]
+        },
+        {
+          "poiId": "maulbronn-monastery",
+          "tier": "cold",
+          "text": "Both are preserved historic complexes with buildings that have continued or adapted practical uses.",
+          "sourceIds": ["source-05", "source-12"]
+        },
+        {
+          "poiId": "st-basils-cathedral",
+          "tier": "cold",
+          "text": "Both are distinctive historic structures that have changed institutional use while remaining public landmarks.",
+          "sourceIds": ["source-05", "source-14"]
+        },
+        {
+          "poiId": "convento-de-san-pascual-aranjuez",
+          "tier": "cold",
+          "text": "Both are protected historic buildings whose original institutional functions have been managed over time.",
+          "sourceIds": ["source-05", "source-09"]
+        },
+        {
+          "poiId": "agra-fort",
+          "tier": "cold",
+          "text": "Both are substantial historic structures preserved as visitor attractions after changes in use.",
+          "sourceIds": ["source-05", "source-08"]
+        },
+        {
+          "poiId": "hampi",
+          "tier": "cold",
+          "text": "Both are historic sites whose surviving structures and surrounding terrain attract visitors.",
+          "sourceIds": ["source-05", "source-18"]
+        },
+        {
+          "poiId": "philippi",
+          "tier": "cold",
+          "text": "Both preserve archaeological or architectural remains within landscapes shaped by earlier human activity.",
+          "sourceIds": ["source-05", "source-11"]
+        },
+        {
+          "poiId": "koh-ker",
+          "tier": "cold",
+          "text": "Both are remote heritage attractions where access and preservation influence visitation.",
+          "sourceIds": ["source-05", "source-17"]
+        },
+        {
+          "poiId": "copan",
+          "tier": "cold",
+          "text": "Both are preserved historic attractions whose remains are distributed within a distinctive landscape.",
+          "sourceIds": ["source-05", "source-21"]
+        },
+        {
+          "poiId": "tsodilo",
+          "tier": "cold",
+          "text": "Both are remote heritage destinations with managed access and facilities for visitors.",
+          "sourceIds": ["source-05", "source-22"]
+        },
+        {
+          "poiId": "borobudur-temple-compounds",
+          "tier": "cold",
+          "text": "Both are heritage attractions with distinctive structures and organized visitor access.",
+          "sourceIds": ["source-05", "source-10"]
+        },
+        {
+          "poiId": "historic-town-of-grand-bassam",
+          "tier": "cold",
+          "text": "Both preserve historic places that developed around practical functions and are now visited for heritage value.",
+          "sourceIds": ["source-05", "source-13"]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-01",
+      "title": "Gyeongbokgung",
+      "url": "https://en.wikipedia.org/wiki/Gyeongbokgung",
+      "retrievedAt": "2026-08-14T22:47:29.492Z"
+    },
+    {
+      "id": "source-02",
+      "title": "Imperial Tombs of the Ming and Qing Dynasties",
+      "url": "https://en.wikipedia.org/wiki/Imperial_Tombs_of_the_Ming_and_Qing_Dynasties",
+      "retrievedAt": "2026-08-14T22:49:06.186Z"
+    },
+    {
+      "id": "source-03",
+      "title": "Beaufort Castle, Lebanon",
+      "url": "https://en.wikipedia.org/wiki/Beaufort_Castle,_Lebanon",
+      "retrievedAt": "2026-08-14T22:48:11.857Z"
+    },
+    {
+      "id": "source-04",
+      "title": "Iate Tênis Clube",
+      "url": "https://en.wikipedia.org/wiki/Iate_T%C3%AAnis_Clube",
+      "retrievedAt": "2026-08-14T22:49:08.192Z"
+    },
+    {
+      "id": "source-05",
+      "title": "Hellevik Lighthouse",
+      "url": "https://en.wikipedia.org/wiki/Hellevik_Lighthouse",
+      "retrievedAt": "2026-08-14T22:49:07.870Z"
+    },
+    {
+      "id": "source-06",
+      "title": "Old City of Sanaa",
+      "url": "https://en.wikipedia.org/wiki/Old_City_of_Sanaa",
+      "retrievedAt": "2026-08-14T22:48:17.984Z"
+    },
+    {
+      "id": "source-07",
+      "title": "Noel Kempff Mercado National Park",
+      "url": "https://en.wikipedia.org/wiki/Noel_Kempff_Mercado_National_Park",
+      "retrievedAt": "2026-08-14T22:49:11.115Z"
+    },
+    {
+      "id": "source-08",
+      "title": "Agra Fort",
+      "url": "https://en.wikipedia.org/wiki/Agra_Fort",
+      "retrievedAt": "2026-08-14T22:48:17.083Z"
+    },
+    {
+      "id": "source-09",
+      "title": "Convento de San Pascual, Aranjuez",
+      "url": "https://en.wikipedia.org/wiki/Convento_de_San_Pascual,_Aranjuez",
+      "retrievedAt": "2026-08-14T22:47:33.588Z"
+    },
+    {
+      "id": "source-10",
+      "title": "Borobudur Temple Compounds",
+      "url": "https://en.wikipedia.org/wiki/Borobudur_Temple_Compounds",
+      "retrievedAt": "2026-08-14T22:48:19.566Z"
+    },
+    {
+      "id": "source-11",
+      "title": "Philippi",
+      "url": "https://en.wikipedia.org/wiki/Philippi",
+      "retrievedAt": "2026-08-14T22:47:50.740Z"
+    },
+    {
+      "id": "source-12",
+      "title": "Maulbronn Monastery",
+      "url": "https://en.wikipedia.org/wiki/Maulbronn_Monastery",
+      "retrievedAt": "2026-08-14T22:47:35.661Z"
+    },
+    {
+      "id": "source-13",
+      "title": "Historic Town of Grand-Bassam",
+      "url": "https://en.wikipedia.org/wiki/Historic_Town_of_Grand-Bassam",
+      "retrievedAt": "2026-08-14T22:48:05.892Z"
+    },
+    {
+      "id": "source-14",
+      "title": "Saint Basil's Cathedral",
+      "url": "https://en.wikipedia.org/wiki/Saint_Basil%27s_Cathedral",
+      "retrievedAt": "2026-08-14T22:47:30.868Z"
+    },
+    {
+      "id": "source-15",
+      "title": "CN Tower",
+      "url": "https://en.wikipedia.org/wiki/CN_Tower",
+      "retrievedAt": "2026-08-14T22:47:26.363Z"
+    },
+    {
+      "id": "source-16",
+      "title": "Struve Geodetic Arc",
+      "url": "https://en.wikipedia.org/wiki/Struve_Geodetic_Arc",
+      "retrievedAt": "2026-08-14T22:48:08.431Z"
+    },
+    {
+      "id": "source-17",
+      "title": "Koh Ker",
+      "url": "https://en.wikipedia.org/wiki/Koh_Ker",
+      "retrievedAt": "2026-08-14T22:49:10.624Z"
+    },
+    {
+      "id": "source-18",
+      "title": "Hampi",
+      "url": "https://en.wikipedia.org/wiki/Hampi",
+      "retrievedAt": "2026-08-14T22:49:12.227Z"
+    },
+    {
+      "id": "source-19",
+      "title": "Storholmen Lighthouse",
+      "url": "https://en.wikipedia.org/wiki/Storholmen_Lighthouse",
+      "retrievedAt": "2026-08-14T22:47:36.245Z"
+    },
+    {
+      "id": "source-20",
+      "title": "Murujuga National Park",
+      "url": "https://en.wikipedia.org/wiki/Murujuga_National_Park",
+      "retrievedAt": "2026-08-14T22:48:19.927Z"
+    },
+    {
+      "id": "source-21",
+      "title": "Copán",
+      "url": "https://en.wikipedia.org/wiki/Cop%C3%A1n",
+      "retrievedAt": "2026-08-14T22:49:08.600Z"
+    },
+    {
+      "id": "source-22",
+      "title": "Tsodilo",
+      "url": "https://en.wikipedia.org/wiki/Tsodilo",
+      "retrievedAt": "2026-08-14T22:48:08.580Z"
+    },
+    {
+      "id": "source-23",
+      "title": "Yellowstone National Park",
+      "url": "https://en.wikipedia.org/wiki/Yellowstone_National_Park",
+      "retrievedAt": "2026-08-14T22:49:02.823Z"
+    },
+    {
+      "id": "source-24",
+      "title": "Buildings and architecture of Bath",
+      "url": "https://en.wikipedia.org/wiki/Buildings_and_architecture_of_Bath",
+      "retrievedAt": "2026-08-14T22:48:03.440Z"
+    },
+    {
+      "id": "source-25",
+      "title": "Alejandro de Humboldt National Park",
+      "url": "https://en.wikipedia.org/wiki/Alejandro_de_Humboldt_National_Park",
+      "retrievedAt": "2026-08-14T22:49:10.472Z"
+    }
+  ]
+}

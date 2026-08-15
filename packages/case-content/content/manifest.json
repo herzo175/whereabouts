@@ -3,8 +3,8 @@
   "cases": {
     "2026-08-15": {
       "caseNumber": 20680,
-      "revision": 2,
-      "file": "./cases/2026-08-15/v2.json"
+      "revision": 3,
+      "file": "./cases/2026-08-15/v3.json"
     }
   }
 }
