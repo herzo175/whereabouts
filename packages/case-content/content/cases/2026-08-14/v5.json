@@ -1,0 +1,822 @@
+{
+  "schemaVersion": 1,
+  "publicationDate": "2026-08-14",
+  "revision": 5,
+  "caseNumber": 20679,
+  "target": {
+    "poiId": "convent-of-the-barefoot-trinitarians",
+    "destinationName": "Convent of the Barefoot Trinitarians"
+  },
+  "pois": [
+    {
+      "id": "aflaj-irrigation-systems-of-oman",
+      "name": "Aflaj Irrigation Systems of Oman",
+      "city": "Oman",
+      "country": "Oman",
+      "latitude": 22.998889,
+      "longitude": 57.536056,
+      "wikipediaTitle": "Aflaj Irrigation Systems of Oman",
+      "blurb": "The Aflaj Irrigation Systems of Oman are ancient water harvesting, transportation, storage and distribution systems from AD 500 located in the Omani regions of Dakhiliyah, Sharqiyah and Batinah.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/FalajDaris.JPG/1280px-FalajDaris.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Aflaj Irrigation Systems of Oman",
+        "attribution": "Paolotacchi · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "keoladeo-national-park",
+      "name": "Keoladeo National Park",
+      "city": "Bharatpur district",
+      "country": "India",
+      "latitude": 27.166667,
+      "longitude": 77.516667,
+      "wikipediaTitle": "Keoladeo National Park",
+      "blurb": "Keoladeo National Park, or Keoladeo Ghana National Park, is a national park in Rajasthan, India."
+    },
+    {
+      "id": "palmyra",
+      "name": "Palmyra",
+      "city": "Tadmur",
+      "country": "Syria",
+      "latitude": 34.550381,
+      "longitude": 38.269791,
+      "wikipediaTitle": "Palmyra",
+      "blurb": "Palmyra is an ancient city in central Syria. It is located in the eastern part of the Levant, and archaeological finds date back to the Neolithic period, and documents first mention the city in the early second millennium BCE.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Palmyra_03.jpg/1280px-Palmyra_03.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Palmyra",
+        "attribution": "Bernard Gagnon · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "caral",
+      "name": "Caral",
+      "city": "Supe District",
+      "country": "Peru",
+      "latitude": -10.893611111,
+      "longitude": -77.520277777,
+      "wikipediaTitle": "Caral",
+      "blurb": "The Sacred City of Caral-Supe, or simply Caral, is an archaeological site in Peru where the remains of the main city of the Caral civilization are found.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Mayor_Pyramid_and_circular_enclosure._Caral%2C_Peru.jpg/1280px-Mayor_Pyramid_and_circular_enclosure._Caral%2C_Peru.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Caral",
+        "attribution": "Jon Gudorf Photography · CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    },
+    {
+      "id": "bia-owieza-forest",
+      "name": "Białowieża Forest",
+      "city": "Podlaskie Voivodeship",
+      "country": "Belarus",
+      "latitude": 52.75,
+      "longitude": 23.95,
+      "wikipediaTitle": "Białowieża Forest",
+      "blurb": "Białowieża Forest is a large forest complex and World Heritage Area straddling the border between Poland and Belarus. It is one of the last and the largest remaining parts of the immense primeval forest that once stretched across the European Plain.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bialowieza_National_Park_in_Poland0029.JPG/1280px-Bialowieza_National_Park_in_Poland0029.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Białowieża Forest",
+        "attribution": "Jacek Karczmarz · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "sviyazhsk-assumption-monastery",
+      "name": "Sviyazhsk Assumption Monastery",
+      "city": "Sviyazhsk",
+      "country": "Russia",
+      "latitude": 55.770124,
+      "longitude": 48.652451,
+      "wikipediaTitle": "Sviyazhsk Assumption Monastery",
+      "blurb": "The Sviyazhsk Assumption Monastery (Russian: Свияжский Успенский монастырь) in Sviyazhsk, Republic of Tatarstan, Russia is a male Russian Orthodox monastery, included in UNESCO World Heritage list.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/%D0%A1%D0%B2%D0%B8%D1%8F%D0%B6%D1%81%D0%BA_%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%BE-%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D1%87%D0%BD%D1%8B%D0%B9_%D0%BC%D1%83%D0%B6%D1%81%D0%BA%D0%BE%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C_%D0%BA%D0%BE%D0%BF%D1%82%D0%B5%D1%80.jpg/1280px-%D0%A1%D0%B2%D0%B8%D1%8F%D0%B6%D1%81%D0%BA_%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%BE-%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D1%87%D0%BD%D1%8B%D0%B9_%D0%BC%D1%83%D0%B6%D1%81%D0%BA%D0%BE%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C_%D0%BA%D0%BE%D0%BF%D1%82%D0%B5%D1%80.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Sviyazhsk Assumption Monastery",
+        "attribution": "Шелковников Евгений Анатольевич · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "convent-of-the-barefoot-trinitarians",
+      "name": "Convent of the Barefoot Trinitarians",
+      "city": "Cortes",
+      "country": "Spain",
+      "latitude": 40.413674,
+      "longitude": -3.697037,
+      "wikipediaTitle": "Convent of the Barefoot Trinitarians",
+      "blurb": "The Convent of the Barefoot Trinitarians (Spanish: Convento de las Monjas Trinitarias Descalzas) is a convent located in Madrid, Spain.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Trinitmad.jpg/1280px-Trinitmad.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Convent of the Barefoot Trinitarians",
+        "attribution": "Bocachete · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Trinitmad.jpg"
+      }
+    },
+    {
+      "id": "goguryeo-tombs",
+      "name": "Goguryeo tombs",
+      "city": "South Hwanghae Province",
+      "country": "North Korea",
+      "latitude": 38.863055555,
+      "longitude": 125.415,
+      "wikipediaTitle": "Goguryeo tombs",
+      "blurb": "Goguryeo tombs, officially designated as the Complex of Koguryo Tombs (Korean: 고구려 고분군), are tombs in North Korea. In July 2004, they became the first UNESCO World Heritage site in the country.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Tomb_of_King_Tongmyong.jpg/1280px-Tomb_of_King_Tongmyong.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Goguryeo tombs",
+        "attribution": "Sgnpkd · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "omo-river",
+      "name": "Omo River",
+      "city": "Southern Nations, Nationalities, and Peoples' Region",
+      "country": "Ethiopia",
+      "latitude": 4.4969,
+      "longitude": 36.0138,
+      "wikipediaTitle": "Omo River",
+      "blurb": "The Omo River (Amharic: ኦሞ ወንዝ, romanized: Omo Wenz; also called Omo-Bottego) in southern Ethiopia is the largest Ethiopian river outside the Nile Basin.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Omo_River_02.jpg/1280px-Omo_River_02.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Omo River",
+        "attribution": "Bernard Gagnon · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "rapa-nui-national-park",
+      "name": "Rapa Nui National Park",
+      "city": "Isla de Pascua Province",
+      "country": "Chile",
+      "latitude": -27.072877,
+      "longitude": -109.348579,
+      "wikipediaTitle": "Rapa Nui National Park",
+      "blurb": "Rapa Nui National Park (Spanish: Parque nacional Rapa Nui) is a national park and UNESCO World Heritage Site located on Easter Island, Chile.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Ahu-Akivi-1.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Rapa Nui National Park",
+        "attribution": "Ian Sewell · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    },
+    {
+      "id": "hendrik-and-marri-oskam-house",
+      "name": "Hendrik and Marri Oskam House",
+      "city": "Edina",
+      "country": "United States",
+      "latitude": 44.8783,
+      "longitude": -93.3893,
+      "wikipediaTitle": "Hendrik and Marri Oskam House",
+      "blurb": "The Hendrik and Marri Oskam House is a single-family residence located at 6901 Dakota Trail in Edina, Minnesota, United States.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/2025-1009_Hendrik_and_Marrigje_%28Marri%29_Oskam_House_-_southeast_elevation.jpg/1280px-2025-1009_Hendrik_and_Marrigje_%28Marri%29_Oskam_House_-_southeast_elevation.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Hendrik and Marri Oskam House",
+        "attribution": "Bobak Ha'Eri · CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      }
+    },
+    {
+      "id": "alt-tempelhof-berlin-u-bahn",
+      "name": "Alt-Tempelhof (Berlin U-Bahn)",
+      "city": "Tempelhof-Schöneberg",
+      "country": "Germany",
+      "latitude": 52.465952777,
+      "longitude": 13.385897222,
+      "wikipediaTitle": "Alt-Tempelhof (Berlin U-Bahn)",
+      "blurb": "Alt-Tempelhof (Old Tempelhof) is a Berlin U-Bahn station on the U6. It is located under Tempelhofer Damm in the centre of the former village of Tempelhof, now a Berlin district within the borough of Tempelhof-Schöneberg.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/U-Bahn_Berlin_Alt-Tempelhof.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Alt-Tempelhof (Berlin U-Bahn)",
+        "attribution": "Jcornelius (talk) · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    },
+    {
+      "id": "kaeng-krachan-forest-complex",
+      "name": "Kaeng Krachan Forest Complex",
+      "city": "Thailand",
+      "country": "Thailand",
+      "latitude": 12.865666666,
+      "longitude": 99.400166666,
+      "wikipediaTitle": "Kaeng Krachan Forest Complex",
+      "blurb": "Kaeng Krachan Forest Complex (Thai: กลุ่มป่าแก่งกระจาน) is the inscribed name of a UNESCO World Heritage Site in Thailand.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Kaeng_Krachan.jpg/1280px-Kaeng_Krachan.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Kaeng Krachan Forest Complex",
+        "attribution": "JJ Harrison (https://www.jjharrison.com.au/) · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "bora-bora",
+      "name": "Bora Bora",
+      "city": "Vaitape",
+      "country": "French Polynesia",
+      "latitude": -16.5004,
+      "longitude": -151.7415,
+      "wikipediaTitle": "Bora Bora",
+      "blurb": "Bora Bora (French: Bora-Bora; Tahitian: Pora Pora) is a French island group in the Leeward Islands, comprising the western part of the Society Islands of French Polynesia, an overseas collectivity of the French Republic in the South Pacific.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Bora_Bora_ISS006.jpg/1280px-Bora_Bora_ISS006.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Bora Bora",
+        "attribution": "NASA Johnson Space Center · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Bora_Bora_ISS006.jpg"
+      }
+    },
+    {
+      "id": "skogskyrkogarden",
+      "name": "Skogskyrkogården",
+      "city": "Stockholm Municipality",
+      "country": "Sweden",
+      "latitude": 59.275555555,
+      "longitude": 18.099444444,
+      "wikipediaTitle": "Skogskyrkogården",
+      "blurb": "Skogskyrkogården ([ˈskûːɡsɕʏrkʊˌɡoːɖɛn]; Swedish for 'The Woodland Cemetery') is a cemetery located in the Gamla Enskede district south of central Stockholm, Sweden.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Skogskyrk_Grav_2006.jpg/1280px-Skogskyrk_Grav_2006.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Skogskyrkogården",
+        "attribution": "Holger Ellgaard · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "ingvellir",
+      "name": "Þingvellir",
+      "city": "Bláskógabyggð",
+      "country": "Iceland",
+      "latitude": 64.258055555,
+      "longitude": -21.125,
+      "wikipediaTitle": "Þingvellir",
+      "blurb": "Þingvellir (Icelandic: [ˈθiŋkˌvɛtlɪr̥] , anglicised as Thingvellir) was the site of the Alþing, the annual parliament of Iceland from the year 930 until the last session held at Þingvellir in 1798.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/%C3%9Eingvellir_from_the_information_centre.JPG/1280px-%C3%9Eingvellir_from_the_information_centre.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Þingvellir",
+        "attribution": "Ivan Sabljak · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "church-of-santa-engracia-de-zaragoza",
+      "name": "Church of Santa Engracia de Zaragoza",
+      "city": "Zaragoza",
+      "country": "Spain",
+      "latitude": 41.64888889,
+      "longitude": -0.88277778,
+      "wikipediaTitle": "Church of Santa Engracia de Zaragoza",
+      "blurb": "The Church of Santa Engracia de Zaragoza is a basilica church in Zaragoza, Spain. It was built on the spot where Saint Engratia and her companions were said to have been martyred in 303 AD.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Portada_Iglesia_Santa_Engracia_Zaragoza_5.JPG/1280px-Portada_Iglesia_Santa_Engracia_Zaragoza_5.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Church of Santa Engracia de Zaragoza",
+        "attribution": "Ajzh2074 · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "world-heritage-site-no-779",
+      "name": "World Heritage site No. 779",
+      "city": "Leshan",
+      "country": "People's Republic of China",
+      "latitude": 29.5449,
+      "longitude": 103.76925,
+      "wikipediaTitle": "World Heritage site No. 779",
+      "blurb": "The World Heritage Site (WHS) No. 779, Mount Emei Scenic Area, including Leshan Giant Buddha Scenic Area, includes: WHS No. 779-001: Mount Emei Scenic Area WHS No. 779-002: Leshan Giant Buddha Scenic Area,"
+    },
+    {
+      "id": "rio-platano-biosphere-reserve",
+      "name": "Río Plátano Biosphere Reserve",
+      "city": "Mosquitia",
+      "country": "Honduras",
+      "latitude": 15.25,
+      "longitude": -84.73,
+      "wikipediaTitle": "Río Plátano Biosphere Reserve",
+      "blurb": "The Río Plátano Biosphere Reserve is a protected area in the Gracias a Dios department region on the Caribbean coast of Honduras.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Cerro_Chachahuate.jpg/1280px-Cerro_Chachahuate.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Río Plátano Biosphere Reserve",
+        "attribution": "Marcio Martínez · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "marrakesh-medina",
+      "name": "Medina of Marrakesh",
+      "city": "Marrakesh",
+      "country": "Morocco",
+      "latitude": 31.6295,
+      "longitude": -7.9811,
+      "wikipediaTitle": "Medina of Marrakesh",
+      "blurb": "Marrakesh or Marrakech is the fourth-largest city in Morocco. It is one of the four imperial cities of Morocco and is the capital of the Marrakesh-Safi region.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Pavillon_Menarag%C3%A4rten.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Marrakesh",
+        "attribution": "Acp · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    },
+    {
+      "id": "kakadu-national-park",
+      "name": "Kakadu National Park",
+      "city": "Northern Territory",
+      "country": "Australia",
+      "latitude": -13.005471,
+      "longitude": 132.519512,
+      "wikipediaTitle": "Kakadu National Park",
+      "blurb": "Kakadu National Park is a protected area in the Northern Territory of Australia, 171 km (106 mi) southeast of Darwin. It is a World Heritage Site.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Kakadu_2431.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Kakadu National Park",
+        "attribution": "Tourism NT · Attribution",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Kakadu_2431.jpg"
+      }
+    },
+    {
+      "id": "borobudur",
+      "name": "Borobudur",
+      "city": "Magelang",
+      "country": "Indonesia",
+      "latitude": -7.6079,
+      "longitude": 110.2038,
+      "wikipediaTitle": "Borobudur",
+      "blurb": "Borobudur, also transcribed Barabudur (Indonesian: Candi Borobudur, Javanese: ꦕꦤ꧀ꦝꦶꦧꦫꦧꦸꦝꦸꦂ, romanized: Candhi Barabudhur), is a 9th-century Mahayana Buddhist temple in Magelang Regency, near the town of Muntilan, northwest of the city of Yogyakarta, in Central Java, Indonesia.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Pradaksina.jpg/1280px-Pradaksina.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Borobudur",
+        "attribution": "Heri nugroho · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "olympic-national-park",
+      "name": "Olympic National Park",
+      "city": "Clallam County",
+      "country": "United States",
+      "latitude": 47.7,
+      "longitude": -123.75,
+      "wikipediaTitle": "Olympic National Park",
+      "blurb": "Olympic National Park is a national park of the United States located in Washington, on the Olympic Peninsula. The park has four regions: the Pacific coastline, the west-side temperate rainforest, alpine areas, and the forests of the drier east side.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Cedar_Creek_Abbey_Island_Ruby_Beach.jpg/1280px-Cedar_Creek_Abbey_Island_Ruby_Beach.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Olympic National Park",
+        "attribution": "Adbar · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "museum-island",
+      "name": "Museum Island",
+      "city": "Bezirk Mitte",
+      "country": "Germany",
+      "latitude": 52.521388888,
+      "longitude": 13.395555555,
+      "wikipediaTitle": "Museum Island",
+      "blurb": "The Museum Island (German: Museumsinsel, pronounced [muˈzeːʊmsˌɪnzl̩] ) is a museum complex on the northern part of Spree Island in the historic heart of Berlin, Germany.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Berlin_Museumsinsel_Fernsehturm.jpg/1280px-Berlin_Museumsinsel_Fernsehturm.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Museum Island",
+        "attribution": "Thomas Wolf, www.foto-tw.de · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "mount-wutai",
+      "name": "Mount Wutai",
+      "city": "Xinzhou",
+      "country": "People's Republic of China",
+      "latitude": 39.081388888,
+      "longitude": 113.566944444,
+      "wikipediaTitle": "Mount Wutai",
+      "blurb": "Mount Wutai, also known by its Chinese name Wutaishan and as Mount Qingliang, is a sacred Buddhist site at the headwaters of the Qingshui in Shanxi Province, China.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Mount_Wutai.JPG/1280px-Mount_Wutai.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Mount Wutai",
+        "attribution": "Zcm11 · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "clues": [
+    {
+      "id": "clue-1",
+      "text": "A place whose public meaning has been shaped by devotion, memory, and later preservation.",
+      "sourceIds": [
+        "source-01"
+      ]
+    },
+    {
+      "id": "clue-2",
+      "text": "Its role is tied to a religious community, but its significance extends beyond ordinary institutional use.",
+      "sourceIds": [
+        "source-01"
+      ]
+    },
+    {
+      "id": "clue-3",
+      "text": "A major cultural figure was associated with the site through burial, linking religious space with literary memory.",
+      "sourceIds": [
+        "source-01"
+      ]
+    },
+    {
+      "id": "clue-4",
+      "text": "Rebuilding altered the custody of that burial, showing how restoration can disrupt the historical record.",
+      "sourceIds": [
+        "source-01"
+      ]
+    },
+    {
+      "id": "clue-5",
+      "text": "The associated remains were moved temporarily during reconstruction and were not immediately recovered.",
+      "sourceIds": [
+        "source-01"
+      ]
+    },
+    {
+      "id": "clue-6",
+      "text": "Forensic scientists eventually located the long-missing remains in 2015.",
+      "sourceIds": [
+        "source-01"
+      ]
+    }
+  ],
+  "contextualResponses": [
+    {
+      "poiId": "rapa-nui-national-park",
+      "tier": "cold",
+      "text": "Both are heritage places whose present meaning depends on preserving a culturally important past; the park protects ancestral patrimony, while the target preserves a religious burial association.",
+      "sourceIds": [
+        "source-01",
+        "source-02"
+      ]
+    },
+    {
+      "poiId": "olympic-national-park",
+      "tier": "cold",
+      "text": "Both have preservation as a public purpose, but this park conserves wilderness and ecosystems rather than a convent and commemorative burial.",
+      "sourceIds": [
+        "source-01",
+        "source-03"
+      ]
+    },
+    {
+      "poiId": "hendrik-and-marri-oskam-house",
+      "tier": "cold",
+      "text": "Both are preserved for historical significance, but the house is a modern residence associated with an architect, whereas the target is a religious site linked to burial.",
+      "sourceIds": [
+        "source-01",
+        "source-04"
+      ]
+    },
+    {
+      "poiId": "alt-tempelhof-berlin-u-bahn",
+      "tier": "cold",
+      "text": "Both reflect changing historical use and later preservation, but this site remains transport infrastructure; the target is a convent with a burial history.",
+      "sourceIds": [
+        "source-01",
+        "source-05"
+      ]
+    },
+    {
+      "poiId": "museum-island",
+      "tier": "warm",
+      "text": "Both connect architecture with cultural memory and institutional history. Museum Island developed as a museum complex, while the target retained religious and commemorative significance.",
+      "sourceIds": [
+        "source-01",
+        "source-06"
+      ]
+    },
+    {
+      "poiId": "caral",
+      "tier": "warm",
+      "text": "Both are places where later visitors interpret an older cultural record. Caral preserves an ancient ceremonial and administrative center; the target preserves a convent and burial association.",
+      "sourceIds": [
+        "source-01",
+        "source-07"
+      ]
+    },
+    {
+      "poiId": "mount-wutai",
+      "tier": "hot",
+      "text": "Both are religious heritage places whose importance extends beyond a single building: Mount Wutai centers on monasteries and pilgrimage, while the target combines convent life with a notable burial.",
+      "sourceIds": [
+        "source-01",
+        "source-08"
+      ]
+    },
+    {
+      "poiId": "bia-owieza-forest",
+      "tier": "cold",
+      "text": "Both are protected heritage sites, but the forest is valued for primeval woodland and biodiversity, not religious community or burial memory.",
+      "sourceIds": [
+        "source-01",
+        "source-09"
+      ]
+    },
+    {
+      "poiId": "marrakesh-medina",
+      "tier": "warm",
+      "text": "Both preserve historic religious and cultural settings within a larger urban heritage context. The medina contains a mosque and historic sites; the target is a convent tied to burial memory.",
+      "sourceIds": [
+        "source-01",
+        "source-10"
+      ]
+    },
+    {
+      "poiId": "palmyra",
+      "tier": "warm",
+      "text": "Both connect built heritage with burial and cultural memory. Palmyra has distinctive tower tombs and mixed traditions, while the target is a religious site associated with a recovered burial.",
+      "sourceIds": [
+        "source-01",
+        "source-11"
+      ]
+    },
+    {
+      "poiId": "borobudur",
+      "tier": "hot",
+      "text": "Both are religious places whose later significance includes pilgrimage, preservation, and cultural memory. Borobudur is a Buddhist shrine; the target is a convent associated with a prominent burial.",
+      "sourceIds": [
+        "source-01",
+        "source-12"
+      ]
+    },
+    {
+      "poiId": "sviyazhsk-assumption-monastery",
+      "tier": "hot",
+      "text": "Both are monasterial or conventual religious institutions preserved for cultural importance. This monastery also served educational functions, while the target is linked to a major literary burial.",
+      "sourceIds": [
+        "source-01",
+        "source-13"
+      ]
+    },
+    {
+      "poiId": "bora-bora",
+      "tier": "cold",
+      "text": "Both have acquired public meaning beyond their original local roles, but this island is chiefly a tourism and wartime-base setting, unlike the target's religious and commemorative history.",
+      "sourceIds": [
+        "source-01",
+        "source-14"
+      ]
+    },
+    {
+      "poiId": "skogskyrkogarden",
+      "tier": "hot",
+      "text": "Both directly connect architecture with death and remembrance. This is a purpose-designed cemetery, while the target is a convent where a writer was buried and whose remains were later found.",
+      "sourceIds": [
+        "source-01",
+        "source-15"
+      ]
+    },
+    {
+      "poiId": "kaeng-krachan-forest-complex",
+      "tier": "cold",
+      "text": "Both involve contested questions of preservation and cultural meaning, but this complex protects forests and biodiversity; the target preserves religious and burial memory.",
+      "sourceIds": [
+        "source-01",
+        "source-16"
+      ]
+    },
+    {
+      "poiId": "aflaj-irrigation-systems-of-oman",
+      "tier": "cold",
+      "text": "Both are heritage subjects requiring long-term preservation, but the aflaj are engineered water-distribution systems, not a religious burial site.",
+      "sourceIds": [
+        "source-01",
+        "source-17"
+      ]
+    },
+    {
+      "poiId": "church-of-santa-engracia-de-zaragoza",
+      "tier": "hot",
+      "text": "Both are Christian religious buildings associated with burial or relics and altered by rebuilding. Santa Engracia preserves martyr-related remains and a crypt; the target preserves a writer's burial association.",
+      "sourceIds": [
+        "source-01",
+        "source-18"
+      ]
+    },
+    {
+      "poiId": "goguryeo-tombs",
+      "tier": "hot",
+      "text": "Both center on burial and the survival of historical evidence. These tombs preserve royal funerary customs and murals, while the target's burial history includes remains temporarily lost and later identified.",
+      "sourceIds": [
+        "source-01",
+        "source-19"
+      ]
+    },
+    {
+      "poiId": "world-heritage-site-no-779",
+      "tier": "warm",
+      "text": "Both are heritage designations covering culturally significant places, but this record identifies a scenic mountain area and a giant Buddha site rather than a convent burial.",
+      "sourceIds": [
+        "source-01",
+        "source-20"
+      ]
+    },
+    {
+      "poiId": "kakadu-national-park",
+      "tier": "warm",
+      "text": "Both preserve layered cultural heritage under modern protection. Kakadu combines Aboriginal occupation and rock art with conservation, while the target combines religious use and commemorative burial.",
+      "sourceIds": [
+        "source-01",
+        "source-21"
+      ]
+    },
+    {
+      "poiId": "omo-river",
+      "tier": "warm",
+      "text": "Both preserve evidence used to reconstruct the past, but the river's significance is archaeological and fossil-based, whereas the target's key evidence concerns a historic burial.",
+      "sourceIds": [
+        "source-01",
+        "source-22"
+      ]
+    },
+    {
+      "poiId": "ingvellir",
+      "tier": "warm",
+      "text": "Both are protected places whose present public meaning rests on historical memory. Þingvellir commemorates an assembly tradition; the target commemorates religious use and a literary burial.",
+      "sourceIds": [
+        "source-01",
+        "source-23"
+      ]
+    },
+    {
+      "poiId": "keoladeo-national-park",
+      "tier": "cold",
+      "text": "Both changed from an earlier use into protected heritage. Keoladeo shifted from a duck-shooting reserve to a national park, while the target remained tied to religious and commemorative history.",
+      "sourceIds": [
+        "source-01",
+        "source-24"
+      ]
+    },
+    {
+      "poiId": "rio-platano-biosphere-reserve",
+      "tier": "warm",
+      "text": "Both preserve places where cultural history and physical remains matter. Río Plátano contains archaeological sites and ruined settlements; the target preserves a convent and a documented burial history.",
+      "sourceIds": [
+        "source-01",
+        "source-25"
+      ]
+    }
+  ],
+  "reveal": {
+    "title": "Convent of the Barefoot Trinitarians",
+    "summary": "The Convent of the Barefoot Trinitarians is a convent in Madrid, Spain. Miguel de Cervantes was buried there in 1616; his remains were moved during reconstruction in 1673, lost, and identified by forensic scientists in 2015.",
+    "clueExplanation": "Clue 1 encoded the site's combined devotional and commemorative public meaning. Clue 2 pointed to its continuing connection with a religious community while signaling significance beyond routine institutional use. Clue 3 introduced the decisive historical relationship: the burial of a major literary figure. Clue 4 encoded the disruption caused by rebuilding, which altered custody of the burial. Clue 5 narrowed the field to remains temporarily transferred and then lost. Clue 6 supplied the final confirmation context: forensic scientists identified the missing remains in 2015.",
+    "sourceIds": [
+      "source-01"
+    ]
+  },
+  "sources": [
+    {
+      "id": "source-01",
+      "title": "Convent of the Barefoot Trinitarians",
+      "url": "https://en.wikipedia.org/wiki/Convent_of_the_Barefoot_Trinitarians",
+      "retrievedAt": "2026-08-14T22:47:52.137Z"
+    },
+    {
+      "id": "source-02",
+      "title": "Rapa Nui National Park",
+      "url": "https://en.wikipedia.org/wiki/Rapa_Nui_National_Park",
+      "retrievedAt": "2026-08-14T22:49:11.918Z"
+    },
+    {
+      "id": "source-03",
+      "title": "Olympic National Park",
+      "url": "https://en.wikipedia.org/wiki/Olympic_National_Park",
+      "retrievedAt": "2026-08-14T22:49:05.139Z"
+    },
+    {
+      "id": "source-04",
+      "title": "Hendrik and Marri Oskam House",
+      "url": "https://en.wikipedia.org/wiki/Hendrik_and_Marri_Oskam_House",
+      "retrievedAt": "2026-08-14T22:49:05.387Z"
+    },
+    {
+      "id": "source-05",
+      "title": "Alt-Tempelhof (Berlin U-Bahn)",
+      "url": "https://en.wikipedia.org/wiki/Alt-Tempelhof_(Berlin_U-Bahn)",
+      "retrievedAt": "2026-08-14T22:48:00.775Z"
+    },
+    {
+      "id": "source-06",
+      "title": "Museum Island",
+      "url": "https://en.wikipedia.org/wiki/Museum_Island",
+      "retrievedAt": "2026-08-14T22:47:50.476Z"
+    },
+    {
+      "id": "source-07",
+      "title": "Caral",
+      "url": "https://en.wikipedia.org/wiki/Caral",
+      "retrievedAt": "2026-08-14T22:47:51.862Z"
+    },
+    {
+      "id": "source-08",
+      "title": "Mount Wutai",
+      "url": "https://en.wikipedia.org/wiki/Mount_Wutai",
+      "retrievedAt": "2026-08-14T22:47:38.117Z"
+    },
+    {
+      "id": "source-09",
+      "title": "Białowieża Forest",
+      "url": "https://en.wikipedia.org/wiki/Bia%C5%82owie%C5%BCa_Forest",
+      "retrievedAt": "2026-08-14T22:49:04.157Z"
+    },
+    {
+      "id": "source-10",
+      "title": "Marrakesh",
+      "url": "https://en.wikipedia.org/wiki/Marrakesh",
+      "retrievedAt": "2026-08-14T22:47:31.871Z"
+    },
+    {
+      "id": "source-11",
+      "title": "Palmyra",
+      "url": "https://en.wikipedia.org/wiki/Palmyra",
+      "retrievedAt": "2026-08-14T22:48:04.289Z"
+    },
+    {
+      "id": "source-12",
+      "title": "Borobudur",
+      "url": "https://en.wikipedia.org/wiki/Borobudur",
+      "retrievedAt": "2026-08-14T22:47:29.965Z"
+    },
+    {
+      "id": "source-13",
+      "title": "Sviyazhsk Assumption Monastery",
+      "url": "https://en.wikipedia.org/wiki/Sviyazhsk_Assumption_Monastery",
+      "retrievedAt": "2026-08-14T22:48:20.161Z"
+    },
+    {
+      "id": "source-14",
+      "title": "Bora Bora",
+      "url": "https://en.wikipedia.org/wiki/Bora_Bora",
+      "retrievedAt": "2026-08-14T22:47:30.778Z"
+    },
+    {
+      "id": "source-15",
+      "title": "Skogskyrkogården",
+      "url": "https://en.wikipedia.org/wiki/Skogskyrkog%C3%A5rden",
+      "retrievedAt": "2026-08-14T22:47:39.050Z"
+    },
+    {
+      "id": "source-16",
+      "title": "Kaeng Krachan Forest Complex",
+      "url": "https://en.wikipedia.org/wiki/Kaeng_Krachan_Forest_Complex",
+      "retrievedAt": "2026-08-14T22:49:09.098Z"
+    },
+    {
+      "id": "source-17",
+      "title": "Aflaj Irrigation Systems of Oman",
+      "url": "https://en.wikipedia.org/wiki/Aflaj_Irrigation_Systems_of_Oman",
+      "retrievedAt": "2026-08-14T22:48:11.984Z"
+    },
+    {
+      "id": "source-18",
+      "title": "Church of Santa Engracia de Zaragoza",
+      "url": "https://en.wikipedia.org/wiki/Church_of_Santa_Engracia_de_Zaragoza",
+      "retrievedAt": "2026-08-14T22:47:38.676Z"
+    },
+    {
+      "id": "source-19",
+      "title": "Goguryeo tombs",
+      "url": "https://en.wikipedia.org/wiki/Goguryeo_tombs",
+      "retrievedAt": "2026-08-14T22:49:01.140Z"
+    },
+    {
+      "id": "source-20",
+      "title": "World Heritage site No. 779",
+      "url": "https://en.wikipedia.org/wiki/World_Heritage_site_No._779",
+      "retrievedAt": "2026-08-14T22:48:21.648Z"
+    },
+    {
+      "id": "source-21",
+      "title": "Kakadu National Park",
+      "url": "https://en.wikipedia.org/wiki/Kakadu_National_Park",
+      "retrievedAt": "2026-08-14T22:48:03.947Z"
+    },
+    {
+      "id": "source-22",
+      "title": "Omo River",
+      "url": "https://en.wikipedia.org/wiki/Omo_River",
+      "retrievedAt": "2026-08-14T22:48:33.546Z"
+    },
+    {
+      "id": "source-23",
+      "title": "Þingvellir",
+      "url": "https://en.wikipedia.org/wiki/%C3%9Eingvellir",
+      "retrievedAt": "2026-08-14T22:49:06.251Z"
+    },
+    {
+      "id": "source-24",
+      "title": "Keoladeo National Park",
+      "url": "https://en.wikipedia.org/wiki/Keoladeo_National_Park",
+      "retrievedAt": "2026-08-14T22:49:05.189Z"
+    },
+    {
+      "id": "source-25",
+      "title": "Río Plátano Biosphere Reserve",
+      "url": "https://en.wikipedia.org/wiki/R%C3%ADo_Pl%C3%A1tano_Biosphere_Reserve",
+      "retrievedAt": "2026-08-14T22:49:01.287Z"
+    }
+  ]
+}
