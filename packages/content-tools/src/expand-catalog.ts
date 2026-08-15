@@ -2,6 +2,7 @@ import { readdir, readFile, rename, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
 import { createOpenRouter } from '@openrouter/ai-sdk-provider';
+import { dailyCaseSchema } from '@whereabouts/case-content';
 import { generateText, Output } from 'ai';
 import { z } from 'zod';
 
@@ -107,13 +108,13 @@ async function recentTargetIds(): Promise<string[]> {
     .slice(-30);
   const targets = await Promise.all(
     files.map(async (path) => {
-      const data = JSON.parse(
-        await readFile(new URL(path, casesRoot), 'utf8'),
-      ) as { target?: { poiId?: string } };
-      return data.target?.poiId;
+      const data = JSON.parse(await readFile(new URL(path, casesRoot), 'utf8'));
+      return dailyCaseSchema
+        .parse(data)
+        .rounds.map((round) => round.targetPoiId);
     }),
   );
-  return targets.filter((id): id is string => Boolean(id));
+  return targets.flat();
 }
 
 async function generateBatch(

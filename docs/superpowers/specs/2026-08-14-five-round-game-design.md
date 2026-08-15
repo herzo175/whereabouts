@@ -2,7 +2,7 @@
 
 ## Goal
 
-Replace the six-attempt single-location investigation with a faster five-round daily game. Each round gives the player a photograph and one useful historical clue, asks for one committed guess, and scores that guess by its authored historical or cultural similarity to the answer. The design should make every guess informative, avoid unwinnable states, and produce a concise daily result worth sharing.
+Whereabouts is a five-round daily game. Each round gives the player a photograph and one useful historical clue, asks for one committed guess, and scores that guess by its authored historical or cultural similarity to the answer. The design should make every guess informative, avoid unwinnable states, and produce a concise daily result worth sharing.
 
 ## Daily content
 
@@ -69,7 +69,7 @@ All generated content is formatted, validated, committed, and published as a rev
 
 The case-content package owns the five-round schema and parsing. Content-tools owns generation and publication validation. The game engine owns round progression, immutable guesses, tier scoring, totals, and share tokens. Browser-state owns revision-scoped persistence. The web application owns presentation, selection, reveal, and navigation between rounds.
 
-Existing historical case artifacts remain immutable. The new schema version can coexist with the old format while the loader and game screen migrate; only manifest-selected cases need to be playable.
+The application supports only the five-round case format. The manifest exposes only complete, validated five-round artifacts.
 
 ## Failure handling
 

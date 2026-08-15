@@ -1,15 +1,48 @@
 import { readFile } from 'node:fs/promises';
-import { type DailyCase, dailyCaseSchema } from '@whereabouts/case-content';
+import {
+  type DailyCase,
+  dailyCaseSchema,
+  type FiveRoundDailyCase,
+} from '@whereabouts/case-content';
 import { casePath } from './paths.js';
 
 export function reviewPacket(caseData: DailyCase): string {
-  const target = caseData.pois.find((poi) => poi.id === caseData.target.poiId);
+  return fiveRoundReviewPacket(caseData);
+}
+
+function sourceLinker(caseData: DailyCase): (ids: string[]) => string {
   const sources = new Map(
     caseData.sources.map((source) => [source.id, source]),
   );
-  const linked = (ids: string[]) =>
+  return (ids) =>
     ids.map((id) => `[${id}](${sources.get(id)?.url ?? ''})`).join(', ');
-  return `# Whereabouts review: ${caseData.publicationDate}\n\n## Spoiler\n\n**${target?.name ?? caseData.target.poiId}** — ${caseData.target.destinationName}\n\n## Clues\n\n${caseData.clues.map((clue, index) => `${index + 1}. ${clue.text} (${linked(clue.sourceIds)})`).join('\n')}\n\n## Contextual responses\n\n${caseData.contextualResponses.map((response) => `- **${response.tier} · ${response.poiId}**: ${response.text} (${linked(response.sourceIds)})`).join('\n')}\n\n## Reveal\n\n${caseData.reveal.title}\n\n${caseData.reveal.summary}\n\n${caseData.reveal.clueExplanation}\n\nSources: ${linked(caseData.reveal.sourceIds)}\n\n## Sources\n\n${caseData.sources.map((source) => `- [${source.id}: ${source.title}](${source.url}) — retrieved ${source.retrievedAt}`).join('\n')}\n`;
+}
+
+function sourceList(caseData: DailyCase): string {
+  return caseData.sources
+    .map(
+      (source) =>
+        `- [${source.id}: ${source.title}](${source.url}) — retrieved ${source.retrievedAt}`,
+    )
+    .join('\n');
+}
+
+function fiveRoundReviewPacket(caseData: FiveRoundDailyCase): string {
+  const pois = new Map(caseData.pois.map((poi) => [poi.id, poi]));
+  const linked = sourceLinker(caseData);
+  const rounds = caseData.rounds
+    .map((round, index) => {
+      const target = pois.get(round.targetPoiId);
+      const results = round.results
+        .map((result) => {
+          const poi = pois.get(result.poiId);
+          return `- **${result.tier} · ${poi?.name ?? result.poiId}**: ${result.text} (${linked(result.sourceIds)})`;
+        })
+        .join('\n');
+      return `## Round ${index + 1}: ${target?.name ?? round.targetPoiId}\n\n${round.clue.text} (${linked(round.clue.sourceIds)})\n\nImage: [${round.image.attribution}](${round.image.url})\n\n${results}`;
+    })
+    .join('\n\n');
+  return `# Whereabouts review: ${caseData.publicationDate}\n\n${rounds}\n\n## Sources\n\n${sourceList(caseData)}\n`;
 }
 
 export async function readCaseForReview(

@@ -19,42 +19,26 @@ const extracts = pois.map((poi) => ({
 }));
 
 describe('buildCasePrompt', () => {
-  it('keeps the late clue ladder probabilistic rather than guaranteeing a solve', () => {
+  it('requests five concrete, one-shot round clues without leaking answers', () => {
     const prompt = buildCasePrompt(pois, extracts);
 
-    expect(PROMPT_VERSION).toBe(4);
-    expect(prompt).toContain('at least 8 of the 25 candidates');
-    expect(prompt).toContain('Clue 2: 6–10 plausible candidates');
-    expect(prompt).toContain('Clue 4: 4–7 plausible candidates');
-    expect(prompt).toContain('Clue 5: 3–5 plausible candidates');
-    expect(prompt).toContain('Clue 6: 2–4 plausible candidates');
-    expect(prompt).toContain('never a single decisive fact');
-    expect(prompt).toContain('Do not combine individually broad facts');
+    expect(PROMPT_VERSION).toBe(6);
+    expect(prompt).toContain('exactly five rounds');
+    expect(prompt).toContain('first five catalog records');
+    expect(prompt).toContain('one concrete, useful clue');
+    expect(prompt).toContain('target POI name, city, or country');
   });
 
-  it('forbids early fingerprint facts that make a famous location obvious', () => {
+  it('requires sourced numeric similarity scores for deterministic tier bucketing', () => {
     const prompt = buildCasePrompt(pois, extracts);
 
-    expect(prompt).toContain('continents, borders, straits, rivers, seas');
-    expect(prompt).toContain('proper nouns, named people, named empires');
-    expect(prompt).toContain('exact century, year, dynasty, religion');
-    expect(prompt).toContain('signature architectural feature');
-  });
-
-  it('makes wrong-guess responses explain a sourced relationship', () => {
-    const prompt = buildCasePrompt(pois, extracts);
-
+    expect(prompt).toContain('exactly 25 results');
+    expect(prompt).toContain('similarityScore');
+    expect(prompt).toContain('0–100');
+    expect(prompt).toContain('deterministically buckets');
     expect(prompt).toContain(
-      'relationship between the guessed POI and the target',
+      'source IDs for both the guessed POI and the target',
     );
-    expect(prompt).toContain('not merely say that the guess is elsewhere');
-  });
-
-  it('requires a concrete clue-by-clue reveal explanation', () => {
-    const prompt = buildCasePrompt(pois, extracts);
-
-    expect(prompt).toContain('walk through all six clues in order');
-    expect(prompt).toContain('Do not use generic filler');
   });
 
   it('bounds cached corpus context before sending the daily model request', () => {

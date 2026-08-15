@@ -1,153 +1,107 @@
 import { describe, expect, it } from 'vitest';
 
-import { makeCase } from '../../case-content/test/fixtures.js';
+import { makeFiveRoundCase } from '../../case-content/test/fixtures.js';
 import {
-  applyGuess,
-  createProgress,
+  acknowledgeRoundReveal,
+  createFiveRoundProgress,
   GameRuleError,
-  getAttemptsRemaining,
-  getLatestFeedback,
-  getShareTokens,
-  getVisibleClues,
+  getCurrentRound,
+  getRoundScore,
+  getTotalScore,
+  submitRoundGuess,
 } from './index.js';
 
-describe('Whereabouts game engine', () => {
-  it('starts with clue one and six attempts remaining', () => {
-    const caseData = makeCase();
-    const progress = createProgress(caseData);
+describe('five-round engine', () => {
+  it('scores one immutable guess per round and completes after round five', () => {
+    const caseData = makeFiveRoundCase();
+    let progress = createFiveRoundProgress(caseData);
+    expect(getCurrentRound(caseData, progress)?.id).toBe('round-1');
+    expect(getRoundScore('correct')).toBe(100);
+    expect(getRoundScore('hot')).toBe(75);
+    expect(getRoundScore('warm')).toBe(50);
+    expect(getRoundScore('cold')).toBe(25);
 
-    expect(progress).toEqual({
-      schemaVersion: 1,
-      caseDate: '2026-08-14',
-      caseRevision: 1,
-      guessedPoiIds: [],
-      outcome: 'playing',
-    });
-    expect(getVisibleClues(caseData, progress)).toEqual(
-      caseData.clues.slice(0, 1),
-    );
-    expect(getAttemptsRemaining(progress)).toBe(6);
-  });
-
-  it('adds a unique wrong guess and unlocks the next clue', () => {
-    const caseData = makeCase();
-    const progress = applyGuess(caseData, createProgress(caseData), 'poi-01');
-
-    expect(progress).toEqual({
-      schemaVersion: 1,
-      caseDate: '2026-08-14',
-      caseRevision: 1,
-      guessedPoiIds: ['poi-01'],
-      outcome: 'playing',
-    });
-    expect(getVisibleClues(caseData, progress)).toEqual(
-      caseData.clues.slice(0, 2),
-    );
-    expect(getAttemptsRemaining(progress)).toBe(5);
-  });
-
-  it('returns the authored response and relationship tier for a wrong guess', () => {
-    const caseData = makeCase();
-    const progress = applyGuess(caseData, createProgress(caseData), 'poi-10');
-
-    expect(getLatestFeedback(caseData, progress)).toEqual(
-      caseData.contextualResponses[9],
-    );
-  });
-
-  it('wins immediately when the target POI is guessed', () => {
-    const caseData = makeCase();
-    const now = new Date('2026-08-14T12:34:56.000Z');
-
-    expect(
-      applyGuess(caseData, createProgress(caseData), 'poi-00', now),
-    ).toEqual({
-      schemaVersion: 1,
-      caseDate: '2026-08-14',
-      caseRevision: 1,
-      guessedPoiIds: ['poi-00'],
-      outcome: 'won',
-      completedAt: '2026-08-14T12:34:56.000Z',
-    });
-  });
-
-  it('loses after six wrong guesses', () => {
-    const caseData = makeCase();
-    let progress = createProgress(caseData);
-    for (let index = 1; index <= 6; index += 1) {
-      progress = applyGuess(
+    for (let index = 0; index < 5; index += 1) {
+      progress = submitRoundGuess(
         caseData,
         progress,
-        `poi-${String(index).padStart(2, '0')}`,
+        caseData.rounds[index].targetPoiId,
         new Date('2026-08-14T12:34:56.000Z'),
       );
+      expect(progress.acknowledgedRoundCount).toBe(index);
+      progress = acknowledgeRoundReveal(progress);
     }
-
-    expect(progress).toEqual({
-      schemaVersion: 1,
-      caseDate: '2026-08-14',
-      caseRevision: 1,
-      guessedPoiIds: [
-        'poi-01',
-        'poi-02',
-        'poi-03',
-        'poi-04',
-        'poi-05',
-        'poi-06',
-      ],
-      outcome: 'lost',
-      completedAt: '2026-08-14T12:34:56.000Z',
-    });
-    expect(getVisibleClues(caseData, progress)).toEqual(caseData.clues);
+    expect(progress.guesses).toHaveLength(5);
+    expect(progress.completedAt).toBe('2026-08-14T12:34:56.000Z');
+    expect(getTotalScore(progress)).toBe(500);
+    expect(getCurrentRound(caseData, progress)).toBeNull();
   });
 
-  it('rejects a duplicate guess without mutating progress', () => {
-    const caseData = makeCase();
-    const progress = applyGuess(caseData, createProgress(caseData), 'poi-01');
-
-    expect(() => applyGuess(caseData, progress, 'poi-01')).toThrow(
-      GameRuleError,
+  it('allows exactly one pending reveal to be acknowledged', () => {
+    const caseData = makeFiveRoundCase();
+    const guessed = submitRoundGuess(
+      caseData,
+      createFiveRoundProgress(caseData),
+      caseData.pois[10].id,
     );
-    expect(progress).toEqual({
-      schemaVersion: 1,
-      caseDate: '2026-08-14',
-      caseRevision: 1,
-      guessedPoiIds: ['poi-01'],
-      outcome: 'playing',
-    });
+
+    expect(guessed.acknowledgedRoundCount).toBe(0);
+    expect(acknowledgeRoundReveal(guessed).acknowledgedRoundCount).toBe(1);
+    expect(() =>
+      acknowledgeRoundReveal(acknowledgeRoundReveal(guessed)),
+    ).toThrow(GameRuleError);
   });
 
-  it('rejects a seventh guess after the case ends', () => {
-    const caseData = makeCase();
-    const progress = applyGuess(caseData, createProgress(caseData), 'poi-00');
-
-    expect(() => applyGuess(caseData, progress, 'poi-01')).toThrow(
-      GameRuleError,
+  it('rejects a second-round guess while the prior reveal is unacknowledged', () => {
+    const caseData = makeFiveRoundCase();
+    const progress = submitRoundGuess(
+      caseData,
+      createFiveRoundProgress(caseData),
+      caseData.pois[10].id,
     );
+
+    expect(() =>
+      submitRoundGuess(caseData, progress, caseData.pois[11].id),
+    ).toThrow(GameRuleError);
   });
 
-  it('builds cold, warm, hot, solved share tokens in guess order', () => {
-    const caseData = makeCase();
-    let progress = createProgress(caseData);
-    for (const poiId of ['poi-01', 'poi-10', 'poi-20', 'poi-00']) {
-      progress = applyGuess(caseData, progress, poiId);
-    }
-
-    expect(getShareTokens(caseData, progress)).toEqual([
-      'cold',
-      'warm',
-      'hot',
-      'solved',
-    ]);
-  });
-
-  it('rejects an unknown POI without mutating progress', () => {
-    const caseData = makeCase();
-    const progress = createProgress(caseData);
-
-    expect(() => applyGuess(caseData, progress, 'unknown-poi')).toThrow(
-      GameRuleError,
+  it('rejects a previously revealed target in a later round', () => {
+    const caseData = makeFiveRoundCase();
+    const progress = submitRoundGuess(
+      caseData,
+      createFiveRoundProgress(caseData),
+      caseData.rounds[0].targetPoiId,
     );
-    expect(progress.guessedPoiIds).toEqual([]);
+    expect(() =>
+      submitRoundGuess(caseData, progress, caseData.rounds[0].targetPoiId),
+    ).toThrow(GameRuleError);
+  });
+
+  it('rejects a persisted guess whose round result or completion state was changed', () => {
+    const caseData = makeFiveRoundCase();
+    const progress = submitRoundGuess(
+      caseData,
+      createFiveRoundProgress(caseData),
+      caseData.rounds[0].targetPoiId,
+    );
+
+    expect(() =>
+      getCurrentRound(caseData, {
+        ...progress,
+        guesses: [{ ...progress.guesses[0], points: 25 }],
+      }),
+    ).toThrow(GameRuleError);
+    expect(() =>
+      getCurrentRound(caseData, {
+        ...progress,
+        guesses: [{ ...progress.guesses[0], tier: 'hot', points: 75 }],
+      }),
+    ).toThrow(GameRuleError);
+    expect(() =>
+      getCurrentRound(caseData, {
+        ...progress,
+        completedAt: '2026-08-14T12:34:56.000Z',
+      }),
+    ).toThrow(GameRuleError);
   });
 });

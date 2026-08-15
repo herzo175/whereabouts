@@ -1,6 +1,6 @@
 # Whereabouts
 
-Whereabouts is a daily geography deduction game: read progressively revealing clues, locate the destination on the map, then compare your guess with the answer. Each published case is source-grounded and spoiler-safe until the player reveals it.
+Whereabouts is a five-round daily geography game. Each round shows a sourced photograph and historical clue, asks for one location guess, then awards 25–100 points based on the authored cultural or historical similarity to the answer. A complete daily score is out of 500.
 
 ## Prerequisites
 
@@ -25,11 +25,11 @@ pnpm test
 pnpm typecheck
 pnpm build
 pnpm test:e2e
-pnpm content:generate-range -- --from 2026-08-28 --days 1
-pnpm content:generate-range -- --from 2026-08-28 --days 7
+pnpm content:generate-range -- --from 2026-08-15 --days 1 --revision 1
+pnpm content:generate-range -- --from 2026-08-15 --days 7 --revision 1
 pnpm content:validate
-pnpm content:review -- --date 2026-08-28 --revision 1
-pnpm content:review-range -- --from 2026-08-28 --days 7 --out artifacts/review
+pnpm content:review -- --date 2026-08-15 --revision 1
+pnpm content:review-range -- --from 2026-08-15 --days 7 --out artifacts/review
 ```
 
 Install Chromium before the browser suite when necessary:
@@ -47,7 +47,7 @@ Copy `.env.example` to `.env` for local case generation. The generation CLI load
 - `WHEREABOUTS_MODEL` — optional OpenRouter model identifier; CI defaults to `openai/gpt-5.6-luna`.
 - `PUBLICATION_CEILING` — optional UTC ISO date used by content validation to enforce the public manifest boundary.
 
-AI is used only during pre-generation of candidate content. Human review approves facts, fairness, variety, and tone; publication is a manifest change and never calls a model.
+AI is used only by the source-controlled generation pipeline. Runtime gameplay makes no model calls.
 
 ## Deployment
 
@@ -68,9 +68,9 @@ flyctl deploy --remote-only
 ## Monorepo
 
 - `apps/web` — TanStack web application, game routes, and browser tests.
-- `packages/game-engine` — game state, scoring, and clue progression.
+- `packages/game-engine` — five-round game state, reveal sequencing, and scoring.
 - `packages/browser-state` — client-side persistence and sharing state.
 - `packages/case-content` — case schema, immutable date/revision artifacts, and the publication manifest loader.
 - `packages/content-tools` — source-aware generation, validation, and human review packet CLIs.
 
-Read the [product design](docs/superpowers/specs/2026-08-14-whereabouts-design.md), [implementation plan](docs/superpowers/plans/2026-08-14-whereabouts-implementation.md), and [content publishing runbook](docs/content-publishing.md) before operating the content pipeline.
+Read the [five-round product design](docs/superpowers/specs/2026-08-14-five-round-game-design.md), [implementation plan](docs/superpowers/plans/2026-08-14-five-round-game-implementation.md), and [content publishing runbook](docs/content-publishing.md) before operating the content pipeline.

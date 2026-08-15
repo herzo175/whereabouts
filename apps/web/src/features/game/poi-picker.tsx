@@ -10,6 +10,7 @@ type PoiPickerProps = {
   pois: Poi[];
   guessedPoiIds?: Set<string>;
   disabledPoiIds?: Set<string>;
+  dossierDetail?: 'full' | 'identity';
   onGuess: (poi: Poi) => void;
   globe?: (selectPoi: (poi: Poi) => void) => ReactNode;
 };
@@ -18,6 +19,7 @@ export function PoiPicker({
   pois,
   guessedPoiIds,
   disabledPoiIds,
+  dossierDetail = 'full',
   onGuess,
   globe,
 }: PoiPickerProps) {
@@ -55,6 +57,7 @@ export function PoiPicker({
         pois={pois}
       />
       <PoiDossier
+        detail={dossierDetail}
         onConfirm={confirmSelection}
         onOpenChange={(open) => {
           if (!open) setSelectedPoi(null);

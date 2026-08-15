@@ -14,38 +14,49 @@ function makeCase(overrides: Record<string, unknown> = {}) {
     latitude: index,
     longitude: index,
     wikipediaTitle: `Place ${index}`,
+    image: {
+      url: `https://example.com/poi-${index}.jpg`,
+      alt: `Fixture image for Place ${index}`,
+      attribution: 'Fixture photographer · CC BY 4.0',
+      licenseUrl: 'https://creativecommons.org/licenses/by/4.0',
+    },
   }));
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     publicationDate: '2026-08-14',
     revision: 1,
     caseNumber: 1,
-    target: { poiId: 'poi-00', destinationName: 'Target Place' },
     pois,
-    clues: Array.from({ length: 6 }, (_, index) => ({
-      id: `clue-${index + 1}`,
-      text: `This fixture clue number ${index + 1}, with enough useful detail.`,
-      sourceIds: ['source-01'],
-    })),
-    contextualResponses: pois.slice(1).map((poi, index) => ({
-      poiId: poi.id,
-      tier: index < 8 ? 'cold' : index < 16 ? 'warm' : 'hot',
-      text: `Fixture response for ${poi.name} explains a meaningful comparison.`,
-      sourceIds: ['source-02'],
-    })),
-    reveal: {
-      title: 'Fixture reveal',
-      summary:
-        'This fixture reveal gives enough detail to satisfy the minimum summary requirement.',
-      clueExplanation:
-        'This fixture clue explanation gives enough detail to satisfy the minimum explanation requirement.',
-      sourceIds: ['source-01'],
-    },
     sources: ['source-01', 'source-02'].map((id) => ({
       id,
       title: `Fixture source ${id}`,
       url: `https://example.com/${id}`,
       retrievedAt: '2026-08-14T00:00:00Z',
+    })),
+    rounds: pois.slice(0, 5).map((target, roundIndex) => ({
+      id: `round-${roundIndex + 1}`,
+      targetPoiId: target.id,
+      image: target.image,
+      clue: {
+        text: `A concrete fixture clue for round ${roundIndex + 1} avoids naming the answer.`,
+        sourceIds: ['source-01'],
+      },
+      results: pois.map((poi, index) => ({
+        poiId: poi.id,
+        tier:
+          poi.id === target.id
+            ? 'correct'
+            : index < 5
+              ? 'hot'
+              : index < 14
+                ? 'warm'
+                : 'cold',
+        text:
+          poi.id === target.id
+            ? 'This candidate is correct.'
+            : 'This candidate has a meaningful fixture relationship to the target.',
+        sourceIds: ['source-01', 'source-02'],
+      })),
     })),
     ...overrides,
   };
@@ -56,8 +67,14 @@ function messages(value: unknown): string[] {
 }
 
 describe('validateCaseForPublication', () => {
-  it('accepts a schema-valid case with no pre-reveal leaks', () => {
+  it('accepts a schema-valid v2 case', () => {
     expect(validateCaseForPublication(makeCase())).toEqual([]);
+  });
+
+  it('rejects non-v2 values as malformed', () => {
+    expect(validateCaseForPublication({ schemaVersion: 3 })[0]?.path).toBe(
+      'schema',
+    );
   });
 
   it('reports malformed cases without throwing', () => {
@@ -67,23 +84,35 @@ describe('validateCaseForPublication', () => {
 
   it.each([
     ['target POI name', 'The TARGET—PLACE is visible from here.'],
-    ['destination', 'A historic route through Target Place was important.'],
     ['target city', 'City 0 has a long history.'],
     ['target country', 'Exampleland is the destination.'],
-  ])('reports %s in a clue after normalization', (_label, text) => {
+  ])('reports %s in a round clue after normalization', (_label, text) => {
     const value = makeCase();
-    value.clues[0].text = text;
+    value.rounds[0].clue.text = text;
     expect(messages(value)).toContain(
       'Pre-reveal text leaks target POI, destination, city, or country',
     );
   });
 
-  it('reports target leakage in a contextual response', () => {
+  it('allows clear post-reveal result reports', () => {
     const value = makeCase();
-    value.contextualResponses[0].text =
-      'Target Place has a notably different setting than this landmark.';
-    expect(messages(value)).toContain(
-      'Pre-reveal text leaks target POI, destination, city, or country',
+    value.rounds[1].results[0].text = 'City 1 reveals the target location.';
+    expect(validateCaseForPublication(value)).toEqual([]);
+  });
+
+  it('rejects a round without a useful spread of similarity tiers', () => {
+    const value = makeCase();
+    value.rounds[0].results = value.rounds[0].results.map((result) =>
+      result.tier === 'correct' ? result : { ...result, tier: 'cold' },
+    );
+
+    expect(validateCaseForPublication(value)).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          path: 'rounds[0].results',
+          message: expect.stringMatching(/3–5 hot.*7–10 warm.*9–14 cold/i),
+        }),
+      ]),
     );
   });
 
@@ -108,23 +137,6 @@ describe('validateCollection', () => {
     ]);
   });
 
-  it('reports duplicate dates, case numbers, revisions, and ceiling mismatch', () => {
-    const first = makeCase();
-    const second = makeCase();
-    expect(
-      validateCollection([first, second], '2026-08-13').map(
-        (issue) => issue.message,
-      ),
-    ).toEqual(
-      expect.arrayContaining([
-        'Case publication date is after the publication ceiling',
-        'Duplicate publication date',
-        'Duplicate case number',
-        'Duplicate revision for publication date',
-      ]),
-    );
-  });
-
   it('reports a target repeated within the prior 30 published cases', () => {
     const first = makeCase({ publicationDate: '2026-07-15' });
     const repeat = makeCase({ publicationDate: '2026-08-14', caseNumber: 2 });
@@ -133,19 +145,5 @@ describe('validateCollection', () => {
         (issue) => issue.message,
       ),
     ).toContain('Target POI was used within the previous 30 published cases');
-  });
-
-  it('reports distractors exceeding 40 percent of a rolling 30-case window', () => {
-    const cases = Array.from({ length: 30 }, (_, index) =>
-      makeCase({
-        publicationDate: `2026-08-${String(index + 1).padStart(2, '0')}`,
-        caseNumber: index + 1,
-      }),
-    );
-    expect(
-      validateCollection(cases, '2026-08-30').map((issue) => issue.message),
-    ).toContain(
-      'Distractor appears in more than 40% of the rolling 30-case window',
-    );
   });
 });

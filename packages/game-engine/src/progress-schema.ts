@@ -1,9 +1,16 @@
-export type GameProgress = {
-  schemaVersion: 1;
+export type FiveRoundGuess = {
+  roundId: string;
+  poiId: string;
+  tier: 'correct' | 'hot' | 'warm' | 'cold';
+  points: 100 | 75 | 50 | 25;
+};
+
+export type FiveRoundProgress = {
+  schemaVersion: 2;
   caseDate: string;
   caseRevision: number;
-  guessedPoiIds: string[];
-  outcome: 'playing' | 'won' | 'lost';
+  guesses: FiveRoundGuess[];
+  acknowledgedRoundCount: number;
   completedAt?: string;
 };
 
@@ -38,23 +45,6 @@ function positiveInteger(value: unknown): number {
   return value as number;
 }
 
-function guessedPoiIds(value: unknown): string[] {
-  if (
-    !Array.isArray(value) ||
-    value.some((poiId) => typeof poiId !== 'string')
-  ) {
-    fail('guessedPoiIds', 'must be an array of strings');
-  }
-  return [...value] as string[];
-}
-
-function outcome(value: unknown): GameProgress['outcome'] {
-  if (value !== 'playing' && value !== 'won' && value !== 'lost') {
-    fail('outcome', 'must be playing, won, or lost');
-  }
-  return value;
-}
-
 function completedAt(value: unknown): string | undefined {
   if (value === undefined) return undefined;
   if (typeof value !== 'string' || !datetimePattern.test(value)) {
@@ -63,25 +53,63 @@ function completedAt(value: unknown): string | undefined {
   return value;
 }
 
-export const gameProgressSchema: Schema<GameProgress> = {
+export const fiveRoundProgressSchema: Schema<FiveRoundProgress> = {
   parse(value) {
     const parsed = record(value);
-    if (parsed.schemaVersion !== 1) fail('schemaVersion', 'must equal 1');
-    const parsedOutcome = outcome(parsed.outcome);
-    const parsedCompletedAt = completedAt(parsed.completedAt);
-    if (parsedOutcome === 'playing' && parsedCompletedAt !== undefined) {
-      fail('completedAt', 'is only allowed after the case ends');
+    if (parsed.schemaVersion !== 2) fail('schemaVersion', 'must equal 2');
+    if (!Array.isArray(parsed.guesses)) fail('guesses', 'must be an array');
+    const guesses = parsed.guesses.map((value, index) => {
+      const guess = record(value);
+      const tier = guess.tier as FiveRoundGuess['tier'];
+      const expectedPoints =
+        tier === 'correct'
+          ? 100
+          : tier === 'hot'
+            ? 75
+            : tier === 'warm'
+              ? 50
+              : tier === 'cold'
+                ? 25
+                : null;
+      if (expectedPoints === null) fail(`guesses[${index}].tier`, 'is invalid');
+      if (guess.points !== expectedPoints)
+        fail(`guesses[${index}].points`, 'must match its tier');
+      if (typeof guess.roundId !== 'string' || !guess.roundId)
+        fail(`guesses[${index}].roundId`, 'must be a string');
+      if (typeof guess.poiId !== 'string' || !guess.poiId)
+        fail(`guesses[${index}].poiId`, 'must be a string');
+      return {
+        roundId: guess.roundId,
+        poiId: guess.poiId,
+        tier,
+        points: expectedPoints as FiveRoundGuess['points'],
+      };
+    });
+    if (guesses.length > 5)
+      fail('guesses', 'must contain at most five guesses');
+    if (
+      !Number.isInteger(parsed.acknowledgedRoundCount) ||
+      (parsed.acknowledgedRoundCount as number) < 0 ||
+      (parsed.acknowledgedRoundCount as number) > guesses.length ||
+      guesses.length - (parsed.acknowledgedRoundCount as number) > 1
+    ) {
+      fail(
+        'acknowledgedRoundCount',
+        'must leave at most one submitted round awaiting reveal',
+      );
     }
-
+    const parsedCompletedAt = completedAt(parsed.completedAt);
+    if (guesses.length === 5 && parsedCompletedAt === undefined)
+      fail('completedAt', 'is required after round five');
+    if (guesses.length < 5 && parsedCompletedAt !== undefined)
+      fail('completedAt', 'is only allowed after round five');
     return {
-      schemaVersion: 1,
+      schemaVersion: 2,
       caseDate: date(parsed.caseDate),
       caseRevision: positiveInteger(parsed.caseRevision),
-      guessedPoiIds: guessedPoiIds(parsed.guessedPoiIds),
-      outcome: parsedOutcome,
-      ...(parsedCompletedAt === undefined
-        ? {}
-        : { completedAt: parsedCompletedAt }),
+      guesses,
+      acknowledgedRoundCount: parsed.acknowledgedRoundCount as number,
+      ...(parsedCompletedAt ? { completedAt: parsedCompletedAt } : {}),
     };
   },
 };

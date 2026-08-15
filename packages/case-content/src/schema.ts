@@ -1,5 +1,4 @@
-export type RelationshipTier = 'cold' | 'warm' | 'hot';
-export type RoundTier = RelationshipTier | 'correct';
+export type RoundTier = 'correct' | 'cold' | 'warm' | 'hot';
 
 export type Poi = {
   id: string;
@@ -23,29 +22,6 @@ export type Source = {
   title: string;
   url: string;
   retrievedAt: string;
-};
-
-export type LegacyDailyCase = {
-  schemaVersion: 1;
-  publicationDate: string;
-  revision: number;
-  caseNumber: number;
-  target: { poiId: string; destinationName: string };
-  pois: Poi[];
-  clues: Array<{ id: string; text: string; sourceIds: string[] }>;
-  contextualResponses: Array<{
-    poiId: string;
-    tier: RelationshipTier;
-    text: string;
-    sourceIds: string[];
-  }>;
-  reveal: {
-    title: string;
-    summary: string;
-    clueExplanation: string;
-    sourceIds: string[];
-  };
-  sources: Source[];
 };
 
 export type RoundResult = {
@@ -73,7 +49,7 @@ export type FiveRoundDailyCase = {
   sources: Source[];
 };
 
-export type DailyCase = LegacyDailyCase | FiveRoundDailyCase;
+export type DailyCase = FiveRoundDailyCase;
 
 export type Schema<T> = { parse(value: unknown): T };
 
@@ -206,123 +182,6 @@ export const sourceSchema: Schema<Source> = {
   },
 };
 
-const legacyDailyCaseSchema: Schema<LegacyDailyCase> = {
-  parse(value) {
-    const parsed = record(value, 'daily case');
-    if (parsed.schemaVersion !== 1) fail('schemaVersion', 'must equal 1');
-    const publicationDate = string(parsed.publicationDate, 'publicationDate');
-    if (!datePattern.test(publicationDate))
-      fail('publicationDate', 'must be an ISO date');
-    const target = record(parsed.target, 'target');
-    const pois = array(parsed.pois, 'pois').map((poi, index) =>
-      parsePoi(poi, `pois[${index}]`),
-    );
-    const clues = array(parsed.clues, 'clues').map((clue, index) => {
-      const entry = record(clue, `clues[${index}]`);
-      return {
-        id: id(entry.id, `clues[${index}].id`),
-        text: string(entry.text, `clues[${index}].text`, 20),
-        sourceIds: parseSourceIds(entry.sourceIds, `clues[${index}].sourceIds`),
-      };
-    });
-    const contextualResponses = array(
-      parsed.contextualResponses,
-      'contextualResponses',
-    ).map((response, index) => {
-      const entry = record(response, `contextualResponses[${index}]`);
-      const tier = entry.tier as RelationshipTier;
-      if (tier !== 'cold' && tier !== 'warm' && tier !== 'hot')
-        fail(
-          `contextualResponses[${index}].tier`,
-          'must be cold, warm, or hot',
-        );
-      return {
-        poiId: id(entry.poiId, `contextualResponses[${index}].poiId`),
-        tier,
-        text: string(entry.text, `contextualResponses[${index}].text`, 30),
-        sourceIds: parseSourceIds(
-          entry.sourceIds,
-          `contextualResponses[${index}].sourceIds`,
-        ),
-      };
-    });
-    const reveal = record(parsed.reveal, 'reveal');
-    const sources = array(parsed.sources, 'sources').map((source) =>
-      sourceSchema.parse(source),
-    );
-
-    if (pois.length !== 25) fail('pois', 'must contain exactly 25 POIs');
-    if (clues.length !== 6) fail('clues', 'must contain exactly six clues');
-    if (contextualResponses.length !== 24)
-      fail('contextualResponses', 'must contain exactly 24 responses');
-    const poiIds = pois.map((poi) => poi.id);
-    unique(poiIds, 'pois', 'POI ids');
-    const targetPoiId = id(target.poiId, 'target.poiId');
-    if (!poiIds.includes(targetPoiId))
-      fail('target', 'Target POI must be included in POIs');
-    unique(
-      clues.map((clue) => clue.id),
-      'clues',
-      'Clue ids',
-    );
-    unique(
-      sources.map((source) => source.id),
-      'sources',
-      'Source ids',
-    );
-    const responseIds = contextualResponses.map((response) => response.poiId);
-    unique(responseIds, 'contextualResponses', 'Response POI ids');
-    if (responseIds.includes(targetPoiId))
-      fail(
-        'contextualResponses',
-        'Responses must be for distractors, never the target',
-      );
-    const distractors = poiIds.filter((poiId) => poiId !== targetPoiId);
-    if (distractors.some((poiId) => !responseIds.includes(poiId)))
-      fail(
-        'contextualResponses',
-        'Responses must cover every distractor exactly once',
-      );
-    const knownSourceIds = new Set(sources.map((source) => source.id));
-    const references = [
-      ...clues.flatMap((clue) => clue.sourceIds),
-      ...contextualResponses.flatMap((response) => response.sourceIds),
-      ...parseSourceIds(reveal.sourceIds, 'reveal.sourceIds'),
-    ];
-    if (references.some((sourceId) => !knownSourceIds.has(sourceId)))
-      fail('sources', 'Every source reference must resolve');
-
-    return {
-      schemaVersion: 1,
-      publicationDate,
-      revision: positiveInteger(parsed.revision, 'revision'),
-      caseNumber: positiveInteger(parsed.caseNumber, 'caseNumber'),
-      target: {
-        poiId: targetPoiId,
-        destinationName: string(
-          target.destinationName,
-          'target.destinationName',
-          2,
-        ),
-      },
-      pois,
-      clues,
-      contextualResponses,
-      reveal: {
-        title: string(reveal.title, 'reveal.title', 2),
-        summary: string(reveal.summary, 'reveal.summary', 50),
-        clueExplanation: string(
-          reveal.clueExplanation,
-          'reveal.clueExplanation',
-          50,
-        ),
-        sourceIds: parseSourceIds(reveal.sourceIds, 'reveal.sourceIds'),
-      },
-      sources,
-    };
-  },
-};
-
 function parseRoundImage(
   value: unknown,
   path: string,
@@ -347,6 +206,8 @@ const fiveRoundDailyCaseSchema: Schema<FiveRoundDailyCase> = {
       parsePoi(poi, `pois[${index}]`),
     );
     if (pois.length !== 25) fail('pois', 'must contain exactly 25 POIs');
+    if (pois.some((poi) => !poi.image))
+      fail('pois', 'every version 2 POI must include an attributed image');
     const poiIds = pois.map((poi) => poi.id);
     unique(poiIds, 'pois', 'POI ids');
     const knownPoiIds = new Set(poiIds);
@@ -368,10 +229,7 @@ const fiveRoundDailyCaseSchema: Schema<FiveRoundDailyCase> = {
       const clue = record(entry.clue, `${path}.clue`);
       const parsedClue = {
         text: string(clue.text, `${path}.clue.text`, 20),
-        sourceIds: parseSourceIds(
-          clue.sourceIds,
-          `${path}.clue.sourceIds`,
-        ),
+        sourceIds: parseSourceIds(clue.sourceIds, `${path}.clue.sourceIds`),
       };
       const results = array(entry.results, `${path}.results`).map(
         (result, resultIndex): RoundResult => {
@@ -448,9 +306,7 @@ const fiveRoundDailyCaseSchema: Schema<FiveRoundDailyCase> = {
 export const dailyCaseSchema: Schema<DailyCase> = {
   parse(value) {
     const parsed = record(value, 'daily case');
-    if (parsed.schemaVersion === 1) return legacyDailyCaseSchema.parse(value);
-    if (parsed.schemaVersion === 2)
-      return fiveRoundDailyCaseSchema.parse(value);
-    fail('schemaVersion', 'must equal 1 or 2');
+    if (parsed.schemaVersion !== 2) fail('schemaVersion', 'must equal 2');
+    return fiveRoundDailyCaseSchema.parse(value);
   },
 };
