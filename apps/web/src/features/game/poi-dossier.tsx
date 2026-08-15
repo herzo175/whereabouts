@@ -3,6 +3,7 @@ import { X } from 'lucide-react';
 import { useEffect, useId, useRef, useState } from 'react';
 
 type PoiDossierProps = {
+  detail?: 'full' | 'identity';
   poi: Poi | null;
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -10,6 +11,7 @@ type PoiDossierProps = {
 };
 
 export function PoiDossier({
+  detail = 'full',
   poi,
   open,
   onOpenChange,
@@ -100,19 +102,19 @@ export function PoiDossier({
           </button>
         </div>
 
-        {poi.image ? (
+        {detail === 'full' && poi.image ? (
           <img
             alt={poi.image.alt}
             className="h-44 w-full object-cover"
             src={poi.image.url}
           />
-        ) : (
+        ) : detail === 'full' ? (
           <div
             aria-label="Archival image unavailable"
             className="h-28 bg-[linear-gradient(135deg,rgba(29,78,70,0.95),rgba(13,25,36,1)_52%,rgba(135,104,44,0.72))]"
             role="img"
           />
-        )}
+        ) : null}
 
         <div className="space-y-2 px-5 py-5">
           <h2 className="text-2xl font-semibold tracking-tight" id={titleId}>
@@ -121,7 +123,7 @@ export function PoiDossier({
           <p className="text-base text-muted-foreground" id={descriptionId}>
             {poi.city}, {poi.country}
           </p>
-          {poi.blurb ? (
+          {detail === 'full' && poi.blurb ? (
             <p className="pt-2 text-sm leading-relaxed text-foreground/85">
               {poi.blurb}
             </p>

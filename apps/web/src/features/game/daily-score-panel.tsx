@@ -1,0 +1,108 @@
+import type { FiveRoundDailyCase } from '@whereabouts/case-content';
+import {
+  type FiveRoundProgress,
+  getTotalScore,
+} from '@whereabouts/game-engine';
+import { useState } from 'react';
+import { buildShareText } from './share';
+
+type DailyScorePanelProps = {
+  caseData: FiveRoundDailyCase;
+  onShare: (
+    caseData: FiveRoundDailyCase,
+    progress: FiveRoundProgress,
+  ) => void | Promise<void>;
+  progress: FiveRoundProgress;
+};
+
+const tierStyles = {
+  correct: 'border-emerald-300 bg-emerald-400/20 text-emerald-200',
+  hot: 'border-orange-300 bg-orange-400/20 text-orange-200',
+  warm: 'border-yellow-300 bg-yellow-400/20 text-yellow-100',
+  cold: 'border-sky-300 bg-sky-400/20 text-sky-200',
+} as const;
+
+export function DailyScorePanel({
+  caseData,
+  onShare,
+  progress,
+}: DailyScorePanelProps) {
+  const [copyState, setCopyState] = useState<
+    'idle' | 'copying' | 'copied' | 'error'
+  >('idle');
+
+  const copyResult = async () => {
+    setCopyState('copying');
+    try {
+      await onShare(caseData, progress);
+      setCopyState('copied');
+    } catch {
+      setCopyState('error');
+    }
+  };
+
+  return (
+    <section aria-labelledby="daily-score-title" className="space-y-6">
+      <header className="space-y-2 border-b border-rule pb-5">
+        <p className="text-xs font-semibold tracking-[0.18em] text-cyan uppercase">
+          All five rounds complete
+        </p>
+        <h1 className="font-serif text-4xl" id="daily-score-title">
+          Daily score
+        </h1>
+        <p className="text-2xl font-semibold text-brass">
+          {getTotalScore(progress)} / 500
+        </p>
+      </header>
+
+      <ol className="grid grid-cols-5 gap-2" aria-label="Round results">
+        {progress.guesses.map((guess, index) => (
+          <li className="space-y-2 text-center" key={guess.roundId}>
+            <span
+              aria-hidden="true"
+              className={`mx-auto grid size-11 place-items-center rounded-full border ${tierStyles[guess.tier]}`}
+            >
+              {guess.points}
+            </span>
+            <span className="block text-xs text-muted-foreground">
+              Round {index + 1}
+            </span>
+            <span className="block text-xs font-semibold capitalize">
+              {guess.tier}
+            </span>
+          </li>
+        ))}
+      </ol>
+
+      <button
+        className="min-h-12 w-full rounded-md border border-brass bg-brass px-5 text-sm font-bold tracking-[0.12em] text-ink uppercase hover:bg-paper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brass"
+        disabled={copyState === 'copying'}
+        onClick={() => void copyResult()}
+        type="button"
+      >
+        {copyState === 'copied'
+          ? 'Copied'
+          : copyState === 'error'
+            ? 'Copy failed'
+            : copyState === 'copying'
+              ? 'Copying…'
+              : 'Copy result'}
+      </button>
+      {copyState === 'error' ? (
+        <label className="block space-y-2 text-sm text-muted-foreground">
+          Copy this result manually
+          <textarea
+            className="min-h-32 w-full resize-y rounded-md border border-rule bg-ink p-3 font-mono text-sm text-paper"
+            onFocus={(event) => event.currentTarget.select()}
+            readOnly
+            value={buildShareText(
+              caseData,
+              progress,
+              typeof window === 'undefined' ? '' : window.location.origin,
+            )}
+          />
+        </label>
+      ) : null}
+    </section>
+  );
+}

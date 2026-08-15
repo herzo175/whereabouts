@@ -1,7 +1,7 @@
 import type { Poi } from '@whereabouts/case-content';
 import type { WikipediaExtract } from './wikipedia.js';
 
-export const PROMPT_VERSION = 4;
+export const PROMPT_VERSION = 6;
 
 function compactExtract(extract: string, limit: number): string {
   if (extract.length <= limit) return extract;
@@ -19,33 +19,20 @@ export function buildCasePrompt(
     poi: { id: poi.id, name: poi.name, city: poi.city, country: poi.country },
     extract: compactExtract(
       extracts[index]?.extract ?? '',
-      index === 0 ? 30_000 : 3_500,
+      index < 5 ? 12_000 : 3_500,
     ),
   }));
-  return `You are the case writer for Whereabouts, a difficult daily geography deduction game. The player sees all 25 candidate POIs before reading the first clue. Write only from the supplied catalog records and extracts.
+  return `You are the case writer for Whereabouts, a difficult daily geography deduction game. The player sees all 25 candidate POIs on a shared board. Write only from the supplied catalog records and extracts. Do not invent facts.
 
-Return exactly six clues, exactly 24 contextual responses (one for every non-target POI), and a reveal. Use concise intelligence-briefing prose. Every factual statement must be supported by its sourceIds, and each sourceIds field may contain only supplied source IDs. Do not invent facts.
+Return exactly five rounds as JSON. The first five catalog records are the five distinct targets, in order: record 1 is round 1's target through record 5 is round 5's target. For each round return only { clue: { text, sourceIds }, results: [{ poiId, similarityScore, text, sourceIds }] }. The system adds round IDs, target IDs, images, and final tiers; do not return them.
 
-DIFFICULTY CONTRACT
-Before writing, silently compare the target with all 24 distractors. For each clue, estimate how many candidates a careful but non-expert player could still reasonably defend. Do not output that analysis or the candidate count.
+CLUES
+Each round needs one concrete, useful clue: a specific sourced historical, cultural, functional, geographic, or architectural fact that gives a careful player a real reason to choose among the board. It must be independently useful in one shot, not a vague mood or a multi-step clue ladder. Do not name, spell, translate, initial, coordinate, or otherwise reveal that round's target POI name, city, or country. Avoid a fact so uniquely identifying that it trivially answers the round. Cite the target's source ID in each clue.
 
-- Clue 1: incredibly vague but not impossible. It must be true, useful in hindsight, and plausibly fit at least 8 of the 25 candidates. Use one broad theme about historical role, changing use, cultural exchange, engineering purpose, landscape, or public meaning. Do not use proper nouns, named people, named empires, exact century, year, dynasty, religion, language, demonym, continent, country, city, region, architectural style, signature architectural feature, superlative, or unique geographic configuration. Do not mention continents, borders, straits, rivers, seas, coastlines, or cardinal directions. Do not combine individually broad facts when their combination fingerprints the answer.
-- Clue 2: 6–10 plausible candidates. Add one different broad dimension, but retain all Clue 1 restrictions on names, dates, signature features, and unique geography.
-- Clue 3: 5–8 plausible candidates. Introduce a sourced historical relationship, broad era, or functional transition. One proper noun or broad geographic fact is allowed only if it does not identify the target by itself.
-- Clue 4: 4–7 plausible candidates. Add a still non-unique historical or cultural connection. Do not use a named person, exact event, unique artifact, or the target's most famous identifying phrase or feature.
-- Clue 5: 3–5 plausible candidates. Add a useful relationship or feature that narrows a shortlist without proving the answer. Avoid a famous individual, singular incident, quotation, or one-of-a-kind object.
-- Clue 6: 2–4 plausible candidates. Offer a final confirmation context, never a single decisive fact. At least two candidates must remain reasonably defensible from the six clues alone; the player should need their earlier guess feedback to separate them. Still omit the target POI, destination, city, and country names.
+RESULTS
+For every round return exactly 25 results, one for every board POI ID exactly once. Each result needs a numeric similarityScore from 0–100: 100 is most similar and 0 is least similar. Score the known round target 100. Every other result must explain a concrete factual relationship between the guessed POI and the round target; do not merely say they differ or are elsewhere. The system deterministically buckets the 24 non-target results by descending score into 4 hot, 8 warm, and 12 cold results; ties break by POI ID. Do not output a tier.
 
-Read the six clues together before returning them. Rewrite any early clue whose combination of geography, era, function, and architecture makes a famous answer obvious. Each clue must add new information rather than paraphrasing an earlier clue.
-
-CONTEXTUAL RESPONSES
-For every non-target POI, explain a factual relationship between the guessed POI and the target. Cold means weak or distant connection, warm means meaningful partial connection, and hot means strong shared history, function, culture, geography, or design. A response must teach the player why the relationship has that tier, not merely say that the guess is elsewhere or has a different identity. Cite sources for both sides whenever the comparison makes claims about both.
-
-REVEAL
-Write a concise factual summary of the answer. For clueExplanation, walk through all six clues in order and explain the specific fact each clue encoded and how that fact narrowed the candidate field. Name the decisive historical, geographic, functional, or architectural connection behind each clue. Do not use generic filler such as "each clue narrows the field," and do not discuss only the final clue.
-
-SPOILER RULES
-Before the reveal, never state or spell the target POI name, destination name, city, or country. Do not hide those names through initials, wordplay, translations, coordinates, or near-identical aliases. The reveal may name the answer. The target is the first catalog record; use its ID only where a target or POI ID is required.
+Use source IDs for both the guessed POI and the target in every non-correct result so the relationship is grounded on both sides. Use only supplied source IDs, and ensure every factual statement is supported by its sourceIds. Before returning, check each round has the target marked correct once, all 25 IDs exactly once, and no clue leaks its target POI name, city, or country.
 
 CATALOG AND SOURCES:
 ${JSON.stringify(sourceRows)}`;

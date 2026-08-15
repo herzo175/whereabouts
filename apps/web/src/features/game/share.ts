@@ -1,11 +1,14 @@
-import type { DailyCase } from '@whereabouts/case-content';
-import { type GameProgress, getShareTokens } from '@whereabouts/game-engine';
+import type { FiveRoundDailyCase } from '@whereabouts/case-content';
+import {
+  type FiveRoundProgress,
+  getTotalScore,
+} from '@whereabouts/game-engine';
 
 const tokenEmoji = {
   cold: '🔵',
   warm: '🟡',
   hot: '🟠',
-  solved: '🟢',
+  correct: '🟢',
 } as const;
 
 type ShareNavigator = {
@@ -17,21 +20,38 @@ type ShareNavigator = {
 export type ShareResult = 'copied';
 
 export function buildShareText(
-  caseData: DailyCase,
-  progress: GameProgress,
+  caseData: FiveRoundDailyCase,
+  progress: FiveRoundProgress,
   origin: string,
 ): string {
-  if (progress.outcome === 'playing') {
-    throw new Error('Only completed cases can be shared');
+  if (
+    progress.completedAt === undefined ||
+    progress.guesses.length !== caseData.rounds.length ||
+    progress.acknowledgedRoundCount !== caseData.rounds.length
+  ) {
+    throw new Error(
+      'Only completed games with every round revealed and acknowledged can be shared',
+    );
+  }
+  if (
+    progress.caseDate !== caseData.publicationDate ||
+    progress.caseRevision !== caseData.revision
+  ) {
+    throw new Error('Progress does not match this case revision');
+  }
+  if (
+    progress.guesses.some(
+      (guess, index) => caseData.rounds[index]?.id !== guess.roundId,
+    )
+  ) {
+    throw new Error('Progress does not match the round order');
   }
 
-  const tokens = getShareTokens(caseData, progress);
-  const score = progress.outcome === 'won' ? `${tokens.length}/6` : 'X/6';
   const normalizedOrigin = origin.replace(/\/+$/, '');
-
   return [
-    `WHEREABOUTS ${score}`,
-    tokens.map((token) => tokenEmoji[token]).join(' '),
+    'WHEREABOUTS',
+    progress.guesses.map((guess) => tokenEmoji[guess.tier]).join(' '),
+    `${getTotalScore(progress)} / 500`,
     `${normalizedOrigin}/${caseData.publicationDate}`,
   ].join('\n');
 }

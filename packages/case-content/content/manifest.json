@@ -1,10 +1,10 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "cases": {
-    "2026-08-14": {
-      "caseNumber": 20679,
-      "revision": 6,
-      "file": "./cases/2026-08-14/v6.json"
+    "2026-08-15": {
+      "caseNumber": 20680,
+      "revision": 1,
+      "file": "./cases/2026-08-15/v1.json"
     }
   }
 }

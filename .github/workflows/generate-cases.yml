@@ -13,6 +13,9 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-latest
+    outputs:
+      commit_sha: ${{ steps.commit.outputs.commit_sha }}
+      published: ${{ steps.commit.outputs.published }}
     steps:
       - name: Check for midnight Eastern
         id: schedule
@@ -60,7 +63,7 @@ jobs:
           revision=$((highest + 1))
           echo "value=${revision}" >> "$GITHUB_OUTPUT"
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        name: Generate one upcoming case
+        name: Generate today's case
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY || secrets.openrouter_api_key }}
           WIKIMEDIA_USER_AGENT: ${{ secrets.WIKIMEDIA_USER_AGENT || 'Whereabouts/1.0 (https://github.com/herzo175/whereabouts)' }}
@@ -69,9 +72,6 @@ jobs:
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
         name: Format generated case content
         run: pnpm exec biome format --write "packages/case-content/content/cases/${{ steps.dates.outputs.start }}/v${{ steps.revision.outputs.value }}.json"
-      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        name: Validate generated content
-        run: pnpm content:validate
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
         name: Publish today's generated revision
         env:
@@ -115,13 +115,28 @@ jobs:
         run: pnpm content:validate
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
         name: Commit the generated case
+        id: commit
         env:
           START_DATE: ${{ steps.dates.outputs.start }}
           REVISION: ${{ steps.revision.outputs.value }}
         run: |
           git add packages/case-content/content/cases packages/case-content/content/manifest.json
-          git diff --cached --quiet && exit 0
+          if git diff --cached --quiet; then
+            echo "published=false" >> "$GITHUB_OUTPUT"
+            echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "content: add upcoming Whereabouts case ${START_DATE} v${REVISION}"
-          git push origin main
+          git commit -m "content: add Whereabouts case ${START_DATE} v${REVISION}"
+          git push origin HEAD:main
+          echo "published=true" >> "$GITHUB_OUTPUT"
+          echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    needs: generate
+    if: needs.generate.outputs.published == 'true'
+    uses: ./.github/workflows/deploy-fly.yml
+    with:
+      ref: ${{ needs.generate.outputs.commit_sha }}
+    secrets: inherit

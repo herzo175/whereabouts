@@ -1,0 +1,1392 @@
+{
+  "schemaVersion": 2,
+  "publicationDate": "2026-08-15",
+  "revision": 1,
+  "caseNumber": 20680,
+  "pois": [
+    {
+      "id": "djerba",
+      "name": "Djerba",
+      "city": "Medenine Governorate",
+      "country": "Tunisia",
+      "latitude": 33.7837,
+      "longitude": 10.8833,
+      "wikipediaTitle": "Djerba",
+      "blurb": "Djerba (; Arabic: جربة, romanized: Jirba, IPA: [ˈʒɪrbæ] ; Berber languages: Ǧerba; Italian: Meninge, Girba), also transliterated as Jerba or Jarbah, is a Tunisian island and the largest island of North Africa at 514 square kilometers (198 sq mi), in the Gulf of Gabès, off the…",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Djerba_Island.jpeg/1280px-Djerba_Island.jpeg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Djerba",
+        "attribution": "NASA Earth Observatory images by Lauren Dauphin, using Landsat data from the U.S. Geological Survey. Story by Adam Voiland. · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Djerba_Island.jpeg"
+      }
+    },
+    {
+      "id": "amami-oshima-island-tokunoshima-island-northern-part-of-okinawa-island-and-iriomote-island",
+      "name": "Amami-Ōshima Island, Tokunoshima Island, northern part of Okinawa Island, and Iriomote Island",
+      "city": "Kagoshima Prefecture",
+      "country": "Japan",
+      "latitude": 28.279166666,
+      "longitude": 129.378333333,
+      "wikipediaTitle": "Amami-Ōshima Island, Tokunoshima Island, northern part of Okinawa Island, and Iriomote Island",
+      "blurb": "Amami-Ōshima Island, Tokunoshima Island, northern part of Okinawa Island, and Iriomote Island (奄美大島、徳之島、沖縄島北部及び西表島) is a serial UNESCO World Heritage Site consisting of five component parts on four Japanese islands in the Ryukyu Arc (Nansei Islands).",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Amami_beach.jpg/1280px-Amami_beach.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Amami-Ōshima Island, Tokunoshima Island, northern part of Okinawa Island, and Iriomote Island",
+        "attribution": "TANAKA Juuyoh (田中十洋) · CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "id": "acropolis-athens",
+      "name": "Acropolis of Athens",
+      "city": "Athens",
+      "country": "Greece",
+      "latitude": 37.9715,
+      "longitude": 23.7267,
+      "wikipediaTitle": "Acropolis of Athens",
+      "blurb": "The Acropolis of Athens (Ancient Greek: ἡ Ἀκρόπολις τῶν Ἀθηνῶν, romanized: hē Akropolis tōn Athēnōn; Modern Greek: Ακρόπολη Αθηνών, romanized: Akrópoli Athinón) is an ancient citadel located on a rocky outcrop above the city of Athens, Greece, and contains the remains of…",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/1029_Acropolis_of_Athens_in_Greece_at_night_Photo_by_Giles_Laurent.jpg/1280px-1029_Acropolis_of_Athens_in_Greece_at_night_Photo_by_Giles_Laurent.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Acropolis of Athens",
+        "attribution": "Giles Laurent · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "rapa-nui-national-park",
+      "name": "Rapa Nui National Park",
+      "city": "Isla de Pascua Province",
+      "country": "Chile",
+      "latitude": -27.072877,
+      "longitude": -109.348579,
+      "wikipediaTitle": "Rapa Nui National Park",
+      "blurb": "Rapa Nui National Park (Spanish: Parque nacional Rapa Nui) is a national park and UNESCO World Heritage Site located on Easter Island, Chile.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Ahu-Akivi-1.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Rapa Nui National Park",
+        "attribution": "Ian Sewell · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    },
+    {
+      "id": "condes-de-argillo-palace",
+      "name": "Condes de Argillo Palace",
+      "city": "Morata de Jalón",
+      "country": "Spain",
+      "latitude": 41.47361111,
+      "longitude": -1.47611111,
+      "wikipediaTitle": "Condes de Argillo Palace",
+      "blurb": "The Condes de Argillo Palace (Spanish: Palacio de los Condes de Argillo) is a historical building in Morata de Jalón, Aragon, Spain.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Morata_de_Jal%C3%B3n_-_Palacio_del_conde_de_Morata_-_Iglesia.jpg/1280px-Morata_de_Jal%C3%B3n_-_Palacio_del_conde_de_Morata_-_Iglesia.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Condes de Argillo Palace",
+        "attribution": "Ecelan · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "psaca-monastery",
+      "name": "Psača Monastery",
+      "city": "Psača",
+      "country": "North Macedonia",
+      "latitude": 42.155277777,
+      "longitude": 22.212222222,
+      "wikipediaTitle": "Psača Monastery",
+      "blurb": "Psača Monastery (Macedonian: Псача манастир) is an Eastern Orthodox monastery in the village of Psača, North Macedonia. It was built by the Sebastokrator Vlatko Paskačić and his father Duke Paskač around 1354.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/%D0%95%D0%BA%D1%81%D0%BF%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D1%98%D0%B0%D0%A0%D0%B0%D0%BD%D0%BA%D0%BE%D0%B2%D1%86%D0%B582.jpg/1280px-%D0%95%D0%BA%D1%81%D0%BF%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D1%98%D0%B0%D0%A0%D0%B0%D0%BD%D0%BA%D0%BE%D0%B2%D1%86%D0%B582.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Psača Monastery",
+        "attribution": "Petrovskyz · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "soltaniyeh",
+      "name": "Soltaniyeh",
+      "city": "Central District",
+      "country": "Iran",
+      "latitude": 36.434722,
+      "longitude": 48.7975,
+      "wikipediaTitle": "Soltaniyeh",
+      "blurb": "Soltaniyeh (Persian: سلطانيه) is a city in the Central District of Soltaniyeh County, Zanjan province, Iran, serving as capital of both the county and the district.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Soltaniyeh_Dome.JPG/1280px-Soltaniyeh_Dome.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Soltaniyeh",
+        "attribution": "Hammu-rapium · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "tour-triangle",
+      "name": "Tour Triangle",
+      "city": "15th arrondissement of Paris",
+      "country": "France",
+      "latitude": 48.831666666,
+      "longitude": 2.285833333,
+      "wikipediaTitle": "Tour Triangle",
+      "blurb": "The Tour Triangle (French pronunciation: [tuʁ tʁiɑ̃ɡl]; lit.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Tour_Triangle_-_Juillet_2025.jpg/1280px-Tour_Triangle_-_Juillet_2025.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Tour Triangle",
+        "attribution": "Vincevinss · CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+      }
+    },
+    {
+      "id": "charleston-county-courthouse",
+      "name": "Charleston County Courthouse",
+      "city": "South Carolina",
+      "country": "United States",
+      "latitude": 32.776615,
+      "longitude": -79.93132,
+      "wikipediaTitle": "Charleston County Courthouse",
+      "blurb": "Charleston County Courthouse (1790–1792) is a Neoclassical building in Charleston, South Carolina, designed by Irish architect James Hoban.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Charleston_County_Courthouse_2013.jpg/1280px-Charleston_County_Courthouse_2013.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Charleston County Courthouse",
+        "attribution": "ProfReader · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "new-zealand-subantarctic-islands",
+      "name": "New Zealand Subantarctic Islands",
+      "city": "New Zealand",
+      "country": "New Zealand",
+      "latitude": -50.75,
+      "longitude": 166.104,
+      "wikipediaTitle": "New Zealand Subantarctic Islands",
+      "blurb": "The New Zealand Subantarctic Islands comprise the five southernmost groups of the New Zealand outlying islands. They are collectively designated as a UNESCO World Heritage Site.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Karta_NZ_Subantarctic_islands.PNG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "New Zealand Subantarctic Islands",
+        "attribution": "Hobe / Holger Behr · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Karta_NZ_Subantarctic_islands.PNG"
+      }
+    },
+    {
+      "id": "shibam",
+      "name": "Shibam",
+      "city": "Shibam District",
+      "country": "Yemen",
+      "latitude": 15.926944444,
+      "longitude": 48.626666666,
+      "wikipediaTitle": "Shibam",
+      "blurb": "Shibam (Arabic: شِبَام, romanized: Shibām), officially the Old Walled City of Shibam (Arabic: مدينة شبام القديمة وسورها), is a town in Wadi Hadhramaut in eastern Yemen with about 7,000 inhabitants.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/%D9%85%D8%AF%D9%8A%D9%86%D8%A9_%D8%B4%D8%A8%D8%A7%D9%85_%D8%AD%D8%B6%D8%B1%D9%85%D9%88%D8%AA.jpg/1280px-%D9%85%D8%AF%D9%8A%D9%86%D8%A9_%D8%B4%D8%A8%D8%A7%D9%85_%D8%AD%D8%B6%D8%B1%D9%85%D9%88%D8%AA.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Shibam",
+        "attribution": "Bkar6190 · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "tusi-sites",
+      "name": "Tusi Sites",
+      "city": "People's Republic of China",
+      "country": "People's Republic of China",
+      "latitude": 28.998611111,
+      "longitude": 109.966944444,
+      "wikipediaTitle": "Tusi Sites",
+      "blurb": "The Tusi Sites (Chinese: 土司遗址; pinyin: Tǔsī Yízhǐ) refer to the three ancient Tusi sites in China that were designated by UNESCO as a World Heritage Site on July 3, 2015.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/%E6%B5%B7%E9%BE%99%E5%B1%AF_%E6%9C%9D%E5%A4%A9%E5%85%B3.jpg/1280px-%E6%B5%B7%E9%BE%99%E5%B1%AF_%E6%9C%9D%E5%A4%A9%E5%85%B3.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Tusi Sites",
+        "attribution": "Alphaarea · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "lincoln-school-madison-wisconsin",
+      "name": "Lincoln School (Madison, Wisconsin)",
+      "city": "Madison",
+      "country": "United States",
+      "latitude": 43.083213466,
+      "longitude": -89.380388209,
+      "wikipediaTitle": "Lincoln School (Madison, Wisconsin)",
+      "blurb": "Lincoln School is a historic school building at 728 E. Gorham Street in Madison, Wisconsin. The school was built in 1915 on the site of the Second Ward School, which had been in operation since 1866.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Lincoln_School_Madison_Wisconsin_2021-3750.jpg/1280px-Lincoln_School_Madison_Wisconsin_2021-3750.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Lincoln School (Madison, Wisconsin)",
+        "attribution": "Paul R. Burley · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "dambulla-cave-temple",
+      "name": "Dambulla cave temple",
+      "city": "Matale District",
+      "country": "Sri Lanka",
+      "latitude": 7.85666667,
+      "longitude": 80.64916667,
+      "wikipediaTitle": "Dambulla cave temple",
+      "blurb": "Dambulla cave temple (Sinhala: දඹුල්ල රජ මහා විහාරය, romanized: Dam̆būlla Raja Maha Vihāraya; Tamil: தம்புள்ளை பொற்கோவில், romanized: Tampuḷḷai Poṟkōvil), also known as the Golden Temple of Dambulla, is a World Heritage Site (1991) in Sri Lanka, situated in the central part of…",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Dambulla-buddhastupa.jpg/1280px-Dambulla-buddhastupa.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Dambulla cave temple",
+        "attribution": "Lankapic · CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
+      }
+    },
+    {
+      "id": "coiba",
+      "name": "Coiba",
+      "city": "Veraguas Province",
+      "country": "Panama",
+      "latitude": 7.48,
+      "longitude": -81.79,
+      "wikipediaTitle": "Coiba",
+      "blurb": "Coiba (Spanish pronunciation: [ˈkojβa]) is the largest island in Central America, with an area of 494 km2 (191 sq mi), off the Pacific coast of the Panamanian province of Veraguas.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Coiba.JPG/1280px-Coiba.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Coiba",
+        "attribution": "Seibert · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "vinales-valley",
+      "name": "Viñales Valley",
+      "city": "Pinar del Río Province",
+      "country": "Cuba",
+      "latitude": 22.616666666,
+      "longitude": -83.716666666,
+      "wikipediaTitle": "Viñales Valley",
+      "blurb": "Viñales Valley (Spanish: Valle de Viñales) is a karstic depression in Cuba. The valley has an area of 132 km2 (51 sq mi) and is located in the Sierra de los Órganos mountains (part of Guaniguanico range), just north of Viñales in the Pinar del Río Province.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Vi%C3%B1ales_Valley.jpg/1280px-Vi%C3%B1ales_Valley.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Viñales Valley",
+        "attribution": "Severin.stalder · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "lorsch-abbey",
+      "name": "Lorsch Abbey",
+      "city": "Lorsch",
+      "country": "Germany",
+      "latitude": 49.65369,
+      "longitude": 8.56858,
+      "wikipediaTitle": "Lorsch Abbey",
+      "blurb": "Lorsch Abbey, otherwise the Imperial Abbey of Lorsch (German: Reichsabtei Lorsch; Latin: Laureshamense Monasterium or Laurissa), is a former Imperial abbey in Lorsch, Germany, about 10 km (6.2 mi) east of Worms.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Kloster_Lorsch_06.jpg/1280px-Kloster_Lorsch_06.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Lorsch Abbey",
+        "attribution": "Kuebi - Armin Kübelbeck · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "painted-churches-in-the-troodos-region",
+      "name": "Painted Churches in the Troodos Region",
+      "city": "Limassol District",
+      "country": "Cyprus",
+      "latitude": 34.920277777,
+      "longitude": 33.095833333,
+      "wikipediaTitle": "Painted Churches in the Troodos Region",
+      "blurb": "The Painted Churches in the Troödos Region (Greek: Τοιχογραφημένοι ναοί στην περιοχή του όρους Τρόοδος, romanized: Toichografiménoi naoí stin periochí tou órous Tróodos) is a UNESCO World Heritage Site in the Troödos Mountains of central Cyprus.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Asinou_-_Kirche_Narthex_4_Kuppel.jpg/1280px-Asinou_-_Kirche_Narthex_4_Kuppel.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Painted Churches in the Troodos Region",
+        "attribution": "Xenophon · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "rock-carvings-in-tanum",
+      "name": "Rock Carvings in Tanum",
+      "city": "Tanumshede",
+      "country": "Sweden",
+      "latitude": 58.69995,
+      "longitude": 11.33641,
+      "wikipediaTitle": "Rock Carvings in Tanum",
+      "blurb": "The Rock Carvings in Tanum (Swedish: Hällristningsområdet i Tanum) are a collection of petroglyphs near Tanumshede, Bohuslän, Sweden, which were declared a World Heritage Site by UNESCO in 1994 because of their high concentration.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Tanumshede_2005_rock_carvings_5.jpg/1280px-Tanumshede_2005_rock_carvings_5.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Rock Carvings in Tanum",
+        "attribution": "Wikimedia Commons contributor · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Tanumshede_2005_rock_carvings_5.jpg"
+      }
+    },
+    {
+      "id": "citadel-of-the-ho-dynasty",
+      "name": "Citadel of the Hồ Dynasty",
+      "city": "Vietnam",
+      "country": "Vietnam",
+      "latitude": 20.078055555,
+      "longitude": 105.604722222,
+      "wikipediaTitle": "Citadel of the Hồ Dynasty",
+      "blurb": "The Citadel of the Hồ Dynasty (Vietnamese: Thành nhà Hồ, chữ Nho: 城茹胡; also called Tây Đô/西都castle or Tây Giai castle) is a 15th-century stone fortress in Thanh Hóa province, Vietnam.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Tay_Do_castle_South_gate.JPG/1280px-Tay_Do_castle_South_gate.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Citadel of the Hồ Dynasty",
+        "attribution": "vi:Thành viên:Silviculture · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Tay_Do_castle_South_gate.JPG"
+      }
+    },
+    {
+      "id": "garamba-national-park",
+      "name": "Garamba National Park",
+      "city": "Orientale Province",
+      "country": "Democratic Republic of the Congo",
+      "latitude": 4,
+      "longitude": 29.25,
+      "wikipediaTitle": "Garamba National Park",
+      "blurb": "Garamba National Park (French: Parc national de la Garamba) is a national park in the north-eastern Democratic Republic of the Congo covering nearly 5,200 km2 (2,000 sq mi).",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Garamba_National_Park_overhead.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Garamba National Park",
+        "attribution": "Nuria Ortega · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "cahokia",
+      "name": "Cahokia",
+      "city": "Collinsville",
+      "country": "United States",
+      "latitude": 38.653888888,
+      "longitude": -90.064444444,
+      "wikipediaTitle": "Cahokia",
+      "blurb": "The Cahokia Mounds (also simply known as Cahokia) (11 MS 2) is the site of a Native American city (which existed c. 1050–1350 AD) directly across the Mississippi River from present-day St.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Monks_Mound_-_Summer_2024.jpg/1280px-Monks_Mound_-_Summer_2024.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Cahokia",
+        "attribution": "Skubasteve834 · CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+      }
+    },
+    {
+      "id": "k-gari",
+      "name": "K'gari",
+      "city": "Fraser Coast Region",
+      "country": "Australia",
+      "latitude": -25.24,
+      "longitude": 153.15,
+      "wikipediaTitle": "K'gari",
+      "blurb": "K'gari (Batjala for 'Paradise', English: GAH-ree), also known by its former name Fraser Island, is a World Heritage-listed sand island along the south-eastern coast in the Wide Bay–Burnett region of Queensland, Australia.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Indian_Head_view_on_Fraser_Island_%28May_2016%29.jpg/1280px-Indian_Head_view_on_Fraser_Island_%28May_2016%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "K'gari",
+        "attribution": "Rhain · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "phong-nha-ke-bang-national-park",
+      "name": "Phong Nha–Kẻ Bàng National Park",
+      "city": "Bố Trạch",
+      "country": "Vietnam",
+      "latitude": 17.533333333,
+      "longitude": 106.15,
+      "wikipediaTitle": "Phong Nha–Kẻ Bàng National Park",
+      "blurb": "Phong Nha–Kẻ Bàng (Vietnamese: Vườn quốc gia Phong Nha–Kẻ Bàng, Vietnamese pronunciation: [vɯ̀ən kʷǒk.ʑā fɔ̄ŋ.ɲā kɛ̂.ɓàŋ]) is a national park and UNESCO World Heritage Site in the Bố Trạch and Minh Hóa Commune of central Quảng Trị Province in the North Central Coast region of…",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Phongnhakebang6.jpg/1280px-Phongnhakebang6.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Phong Nha–Kẻ Bàng National Park",
+        "attribution": "Genghiskhanviet · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Phongnhakebang6.jpg"
+      }
+    },
+    {
+      "id": "historic-centre-of-cusco",
+      "name": "Historic Centre of Cusco",
+      "city": "Cusco Province",
+      "country": "Peru",
+      "latitude": -13.518333,
+      "longitude": -71.978056,
+      "wikipediaTitle": "Historic Centre of Cusco",
+      "blurb": "The Historic Centre of Cusco (Spanish: Centro histórico de Cusco, CHC), is the historic city centre of the Peruvian city of Cusco, the former capital of the Inca Empire.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Vista_de_Cusco%2C_Per%C3%BA%2C_2015-07-31%2C_DD_47.jpg/1280px-Vista_de_Cusco%2C_Per%C3%BA%2C_2015-07-31%2C_DD_47.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Historic Centre of Cusco",
+        "attribution": "Diego Delso · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "round-1",
+      "targetPoiId": "tusi-sites",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/%E6%B5%B7%E9%BE%99%E5%B1%AF_%E6%9C%9D%E5%A4%A9%E5%85%B3.jpg/1280px-%E6%B5%B7%E9%BE%99%E5%B1%AF_%E6%9C%9D%E5%A4%A9%E5%85%B3.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Tusi Sites",
+        "attribution": "Alphaarea · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "This serial heritage property preserves a hereditary governance system used to administer minority regions for roughly a millennium, with three separate sites in mountainous terrain.",
+        "sourceIds": ["source-01"]
+      },
+      "results": [
+        {
+          "poiId": "tusi-sites",
+          "tier": "correct",
+          "text": "Correct: three sites exemplify a hereditary governance system that survived from the 13th to 20th centuries.",
+          "sourceIds": ["source-01"]
+        },
+        {
+          "poiId": "historic-centre-of-cusco",
+          "tier": "hot",
+          "text": "Both are heritage places shaped by imperial political administration and later historical change.",
+          "sourceIds": ["source-09", "source-01"]
+        },
+        {
+          "poiId": "soltaniyeh",
+          "tier": "hot",
+          "text": "Both preserve evidence of a former imperial capital and centralized rulership.",
+          "sourceIds": ["source-20", "source-01"]
+        },
+        {
+          "poiId": "shibam",
+          "tier": "hot",
+          "text": "Both are historic settlements whose form reflects long-term regional political organization.",
+          "sourceIds": ["source-07", "source-01"]
+        },
+        {
+          "poiId": "citadel-of-the-ho-dynasty",
+          "tier": "hot",
+          "text": "Both are heritage places associated with historic dynastic rule and centralized authority.",
+          "sourceIds": ["source-25", "source-01"]
+        },
+        {
+          "poiId": "cahokia",
+          "tier": "warm",
+          "text": "Both document large-scale indigenous or regional political organization through historic remains.",
+          "sourceIds": ["source-19", "source-01"]
+        },
+        {
+          "poiId": "lorsch-abbey",
+          "tier": "warm",
+          "text": "Both are heritage sites tied to institutions that operated across successive political eras.",
+          "sourceIds": ["source-11", "source-01"]
+        },
+        {
+          "poiId": "acropolis-athens",
+          "tier": "warm",
+          "text": "Both preserve major historic centers associated with state power and political history.",
+          "sourceIds": ["source-18", "source-01"]
+        },
+        {
+          "poiId": "dambulla-cave-temple",
+          "tier": "warm",
+          "text": "Both developed through the patronage of successive rulers over many centuries.",
+          "sourceIds": ["source-08", "source-01"]
+        },
+        {
+          "poiId": "painted-churches-in-the-troodos-region",
+          "tier": "warm",
+          "text": "Both comprise multiple historic components reflecting long-lived regional institutions.",
+          "sourceIds": ["source-14", "source-01"]
+        },
+        {
+          "poiId": "psaca-monastery",
+          "tier": "warm",
+          "text": "Both preserve material evidence of medieval authority and local elite patronage.",
+          "sourceIds": ["source-16", "source-01"]
+        },
+        {
+          "poiId": "condes-de-argillo-palace",
+          "tier": "warm",
+          "text": "Both are architectural evidence of hereditary elites and their regional power.",
+          "sourceIds": ["source-06", "source-01"]
+        },
+        {
+          "poiId": "charleston-county-courthouse",
+          "tier": "warm",
+          "text": "Both relate to systems of governance, though this site is a later civic building.",
+          "sourceIds": ["source-21", "source-01"]
+        },
+        {
+          "poiId": "lincoln-school-madison-wisconsin",
+          "tier": "cold",
+          "text": "Both are protected historic places, but this one served a modern educational function.",
+          "sourceIds": ["source-05", "source-01"]
+        },
+        {
+          "poiId": "rapa-nui-national-park",
+          "tier": "cold",
+          "text": "Both preserve cultural heritage associated with distinctive local communities.",
+          "sourceIds": ["source-13", "source-01"]
+        },
+        {
+          "poiId": "djerba",
+          "tier": "cold",
+          "text": "Both have long histories involving indigenous communities and changing external rulers.",
+          "sourceIds": ["source-04", "source-01"]
+        },
+        {
+          "poiId": "vinales-valley",
+          "tier": "cold",
+          "text": "Both are heritage landscapes where traditional local practices are part of their significance.",
+          "sourceIds": ["source-24", "source-01"]
+        },
+        {
+          "poiId": "coiba",
+          "tier": "cold",
+          "text": "Both became protected heritage places after earlier historical human use and political history.",
+          "sourceIds": ["source-02", "source-01"]
+        },
+        {
+          "poiId": "garamba-national-park",
+          "tier": "cold",
+          "text": "Both are UNESCO-listed places, but this one centers on wildlife habitat rather than governance remains.",
+          "sourceIds": ["source-10", "source-01"]
+        },
+        {
+          "poiId": "new-zealand-subantarctic-islands",
+          "tier": "cold",
+          "text": "Both are UNESCO properties comprising multiple component places.",
+          "sourceIds": ["source-12", "source-01"]
+        },
+        {
+          "poiId": "amami-oshima-island-tokunoshima-island-northern-part-of-okinawa-island-and-iriomote-island",
+          "tier": "cold",
+          "text": "Both are serial heritage properties with several component areas.",
+          "sourceIds": ["source-03", "source-01"]
+        },
+        {
+          "poiId": "k-gari",
+          "tier": "cold",
+          "text": "Both are protected heritage places with indigenous cultural connections.",
+          "sourceIds": ["source-17", "source-01"]
+        },
+        {
+          "poiId": "phong-nha-ke-bang-national-park",
+          "tier": "cold",
+          "text": "Both are UNESCO properties containing multiple significant areas, though this one is primarily karst landscape.",
+          "sourceIds": ["source-23", "source-01"]
+        },
+        {
+          "poiId": "rock-carvings-in-tanum",
+          "tier": "cold",
+          "text": "Both preserve evidence of past societies through protected heritage remains.",
+          "sourceIds": ["source-22", "source-01"]
+        },
+        {
+          "poiId": "tour-triangle",
+          "tier": "cold",
+          "text": "Both involve significant architectural planning, but this is a contemporary office tower project.",
+          "sourceIds": ["source-15", "source-01"]
+        }
+      ]
+    },
+    {
+      "id": "round-2",
+      "targetPoiId": "coiba",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Coiba.JPG/1280px-Coiba.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Coiba",
+        "attribution": "Seibert · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "This island became isolated from the mainland after postglacial sea-level rise, producing many endemic animals; a former penal colony closed in 2004.",
+        "sourceIds": ["source-02"]
+      },
+      "results": [
+        {
+          "poiId": "coiba",
+          "tier": "correct",
+          "text": "Correct: isolation produced endemic subspecies, and its penal colony closed in 2004.",
+          "sourceIds": ["source-02"]
+        },
+        {
+          "poiId": "amami-oshima-island-tokunoshima-island-northern-part-of-okinawa-island-and-iriomote-island",
+          "tier": "hot",
+          "text": "Both are island biodiversity properties recognized for endemic species.",
+          "sourceIds": ["source-03", "source-02"]
+        },
+        {
+          "poiId": "new-zealand-subantarctic-islands",
+          "tier": "hot",
+          "text": "Both are island groups protected for distinctive wildlife and ecological value.",
+          "sourceIds": ["source-12", "source-02"]
+        },
+        {
+          "poiId": "k-gari",
+          "tier": "hot",
+          "text": "Both are World Heritage islands with protected forests and surrounding waters.",
+          "sourceIds": ["source-17", "source-02"]
+        },
+        {
+          "poiId": "djerba",
+          "tier": "hot",
+          "text": "Both are large islands with long human histories and protected heritage status.",
+          "sourceIds": ["source-04", "source-02"]
+        },
+        {
+          "poiId": "garamba-national-park",
+          "tier": "warm",
+          "text": "Both are protected areas focused on conserving threatened wildlife and habitats.",
+          "sourceIds": ["source-10", "source-02"]
+        },
+        {
+          "poiId": "rapa-nui-national-park",
+          "tier": "warm",
+          "text": "Both are remote Pacific island heritage properties managed as national parks.",
+          "sourceIds": ["source-13", "source-02"]
+        },
+        {
+          "poiId": "phong-nha-ke-bang-national-park",
+          "tier": "warm",
+          "text": "Both are UNESCO national parks protecting extensive natural environments.",
+          "sourceIds": ["source-23", "source-02"]
+        },
+        {
+          "poiId": "vinales-valley",
+          "tier": "warm",
+          "text": "Both are UNESCO natural landscapes with distinctive local ecosystems.",
+          "sourceIds": ["source-24", "source-02"]
+        },
+        {
+          "poiId": "cahokia",
+          "tier": "warm",
+          "text": "Both are large protected heritage sites with important archaeological and historical records.",
+          "sourceIds": ["source-19", "source-02"]
+        },
+        {
+          "poiId": "tusi-sites",
+          "tier": "warm",
+          "text": "Both are UNESCO properties whose significance includes distinctive regional communities and history.",
+          "sourceIds": ["source-01", "source-02"]
+        },
+        {
+          "poiId": "shibam",
+          "tier": "warm",
+          "text": "Both have UNESCO status and histories shaped by difficult environments.",
+          "sourceIds": ["source-07", "source-02"]
+        },
+        {
+          "poiId": "dambulla-cave-temple",
+          "tier": "warm",
+          "text": "Both are protected heritage places, though this site is a religious cave complex.",
+          "sourceIds": ["source-08", "source-02"]
+        },
+        {
+          "poiId": "painted-churches-in-the-troodos-region",
+          "tier": "cold",
+          "text": "Both are UNESCO properties composed of multiple protected elements.",
+          "sourceIds": ["source-14", "source-02"]
+        },
+        {
+          "poiId": "historic-centre-of-cusco",
+          "tier": "cold",
+          "text": "Both preserve long histories of changing societies and protected heritage.",
+          "sourceIds": ["source-09", "source-02"]
+        },
+        {
+          "poiId": "lorsch-abbey",
+          "tier": "cold",
+          "text": "Both are UNESCO sites with important historical records and conservation concerns.",
+          "sourceIds": ["source-11", "source-02"]
+        },
+        {
+          "poiId": "soltaniyeh",
+          "tier": "cold",
+          "text": "Both are UNESCO-listed places with significant historical importance.",
+          "sourceIds": ["source-20", "source-02"]
+        },
+        {
+          "poiId": "acropolis-athens",
+          "tier": "cold",
+          "text": "Both are UNESCO heritage places containing remains of earlier societies.",
+          "sourceIds": ["source-18", "source-02"]
+        },
+        {
+          "poiId": "rock-carvings-in-tanum",
+          "tier": "cold",
+          "text": "Both preserve material evidence of past human activity in protected settings.",
+          "sourceIds": ["source-22", "source-02"]
+        },
+        {
+          "poiId": "psaca-monastery",
+          "tier": "cold",
+          "text": "Both are protected historic places, though this is a medieval religious complex.",
+          "sourceIds": ["source-16", "source-02"]
+        },
+        {
+          "poiId": "condes-de-argillo-palace",
+          "tier": "cold",
+          "text": "Both are heritage places with significant historic structures.",
+          "sourceIds": ["source-06", "source-02"]
+        },
+        {
+          "poiId": "charleston-county-courthouse",
+          "tier": "cold",
+          "text": "Both retain evidence of past political institutions and changing uses.",
+          "sourceIds": ["source-21", "source-02"]
+        },
+        {
+          "poiId": "lincoln-school-madison-wisconsin",
+          "tier": "cold",
+          "text": "Both are protected historic places that later received adaptive or changed uses.",
+          "sourceIds": ["source-05", "source-02"]
+        },
+        {
+          "poiId": "citadel-of-the-ho-dynasty",
+          "tier": "cold",
+          "text": "Both are UNESCO properties with substantial historic remains, but this is a stone fortress.",
+          "sourceIds": ["source-25", "source-02"]
+        },
+        {
+          "poiId": "tour-triangle",
+          "tier": "cold",
+          "text": "Both are built environments, but this is a modern skyscraper under construction.",
+          "sourceIds": ["source-15", "source-02"]
+        }
+      ]
+    },
+    {
+      "id": "round-3",
+      "targetPoiId": "amami-oshima-island-tokunoshima-island-northern-part-of-okinawa-island-and-iriomote-island",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Amami_beach.jpg/1280px-Amami_beach.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Amami-Ōshima Island, Tokunoshima Island, northern part of Okinawa Island, and Iriomote Island",
+        "attribution": "TANAKA Juuyoh (田中十洋) · CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "clue": {
+        "text": "This World Heritage property is a serial site across four islands, selected for exceptionally high levels of regional endemism among mammals, birds, reptiles, amphibians, fish, plants, and insects.",
+        "sourceIds": ["source-03"]
+      },
+      "results": [
+        {
+          "poiId": "amami-oshima-island-tokunoshima-island-northern-part-of-okinawa-island-and-iriomote-island",
+          "tier": "correct",
+          "text": "Correct: five component areas on four islands protect exceptionally diverse endemic species.",
+          "sourceIds": ["source-03"]
+        },
+        {
+          "poiId": "coiba",
+          "tier": "hot",
+          "text": "Both are island biodiversity properties with endemic animals created or maintained by isolation.",
+          "sourceIds": ["source-02", "source-03"]
+        },
+        {
+          "poiId": "new-zealand-subantarctic-islands",
+          "tier": "hot",
+          "text": "Both are serial island World Heritage properties protected for distinctive ecosystems.",
+          "sourceIds": ["source-12", "source-03"]
+        },
+        {
+          "poiId": "k-gari",
+          "tier": "hot",
+          "text": "Both are World Heritage islands with protected natural environments and indigenous connections.",
+          "sourceIds": ["source-17", "source-03"]
+        },
+        {
+          "poiId": "garamba-national-park",
+          "tier": "hot",
+          "text": "Both protect important habitats and wildlife through large-scale conservation designations.",
+          "sourceIds": ["source-10", "source-03"]
+        },
+        {
+          "poiId": "phong-nha-ke-bang-national-park",
+          "tier": "warm",
+          "text": "Both are UNESCO natural properties conserving distinctive ecosystems and landscapes.",
+          "sourceIds": ["source-23", "source-03"]
+        },
+        {
+          "poiId": "rapa-nui-national-park",
+          "tier": "warm",
+          "text": "Both are remote island national-park heritage properties.",
+          "sourceIds": ["source-13", "source-03"]
+        },
+        {
+          "poiId": "vinales-valley",
+          "tier": "warm",
+          "text": "Both are UNESCO natural or mixed landscapes with distinctive regional environments.",
+          "sourceIds": ["source-24", "source-03"]
+        },
+        {
+          "poiId": "djerba",
+          "tier": "warm",
+          "text": "Both are North or Pacific island heritage places with long histories of human use.",
+          "sourceIds": ["source-04", "source-03"]
+        },
+        {
+          "poiId": "tusi-sites",
+          "tier": "warm",
+          "text": "Both are UNESCO properties with multiple component sites.",
+          "sourceIds": ["source-01", "source-03"]
+        },
+        {
+          "poiId": "rock-carvings-in-tanum",
+          "tier": "warm",
+          "text": "Both are UNESCO properties preserving distinctive regional evidence, though this site is archaeological.",
+          "sourceIds": ["source-22", "source-03"]
+        },
+        {
+          "poiId": "dambulla-cave-temple",
+          "tier": "warm",
+          "text": "Both are UNESCO properties in South or East Asian settings.",
+          "sourceIds": ["source-08", "source-03"]
+        },
+        {
+          "poiId": "painted-churches-in-the-troodos-region",
+          "tier": "warm",
+          "text": "Both are serial World Heritage properties with several component places.",
+          "sourceIds": ["source-14", "source-03"]
+        },
+        {
+          "poiId": "shibam",
+          "tier": "cold",
+          "text": "Both are UNESCO properties whose significance is strongly regional and distinctive.",
+          "sourceIds": ["source-07", "source-03"]
+        },
+        {
+          "poiId": "historic-centre-of-cusco",
+          "tier": "cold",
+          "text": "Both are UNESCO properties preserving distinctive regional heritage.",
+          "sourceIds": ["source-09", "source-03"]
+        },
+        {
+          "poiId": "lorsch-abbey",
+          "tier": "cold",
+          "text": "Both are UNESCO sites protected for importance beyond ordinary local significance.",
+          "sourceIds": ["source-11", "source-03"]
+        },
+        {
+          "poiId": "acropolis-athens",
+          "tier": "cold",
+          "text": "Both are UNESCO properties with globally significant heritage values.",
+          "sourceIds": ["source-18", "source-03"]
+        },
+        {
+          "poiId": "soltaniyeh",
+          "tier": "cold",
+          "text": "Both are UNESCO-listed places with internationally recognized significance.",
+          "sourceIds": ["source-20", "source-03"]
+        },
+        {
+          "poiId": "cahokia",
+          "tier": "cold",
+          "text": "Both are UNESCO properties, though this site is primarily archaeological and cultural.",
+          "sourceIds": ["source-19", "source-03"]
+        },
+        {
+          "poiId": "psaca-monastery",
+          "tier": "cold",
+          "text": "Both preserve distinctive regional heritage through protected sites.",
+          "sourceIds": ["source-16", "source-03"]
+        },
+        {
+          "poiId": "condes-de-argillo-palace",
+          "tier": "cold",
+          "text": "Both are historic protected places with architectural significance.",
+          "sourceIds": ["source-06", "source-03"]
+        },
+        {
+          "poiId": "charleston-county-courthouse",
+          "tier": "cold",
+          "text": "Both are preserved historic places with architectural and institutional significance.",
+          "sourceIds": ["source-21", "source-03"]
+        },
+        {
+          "poiId": "lincoln-school-madison-wisconsin",
+          "tier": "cold",
+          "text": "Both are protected historic properties with notable architecture.",
+          "sourceIds": ["source-05", "source-03"]
+        },
+        {
+          "poiId": "citadel-of-the-ho-dynasty",
+          "tier": "cold",
+          "text": "Both are UNESCO properties with distinctive regional heritage.",
+          "sourceIds": ["source-25", "source-03"]
+        },
+        {
+          "poiId": "tour-triangle",
+          "tier": "cold",
+          "text": "Both involve notable architecture, but this is a contemporary building project.",
+          "sourceIds": ["source-15", "source-03"]
+        }
+      ]
+    },
+    {
+      "id": "round-4",
+      "targetPoiId": "djerba",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Djerba_Island.jpeg/1280px-Djerba_Island.jpeg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Djerba",
+        "attribution": "NASA Earth Observatory images by Lauren Dauphin, using Landsat data from the U.S. Geological Survey. Story by Adam Voiland. · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Djerba_Island.jpeg"
+      },
+      "clue": {
+        "text": "This North African island has been inhabited through multiple ancient and imperial periods, and its heritage includes a longstanding Jewish community with numerous synagogues and pilgrimage traditions.",
+        "sourceIds": ["source-04"]
+      },
+      "results": [
+        {
+          "poiId": "djerba",
+          "tier": "correct",
+          "text": "Correct: the island has a long history of successive civilizations and a longstanding Jewish community.",
+          "sourceIds": ["source-04"]
+        },
+        {
+          "poiId": "historic-centre-of-cusco",
+          "tier": "hot",
+          "text": "Both are historic places shaped by successive indigenous, imperial, and later colonial or external powers.",
+          "sourceIds": ["source-09", "source-04"]
+        },
+        {
+          "poiId": "tusi-sites",
+          "tier": "hot",
+          "text": "Both preserve long-running systems of regional governance involving distinct ethnic communities.",
+          "sourceIds": ["source-01", "source-04"]
+        },
+        {
+          "poiId": "shibam",
+          "tier": "hot",
+          "text": "Both are old settlements whose prosperity was connected to historic trade routes and regional rule.",
+          "sourceIds": ["source-07", "source-04"]
+        },
+        {
+          "poiId": "soltaniyeh",
+          "tier": "hot",
+          "text": "Both preserve heritage associated with Islamic-era political power and historic trade.",
+          "sourceIds": ["source-20", "source-04"]
+        },
+        {
+          "poiId": "lorsch-abbey",
+          "tier": "warm",
+          "text": "Both have long documented histories involving major religious institutions and political authorities.",
+          "sourceIds": ["source-11", "source-04"]
+        },
+        {
+          "poiId": "dambulla-cave-temple",
+          "tier": "warm",
+          "text": "Both remain important religious heritage places with histories extending over many centuries.",
+          "sourceIds": ["source-08", "source-04"]
+        },
+        {
+          "poiId": "painted-churches-in-the-troodos-region",
+          "tier": "warm",
+          "text": "Both preserve religious heritage associated with long periods of Mediterranean history.",
+          "sourceIds": ["source-14", "source-04"]
+        },
+        {
+          "poiId": "acropolis-athens",
+          "tier": "warm",
+          "text": "Both are Mediterranean heritage places with ancient foundations and layered histories.",
+          "sourceIds": ["source-18", "source-04"]
+        },
+        {
+          "poiId": "psaca-monastery",
+          "tier": "warm",
+          "text": "Both preserve religious and political history through historic buildings and institutions.",
+          "sourceIds": ["source-16", "source-04"]
+        },
+        {
+          "poiId": "condes-de-argillo-palace",
+          "tier": "warm",
+          "text": "Both contain historic architecture associated with elite power and regional history.",
+          "sourceIds": ["source-06", "source-04"]
+        },
+        {
+          "poiId": "citadel-of-the-ho-dynasty",
+          "tier": "warm",
+          "text": "Both are heritage places shaped by dynastic rule and changing political authority.",
+          "sourceIds": ["source-25", "source-04"]
+        },
+        {
+          "poiId": "cahokia",
+          "tier": "warm",
+          "text": "Both preserve evidence of complex societies and long-term settlement.",
+          "sourceIds": ["source-19", "source-04"]
+        },
+        {
+          "poiId": "rock-carvings-in-tanum",
+          "tier": "cold",
+          "text": "Both preserve evidence of ancient communities and cultural practices.",
+          "sourceIds": ["source-22", "source-04"]
+        },
+        {
+          "poiId": "rapa-nui-national-park",
+          "tier": "cold",
+          "text": "Both are island heritage properties with distinctive local cultural traditions.",
+          "sourceIds": ["source-13", "source-04"]
+        },
+        {
+          "poiId": "coiba",
+          "tier": "cold",
+          "text": "Both are islands with significant historical use and protected heritage status.",
+          "sourceIds": ["source-02", "source-04"]
+        },
+        {
+          "poiId": "k-gari",
+          "tier": "cold",
+          "text": "Both are island World Heritage places with indigenous cultural associations.",
+          "sourceIds": ["source-17", "source-04"]
+        },
+        {
+          "poiId": "amami-oshima-island-tokunoshima-island-northern-part-of-okinawa-island-and-iriomote-island",
+          "tier": "cold",
+          "text": "Both are island heritage properties with distinctive local communities and histories.",
+          "sourceIds": ["source-03", "source-04"]
+        },
+        {
+          "poiId": "new-zealand-subantarctic-islands",
+          "tier": "cold",
+          "text": "Both are island heritage properties, though this one is largely uninhabited today.",
+          "sourceIds": ["source-12", "source-04"]
+        },
+        {
+          "poiId": "vinales-valley",
+          "tier": "cold",
+          "text": "Both are UNESCO landscapes where traditional local practices contribute to heritage value.",
+          "sourceIds": ["source-24", "source-04"]
+        },
+        {
+          "poiId": "garamba-national-park",
+          "tier": "cold",
+          "text": "Both are protected heritage places, but this one focuses primarily on wildlife conservation.",
+          "sourceIds": ["source-10", "source-04"]
+        },
+        {
+          "poiId": "phong-nha-ke-bang-national-park",
+          "tier": "cold",
+          "text": "Both are protected heritage places with long records of human interaction with the landscape.",
+          "sourceIds": ["source-23", "source-04"]
+        },
+        {
+          "poiId": "charleston-county-courthouse",
+          "tier": "cold",
+          "text": "Both reflect changing political institutions and historic civic life.",
+          "sourceIds": ["source-21", "source-04"]
+        },
+        {
+          "poiId": "lincoln-school-madison-wisconsin",
+          "tier": "cold",
+          "text": "Both are historic buildings whose uses changed over time.",
+          "sourceIds": ["source-05", "source-04"]
+        },
+        {
+          "poiId": "tour-triangle",
+          "tier": "cold",
+          "text": "Both are built places, but this is a contemporary skyscraper project.",
+          "sourceIds": ["source-15", "source-04"]
+        }
+      ]
+    },
+    {
+      "id": "round-5",
+      "targetPoiId": "lincoln-school-madison-wisconsin",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Lincoln_School_Madison_Wisconsin_2021-3750.jpg/1280px-Lincoln_School_Madison_Wisconsin_2021-3750.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Lincoln School (Madison, Wisconsin)",
+        "attribution": "Paul R. Burley · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "This early-20th-century civic building was designed in the Prairie School style, uses yellow brick and terra-cotta ornament, and later became an arts center before conversion to apartments.",
+        "sourceIds": ["source-05"]
+      },
+      "results": [
+        {
+          "poiId": "lincoln-school-madison-wisconsin",
+          "tier": "correct",
+          "text": "Correct: the 1915 school has Prairie School design, yellow brick and terra-cotta details, and later adaptive reuse.",
+          "sourceIds": ["source-05"]
+        },
+        {
+          "poiId": "tour-triangle",
+          "tier": "hot",
+          "text": "Both are architect-designed urban buildings with prominent, deliberate exterior forms and later-use planning.",
+          "sourceIds": ["source-15", "source-05"]
+        },
+        {
+          "poiId": "charleston-county-courthouse",
+          "tier": "hot",
+          "text": "Both are historic civic buildings designed by named architects and retained for public use.",
+          "sourceIds": ["source-21", "source-05"]
+        },
+        {
+          "poiId": "condes-de-argillo-palace",
+          "tier": "hot",
+          "text": "Both are masonry buildings with formally described architectural plans and façades.",
+          "sourceIds": ["source-06", "source-05"]
+        },
+        {
+          "poiId": "shibam",
+          "tier": "hot",
+          "text": "Both are notable built environments where building form responds to urban or functional needs.",
+          "sourceIds": ["source-07", "source-05"]
+        },
+        {
+          "poiId": "psaca-monastery",
+          "tier": "warm",
+          "text": "Both are historic buildings with distinctive architectural forms and later repair or preservation concerns.",
+          "sourceIds": ["source-16", "source-05"]
+        },
+        {
+          "poiId": "painted-churches-in-the-troodos-region",
+          "tier": "warm",
+          "text": "Both preserve distinctive architectural details and are protected for cultural significance.",
+          "sourceIds": ["source-14", "source-05"]
+        },
+        {
+          "poiId": "acropolis-athens",
+          "tier": "warm",
+          "text": "Both are architecturally significant sites containing multiple designed structures.",
+          "sourceIds": ["source-18", "source-05"]
+        },
+        {
+          "poiId": "lorsch-abbey",
+          "tier": "warm",
+          "text": "Both are protected historic architectural properties with surviving masonry elements.",
+          "sourceIds": ["source-11", "source-05"]
+        },
+        {
+          "poiId": "historic-centre-of-cusco",
+          "tier": "warm",
+          "text": "Both preserve significant architecture and demonstrate adaptation across historical periods.",
+          "sourceIds": ["source-09", "source-05"]
+        },
+        {
+          "poiId": "soltaniyeh",
+          "tier": "warm",
+          "text": "Both are protected historic architectural places with important built remains.",
+          "sourceIds": ["source-20", "source-05"]
+        },
+        {
+          "poiId": "citadel-of-the-ho-dynasty",
+          "tier": "warm",
+          "text": "Both are historic structures whose material construction and formal design are emphasized.",
+          "sourceIds": ["source-25", "source-05"]
+        },
+        {
+          "poiId": "dambulla-cave-temple",
+          "tier": "warm",
+          "text": "Both are preserved architectural complexes whose interiors and structures have been altered or maintained over time.",
+          "sourceIds": ["source-08", "source-05"]
+        },
+        {
+          "poiId": "tusi-sites",
+          "tier": "cold",
+          "text": "Both include historic built remains associated with regional institutions and authority.",
+          "sourceIds": ["source-01", "source-05"]
+        },
+        {
+          "poiId": "cahokia",
+          "tier": "cold",
+          "text": "Both are protected historic sites with evidence of organized construction and civic life.",
+          "sourceIds": ["source-19", "source-05"]
+        },
+        {
+          "poiId": "rock-carvings-in-tanum",
+          "tier": "cold",
+          "text": "Both are protected cultural properties requiring conservation of vulnerable material fabric.",
+          "sourceIds": ["source-22", "source-05"]
+        },
+        {
+          "poiId": "djerba",
+          "tier": "cold",
+          "text": "Both preserve built heritage shaped by long-term community use and changing periods.",
+          "sourceIds": ["source-04", "source-05"]
+        },
+        {
+          "poiId": "rapa-nui-national-park",
+          "tier": "cold",
+          "text": "Both protect cultural heritage associated with distinctive local communities.",
+          "sourceIds": ["source-13", "source-05"]
+        },
+        {
+          "poiId": "vinales-valley",
+          "tier": "cold",
+          "text": "Both are heritage properties where traditional human practices contribute to significance.",
+          "sourceIds": ["source-24", "source-05"]
+        },
+        {
+          "poiId": "coiba",
+          "tier": "cold",
+          "text": "Both are protected heritage places with histories of changed human use.",
+          "sourceIds": ["source-02", "source-05"]
+        },
+        {
+          "poiId": "amami-oshima-island-tokunoshima-island-northern-part-of-okinawa-island-and-iriomote-island",
+          "tier": "cold",
+          "text": "Both are protected heritage properties, though this one emphasizes biodiversity rather than architecture.",
+          "sourceIds": ["source-03", "source-05"]
+        },
+        {
+          "poiId": "new-zealand-subantarctic-islands",
+          "tier": "cold",
+          "text": "Both are protected heritage properties, but this one is primarily a natural island site.",
+          "sourceIds": ["source-12", "source-05"]
+        },
+        {
+          "poiId": "garamba-national-park",
+          "tier": "cold",
+          "text": "Both are protected places, but this one is a wildlife conservation area.",
+          "sourceIds": ["source-10", "source-05"]
+        },
+        {
+          "poiId": "phong-nha-ke-bang-national-park",
+          "tier": "cold",
+          "text": "Both are protected properties, but this one centers on karst caves and forest.",
+          "sourceIds": ["source-23", "source-05"]
+        },
+        {
+          "poiId": "k-gari",
+          "tier": "cold",
+          "text": "Both are heritage properties with conservation and visitor-management concerns.",
+          "sourceIds": ["source-17", "source-05"]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-01",
+      "title": "Tusi Sites",
+      "url": "https://en.wikipedia.org/wiki/Tusi_Sites",
+      "retrievedAt": "2026-08-14T22:48:07.172Z"
+    },
+    {
+      "id": "source-02",
+      "title": "Coiba",
+      "url": "https://en.wikipedia.org/wiki/Coiba",
+      "retrievedAt": "2026-08-14T22:48:01.342Z"
+    },
+    {
+      "id": "source-03",
+      "title": "Amami-Ōshima Island, Tokunoshima Island, northern part of Okinawa Island, and Iriomote Island",
+      "url": "https://en.wikipedia.org/wiki/Amami-%C5%8Cshima_Island,_Tokunoshima_Island,_northern_part_of_Okinawa_Island,_and_Iriomote_Island",
+      "retrievedAt": "2026-08-14T22:47:38.196Z"
+    },
+    {
+      "id": "source-04",
+      "title": "Djerba",
+      "url": "https://en.wikipedia.org/wiki/Djerba",
+      "retrievedAt": "2026-08-14T22:49:03.237Z"
+    },
+    {
+      "id": "source-05",
+      "title": "Lincoln School (Madison, Wisconsin)",
+      "url": "https://en.wikipedia.org/wiki/Lincoln_School_(Madison,_Wisconsin)",
+      "retrievedAt": "2026-08-14T22:48:15.321Z"
+    },
+    {
+      "id": "source-06",
+      "title": "Condes de Argillo Palace",
+      "url": "https://en.wikipedia.org/wiki/Condes_de_Argillo_Palace",
+      "retrievedAt": "2026-08-14T22:47:33.891Z"
+    },
+    {
+      "id": "source-07",
+      "title": "Shibam",
+      "url": "https://en.wikipedia.org/wiki/Shibam",
+      "retrievedAt": "2026-08-14T22:49:11.487Z"
+    },
+    {
+      "id": "source-08",
+      "title": "Dambulla cave temple",
+      "url": "https://en.wikipedia.org/wiki/Dambulla_cave_temple",
+      "retrievedAt": "2026-08-14T22:48:06.544Z"
+    },
+    {
+      "id": "source-09",
+      "title": "Historic Centre of Cusco",
+      "url": "https://en.wikipedia.org/wiki/Historic_Centre_of_Cusco",
+      "retrievedAt": "2026-08-14T22:47:50.696Z"
+    },
+    {
+      "id": "source-10",
+      "title": "Garamba National Park",
+      "url": "https://en.wikipedia.org/wiki/Garamba_National_Park",
+      "retrievedAt": "2026-08-14T22:47:53.127Z"
+    },
+    {
+      "id": "source-11",
+      "title": "Lorsch Abbey",
+      "url": "https://en.wikipedia.org/wiki/Lorsch_Abbey",
+      "retrievedAt": "2026-08-14T22:47:35.363Z"
+    },
+    {
+      "id": "source-12",
+      "title": "New Zealand Subantarctic Islands",
+      "url": "https://en.wikipedia.org/wiki/New_Zealand_Subantarctic_Islands",
+      "retrievedAt": "2026-08-14T22:48:11.073Z"
+    },
+    {
+      "id": "source-13",
+      "title": "Rapa Nui National Park",
+      "url": "https://en.wikipedia.org/wiki/Rapa_Nui_National_Park",
+      "retrievedAt": "2026-08-14T22:49:11.918Z"
+    },
+    {
+      "id": "source-14",
+      "title": "Painted Churches in the Troodos Region",
+      "url": "https://en.wikipedia.org/wiki/Painted_Churches_in_the_Troodos_Region",
+      "retrievedAt": "2026-08-14T22:48:08.284Z"
+    },
+    {
+      "id": "source-15",
+      "title": "Tour Triangle",
+      "url": "https://en.wikipedia.org/wiki/Tour_Triangle",
+      "retrievedAt": "2026-08-14T22:48:01.099Z"
+    },
+    {
+      "id": "source-16",
+      "title": "Psača Monastery",
+      "url": "https://en.wikipedia.org/wiki/Psa%C4%8Da_Monastery",
+      "retrievedAt": "2026-08-14T22:48:06.481Z"
+    },
+    {
+      "id": "source-17",
+      "title": "K'gari",
+      "url": "https://en.wikipedia.org/wiki/K%27gari",
+      "retrievedAt": "2026-08-14T22:49:11.847Z"
+    },
+    {
+      "id": "source-18",
+      "title": "Acropolis of Athens",
+      "url": "https://en.wikipedia.org/wiki/Acropolis_of_Athens",
+      "retrievedAt": "2026-08-14T22:47:27.154Z"
+    },
+    {
+      "id": "source-19",
+      "title": "Cahokia",
+      "url": "https://en.wikipedia.org/wiki/Cahokia",
+      "retrievedAt": "2026-08-14T22:48:10.954Z"
+    },
+    {
+      "id": "source-20",
+      "title": "Soltaniyeh",
+      "url": "https://en.wikipedia.org/wiki/Soltaniyeh",
+      "retrievedAt": "2026-08-14T22:49:01.651Z"
+    },
+    {
+      "id": "source-21",
+      "title": "Charleston County Courthouse",
+      "url": "https://en.wikipedia.org/wiki/Charleston_County_Courthouse",
+      "retrievedAt": "2026-08-14T22:47:36.090Z"
+    },
+    {
+      "id": "source-22",
+      "title": "Rock Carvings in Tanum",
+      "url": "https://en.wikipedia.org/wiki/Rock_Carvings_in_Tanum",
+      "retrievedAt": "2026-08-14T22:48:21.525Z"
+    },
+    {
+      "id": "source-23",
+      "title": "Phong Nha–Kẻ Bàng National Park",
+      "url": "https://en.wikipedia.org/wiki/Phong_Nha%E2%80%93K%E1%BA%BB_B%C3%A0ng_National_Park",
+      "retrievedAt": "2026-08-14T22:49:04.821Z"
+    },
+    {
+      "id": "source-24",
+      "title": "Viñales Valley",
+      "url": "https://en.wikipedia.org/wiki/Vi%C3%B1ales_Valley",
+      "retrievedAt": "2026-08-14T22:48:14.653Z"
+    },
+    {
+      "id": "source-25",
+      "title": "Citadel of the Hồ Dynasty",
+      "url": "https://en.wikipedia.org/wiki/Citadel_of_the_H%E1%BB%93_Dynasty",
+      "retrievedAt": "2026-08-14T22:48:15.474Z"
+    }
+  ]
+}

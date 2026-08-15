@@ -11,7 +11,7 @@ type ManifestEntry = {
 };
 
 type CaseManifest = {
-  schemaVersion: 1;
+  schemaVersion: 2;
   cases: Record<string, ManifestEntry>;
 };
 
@@ -49,8 +49,8 @@ function isDate(value: string): boolean {
 }
 
 function parseManifest(value: unknown): CaseManifest {
-  if (!isRecord(value) || value.schemaVersion !== 1 || !isRecord(value.cases)) {
-    fail('Case manifest must be a schema version 1 object with cases.');
+  if (!isRecord(value) || value.schemaVersion !== 2 || !isRecord(value.cases)) {
+    fail('Case manifest must be a schema version 2 object with cases.');
   }
 
   const cases: Record<string, ManifestEntry> = {};
@@ -74,7 +74,7 @@ function parseManifest(value: unknown): CaseManifest {
     };
   }
 
-  return { schemaVersion: 1, cases };
+  return { schemaVersion: 2, cases };
 }
 
 function normalizePath(path: string): string {

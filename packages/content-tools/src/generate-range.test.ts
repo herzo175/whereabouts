@@ -1,6 +1,12 @@
 import { describe, expect, it, vi } from 'vitest';
 
-import { attachWikipediaImages, selectPoisForDate } from './generate-range.js';
+import {
+  attachWikipediaImages,
+  ensureImageBackedPois,
+  generateWithRetries,
+  selectPoisForDate,
+  targetExclusionsForDate,
+} from './generate-range.js';
 
 const catalog = Array.from({ length: 75 }, (_, index) => ({
   id: `poi-${String(index).padStart(2, '0')}`,
@@ -17,6 +23,23 @@ describe('selectPoisForDate', () => {
   it('is reproducible for a shared daily case', () => {
     expect(selectPoisForDate(catalog, '2026-08-14')).toEqual(
       selectPoisForDate(catalog, '2026-08-14'),
+    );
+  });
+
+  it('selects five explicit targets without reusing a target from the prior 30 dates', () => {
+    const history = new Map(
+      Array.from({ length: 30 }, (_, index) => [
+        `2026-07-${String(index + 1).padStart(2, '0')}`,
+        [`poi-${String(index).padStart(2, '0')}`],
+      ]),
+    );
+    const excluded = targetExclusionsForDate(history, '2026-08-14');
+    const selected = selectPoisForDate(catalog, '2026-08-14', excluded);
+
+    expect(selected.slice(0, 5)).toHaveLength(5);
+    expect(new Set(selected.slice(0, 5).map((poi) => poi.id)).size).toBe(5);
+    expect(selected.slice(0, 5).some((poi) => excluded.has(poi.id))).toBe(
+      false,
     );
   });
 
@@ -76,5 +99,86 @@ describe('attachWikipediaImages', () => {
     expect(enriched[0]?.image?.alt).toBe('Place 0');
     expect(enriched[1]?.image).toBeUndefined();
     expect(enriched[2]?.image?.alt).toBe('Place 2');
+  });
+
+  it('deterministically replaces candidates without images from the larger catalog', async () => {
+    const selected = catalog.slice(0, 5);
+    const fetchImage = vi.fn(async (title: string) =>
+      title === 'Place 1'
+        ? undefined
+        : {
+            url: `https://upload.wikimedia.org/${title}.jpg`,
+            alt: title,
+            attribution: 'Example contributor · CC BY-SA 4.0',
+            licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+          },
+    );
+
+    const sourced = await ensureImageBackedPois(
+      selected,
+      catalog,
+      '2026-08-14',
+      fetchImage,
+    );
+
+    expect(sourced).toHaveLength(5);
+    expect(sourced.every((poi) => poi.image)).toBe(true);
+    expect(sourced.some((poi) => poi.id === 'poi-01')).toBe(false);
+    await expect(
+      ensureImageBackedPois(selected, catalog, '2026-08-14', fetchImage),
+    ).resolves.toEqual(sourced);
+  });
+
+  it('never promotes an excluded prior target when replacing an image-less target', async () => {
+    const selected = catalog.slice(0, 25);
+    const excluded = new Set(['poi-25', 'poi-26', 'poi-27']);
+    const fetchImage = vi.fn(async (title: string) =>
+      title === 'Place 0'
+        ? undefined
+        : {
+            url: `https://upload.wikimedia.org/${title}.jpg`,
+            alt: title,
+            attribution: 'Example contributor · CC BY-SA 4.0',
+            licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+          },
+    );
+
+    const sourced = await ensureImageBackedPois(
+      selected,
+      catalog,
+      '2026-08-14',
+      fetchImage,
+      excluded,
+    );
+
+    expect(sourced).toHaveLength(25);
+    expect(sourced.slice(0, 5).every((poi) => poi.image)).toBe(true);
+    expect(sourced.slice(0, 5).some((poi) => excluded.has(poi.id))).toBe(false);
+  });
+});
+
+describe('generateWithRetries', () => {
+  it('retries a full generation after publication validation failures', async () => {
+    const generate = vi.fn(async () => {
+      if (generate.mock.calls.length < 3)
+        throw new Error('publication validation failed: invalid tier spread');
+      return 'published draft';
+    });
+
+    await expect(generateWithRetries(generate)).resolves.toBe(
+      'published draft',
+    );
+    expect(generate).toHaveBeenCalledTimes(3);
+  });
+
+  it('fails deterministic setup errors without retrying', async () => {
+    const generate = vi.fn(async () => {
+      throw new Error('generation requires images for all 25 POIs');
+    });
+
+    await expect(generateWithRetries(generate)).rejects.toThrow(
+      'generation requires images for all 25 POIs',
+    );
+    expect(generate).toHaveBeenCalledTimes(1);
   });
 });

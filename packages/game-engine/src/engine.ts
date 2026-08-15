@@ -1,23 +1,8 @@
-import type { GameProgress } from './progress-schema.js';
-import { gameProgressSchema } from './progress-schema.js';
-
-type RelationshipTier = 'cold' | 'warm' | 'hot';
-
-type DailyCase = {
-  publicationDate: string;
-  revision: number;
-  target: { poiId: string };
-  pois: Array<{ id: string }>;
-  clues: Array<{ id: string; text: string; sourceIds: string[] }>;
-  contextualResponses: Array<{
-    poiId: string;
-    tier: RelationshipTier;
-    text: string;
-    sourceIds: string[];
-  }>;
-};
-
-const maximumAttempts = 6;
+import type { FiveRoundDailyCase, RoundTier } from '@whereabouts/case-content';
+import {
+  type FiveRoundProgress,
+  fiveRoundProgressSchema,
+} from './progress-schema.js';
 
 export class GameRuleError extends Error {
   constructor(message: string) {
@@ -26,151 +11,128 @@ export class GameRuleError extends Error {
   }
 }
 
-function parseProgress(progress: GameProgress): GameProgress {
+export function createFiveRoundProgress(
+  caseData: FiveRoundDailyCase,
+): FiveRoundProgress {
+  return {
+    schemaVersion: 2,
+    caseDate: caseData.publicationDate,
+    caseRevision: caseData.revision,
+    guesses: [],
+    acknowledgedRoundCount: 0,
+  };
+}
+
+export function acknowledgeRoundReveal(
+  progress: FiveRoundProgress,
+): FiveRoundProgress {
+  const current = fiveRoundProgressSchema.parse(progress);
+  if (current.acknowledgedRoundCount === current.guesses.length) {
+    throw new GameRuleError('There is no pending round reveal');
+  }
+  return {
+    ...current,
+    acknowledgedRoundCount: current.acknowledgedRoundCount + 1,
+  };
+}
+
+export function getRoundScore(tier: RoundTier): 100 | 75 | 50 | 25 {
+  if (tier === 'correct') return 100;
+  if (tier === 'hot') return 75;
+  if (tier === 'warm') return 50;
+  return 25;
+}
+
+function parseFiveRoundProgress(
+  caseData: FiveRoundDailyCase,
+  progress: FiveRoundProgress,
+): FiveRoundProgress {
+  let parsed: FiveRoundProgress;
   try {
-    return gameProgressSchema.parse(progress);
+    parsed = fiveRoundProgressSchema.parse(progress);
   } catch (error) {
     const message = error instanceof Error ? error.message : 'invalid progress';
     throw new GameRuleError(message);
   }
-}
-
-function validateForCase(
-  caseData: DailyCase,
-  progress: GameProgress,
-): GameProgress {
-  const parsed = parseProgress(progress);
   if (
     parsed.caseDate !== caseData.publicationDate ||
     parsed.caseRevision !== caseData.revision
-  ) {
+  )
     throw new GameRuleError('Progress does not match this case revision');
-  }
-  if (parsed.guessedPoiIds.length > maximumAttempts) {
-    throw new GameRuleError('Progress has too many guesses');
-  }
-  if (new Set(parsed.guessedPoiIds).size !== parsed.guessedPoiIds.length) {
-    throw new GameRuleError('Progress contains duplicate guesses');
-  }
-  const knownPoiIds = new Set(caseData.pois.map((poi) => poi.id));
-  if (parsed.guessedPoiIds.some((poiId) => !knownPoiIds.has(poiId))) {
-    throw new GameRuleError('Progress contains an unknown POI');
-  }
-
-  const targetIndex = parsed.guessedPoiIds.indexOf(caseData.target.poiId);
-  if (parsed.outcome === 'playing') {
-    if (targetIndex !== -1 || parsed.guessedPoiIds.length === maximumAttempts) {
-      throw new GameRuleError('Progress has an invalid playing outcome');
+  const revealedTargets = new Set<string>();
+  for (const [index, guess] of parsed.guesses.entries()) {
+    const round = caseData.rounds[index];
+    if (!round || round.id !== guess.roundId) {
+      throw new GameRuleError('Progress does not match the round order');
     }
-  } else if (parsed.outcome === 'won') {
-    if (targetIndex !== parsed.guessedPoiIds.length - 1) {
-      throw new GameRuleError('Won progress must end with the target POI');
+    if (revealedTargets.has(guess.poiId)) {
+      throw new GameRuleError('Progress guesses a declassified location');
     }
-  } else if (
-    targetIndex !== -1 ||
-    parsed.guessedPoiIds.length !== maximumAttempts
-  ) {
-    throw new GameRuleError('Lost progress must contain six wrong guesses');
+    const result = round.results.find(
+      (candidate) => candidate.poiId === guess.poiId,
+    );
+    if (
+      !result ||
+      result.tier !== guess.tier ||
+      getRoundScore(result.tier) !== guess.points
+    ) {
+      throw new GameRuleError(
+        'Progress does not match an authored round result',
+      );
+    }
+    revealedTargets.add(round.targetPoiId);
   }
   return parsed;
 }
 
-export function createProgress(caseData: DailyCase): GameProgress {
-  return {
-    schemaVersion: 1,
-    caseDate: caseData.publicationDate,
-    caseRevision: caseData.revision,
-    guessedPoiIds: [],
-    outcome: 'playing',
-  };
+export function getCurrentRound(
+  caseData: FiveRoundDailyCase,
+  progress: FiveRoundProgress,
+): FiveRoundDailyCase['rounds'][number] | null {
+  const current = parseFiveRoundProgress(caseData, progress);
+  return caseData.rounds[current.guesses.length] ?? null;
 }
 
-export function applyGuess(
-  caseData: DailyCase,
-  progress: GameProgress,
+export function submitRoundGuess(
+  caseData: FiveRoundDailyCase,
+  progress: FiveRoundProgress,
   poiId: string,
   now: Date = new Date(),
-): GameProgress {
-  const current = validateForCase(caseData, progress);
-  if (current.outcome !== 'playing') {
-    throw new GameRuleError('This case has already ended');
-  }
-  if (!caseData.pois.some((poi) => poi.id === poiId)) {
-    throw new GameRuleError('Unknown POI');
-  }
-  if (current.guessedPoiIds.includes(poiId)) {
-    throw new GameRuleError('This POI has already been guessed');
-  }
-
-  const guessedPoiIds = [...current.guessedPoiIds, poiId];
-  const outcome =
-    poiId === caseData.target.poiId
-      ? 'won'
-      : guessedPoiIds.length === maximumAttempts
-        ? 'lost'
-        : 'playing';
-  if (outcome === 'playing') return { ...current, guessedPoiIds };
-
-  let completedAt: string;
-  try {
-    completedAt = now.toISOString();
-  } catch {
-    throw new GameRuleError('Completion time must be valid');
-  }
-  return { ...current, guessedPoiIds, outcome, completedAt };
-}
-
-export function getVisibleClues(
-  caseData: DailyCase,
-  progress: GameProgress,
-): DailyCase['clues'] {
-  const current = validateForCase(caseData, progress);
-  const wrongGuessCount = current.guessedPoiIds.includes(caseData.target.poiId)
-    ? current.guessedPoiIds.length - 1
-    : current.guessedPoiIds.length;
-  return caseData.clues.slice(
-    0,
-    Math.min(wrongGuessCount + 1, maximumAttempts),
-  );
-}
-
-export function getLatestFeedback(
-  caseData: DailyCase,
-  progress: GameProgress,
-): DailyCase['contextualResponses'][number] | null {
-  const current = validateForCase(caseData, progress);
-  const latestPoiId = current.guessedPoiIds.at(-1);
-  if (latestPoiId === undefined || latestPoiId === caseData.target.poiId) {
-    return null;
-  }
-  return (
-    caseData.contextualResponses.find(
-      (response) => response.poiId === latestPoiId,
-    ) ?? null
-  );
-}
-
-export function getAttemptsRemaining(progress: GameProgress): number {
-  const current = parseProgress(progress);
-  if (current.guessedPoiIds.length > maximumAttempts) {
-    throw new GameRuleError('Progress has too many guesses');
-  }
-  return maximumAttempts - current.guessedPoiIds.length;
-}
-
-export function getShareTokens(
-  caseData: DailyCase,
-  progress: GameProgress,
-): Array<RelationshipTier | 'solved'> {
-  const current = validateForCase(caseData, progress);
-  return current.guessedPoiIds.map((poiId) => {
-    if (poiId === caseData.target.poiId) return 'solved';
-    const response = caseData.contextualResponses.find(
-      (candidate) => candidate.poiId === poiId,
+): FiveRoundProgress {
+  const current = parseFiveRoundProgress(caseData, progress);
+  if (current.acknowledgedRoundCount < current.guesses.length) {
+    throw new GameRuleError(
+      'The previous round reveal must be acknowledged before another guess',
     );
-    if (response === undefined) {
-      throw new GameRuleError('Missing authored response for guessed POI');
-    }
-    return response.tier;
-  });
+  }
+  const round = caseData.rounds[current.guesses.length];
+  if (!round) throw new GameRuleError('This daily case is complete');
+  if (!caseData.pois.some((poi) => poi.id === poiId))
+    throw new GameRuleError('Unknown POI');
+  const revealedTargets = new Set(
+    caseData.rounds
+      .slice(0, current.guesses.length)
+      .map((candidate) => candidate.targetPoiId),
+  );
+  if (revealedTargets.has(poiId))
+    throw new GameRuleError('This location has already been declassified');
+  const result = round.results.find((candidate) => candidate.poiId === poiId);
+  if (!result) throw new GameRuleError('Missing authored round result');
+  const guesses = [
+    ...current.guesses,
+    {
+      roundId: round.id,
+      poiId,
+      tier: result.tier,
+      points: getRoundScore(result.tier),
+    },
+  ];
+  if (guesses.length < caseData.rounds.length) return { ...current, guesses };
+  return { ...current, guesses, completedAt: now.toISOString() };
+}
+
+export function getTotalScore(progress: FiveRoundProgress): number {
+  return fiveRoundProgressSchema
+    .parse(progress)
+    .guesses.reduce((total, guess) => total + guess.points, 0);
 }

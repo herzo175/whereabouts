@@ -1,5 +1,7 @@
-import { createProgress } from '@whereabouts/game-engine';
+import { createFiveRoundProgress } from '@whereabouts/game-engine';
 import { describe, expect, it } from 'vitest';
+
+import { makeFiveRoundCase } from '../../case-content/test/fixtures.js';
 
 import { clearProgress, loadProgress, saveProgress } from './storage.js';
 
@@ -28,24 +30,65 @@ function makeStorage(): Storage {
   };
 }
 
-function makeCase(): Parameters<typeof createProgress>[0] {
-  return {
-    publicationDate: '2026-08-14',
-    revision: 1,
-    target: { poiId: 'poi-00' },
-    pois: [{ id: 'poi-00' }, { id: 'poi-01' }],
-    clues: [],
-    contextualResponses: [],
-  };
-}
-
 describe('browser progress storage', () => {
-  it('resumes matching saved progress for a case', () => {
-    const caseData = makeCase();
+  it('resumes matching saved five-round progress', () => {
+    const caseData = makeFiveRoundCase();
+    const storage = makeStorage();
+    const progress = createFiveRoundProgress(caseData);
+
+    saveProgress(progress, storage);
+
+    expect(loadProgress(caseData, storage)).toEqual(progress);
+  });
+
+  it('starts fresh for malformed saved data', () => {
+    const caseData = makeFiveRoundCase();
+    const storage = makeStorage();
+    storage.setItem('whereabouts:case:2026-08-14', '{');
+
+    expect(loadProgress(caseData, storage)).toEqual(
+      createFiveRoundProgress(caseData),
+    );
+  });
+
+  it('starts fresh when saved progress does not match the authored case', () => {
+    const caseData = makeFiveRoundCase();
+    const storage = makeStorage();
+    storage.setItem(
+      'whereabouts:case:2026-08-14',
+      JSON.stringify({
+        ...createFiveRoundProgress(caseData),
+        guesses: [
+          {
+            roundId: 'round-1',
+            poiId: 'poi-10',
+            tier: 'hot',
+            points: 75,
+          },
+        ],
+        acknowledgedRoundCount: 1,
+      }),
+    );
+
+    expect(loadProgress(caseData, storage)).toEqual(
+      createFiveRoundProgress(caseData),
+    );
+  });
+
+  it('restores whether the latest round reveal needs acknowledgement', () => {
+    const caseData = makeFiveRoundCase();
     const storage = makeStorage();
     const progress = {
-      ...createProgress(caseData),
-      guessedPoiIds: ['poi-01'],
+      ...createFiveRoundProgress(caseData),
+      guesses: [
+        {
+          roundId: 'round-1',
+          poiId: 'poi-10',
+          tier: 'warm' as const,
+          points: 50 as const,
+        },
+      ],
+      acknowledgedRoundCount: 0,
     };
 
     saveProgress(progress, storage);
@@ -53,30 +96,9 @@ describe('browser progress storage', () => {
     expect(loadProgress(caseData, storage)).toEqual(progress);
   });
 
-  it.each([
-    '{',
-    JSON.stringify({ schemaVersion: 1 }),
-  ])('starts a new progress for malformed or schema-invalid saved data', (savedValue) => {
-    const caseData = makeCase();
-    const storage = makeStorage();
-    storage.setItem('whereabouts:case:2026-08-14', savedValue);
-
-    expect(loadProgress(caseData, storage)).toEqual(createProgress(caseData));
-  });
-
-  it('starts a new progress when a saved revision differs', () => {
-    const caseData = makeCase();
-    const storage = makeStorage();
-    storage.setItem(
-      'whereabouts:case:2026-08-14',
-      JSON.stringify({ ...createProgress(caseData), caseRevision: 2 }),
-    );
-
-    expect(loadProgress(caseData, storage)).toEqual(createProgress(caseData));
-  });
-
   it('handles inaccessible storage without throwing', () => {
-    const caseData = makeCase();
+    const caseData = makeFiveRoundCase();
+    const progress = createFiveRoundProgress(caseData);
     const storage = {
       ...makeStorage(),
       getItem() {
@@ -90,17 +112,17 @@ describe('browser progress storage', () => {
       },
     };
 
-    expect(() => saveProgress(createProgress(caseData), storage)).not.toThrow();
+    expect(() => saveProgress(progress, storage)).not.toThrow();
     expect(() =>
       clearProgress(caseData.publicationDate, storage),
     ).not.toThrow();
-    expect(loadProgress(caseData, storage)).toEqual(createProgress(caseData));
+    expect(loadProgress(caseData, storage)).toEqual(progress);
   });
 
   it('saves and clears only the requested dated progress key', () => {
-    const caseData = makeCase();
+    const caseData = makeFiveRoundCase();
     const storage = makeStorage();
-    const progress = createProgress(caseData);
+    const progress = createFiveRoundProgress(caseData);
     storage.setItem('whereabouts:case:2026-08-15', 'other case');
 
     saveProgress(progress, storage);

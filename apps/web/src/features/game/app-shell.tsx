@@ -1,22 +1,22 @@
-import type { DailyCase } from '@whereabouts/case-content';
-import type { GameProgress } from '@whereabouts/game-engine';
+import type { FiveRoundDailyCase } from '@whereabouts/case-content';
+import type { FiveRoundProgress } from '@whereabouts/game-engine';
 import { useState } from 'react';
 
 import { ArchiveDrawer, type PublishedCase } from './archive-drawer';
 import { BriefingUnavailable } from './briefing-unavailable';
-import { GameScreen } from './game-screen';
+import { FiveRoundGameScreen } from './five-round-game-screen';
 import { buildShareText, type ShareResult, shareResult } from './share';
 
 type ShareNavigator = Parameters<typeof shareResult>[1];
 type ShareStatus = ShareResult | 'error' | undefined;
 
 type ShareCurrentResultOptions = {
-  caseData: DailyCase;
+  caseData: FiveRoundDailyCase;
   date: string;
   navigatorValue: ShareNavigator;
   onStatus: (status: ShareResult) => void;
   origin: string;
-  progress: GameProgress;
+  progress: FiveRoundProgress;
 };
 
 export async function shareCurrentResult({
@@ -39,7 +39,7 @@ export async function shareCurrentResult({
 }
 
 type AppShellProps = {
-  caseData: DailyCase | null;
+  caseData: FiveRoundDailyCase | null;
   date: string;
   publishedCases: PublishedCase[];
   today: string;
@@ -65,7 +65,10 @@ export function AppShell({
   const [archiveOpen, setArchiveOpen] = useState(false);
   const [shareStatus, setShareStatus] = useState<ShareStatus>();
 
-  const shareCase = async (activeCase: DailyCase, progress: GameProgress) => {
+  const shareCase = async (
+    activeCase: FiveRoundDailyCase,
+    progress: FiveRoundProgress,
+  ) => {
     try {
       await shareCurrentResult({
         caseData: activeCase,
@@ -84,7 +87,7 @@ export function AppShell({
   return (
     <>
       {caseData ? (
-        <GameScreen caseData={caseData} onShare={shareCase} />
+        <FiveRoundGameScreen caseData={caseData} onShare={shareCase} />
       ) : (
         <BriefingUnavailable
           date={date}

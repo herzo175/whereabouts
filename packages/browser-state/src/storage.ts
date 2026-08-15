@@ -1,27 +1,20 @@
+import type { FiveRoundDailyCase } from '@whereabouts/case-content';
 import {
-  createProgress,
-  type GameProgress,
-  gameProgressSchema,
+  createFiveRoundProgress,
+  type FiveRoundProgress,
+  fiveRoundProgressSchema,
+  getCurrentRound,
 } from '@whereabouts/game-engine';
 
-type CaseData = Parameters<typeof createProgress>[0];
-type ProgressSchema = typeof gameProgressSchema & {
-  safeParse?: (
-    value: unknown,
-  ) => { success: true; data: GameProgress } | { success: false };
+type ProgressSchema<T> = {
+  parse(value: unknown): T;
 };
 
 function storageKey(caseDate: string): string {
   return `whereabouts:case:${caseDate}`;
 }
 
-function parseProgress(value: unknown): GameProgress | null {
-  const schema = gameProgressSchema as ProgressSchema;
-  if (schema.safeParse !== undefined) {
-    const result = schema.safeParse(value);
-    return result.success ? result.data : null;
-  }
-
+function parseProgress<T>(value: unknown, schema: ProgressSchema<T>): T | null {
   try {
     return schema.parse(value);
   } catch {
@@ -30,29 +23,38 @@ function parseProgress(value: unknown): GameProgress | null {
 }
 
 export function loadProgress(
-  caseData: CaseData,
+  caseData: FiveRoundDailyCase,
+  storage?: Storage,
+): FiveRoundProgress;
+export function loadProgress(
+  caseData: FiveRoundDailyCase,
   storage: Storage = window.localStorage,
-): GameProgress {
+): FiveRoundProgress {
+  const freshProgress = createFiveRoundProgress(caseData);
   try {
     const serialized = storage.getItem(storageKey(caseData.publicationDate));
-    if (serialized === null) return createProgress(caseData);
+    if (serialized === null) return freshProgress;
 
-    const progress = parseProgress(JSON.parse(serialized));
+    const progress = parseProgress(
+      JSON.parse(serialized),
+      fiveRoundProgressSchema,
+    );
     if (
       progress === null ||
       progress.caseDate !== caseData.publicationDate ||
       progress.caseRevision !== caseData.revision
     ) {
-      return createProgress(caseData);
+      return freshProgress;
     }
+    getCurrentRound(caseData, progress);
     return progress;
   } catch {
-    return createProgress(caseData);
+    return freshProgress;
   }
 }
 
 export function saveProgress(
-  progress: GameProgress,
+  progress: FiveRoundProgress,
   storage: Storage = window.localStorage,
 ): void {
   try {

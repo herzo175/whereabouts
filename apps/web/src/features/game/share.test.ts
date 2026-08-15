@@ -1,5 +1,5 @@
-import type { DailyCase, Poi } from '@whereabouts/case-content';
-import type { GameProgress } from '@whereabouts/game-engine';
+import type { FiveRoundDailyCase, Poi } from '@whereabouts/case-content';
+import type { FiveRoundProgress } from '@whereabouts/game-engine';
 import { describe, expect, it, vi } from 'vitest';
 
 import { buildShareText, shareResult } from './share';
@@ -16,100 +16,101 @@ function poi(id: string, name: string): Poi {
   };
 }
 
-const caseData: DailyCase = {
-  schemaVersion: 1,
+const fiveRoundCase: FiveRoundDailyCase = {
+  schemaVersion: 2,
   publicationDate: '2026-08-14',
   revision: 1,
   caseNumber: 42,
-  target: { poiId: 'target', destinationName: 'Secret destination' },
-  pois: [
-    poi('cold', 'Cold POI'),
-    poi('warm', 'Warm POI'),
-    poi('hot', 'Hot POI'),
-    poi('target', 'Target POI'),
-    poi('extra-one', 'Extra one'),
-    poi('extra-two', 'Extra two'),
-    poi('extra-three', 'Extra three'),
-  ],
-  clues: [],
-  contextualResponses: [
-    { poiId: 'cold', tier: 'cold', text: 'Cold', sourceIds: [] },
-    { poiId: 'warm', tier: 'warm', text: 'Warm', sourceIds: [] },
-    { poiId: 'hot', tier: 'hot', text: 'Hot', sourceIds: [] },
-    { poiId: 'extra-one', tier: 'cold', text: 'Cold', sourceIds: [] },
-    { poiId: 'extra-two', tier: 'warm', text: 'Warm', sourceIds: [] },
-    { poiId: 'extra-three', tier: 'hot', text: 'Hot', sourceIds: [] },
-  ],
-  reveal: {
-    title: 'Target POI',
-    summary: 'Hidden city',
-    clueExplanation: 'Secret destination',
-    sourceIds: [],
-  },
+  pois: [poi('known-place', 'Known place')],
+  rounds: Array.from({ length: 5 }, (_, index) => ({
+    id: `round-${index + 1}`,
+    targetPoiId: 'known-place',
+    image: {
+      url: 'https://whereabouts.test/evidence.jpg',
+      alt: 'Evidence photograph',
+      attribution: 'Photographer',
+      licenseUrl: 'https://whereabouts.test/license',
+    },
+    clue: { text: 'A revealing clue', sourceIds: [] },
+    results: [
+      {
+        poiId: 'known-place',
+        tier: 'correct',
+        text: 'Correct location.',
+        sourceIds: [],
+      },
+    ],
+  })),
   sources: [],
 };
 
-function progress(overrides: Partial<GameProgress> = {}): GameProgress {
+function fiveRoundProgress(
+  overrides: Partial<FiveRoundProgress> = {},
+): FiveRoundProgress {
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     caseDate: '2026-08-14',
     caseRevision: 1,
-    guessedPoiIds: ['cold', 'warm', 'hot', 'target'],
-    outcome: 'won',
+    guesses: [
+      {
+        roundId: 'round-1',
+        poiId: 'known-place',
+        tier: 'correct',
+        points: 100,
+      },
+      { roundId: 'round-2', poiId: 'known-place', tier: 'hot', points: 75 },
+      { roundId: 'round-3', poiId: 'known-place', tier: 'warm', points: 50 },
+      { roundId: 'round-4', poiId: 'known-place', tier: 'cold', points: 25 },
+      {
+        roundId: 'round-5',
+        poiId: 'known-place',
+        tier: 'correct',
+        points: 100,
+      },
+    ],
+    acknowledgedRoundCount: 5,
     completedAt: '2026-08-14T12:00:00.000Z',
     ...overrides,
   };
 }
 
 describe('buildShareText', () => {
-  it('builds a spoiler-free share result for a win', () => {
+  it('builds a spoiler-free v2 five-round share result', () => {
     const text = buildShareText(
-      caseData,
-      progress(),
+      fiveRoundCase,
+      fiveRoundProgress(),
       'https://whereabouts.test/',
     );
 
     expect(text).toBe(
-      'WHEREABOUTS 4/6\n🔵 🟡 🟠 🟢\nhttps://whereabouts.test/2026-08-14',
+      'WHEREABOUTS\n🟢 🟠 🟡 🔵 🟢\n350 / 500\nhttps://whereabouts.test/2026-08-14',
     );
-    expect(text).not.toContain('Target POI');
-    expect(text).not.toContain('Hidden city');
-    expect(text).not.toContain('Hidden country');
-    expect(text).not.toContain('Secret destination');
+    expect(text).not.toContain('Known place');
+    expect(text).not.toContain('Evidence photograph');
+    expect(text).not.toContain('A revealing clue');
   });
 
-  it('uses X/6 for a loss', () => {
-    expect(
-      buildShareText(
-        caseData,
-        progress({
-          guessedPoiIds: [
-            'cold',
-            'warm',
-            'hot',
-            'extra-one',
-            'extra-two',
-            'extra-three',
-          ],
-          outcome: 'lost',
-        }),
-        'https://whereabouts.test',
-      ),
-    ).toContain('WHEREABOUTS X/6');
-  });
-
-  it('refuses to share an unfinished game', () => {
+  it('refuses to share an incomplete v2 five-round game', () => {
     expect(() =>
       buildShareText(
-        caseData,
-        progress({
-          guessedPoiIds: ['cold'],
-          outcome: 'playing',
+        fiveRoundCase,
+        fiveRoundProgress({
+          guesses: fiveRoundProgress().guesses.slice(0, 4),
           completedAt: undefined,
         }),
         'https://whereabouts.test',
       ),
     ).toThrow(/completed/i);
+  });
+
+  it('refuses to share until the final reveal is acknowledged', () => {
+    expect(() =>
+      buildShareText(
+        fiveRoundCase,
+        fiveRoundProgress({ acknowledgedRoundCount: 4 }),
+        'https://whereabouts.test',
+      ),
+    ).toThrow(/revealed/i);
   });
 });
 

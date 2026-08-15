@@ -31,6 +31,10 @@ function parseCase(value: unknown): DailyCase | undefined {
   }
 }
 
+function targetIds(dailyCase: DailyCase): string[] {
+  return dailyCase.rounds.map((round) => round.targetPoiId);
+}
+
 export function validateCaseForPublication(value: unknown): ValidationIssue[] {
   const dailyCase = parseCase(value);
   if (!dailyCase)
@@ -41,31 +45,50 @@ export function validateCaseForPublication(value: unknown): ValidationIssue[] {
       },
     ];
 
-  const target = dailyCase.pois.find(
-    (poi) => poi.id === dailyCase.target.poiId,
-  );
-  if (!target)
-    return [{ path: 'target.poiId', message: 'Target POI could not be found' }];
-  const prohibited = new Set(
-    [target.name, dailyCase.target.destinationName, target.city, target.country]
-      .map(normalize)
-      .filter(Boolean),
-  );
   const issues: ValidationIssue[] = [];
-  const preReveal = [
-    ...dailyCase.clues.map((clue, index) => ({
-      path: `clues[${index}].text`,
-      text: clue.text,
-    })),
-    ...dailyCase.contextualResponses.map((response, index) => ({
-      path: `contextualResponses[${index}].text`,
-      text: response.text,
-    })),
-  ];
-  for (const item of preReveal) {
-    const text = normalize(item.text);
-    if ([...prohibited].some((term) => text.includes(term))) {
-      issues.push({ path: item.path, message: leakMessage });
+  const rounds = dailyCase.rounds.map((round, roundIndex) => ({
+    targetPoiId: round.targetPoiId,
+    preReveal: [
+      { path: `rounds[${roundIndex}].clue.text`, text: round.clue.text },
+    ],
+  }));
+  for (const round of rounds) {
+    const target = dailyCase.pois.find((poi) => poi.id === round.targetPoiId);
+    if (!target) {
+      issues.push({
+        path: 'target.poiId',
+        message: 'Target POI could not be found',
+      });
+      continue;
+    }
+    const prohibited = new Set(
+      [target.name, target.city, target.country].map(normalize),
+    );
+    for (const item of round.preReveal) {
+      const text = normalize(item.text);
+      if ([...prohibited].some((term) => text.includes(term))) {
+        issues.push({ path: item.path, message: leakMessage });
+      }
+    }
+  }
+
+  for (const [roundIndex, round] of dailyCase.rounds.entries()) {
+    const counts = { hot: 0, warm: 0, cold: 0 };
+    for (const result of round.results) {
+      if (result.tier !== 'correct') counts[result.tier] += 1;
+    }
+    if (
+      counts.hot < 3 ||
+      counts.hot > 5 ||
+      counts.warm < 7 ||
+      counts.warm > 10 ||
+      counts.cold < 9 ||
+      counts.cold > 14
+    ) {
+      issues.push({
+        path: `rounds[${roundIndex}].results`,
+        message: 'Round must contain 3–5 hot, 7–10 warm, and 9–14 cold results',
+      });
     }
   }
 
@@ -162,23 +185,25 @@ export function validateCollection(
       published.indexOf(entry),
     );
     if (
-      previous.some(
-        ({ value: prior }) => prior.target.poiId === value.target.poiId,
+      previous.some(({ value: prior }) =>
+        targetIds(prior).some((targetId) =>
+          targetIds(value).includes(targetId),
+        ),
       )
     ) {
       issues.push({
-        path: `cases[${index}].target.poiId`,
+        path: `cases[${index}].rounds`,
         message: 'Target POI was used within the previous 30 published cases',
       });
     }
     const window = [...previous, entry];
     if (window.length < 30) continue;
-    const targetId = value.target.poiId;
+    const targetIdsForCase = new Set(targetIds(value));
     for (const poi of value.pois) {
-      if (poi.id === targetId) continue;
+      if (targetIdsForCase.has(poi.id)) continue;
       const count = window.filter(
         ({ value: candidate }) =>
-          candidate.target.poiId !== poi.id &&
+          !targetIds(candidate).includes(poi.id) &&
           candidate.pois.some((candidatePoi) => candidatePoi.id === poi.id),
       ).length;
       if (count / window.length > 0.4) {

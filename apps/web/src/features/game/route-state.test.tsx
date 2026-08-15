@@ -1,17 +1,23 @@
 import { render, screen } from '@testing-library/react';
-import { makeCase } from '@whereabouts/case-content/testing';
-import type { GameProgress } from '@whereabouts/game-engine';
+import { makeFiveRoundCase } from '@whereabouts/case-content/testing';
+import type { FiveRoundProgress } from '@whereabouts/game-engine';
 import { describe, expect, it, vi } from 'vitest';
 
 import { AppShell, shareCurrentResult } from './app-shell';
 import { BriefingUnavailable } from './briefing-unavailable';
 
-const completedProgress: GameProgress = {
-  schemaVersion: 1,
+const completedProgress: FiveRoundProgress = {
+  schemaVersion: 2,
   caseDate: '2026-08-14',
   caseRevision: 1,
-  guessedPoiIds: ['poi-01', 'poi-00'],
-  outcome: 'won',
+  guesses: [
+    { roundId: 'round-1', poiId: 'poi-00', tier: 'correct', points: 100 },
+    { roundId: 'round-2', poiId: 'poi-01', tier: 'correct', points: 100 },
+    { roundId: 'round-3', poiId: 'poi-02', tier: 'correct', points: 100 },
+    { roundId: 'round-4', poiId: 'poi-03', tier: 'correct', points: 100 },
+    { roundId: 'round-5', poiId: 'poi-04', tier: 'correct', points: 100 },
+  ],
+  acknowledgedRoundCount: 5,
   completedAt: '2026-08-14T12:00:00.000Z',
 };
 
@@ -19,7 +25,7 @@ describe('route state', () => {
   it('keeps archive controls out of the active briefing', () => {
     render(
       <AppShell
-        caseData={makeCase()}
+        caseData={makeFiveRoundCase()}
         date="2026-08-14"
         publishedCases={[{ date: '2026-08-14', caseNumber: 1 }]}
         today="2026-08-14"
@@ -47,7 +53,7 @@ describe('route state', () => {
     const onStatus = vi.fn();
 
     await shareCurrentResult({
-      caseData: makeCase(),
+      caseData: makeFiveRoundCase(),
       date: '2026-08-14',
       navigatorValue: { clipboard: { writeText } },
       origin: 'https://whereabouts.test',
@@ -56,7 +62,7 @@ describe('route state', () => {
     });
 
     expect(writeText).toHaveBeenCalledWith(
-      'WHEREABOUTS 2/6\n🔵 🟢\nhttps://whereabouts.test/2026-08-14',
+      'WHEREABOUTS\n🟢 🟢 🟢 🟢 🟢\n500 / 500\nhttps://whereabouts.test/2026-08-14',
     );
     expect(onStatus).toHaveBeenCalledWith('copied');
   });

@@ -23,31 +23,26 @@ import {
 } from './wikipedia.js';
 
 export const generatedCaseDraftSchema = z.object({
-  clues: z
+  rounds: z
     .array(
       z.object({
-        id: z.string(),
-        text: z.string(),
-        sourceIds: z.array(z.string()).min(1),
+        clue: z.object({
+          text: z.string(),
+          sourceIds: z.array(z.string()).min(1),
+        }),
+        results: z
+          .array(
+            z.object({
+              poiId: z.string(),
+              similarityScore: z.number().finite().min(0).max(100),
+              text: z.string(),
+              sourceIds: z.array(z.string()).min(1),
+            }),
+          )
+          .length(25),
       }),
     )
-    .length(6),
-  contextualResponses: z
-    .array(
-      z.object({
-        poiId: z.string(),
-        tier: z.enum(['cold', 'warm', 'hot']),
-        text: z.string(),
-        sourceIds: z.array(z.string()).min(1),
-      }),
-    )
-    .length(24),
-  reveal: z.object({
-    title: z.string(),
-    summary: z.string(),
-    clueExplanation: z.string(),
-    sourceIds: z.array(z.string()).min(1),
-  }),
+    .length(5),
 });
 export type GeneratedCaseDraft = z.infer<typeof generatedCaseDraftSchema>;
 
@@ -72,27 +67,22 @@ export function buildPoiBlurb(extract: string, maximumLength = 280): string {
 }
 
 const modelCaseDraftSchema = z.object({
-  clues: z.array(
+  rounds: z.array(
     z.object({
-      id: z.string(),
-      text: z.string(),
-      sourceIds: z.array(z.string()),
+      clue: z.object({
+        text: z.string(),
+        sourceIds: z.array(z.string()),
+      }),
+      results: z.array(
+        z.object({
+          poiId: z.string(),
+          similarityScore: z.number().finite().min(0).max(100),
+          text: z.string(),
+          sourceIds: z.array(z.string()),
+        }),
+      ),
     }),
   ),
-  contextualResponses: z.array(
-    z.object({
-      poiId: z.string(),
-      tier: z.enum(['cold', 'warm', 'hot']),
-      text: z.string(),
-      sourceIds: z.array(z.string()),
-    }),
-  ),
-  reveal: z.object({
-    title: z.string(),
-    summary: z.string(),
-    clueExplanation: z.string(),
-    sourceIds: z.array(z.string()),
-  }),
 });
 
 function orderPoisForDisplay(
@@ -153,7 +143,7 @@ async function defaultGenerate(
     model: openrouter.chat(config.model),
     abortSignal: AbortSignal.timeout(180_000),
     maxRetries: 0,
-    maxOutputTokens: 10_000,
+    maxOutputTokens: 24_000,
     providerOptions: {
       openrouter: { reasoning: { effort: 'low' } },
     },
@@ -166,18 +156,143 @@ async function defaultGenerate(
 function sourceId(index: number): string {
   return `source-${String(index + 1).padStart(2, '0')}`;
 }
+
+function canonicalizeRoundPoiIds(
+  draft: GeneratedCaseDraft,
+  pois: Poi[],
+): GeneratedCaseDraft {
+  const idsByCompactForm = new Map<string, string[]>();
+  for (const poi of pois) {
+    const compact = poi.id.replaceAll('-', '');
+    idsByCompactForm.set(compact, [
+      ...(idsByCompactForm.get(compact) ?? []),
+      poi.id,
+    ]);
+  }
+  return {
+    rounds: draft.rounds.map((round) => ({
+      ...round,
+      results: round.results.map((result) => {
+        const matches = idsByCompactForm.get(result.poiId.replaceAll('-', ''));
+        return matches?.length === 1
+          ? { ...result, poiId: matches[0] as string }
+          : result;
+      }),
+    })),
+  };
+}
+
 function assertSupportedSourceIds(
   draft: GeneratedCaseDraft,
   sources: Set<string>,
 ): void {
   const used = [
-    ...draft.clues.flatMap((entry) => entry.sourceIds),
-    ...draft.contextualResponses.flatMap((entry) => entry.sourceIds),
-    ...draft.reveal.sourceIds,
+    ...draft.rounds.flatMap((round) => [
+      ...round.clue.sourceIds,
+      ...round.results.flatMap((result) => result.sourceIds),
+    ]),
   ];
   for (const id of used)
     if (!sources.has(id)) throw new Error(`unsupported source ID: ${id}`);
 }
+
+function assertRoundSourceGrounding(
+  draft: GeneratedCaseDraft,
+  pois: Poi[],
+): void {
+  const sourceByPoiId = new Map(
+    pois.map((poi, index) => [poi.id, sourceId(index)]),
+  );
+  for (const [roundIndex, round] of draft.rounds.entries()) {
+    const targetSourceId = sourceId(roundIndex);
+    const targetPoiId = pois[roundIndex]?.id;
+    if (!targetPoiId)
+      throw new Error(`round ${roundIndex + 1} target is missing`);
+    if (!round.clue.sourceIds.includes(targetSourceId)) {
+      throw new Error(
+        `round ${roundIndex + 1} clue must cite its target source`,
+      );
+    }
+    for (const result of round.results) {
+      const guessedSourceId = sourceByPoiId.get(result.poiId);
+      if (!result.sourceIds.includes(targetSourceId)) {
+        throw new Error(
+          `round ${roundIndex + 1} result for ${result.poiId} must cite its target source`,
+        );
+      }
+      if (
+        result.poiId !== targetPoiId &&
+        (!guessedSourceId || !result.sourceIds.includes(guessedSourceId))
+      ) {
+        throw new Error(
+          `round ${roundIndex + 1} result for ${result.poiId} must cite its guessed POI source`,
+        );
+      }
+    }
+  }
+}
+
+function normalizeRoundSources(
+  draft: GeneratedCaseDraft,
+  pois: Poi[],
+): GeneratedCaseDraft {
+  const sourceByPoiId = new Map(
+    pois.map((poi, index) => [poi.id, sourceId(index)]),
+  );
+  return {
+    rounds: draft.rounds.map((round, roundIndex) => {
+      const targetPoiId = pois[roundIndex]?.id;
+      const targetSourceId = sourceId(roundIndex);
+      return {
+        ...round,
+        clue: {
+          ...round.clue,
+          sourceIds: [...new Set([...round.clue.sourceIds, targetSourceId])],
+        },
+        results: round.results.map((result) => {
+          const guessedSourceId = sourceByPoiId.get(result.poiId);
+          const required =
+            result.poiId === targetPoiId || !guessedSourceId
+              ? [targetSourceId]
+              : [targetSourceId, guessedSourceId];
+          return {
+            ...result,
+            sourceIds: [...new Set([...result.sourceIds, ...required])],
+          };
+        }),
+      };
+    }),
+  };
+}
+
+function bucketRoundResults(
+  results: GeneratedCaseDraft['rounds'][number]['results'],
+  targetPoiId: string,
+): Array<{
+  poiId: string;
+  tier: 'correct' | 'hot' | 'warm' | 'cold';
+  text: string;
+  sourceIds: string[];
+}> {
+  const ranked = results
+    .filter((result) => result.poiId !== targetPoiId)
+    .sort(
+      (left, right) =>
+        right.similarityScore - left.similarityScore ||
+        left.poiId.localeCompare(right.poiId),
+    );
+  const tiers = new Map<string, 'hot' | 'warm' | 'cold'>();
+  for (const [index, result] of ranked.entries()) {
+    tiers.set(result.poiId, index < 4 ? 'hot' : index < 12 ? 'warm' : 'cold');
+  }
+  return results.map(({ similarityScore: _similarityScore, ...result }) => {
+    if (result.poiId === targetPoiId) return { ...result, tier: 'correct' };
+    const tier = tiers.get(result.poiId);
+    if (!tier) throw new Error(`missing similarity bucket for ${result.poiId}`);
+    return { ...result, tier };
+  });
+}
+
 async function pathExists(path: string): Promise<boolean> {
   try {
     await access(path);
@@ -195,32 +310,55 @@ export async function generateCase(
   const rawDraft = await (
     input.generate ?? (() => defaultGenerate(input.pois, input.extracts))
   )();
-  const draft = generatedCaseDraftSchema.parse(rawDraft);
+  const parsedDraft = canonicalizeRoundPoiIds(
+    generatedCaseDraftSchema.parse(rawDraft),
+    input.pois,
+  );
   const sources = input.extracts.map((extract, index) => ({
     id: sourceId(index),
     title: extract.title,
     url: extract.url,
     retrievedAt: extract.retrievedAt,
   }));
-  assertSupportedSourceIds(draft, new Set(sources.map((source) => source.id)));
+  assertSupportedSourceIds(
+    parsedDraft,
+    new Set(sources.map((source) => source.id)),
+  );
+  const draft = normalizeRoundSources(parsedDraft, input.pois);
+  assertRoundSourceGrounding(draft, input.pois);
   const poisWithBlurbs = input.pois.map((poi, index) => ({
     ...poi,
     blurb: buildPoiBlurb(input.extracts[index]?.extract ?? ''),
   }));
-  const target = poisWithBlurbs[0];
-  if (!target) throw new Error('target POI is required');
+  if (poisWithBlurbs.some((poi) => !poi.image)) {
+    throw new Error('generation requires images for all 25 POIs');
+  }
+  const targets = poisWithBlurbs.slice(0, 5);
+  if (targets.length !== 5 || targets.some((target) => !target?.image))
+    throw new Error(
+      'generation requires images for the first five target POIs',
+    );
   const caseData = dailyCaseSchema.parse({
-    schemaVersion: 1,
+    schemaVersion: 2,
     publicationDate: input.date,
     revision: input.revision,
     caseNumber: input.caseNumber,
-    target: { poiId: target.id, destinationName: target.name },
     pois: orderPoisForDisplay(poisWithBlurbs, {
       date: input.date,
       revision: input.revision,
       caseNumber: input.caseNumber,
     }),
-    ...draft,
+    rounds: draft.rounds.map((round, index) => {
+      const target = targets[index];
+      if (!target?.image) throw new Error('target POI image is required');
+      return {
+        id: `round-${index + 1}`,
+        targetPoiId: target.id,
+        image: target.image,
+        ...round,
+        results: bucketRoundResults(round.results, target.id),
+      };
+    }),
     sources,
   });
   const issues = validateCaseForPublication(caseData);

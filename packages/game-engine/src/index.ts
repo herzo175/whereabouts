@@ -1,11 +1,14 @@
 export {
-  applyGuess,
-  createProgress,
+  acknowledgeRoundReveal,
+  createFiveRoundProgress,
   GameRuleError,
-  getAttemptsRemaining,
-  getLatestFeedback,
-  getShareTokens,
-  getVisibleClues,
+  getCurrentRound,
+  getRoundScore,
+  getTotalScore,
+  submitRoundGuess,
 } from './engine.js';
-export type { GameProgress } from './progress-schema.js';
-export { gameProgressSchema } from './progress-schema.js';
+export type {
+  FiveRoundGuess,
+  FiveRoundProgress,
+} from './progress-schema.js';
+export { fiveRoundProgressSchema } from './progress-schema.js';
