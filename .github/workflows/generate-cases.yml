@@ -2,7 +2,9 @@ name: Generate upcoming cases
 
 on:
   schedule:
-    - cron: '0 14 * * 1'
+    # GitHub Actions cron is UTC. Run at both possible UTC midnight-Eastern
+    # offsets, then let the guard below select the actual midnight run.
+    - cron: '0 4,5 * * *'
   workflow_dispatch:
 
 permissions:
@@ -13,36 +15,54 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
+      - name: Check for midnight Eastern
+        id: schedule
+        run: |
+          if [ "$(TZ=America/New_York date +%H)" = "00" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
+        uses: actions/checkout@v4
+      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
+        uses: pnpm/action-setup@v4
         with:
           version: 10.30.0
-      - uses: actions/setup-node@v4
+      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
+        uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: pnpm
-      - name: Install dependencies
+      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
+        name: Install dependencies
         run: pnpm install --frozen-lockfile
-      - name: Calculate the upcoming range
+      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
+        name: Calculate the upcoming range
         id: dates
-        run: echo "start=$(date -u -d '+14 days' +%F)" >> "$GITHUB_OUTPUT"
-      - name: Generate seven upcoming cases
+        run: echo "start=$(TZ=America/New_York date -d '+14 days' +%F)" >> "$GITHUB_OUTPUT"
+      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
+        name: Generate one upcoming case
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          WIKIMEDIA_USER_AGENT: ${{ secrets.WIKIMEDIA_USER_AGENT }}
+          WIKIMEDIA_USER_AGENT: ${{ secrets.WIKIMEDIA_USER_AGENT || 'Whereabouts/1.0 (https://github.com/herzo175/whereabouts)' }}
           WHEREABOUTS_MODEL: ${{ vars.WHEREABOUTS_MODEL || 'openai/gpt-5.6-luna' }}
-        run: pnpm content:generate-range -- --from "${{ steps.dates.outputs.start }}" --days 7
-      - name: Validate generated content
+        run: pnpm content:generate-range -- --from "${{ steps.dates.outputs.start }}" --days 1
+      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
+        name: Validate generated content
         run: pnpm content:validate
-      - name: Produce human review packets
-        run: pnpm content:review-range -- --from "${{ steps.dates.outputs.start }}" --days 7 --out artifacts/review
-      - name: Upload review packets
+      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
+        name: Produce human review packets
+        run: pnpm content:review-range -- --from "${{ steps.dates.outputs.start }}" --days 1 --out artifacts/review
+      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
+        name: Upload review packets
         uses: actions/upload-artifact@v4
         with:
           name: whereabouts-review-${{ steps.dates.outputs.start }}
           path: artifacts/review
           if-no-files-found: error
-      - name: Create the review pull request
+      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
+        name: Create the review pull request
         env:
           GH_TOKEN: ${{ github.token }}
           START_DATE: ${{ steps.dates.outputs.start }}

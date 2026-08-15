@@ -2,7 +2,8 @@ name: Publish reviewed case
 
 on:
   schedule:
-    - cron: '5 0 * * *'
+    # GitHub Actions cron is UTC; the guard below handles Eastern daylight time.
+    - cron: '5 4,5 * * *'
   workflow_dispatch:
 
 permissions:
@@ -12,21 +13,34 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Check for midnight Eastern
+        id: schedule
+        run: |
+          if [ "$(TZ=America/New_York date +%H)" = "00" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
+        uses: actions/checkout@v4
+      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.30.0
+      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
+        uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: pnpm
-      - name: Enable the pinned pnpm release
-        run: |
-          corepack enable
-          corepack install
-      - name: Install dependencies
+      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
+        name: Install dependencies
         run: pnpm install --frozen-lockfile
-      - name: Calculate the UTC publication date
+      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
+        name: Calculate the Eastern publication date
         id: date
-        run: echo "value=$(date -u +%F)" >> "$GITHUB_OUTPUT"
-      - name: Add today's reviewed artifact to the manifest
+        run: echo "value=$(TZ=America/New_York date +%F)" >> "$GITHUB_OUTPUT"
+      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
+        name: Add today's reviewed artifact to the manifest
         id: publish
         env:
           DATE: ${{ steps.date.outputs.value }}
@@ -72,13 +86,13 @@ jobs:
           await writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
           await writeFile(process.env.GITHUB_OUTPUT, 'publish=true\n');
           NODE
-      - name: Validate the publication boundary
-        if: steps.publish.outputs.publish == 'true'
+      - if: steps.publish.outputs.publish == 'true'
+        name: Validate the publication boundary
         env:
           PUBLICATION_CEILING: ${{ steps.date.outputs.value }}
         run: pnpm content:validate
-      - name: Commit the manifest entry
-        if: steps.publish.outputs.publish == 'true'
+      - if: steps.publish.outputs.publish == 'true'
+        name: Commit the manifest entry
         env:
           DATE: ${{ steps.date.outputs.value }}
         run: |
