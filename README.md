@@ -44,7 +44,7 @@ Copy `.env.example` to `.env` for local case generation. The generation CLI load
 
 - `OPENROUTER_API_KEY` — required only to generate candidate cases through OpenRouter.
 - `WIKIMEDIA_USER_AGENT` — required for generation; use a contactable product identifier for Wikimedia requests.
-- `WHEREABOUTS_MODEL` — optional OpenRouter model identifier; CI defaults to `deepseek/deepseek-v4-flash-0731`.
+- `WHEREABOUTS_MODEL` — optional OpenRouter model identifier; CI defaults to `openai/gpt-5.6-luna`.
 - `PUBLICATION_CEILING` — optional UTC ISO date used by content validation to enforce the public manifest boundary.
 
 AI is used only during pre-generation of candidate content. Human review approves facts, fairness, variety, and tone; publication is a manifest change and never calls a model.
