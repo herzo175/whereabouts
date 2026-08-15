@@ -401,44 +401,32 @@
     {
       "id": "clue-1",
       "text": "A place whose public meaning has been shaped by devotion, memory, and later preservation.",
-      "sourceIds": [
-        "source-01"
-      ]
+      "sourceIds": ["source-01"]
     },
     {
       "id": "clue-2",
       "text": "Its role is tied to a religious community, but its significance extends beyond ordinary institutional use.",
-      "sourceIds": [
-        "source-01"
-      ]
+      "sourceIds": ["source-01"]
     },
     {
       "id": "clue-3",
       "text": "A major cultural figure was associated with the site through burial, linking religious space with literary memory.",
-      "sourceIds": [
-        "source-01"
-      ]
+      "sourceIds": ["source-01"]
     },
     {
       "id": "clue-4",
       "text": "Rebuilding altered the custody of that burial, showing how restoration can disrupt the historical record.",
-      "sourceIds": [
-        "source-01"
-      ]
+      "sourceIds": ["source-01"]
     },
     {
       "id": "clue-5",
       "text": "The associated remains were moved temporarily during reconstruction and were not immediately recovered.",
-      "sourceIds": [
-        "source-01"
-      ]
+      "sourceIds": ["source-01"]
     },
     {
       "id": "clue-6",
       "text": "Forensic scientists eventually located the long-missing remains in 2015.",
-      "sourceIds": [
-        "source-01"
-      ]
+      "sourceIds": ["source-01"]
     }
   ],
   "contextualResponses": [
@@ -446,226 +434,152 @@
       "poiId": "rapa-nui-national-park",
       "tier": "cold",
       "text": "Both are heritage places whose present meaning depends on preserving a culturally important past; the park protects ancestral patrimony, while the target preserves a religious burial association.",
-      "sourceIds": [
-        "source-01",
-        "source-02"
-      ]
+      "sourceIds": ["source-01", "source-02"]
     },
     {
       "poiId": "olympic-national-park",
       "tier": "cold",
       "text": "Both have preservation as a public purpose, but this park conserves wilderness and ecosystems rather than a convent and commemorative burial.",
-      "sourceIds": [
-        "source-01",
-        "source-03"
-      ]
+      "sourceIds": ["source-01", "source-03"]
     },
     {
       "poiId": "hendrik-and-marri-oskam-house",
       "tier": "cold",
       "text": "Both are preserved for historical significance, but the house is a modern residence associated with an architect, whereas the target is a religious site linked to burial.",
-      "sourceIds": [
-        "source-01",
-        "source-04"
-      ]
+      "sourceIds": ["source-01", "source-04"]
     },
     {
       "poiId": "alt-tempelhof-berlin-u-bahn",
       "tier": "cold",
       "text": "Both reflect changing historical use and later preservation, but this site remains transport infrastructure; the target is a convent with a burial history.",
-      "sourceIds": [
-        "source-01",
-        "source-05"
-      ]
+      "sourceIds": ["source-01", "source-05"]
     },
     {
       "poiId": "museum-island",
       "tier": "warm",
       "text": "Both connect architecture with cultural memory and institutional history. Museum Island developed as a museum complex, while the target retained religious and commemorative significance.",
-      "sourceIds": [
-        "source-01",
-        "source-06"
-      ]
+      "sourceIds": ["source-01", "source-06"]
     },
     {
       "poiId": "caral",
       "tier": "warm",
       "text": "Both are places where later visitors interpret an older cultural record. Caral preserves an ancient ceremonial and administrative center; the target preserves a convent and burial association.",
-      "sourceIds": [
-        "source-01",
-        "source-07"
-      ]
+      "sourceIds": ["source-01", "source-07"]
     },
     {
       "poiId": "mount-wutai",
       "tier": "hot",
       "text": "Both are religious heritage places whose importance extends beyond a single building: Mount Wutai centers on monasteries and pilgrimage, while the target combines convent life with a notable burial.",
-      "sourceIds": [
-        "source-01",
-        "source-08"
-      ]
+      "sourceIds": ["source-01", "source-08"]
     },
     {
       "poiId": "bia-owieza-forest",
       "tier": "cold",
       "text": "Both are protected heritage sites, but the forest is valued for primeval woodland and biodiversity, not religious community or burial memory.",
-      "sourceIds": [
-        "source-01",
-        "source-09"
-      ]
+      "sourceIds": ["source-01", "source-09"]
     },
     {
       "poiId": "marrakesh-medina",
       "tier": "warm",
       "text": "Both preserve historic religious and cultural settings within a larger urban heritage context. The medina contains a mosque and historic sites; the target is a convent tied to burial memory.",
-      "sourceIds": [
-        "source-01",
-        "source-10"
-      ]
+      "sourceIds": ["source-01", "source-10"]
     },
     {
       "poiId": "palmyra",
       "tier": "warm",
       "text": "Both connect built heritage with burial and cultural memory. Palmyra has distinctive tower tombs and mixed traditions, while the target is a religious site associated with a recovered burial.",
-      "sourceIds": [
-        "source-01",
-        "source-11"
-      ]
+      "sourceIds": ["source-01", "source-11"]
     },
     {
       "poiId": "borobudur",
       "tier": "hot",
       "text": "Both are religious places whose later significance includes pilgrimage, preservation, and cultural memory. Borobudur is a Buddhist shrine; the target is a convent associated with a prominent burial.",
-      "sourceIds": [
-        "source-01",
-        "source-12"
-      ]
+      "sourceIds": ["source-01", "source-12"]
     },
     {
       "poiId": "sviyazhsk-assumption-monastery",
       "tier": "hot",
       "text": "Both are monasterial or conventual religious institutions preserved for cultural importance. This monastery also served educational functions, while the target is linked to a major literary burial.",
-      "sourceIds": [
-        "source-01",
-        "source-13"
-      ]
+      "sourceIds": ["source-01", "source-13"]
     },
     {
       "poiId": "bora-bora",
       "tier": "cold",
       "text": "Both have acquired public meaning beyond their original local roles, but this island is chiefly a tourism and wartime-base setting, unlike the target's religious and commemorative history.",
-      "sourceIds": [
-        "source-01",
-        "source-14"
-      ]
+      "sourceIds": ["source-01", "source-14"]
     },
     {
       "poiId": "skogskyrkogarden",
       "tier": "hot",
       "text": "Both directly connect architecture with death and remembrance. This is a purpose-designed cemetery, while the target is a convent where a writer was buried and whose remains were later found.",
-      "sourceIds": [
-        "source-01",
-        "source-15"
-      ]
+      "sourceIds": ["source-01", "source-15"]
     },
     {
       "poiId": "kaeng-krachan-forest-complex",
       "tier": "cold",
       "text": "Both involve contested questions of preservation and cultural meaning, but this complex protects forests and biodiversity; the target preserves religious and burial memory.",
-      "sourceIds": [
-        "source-01",
-        "source-16"
-      ]
+      "sourceIds": ["source-01", "source-16"]
     },
     {
       "poiId": "aflaj-irrigation-systems-of-oman",
       "tier": "cold",
       "text": "Both are heritage subjects requiring long-term preservation, but the aflaj are engineered water-distribution systems, not a religious burial site.",
-      "sourceIds": [
-        "source-01",
-        "source-17"
-      ]
+      "sourceIds": ["source-01", "source-17"]
     },
     {
       "poiId": "church-of-santa-engracia-de-zaragoza",
       "tier": "hot",
       "text": "Both are Christian religious buildings associated with burial or relics and altered by rebuilding. Santa Engracia preserves martyr-related remains and a crypt; the target preserves a writer's burial association.",
-      "sourceIds": [
-        "source-01",
-        "source-18"
-      ]
+      "sourceIds": ["source-01", "source-18"]
     },
     {
       "poiId": "goguryeo-tombs",
       "tier": "hot",
       "text": "Both center on burial and the survival of historical evidence. These tombs preserve royal funerary customs and murals, while the target's burial history includes remains temporarily lost and later identified.",
-      "sourceIds": [
-        "source-01",
-        "source-19"
-      ]
+      "sourceIds": ["source-01", "source-19"]
     },
     {
       "poiId": "world-heritage-site-no-779",
       "tier": "warm",
       "text": "Both are heritage designations covering culturally significant places, but this record identifies a scenic mountain area and a giant Buddha site rather than a convent burial.",
-      "sourceIds": [
-        "source-01",
-        "source-20"
-      ]
+      "sourceIds": ["source-01", "source-20"]
     },
     {
       "poiId": "kakadu-national-park",
       "tier": "warm",
       "text": "Both preserve layered cultural heritage under modern protection. Kakadu combines Aboriginal occupation and rock art with conservation, while the target combines religious use and commemorative burial.",
-      "sourceIds": [
-        "source-01",
-        "source-21"
-      ]
+      "sourceIds": ["source-01", "source-21"]
     },
     {
       "poiId": "omo-river",
       "tier": "warm",
       "text": "Both preserve evidence used to reconstruct the past, but the river's significance is archaeological and fossil-based, whereas the target's key evidence concerns a historic burial.",
-      "sourceIds": [
-        "source-01",
-        "source-22"
-      ]
+      "sourceIds": ["source-01", "source-22"]
     },
     {
       "poiId": "ingvellir",
       "tier": "warm",
       "text": "Both are protected places whose present public meaning rests on historical memory. Þingvellir commemorates an assembly tradition; the target commemorates religious use and a literary burial.",
-      "sourceIds": [
-        "source-01",
-        "source-23"
-      ]
+      "sourceIds": ["source-01", "source-23"]
     },
     {
       "poiId": "keoladeo-national-park",
       "tier": "cold",
       "text": "Both changed from an earlier use into protected heritage. Keoladeo shifted from a duck-shooting reserve to a national park, while the target remained tied to religious and commemorative history.",
-      "sourceIds": [
-        "source-01",
-        "source-24"
-      ]
+      "sourceIds": ["source-01", "source-24"]
     },
     {
       "poiId": "rio-platano-biosphere-reserve",
       "tier": "warm",
       "text": "Both preserve places where cultural history and physical remains matter. Río Plátano contains archaeological sites and ruined settlements; the target preserves a convent and a documented burial history.",
-      "sourceIds": [
-        "source-01",
-        "source-25"
-      ]
+      "sourceIds": ["source-01", "source-25"]
     }
   ],
   "reveal": {
     "title": "Convent of the Barefoot Trinitarians",
     "summary": "The Convent of the Barefoot Trinitarians is a convent in Madrid, Spain. Miguel de Cervantes was buried there in 1616; his remains were moved during reconstruction in 1673, lost, and identified by forensic scientists in 2015.",
     "clueExplanation": "Clue 1 encoded the site's combined devotional and commemorative public meaning. Clue 2 pointed to its continuing connection with a religious community while signaling significance beyond routine institutional use. Clue 3 introduced the decisive historical relationship: the burial of a major literary figure. Clue 4 encoded the disruption caused by rebuilding, which altered custody of the burial. Clue 5 narrowed the field to remains temporarily transferred and then lost. Clue 6 supplied the final confirmation context: forensic scientists identified the missing remains in 2015.",
-    "sourceIds": [
-      "source-01"
-    ]
+    "sourceIds": ["source-01"]
   },
   "sources": [
     {
