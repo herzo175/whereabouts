@@ -40,7 +40,7 @@ jobs:
         id: date
         run: echo "value=$(TZ=America/New_York date +%F)" >> "$GITHUB_OUTPUT"
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        name: Add today's reviewed artifact to the manifest
+        name: Add today's newest generated artifact to the manifest
         id: publish
         env:
           DATE: ${{ steps.date.outputs.value }}
@@ -52,24 +52,32 @@ jobs:
           if (!/^\d{4}-\d{2}-\d{2}$/.test(date))
             throw new Error(`Invalid Eastern publication date: ${date}`);
           const manifestPath = 'packages/case-content/content/manifest.json';
-          const artifactPath = `packages/case-content/content/cases/${date}/v1.json`;
+          const caseDirectory = `packages/case-content/content/cases/${date}`;
           const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
           if (manifest.cases?.[date]) {
             console.log(`${date} is already published.`);
             await writeFile(process.env.GITHUB_OUTPUT, 'publish=false\n');
             process.exit(0);
           }
-          let artifact;
+          let artifactPath;
           try {
-            artifact = JSON.parse(await readFile(artifactPath, 'utf8'));
+            const { readdir } = await import('node:fs/promises');
+            const revisions = (await readdir(caseDirectory))
+              .map((name) => /^v([1-9]\d*)\.json$/.exec(name))
+              .filter(Boolean)
+              .map((match) => Number(match[1]));
+            const revision = Math.max(...revisions);
+            if (!Number.isFinite(revision)) throw new Error('No generated revisions found');
+            artifactPath = `${caseDirectory}/v${revision}.json`;
           } catch (error) {
             if (error?.code === 'ENOENT') {
-              console.log(`No reviewed v1 artifact exists for ${date}.`);
+              console.log(`No generated artifact exists for ${date}.`);
               await writeFile(process.env.GITHUB_OUTPUT, 'publish=false\n');
               process.exit(0);
             }
             throw error;
           }
+          const artifact = JSON.parse(await readFile(artifactPath, 'utf8'));
           if (
             artifact.publicationDate !== date ||
             !Number.isInteger(artifact.revision) || artifact.revision < 1 ||

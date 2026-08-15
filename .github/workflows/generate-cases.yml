@@ -9,7 +9,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
   generate:
@@ -42,37 +41,43 @@ jobs:
         id: dates
         run: echo "start=$(TZ=America/New_York date -d '+14 days' +%F)" >> "$GITHUB_OUTPUT"
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
+        name: Allocate the next immutable revision
+        id: revision
+        env:
+          START_DATE: ${{ steps.dates.outputs.start }}
+        run: |
+          case_dir="packages/case-content/content/cases/${START_DATE}"
+          highest=0
+          if [ -d "$case_dir" ]; then
+            for path in "$case_dir"/v*.json; do
+              [ -e "$path" ] || continue
+              name=${path##*/}
+              if [[ "$name" =~ ^v([1-9][0-9]*)\.json$ ]] && (( BASH_REMATCH[1] > highest )); then
+                highest=${BASH_REMATCH[1]}
+              fi
+            done
+          fi
+          revision=$((highest + 1))
+          echo "value=${revision}" >> "$GITHUB_OUTPUT"
+      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
         name: Generate one upcoming case
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY || secrets.openrouter_api_key }}
           WIKIMEDIA_USER_AGENT: ${{ secrets.WIKIMEDIA_USER_AGENT || 'Whereabouts/1.0 (https://github.com/herzo175/whereabouts)' }}
           WHEREABOUTS_MODEL: ${{ vars.WHEREABOUTS_MODEL || vars.whereabouts_model || 'openai/gpt-5.6-luna' }}
-        run: pnpm content:generate-range -- --from "${{ steps.dates.outputs.start }}" --days 1
+        run: pnpm content:generate-range -- --from "${{ steps.dates.outputs.start }}" --days 1 --revision "${{ steps.revision.outputs.value }}"
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
         name: Validate generated content
         run: pnpm content:validate
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        name: Produce human review packets
-        run: pnpm content:review-range -- --from "${{ steps.dates.outputs.start }}" --days 1 --out artifacts/review
-      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        name: Upload review packets
-        uses: actions/upload-artifact@v4
-        with:
-          name: whereabouts-review-${{ steps.dates.outputs.start }}
-          path: artifacts/review
-          if-no-files-found: error
-      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        name: Create the review pull request
+        name: Commit the generated case
         env:
-          GH_TOKEN: ${{ github.token }}
           START_DATE: ${{ steps.dates.outputs.start }}
+          REVISION: ${{ steps.revision.outputs.value }}
         run: |
-          branch="content/upcoming-${START_DATE}"
-          git switch -C "$branch"
           git add packages/case-content/content/cases
           git diff --cached --quiet && exit 0
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "content: add upcoming Whereabouts cases"
-          git push --force-with-lease --set-upstream origin "$branch"
-          gh pr view "$branch" --json url >/dev/null 2>&1 || gh pr create --base main --head "$branch" --title "content: add upcoming Whereabouts cases" --body "Generated cases from ${START_DATE}; review the uploaded packets before merging."
+          git commit -m "content: add upcoming Whereabouts case ${START_DATE} v${REVISION}"
+          git push origin main
