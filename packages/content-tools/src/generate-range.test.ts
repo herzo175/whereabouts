@@ -43,15 +43,62 @@ describe('selectPoisForDate', () => {
     );
   });
 
-  it('rotates targets without repeats during a catalog cycle', () => {
-    const targets = Array.from({ length: catalog.length }, (_, offset) => {
+  it('excludes targets already published for a new revision of the same date', () => {
+    const date = '2026-08-14';
+    const firstRevision = selectPoisForDate(catalog, date);
+    const history = new Map([
+      [date, firstRevision.slice(0, 5).map((poi) => poi.id)],
+    ]);
+    const secondRevision = selectPoisForDate(
+      catalog,
+      date,
+      targetExclusionsForDate(history, date),
+      2,
+    );
+
+    expect(
+      secondRevision
+        .slice(0, 5)
+        .some((poi) =>
+          firstRevision.slice(0, 5).some((first) => first.id === poi.id),
+        ),
+    ).toBe(false);
+  });
+
+  it('uses a distinct deterministic candidate selection for each revision', () => {
+    const firstRevision = selectPoisForDate(
+      catalog,
+      '2026-08-14',
+      new Set(),
+      1,
+    );
+    const secondRevision = selectPoisForDate(
+      catalog,
+      '2026-08-14',
+      new Set(),
+      2,
+    );
+
+    expect(secondRevision).not.toEqual(firstRevision);
+  });
+
+  it('does not repeat targets during a catalog cycle', () => {
+    const history = new Map<string, string[]>();
+    const targets = Array.from({ length: catalog.length / 5 }, (_, offset) => {
       const date = new Date(Date.UTC(2026, 7, 14 + offset))
         .toISOString()
         .slice(0, 10);
-      return selectPoisForDate(catalog, date)[0]?.id;
+      const selected = selectPoisForDate(
+        catalog,
+        date,
+        targetExclusionsForDate(history, date),
+      );
+      const targetIds = selected.slice(0, 5).map((poi) => poi.id);
+      history.set(date, targetIds);
+      return targetIds;
     });
 
-    expect(new Set(targets).size).toBe(catalog.length);
+    expect(new Set(targets.flat()).size).toBe(catalog.length);
   });
 
   it('does not reuse nearly the entire candidate set on adjacent days', () => {

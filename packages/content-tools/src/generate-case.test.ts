@@ -1,5 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { generateCase, resolveGenerationConfig } from './generate-case.js';
+import {
+  generateCase,
+  modelCaseDraftSchema,
+  resolveGenerationConfig,
+} from './generate-case.js';
 
 const pois = Array.from({ length: 25 }, (_, index) => ({
   id: `poi-${String(index).padStart(2, '0')}`,
@@ -99,6 +103,13 @@ describe('generateCase', () => {
     expect(result.caseData.sources).toHaveLength(25);
     expect(result.caseData.pois.every((poi) => poi.blurb)).toBe(true);
     expect(result.caseData.pois[0]?.blurb).toContain('Source material');
+  });
+
+  it('requires exactly 25 results in the model output contract', () => {
+    const draft = makeDraft();
+    draft.rounds[4].results.pop();
+
+    expect(modelCaseDraftSchema.safeParse(draft).success).toBe(false);
   });
 
   it('buckets non-targets from authored similarity score ordering', async () => {

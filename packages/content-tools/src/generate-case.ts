@@ -66,21 +66,23 @@ export function buildPoiBlurb(extract: string, maximumLength = 280): string {
   return `${shortened.slice(0, finalSpace > 80 ? finalSpace : undefined)}…`;
 }
 
-const modelCaseDraftSchema = z.object({
+export const modelCaseDraftSchema = z.object({
   rounds: z.array(
     z.object({
       clue: z.object({
         text: z.string(),
         sourceIds: z.array(z.string()),
       }),
-      results: z.array(
-        z.object({
-          poiId: z.string(),
-          similarityScore: z.number().finite().min(0).max(100),
-          text: z.string(),
-          sourceIds: z.array(z.string()),
-        }),
-      ),
+      results: z
+        .array(
+          z.object({
+            poiId: z.string(),
+            similarityScore: z.number().finite().min(0).max(100),
+            text: z.string(),
+            sourceIds: z.array(z.string()),
+          }),
+        )
+        .length(25),
     }),
   ),
 });
