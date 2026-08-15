@@ -3,10 +3,14 @@ import { type BrowserContext, expect, type Page, test } from '@playwright/test';
 import {
   CASE_DATE,
   CASE_STORAGE_KEY,
+  DISTRACTORS,
   disableWebGl,
+  FIRST_DISTRACTOR,
+  FIRST_RESPONSE,
   readProgress,
   seedProgress,
   setClock,
+  TARGET,
 } from './helpers';
 
 const casePath = `/${CASE_DATE}`;
@@ -73,22 +77,22 @@ test.describe('Whereabouts desktop journeys', () => {
   }) => {
     await openCase(page);
     const intelligence = page.getByLabel('Case intelligence');
-    await expect(intelligence.getByText('Current intelligence')).toHaveCount(1);
+    await expect(intelligence.getByText('Clue 1')).toHaveCount(1);
 
-    await submitLead(page, 'Eiffel Tower');
+    await submitLead(page, FIRST_DISTRACTOR.name);
 
+    await expect(page.getByText(FIRST_RESPONSE.text)).toBeVisible();
+    await expect(intelligence.getByText('Clue 2')).toHaveCount(1);
     await expect(
-      page.getByText(/nineteenth-century Parisian monument/i),
+      page.getByRole('button', { name: /Attempt 1,/ }),
     ).toBeVisible();
-    await expect(intelligence.getByText('Current intelligence')).toHaveCount(2);
-    await expect(page.getByText('5 attempts remaining')).toBeVisible();
   });
 
   test('wins through the dossier and copies an exact spoiler-free share result', async ({
     page,
   }) => {
     await openCase(page);
-    await submitLead(page, 'Convent of the Barefoot Trinitarians');
+    await submitLead(page, TARGET.destinationName);
 
     await expect(
       page.getByRole('heading', { name: 'Case closed' }),
@@ -100,21 +104,13 @@ test.describe('Whereabouts desktop journeys', () => {
     expect(shareText).toBe(
       `WHEREABOUTS 1/6\n🟢\nhttp://127.0.0.1:3000/${CASE_DATE}`,
     );
-    expect(shareText).not.toContain('Convent of the Barefoot Trinitarians');
-    expect(shareText).not.toContain('Madrid');
+    expect(shareText).not.toContain(TARGET.destinationName);
   });
 
   test('shows a six-attempt loss from saved progress', async ({ page }) => {
     await seedProgress(page, {
       completedAt,
-      guessedPoiIds: [
-        'eiffel-tower',
-        'colosseum',
-        'great-wall',
-        'taj-mahal',
-        'christ-redeemer',
-        'machu-picchu',
-      ],
+      guessedPoiIds: DISTRACTORS.slice(0, 6).map((poi) => poi.id),
       outcome: 'lost',
     });
     await openCase(page);
@@ -122,41 +118,47 @@ test.describe('Whereabouts desktop journeys', () => {
     await expect(
       page.getByRole('heading', { name: 'Trail lost' }),
     ).toBeVisible();
-    await expect(page.getByText('0 attempts remaining')).toBeVisible();
+    await expect(
+      page.getByRole('button', { name: /Attempt 6,/ }),
+    ).toBeVisible();
   });
 
   test('resumes saved progress and recovers from corrupt storage', async ({
     page,
   }) => {
-    await seedProgress(page, { guessedPoiIds: ['eiffel-tower'] });
+    await seedProgress(page, { guessedPoiIds: [FIRST_DISTRACTOR.id] });
     await openCase(page);
-    await expect(page.getByText('5 attempts remaining')).toBeVisible();
+    await expect(
+      page.getByRole('button', { name: /Attempt 1,/ }),
+    ).toBeVisible();
     await expect(readProgress(page)).resolves.toMatchObject({
-      guessedPoiIds: ['eiffel-tower'],
+      guessedPoiIds: [FIRST_DISTRACTOR.id],
       outcome: 'playing',
     });
 
     await page.reload();
-    await expect(page.getByText('5 attempts remaining')).toBeVisible();
+    await expect(
+      page.getByRole('button', { name: /Attempt 1,/ }),
+    ).toBeVisible();
     await page.evaluate(
       (key) => localStorage.setItem(key, '{not json'),
       CASE_STORAGE_KEY,
     );
     await page.reload();
 
-    await expect(page.getByText('6 attempts remaining')).toBeVisible();
+    await expect(page.getByTestId('empty-attempt')).toHaveCount(6);
   });
 
   test('disables locations that have already been guessed', async ({
     page,
   }) => {
-    await seedProgress(page, { guessedPoiIds: ['eiffel-tower'] });
+    await seedProgress(page, { guessedPoiIds: [FIRST_DISTRACTOR.id] });
     await openCase(page);
     await page
       .getByRole('searchbox', { name: 'Search locations' })
-      .fill('Eiffel Tower');
+      .fill(FIRST_DISTRACTOR.name);
 
-    const guess = page.getByRole('button', { name: /Eiffel Tower/ });
+    const guess = page.getByRole('button', { name: FIRST_DISTRACTOR.name });
     await expect(guess).toBeDisabled();
     await expect(guess).toContainText('Already eliminated');
   });
@@ -183,7 +185,7 @@ test.describe('Whereabouts desktop journeys', () => {
       page.getByText('Globe unavailable; use location list'),
     ).toBeVisible();
 
-    await submitLead(page, 'Hagia Sophia');
+    await submitLead(page, TARGET.destinationName);
     await expect(
       page.getByRole('heading', { name: 'Case closed' }),
     ).toBeVisible();
@@ -201,16 +203,14 @@ test.describe('Whereabouts mobile journey', () => {
     await openCase(page);
     await page
       .getByRole('searchbox', { name: 'Search locations' })
-      .fill('Colosseum');
-    await page.getByRole('button', { name: /Colosseum/ }).click();
+      .fill(FIRST_DISTRACTOR.name);
+    await page.getByRole('button', { name: FIRST_DISTRACTOR.name }).click();
 
     const dossier = page.getByRole('dialog');
     await expect(
-      dossier.getByRole('heading', { name: 'Colosseum' }),
+      dossier.getByRole('heading', { name: FIRST_DISTRACTOR.name }),
     ).toBeVisible();
     await dossier.getByRole('button', { name: 'Submit this lead' }).click();
-    await expect(
-      page.getByText(/Roman amphitheater shares an imperial past/i),
-    ).toBeVisible();
+    await expect(page.getByText(FIRST_RESPONSE.text)).toBeVisible();
   });
 });

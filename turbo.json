@@ -23,7 +23,8 @@
       "interactive": true
     },
     "test:e2e": {
-      "cache": false
+      "cache": false,
+      "passThroughEnv": ["PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH"]
     },
     "typecheck": {
       "dependsOn": ["^typecheck"],
