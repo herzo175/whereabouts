@@ -158,7 +158,9 @@ test.describe('Whereabouts desktop journeys', () => {
       .getByRole('searchbox', { name: 'Search locations' })
       .fill(FIRST_DISTRACTOR.name);
 
-    const guess = page.getByRole('button', { name: FIRST_DISTRACTOR.name });
+    const guess = page
+      .getByRole('list', { name: 'Matching locations' })
+      .getByRole('button', { name: FIRST_DISTRACTOR.name });
     await expect(guess).toBeDisabled();
     await expect(guess).toContainText('Already eliminated');
   });
