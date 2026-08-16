@@ -5,6 +5,11 @@
       "caseNumber": 20680,
       "revision": 3,
       "file": "./cases/2026-08-15/v3.json"
+    },
+    "2026-08-16": {
+      "caseNumber": 20681,
+      "revision": 1,
+      "file": "./cases/2026-08-16/v1.json"
     }
   }
 }
