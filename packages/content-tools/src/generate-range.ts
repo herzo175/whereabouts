@@ -282,6 +282,9 @@ export async function generateRange(
     });
     prepared.push(result);
     casesByDate.set(date, result.caseData);
+    console.info(
+      `Prepared themed case ${date} (${prepared.length}/${plans.length})`,
+    );
   }
 
   const generatedDates = new Set(

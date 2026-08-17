@@ -23,7 +23,8 @@ describe('Wikimedia research', () => {
     let attempts = 0;
     const delays: number[] = [];
     const research = createWikimediaResearch({
-      fetch: async () => {
+      fetch: async (_input, init) => {
+        expect(init?.signal).toBeInstanceOf(AbortSignal);
         attempts += 1;
         if (attempts === 1)
           return new Response('rate limited', {

@@ -50,7 +50,14 @@ async function json(
   }
 }
 export function createWikimediaResearch(deps: Dependencies = {}): LiveResearch {
-  const fetch = deps.fetch ?? globalThis.fetch.bind(globalThis);
+  const rawFetch = deps.fetch ?? globalThis.fetch.bind(globalThis);
+  const fetch: ResearchFetch = (input, init) =>
+    rawFetch(input, {
+      ...init,
+      signal: init?.signal
+        ? AbortSignal.any([init.signal, AbortSignal.timeout(30_000)])
+        : AbortSignal.timeout(30_000),
+    });
   const now = deps.now ?? (() => new Date());
   const sleep =
     deps.sleep ??
