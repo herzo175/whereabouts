@@ -1,66 +1,44 @@
 import { describe, expect, it } from 'vitest';
-import { buildCasePrompt, PROMPT_VERSION } from './prompt.js';
+import {
+  compactSourceExtract,
+  prohibitedAnswerMarkers,
+  redactTargetMarkers,
+} from './prompt.js';
 
-const pois = Array.from({ length: 25 }, (_, index) => ({
-  id: `poi-${index}`,
-  name: index === 0 ? 'Target Place' : `Candidate ${index}`,
-  city: `City ${index}`,
-  country: `Country ${index}`,
-  latitude: index,
-  longitude: index,
-  wikipediaTitle: `Candidate ${index}`,
-}));
+const poi = {
+  id: 'target-place',
+  name: 'Target Place',
+  city: 'Target City',
+  country: 'Target Country',
+  latitude: 0,
+  longitude: 0,
+  wikipediaTitle: 'Target Place',
+};
 
-const extracts = pois.map((poi) => ({
-  title: poi.wikipediaTitle,
-  extract: `Grounded history for ${poi.name}.`,
-  url: `https://example.test/${poi.id}`,
-  retrievedAt: '2026-08-14T00:00:00Z',
-}));
-
-describe('buildCasePrompt', () => {
-  it('requests five concrete, one-shot round clues without leaking answers', () => {
-    const prompt = buildCasePrompt(pois, extracts);
-
-    expect(PROMPT_VERSION).toBe(8);
-    expect(prompt).toContain('exactly five rounds');
-    expect(prompt).toContain('first five catalog records');
-    expect(prompt).toContain('one concrete, useful clue');
-    expect(prompt).toContain('target POI name, city, or country');
-    expect(prompt).toContain('Geographic labels are answer markers');
+describe('prompt helpers', () => {
+  it('compacts long extracts while preserving their head and tail', () => {
+    const compacted = compactSourceExtract(`${'head '.repeat(200)}TAIL`, 80);
+    expect(compacted.length).toBeLessThanOrEqual(80);
+    expect(compacted).toContain('head');
+    expect(compacted).toContain('TAIL');
   });
 
-  it('requires sourced numeric similarity scores for deterministic tier bucketing', () => {
-    const prompt = buildCasePrompt(pois, extracts);
-
-    expect(prompt).toContain('exactly 25 results');
-    expect(prompt).toContain('similarityScore');
-    expect(prompt).toContain('0–100');
-    expect(prompt).toContain('deterministically buckets');
-    expect(prompt).toContain(
-      'source IDs for both the guessed POI and the target',
+  it('redacts target markers from model context', () => {
+    const redacted = redactTargetMarkers(
+      'Target Place is in Target City, Target Country.',
+      poi,
     );
+    expect(redacted).not.toContain('Target Place');
+    expect(redacted).not.toContain('Target City');
+    expect(redacted).not.toContain('Target Country');
+    expect(redacted).toContain('[redacted]');
   });
 
-  it('redacts target answer markers from the model context', () => {
-    const prompt = buildCasePrompt(pois, extracts);
-
-    expect(prompt).not.toContain('Target Place');
-    expect(prompt).not.toContain('City 0');
-    expect(prompt).not.toContain('Country 0');
-    expect(prompt).toContain('"id":"poi-0"');
-  });
-
-  it('bounds cached corpus context before sending the daily model request', () => {
-    const largeExtracts = extracts.map((extract, index) => ({
-      ...extract,
-      extract: `${String(index).repeat(50_000)}TAIL-${index}`,
-    }));
-
-    const prompt = buildCasePrompt(pois, largeExtracts);
-
-    expect(prompt.length).toBeLessThan(140_000);
-    expect(prompt).toContain('TAIL-0');
-    expect(prompt).toContain('TAIL-24');
+  it('returns normalized prohibited answer markers', () => {
+    expect(prohibitedAnswerMarkers(poi)).toEqual([
+      'targetplace',
+      'targetcity',
+      'targetcountry',
+    ]);
   });
 });

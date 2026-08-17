@@ -1,56 +1,56 @@
 import { createHash } from 'node:crypto';
 import {
-  access,
-  mkdir,
-  writeFile as nodeWriteFile,
-  rename,
-} from 'node:fs/promises';
-import { dirname } from 'node:path';
-import { createOpenRouter } from '@openrouter/ai-sdk-provider';
-import {
-  type DailyCase,
   dailyCaseSchema,
   type Poi,
+  type ThemedDailyCase,
+  type ThemedPoi,
 } from '@whereabouts/case-content';
-import { generateText, Output } from 'ai';
-import { z } from 'zod';
-import { casePath } from './paths.js';
-import { buildCasePrompt, PROMPT_VERSION } from './prompt.js';
-import { validateCaseForPublication } from './validate-case.js';
 import {
-  requireProductionUserAgent,
-  type WikipediaExtract,
-} from './wikipedia.js';
+  type GenerationReview,
+  generationReviewSchema,
+  validateGenerationReview,
+} from './generation-review.js';
+import { reviewPacket } from './review-case.js';
+import { bucketResults } from './themed-case/case-writer.js';
+import type { ThemePlan } from './themed-case/contracts.js';
+import {
+  type CaseDraft,
+  type CuratedBoard,
+  validateCaseDraftAgainstBoard,
+} from './themed-case/contracts.js';
+import { validateCaseForPublication } from './validate-case.js';
 
-export const generatedCaseDraftSchema = z.object({
-  rounds: z
-    .array(
-      z.object({
-        clue: z.object({
-          text: z.string(),
-          sourceIds: z.array(z.string()).min(1),
-        }),
-        results: z
-          .array(
-            z.object({
-              poiId: z.string(),
-              similarityScore: z.number().finite().min(0).max(100),
-              text: z.string(),
-              sourceIds: z.array(z.string()).min(1),
-            }),
-          )
-          .length(25),
-      }),
-    )
-    .length(5),
-});
-export type GeneratedCaseDraft = z.infer<typeof generatedCaseDraftSchema>;
+export type GenerateCaseInput = {
+  date: string;
+  revision: number;
+  caseNumber: number;
+  theme: ThemePlan;
+  board: CuratedBoard;
+  draft: CaseDraft;
+  review: GenerationReview;
+};
+
+export type PreparedCase = {
+  caseData: ThemedDailyCase;
+  generationReview: GenerationReview;
+  markdownReview: string;
+};
+
+export function resolveGenerationConfig(
+  environment: Readonly<Record<string, string | undefined>>,
+): { apiKey: string; model: string } {
+  const apiKey = environment.OPENROUTER_API_KEY?.trim();
+  if (!apiKey) throw new Error('OPENROUTER_API_KEY is required for generation');
+  return {
+    apiKey,
+    model: environment.WHEREABOUTS_MODEL?.trim() || 'openai/gpt-5.6-luna',
+  };
+}
 
 export function buildPoiBlurb(extract: string, maximumLength = 280): string {
   const normalized = extract.replace(/\s+/g, ' ').trim();
   if (!normalized) throw new Error('cannot build a POI blurb without context');
   if (normalized.length <= maximumLength) return normalized;
-
   const sentences = normalized.split(/(?<=[.!?])\s+/);
   let blurb = '';
   for (const sentence of sentences) {
@@ -60,34 +60,16 @@ export function buildPoiBlurb(extract: string, maximumLength = 280): string {
     if (blurb.length >= 120) return blurb;
   }
   if (blurb) return blurb;
-
   const shortened = normalized.slice(0, maximumLength - 1);
   const finalSpace = shortened.lastIndexOf(' ');
   return `${shortened.slice(0, finalSpace > 80 ? finalSpace : undefined)}…`;
 }
 
-export const modelCaseDraftSchema = z.object({
-  rounds: z.array(
-    z.object({
-      clue: z.object({
-        text: z.string(),
-        sourceIds: z.array(z.string()),
-      }),
-      results: z
-        .array(
-          z.object({
-            poiId: z.string(),
-            similarityScore: z.number().finite().min(0).max(100),
-            text: z.string(),
-            sourceIds: z.array(z.string()),
-          }),
-        )
-        .length(25),
-    }),
-  ),
-});
+function sourceId(index: number): string {
+  return `source-${String(index + 1).padStart(2, '0')}`;
+}
 
-function orderPoisForDisplay(
+export function orderPoisForDisplay(
   pois: Poi[],
   seed: { date: string; revision: number; caseNumber: number },
 ): Poi[] {
@@ -105,170 +87,59 @@ function orderPoisForDisplay(
     .map(({ poi }) => poi);
 }
 
-type GenerateDependencies = {
-  date: string;
-  revision: number;
-  caseNumber: number;
-  pois: Poi[];
-  extracts: WikipediaExtract[];
-  generate?: () => Promise<unknown>;
-  write?: boolean;
-  exists?: (path: string) => Promise<boolean>;
-  writeFile?: (path: string, data: string) => Promise<void>;
-};
-
-type GenerationEnvironment = Readonly<Record<string, string | undefined>>;
-
-export function resolveGenerationConfig(environment: GenerationEnvironment): {
-  apiKey: string;
-  model: string;
-} {
-  const apiKey = environment.OPENROUTER_API_KEY?.trim();
-  if (!apiKey) throw new Error('OPENROUTER_API_KEY is required for generation');
-  return {
-    apiKey,
-    model: environment.WHEREABOUTS_MODEL?.trim() || 'openai/gpt-5.6-luna',
-  };
-}
-
-async function defaultGenerate(
-  pois: Poi[],
-  extracts: WikipediaExtract[],
-): Promise<unknown> {
-  requireProductionUserAgent();
-  const config = resolveGenerationConfig(process.env);
-  const openrouter = createOpenRouter({
-    apiKey: config.apiKey,
-    appName: 'Whereabouts',
+function evidenceSources(
+  ids: string[],
+  sourceByPoiId: Map<string, string>,
+): string[] {
+  return [...new Set(ids)].map((id) => {
+    const source = sourceByPoiId.get(id);
+    if (!source) throw new Error(`unknown evidence POI ID: ${id}`);
+    return source;
   });
-  const result = await generateText({
-    model: openrouter.chat(config.model),
-    abortSignal: AbortSignal.timeout(180_000),
-    maxRetries: 0,
-    maxOutputTokens: 24_000,
-    providerOptions: {
-      openrouter: { reasoning: { effort: 'low' } },
-    },
-    output: Output.object({ schema: modelCaseDraftSchema }),
-    prompt: buildCasePrompt(pois, extracts),
-  });
-  return result.output;
 }
 
-function sourceId(index: number): string {
-  return `source-${String(index + 1).padStart(2, '0')}`;
+function assertTargets(board: CuratedBoard, draft: CaseDraft): void {
+  const boardIds = new Set(board.candidates.map((candidate) => candidate.id));
+  if (
+    board.targetPoiIds.length !== 5 ||
+    board.targetPoiIds.some((id) => !boardIds.has(id))
+  )
+    throw new Error('target POI is absent from the board');
+  if (
+    draft.rounds.length !== 5 ||
+    draft.rounds.some(
+      (round, index) => round.targetPoiId !== board.targetPoiIds[index],
+    )
+  )
+    throw new Error(
+      'draft target order does not match the five explicit board targets',
+    );
 }
 
-function canonicalizeRoundPoiIds(
-  draft: GeneratedCaseDraft,
-  pois: Poi[],
-): GeneratedCaseDraft {
-  const idsByCompactForm = new Map<string, string[]>();
-  for (const poi of pois) {
-    const compact = poi.id.replaceAll('-', '');
-    idsByCompactForm.set(compact, [
-      ...(idsByCompactForm.get(compact) ?? []),
-      poi.id,
-    ]);
-  }
+function translateDraft(
+  draft: CaseDraft,
+  sourceByPoiId: Map<string, string>,
+): CaseDraft {
   return {
     rounds: draft.rounds.map((round) => ({
       ...round,
-      results: round.results.map((result) => {
-        const matches = idsByCompactForm.get(result.poiId.replaceAll('-', ''));
-        return matches?.length === 1
-          ? { ...result, poiId: matches[0] as string }
-          : result;
-      }),
+      clue: {
+        ...round.clue,
+        evidencePoiIds: evidenceSources(
+          round.clue.evidencePoiIds,
+          sourceByPoiId,
+        ),
+      },
+      results: round.results.map((result) => ({
+        ...result,
+        evidencePoiIds: evidenceSources(result.evidencePoiIds, sourceByPoiId),
+      })),
     })),
   };
 }
 
-function assertSupportedSourceIds(
-  draft: GeneratedCaseDraft,
-  sources: Set<string>,
-): void {
-  const used = [
-    ...draft.rounds.flatMap((round) => [
-      ...round.clue.sourceIds,
-      ...round.results.flatMap((result) => result.sourceIds),
-    ]),
-  ];
-  for (const id of used)
-    if (!sources.has(id)) throw new Error(`unsupported source ID: ${id}`);
-}
-
-function assertRoundSourceGrounding(
-  draft: GeneratedCaseDraft,
-  pois: Poi[],
-): void {
-  const sourceByPoiId = new Map(
-    pois.map((poi, index) => [poi.id, sourceId(index)]),
-  );
-  for (const [roundIndex, round] of draft.rounds.entries()) {
-    const targetSourceId = sourceId(roundIndex);
-    const targetPoiId = pois[roundIndex]?.id;
-    if (!targetPoiId)
-      throw new Error(`round ${roundIndex + 1} target is missing`);
-    if (!round.clue.sourceIds.includes(targetSourceId)) {
-      throw new Error(
-        `round ${roundIndex + 1} clue must cite its target source`,
-      );
-    }
-    for (const result of round.results) {
-      const guessedSourceId = sourceByPoiId.get(result.poiId);
-      if (!result.sourceIds.includes(targetSourceId)) {
-        throw new Error(
-          `round ${roundIndex + 1} result for ${result.poiId} must cite its target source`,
-        );
-      }
-      if (
-        result.poiId !== targetPoiId &&
-        (!guessedSourceId || !result.sourceIds.includes(guessedSourceId))
-      ) {
-        throw new Error(
-          `round ${roundIndex + 1} result for ${result.poiId} must cite its guessed POI source`,
-        );
-      }
-    }
-  }
-}
-
-function normalizeRoundSources(
-  draft: GeneratedCaseDraft,
-  pois: Poi[],
-): GeneratedCaseDraft {
-  const sourceByPoiId = new Map(
-    pois.map((poi, index) => [poi.id, sourceId(index)]),
-  );
-  return {
-    rounds: draft.rounds.map((round, roundIndex) => {
-      const targetPoiId = pois[roundIndex]?.id;
-      const targetSourceId = sourceId(roundIndex);
-      return {
-        ...round,
-        clue: {
-          ...round.clue,
-          sourceIds: [...new Set([...round.clue.sourceIds, targetSourceId])],
-        },
-        results: round.results.map((result) => {
-          const guessedSourceId = sourceByPoiId.get(result.poiId);
-          const required =
-            result.poiId === targetPoiId || !guessedSourceId
-              ? [targetSourceId]
-              : [targetSourceId, guessedSourceId];
-          return {
-            ...result,
-            sourceIds: [...new Set([...result.sourceIds, ...required])],
-          };
-        }),
-      };
-    }),
-  };
-}
-
-function bucketRoundResults(
-  results: GeneratedCaseDraft['rounds'][number]['results'],
+export function bucketRoundResults(
+  results: CaseDraft['rounds'][number]['results'],
   targetPoiId: string,
 ): Array<{
   poiId: string;
@@ -276,108 +147,93 @@ function bucketRoundResults(
   text: string;
   sourceIds: string[];
 }> {
-  const ranked = results
-    .filter((result) => result.poiId !== targetPoiId)
-    .sort(
-      (left, right) =>
-        right.similarityScore - left.similarityScore ||
-        left.poiId.localeCompare(right.poiId),
-    );
-  const tiers = new Map<string, 'hot' | 'warm' | 'cold'>();
-  for (const [index, result] of ranked.entries()) {
-    tiers.set(result.poiId, index < 4 ? 'hot' : index < 12 ? 'warm' : 'cold');
-  }
-  return results.map(({ similarityScore: _similarityScore, ...result }) => {
-    if (result.poiId === targetPoiId) return { ...result, tier: 'correct' };
-    const tier = tiers.get(result.poiId);
-    if (!tier) throw new Error(`missing similarity bucket for ${result.poiId}`);
-    return { ...result, tier };
-  });
-}
-
-async function pathExists(path: string): Promise<boolean> {
-  try {
-    await access(path);
-    return true;
-  } catch {
-    return false;
-  }
+  return bucketResults(results, targetPoiId);
 }
 
 export async function generateCase(
-  input: GenerateDependencies,
-): Promise<{ caseData: DailyCase; path: string; promptVersion: number }> {
-  if (input.pois.length !== 25 || input.extracts.length !== 25)
-    throw new Error('generation requires exactly 25 POIs and extracts');
-  const rawDraft = await (
-    input.generate ?? (() => defaultGenerate(input.pois, input.extracts))
-  )();
-  const parsedDraft = canonicalizeRoundPoiIds(
-    generatedCaseDraftSchema.parse(rawDraft),
-    input.pois,
-  );
-  const sources = input.extracts.map((extract, index) => ({
-    id: sourceId(index),
-    title: extract.title,
-    url: extract.url,
-    retrievedAt: extract.retrievedAt,
+  input: GenerateCaseInput,
+): Promise<PreparedCase> {
+  const checkedDraft = validateCaseDraftAgainstBoard(input.draft, input.board);
+  if (!checkedDraft.success)
+    throw new Error(`case draft is invalid: ${checkedDraft.error.message}`);
+  assertTargets(input.board, checkedDraft.data);
+  const parsedReview = generationReviewSchema.parse(input.review);
+
+  const sourceByPoiId = new Map<string, string>();
+  const sources = input.board.candidates.map((candidate, index) => {
+    const id = sourceId(index);
+    sourceByPoiId.set(candidate.id, id);
+    return {
+      id,
+      title: candidate.source.title,
+      url: candidate.source.url,
+      retrievedAt: candidate.source.retrievedAt,
+    };
+  });
+  const pois: ThemedPoi[] = input.board.candidates.map((candidate) => ({
+    id: candidate.id,
+    name: candidate.name,
+    city: candidate.city,
+    country: candidate.country,
+    latitude: candidate.latitude,
+    longitude: candidate.longitude,
+    wikipediaTitle: candidate.wikipediaTitle,
+    blurb: buildPoiBlurb(candidate.source.extract),
+    image: candidate.image,
+    themeConnection: {
+      text: candidate.themeClaim,
+      sourceIds: [sourceByPoiId.get(candidate.id) as string],
+    },
   }));
-  assertSupportedSourceIds(
-    parsedDraft,
-    new Set(sources.map((source) => source.id)),
-  );
-  const draft = normalizeRoundSources(parsedDraft, input.pois);
-  assertRoundSourceGrounding(draft, input.pois);
-  const poisWithBlurbs = input.pois.map((poi, index) => ({
-    ...poi,
-    blurb: buildPoiBlurb(input.extracts[index]?.extract ?? ''),
-  }));
-  if (poisWithBlurbs.some((poi) => !poi.image)) {
-    throw new Error('generation requires images for all 25 POIs');
-  }
-  const targets = poisWithBlurbs.slice(0, 5);
-  if (targets.length !== 5 || targets.some((target) => !target?.image))
-    throw new Error(
-      'generation requires images for the first five target POIs',
-    );
+  if (pois.some((poi) => !poi.image))
+    throw new Error('generation requires images for all board POIs');
+
+  const translated = translateDraft(checkedDraft.data, sourceByPoiId);
+  const displayPois = orderPoisForDisplay(pois, input);
   const caseData = dailyCaseSchema.parse({
-    schemaVersion: 2,
+    schemaVersion: 3,
     publicationDate: input.date,
     revision: input.revision,
     caseNumber: input.caseNumber,
-    pois: orderPoisForDisplay(poisWithBlurbs, {
-      date: input.date,
-      revision: input.revision,
-      caseNumber: input.caseNumber,
-    }),
-    rounds: draft.rounds.map((round, index) => {
-      const target = targets[index];
-      if (!target?.image) throw new Error('target POI image is required');
+    theme: {
+      title: input.theme.title,
+      introduction: input.theme.introduction,
+      inclusionCriteria: input.theme.inclusionCriteria,
+    },
+    pois: displayPois,
+    rounds: translated.rounds.map((round, index) => {
+      const target = pois.find((poi) => poi.id === round.targetPoiId);
+      if (!target?.image)
+        throw new Error(`target POI image is missing for round ${index + 1}`);
       return {
         id: `round-${index + 1}`,
-        targetPoiId: target.id,
+        targetPoiId: round.targetPoiId,
         image: target.image,
-        ...round,
-        results: bucketRoundResults(round.results, target.id),
+        clue: { text: round.clue.text, sourceIds: round.clue.evidencePoiIds },
+        results: bucketRoundResults(
+          checkedDraft.data.rounds[index]?.results ?? [],
+          round.targetPoiId,
+        ).map((result) => ({
+          ...result,
+          sourceIds: evidenceSources(result.sourceIds, sourceByPoiId),
+        })),
       };
     }),
     sources,
-  });
-  const issues = validateCaseForPublication(caseData);
-  if (issues.length)
+  }) as ThemedDailyCase;
+  const publicationIssues = validateCaseForPublication(caseData);
+  if (publicationIssues.length)
     throw new Error(
-      `publication validation failed: ${issues.map((issue) => `${issue.path}: ${issue.message}`).join('; ')}`,
+      `publication validation failed: ${publicationIssues.map((issue) => `${issue.path}: ${issue.message}`).join('; ')}`,
     );
-  const path = casePath(input.date, input.revision);
-  if (input.write !== false) {
-    if (await (input.exists ?? pathExists)(path))
-      throw new Error(`refusing to overwrite existing case: ${path}`);
-    await mkdir(dirname(path), { recursive: true });
-    const temporary = `${path}.tmp-${process.pid}`;
-    const write =
-      input.writeFile ?? ((file, data) => nodeWriteFile(file, data));
-    await write(temporary, `${JSON.stringify(caseData, null, 2)}\n`);
-    await rename(temporary, path);
-  }
-  return { caseData, path, promptVersion: PROMPT_VERSION };
+  const reviewIssues = validateGenerationReview(caseData, parsedReview);
+  if (reviewIssues.length)
+    throw new Error(
+      `generation review validation failed: ${reviewIssues.map((issue) => `${issue.path}: ${issue.message}`).join('; ')}`,
+    );
+  return {
+    caseData,
+    generationReview: parsedReview,
+    markdownReview: reviewPacket(caseData, parsedReview),
+  };
 }
