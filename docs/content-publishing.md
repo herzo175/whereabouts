@@ -4,7 +4,7 @@ Publishing is staged: generation produces reviewable artifacts first, and the ma
 
 ## Generate a staged batch
 
-Set `OPENROUTER_API_KEY` and `WHEREABOUTS_MODEL` in the publishing environment. The Pydantic AI generator starts from model knowledge and may use provider-adaptive web search or fetch tools when it needs verification or citations.
+Set `OPENROUTER_API_KEY`, `WIKIMEDIA_USER_AGENT`, and the model variables in the publishing environment. The Wikimedia user agent must identify a contactable product owner.
 
 For a bootstrap batch, request exactly ten consecutive dates:
 

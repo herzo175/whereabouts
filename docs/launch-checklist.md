@@ -9,7 +9,7 @@
 
 ## Content
 
-- [ ] Configure `OPENROUTER_API_KEY` and `WHEREABOUTS_MODEL`.
+- [ ] Configure `OPENROUTER_API_KEY` and a contact-bearing `WIKIMEDIA_USER_AGENT`.
 - [ ] Configure `WHEREABOUTS_MODEL` and, when available, an independent `WHEREABOUTS_CRITIC_MODEL`.
 - [ ] Generate the initial ten-day batch with `content:generate-range`.
 - [ ] Run `content:validate` at the generated publication ceiling.
