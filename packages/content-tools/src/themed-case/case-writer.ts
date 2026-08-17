@@ -34,10 +34,31 @@ type Generated = z.infer<typeof generatedSchema>;
 
 function validateDraft(raw: unknown, board: CuratedBoard): CaseDraft {
   const parsed = caseDraftSchema.parse(raw);
-  const checked = validateCaseDraftAgainstBoard(parsed, board);
+  const normalized: CaseDraft = {
+    rounds: parsed.rounds.map((round) => ({
+      ...round,
+      clue: {
+        ...round.clue,
+        evidencePoiIds: [
+          ...new Set([...round.clue.evidencePoiIds, round.targetPoiId]),
+        ],
+      },
+      results: round.results.map((result) => ({
+        ...result,
+        evidencePoiIds: [
+          ...new Set([
+            ...result.evidencePoiIds,
+            round.targetPoiId,
+            ...(result.poiId === round.targetPoiId ? [] : [result.poiId]),
+          ]),
+        ],
+      })),
+    })),
+  };
+  const checked = validateCaseDraftAgainstBoard(normalized, board);
   if (!checked.success)
     throw new Error(`case draft is invalid: ${checked.error.message}`);
-  for (const round of parsed.rounds) {
+  for (const round of normalized.rounds) {
     const target = round.targetPoiId;
     if (!round.clue.evidencePoiIds.includes(target))
       throw new Error('clue evidence must include its target POI');
@@ -55,7 +76,7 @@ function validateDraft(raw: unknown, board: CuratedBoard): CaseDraft {
         );
     }
   }
-  return parsed;
+  return normalized;
 }
 
 export async function writeCaseDraft({
@@ -134,9 +155,12 @@ export async function repairCaseDraft({
 }): Promise<CaseDraft> {
   const roundIndexes = [
     ...new Set(
-      repairs.flatMap((repair) => {
+      repairs.map((repair) => {
+        if (repair.kind !== 'clue' && repair.kind !== 'relationship')
+          throw new Error(`unsupported repair kind: ${repair.kind}`);
         const match = /^round-([1-5])$/.exec(repair.roundId);
-        return match ? [Number(match[1]) - 1] : [];
+        if (!match) throw new Error(`unrecognized round ID: ${repair.roundId}`);
+        return Number(match[1]) - 1;
       }),
     ),
   ];

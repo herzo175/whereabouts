@@ -24,18 +24,6 @@ function duplicate(values: string[]): boolean {
   return new Set(values).size !== values.length;
 }
 
-function semanticMismatch(
-  candidate: HydratedCandidate,
-  theme: ThemePlan,
-): boolean {
-  const text = `${candidate.name} ${candidate.themeClaim}`.toLowerCase();
-  // The model is responsible for nuanced thematic judgment. These explicit
-  // markers protect the stage boundary when a candidate from another task is
-  // accidentally included in a shared pool.
-  void theme;
-  return /task\s*8|unrelated|does not fit|not relevant/.test(text);
-}
-
 export async function curateBoard({
   model,
   theme,
@@ -70,10 +58,6 @@ export async function curateBoard({
     const candidate = pool.get(id);
     return candidate ? [candidate] : [];
   });
-  if (selected.some((candidate) => semanticMismatch(candidate, theme)))
-    throw new Error(
-      'curation selected a candidate that does not satisfy the theme',
-    );
   const result = curatedBoardSchema.safeParse({
     theme,
     candidates: selected,

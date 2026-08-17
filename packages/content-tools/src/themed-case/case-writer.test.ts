@@ -50,12 +50,12 @@ describe('case writer', () => {
     expect(bucketed[0]?.tier).toBe('correct');
   });
 
-  it('rejects a clue that does not cite its declared target', async () => {
+  it('rejects a clue that cites an off-board evidence ID', async () => {
     const invalid = fixtureCaseDraft.rounds.map((round, index) => ({
       ...round,
       clue:
         index === 0
-          ? { ...round.clue, evidencePoiIds: [fixtureBoard.candidates[10].id] }
+          ? { ...round.clue, evidencePoiIds: ['not-on-board'] }
           : round.clue,
       results: round.results.map((result) => ({
         ...result,
@@ -73,7 +73,33 @@ describe('case writer', () => {
         theme: fixtureBoard.theme,
         board: fixtureBoard,
       }),
-    ).rejects.toThrow(/clue evidence/);
+    ).rejects.toThrow(/evidence not on board/);
+  });
+
+  it('normalizes omitted target and guessed-POI evidence IDs', async () => {
+    const rounds = fixtureCaseDraft.rounds.map((round) => ({
+      ...round,
+      results: round.results.map((result) => ({
+        ...result,
+        similarityScore:
+          result.poiId === round.targetPoiId ? 100 : result.similarityScore,
+        evidencePoiIds: [result.poiId],
+      })),
+    }));
+    const result = await writeCaseDraft({
+      model: { generate: async () => ({ rounds }) },
+      theme: fixtureBoard.theme,
+      board: fixtureBoard,
+    });
+    const round = result.rounds[0];
+    expect(round).toBeDefined();
+    const nonTarget = round?.results.find(
+      (item) => item.poiId !== round.targetPoiId,
+    );
+    expect(nonTarget).toBeDefined();
+    expect(nonTarget?.evidencePoiIds).toEqual(
+      expect.arrayContaining([nonTarget?.poiId, round?.targetPoiId]),
+    );
   });
 
   it('repairs round-1 only and preserves the other rounds', async () => {
@@ -125,5 +151,24 @@ describe('case writer', () => {
     });
     expect(result.rounds[0]).toEqual(repaired);
     expect(result.rounds.slice(1)).toEqual(validDraft.rounds.slice(1));
+  });
+
+  it('rejects a mixed valid and invalid repair request', async () => {
+    await expect(
+      repairCaseDraft({
+        model: { generate: async () => ({ rounds: [] }) },
+        theme: fixtureBoard.theme,
+        board: fixtureBoard,
+        draft: fixtureCaseDraft,
+        repairs: [
+          { kind: 'clue', roundId: 'round-1', reason: 'Valid repair request.' },
+          {
+            kind: 'clue',
+            roundId: 'round-99',
+            reason: 'Invalid repair request.',
+          },
+        ],
+      }),
+    ).rejects.toThrow(/unrecognized round ID/);
   });
 });

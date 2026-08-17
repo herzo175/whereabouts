@@ -44,4 +44,27 @@ describe('curateBoard', () => {
       }),
     ).rejects.toThrow(/coordinates/);
   });
+
+  it('does not apply semantic keyword heuristics beyond model selection', async () => {
+    const candidates = fixtureCandidates.map((candidate, index) =>
+      index === 0
+        ? {
+            ...candidate,
+            themeClaim: 'Task 8 unrelated marker, but supplied as a candidate.',
+          }
+        : candidate,
+    );
+    const ids = candidates.slice(0, 25).map((candidate) => candidate.id);
+    const board = await curateBoard({
+      model: {
+        generate: async () => ({
+          candidateIds: ids,
+          targetPoiIds: ids.slice(0, 5),
+        }),
+      },
+      theme: fixtureTheme,
+      candidates,
+    });
+    expect(board.candidates[0]?.id).toBe(ids[0]);
+  });
 });
