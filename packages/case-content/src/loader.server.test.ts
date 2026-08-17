@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 
 // biome-ignore lint/suspicious/noTsIgnore: fixtures are intentionally outside the library source root.
 // @ts-ignore -- package typecheck has a narrower root than test compilation.
-import { makeFiveRoundCase } from '../test/fixtures.js';
+import { makeFiveRoundCase, makeThemedCase } from '../test/fixtures.js';
 import { CaseContentError, createCaseLoader } from './loader.server.js';
 
 const publishedDate = '2026-08-14';
@@ -105,6 +105,38 @@ describe('createCaseLoader', () => {
     expect(loader.loadPublishedCase('2026-08-15')).toBeNull();
     expect(loader.listPublishedCases()).toEqual([
       { date: publishedDate, caseNumber: 1 },
+    ]);
+  });
+
+  it('loads v2 and v3 artifacts and lists both dates newest first', () => {
+    const manifest = {
+      schemaVersion: 2,
+      cases: {
+        '2026-08-14': {
+          caseNumber: 1,
+          revision: 1,
+          file: './cases/2026-08-14/v2.json',
+        },
+        '2026-08-15': {
+          caseNumber: 2,
+          revision: 1,
+          file: './cases/2026-08-15/v3.json',
+        },
+      },
+    };
+    const loader = createCaseLoader(manifest, {
+      '../content/cases/2026-08-14/v2.json': makeFiveRoundCase(),
+      '../content/cases/2026-08-15/v3.json': makeThemedCase({
+        publicationDate: '2026-08-15',
+        caseNumber: 2,
+      }),
+    });
+
+    expect(loader.loadPublishedCase('2026-08-14')?.schemaVersion).toBe(2);
+    expect(loader.loadPublishedCase('2026-08-15')?.schemaVersion).toBe(3);
+    expect(loader.listPublishedCases()).toEqual([
+      { date: '2026-08-15', caseNumber: 2 },
+      { date: '2026-08-14', caseNumber: 1 },
     ]);
   });
 });

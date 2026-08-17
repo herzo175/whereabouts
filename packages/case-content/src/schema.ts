@@ -39,7 +39,7 @@ export type DailyRound = {
   results: RoundResult[];
 };
 
-export type FiveRoundDailyCase = {
+export type FiveRoundDailyCaseV2 = {
   schemaVersion: 2;
   publicationDate: string;
   revision: number;
@@ -48,6 +48,32 @@ export type FiveRoundDailyCase = {
   rounds: DailyRound[];
   sources: Source[];
 };
+
+export type DailyTheme = {
+  title: string;
+  introduction: string;
+  inclusionCriteria: string;
+};
+
+export type ThemeConnection = {
+  text: string;
+  sourceIds: string[];
+};
+
+export type ThemedPoi = Poi & { themeConnection: ThemeConnection };
+
+export type ThemedDailyCase = {
+  schemaVersion: 3;
+  publicationDate: string;
+  revision: number;
+  caseNumber: number;
+  theme: DailyTheme;
+  pois: ThemedPoi[];
+  rounds: DailyRound[];
+  sources: Source[];
+};
+
+export type FiveRoundDailyCase = FiveRoundDailyCaseV2 | ThemedDailyCase;
 
 export type DailyCase = FiveRoundDailyCase;
 
@@ -163,6 +189,22 @@ function parsePoi(value: unknown, path: string): Poi {
   };
 }
 
+function parseThemedPoi(value: unknown, path: string): ThemedPoi {
+  const parsed = record(value, path);
+  const poi = parsePoi(value, path);
+  const connection = record(parsed.themeConnection, `${path}.themeConnection`);
+  return {
+    ...poi,
+    themeConnection: {
+      text: string(connection.text, `${path}.themeConnection.text`, 20),
+      sourceIds: parseSourceIds(
+        connection.sourceIds,
+        `${path}.themeConnection.sourceIds`,
+      ),
+    },
+  };
+}
+
 export const poiSchema: Schema<Poi> = {
   parse: (value) => parsePoi(value, 'poi'),
 };
@@ -195,19 +237,23 @@ function parseRoundImage(
   };
 }
 
-const fiveRoundDailyCaseSchema: Schema<FiveRoundDailyCase> = {
-  parse(value) {
+function parseFiveRoundDailyCase(
+  value: unknown,
+  schemaVersion: 2 | 3,
+  poiParser: (value: unknown, path: string) => Poi,
+): FiveRoundDailyCaseV2 | ThemedDailyCase {
     const parsed = record(value, 'daily case');
-    if (parsed.schemaVersion !== 2) fail('schemaVersion', 'must equal 2');
+    if (parsed.schemaVersion !== schemaVersion)
+      fail('schemaVersion', `must equal ${schemaVersion}`);
     const publicationDate = string(parsed.publicationDate, 'publicationDate');
     if (!datePattern.test(publicationDate))
       fail('publicationDate', 'must be an ISO date');
     const pois = array(parsed.pois, 'pois').map((poi, index) =>
-      parsePoi(poi, `pois[${index}]`),
+      poiParser(poi, `pois[${index}]`),
     );
     if (pois.length !== 25) fail('pois', 'must contain exactly 25 POIs');
     if (pois.some((poi) => !poi.image))
-      fail('pois', 'every version 2 POI must include an attributed image');
+      fail('pois', 'every POI must include an attributed image');
     const poiIds = pois.map((poi) => poi.id);
     unique(poiIds, 'pois', 'POI ids');
     const knownPoiIds = new Set(poiIds);
@@ -292,21 +338,60 @@ const fiveRoundDailyCaseSchema: Schema<FiveRoundDailyCase> = {
       'Round target ids',
     );
     return {
-      schemaVersion: 2,
+      schemaVersion,
       publicationDate,
       revision: positiveInteger(parsed.revision, 'revision'),
       caseNumber: positiveInteger(parsed.caseNumber, 'caseNumber'),
       pois,
       rounds,
       sources,
+    } as FiveRoundDailyCaseV2 | ThemedDailyCase;
+}
+
+const fiveRoundDailyCaseSchema: Schema<FiveRoundDailyCaseV2> = {
+  parse: (value) =>
+    parseFiveRoundDailyCase(value, 2, parsePoi) as FiveRoundDailyCaseV2,
+};
+
+const themedDailyCaseSchema: Schema<ThemedDailyCase> = {
+  parse(value) {
+    const parsed = record(value, 'daily case');
+    const themeValue = record(parsed.theme, 'theme');
+    const theme: DailyTheme = {
+      title: string(themeValue.title, 'theme.title', 3),
+      introduction: string(themeValue.introduction, 'theme.introduction', 20),
+      inclusionCriteria: string(
+        themeValue.inclusionCriteria,
+        'theme.inclusionCriteria',
+        20,
+      ),
     };
+    const result = parseFiveRoundDailyCase(
+      value,
+      3,
+      parseThemedPoi,
+    ) as ThemedDailyCase;
+    const knownSourceIds = new Set(result.sources.map((source) => source.id));
+    for (const [index, poi] of result.pois.entries()) {
+      if (
+        poi.themeConnection.sourceIds.some(
+          (sourceId) => !knownSourceIds.has(sourceId),
+        )
+      )
+        fail(
+          `pois[${index}].themeConnection.sourceIds`,
+          'Every source reference must resolve',
+        );
+    }
+    return { ...result, theme };
   },
 };
 
 export const dailyCaseSchema: Schema<DailyCase> = {
   parse(value) {
     const parsed = record(value, 'daily case');
-    if (parsed.schemaVersion !== 2) fail('schemaVersion', 'must equal 2');
-    return fiveRoundDailyCaseSchema.parse(value);
+    if (parsed.schemaVersion === 2) return fiveRoundDailyCaseSchema.parse(value);
+    if (parsed.schemaVersion === 3) return themedDailyCaseSchema.parse(value);
+    fail('schemaVersion', 'must equal 2 or 3');
   },
 };
