@@ -1,7 +1,7 @@
 export type {
   DailyCase,
-  DailyTheme,
   DailyRound,
+  DailyTheme,
   FiveRoundDailyCase,
   FiveRoundDailyCaseV2,
   Poi,

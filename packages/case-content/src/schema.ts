@@ -242,110 +242,110 @@ function parseFiveRoundDailyCase(
   schemaVersion: 2 | 3,
   poiParser: (value: unknown, path: string) => Poi,
 ): FiveRoundDailyCaseV2 | ThemedDailyCase {
-    const parsed = record(value, 'daily case');
-    if (parsed.schemaVersion !== schemaVersion)
-      fail('schemaVersion', `must equal ${schemaVersion}`);
-    const publicationDate = string(parsed.publicationDate, 'publicationDate');
-    if (!datePattern.test(publicationDate))
-      fail('publicationDate', 'must be an ISO date');
-    const pois = array(parsed.pois, 'pois').map((poi, index) =>
-      poiParser(poi, `pois[${index}]`),
+  const parsed = record(value, 'daily case');
+  if (parsed.schemaVersion !== schemaVersion)
+    fail('schemaVersion', `must equal ${schemaVersion}`);
+  const publicationDate = string(parsed.publicationDate, 'publicationDate');
+  if (!datePattern.test(publicationDate))
+    fail('publicationDate', 'must be an ISO date');
+  const pois = array(parsed.pois, 'pois').map((poi, index) =>
+    poiParser(poi, `pois[${index}]`),
+  );
+  if (pois.length !== 25) fail('pois', 'must contain exactly 25 POIs');
+  if (pois.some((poi) => !poi.image))
+    fail('pois', 'every POI must include an attributed image');
+  const poiIds = pois.map((poi) => poi.id);
+  unique(poiIds, 'pois', 'POI ids');
+  const knownPoiIds = new Set(poiIds);
+  const sources = array(parsed.sources, 'sources').map((source) =>
+    sourceSchema.parse(source),
+  );
+  unique(
+    sources.map((source) => source.id),
+    'sources',
+    'Source ids',
+  );
+  const knownSourceIds = new Set(sources.map((source) => source.id));
+  const rounds = array(parsed.rounds, 'rounds').map((round, roundIndex) => {
+    const path = `rounds[${roundIndex}]`;
+    const entry = record(round, path);
+    const targetPoiId = id(entry.targetPoiId, `${path}.targetPoiId`);
+    if (!knownPoiIds.has(targetPoiId))
+      fail(`${path}.targetPoiId`, 'must identify a POI on the board');
+    const clue = record(entry.clue, `${path}.clue`);
+    const parsedClue = {
+      text: string(clue.text, `${path}.clue.text`, 20),
+      sourceIds: parseSourceIds(clue.sourceIds, `${path}.clue.sourceIds`),
+    };
+    const results = array(entry.results, `${path}.results`).map(
+      (result, resultIndex): RoundResult => {
+        const resultPath = `${path}.results[${resultIndex}]`;
+        const resultEntry = record(result, resultPath);
+        const tier = resultEntry.tier as RoundTier;
+        if (
+          tier !== 'correct' &&
+          tier !== 'hot' &&
+          tier !== 'warm' &&
+          tier !== 'cold'
+        )
+          fail(`${resultPath}.tier`, 'must be correct, hot, warm, or cold');
+        return {
+          poiId: id(resultEntry.poiId, `${resultPath}.poiId`),
+          tier,
+          text: string(resultEntry.text, `${resultPath}.text`, 10),
+          sourceIds: parseSourceIds(
+            resultEntry.sourceIds,
+            `${resultPath}.sourceIds`,
+          ),
+        };
+      },
     );
-    if (pois.length !== 25) fail('pois', 'must contain exactly 25 POIs');
-    if (pois.some((poi) => !poi.image))
-      fail('pois', 'every POI must include an attributed image');
-    const poiIds = pois.map((poi) => poi.id);
-    unique(poiIds, 'pois', 'POI ids');
-    const knownPoiIds = new Set(poiIds);
-    const sources = array(parsed.sources, 'sources').map((source) =>
-      sourceSchema.parse(source),
-    );
-    unique(
-      sources.map((source) => source.id),
-      'sources',
-      'Source ids',
-    );
-    const knownSourceIds = new Set(sources.map((source) => source.id));
-    const rounds = array(parsed.rounds, 'rounds').map((round, roundIndex) => {
-      const path = `rounds[${roundIndex}]`;
-      const entry = record(round, path);
-      const targetPoiId = id(entry.targetPoiId, `${path}.targetPoiId`);
-      if (!knownPoiIds.has(targetPoiId))
-        fail(`${path}.targetPoiId`, 'must identify a POI on the board');
-      const clue = record(entry.clue, `${path}.clue`);
-      const parsedClue = {
-        text: string(clue.text, `${path}.clue.text`, 20),
-        sourceIds: parseSourceIds(clue.sourceIds, `${path}.clue.sourceIds`),
-      };
-      const results = array(entry.results, `${path}.results`).map(
-        (result, resultIndex): RoundResult => {
-          const resultPath = `${path}.results[${resultIndex}]`;
-          const resultEntry = record(result, resultPath);
-          const tier = resultEntry.tier as RoundTier;
-          if (
-            tier !== 'correct' &&
-            tier !== 'hot' &&
-            tier !== 'warm' &&
-            tier !== 'cold'
-          )
-            fail(`${resultPath}.tier`, 'must be correct, hot, warm, or cold');
-          return {
-            poiId: id(resultEntry.poiId, `${resultPath}.poiId`),
-            tier,
-            text: string(resultEntry.text, `${resultPath}.text`, 10),
-            sourceIds: parseSourceIds(
-              resultEntry.sourceIds,
-              `${resultPath}.sourceIds`,
-            ),
-          };
-        },
-      );
-      if (results.length !== 25)
-        fail(`${path}.results`, 'must contain exactly 25 candidate results');
-      const resultPoiIds = results.map((result) => result.poiId);
-      unique(resultPoiIds, `${path}.results`, 'Result POI ids');
-      if (
-        resultPoiIds.some((poiId) => !knownPoiIds.has(poiId)) ||
-        poiIds.some((poiId) => !resultPoiIds.includes(poiId))
-      )
-        fail(`${path}.results`, 'must cover every board POI exactly once');
-      const correct = results.filter((result) => result.tier === 'correct');
-      if (correct.length !== 1 || correct[0]?.poiId !== targetPoiId)
-        fail(`${path}.results`, 'only the target may be marked correct');
-      const sourceReferences = [
-        ...parsedClue.sourceIds,
-        ...results.flatMap((result) => result.sourceIds),
-      ];
-      if (sourceReferences.some((sourceId) => !knownSourceIds.has(sourceId)))
-        fail('sources', 'Every source reference must resolve');
-      return {
-        id: id(entry.id, `${path}.id`),
-        targetPoiId,
-        image: parseRoundImage(entry.image, `${path}.image`),
-        clue: parsedClue,
-        results,
-      };
-    });
-    if (rounds.length !== 5) fail('rounds', 'must contain exactly five rounds');
-    unique(
-      rounds.map((round) => round.id),
-      'rounds',
-      'Round ids',
-    );
-    unique(
-      rounds.map((round) => round.targetPoiId),
-      'rounds',
-      'Round target ids',
-    );
+    if (results.length !== 25)
+      fail(`${path}.results`, 'must contain exactly 25 candidate results');
+    const resultPoiIds = results.map((result) => result.poiId);
+    unique(resultPoiIds, `${path}.results`, 'Result POI ids');
+    if (
+      resultPoiIds.some((poiId) => !knownPoiIds.has(poiId)) ||
+      poiIds.some((poiId) => !resultPoiIds.includes(poiId))
+    )
+      fail(`${path}.results`, 'must cover every board POI exactly once');
+    const correct = results.filter((result) => result.tier === 'correct');
+    if (correct.length !== 1 || correct[0]?.poiId !== targetPoiId)
+      fail(`${path}.results`, 'only the target may be marked correct');
+    const sourceReferences = [
+      ...parsedClue.sourceIds,
+      ...results.flatMap((result) => result.sourceIds),
+    ];
+    if (sourceReferences.some((sourceId) => !knownSourceIds.has(sourceId)))
+      fail('sources', 'Every source reference must resolve');
     return {
-      schemaVersion,
-      publicationDate,
-      revision: positiveInteger(parsed.revision, 'revision'),
-      caseNumber: positiveInteger(parsed.caseNumber, 'caseNumber'),
-      pois,
-      rounds,
-      sources,
-    } as FiveRoundDailyCaseV2 | ThemedDailyCase;
+      id: id(entry.id, `${path}.id`),
+      targetPoiId,
+      image: parseRoundImage(entry.image, `${path}.image`),
+      clue: parsedClue,
+      results,
+    };
+  });
+  if (rounds.length !== 5) fail('rounds', 'must contain exactly five rounds');
+  unique(
+    rounds.map((round) => round.id),
+    'rounds',
+    'Round ids',
+  );
+  unique(
+    rounds.map((round) => round.targetPoiId),
+    'rounds',
+    'Round target ids',
+  );
+  return {
+    schemaVersion,
+    publicationDate,
+    revision: positiveInteger(parsed.revision, 'revision'),
+    caseNumber: positiveInteger(parsed.caseNumber, 'caseNumber'),
+    pois,
+    rounds,
+    sources,
+  } as FiveRoundDailyCaseV2 | ThemedDailyCase;
 }
 
 const fiveRoundDailyCaseSchema: Schema<FiveRoundDailyCaseV2> = {
@@ -390,7 +390,8 @@ const themedDailyCaseSchema: Schema<ThemedDailyCase> = {
 export const dailyCaseSchema: Schema<DailyCase> = {
   parse(value) {
     const parsed = record(value, 'daily case');
-    if (parsed.schemaVersion === 2) return fiveRoundDailyCaseSchema.parse(value);
+    if (parsed.schemaVersion === 2)
+      return fiveRoundDailyCaseSchema.parse(value);
     if (parsed.schemaVersion === 3) return themedDailyCaseSchema.parse(value);
     fail('schemaVersion', 'must equal 2 or 3');
   },

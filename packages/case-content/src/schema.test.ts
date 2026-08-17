@@ -74,6 +74,8 @@ describe('dailyCaseSchema', () => {
       caseNumber: 1,
     };
 
-    expect(() => dailyCaseSchema.parse(unsupported)).toThrow(/schemaVersion|unsupported/i);
+    expect(() => dailyCaseSchema.parse(unsupported)).toThrow(
+      /schemaVersion|unsupported/i,
+    );
   });
 });
