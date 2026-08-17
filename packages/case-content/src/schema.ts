@@ -22,6 +22,7 @@ export type Source = {
   title: string;
   url: string;
   retrievedAt: string;
+  provenance: 'model' | 'verified';
 };
 
 export type RoundResult = {
@@ -205,11 +206,15 @@ export const sourceSchema: Schema<Source> = {
     const retrievedAt = string(parsed.retrievedAt, 'source.retrievedAt');
     if (!isoDateTimePattern.test(retrievedAt))
       fail('source.retrievedAt', 'must be an ISO datetime');
+    const provenance = parsed.provenance;
+    if (provenance !== 'model' && provenance !== 'verified')
+      fail('source.provenance', 'must be model or verified');
     return {
       id: id(parsed.id, 'source.id'),
       title: string(parsed.title, 'source.title'),
       url: url(parsed.url, 'source.url'),
       retrievedAt,
+      provenance,
     };
   },
 };
@@ -248,8 +253,6 @@ function parseFiveRoundDailyCase(
     poiParser(poi, `pois[${index}]`),
   );
   if (pois.length !== 25) fail('pois', 'must contain exactly 25 POIs');
-  if (pois.some((poi) => !poi.image))
-    fail('pois', 'every POI must include an attributed image');
   const poiIds = pois.map((poi) => poi.id);
   unique(poiIds, 'pois', 'POI ids');
   const knownPoiIds = new Set(poiIds);

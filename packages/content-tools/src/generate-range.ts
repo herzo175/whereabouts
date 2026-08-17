@@ -20,7 +20,10 @@ import {
   publishBatch,
 } from './publish-batch.js';
 import { curateBoard } from './themed-case/board-curator.js';
-import { researchCandidates } from './themed-case/candidate-researcher.js';
+import {
+  hydrateBoardTargets,
+  researchCandidates,
+} from './themed-case/candidate-researcher.js';
 import { critiqueCase } from './themed-case/case-critic.js';
 import { repairCaseDraft, writeCaseDraft } from './themed-case/case-writer.js';
 import { createWikimediaResearch } from './themed-case/live-research.js';
@@ -153,9 +156,10 @@ export function createLiveOrchestratorStages(
   const research = createWikimediaResearch();
   return {
     planTheme: (input) => planTheme({ model, ...input }),
-    researchCandidates: (input) =>
-      researchCandidates({ model, research, ...input }),
+    researchCandidates: (input) => researchCandidates({ model, ...input }),
     curateBoard: (input) => curateBoard({ model, ...input }),
+    hydrateBoardTargets: (input) =>
+      hydrateBoardTargets({ board: input.board, research }),
     writeCaseDraft: (input) => writeCaseDraft({ model, ...input }),
     repairCaseDraft: (input) => repairCaseDraft({ model, ...input }),
     critiqueCase: (input) => critiqueCase({ criticModel, ...input }),

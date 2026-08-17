@@ -160,6 +160,13 @@ export async function generateCase(
   const parsedReview = generationReviewSchema.parse(input.review);
 
   const sourceByPoiId = new Map<string, string>();
+  for (const targetId of input.board.targetPoiIds) {
+    const target = input.board.candidates.find(
+      (candidate) => candidate.id === targetId,
+    );
+    if (target?.source.provenance !== 'verified')
+      throw new Error(`target POI source is not verified: ${targetId}`);
+  }
   const sources = input.board.candidates.map((candidate, index) => {
     const id = sourceId(index);
     sourceByPoiId.set(candidate.id, id);
@@ -168,6 +175,7 @@ export async function generateCase(
       title: candidate.source.title,
       url: candidate.source.url,
       retrievedAt: candidate.source.retrievedAt,
+      provenance: candidate.source.provenance,
     };
   });
   const pois: ThemedPoi[] = input.board.candidates.map((candidate) => ({
@@ -185,9 +193,6 @@ export async function generateCase(
       sourceIds: [sourceByPoiId.get(candidate.id) as string],
     },
   }));
-  if (pois.some((poi) => !poi.image))
-    throw new Error('generation requires images for all board POIs');
-
   const translated = translateDraft(checkedDraft.data, sourceByPoiId);
   const displayPois = orderPoisForDisplay(pois, input);
   const caseData = dailyCaseSchema.parse({

@@ -30,12 +30,23 @@ const review: GenerationReview = {
   repairs: [],
 };
 
+const publicationBoard = {
+  ...fixtureBoard,
+  candidates: fixtureBoard.candidates.map((candidate, index) => ({
+    ...candidate,
+    source: {
+      ...candidate.source,
+      provenance: index < 5 ? ('verified' as const) : ('model' as const),
+    },
+  })),
+};
+
 const input = {
   date: '2026-08-17',
   revision: 1,
   caseNumber: 1,
   theme: fixtureTheme,
-  board: fixtureBoard,
+  board: publicationBoard,
   draft: fixtureCaseDraft,
   review,
 };
@@ -65,6 +76,18 @@ describe('generateCase', () => {
     expect(prepared.caseData.rounds[0]?.results[1]?.sourceIds).toEqual([
       'source-02',
     ]);
+    expect(
+      prepared.caseData.sources.filter(
+        (source) => source.provenance === 'verified',
+      ),
+    ).toHaveLength(5);
+    expect(
+      prepared.caseData.sources.filter(
+        (source) => source.provenance === 'model',
+      ),
+    ).toHaveLength(20);
+    expect(prepared.markdownReview).toContain('provenance: verified');
+    expect(prepared.markdownReview).toContain('provenance: model');
   });
 
   it('rejects missing targets, off-board clues, wrong clues, and unknown evidence', async () => {
@@ -135,6 +158,26 @@ describe('generateCase', () => {
     const second = await generateCase(input);
     expect(first.caseData.pois.map((poi) => poi.id)).toEqual(
       second.caseData.pois.map((poi) => poi.id),
+    );
+  });
+
+  it('rejects a target whose candidate source is not verified', async () => {
+    const unverifiedTarget = {
+      ...input,
+      board: {
+        ...input.board,
+        candidates: input.board.candidates.map((candidate, index) =>
+          index === 0
+            ? {
+                ...candidate,
+                source: { ...candidate.source, provenance: 'model' as const },
+              }
+            : candidate,
+        ),
+      },
+    };
+    await expect(generateCase(unverifiedTarget)).rejects.toThrow(
+      /source is not verified/,
     );
   });
 });

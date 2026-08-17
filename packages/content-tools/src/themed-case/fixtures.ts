@@ -38,6 +38,7 @@ export const fixtureCandidates: HydratedCandidate[] = Array.from(
         title: `Market Square ${n}`,
         url: `https://en.wikipedia.org/wiki/Market_Square_${n}`,
         retrievedAt: '2026-01-01T00:00:00.000Z',
+        provenance: 'verified',
         extract: `Market Square ${n} is a documented historic public place where markets and civic life brought residents together across many generations.`,
       },
       image: {

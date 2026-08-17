@@ -43,6 +43,7 @@ function makeCase(overrides: Record<string, unknown> = {}) {
       title: `Fixture source ${id}`,
       url: `https://example.com/${id}`,
       retrievedAt: '2026-08-14T00:00:00Z',
+      provenance: 'verified',
     })),
     rounds: pois.slice(0, 5).map((target, roundIndex) => ({
       id: `round-${roundIndex + 1}`,

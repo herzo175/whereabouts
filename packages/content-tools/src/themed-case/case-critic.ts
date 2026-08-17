@@ -85,6 +85,7 @@ function assembleCase(input: CritiqueInput): ThemedDailyCase {
         title: 'Board evidence',
         url: 'https://example.com/board-evidence',
         retrievedAt: '2026-01-01T00:00:00Z',
+        provenance: 'model',
       },
     ],
   }) as ThemedDailyCase;

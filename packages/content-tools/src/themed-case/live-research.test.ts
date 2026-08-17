@@ -17,6 +17,15 @@ const candidate = {
   wikipediaTitle: 'Old Town (Prague)',
   themeClaim:
     'A historic district with a remarkably preserved medieval urban core.',
+  latitude: 50.087,
+  longitude: 14.421,
+  source: {
+    title: 'Old Town (Prague)',
+    url: 'https://en.wikipedia.org/wiki/Old_Town_(Prague)',
+    retrievedAt: '2026-01-01T00:00:00.000Z',
+    provenance: 'model' as const,
+    extract: 'A'.repeat(120),
+  },
 };
 describe('Wikimedia research', () => {
   it('retries a rate-limited Wikimedia request with bounded backoff', async () => {
@@ -140,7 +149,10 @@ describe('Wikimedia research', () => {
       longitude: 14.421,
       city: 'Prague',
       country: 'Czech Republic',
-      source: { retrievedAt: '2026-01-01T00:00:00.000Z' },
+      source: {
+        retrievedAt: '2026-01-01T00:00:00.000Z',
+        provenance: 'verified',
+      },
       image: { attribution: 'A. Author · CC BY-SA' },
     });
     expect(urls.some((url) => url.includes('wbgetentities'))).toBe(true);

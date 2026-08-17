@@ -13,7 +13,7 @@ export const themePlanSchema = z.object({
   searchQueries: z.array(z.string().min(3)).min(3).max(12),
 });
 export type ThemePlan = z.infer<typeof themePlanSchema>;
-export const researchedCandidateSchema = z.object({
+const candidateIdentitySchema = z.object({
   id: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
   name: z.string().min(2),
   city: z.string().min(1),
@@ -21,6 +21,33 @@ export const researchedCandidateSchema = z.object({
   wikipediaTitle: z.string().min(2),
   themeClaim: z.string().min(20),
 });
+const candidateEvidenceSchema = z.object({
+  latitude: z.number().min(-90).max(90),
+  longitude: z.number().min(-180).max(180),
+  source: z.object({
+    title: nonempty,
+    url: z.string().url(),
+    retrievedAt: z.iso.datetime(),
+    provenance: z.enum(['model', 'verified']),
+    extract: z.string().min(100),
+  }),
+  image: z.object({
+    url: z.string().url(),
+    alt: z.string().min(5),
+    attribution: z.string().min(3),
+    licenseUrl: z.string().url(),
+  }),
+});
+/**
+ * Candidate research is model-first. Coordinates and an auditable source
+ * extract are part of the proposal contract; they are model evidence, not
+ * verified facts. Images are added only for round targets by live research.
+ */
+export const researchedCandidateSchema = candidateIdentitySchema
+  .merge(candidateEvidenceSchema.omit({ image: true }))
+  .extend({
+    image: candidateEvidenceSchema.shape.image.optional(),
+  });
 export type ResearchedCandidate = z.infer<typeof researchedCandidateSchema>;
 export const candidateProposalPoolSchema = z
   .object({
@@ -35,27 +62,14 @@ export const candidateProposalPoolSchema = z
       });
   });
 export type CandidateProposalPool = z.infer<typeof candidateProposalPoolSchema>;
-export const hydratedCandidateSchema = researchedCandidateSchema.extend({
-  latitude: z.number().min(-90).max(90),
-  longitude: z.number().min(-180).max(180),
-  source: z.object({
-    title: nonempty,
-    url: z.string().url(),
-    retrievedAt: z.iso.datetime(),
-    extract: z.string().min(100),
-  }),
-  image: z.object({
-    url: z.string().url(),
-    alt: z.string().min(5),
-    attribution: z.string().min(3),
-    licenseUrl: z.string().url(),
-  }),
-});
+export const hydratedCandidateSchema = candidateIdentitySchema.merge(
+  candidateEvidenceSchema,
+);
 export type HydratedCandidate = z.infer<typeof hydratedCandidateSchema>;
 export const candidatePoolSchema = z
   .object({
     theme: themePlanSchema,
-    candidates: z.array(hydratedCandidateSchema).min(35).max(50),
+    candidates: z.array(researchedCandidateSchema).min(35).max(50),
   })
   .superRefine((v, ctx) => {
     if (!uniqueBy(v.candidates))
@@ -68,7 +82,7 @@ export type CandidatePool = z.infer<typeof candidatePoolSchema>;
 export const curatedBoardSchema = z
   .object({
     theme: themePlanSchema,
-    candidates: z.array(hydratedCandidateSchema).length(25),
+    candidates: z.array(researchedCandidateSchema).length(25),
     targetPoiIds: z.array(z.string()).length(5),
   })
   .superRefine((v, ctx) => {

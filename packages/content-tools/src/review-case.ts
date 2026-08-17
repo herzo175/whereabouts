@@ -27,7 +27,7 @@ function sourceList(caseData: DailyCase): string {
   return caseData.sources
     .map(
       (source) =>
-        `- [${source.id}: ${source.title}](${source.url}) — retrieved ${source.retrievedAt}`,
+        `- [${source.id}: ${source.title}](${source.url}) — provenance: ${source.provenance}; retrieved ${source.retrievedAt}`,
     )
     .join('\n');
 }

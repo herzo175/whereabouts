@@ -2,7 +2,7 @@ import { z } from 'zod';
 import {
   type CuratedBoard,
   curatedBoardSchema,
-  type HydratedCandidate,
+  type ResearchedCandidate,
   type ThemePlan,
 } from './contracts.js';
 import type { StructuredModel } from './model.js';
@@ -16,7 +16,7 @@ export type BoardSelection = z.infer<typeof selectionSchema>;
 export type CurateBoardInput = {
   model: StructuredModel;
   theme: ThemePlan;
-  candidates: HydratedCandidate[];
+  candidates: ResearchedCandidate[];
   excludedTargetIds?: ReadonlySet<string> | string[];
 };
 

@@ -62,6 +62,7 @@ export function makeFiveRoundCase(
       title: `Fixture source ${id}`,
       url: `https://example.com/${id}`,
       retrievedAt: timestamp,
+      provenance: 'verified',
     })),
     theme: {
       title: 'Railway Hotels',

@@ -34,6 +34,14 @@ describe('dailyCaseSchema', () => {
     expect(() => dailyCaseSchema.parse(value)).toThrow(/source/i);
   });
 
+  it('requires explicit source provenance', () => {
+    const value = makeFiveRoundCase();
+    const source = value.sources[0];
+    if (!source) throw new Error('fixture source missing');
+    delete (source as { provenance?: unknown }).provenance;
+    expect(() => dailyCaseSchema.parse(value)).toThrow(/provenance/i);
+  });
+
   it('rejects a themed target absent from the board', () => {
     const value = makeFiveRoundCase();
     value.rounds[0].targetPoiId = 'missing-poi';
@@ -54,10 +62,12 @@ describe('dailyCaseSchema', () => {
     expect(() => dailyCaseSchema.parse(value)).toThrow(/25|cover/i);
   });
 
-  it('requires an attributed image for every five-round candidate', () => {
+  it('allows non-target candidates without images while requiring round target images', () => {
     const value = makeFiveRoundCase();
     delete value.pois[10].image;
-    expect(() => dailyCaseSchema.parse(value)).toThrow(/every.*image/i);
+    expect(() => dailyCaseSchema.parse(value)).not.toThrow();
+    delete value.rounds[0].image;
+    expect(() => dailyCaseSchema.parse(value)).toThrow(/rounds\[0\].*image/i);
   });
 
   it('rejects a non-target marked correct', () => {

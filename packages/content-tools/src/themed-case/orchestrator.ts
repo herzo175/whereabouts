@@ -5,7 +5,7 @@ import type {
   CandidatePool,
   CaseDraft,
   CuratedBoard,
-  HydratedCandidate,
+  ResearchedCandidate,
   RepairRequest,
   ThemePlan,
 } from './contracts.js';
@@ -17,8 +17,12 @@ export type OrchestratorStages = {
   researchCandidates(input: { theme: ThemePlan }): Promise<CandidatePool>;
   curateBoard(input: {
     theme: ThemePlan;
-    candidates: HydratedCandidate[];
+    candidates: ResearchedCandidate[];
     excludedTargetIds: ReadonlySet<string>;
+  }): Promise<CuratedBoard>;
+  hydrateBoardTargets?(input: {
+    theme: ThemePlan;
+    board: CuratedBoard;
   }): Promise<CuratedBoard>;
   writeCaseDraft(input: {
     theme: ThemePlan;
@@ -100,6 +104,8 @@ export async function orchestrateThemedCase(
       candidates: pool.candidates,
       excludedTargetIds: input.excludedTargetIds,
     });
+    if (input.stages.hydrateBoardTargets)
+      board = await input.stages.hydrateBoardTargets({ theme, board });
     let draft = await input.stages.writeCaseDraft({ theme, board });
     let critique = await input.stages.critiqueCase({
       theme,
@@ -158,6 +164,8 @@ export async function orchestrateThemedCase(
           candidates,
           excludedTargetIds: input.excludedTargetIds,
         });
+        if (input.stages.hydrateBoardTargets)
+          board = await input.stages.hydrateBoardTargets({ theme, board });
         draft = await input.stages.writeCaseDraft({ theme, board });
       } else {
         draft = await input.stages.repairCaseDraft({

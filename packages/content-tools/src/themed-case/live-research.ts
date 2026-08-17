@@ -211,6 +211,7 @@ export function createWikimediaResearch(deps: Dependencies = {}): LiveResearch {
             title: page.title,
             url: page.fullurl,
             retrievedAt: now().toISOString(),
+            provenance: 'verified',
             extract: page.extract,
           },
           image,

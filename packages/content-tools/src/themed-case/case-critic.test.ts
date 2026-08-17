@@ -23,6 +23,7 @@ const board = {
       title: 'Fixture source',
       url: 'https://example.com/source',
       retrievedAt: '2026-08-14T00:00:00Z',
+      provenance: 'verified',
       extract: `${poi.name} is directly connected to railway lodging and travel, as documented by the source.`,
     },
   })),
