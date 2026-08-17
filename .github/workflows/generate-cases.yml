@@ -92,7 +92,7 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY || secrets.openrouter_api_key }}
           WHEREABOUTS_MODEL: ${{ vars.WHEREABOUTS_MODEL || vars.whereabouts_model || 'openai/gpt-5.6-luna' }}
           START_DATE: ${{ steps.dates.outputs.start }}
-        run: uv run --project agent python -m whereabouts_agent.generate --from "$START_DATE" --days 10
+        run: pnpm content:prepare-buffer -- --from "$START_DATE" --days 10
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
         name: Format generated case content
         run: pnpm exec biome format --write packages/case-content/content
