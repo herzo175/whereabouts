@@ -9,6 +9,7 @@ export type ResearchFetch = (
 type Dependencies = {
   fetch?: ResearchFetch;
   now?: () => Date;
+  sleep?: (milliseconds: number) => Promise<void>;
   userAgent?: string;
 };
 export interface LiveResearch {
@@ -24,10 +25,22 @@ async function json(
   url: string,
   userAgent: string,
   stage: string,
+  sleep: (milliseconds: number) => Promise<void>,
 ): Promise<JsonRecord> {
-  const response = await fetch(url, {
-    headers: { 'Api-User-Agent': userAgent, 'User-Agent': userAgent },
-  });
+  let response: Response | undefined;
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    response = await fetch(url, {
+      headers: { 'Api-User-Agent': userAgent, 'User-Agent': userAgent },
+    });
+    if (response.status !== 429 || attempt === 2) break;
+    const retryAfter = Number(response.headers.get('retry-after'));
+    await sleep(
+      Number.isFinite(retryAfter) && retryAfter >= 0
+        ? retryAfter * 1_000
+        : 1_000 * 2 ** attempt,
+    );
+  }
+  if (!response) throw new Error(`${stage} request did not run`);
   if (!response.ok)
     throw new Error(`${stage} request failed with status ${response.status}`);
   try {
@@ -39,6 +52,10 @@ async function json(
 export function createWikimediaResearch(deps: Dependencies = {}): LiveResearch {
   const fetch = deps.fetch ?? globalThis.fetch.bind(globalThis);
   const now = deps.now ?? (() => new Date());
+  const sleep =
+    deps.sleep ??
+    ((milliseconds: number) =>
+      new Promise<void>((resolve) => setTimeout(resolve, milliseconds)));
   const userAgent =
     deps.userAgent ??
     process.env.WIKIMEDIA_USER_AGENT ??
@@ -58,6 +75,7 @@ export function createWikimediaResearch(deps: Dependencies = {}): LiveResearch {
         `${API}?${params}`,
         userAgent,
         'MediaWiki search',
+        sleep,
       )) as {
         query?: { search?: Array<{ title?: unknown; snippet?: unknown }> };
       };
@@ -84,6 +102,7 @@ export function createWikimediaResearch(deps: Dependencies = {}): LiveResearch {
           `${API}?${params}`,
           userAgent,
           'MediaWiki hydration',
+          sleep,
         )) as {
           query?: {
             pages?: Array<{
@@ -118,6 +137,7 @@ export function createWikimediaResearch(deps: Dependencies = {}): LiveResearch {
           `https://www.wikidata.org/w/api.php?${entitiesParams}`,
           userAgent,
           'Wikidata entity',
+          sleep,
         )) as {
           entities?: Record<
             string,
@@ -160,6 +180,7 @@ export function createWikimediaResearch(deps: Dependencies = {}): LiveResearch {
           `https://www.wikidata.org/w/api.php?${new URLSearchParams({ action: 'wbgetentities', ids, props: 'labels', languages: 'en', languagefallback: '1', format: 'json', formatversion: '2' })}`,
           userAgent,
           'Wikidata labels',
+          sleep,
         )) as {
           entities?: Record<string, { labels?: { en?: { value?: string } } }>;
         };

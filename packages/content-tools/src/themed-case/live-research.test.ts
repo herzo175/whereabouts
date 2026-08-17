@@ -19,6 +19,32 @@ const candidate = {
     'A historic district with a remarkably preserved medieval urban core.',
 };
 describe('Wikimedia research', () => {
+  it('retries a rate-limited Wikimedia request with bounded backoff', async () => {
+    let attempts = 0;
+    const delays: number[] = [];
+    const research = createWikimediaResearch({
+      fetch: async () => {
+        attempts += 1;
+        if (attempts === 1)
+          return new Response('rate limited', {
+            status: 429,
+            headers: { 'retry-after': '0' },
+          });
+        return response({
+          query: { search: [{ title: 'Station Hotel', snippet: 'Historic' }] },
+        });
+      },
+      sleep: async (milliseconds) => {
+        delays.push(milliseconds);
+      },
+      userAgent: 'test-agent',
+    });
+
+    await expect(research.search('railway hotel', 1)).resolves.toHaveLength(1);
+    expect(attempts).toBe(2);
+    expect(delays).toEqual([0]);
+  });
+
   it('parses search results and hydrates a candidate from Wikipedia and Wikidata', async () => {
     const urls: string[] = [];
     const fetch: ResearchFetch = async (input) => {
