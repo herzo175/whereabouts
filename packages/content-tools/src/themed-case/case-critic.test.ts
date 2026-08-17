@@ -56,6 +56,14 @@ function passingOutput() {
       status: 'pass',
       explanation: 'Resolving the clue independently identifies the target.',
     })),
+    relationshipVerdicts: caseData.rounds.flatMap((round) =>
+      caseData.pois.map((poi) => ({
+        roundId: round.id,
+        poiId: poi.id,
+        status: 'pass',
+        explanation: 'The supplied evidence supports this comparison.',
+      })),
+    ),
   };
 }
 
@@ -89,9 +97,9 @@ describe('critiqueCase', () => {
       publicationDate: caseData.publicationDate,
       revision: caseData.revision,
     });
-    expect(result.repairs).toEqual([
+    expect(result.repairs).toEqual(expect.arrayContaining([
       expect.objectContaining({ kind: 'candidate', poiId: 'poi-00' }),
-    ]);
+    ]));
   });
 
   it('repairs off-board, wrong-target, and malformed clue verdicts', async () => {
@@ -119,5 +127,41 @@ describe('critiqueCase', () => {
       revision: caseData.revision,
     });
     expect(result.repairs.filter((repair) => repair.kind === 'clue')).toHaveLength(3);
+  });
+
+  it('fails closed when required arrays are missing', async () => {
+    const result = await critiqueCase({
+      criticModel: modelWith({}), theme: board.theme, board, draft,
+      publicationDate: caseData.publicationDate, revision: caseData.revision,
+    });
+    expect(result.repairs.length).toBeGreaterThan(0);
+    expect(result.repairs.some((repair) => repair.kind === 'candidate')).toBe(true);
+    expect(result.repairs.some((repair) => repair.kind === 'clue')).toBe(true);
+    expect(result.repairs.some((repair) => repair.kind === 'relationship')).toBe(true);
+  });
+
+  it('repairs missing and duplicate relationship verdicts', async () => {
+    const output = passingOutput();
+    output.relationshipVerdicts.pop();
+    output.relationshipVerdicts[0] = { ...output.relationshipVerdicts[0] };
+    output.relationshipVerdicts.push({ ...output.relationshipVerdicts[0] });
+    const result = await critiqueCase({
+      criticModel: modelWith(output), theme: board.theme, board, draft,
+      publicationDate: caseData.publicationDate, revision: caseData.revision,
+    });
+    expect(result.repairs.filter((repair) => repair.kind === 'relationship').length).toBeGreaterThan(1);
+  });
+
+  it('adds validation repair even when a clue repair already exists', async () => {
+    const output = passingOutput();
+    output.clueVerdicts[0].declaredTargetPoiId = 'poi-99';
+    const result = await critiqueCase({
+      criticModel: modelWith(output), theme: board.theme, board, draft,
+      publicationDate: caseData.publicationDate, revision: caseData.revision,
+    });
+    expect(result.repairs).toEqual(expect.arrayContaining([
+      expect.objectContaining({ kind: 'clue' }),
+      expect.objectContaining({ kind: 'theme' }),
+    ]));
   });
 });
