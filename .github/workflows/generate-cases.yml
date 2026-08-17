@@ -44,15 +44,6 @@ jobs:
         name: Install dependencies
         run: pnpm install --frozen-lockfile
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        name: Install uv
-        uses: astral-sh/setup-uv@v6
-        with:
-          enable-cache: true
-          cache-dependency-glob: agent/uv.lock
-      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        name: Sync agent dependencies
-        run: uv sync --project agent --locked
-      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
         name: Calculate and validate Eastern publication dates
         id: dates
         run: |
@@ -90,9 +81,10 @@ jobs:
         name: Generate the next ten cases
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY || secrets.openrouter_api_key }}
+          WIKIMEDIA_USER_AGENT: ${{ secrets.WIKIMEDIA_USER_AGENT || 'Whereabouts/1.0 (https://github.com/herzo175/whereabouts)' }}
           WHEREABOUTS_MODEL: ${{ vars.WHEREABOUTS_MODEL || vars.whereabouts_model || 'openai/gpt-5.6-luna' }}
           START_DATE: ${{ steps.dates.outputs.start }}
-        run: uv run --project agent python -m whereabouts_agent.generate --from "$START_DATE" --days 10
+        run: pnpm content:prepare-buffer -- --from "$START_DATE" --days 10
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
         name: Format generated case content
         run: pnpm exec biome format --write packages/case-content/content

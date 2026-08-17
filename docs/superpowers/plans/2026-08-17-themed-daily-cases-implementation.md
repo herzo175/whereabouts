@@ -4,9 +4,9 @@
 
 **Goal:** Replace corpus-selected daily boards with autonomously themed, live-researched five-round cases, published as immutable, audited artifacts through automatically checked pull requests.
 
-**Architecture:** Preserve the static runtime, manifest loader, game engine, and scoring. Add a version 3 themed case contract and build a Python Pydantic AI generator under `agent/`, managed with `uv`. The agent plans a theme, uses model knowledge first, optionally calls provider-adaptive WebSearch/WebFetch tools for uncertain facts, curates a board, writes rounds, independently critiques theme fit and clue-answer alignment, repairs bounded defects, and hands a complete atomic batch to the TypeScript publisher. Store a machine-readable generation review beside each case so repository validation can prove that semantic checks ran.
+**Architecture:** Preserve the static runtime, manifest loader, game engine, and scoring. Add a version 3 themed case contract and build a typed, staged content orchestrator that plans a theme, researches and verifies candidates, curates a board, writes rounds, independently critiques theme fit and clue-answer alignment, repairs bounded defects, and prepares an atomic content batch. Store a machine-readable generation review beside each case so repository validation can prove that semantic checks ran.
 
-**Tech Stack:** TypeScript 5.9, Zod 4, React 19, Vitest 4, Testing Library, Playwright, Python, Pydantic AI, Pydantic, uv, GitHub Actions, GitHub CLI, pnpm/Turbo, Biome.
+**Tech Stack:** TypeScript 5.9, Zod 4, AI SDK 6, OpenRouter, Wikipedia/Wikidata/Wikimedia HTTP APIs, Vitest 4, React 19, Testing Library, Playwright, GitHub Actions, GitHub CLI, pnpm/Turbo, Biome.
 
 ---
 
