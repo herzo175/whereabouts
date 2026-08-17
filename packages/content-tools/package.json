@@ -20,9 +20,7 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@openrouter/ai-sdk-provider": "3.0.0",
     "@whereabouts/case-content": "workspace:*",
-    "ai": "7.0.66",
     "zod": "4.1.11"
   },
   "devDependencies": {

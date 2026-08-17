@@ -31,7 +31,9 @@ type SpawnFunction = (options: {
   command: string;
   args: string[];
   cwd: string;
-  input: PythonGeneratorInput & { excludedTargetIds: string[] };
+  input: Omit<PythonGeneratorInput, 'excludedTargetIds'> & {
+    excludedTargetIds: string[];
+  };
   timeoutMs: number;
 }) => Promise<SpawnResult>;
 

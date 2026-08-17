@@ -11,7 +11,6 @@ import {
   validateGenerationReview,
 } from './generation-review.js';
 import { reviewPacket } from './review-case.js';
-import { bucketResults } from './themed-case/case-writer.js';
 import type { ThemePlan } from './themed-case/contracts.js';
 import {
   type CaseDraft,
@@ -147,7 +146,33 @@ export function bucketRoundResults(
   text: string;
   sourceIds: string[];
 }> {
-  return bucketResults(results, targetPoiId);
+  if (results.filter((result) => result.poiId === targetPoiId).length !== 1)
+    throw new Error('target must occur exactly once');
+  const ranked = results
+    .filter((result) => result.poiId !== targetPoiId)
+    .sort(
+      (left, right) =>
+        right.similarityScore - left.similarityScore ||
+        left.poiId.localeCompare(right.poiId),
+    );
+  const tiers = new Map(
+    ranked.map(
+      (result, index) =>
+        [
+          result.poiId,
+          index < 4 ? 'hot' : index < 12 ? 'warm' : 'cold',
+        ] as const,
+    ),
+  );
+  return results.map(
+    ({ similarityScore: _score, evidencePoiIds, ...result }) => {
+      const tier =
+        result.poiId === targetPoiId ? 'correct' : tiers.get(result.poiId);
+      if (!tier)
+        throw new Error(`missing similarity bucket for ${result.poiId}`);
+      return { ...result, tier, sourceIds: evidencePoiIds };
+    },
+  );
 }
 
 export async function generateCase(

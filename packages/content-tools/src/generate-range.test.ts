@@ -110,7 +110,6 @@ describe('generateRange', () => {
     const publish = vi.fn(async () => history());
     await generateRange(['--from', '2026-08-17', '--days', '10'], {
       history: async () => history(),
-      requireUserAgent: () => 'test',
       orchestrate: async (input) => {
         requested.push({ date: input.date, revision: input.revision });
         return prepared(input.date, input.revision);
@@ -138,7 +137,6 @@ describe('generateRange', () => {
       ['--from', '2026-08-17', '--days', '3', '--missing-only'],
       {
         history: async () => history([existing]),
-        requireUserAgent: () => 'test',
         orchestrate: async (input) => {
           requested.push(input.date);
           return prepared(input.date, input.revision);
@@ -161,7 +159,6 @@ describe('generateRange', () => {
       [];
     await generateRange(['--from', '2026-08-17', '--days', '2'], {
       history: async () => history([prior]),
-      requireUserAgent: () => 'test',
       orchestrate: async (input) => {
         seen.push({
           date: input.date,
@@ -193,7 +190,6 @@ describe('generateRange', () => {
       ['--from', '2026-08-17', '--days', '1', '--revision', '7'],
       {
         history: async () => history([existing]),
-        requireUserAgent: () => 'test',
         orchestrate: async (input) => {
           revisions.push(input.revision);
           return prepared(input.date, input.revision);
