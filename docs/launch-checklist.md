@@ -1,19 +1,25 @@
 # Whereabouts launch checklist
 
-Verified on 2026-08-14:
+## Engineering
 
-- [x] Biome CI, TypeScript, unit/component tests, publication validation, and production build pass through `pnpm quality`.
-- [x] Playwright completes nine deterministic desktop/mobile journeys, including local-date routing, win/loss, resume and corrupt-state recovery, spoiler-free sharing, list-only completion, and mobile dossier confirmation.
-- [x] The 2026-08-14 Istanbul case passes schema, source-reference, coordinate, publication, and spoiler-leak validation.
-- [x] The globe is emitted as a separate lazy client chunk; the initial route does not contain the Three.js payload.
-- [x] AI SDK/provider identifiers are absent from the browser client bundle. AI runs only in the publishing tools.
-- [x] Reduced-motion rules, keyboard focus management, text temperature labels, 44-pixel controls, and a WebGL-independent list flow are implemented and covered by component or browser tests.
+- [ ] Run Biome CI, TypeScript, unit/component tests, publication validation, and the production build through `pnpm quality`.
+- [ ] Complete the deterministic browser journeys at desktop and mobile sizes, including local-date routing, resume/corrupt-state recovery, sharing, and the list-only flow.
+- [ ] Confirm runtime bundles contain no OpenRouter or AI SDK code and runtime gameplay makes no model calls.
+- [ ] Verify reduced-motion behavior, keyboard focus, readable temperature labels, 44px controls, and the WebGL-independent list flow.
 
-Required before a public launch:
+## Content
 
-- [ ] Review the interface manually at 320×568, 375×667, and 390×844, at 200% zoom, and with a physical keyboard/screen reader.
-- [ ] Configure `OPENROUTER_API_KEY` and a contact-bearing `WIKIMEDIA_USER_AGENT` in the publishing environment.
-- [ ] Generate the remaining 29 launch cases from 2026-08-15, inspect every review packet, and merge only approved immutable artifacts.
-- [ ] Configure the canonical production origin and run the deployed smoke test.
+- [ ] Configure `OPENROUTER_API_KEY` and a contact-bearing `WIKIMEDIA_USER_AGENT`.
+- [ ] Configure `WHEREABOUTS_MODEL` and, when available, an independent `WHEREABOUTS_CRITIC_MODEL`.
+- [ ] Generate the initial ten-day batch with `content:generate-range`.
+- [ ] Run `content:validate` at the generated publication ceiling.
+- [ ] Inspect every audit JSON, Markdown packet, image attribution, clue, and relationship verdict.
+- [ ] Confirm `reviews/index.md` links the complete batch and states that all semantic verdicts passed.
+- [ ] Merge only approved immutable artifacts through the reviewed publishing workflow.
+- [ ] For ongoing operation, run `content:prepare-buffer` for today plus nine days and repair failures with new revisions.
 
-The launch-content step was intentionally not run locally because publishing credentials were not present. The hand-authored development case remains the only public manifest entry.
+## Release
+
+- [ ] Configure the canonical production origin and deployment credentials.
+- [ ] Run the deployed smoke test after the reviewed content change is released.
+- [ ] Document any withdrawn dates while retaining their immutable artifacts for auditability.

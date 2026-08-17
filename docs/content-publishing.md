@@ -1,49 +1,42 @@
 # Publishing Whereabouts cases
 
-Whereabouts publishes one generated five-round case per Eastern calendar day. A case contains 25 image-backed locations, five distinct targets, five clues, and a precomputed similarity result for every round/location pair. Runtime gameplay never calls a model.
+Publishing is staged: generation produces reviewable artifacts first, and the manifest is the final publication boundary. Runtime routes serve only cases present in that manifest.
 
-## Automated daily publication
+## Generate a staged batch
 
-`.github/workflows/generate-cases.yml` runs at midnight Eastern, including daylight-saving-time changes. It:
+Set `OPENROUTER_API_KEY`, `WIKIMEDIA_USER_AGENT`, and the model variables in the publishing environment. The Wikimedia user agent must identify a contactable product owner.
 
-1. allocates the next revision for the Eastern publication date;
-2. generates the case through OpenRouter with `WHEREABOUTS_MODEL`;
-3. formats the JSON artifact;
-4. updates the publication manifest;
-5. validates the entire publication boundary;
-6. commits and pushes the artifact directly to `main`;
-7. invokes the reusable Fly deployment workflow for that exact commit.
-
-The generator retries a model or publication-validation failure up to three total attempts. Corpus, image, manifest, or configuration errors fail immediately.
-
-Required GitHub configuration:
-
-- `OPENROUTER_API_KEY` Actions secret;
-- `FLY_API_TOKEN` Actions secret;
-- optional `WIKIMEDIA_USER_AGENT` Actions secret;
-- optional `WHEREABOUTS_MODEL` Actions variable, defaulting to `openai/gpt-5.6-luna`.
-
-## Local generation
-
-Copy `.env.example` to `.env`, set `OPENROUTER_API_KEY` and a contact-bearing `WIKIMEDIA_USER_AGENT`, then run:
+For a bootstrap batch, request exactly ten consecutive dates:
 
 ```sh
-pnpm content:generate-range -- --from 2026-08-15 --days 1 --revision 1
-pnpm exec biome format --write packages/case-content/content/cases/2026-08-15/v1.json
+pnpm content:generate-range -- --from 2026-08-17 --days 10
 ```
 
-Add the generated artifact to `packages/case-content/content/manifest.json`, then verify it:
+For the recurring ten-day buffer, use the missing-only command. Manifested dates are skipped:
 
 ```sh
-PUBLICATION_CEILING=2026-08-15 pnpm content:validate
-pnpm content:review -- --date 2026-08-15 --revision 1
+pnpm content:prepare-buffer -- --from 2026-08-17 --days 10
+```
+
+The generator loads the manifest and published v3 cases, supplies the previous 90 themes and previous 30 target IDs to each case, then stages the complete batch through one publication preflight. Every generated case receives a Unix-day case number and the next available revision unless `--revision N` is supplied.
+
+## Audit and review
+
+Every case writes three artifacts:
+
+- `cases/YYYY-MM-DD/vN.json` — immutable v3 game content;
+- `reviews/YYYY-MM-DD/vN.json` — semantic audit JSON, including theme and clue verdicts;
+- `reviews/YYYY-MM-DD/vN.md` — a human-readable review packet.
+
+The batch writes `reviews/index.md` after all per-case immutable files and before the manifest. It links every packet and states that all semantic verdicts passed. Review the index, audit JSON, Markdown packets, clues, images, attribution, and similarity relationships. Run:
+
+```sh
+PUBLICATION_CEILING=2026-08-26 pnpm content:validate
 pnpm quality
 ```
 
-Review every clue for usefulness without answer leakage, every similarity tier for factual accuracy, every relationship report for source support, and every image for attribution and license metadata.
+Repair failed or unclear cases with a new revision. Never overwrite an existing `vN` artifact. A withdrawal removes the date from the manifest while preserving committed artifacts for auditability.
 
-## Revisions
+## Merge and release
 
-Published case files are immutable. To correct a published date, generate the next unused revision, validate it, and point that date's manifest entry at the new file. Never overwrite an already committed revision.
-
-To withdraw a broken case immediately, remove its manifest entry in a reviewed change. Keep committed artifacts for auditability.
+Generation belongs in a reviewed pull request. The pull request should include only the staged cases, audits, review index, and manifest changes needed for the batch. Required checks must pass before merge; deployment follows the normal post-merge release workflow.

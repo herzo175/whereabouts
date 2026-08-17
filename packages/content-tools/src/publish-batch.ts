@@ -182,6 +182,20 @@ export async function publishBatch({
         : `${item.markdownReview}\n`,
     );
   }
+  if (parsed.length) {
+    const index = [
+      '# Generated case review batch',
+      '',
+      'All semantic verdicts passed for every prepared case in this batch.',
+      '',
+      ...parsed.map(
+        (item) =>
+          `- [${item.date} revision ${item.revision}](./${item.date}/v${item.revision}.md)`,
+      ),
+      '',
+    ].join('\n');
+    await writeFile(resolve(caseContentRoot, 'reviews/index.md'), index);
+  }
   await writeFile(
     resolve(caseContentRoot, 'manifest.json'),
     `${JSON.stringify(assembled, null, 2)}\n`,

@@ -77,17 +77,27 @@ describe('publishBatch', () => {
     expect(writes).toEqual([]);
   });
 
-  it('writes all artifacts before the final manifest and returns exact manifest results', async () => {
+  it('writes all artifacts and a batch review index before the final manifest', async () => {
     const writes: string[] = [];
+    const contents: string[] = [];
     const result = await publishBatch({
       prepared: [prepared('2026-11-01', 1), prepared('2026-11-02', 1, 5)],
       manifest,
-      writeFile: async (path) => {
+      writeFile: async (path, data) => {
         writes.push(path);
+        contents.push(data);
       },
       exists: async () => false,
     });
-    expect(writes).toHaveLength(7);
+    expect(writes).toHaveLength(8);
+    expect(writes.at(-2)).toMatch(/reviews\/index\.md$/);
+    expect(contents.at(-2)).toContain(
+      '[2026-11-01 revision 1](./2026-11-01/v1.md)',
+    );
+    expect(contents.at(-2)).toContain(
+      '[2026-11-02 revision 1](./2026-11-02/v1.md)',
+    );
+    expect(contents.at(-2)).toContain('All semantic verdicts passed');
     expect(writes.at(-1)).toMatch(/manifest\.json$/);
     expect(result).toEqual({
       schemaVersion: 2,
