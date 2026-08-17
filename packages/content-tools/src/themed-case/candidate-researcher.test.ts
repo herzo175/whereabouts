@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { z } from 'zod';
 import {
   InsufficientCandidatePoolError,
   researchCandidates,
@@ -46,8 +47,11 @@ describe('researchCandidates', () => {
     const pool = await researchCandidates({
       theme: fixtureTheme,
       model: {
-        generate: async ({ prompt }) => {
+        generate: async ({ prompt, schema }) => {
           expect(prompt.match(/Place 0/g)?.length).toBe(1);
+          expect(JSON.stringify(z.toJSONSchema(schema))).toContain(
+            '"items":{"type":"object"',
+          );
           return { theme: fixtureTheme, candidates };
         },
       },

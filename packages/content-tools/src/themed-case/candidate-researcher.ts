@@ -10,7 +10,9 @@ import {
 import type { LiveResearch } from './live-research.js';
 import type { StructuredModel } from './model.js';
 
-const proposalResponseSchema = z.object({ candidates: z.array(z.unknown()) });
+const proposalResponseSchema = z.object({
+  candidates: z.array(researchedCandidateSchema).min(35).max(50),
+});
 
 const canonicalTitle = (title: string) =>
   title.trim().replaceAll('_', ' ').replace(/\s+/g, ' ').toLocaleLowerCase();
