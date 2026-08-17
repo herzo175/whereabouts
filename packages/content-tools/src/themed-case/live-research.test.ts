@@ -1,4 +1,6 @@
 import { describe, expect, it } from 'vitest';
+import { validateCaseDraftAgainstBoard } from './contracts.js';
+import { fixtureBoard, fixtureCaseDraft } from './fixtures.js';
 import {
   createWikimediaResearch,
   type ResearchFetch,
@@ -103,9 +105,9 @@ describe('Wikimedia research', () => {
       now: () => new Date('2026-01-01T00:00:00.000Z'),
       userAgent: 'test-agent',
     });
-    expect(
-      (await research.search('historic district', 1))[0]?.wikipediaTitle,
-    ).toBe('Old Town (Prague)');
+    expect(await research.search('historic district', 1)).toEqual([
+      { title: 'Old Town (Prague)', snippet: 'A historic district' },
+    ]);
     expect(await research.hydrate(candidate)).toMatchObject({
       lat: 50.087,
       lon: 14.421,
@@ -161,5 +163,34 @@ describe('contracts', () => {
       ResearchedCandidate.safeParse({ ...candidate, themeClaim: 'short' })
         .success,
     ).toBe(false);
+  });
+
+  it('requires exact board result coverage, board evidence, and target order', () => {
+    expect(
+      validateCaseDraftAgainstBoard(fixtureCaseDraft, fixtureBoard).success,
+    ).toBe(true);
+    const duplicate = structuredClone(fixtureCaseDraft);
+    duplicate.rounds[0].results[1].poiId = duplicate.rounds[0].results[0].poiId;
+    expect(validateCaseDraftAgainstBoard(duplicate, fixtureBoard).success).toBe(
+      false,
+    );
+    const unknown = structuredClone(fixtureCaseDraft);
+    unknown.rounds[0].results[0].poiId = 'not-on-board';
+    expect(validateCaseDraftAgainstBoard(unknown, fixtureBoard).success).toBe(
+      false,
+    );
+    const evidence = structuredClone(fixtureCaseDraft);
+    evidence.rounds[0].results[0].evidencePoiIds = ['not-on-board'];
+    expect(validateCaseDraftAgainstBoard(evidence, fixtureBoard).success).toBe(
+      false,
+    );
+    const reordered = structuredClone(fixtureCaseDraft);
+    [reordered.rounds[0].targetPoiId, reordered.rounds[1].targetPoiId] = [
+      reordered.rounds[1].targetPoiId,
+      reordered.rounds[0].targetPoiId,
+    ];
+    expect(validateCaseDraftAgainstBoard(reordered, fixtureBoard).success).toBe(
+      false,
+    );
   });
 });

@@ -142,21 +142,37 @@ export function validateCaseDraftAgainstBoard(
   const result = CaseDraft.safeParse(draft);
   if (!result.success) return result;
   const boardIds = new Set(board.candidates.map((x) => x.id));
-  const targets = new Set(board.targetPoiIds);
   const issues: z.ZodIssue[] = [];
-  for (const round of result.data.rounds) {
-    if (!targets.has(round.targetPoiId))
+  const expectedResultIds = board.candidates.map((candidate) => candidate.id);
+  for (const [roundIndex, round] of result.data.rounds.entries()) {
+    if (round.targetPoiId !== board.targetPoiIds[roundIndex])
       issues.push({
         code: 'custom',
-        path: ['rounds'],
-        message: `target not on board: ${round.targetPoiId}`,
+        path: ['rounds', roundIndex, 'targetPoiId'],
+        message: 'round target order must match board targets',
       });
-    for (const scored of round.results)
-      if (!boardIds.has(scored.poiId))
+    const resultIds = round.results.map((scored) => scored.poiId);
+    if (
+      resultIds.length !== expectedResultIds.length ||
+      new Set(resultIds).size !== resultIds.length ||
+      resultIds.some((id) => !boardIds.has(id)) ||
+      expectedResultIds.some((id) => !resultIds.includes(id))
+    )
+      issues.push({
+        code: 'custom',
+        path: ['rounds', roundIndex, 'results'],
+        message: 'each round must cover every board candidate exactly once',
+      });
+    const evidenceIds = [
+      ...round.clue.evidencePoiIds,
+      ...round.results.flatMap((scored) => scored.evidencePoiIds),
+    ];
+    for (const evidenceId of evidenceIds)
+      if (!boardIds.has(evidenceId))
         issues.push({
           code: 'custom',
-          path: ['rounds'],
-          message: `result not on board: ${scored.poiId}`,
+          path: ['rounds', roundIndex],
+          message: `evidence not on board: ${evidenceId}`,
         });
   }
   return issues.length

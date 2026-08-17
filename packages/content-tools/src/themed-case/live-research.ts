@@ -12,20 +12,18 @@ type Dependencies = {
   userAgent?: string;
 };
 export interface LiveResearch {
-  search(query: string, limit: number): Promise<ResearchedCandidate[]>;
+  search(
+    query: string,
+    limit: number,
+  ): Promise<Array<{ title: string; snippet: string }>>;
   hydrate(candidate: ResearchedCandidate): Promise<HydratedCandidate | null>;
 }
-const slug = (value: string) =>
-  value
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '')
-    .replace(/-+/g, '-');
+type JsonRecord = Record<string, unknown>;
 async function json(
   fetch: ResearchFetch,
   url: string,
   userAgent: string,
-): Promise<any> {
+): Promise<JsonRecord> {
   const response = await fetch(url, {
     headers: { 'Api-User-Agent': userAgent, 'User-Agent': userAgent },
   });
@@ -50,21 +48,13 @@ export function createWikimediaResearch(deps: Dependencies = {}): LiveResearch {
         format: 'json',
         formatversion: '2',
       });
-      const data = await json(fetch, `${API}?${params}`, userAgent);
-      return (data.query?.search ?? []).flatMap((item: any) => {
+      const data = (await json(fetch, `${API}?${params}`, userAgent)) as {
+        query?: { search?: Array<{ title?: unknown; snippet?: unknown }> };
+      };
+      return (data.query?.search ?? []).flatMap((item) => {
         const title = typeof item.title === 'string' ? item.title : '';
-        return title
-          ? [
-              {
-                id: slug(title),
-                name: title.replace(/\s*\([^)]*\)$/, ''),
-                city: title.replace(/\s*\([^)]*\)$/, ''),
-                country: 'Unknown',
-                wikipediaTitle: title,
-                themeClaim: `This place is a candidate because it appears in Wikimedia search results for ${query}.`,
-              },
-            ]
-          : [];
+        const snippet = typeof item.snippet === 'string' ? item.snippet : '';
+        return title ? [{ title, snippet }] : [];
       });
     },
     async hydrate(candidate) {
@@ -79,7 +69,16 @@ export function createWikimediaResearch(deps: Dependencies = {}): LiveResearch {
           format: 'json',
           formatversion: '2',
         });
-        const data = await json(fetch, `${API}?${params}`, userAgent);
+        const data = (await json(fetch, `${API}?${params}`, userAgent)) as {
+          query?: {
+            pages?: Array<{
+              title?: string;
+              extract?: string;
+              fullurl?: string;
+              pageprops?: { wikibase_item?: string };
+            }>;
+          };
+        };
         const page = data.query?.pages?.[0];
         const entityId = page?.pageprops?.wikibase_item;
         if (!page?.title || !page.extract || !page.fullurl || !entityId)
@@ -93,11 +92,31 @@ export function createWikimediaResearch(deps: Dependencies = {}): LiveResearch {
           format: 'json',
           formatversion: '2',
         });
-        const entities = await json(
+        const entities = (await json(
           fetch,
           `https://www.wikidata.org/w/api.php?${entitiesParams}`,
           userAgent,
-        );
+        )) as {
+          entities?: Record<
+            string,
+            {
+              claims?: Record<
+                string,
+                Array<{
+                  mainsnak?: {
+                    datavalue?: {
+                      value?: {
+                        id?: string;
+                        latitude?: number;
+                        longitude?: number;
+                      };
+                    };
+                  };
+                }>
+              >;
+            }
+          >;
+        };
         const entity = entities.entities?.[entityId];
         const coordinate =
           entity?.claims?.P625?.[0]?.mainsnak?.datavalue?.value;
@@ -114,11 +133,13 @@ export function createWikimediaResearch(deps: Dependencies = {}): LiveResearch {
         )
           return null;
         const ids = [countryId, cityId].join('|');
-        const labelsData = await json(
+        const labelsData = (await json(
           fetch,
           `https://www.wikidata.org/w/api.php?${new URLSearchParams({ action: 'wbgetentities', ids, props: 'labels', languages: 'en', languagefallback: '1', format: 'json', formatversion: '2' })}`,
           userAgent,
-        );
+        )) as {
+          entities?: Record<string, { labels?: { en?: { value?: string } } }>;
+        };
         const country = labelsData.entities?.[countryId]?.labels?.en?.value;
         const city = labelsData.entities?.[cityId]?.labels?.en?.value;
         if (typeof country !== 'string' || typeof city !== 'string')
