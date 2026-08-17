@@ -16,6 +16,7 @@ import { DailyScorePanel } from './daily-score-panel';
 import { PoiPicker } from './poi-picker';
 import { RoundBriefing } from './round-briefing';
 import { RoundReveal } from './round-reveal';
+import { ThemeBriefing } from './theme-briefing';
 
 type FiveRoundGameScreenProps = {
   caseData: FiveRoundDailyCase;
@@ -145,6 +146,9 @@ export function FiveRoundGameScreen({
         <main className="min-h-screen bg-background px-4 py-5 text-paper sm:px-6 sm:py-8">
           <div className="mx-auto max-w-2xl space-y-6">
             <FiveRoundHeader progress={progress} />
+            {caseData.schemaVersion === 3 ? (
+              <ThemeBriefing theme={caseData.theme} />
+            ) : null}
             <RoundReveal
               correctPoi={correctPoi}
               guessedPoi={guessedPoi}
@@ -171,6 +175,9 @@ export function FiveRoundGameScreen({
       <main className="min-h-screen bg-background px-4 py-5 text-paper sm:px-6 sm:py-8">
         <div className="mx-auto max-w-2xl space-y-6">
           <FiveRoundHeader progress={progress} />
+          {caseData.schemaVersion === 3 ? (
+            <ThemeBriefing theme={caseData.theme} />
+          ) : null}
           <DailyScorePanel
             caseData={caseData}
             onShare={onShare}
@@ -186,6 +193,9 @@ export function FiveRoundGameScreen({
     <main className="min-h-screen bg-background px-4 py-5 text-paper sm:px-6 sm:py-8">
       <div className="mx-auto max-w-2xl space-y-6">
         <FiveRoundHeader progress={progress} />
+        {caseData.schemaVersion === 3 ? (
+          <ThemeBriefing theme={caseData.theme} />
+        ) : null}
         <RoundBriefing round={currentRound} roundNumber={roundNumber} />
         <section
           aria-label="Choose a location"

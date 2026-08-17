@@ -1,6 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { makeFiveRoundCase } from '@whereabouts/case-content/testing';
+import {
+  makeFiveRoundCase,
+  makeThemedCase,
+} from '@whereabouts/case-content/testing';
 import {
   createFiveRoundProgress,
   submitRoundGuess,
@@ -27,6 +30,51 @@ function makeStorage(initial?: Record<string, string>): Storage {
 }
 
 describe('FiveRoundGameScreen', () => {
+  it("shows today's theme before a guess and both dossier connections after submission", async () => {
+    const user = userEvent.setup();
+    const caseData = makeThemedCase();
+    const guessedPoi = caseData.pois[10];
+
+    render(
+      <FiveRoundGameScreen
+        caseData={caseData}
+        globeSupported={false}
+        storage={makeStorage()}
+      />,
+    );
+
+    expect(
+      await screen.findByRole('heading', { name: 'Railway Hotels' }),
+    ).toBeVisible();
+    expect(screen.getByText(caseData.theme.introduction)).toBeVisible();
+    expect(screen.queryByText(guessedPoi.themeConnection.text)).toBeNull();
+
+    const search = screen.getByRole('searchbox', { name: /search locations/i });
+    await user.type(search, guessedPoi.name);
+    await user.click(
+      screen.getByRole('button', { name: new RegExp(guessedPoi.name, 'i') }),
+    );
+    await user.click(screen.getByRole('button', { name: /submit this lead/i }));
+
+    expect(screen.getAllByText("Why it fits today's theme")).toHaveLength(2);
+    expect(screen.getAllByText(guessedPoi.themeConnection.text)).toHaveLength(
+      1,
+    );
+    const correctPoi = caseData.pois.find(
+      (poi) => poi.id === caseData.rounds[0].targetPoiId,
+    );
+    expect(correctPoi).toBeDefined();
+    if (!correctPoi) return;
+    expect(screen.getByText(correctPoi.themeConnection.text)).toBeVisible();
+  });
+
+  it('renders a v2 game without a theme heading', async () => {
+    const caseData = makeFiveRoundCase();
+    render(<FiveRoundGameScreen caseData={caseData} storage={makeStorage()} />);
+    expect(await screen.findByText('Round 1 / 5')).toBeVisible();
+    expect(screen.queryByText("Today's theme")).toBeNull();
+  });
+
   it('shows a neutral briefing, then reveals the scored relationship before the next round', async () => {
     const user = userEvent.setup();
     const caseData = makeFiveRoundCase();
