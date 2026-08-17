@@ -19,10 +19,20 @@ import {
   type PreparedCase,
   publishBatch,
 } from './publish-batch.js';
+import { createPythonGenerator } from './python-generator.js';
+import { curateBoard } from './themed-case/board-curator.js';
+import { researchCandidates } from './themed-case/candidate-researcher.js';
+import { critiqueCase } from './themed-case/case-critic.js';
+import { repairCaseDraft, writeCaseDraft } from './themed-case/case-writer.js';
+import { createWikimediaResearch } from './themed-case/live-research.js';
+import { createOpenRouterModel } from './themed-case/model.js';
 import {
-  createPythonGenerator,
-  type PythonGeneratorInput,
-} from './python-generator.js';
+  type OrchestrateThemedCaseInput,
+  type OrchestratorStages,
+  orchestrateThemedCase,
+} from './themed-case/orchestrator.js';
+import { planTheme } from './themed-case/theme-planner.js';
+import { requireProductionUserAgent } from './wikipedia.js';
 
 export type RangeArguments = {
   from: string;
@@ -39,8 +49,10 @@ export type RangeHistory = {
 export type GenerateRangeDependencies = {
   history?: RangeHistory | (() => Promise<RangeHistory>);
   listExistingCasePaths?: (date: string) => Promise<readonly string[]>;
-  orchestrate?: (input: PythonGeneratorInput) => Promise<PreparedCase>;
+  orchestrate?: (input: OrchestrateThemedCaseInput) => Promise<PreparedCase>;
   publishBatch?: typeof publishBatch;
+  stages?: OrchestratorStages;
+  requireUserAgent?: () => string;
 };
 
 function usage(): never {
@@ -129,6 +141,28 @@ async function defaultListExistingCasePaths(
   }
 }
 
+export function createLiveOrchestratorStages(
+  environment: Readonly<Record<string, string | undefined>> = process.env,
+): OrchestratorStages {
+  const model = createOpenRouterModel(environment);
+  const criticModel = createOpenRouterModel({
+    ...environment,
+    WHEREABOUTS_MODEL:
+      environment.WHEREABOUTS_CRITIC_MODEL?.trim() ||
+      environment.WHEREABOUTS_MODEL,
+  });
+  const research = createWikimediaResearch();
+  return {
+    planTheme: (input) => planTheme({ model, ...input }),
+    researchCandidates: (input) =>
+      researchCandidates({ model, research, ...input }),
+    curateBoard: (input) => curateBoard({ model, ...input }),
+    writeCaseDraft: (input) => writeCaseDraft({ model, ...input }),
+    repairCaseDraft: (input) => repairCaseDraft({ model, ...input }),
+    critiqueCase: (input) => critiqueCase({ criticModel, ...input }),
+  };
+}
+
 function latestCasesByDate(
   cases: readonly DailyCase[],
 ): Map<string, DailyCase> {
@@ -188,6 +222,13 @@ export async function generateRange(
   dependencies: GenerateRangeDependencies = {},
 ): Promise<void> {
   const options = parseRangeArguments(arguments_);
+  if (dependencies.requireUserAgent) dependencies.requireUserAgent();
+  else if (
+    !dependencies.history &&
+    !dependencies.orchestrate &&
+    !dependencies.stages
+  )
+    requireProductionUserAgent();
   const history = await resolveHistory(dependencies.history);
   const dates = options.missingOnly
     ? missingBufferDates(
@@ -225,7 +266,16 @@ export async function generateRange(
 
   const casesByDate = latestCasesByDate(history.cases);
   const prepared: PreparedCase[] = [];
-  const orchestrator = dependencies.orchestrate ?? createPythonGenerator();
+  const orchestrator =
+    dependencies.orchestrate ??
+    (!dependencies.stages
+      ? async ({ stages: _stages, ...input }) => createPythonGenerator()(input)
+      : orchestrateThemedCase);
+  const stages =
+    dependencies.stages ??
+    (dependencies.orchestrate
+      ? ({} as OrchestratorStages)
+      : createLiveOrchestratorStages());
   for (const { date, revision } of plans) {
     const result = await orchestrator({
       date,
@@ -233,6 +283,7 @@ export async function generateRange(
       caseNumber: caseNumberForDate(date),
       recentThemes: rollingThemes(casesByDate, date),
       excludedTargetIds: rollingTargets(casesByDate, date),
+      stages,
     });
     prepared.push(result);
     casesByDate.set(date, result.caseData);
