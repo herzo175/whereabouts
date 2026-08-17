@@ -1,0 +1,165 @@
+import { describe, expect, it } from 'vitest';
+import {
+  createWikimediaResearch,
+  type ResearchFetch,
+} from './live-research.js';
+
+function response(body: unknown): Response {
+  return new Response(JSON.stringify(body), { status: 200 });
+}
+const candidate = {
+  id: 'old-town',
+  name: 'Old Town',
+  city: 'Prague',
+  country: 'Czech Republic',
+  wikipediaTitle: 'Old Town (Prague)',
+  themeClaim:
+    'A historic district with a remarkably preserved medieval urban core.',
+};
+describe('Wikimedia research', () => {
+  it('parses search results and hydrates a candidate from Wikipedia and Wikidata', async () => {
+    const urls: string[] = [];
+    const fetch: ResearchFetch = async (input) => {
+      const url = String(input);
+      urls.push(url);
+      if (url.includes('list=search'))
+        return response({
+          query: {
+            search: [
+              { title: 'Old Town (Prague)', snippet: 'A historic district' },
+            ],
+          },
+        });
+      if (url.includes('prop=extracts%7Cinfo'))
+        return response({
+          query: {
+            pages: [
+              {
+                title: 'Old Town (Prague)',
+                extract: 'A'.repeat(120),
+                fullurl: 'https://en.wikipedia.org/wiki/Old_Town_(Prague)',
+                pageprops: { wikibase_item: 'Q123' },
+              },
+            ],
+          },
+        });
+      if (url.includes('wbgetentities'))
+        return response({
+          entities: {
+            Q123: {
+              labels: { en: { value: 'Old Town' } },
+              claims: {
+                P625: [
+                  {
+                    mainsnak: {
+                      datavalue: {
+                        value: { latitude: 50.087, longitude: 14.421 },
+                      },
+                    },
+                  },
+                ],
+                P17: [{ mainsnak: { datavalue: { value: { id: 'Q213' } } } }],
+                P131: [{ mainsnak: { datavalue: { value: { id: 'Q1085' } } } }],
+              },
+            },
+            Q213: { labels: { en: { value: 'Czech Republic' } } },
+            Q1085: { labels: { en: { value: 'Prague' } } },
+          },
+        });
+      if (url.includes('pageimages'))
+        return response({
+          query: {
+            pages: [{ title: 'Old Town (Prague)', pageimage: 'Old.jpg' }],
+          },
+        });
+      if (url.includes('imageinfo'))
+        return response({
+          query: {
+            pages: [
+              {
+                imageinfo: [
+                  {
+                    thumburl: 'https://img.test/old.jpg',
+                    descriptionurl:
+                      'https://commons.wikimedia.org/wiki/File:Old.jpg',
+                    extmetadata: {
+                      Artist: { value: 'A. Author' },
+                      LicenseShortName: { value: 'CC BY-SA' },
+                      LicenseUrl: {
+                        value:
+                          'https://creativecommons.org/licenses/by-sa/4.0/',
+                      },
+                    },
+                  },
+                ],
+              },
+            ],
+          },
+        });
+      throw new Error(`unexpected URL ${url}`);
+    };
+    const research = createWikimediaResearch({
+      fetch,
+      now: () => new Date('2026-01-01T00:00:00.000Z'),
+      userAgent: 'test-agent',
+    });
+    expect(
+      (await research.search('historic district', 1))[0]?.wikipediaTitle,
+    ).toBe('Old Town (Prague)');
+    expect(await research.hydrate(candidate)).toMatchObject({
+      lat: 50.087,
+      lon: 14.421,
+      city: 'Prague',
+      country: 'Czech Republic',
+      source: { retrievedAt: '2026-01-01T00:00:00.000Z' },
+      image: { attribution: 'A. Author · CC BY-SA' },
+    });
+    expect(urls.some((url) => url.includes('wbgetentities'))).toBe(true);
+  });
+  it('returns null when coordinate, extract, or attributed image is missing', async () => {
+    const fetch: ResearchFetch = async (input) => {
+      const url = String(input);
+      if (url.includes('extracts%7Cinfo'))
+        return response({
+          query: {
+            pages: [
+              {
+                title: 'Place',
+                extract: 'A'.repeat(120),
+                fullurl: 'https://en.wikipedia.org/wiki/Place',
+                pageprops: { wikibase_item: 'Q1' },
+              },
+            ],
+          },
+        });
+      if (url.includes('wbgetentities'))
+        return response({
+          entities: {
+            Q1: {
+              claims: {
+                P17: [{ mainsnak: { datavalue: { value: { id: 'Q2' } } } }],
+              },
+            },
+            Q2: { labels: { en: { value: 'Country' } } },
+          },
+        });
+      if (url.includes('pageimages'))
+        return response({ query: { pages: [{ title: 'Place' }] } });
+      throw new Error(`unexpected URL ${url}`);
+    };
+    await expect(
+      createWikimediaResearch({ fetch, userAgent: 'test-agent' }).hydrate(
+        candidate,
+      ),
+    ).resolves.toBeNull();
+  });
+});
+describe('contracts', () => {
+  it('rejects short theme claims', async () => {
+    const { ResearchedCandidate } = await import('./contracts.js');
+    expect(
+      ResearchedCandidate.safeParse({ ...candidate, themeClaim: 'short' })
+        .success,
+    ).toBe(false);
+  });
+});
