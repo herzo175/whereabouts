@@ -39,6 +39,8 @@ function validateDraft(raw: unknown, board: CuratedBoard): CaseDraft {
     throw new Error(`case draft is invalid: ${checked.error.message}`);
   for (const round of parsed.rounds) {
     const target = round.targetPoiId;
+    if (!round.clue.evidencePoiIds.includes(target))
+      throw new Error('clue evidence must include its target POI');
     const correct = round.results.filter((result) => result.poiId === target);
     if (correct.length !== 1 || correct[0].similarityScore !== 100)
       throw new Error('target result must score exactly 100');
@@ -131,8 +133,13 @@ export async function repairCaseDraft({
   }>;
 }): Promise<CaseDraft> {
   const roundIndexes = [
-    ...new Set(repairs.map((repair) => Number(repair.roundId))),
-  ].filter((index) => Number.isInteger(index) && index >= 0 && index < 5);
+    ...new Set(
+      repairs.flatMap((repair) => {
+        const match = /^round-([1-5])$/.exec(repair.roundId);
+        return match ? [Number(match[1]) - 1] : [];
+      }),
+    ),
+  ];
   if (!roundIndexes.length)
     throw new Error('repairs must identify round indexes');
   const replacementSchema = z.object({
@@ -140,7 +147,7 @@ export async function repairCaseDraft({
       .array(generatedSchema.shape.rounds.element)
       .length(roundIndexes.length),
   });
-  const prompt = `Repair only these defective rounds: ${repairs.map((repair) => `${repair.roundId} ${repair.kind} ${repair.poiId ?? ''}: ${repair.reason}`).join('; ')}. Preserve all unaffected rounds exactly. Return replacement rounds in requested index order, with complete 25-result rounds, explicit target IDs, and board-only evidence IDs. Theme: ${theme.title}. Board targets: ${board.targetPoiIds.join(', ')}.`;
+  const prompt = `Repair only these defective rounds: ${repairs.map((repair) => `${repair.roundId} (array index ${Number(/^round-([1-5])$/.exec(repair.roundId)?.[1] ?? 0) - 1}) ${repair.kind} ${repair.poiId ?? ''}: ${repair.reason}`).join('; ')}. Preserve all unaffected rounds exactly. Return replacement rounds in the same requested round order, with complete 25-result rounds, explicit target IDs, clue evidence including its target ID, and board-only evidence IDs. Theme: ${theme.title}. Board targets: ${board.targetPoiIds.join(', ')}.`;
   const replacements = replacementSchema.parse(
     await model.generate({
       schema: replacementSchema,

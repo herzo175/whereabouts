@@ -1,5 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { bucketResults, writeCaseDraft } from './case-writer.js';
+import {
+  bucketResults,
+  repairCaseDraft,
+  writeCaseDraft,
+} from './case-writer.js';
 import { fixtureBoard, fixtureCaseDraft } from './fixtures.js';
 
 describe('case writer', () => {
@@ -44,5 +48,82 @@ describe('case writer', () => {
       12,
     );
     expect(bucketed[0]?.tier).toBe('correct');
+  });
+
+  it('rejects a clue that does not cite its declared target', async () => {
+    const invalid = fixtureCaseDraft.rounds.map((round, index) => ({
+      ...round,
+      clue:
+        index === 0
+          ? { ...round.clue, evidencePoiIds: [fixtureBoard.candidates[10].id] }
+          : round.clue,
+      results: round.results.map((result) => ({
+        ...result,
+        similarityScore:
+          result.poiId === round.targetPoiId ? 100 : result.similarityScore,
+        evidencePoiIds:
+          result.poiId === round.targetPoiId
+            ? [result.poiId]
+            : [result.poiId, round.targetPoiId],
+      })),
+    }));
+    await expect(
+      writeCaseDraft({
+        model: { generate: async () => ({ rounds: invalid }) },
+        theme: fixtureBoard.theme,
+        board: fixtureBoard,
+      }),
+    ).rejects.toThrow(/clue evidence/);
+  });
+
+  it('repairs round-1 only and preserves the other rounds', async () => {
+    const validDraft = {
+      rounds: fixtureCaseDraft.rounds.map((round) => ({
+        ...round,
+        results: round.results.map((result) => ({
+          ...result,
+          similarityScore:
+            result.poiId === round.targetPoiId ? 100 : result.similarityScore,
+          evidencePoiIds:
+            result.poiId === round.targetPoiId
+              ? [result.poiId]
+              : [result.poiId, round.targetPoiId],
+        })),
+      })),
+    };
+    const replacement = validDraft.rounds[0];
+    const repaired = {
+      ...replacement,
+      clue: {
+        ...replacement.clue,
+        text: 'A repaired clue with sufficiently long evidence wording.',
+      },
+      results: replacement.results.map((result) => ({
+        ...result,
+        similarityScore:
+          result.poiId === replacement.targetPoiId
+            ? 100
+            : result.similarityScore,
+        evidencePoiIds:
+          result.poiId === replacement.targetPoiId
+            ? [result.poiId]
+            : [result.poiId, replacement.targetPoiId],
+      })),
+    };
+    const result = await repairCaseDraft({
+      model: { generate: async () => ({ rounds: [repaired] }) },
+      theme: fixtureBoard.theme,
+      board: fixtureBoard,
+      draft: validDraft,
+      repairs: [
+        {
+          kind: 'clue',
+          roundId: 'round-1',
+          reason: 'The clue needs stronger grounding.',
+        },
+      ],
+    });
+    expect(result.rounds[0]).toEqual(repaired);
+    expect(result.rounds.slice(1)).toEqual(validDraft.rounds.slice(1));
   });
 });
