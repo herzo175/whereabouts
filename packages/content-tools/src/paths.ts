@@ -34,13 +34,28 @@ export function casePath(date: string, revision: number): string {
   return path;
 }
 
-function contentPath(date: string, revision: number, directory: string, extension: string): string {
-  if (!canonicalDate(date)) throw new Error('date must be a canonical ISO date');
-  if (!Number.isInteger(revision) || revision <= 0) throw new Error('revision must be a positive integer');
-  const path = fileURLToPath(new URL(`${directory}/${date}/v${revision}.${extension}`, new URL('../../case-content/content/', import.meta.url)));
-  if (!path.startsWith(caseContentRoot)) throw new Error('content path escapes content root');
+function contentPath(
+  date: string,
+  revision: number,
+  directory: string,
+  extension: string,
+): string {
+  if (!canonicalDate(date))
+    throw new Error('date must be a canonical ISO date');
+  if (!Number.isInteger(revision) || revision <= 0)
+    throw new Error('revision must be a positive integer');
+  const path = fileURLToPath(
+    new URL(
+      `${directory}/${date}/v${revision}.${extension}`,
+      new URL('../../case-content/content/', import.meta.url),
+    ),
+  );
+  if (!path.startsWith(caseContentRoot))
+    throw new Error('content path escapes content root');
   return path;
 }
 
-export const generationReviewPath = (date: string, revision: number): string => contentPath(date, revision, 'reviews', 'json');
-export const reviewMarkdownPath = (date: string, revision: number): string => contentPath(date, revision, 'reviews', 'md');
+export const generationReviewPath = (date: string, revision: number): string =>
+  contentPath(date, revision, 'reviews', 'json');
+export const reviewMarkdownPath = (date: string, revision: number): string =>
+  contentPath(date, revision, 'reviews', 'md');
