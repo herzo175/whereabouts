@@ -32,26 +32,32 @@ const generatedSchema = z.object({
 });
 type Generated = z.infer<typeof generatedSchema>;
 
-function validateDraft(raw: unknown, board: CuratedBoard): CaseDraft {
+function validateDraft(
+  raw: unknown,
+  board: CuratedBoard,
+  normalizeEvidence = true,
+): CaseDraft {
   const parsed = caseDraftSchema.parse(raw);
   const normalized: CaseDraft = {
     rounds: parsed.rounds.map((round) => ({
       ...round,
       clue: {
         ...round.clue,
-        evidencePoiIds: [
-          ...new Set([...round.clue.evidencePoiIds, round.targetPoiId]),
-        ],
+        evidencePoiIds: normalizeEvidence
+          ? [...new Set([...round.clue.evidencePoiIds, round.targetPoiId])]
+          : round.clue.evidencePoiIds,
       },
       results: round.results.map((result) => ({
         ...result,
-        evidencePoiIds: [
-          ...new Set([
-            ...result.evidencePoiIds,
-            round.targetPoiId,
-            ...(result.poiId === round.targetPoiId ? [] : [result.poiId]),
-          ]),
-        ],
+        evidencePoiIds: normalizeEvidence
+          ? [
+              ...new Set([
+                ...result.evidencePoiIds,
+                round.targetPoiId,
+                ...(result.poiId === round.targetPoiId ? [] : [result.poiId]),
+              ]),
+            ]
+          : result.evidencePoiIds,
       })),
     })),
   };
@@ -60,13 +66,14 @@ function validateDraft(raw: unknown, board: CuratedBoard): CaseDraft {
     throw new Error(`case draft is invalid: ${checked.error.message}`);
   for (const round of normalized.rounds) {
     const target = round.targetPoiId;
-    if (!round.clue.evidencePoiIds.includes(target))
+    if (normalizeEvidence && !round.clue.evidencePoiIds.includes(target))
       throw new Error('clue evidence must include its target POI');
     const correct = round.results.filter((result) => result.poiId === target);
     if (correct.length !== 1 || correct[0].similarityScore !== 100)
       throw new Error('target result must score exactly 100');
     for (const result of round.results) {
       if (
+        normalizeEvidence &&
         result.poiId !== target &&
         (!result.evidencePoiIds.includes(target) ||
           !result.evidencePoiIds.includes(result.poiId))
@@ -179,11 +186,16 @@ export async function repairCaseDraft({
       stage: 'repair-case-draft',
     }),
   );
-  const rounds = [...draft.rounds];
+  const temporaryRounds = [...draft.rounds];
   roundIndexes.forEach((index, replacementIndex) => {
-    rounds[index] = replacements.rounds[
+    temporaryRounds[index] = replacements.rounds[
       replacementIndex
     ] as CaseDraft['rounds'][number];
   });
-  return validateDraft({ rounds }, board);
+  const normalizedTemporary = validateDraft({ rounds: temporaryRounds }, board);
+  const rounds = [...draft.rounds];
+  roundIndexes.forEach((index) => {
+    rounds[index] = normalizedTemporary.rounds[index];
+  });
+  return validateDraft({ rounds }, board, false);
 }

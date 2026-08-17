@@ -118,6 +118,18 @@ describe('case writer', () => {
       })),
     };
     const replacement = validDraft.rounds[0];
+    const untouchedWithSupplementalEvidence = {
+      ...validDraft.rounds[1],
+      clue: {
+        ...validDraft.rounds[1].clue,
+        evidencePoiIds: [validDraft.rounds[1].targetPoiId],
+      },
+      results: validDraft.rounds[1].results.map((item) => ({
+        ...item,
+        evidencePoiIds: [item.poiId],
+      })),
+    };
+    validDraft.rounds[1] = untouchedWithSupplementalEvidence;
     const repaired = {
       ...replacement,
       clue: {
