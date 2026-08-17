@@ -1,8 +1,5 @@
 import { readFile } from 'node:fs/promises';
-import {
-  type DailyCase,
-  dailyCaseSchema,
-} from '@whereabouts/case-content';
+import { type DailyCase, dailyCaseSchema } from '@whereabouts/case-content';
 import {
   type GenerationReview,
   generationReviewSchema,
@@ -125,11 +122,9 @@ if (
           reviewPacket(
             value,
             await readGenerationReviewForReview(
-                  date,
-                  Number(
-                    process.argv[process.argv.indexOf('--revision') + 1] ?? 1,
-                  ),
-                ),
+              date,
+              Number(process.argv[process.argv.indexOf('--revision') + 1] ?? 1),
+            ),
           ),
         ),
       )

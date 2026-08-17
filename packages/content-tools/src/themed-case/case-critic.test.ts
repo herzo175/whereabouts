@@ -1,7 +1,7 @@
 import { makeFiveRoundCase } from '@whereabouts/case-content/testing';
 import { describe, expect, it } from 'vitest';
-import type { StructuredModel } from './model.js';
 import { critiqueCase } from './case-critic.js';
+import type { StructuredModel } from './model.js';
 
 const caseData = makeFiveRoundCase();
 const board = {
@@ -10,7 +10,11 @@ const board = {
     introduction: caseData.theme.introduction,
     inclusionCriteria: caseData.theme.inclusionCriteria,
     exclusions: ['Exclude places with only a tangential association.'],
-    searchQueries: ['railway hotels', 'historic station hotels', 'rail lodging'],
+    searchQueries: [
+      'railway hotels',
+      'historic station hotels',
+      'rail lodging',
+    ],
   },
   candidates: caseData.pois.map((poi) => ({
     ...poi,
@@ -87,7 +91,8 @@ describe('critiqueCase', () => {
     output.themeVerdicts[0] = {
       ...output.themeVerdicts[0],
       status: 'fail',
-      explanation: 'Hoover Dam mentions railway history, but is not a railway hotel.',
+      explanation:
+        'Hoover Dam mentions railway history, but is not a railway hotel.',
     };
     const result = await critiqueCase({
       criticModel: modelWith(output),
@@ -97,9 +102,11 @@ describe('critiqueCase', () => {
       publicationDate: caseData.publicationDate,
       revision: caseData.revision,
     });
-    expect(result.repairs).toEqual(expect.arrayContaining([
-      expect.objectContaining({ kind: 'candidate', poiId: 'poi-00' }),
-    ]));
+    expect(result.repairs).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ kind: 'candidate', poiId: 'poi-00' }),
+      ]),
+    );
   });
 
   it('repairs off-board, wrong-target, and malformed clue verdicts', async () => {
@@ -126,18 +133,28 @@ describe('critiqueCase', () => {
       publicationDate: caseData.publicationDate,
       revision: caseData.revision,
     });
-    expect(result.repairs.filter((repair) => repair.kind === 'clue')).toHaveLength(3);
+    expect(
+      result.repairs.filter((repair) => repair.kind === 'clue'),
+    ).toHaveLength(3);
   });
 
   it('fails closed when required arrays are missing', async () => {
     const result = await critiqueCase({
-      criticModel: modelWith({}), theme: board.theme, board, draft,
-      publicationDate: caseData.publicationDate, revision: caseData.revision,
+      criticModel: modelWith({}),
+      theme: board.theme,
+      board,
+      draft,
+      publicationDate: caseData.publicationDate,
+      revision: caseData.revision,
     });
     expect(result.repairs.length).toBeGreaterThan(0);
-    expect(result.repairs.some((repair) => repair.kind === 'candidate')).toBe(true);
+    expect(result.repairs.some((repair) => repair.kind === 'candidate')).toBe(
+      true,
+    );
     expect(result.repairs.some((repair) => repair.kind === 'clue')).toBe(true);
-    expect(result.repairs.some((repair) => repair.kind === 'relationship')).toBe(true);
+    expect(
+      result.repairs.some((repair) => repair.kind === 'relationship'),
+    ).toBe(true);
   });
 
   it('repairs missing and duplicate relationship verdicts', async () => {
@@ -146,22 +163,34 @@ describe('critiqueCase', () => {
     output.relationshipVerdicts[0] = { ...output.relationshipVerdicts[0] };
     output.relationshipVerdicts.push({ ...output.relationshipVerdicts[0] });
     const result = await critiqueCase({
-      criticModel: modelWith(output), theme: board.theme, board, draft,
-      publicationDate: caseData.publicationDate, revision: caseData.revision,
+      criticModel: modelWith(output),
+      theme: board.theme,
+      board,
+      draft,
+      publicationDate: caseData.publicationDate,
+      revision: caseData.revision,
     });
-    expect(result.repairs.filter((repair) => repair.kind === 'relationship').length).toBeGreaterThan(1);
+    expect(
+      result.repairs.filter((repair) => repair.kind === 'relationship').length,
+    ).toBeGreaterThan(1);
   });
 
   it('adds validation repair even when a clue repair already exists', async () => {
     const output = passingOutput();
     output.clueVerdicts[0].declaredTargetPoiId = 'poi-99';
     const result = await critiqueCase({
-      criticModel: modelWith(output), theme: board.theme, board, draft,
-      publicationDate: caseData.publicationDate, revision: caseData.revision,
+      criticModel: modelWith(output),
+      theme: board.theme,
+      board,
+      draft,
+      publicationDate: caseData.publicationDate,
+      revision: caseData.revision,
     });
-    expect(result.repairs).toEqual(expect.arrayContaining([
-      expect.objectContaining({ kind: 'clue' }),
-      expect.objectContaining({ kind: 'theme' }),
-    ]));
+    expect(result.repairs).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ kind: 'clue' }),
+        expect.objectContaining({ kind: 'theme' }),
+      ]),
+    );
   });
 });
