@@ -26,12 +26,30 @@ function reviewFor(caseData: ReturnType<typeof makeThemedCase>) {
   };
 }
 
-function prepared(date: string, revision: number): PreparedCase {
+function prepared(
+  date: string,
+  revision: number,
+  targetOffset = 0,
+): PreparedCase {
   const caseData = makeThemedCase({
     publicationDate: date,
     revision,
     caseNumber: Math.floor(Date.parse(`${date}T00:00:00Z`) / 86_400_000),
   });
+  if (targetOffset) {
+    for (const [index, round] of caseData.rounds.entries()) {
+      round.targetPoiId = `poi-${String(index + targetOffset).padStart(2, '0')}`;
+      for (const [resultIndex, result] of round.results.entries())
+        result.tier =
+          result.poiId === round.targetPoiId
+            ? 'correct'
+            : resultIndex < 4
+              ? 'hot'
+              : resultIndex < 12
+                ? 'warm'
+                : 'cold';
+    }
+  }
   return {
     caseData,
     generationReview: reviewFor(caseData),
@@ -62,7 +80,7 @@ describe('publishBatch', () => {
   it('writes all artifacts before the final manifest and returns exact manifest results', async () => {
     const writes: string[] = [];
     const result = await publishBatch({
-      prepared: [prepared('2026-11-01', 1), prepared('2026-11-02', 1)],
+      prepared: [prepared('2026-11-01', 1), prepared('2026-11-02', 1, 5)],
       manifest,
       writeFile: async (path) => {
         writes.push(path);
@@ -99,5 +117,20 @@ describe('publishBatch', () => {
       }),
     ).rejects.toThrow(/exist/i);
     expect(writeFile).not.toHaveBeenCalled();
+  });
+
+  it('preflights cross-case collection invariants before any writes', async () => {
+    const writes: string[] = [];
+    await expect(
+      publishBatch({
+        prepared: [prepared('2026-11-01', 1), prepared('2026-11-02', 1)],
+        manifest,
+        writeFile: async (path) => {
+          writes.push(path);
+        },
+        exists: async () => false,
+      }),
+    ).rejects.toThrow(/collection/i);
+    expect(writes).toEqual([]);
   });
 });

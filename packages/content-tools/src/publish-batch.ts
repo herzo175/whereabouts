@@ -131,12 +131,15 @@ export async function publishBatch({
       ...paths,
     });
   }
-  for (const item of parsed) {
-    const collectionIssues = validateCollection([item.caseData], item.date);
+  if (parsed.length) {
+    const cases = parsed.map((item) => item.caseData);
+    const ceiling = cases
+      .map((item) => item.publicationDate)
+      .sort()
+      .at(-1) as string;
+    const collectionIssues = validateCollection(cases, ceiling);
     if (collectionIssues.length)
-      throw new Error(
-        `publication collection validation failed for ${item.date}`,
-      );
+      throw new Error('publication collection validation failed');
   }
   const assembled: CaseManifest = {
     schemaVersion: 2,
