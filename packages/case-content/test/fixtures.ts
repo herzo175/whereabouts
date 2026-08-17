@@ -1,14 +1,10 @@
-import type {
-  FiveRoundDailyCaseV2,
-  Poi,
-  ThemedDailyCase,
-} from '../src/schema.js';
+import type { Poi, ThemedDailyCase } from '../src/schema.js';
 
 const timestamp = '2026-08-14T00:00:00Z';
 
 export function makeFiveRoundCase(
-  overrides: Partial<FiveRoundDailyCaseV2> = {},
-): FiveRoundDailyCaseV2 {
+  overrides: Partial<ThemedDailyCase> = {},
+): ThemedDailyCase {
   const pois: Poi[] = Array.from({ length: 25 }, (_, index) => ({
     id: `poi-${String(index).padStart(2, '0')}`,
     name:
@@ -56,11 +52,10 @@ export function makeFiveRoundCase(
     })),
   }));
   return {
-    schemaVersion: 2,
+    schemaVersion: 3,
     publicationDate: '2026-08-14',
     revision: 1,
     caseNumber: 1,
-    pois,
     rounds,
     sources: ['source-01', 'source-02'].map((id) => ({
       id,
@@ -68,17 +63,6 @@ export function makeFiveRoundCase(
       url: `https://example.com/${id}`,
       retrievedAt: timestamp,
     })),
-    ...overrides,
-  };
-}
-
-export function makeThemedCase(
-  overrides: Partial<ThemedDailyCase> = {},
-): ThemedDailyCase {
-  const base = makeFiveRoundCase();
-  return {
-    ...base,
-    schemaVersion: 3,
     theme: {
       title: 'Railway Hotels',
       introduction:
@@ -86,7 +70,7 @@ export function makeThemedCase(
       inclusionCriteria:
         'Include places whose history is directly connected to railway travel and lodging.',
     },
-    pois: base.pois.map((poi) => ({
+    pois: pois.map((poi) => ({
       ...poi,
       themeConnection: {
         text: `${poi.name} has a documented connection to railway hotels and their traveling guests.`,

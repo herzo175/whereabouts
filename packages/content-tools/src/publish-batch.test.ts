@@ -1,8 +1,8 @@
-import { makeThemedCase } from '@whereabouts/case-content/testing';
+import { makeFiveRoundCase } from '@whereabouts/case-content/testing';
 import { describe, expect, it, vi } from 'vitest';
 import { type PreparedCase, publishBatch } from './publish-batch.js';
 
-function reviewFor(caseData: ReturnType<typeof makeThemedCase>) {
+function reviewFor(caseData: ReturnType<typeof makeFiveRoundCase>) {
   return {
     schemaVersion: 1 as const,
     publicationDate: caseData.publicationDate,
@@ -31,7 +31,7 @@ function prepared(
   revision: number,
   targetOffset = 0,
 ): PreparedCase {
-  const caseData = makeThemedCase({
+  const caseData = makeFiveRoundCase({
     publicationDate: date,
     revision,
     caseNumber: Math.floor(Date.parse(`${date}T00:00:00Z`) / 86_400_000),

@@ -3,7 +3,6 @@ export type {
   DailyRound,
   DailyTheme,
   FiveRoundDailyCase,
-  FiveRoundDailyCaseV2,
   Poi,
   RoundResult,
   RoundTier,

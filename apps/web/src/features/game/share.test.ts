@@ -1,48 +1,10 @@
-import type { FiveRoundDailyCase, Poi } from '@whereabouts/case-content';
+import { makeFiveRoundCase } from '@whereabouts/case-content/testing';
 import type { FiveRoundProgress } from '@whereabouts/game-engine';
 import { describe, expect, it, vi } from 'vitest';
 
 import { buildShareText, shareResult } from './share';
 
-function poi(id: string, name: string): Poi {
-  return {
-    id,
-    name,
-    city: 'Hidden city',
-    country: 'Hidden country',
-    latitude: 0,
-    longitude: 0,
-    wikipediaTitle: name,
-  };
-}
-
-const fiveRoundCase: FiveRoundDailyCase = {
-  schemaVersion: 2,
-  publicationDate: '2026-08-14',
-  revision: 1,
-  caseNumber: 42,
-  pois: [poi('known-place', 'Known place')],
-  rounds: Array.from({ length: 5 }, (_, index) => ({
-    id: `round-${index + 1}`,
-    targetPoiId: 'known-place',
-    image: {
-      url: 'https://whereabouts.test/evidence.jpg',
-      alt: 'Evidence photograph',
-      attribution: 'Photographer',
-      licenseUrl: 'https://whereabouts.test/license',
-    },
-    clue: { text: 'A revealing clue', sourceIds: [] },
-    results: [
-      {
-        poiId: 'known-place',
-        tier: 'correct',
-        text: 'Correct location.',
-        sourceIds: [],
-      },
-    ],
-  })),
-  sources: [],
-};
+const fiveRoundCase = makeFiveRoundCase({ caseNumber: 42 });
 
 function fiveRoundProgress(
   overrides: Partial<FiveRoundProgress> = {},
@@ -75,7 +37,7 @@ function fiveRoundProgress(
 }
 
 describe('buildShareText', () => {
-  it('builds a spoiler-free v2 five-round share result', () => {
+  it('builds a spoiler-free themed five-round share result', () => {
     const text = buildShareText(
       fiveRoundCase,
       fiveRoundProgress(),
@@ -90,7 +52,7 @@ describe('buildShareText', () => {
     expect(text).not.toContain('A revealing clue');
   });
 
-  it('refuses to share an incomplete v2 five-round game', () => {
+  it('refuses to share an incomplete themed five-round game', () => {
     expect(() =>
       buildShareText(
         fiveRoundCase,

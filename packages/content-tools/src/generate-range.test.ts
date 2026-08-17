@@ -1,4 +1,4 @@
-import { makeThemedCase } from '@whereabouts/case-content/testing';
+import { makeFiveRoundCase } from '@whereabouts/case-content/testing';
 import { describe, expect, it, vi } from 'vitest';
 
 import {
@@ -13,7 +13,7 @@ function prepared(
   revision = 1,
   themeTitle = `Theme ${date}`,
 ): PreparedCase {
-  const caseData = makeThemedCase({
+  const caseData = makeFiveRoundCase({
     publicationDate: date,
     revision,
     caseNumber: Math.floor(Date.parse(`${date}T00:00:00Z`) / 86_400_000),

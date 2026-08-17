@@ -2,11 +2,11 @@ import { describe, expect, it } from 'vitest';
 
 // biome-ignore lint/suspicious/noTsIgnore: fixtures are intentionally outside the library source root.
 // @ts-ignore -- package typecheck has a narrower root than test compilation.
-import { makeFiveRoundCase, makeThemedCase } from '../test/fixtures.js';
+import { makeFiveRoundCase } from '../test/fixtures.js';
 import { CaseContentError, createCaseLoader } from './loader.server.js';
 
 const publishedDate = '2026-08-14';
-const artifactPath = '../content/cases/2026-08-14/v2.json';
+const artifactPath = '../content/cases/2026-08-14/v1.json';
 
 function makeManifest(
   overrides: Partial<{
@@ -21,7 +21,7 @@ function makeManifest(
       [publishedDate]: {
         caseNumber: 1,
         revision: 1,
-        file: './cases/2026-08-14/v2.json',
+        file: './cases/2026-08-14/v1.json',
         ...overrides,
       },
     },
@@ -96,7 +96,7 @@ describe('createCaseLoader', () => {
   it('does not expose unmanifested artifacts', () => {
     const loader = createCaseLoader(makeManifest(), {
       ...makeModules(),
-      '../content/cases/2026-08-15/v2.json': makeFiveRoundCase({
+      '../content/cases/2026-08-15/unpublished.json': makeFiveRoundCase({
         publicationDate: '2026-08-15',
         caseNumber: 2,
       }),
@@ -108,31 +108,31 @@ describe('createCaseLoader', () => {
     ]);
   });
 
-  it('loads v2 and v3 artifacts and lists both dates newest first', () => {
+  it('loads v3 cases and lists both dates newest first', () => {
     const manifest = {
       schemaVersion: 2,
       cases: {
         '2026-08-14': {
           caseNumber: 1,
           revision: 1,
-          file: './cases/2026-08-14/v2.json',
+          file: './cases/2026-08-14/v1.json',
         },
         '2026-08-15': {
           caseNumber: 2,
           revision: 1,
-          file: './cases/2026-08-15/v3.json',
+          file: './cases/2026-08-15/v1.json',
         },
       },
     };
     const loader = createCaseLoader(manifest, {
-      '../content/cases/2026-08-14/v2.json': makeFiveRoundCase(),
-      '../content/cases/2026-08-15/v3.json': makeThemedCase({
+      '../content/cases/2026-08-14/v1.json': makeFiveRoundCase(),
+      '../content/cases/2026-08-15/v1.json': makeFiveRoundCase({
         publicationDate: '2026-08-15',
         caseNumber: 2,
       }),
     });
 
-    expect(loader.loadPublishedCase('2026-08-14')?.schemaVersion).toBe(2);
+    expect(loader.loadPublishedCase('2026-08-14')?.schemaVersion).toBe(3);
     expect(loader.loadPublishedCase('2026-08-15')?.schemaVersion).toBe(3);
     expect(loader.listPublishedCases()).toEqual([
       { date: '2026-08-15', caseNumber: 2 },

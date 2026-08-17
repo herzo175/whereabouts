@@ -148,7 +148,7 @@ export async function validateAll(
     );
     try {
       const parsed = dailyCaseSchema.parse(value);
-      if (parsed.schemaVersion === 3) {
+      {
         const reviewFile = generationReviewPath(date, entry.revision);
         let review: unknown;
         try {

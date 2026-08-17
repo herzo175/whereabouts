@@ -2,20 +2,20 @@ import { describe, expect, it } from 'vitest';
 
 // biome-ignore lint/suspicious/noTsIgnore: fixtures are intentionally outside the library source root.
 // @ts-ignore -- package typecheck has a narrower root than test compilation.
-import { makeFiveRoundCase, makeThemedCase } from '../test/fixtures.js';
+import { makeFiveRoundCase } from '../test/fixtures.js';
 import { dailyCaseSchema } from './schema.js';
 
 describe('dailyCaseSchema', () => {
   it('accepts five distinct rounds over a shared 25-location board', () => {
     const parsed = dailyCaseSchema.parse(makeFiveRoundCase());
-    expect(parsed.schemaVersion).toBe(2);
-    if (parsed.schemaVersion !== 2) throw new Error('expected version 2');
+    expect(parsed.schemaVersion).toBe(3);
+    if (parsed.schemaVersion !== 3) throw new Error('expected version 3');
     expect(parsed.rounds).toHaveLength(5);
     expect(parsed.rounds[0]?.results).toHaveLength(25);
   });
 
   it('accepts a sourced v3 themed case', () => {
-    const parsed = dailyCaseSchema.parse(makeThemedCase());
+    const parsed = dailyCaseSchema.parse(makeFiveRoundCase());
     expect(parsed.schemaVersion).toBe(3);
     if (parsed.schemaVersion !== 3) throw new Error('expected version 3');
     expect(parsed.theme.title).toBe('Railway Hotels');
@@ -23,19 +23,19 @@ describe('dailyCaseSchema', () => {
   });
 
   it('rejects a themed POI without a theme connection', () => {
-    const value = makeThemedCase();
+    const value = makeFiveRoundCase();
     delete value.pois[0].themeConnection;
     expect(() => dailyCaseSchema.parse(value)).toThrow(/themeConnection/i);
   });
 
   it('rejects a themed POI with an unknown theme source', () => {
-    const value = makeThemedCase();
+    const value = makeFiveRoundCase();
     value.pois[0].themeConnection.sourceIds = ['source-unknown'];
     expect(() => dailyCaseSchema.parse(value)).toThrow(/source/i);
   });
 
   it('rejects a themed target absent from the board', () => {
-    const value = makeThemedCase();
+    const value = makeFiveRoundCase();
     value.rounds[0].targetPoiId = 'missing-poi';
     expect(() => dailyCaseSchema.parse(value)).toThrow(/board/i);
   });

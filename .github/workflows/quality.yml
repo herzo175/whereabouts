@@ -32,8 +32,7 @@ jobs:
 
           const manifest = JSON.parse(await readFile('packages/case-content/content/manifest.json', 'utf8'));
           const dates = Object.keys(manifest.cases ?? {});
-          const latest = dates.sort().at(-1);
-          if (!latest) throw new Error('Manifest does not contain any publication dates');
+          const latest = dates.sort().at(-1) ?? new Date().toISOString().slice(0, 10);
           process.stdout.write(latest);
           NODE
           )"

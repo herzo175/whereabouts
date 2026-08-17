@@ -1,10 +1,10 @@
-import { makeThemedCase } from '@whereabouts/case-content/testing';
+import { makeFiveRoundCase } from '@whereabouts/case-content/testing';
 import { describe, expect, it } from 'vitest';
 import { reviewPacket } from './review-case.js';
 
 describe('reviewPacket', () => {
   it('renders themed metadata, candidate citations, targets, and audit disposition', () => {
-    const value = makeThemedCase();
+    const value = makeFiveRoundCase();
     const review = {
       schemaVersion: 1 as const,
       publicationDate: value.publicationDate,
@@ -37,7 +37,7 @@ describe('reviewPacket', () => {
   });
 
   it('renders FAIL when semantic review validation fails', () => {
-    const value = makeThemedCase();
+    const value = makeFiveRoundCase();
     const review = {
       schemaVersion: 1 as const,
       publicationDate: value.publicationDate,

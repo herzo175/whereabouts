@@ -1,10 +1,4 @@
 {
   "schemaVersion": 2,
-  "cases": {
-    "2026-08-15": {
-      "caseNumber": 20680,
-      "revision": 1,
-      "file": "./cases/2026-08-15/v1.json"
-    }
-  }
+  "cases": {}
 }

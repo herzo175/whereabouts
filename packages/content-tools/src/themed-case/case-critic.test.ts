@@ -1,9 +1,9 @@
-import { makeThemedCase } from '@whereabouts/case-content/testing';
+import { makeFiveRoundCase } from '@whereabouts/case-content/testing';
 import { describe, expect, it } from 'vitest';
 import type { StructuredModel } from './model.js';
 import { critiqueCase } from './case-critic.js';
 
-const caseData = makeThemedCase();
+const caseData = makeFiveRoundCase();
 const board = {
   theme: {
     title: caseData.theme.title,

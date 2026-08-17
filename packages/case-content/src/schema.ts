@@ -39,16 +39,6 @@ export type DailyRound = {
   results: RoundResult[];
 };
 
-export type FiveRoundDailyCaseV2 = {
-  schemaVersion: 2;
-  publicationDate: string;
-  revision: number;
-  caseNumber: number;
-  pois: Poi[];
-  rounds: DailyRound[];
-  sources: Source[];
-};
-
 export type DailyTheme = {
   title: string;
   introduction: string;
@@ -73,7 +63,7 @@ export type ThemedDailyCase = {
   sources: Source[];
 };
 
-export type FiveRoundDailyCase = FiveRoundDailyCaseV2 | ThemedDailyCase;
+export type FiveRoundDailyCase = ThemedDailyCase;
 
 export type DailyCase = FiveRoundDailyCase;
 
@@ -239,12 +229,18 @@ function parseRoundImage(
 
 function parseFiveRoundDailyCase(
   value: unknown,
-  schemaVersion: 2 | 3,
   poiParser: (value: unknown, path: string) => Poi,
-): FiveRoundDailyCaseV2 | ThemedDailyCase {
+): {
+  schemaVersion: 3;
+  publicationDate: string;
+  revision: number;
+  caseNumber: number;
+  pois: Poi[];
+  rounds: DailyRound[];
+  sources: Source[];
+} {
   const parsed = record(value, 'daily case');
-  if (parsed.schemaVersion !== schemaVersion)
-    fail('schemaVersion', `must equal ${schemaVersion}`);
+  if (parsed.schemaVersion !== 3) fail('schemaVersion', 'must equal 3');
   const publicationDate = string(parsed.publicationDate, 'publicationDate');
   if (!datePattern.test(publicationDate))
     fail('publicationDate', 'must be an ISO date');
@@ -338,20 +334,15 @@ function parseFiveRoundDailyCase(
     'Round target ids',
   );
   return {
-    schemaVersion,
+    schemaVersion: 3,
     publicationDate,
     revision: positiveInteger(parsed.revision, 'revision'),
     caseNumber: positiveInteger(parsed.caseNumber, 'caseNumber'),
     pois,
     rounds,
     sources,
-  } as FiveRoundDailyCaseV2 | ThemedDailyCase;
+  };
 }
-
-const fiveRoundDailyCaseSchema: Schema<FiveRoundDailyCaseV2> = {
-  parse: (value) =>
-    parseFiveRoundDailyCase(value, 2, parsePoi) as FiveRoundDailyCaseV2,
-};
 
 const themedDailyCaseSchema: Schema<ThemedDailyCase> = {
   parse(value) {
@@ -368,7 +359,6 @@ const themedDailyCaseSchema: Schema<ThemedDailyCase> = {
     };
     const result = parseFiveRoundDailyCase(
       value,
-      3,
       parseThemedPoi,
     ) as ThemedDailyCase;
     const knownSourceIds = new Set(result.sources.map((source) => source.id));
@@ -390,9 +380,7 @@ const themedDailyCaseSchema: Schema<ThemedDailyCase> = {
 export const dailyCaseSchema: Schema<DailyCase> = {
   parse(value) {
     const parsed = record(value, 'daily case');
-    if (parsed.schemaVersion === 2)
-      return fiveRoundDailyCaseSchema.parse(value);
     if (parsed.schemaVersion === 3) return themedDailyCaseSchema.parse(value);
-    fail('schemaVersion', 'must equal 2 or 3');
+    fail('schemaVersion', 'must equal 3');
   },
 };

@@ -2,7 +2,6 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {
   makeFiveRoundCase,
-  makeThemedCase,
 } from '@whereabouts/case-content/testing';
 import {
   createFiveRoundProgress,
@@ -32,7 +31,7 @@ function makeStorage(initial?: Record<string, string>): Storage {
 describe('FiveRoundGameScreen', () => {
   it("shows today's theme before a guess and both dossier connections after submission", async () => {
     const user = userEvent.setup();
-    const caseData = makeThemedCase();
+    const caseData = makeFiveRoundCase();
     const guessedPoi = caseData.pois[10];
 
     render(
@@ -66,13 +65,6 @@ describe('FiveRoundGameScreen', () => {
     expect(correctPoi).toBeDefined();
     if (!correctPoi) return;
     expect(screen.getByText(correctPoi.themeConnection.text)).toBeVisible();
-  });
-
-  it('renders a v2 game without a theme heading', async () => {
-    const caseData = makeFiveRoundCase();
-    render(<FiveRoundGameScreen caseData={caseData} storage={makeStorage()} />);
-    expect(await screen.findByText('Round 1 / 5')).toBeVisible();
-    expect(screen.queryByText("Today's theme")).toBeNull();
   });
 
   it('shows a neutral briefing, then reveals the scored relationship before the next round', async () => {

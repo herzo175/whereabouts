@@ -64,7 +64,7 @@ type ThemedDailyCase = {
 
 `title` and `introduction` are player-facing. `inclusionCriteria` is the precise editorial rule used by research, curation, semantic review, and human review packets. Each `themeConnection` cites one or more entries in the case source list.
 
-The manifest shape remains unchanged. The loader temporarily supports both version 2 and version 3 artifacts so existing archive links continue to work. All new generation emits version 3. Browser progress does not change because it already binds saved state to publication date and revision.
+The manifest shape remains unchanged, but daily case artifacts are version 3 only. Archive compatibility with the removed version 2 case format is intentionally not supported; legacy artifacts and their manifest entries are deleted during rollout. Browser progress does not change because it already binds saved state to publication date and revision.
 
 ## Staged research and generation
 
@@ -172,7 +172,7 @@ These packets are generated artifacts in the content pull request so a maintaine
 
 Unit coverage includes:
 
-- version 3 parsing and version 2 archive compatibility;
+- version 3-only parsing and explicit rejection of version 2 case artifacts;
 - theme metadata and theme-connection source resolution;
 - typed contracts for every orchestration stage;
 - theme novelty and target-history checks;

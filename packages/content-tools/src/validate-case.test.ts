@@ -22,11 +22,22 @@ function makeCase(overrides: Record<string, unknown> = {}) {
     },
   }));
   return {
-    schemaVersion: 2,
+    schemaVersion: 3,
     publicationDate: '2026-08-14',
     revision: 1,
     caseNumber: 1,
-    pois,
+    theme: {
+      title: 'Fixture theme',
+      introduction: 'A sufficiently detailed fixture theme introduction.',
+      inclusionCriteria: 'A sufficiently detailed fixture inclusion criterion.',
+    },
+    pois: pois.map((poi) => ({
+      ...poi,
+      themeConnection: {
+        text: 'This place has a documented connection to the fixture theme.',
+        sourceIds: ['source-01'],
+      },
+    })),
     sources: ['source-01', 'source-02'].map((id) => ({
       id,
       title: `Fixture source ${id}`,
@@ -67,11 +78,11 @@ function messages(value: unknown): string[] {
 }
 
 describe('validateCaseForPublication', () => {
-  it('accepts a schema-valid v2 case', () => {
+  it('accepts a schema-valid v3 case', () => {
     expect(validateCaseForPublication(makeCase())).toEqual([]);
   });
 
-  it('rejects non-v2 values as malformed', () => {
+  it('rejects malformed values as malformed', () => {
     expect(validateCaseForPublication({ schemaVersion: 3 })[0]?.path).toBe(
       'schema',
     );
