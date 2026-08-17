@@ -204,4 +204,73 @@ describe('generateRange', () => {
     expect(revisions).toEqual([7]);
     expect(publish.mock.calls[0]?.[0].existingCases).toEqual([]);
   });
+
+  it('allocates after withdrawn immutable artifacts that are absent from the manifest', async () => {
+    const revisions: number[] = [];
+    await generateRange(['--from', '2026-08-17', '--days', '1'], {
+      history: async () => history(),
+      listExistingCasePaths: async () => [
+        '/content/cases/2026-08-17/v1.json',
+        '/content/cases/2026-08-17/v3.json',
+      ],
+      orchestrate: async (input) => {
+        revisions.push(input.revision);
+        return prepared(input.date, input.revision);
+      },
+      publishBatch: async () => history(),
+    });
+
+    expect(revisions).toEqual([4]);
+  });
+
+  it('rejects an explicit revision at or below existing history before orchestration', async () => {
+    const orchestrate = vi.fn(async (input) =>
+      prepared(input.date, input.revision),
+    );
+    const publish = vi.fn(async () => history());
+    const existing = prepared('2026-08-17', 3);
+    for (const revision of [2, 3]) {
+      await expect(
+        generateRange(
+          [
+            '--from',
+            '2026-08-17',
+            '--days',
+            '1',
+            '--revision',
+            String(revision),
+          ],
+          {
+            history: async () => history([existing]),
+            listExistingCasePaths: async () => [
+              '/content/cases/2026-08-17/v3.json',
+            ],
+            orchestrate,
+            publishBatch: publish,
+          },
+        ),
+      ).rejects.toThrow(/revision/i);
+    }
+    expect(orchestrate).not.toHaveBeenCalled();
+    expect(publish).not.toHaveBeenCalled();
+  });
+
+  it('accepts an explicit revision above all existing history', async () => {
+    const revisions: number[] = [];
+    await generateRange(
+      ['--from', '2026-08-17', '--days', '1', '--revision', '4'],
+      {
+        history: async () => history([prepared('2026-08-17', 3)]),
+        listExistingCasePaths: async () => [
+          '/content/cases/2026-08-17/v3.json',
+        ],
+        orchestrate: async (input) => {
+          revisions.push(input.revision);
+          return prepared(input.date, input.revision);
+        },
+        publishBatch: async () => history(),
+      },
+    );
+    expect(revisions).toEqual([4]);
+  });
 });

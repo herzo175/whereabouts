@@ -1,4 +1,4 @@
-import { readFile } from 'node:fs/promises';
+import { readdir, readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import {
   type DailyCase,
@@ -47,6 +47,7 @@ export type RangeHistory = {
 
 export type GenerateRangeDependencies = {
   history?: RangeHistory | (() => Promise<RangeHistory>);
+  listExistingCasePaths?: (date: string) => Promise<readonly string[]>;
   orchestrate?: (input: OrchestrateThemedCaseInput) => Promise<PreparedCase>;
   publishBatch?: typeof publishBatch;
   stages?: OrchestratorStages;
@@ -116,6 +117,27 @@ async function loadPublishedHistory(): Promise<RangeHistory> {
     );
   }
   return { manifest, cases };
+}
+
+async function defaultListExistingCasePaths(
+  date: string,
+): Promise<readonly string[]> {
+  const directory = resolve(caseContentRoot, 'cases', date);
+  try {
+    const entries = await readdir(directory, { withFileTypes: true });
+    return entries
+      .filter((entry) => entry.isFile() && entry.name.endsWith('.json'))
+      .map((entry) => resolve(directory, entry.name));
+  } catch (error) {
+    if (
+      typeof error === 'object' &&
+      error !== null &&
+      'code' in error &&
+      error.code === 'ENOENT'
+    )
+      return [];
+    throw error;
+  }
 }
 
 export function createLiveOrchestratorStages(
@@ -215,6 +237,32 @@ export async function generateRange(
     : bufferDates(options.from, options.days);
   if (!dates.length) return;
 
+  const listExistingCasePaths =
+    dependencies.listExistingCasePaths ?? defaultListExistingCasePaths;
+  const plans: Array<{ date: string; revision: number }> = [];
+  for (const date of dates) {
+    const manifestEntry = history.manifest.cases[date];
+    const existingPaths = [
+      ...(await listExistingCasePaths(date)),
+      ...(manifestEntry?.file ? [manifestEntry.file] : []),
+    ];
+    const highestExistingRevision = Math.max(
+      manifestEntry?.revision ?? 0,
+      nextRevision(date, existingPaths) - 1,
+    );
+    if (
+      options.revision !== undefined &&
+      options.revision <= highestExistingRevision
+    )
+      throw new Error(
+        `revision ${options.revision} for ${date} must be greater than existing revision ${highestExistingRevision}`,
+      );
+    plans.push({
+      date,
+      revision: options.revision ?? highestExistingRevision + 1,
+    });
+  }
+
   const casesByDate = latestCasesByDate(history.cases);
   const prepared: PreparedCase[] = [];
   const orchestrator = dependencies.orchestrate ?? orchestrateThemedCase;
@@ -223,11 +271,7 @@ export async function generateRange(
     (dependencies.orchestrate
       ? ({} as OrchestratorStages)
       : createLiveOrchestratorStages());
-  for (const date of dates) {
-    const manifestEntry = history.manifest.cases[date];
-    const revision =
-      options.revision ??
-      nextRevision(date, manifestEntry ? [manifestEntry.file] : []);
+  for (const { date, revision } of plans) {
     const result = await orchestrator({
       date,
       revision,
