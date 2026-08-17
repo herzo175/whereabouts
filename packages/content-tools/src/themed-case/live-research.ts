@@ -23,13 +23,18 @@ async function json(
   fetch: ResearchFetch,
   url: string,
   userAgent: string,
+  stage: string,
 ): Promise<JsonRecord> {
   const response = await fetch(url, {
     headers: { 'Api-User-Agent': userAgent, 'User-Agent': userAgent },
   });
   if (!response.ok)
-    throw new Error(`Wikimedia request failed with status ${response.status}`);
-  return response.json();
+    throw new Error(`${stage} request failed with status ${response.status}`);
+  try {
+    return await response.json();
+  } catch (error) {
+    throw new Error(`${stage} response was not valid JSON`, { cause: error });
+  }
 }
 export function createWikimediaResearch(deps: Dependencies = {}): LiveResearch {
   const fetch = deps.fetch ?? globalThis.fetch.bind(globalThis);
@@ -48,7 +53,12 @@ export function createWikimediaResearch(deps: Dependencies = {}): LiveResearch {
         format: 'json',
         formatversion: '2',
       });
-      const data = (await json(fetch, `${API}?${params}`, userAgent)) as {
+      const data = (await json(
+        fetch,
+        `${API}?${params}`,
+        userAgent,
+        'MediaWiki search',
+      )) as {
         query?: { search?: Array<{ title?: unknown; snippet?: unknown }> };
       };
       return (data.query?.search ?? []).flatMap((item) => {
@@ -58,7 +68,7 @@ export function createWikimediaResearch(deps: Dependencies = {}): LiveResearch {
       });
     },
     async hydrate(candidate) {
-      try {
+      {
         const params = new URLSearchParams({
           action: 'query',
           prop: 'extracts|info|pageprops',
@@ -69,7 +79,12 @@ export function createWikimediaResearch(deps: Dependencies = {}): LiveResearch {
           format: 'json',
           formatversion: '2',
         });
-        const data = (await json(fetch, `${API}?${params}`, userAgent)) as {
+        const data = (await json(
+          fetch,
+          `${API}?${params}`,
+          userAgent,
+          'MediaWiki hydration',
+        )) as {
           query?: {
             pages?: Array<{
               title?: string;
@@ -81,7 +96,13 @@ export function createWikimediaResearch(deps: Dependencies = {}): LiveResearch {
         };
         const page = data.query?.pages?.[0];
         const entityId = page?.pageprops?.wikibase_item;
-        if (!page?.title || !page.extract || !page.fullurl || !entityId)
+        if (
+          !page?.title ||
+          !page.extract ||
+          page.extract.length < 100 ||
+          !page.fullurl ||
+          !entityId
+        )
           return null;
         const entitiesParams = new URLSearchParams({
           action: 'wbgetentities',
@@ -96,6 +117,7 @@ export function createWikimediaResearch(deps: Dependencies = {}): LiveResearch {
           fetch,
           `https://www.wikidata.org/w/api.php?${entitiesParams}`,
           userAgent,
+          'Wikidata entity',
         )) as {
           entities?: Record<
             string,
@@ -137,6 +159,7 @@ export function createWikimediaResearch(deps: Dependencies = {}): LiveResearch {
           fetch,
           `https://www.wikidata.org/w/api.php?${new URLSearchParams({ action: 'wbgetentities', ids, props: 'labels', languages: 'en', languagefallback: '1', format: 'json', formatversion: '2' })}`,
           userAgent,
+          'Wikidata labels',
         )) as {
           entities?: Record<string, { labels?: { en?: { value?: string } } }>;
         };
@@ -154,8 +177,8 @@ export function createWikimediaResearch(deps: Dependencies = {}): LiveResearch {
           ...candidate,
           city,
           country,
-          lat: coordinate.latitude,
-          lon: coordinate.longitude,
+          latitude: coordinate.latitude,
+          longitude: coordinate.longitude,
           source: {
             title: page.title,
             url: page.fullurl,
@@ -164,8 +187,6 @@ export function createWikimediaResearch(deps: Dependencies = {}): LiveResearch {
           },
           image,
         };
-      } catch {
-        return null;
       }
     },
   };

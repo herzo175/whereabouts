@@ -109,8 +109,8 @@ describe('Wikimedia research', () => {
       { title: 'Old Town (Prague)', snippet: 'A historic district' },
     ]);
     expect(await research.hydrate(candidate)).toMatchObject({
-      lat: 50.087,
-      lon: 14.421,
+      latitude: 50.087,
+      longitude: 14.421,
       city: 'Prague',
       country: 'Czech Republic',
       source: { retrievedAt: '2026-01-01T00:00:00.000Z' },
@@ -155,12 +155,111 @@ describe('Wikimedia research', () => {
       ),
     ).resolves.toBeNull();
   });
+
+  it('surfaces non-OK MediaWiki and Wikidata responses', async () => {
+    const mediaWikiFailure = createWikimediaResearch({
+      fetch: async () => new Response('down', { status: 503 }),
+      userAgent: 'test-agent',
+    });
+    await expect(mediaWikiFailure.search('square', 1)).rejects.toThrow(
+      'MediaWiki search request failed with status 503',
+    );
+    const wikidataFailure = createWikimediaResearch({
+      fetch: async (input) =>
+        String(input).includes('w/api.php') &&
+        String(input).includes('extracts%7Cinfo')
+          ? response({
+              query: {
+                pages: [
+                  {
+                    title: 'Place',
+                    extract: 'A'.repeat(120),
+                    fullurl: 'https://en.wikipedia.org/wiki/Place',
+                    pageprops: { wikibase_item: 'Q1' },
+                  },
+                ],
+              },
+            })
+          : new Response('down', { status: 502 }),
+      userAgent: 'test-agent',
+    });
+    await expect(wikidataFailure.hydrate(candidate)).rejects.toThrow(
+      'Wikidata entity request failed with status 502',
+    );
+    const labelFailure = createWikimediaResearch({
+      fetch: async (input) => {
+        const url = String(input);
+        if (url.includes('extracts%7Cinfo'))
+          return response({
+            query: {
+              pages: [
+                {
+                  title: 'Place',
+                  extract: 'A'.repeat(120),
+                  fullurl: 'https://en.wikipedia.org/wiki/Place',
+                  pageprops: { wikibase_item: 'Q1' },
+                },
+              ],
+            },
+          });
+        if (url.includes('props=claims%7Clabels'))
+          return response({
+            entities: {
+              Q1: {
+                claims: {
+                  P625: [
+                    {
+                      mainsnak: {
+                        datavalue: {
+                          value: { latitude: 1, longitude: 2 },
+                        },
+                      },
+                    },
+                  ],
+                  P17: [{ mainsnak: { datavalue: { value: { id: 'Q2' } } } }],
+                  P131: [{ mainsnak: { datavalue: { value: { id: 'Q3' } } } }],
+                },
+              },
+            },
+          });
+        return new Response('down', { status: 502 });
+      },
+      userAgent: 'test-agent',
+    });
+    await expect(labelFailure.hydrate(candidate)).rejects.toThrow(
+      'Wikidata labels request failed with status 502',
+    );
+  });
+
+  it('returns null for a short source extract before Wikidata or image requests', async () => {
+    const calls: string[] = [];
+    const research = createWikimediaResearch({
+      fetch: async (input) => {
+        calls.push(String(input));
+        return response({
+          query: {
+            pages: [
+              {
+                title: 'Place',
+                extract: 'Too short',
+                fullurl: 'https://en.wikipedia.org/wiki/Place',
+                pageprops: { wikibase_item: 'Q1' },
+              },
+            ],
+          },
+        });
+      },
+      userAgent: 'test-agent',
+    });
+    await expect(research.hydrate(candidate)).resolves.toBeNull();
+    expect(calls).toHaveLength(1);
+  });
 });
 describe('contracts', () => {
   it('rejects short theme claims', async () => {
-    const { ResearchedCandidate } = await import('./contracts.js');
+    const { researchedCandidateSchema } = await import('./contracts.js');
     expect(
-      ResearchedCandidate.safeParse({ ...candidate, themeClaim: 'short' })
+      researchedCandidateSchema.safeParse({ ...candidate, themeClaim: 'short' })
         .success,
     ).toBe(false);
   });

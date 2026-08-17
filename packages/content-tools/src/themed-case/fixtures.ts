@@ -32,8 +32,8 @@ export const fixtureCandidates: HydratedCandidate[] = Array.from(
       country: `Country ${n}`,
       wikipediaTitle: `Market Square ${n}`,
       themeClaim: `This historic market square supported trade and civic gatherings in its city for generations.`,
-      lat: index - 20,
-      lon: index * 3 - 60,
+      latitude: index - 20,
+      longitude: index * 3 - 60,
       source: {
         title: `Market Square ${n}`,
         url: `https://en.wikipedia.org/wiki/Market_Square_${n}`,
