@@ -19,6 +19,7 @@ import {
   type PreparedCase,
   publishBatch,
 } from './publish-batch.js';
+import { createPythonGenerator } from './python-generator.js';
 import { curateBoard } from './themed-case/board-curator.js';
 import { researchCandidates } from './themed-case/candidate-researcher.js';
 import { critiqueCase } from './themed-case/case-critic.js';
@@ -265,7 +266,11 @@ export async function generateRange(
 
   const casesByDate = latestCasesByDate(history.cases);
   const prepared: PreparedCase[] = [];
-  const orchestrator = dependencies.orchestrate ?? orchestrateThemedCase;
+  const orchestrator =
+    dependencies.orchestrate ??
+    (!dependencies.stages
+      ? async ({ stages: _stages, ...input }) => createPythonGenerator()(input)
+      : orchestrateThemedCase);
   const stages =
     dependencies.stages ??
     (dependencies.orchestrate
