@@ -72,11 +72,21 @@ export function nextRevision(
   return maximum + 1;
 }
 
-export async function pathExists(path: string): Promise<boolean> {
+export async function pathExists(
+  path: string,
+  check: (path: string) => Promise<void> = access,
+): Promise<boolean> {
   try {
-    await access(path);
+    await check(path);
     return true;
-  } catch {
-    return false;
+  } catch (error) {
+    if (
+      typeof error === 'object' &&
+      error !== null &&
+      'code' in error &&
+      error.code === 'ENOENT'
+    )
+      return false;
+    throw error;
   }
 }

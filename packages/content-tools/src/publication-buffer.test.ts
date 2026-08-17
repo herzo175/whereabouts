@@ -4,6 +4,7 @@ import {
   caseNumberForDate,
   missingBufferDates,
   nextRevision,
+  pathExists,
 } from './publication-buffer.js';
 
 describe('publication buffer helpers', () => {
@@ -52,5 +53,13 @@ describe('publication buffer helpers', () => {
     expect(() =>
       nextRevision('2026-01-01', ['/cases/2026-01-01/not-a-revision.json']),
     ).toThrow(/revision/i);
+  });
+
+  it('does not hide filesystem permission failures', async () => {
+    await expect(
+      pathExists('/unreadable', async () => {
+        throw Object.assign(new Error('denied'), { code: 'EACCES' });
+      }),
+    ).rejects.toThrow('denied');
   });
 });

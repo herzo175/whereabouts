@@ -1,6 +1,7 @@
 import { mkdir, writeFile as nodeWriteFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import {
+  type DailyCase,
   dailyCaseSchema,
   type ThemedDailyCase,
 } from '@whereabouts/case-content';
@@ -57,7 +58,8 @@ function parseManifest(value: CaseManifest): CaseManifest {
       !isCanonicalDate(date) ||
       !entry ||
       !positive(entry.caseNumber) ||
-      !positive(entry.revision)
+      !positive(entry.revision) ||
+      entry.caseNumber !== caseNumberForDate(date)
     )
       throw new Error(`manifest entry for ${date} is invalid`);
     const expected = `./cases/${date}/v${entry.revision}.json`;
@@ -71,6 +73,7 @@ function parseManifest(value: CaseManifest): CaseManifest {
 export async function publishBatch({
   prepared,
   manifest,
+  existingCases = [],
   writeFile = async (path, data) => {
     await mkdir(dirname(path), { recursive: true });
     await nodeWriteFile(path, data, 'utf8');
@@ -79,6 +82,7 @@ export async function publishBatch({
 }: {
   prepared: readonly PreparedCase[];
   manifest: CaseManifest;
+  existingCases?: readonly DailyCase[];
   writeFile?: WriteFile;
   exists?: (path: string) => Promise<boolean>;
 }): Promise<CaseManifest> {
@@ -132,7 +136,7 @@ export async function publishBatch({
     });
   }
   if (parsed.length) {
-    const cases = parsed.map((item) => item.caseData);
+    const cases = [...existingCases, ...parsed.map((item) => item.caseData)];
     const ceiling = cases
       .map((item) => item.publicationDate)
       .sort()

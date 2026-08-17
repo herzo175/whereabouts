@@ -119,11 +119,51 @@ describe('publishBatch', () => {
     expect(writeFile).not.toHaveBeenCalled();
   });
 
+  it('rejects malformed manifest entries before any writes', async () => {
+    const writes: string[] = [];
+    await expect(
+      publishBatch({
+        prepared: [prepared('2026-11-01', 1)],
+        manifest: {
+          schemaVersion: 2,
+          cases: {
+            '2026-10-01': {
+              caseNumber: 1,
+              revision: 1,
+              file: './cases/2026-10-01/v1.json',
+            },
+          },
+        },
+        writeFile: async (path) => {
+          writes.push(path);
+        },
+        exists: async () => false,
+      }),
+    ).rejects.toThrow(/manifest/i);
+    expect(writes).toEqual([]);
+  });
+
   it('preflights cross-case collection invariants before any writes', async () => {
     const writes: string[] = [];
     await expect(
       publishBatch({
         prepared: [prepared('2026-11-01', 1), prepared('2026-11-02', 1)],
+        manifest,
+        writeFile: async (path) => {
+          writes.push(path);
+        },
+        exists: async () => false,
+      }),
+    ).rejects.toThrow(/collection/i);
+    expect(writes).toEqual([]);
+  });
+
+  it('validates collection invariants against supplied prior case history', async () => {
+    const writes: string[] = [];
+    await expect(
+      publishBatch({
+        prepared: [prepared('2026-11-01', 1)],
+        existingCases: [prepared('2026-10-01', 1).caseData],
         manifest,
         writeFile: async (path) => {
           writes.push(path);
