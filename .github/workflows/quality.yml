@@ -22,6 +22,18 @@ jobs:
           cache: pnpm
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: agent/uv.lock
+      - name: Sync agent dependencies
+        run: uv sync --project agent --locked
+      - name: Run agent checks
+        run: |
+          uv run --project agent pytest
+          if uv run --project agent python -c 'import importlib.util; raise SystemExit(0 if importlib.util.find_spec("mypy") else 1)'; then uv run --project agent mypy .; fi
+          if uv run --project agent python -c 'import importlib.util; raise SystemExit(0 if importlib.util.find_spec("ruff") else 1)'; then uv run --project agent ruff check .; fi
       - name: Install Chromium
         run: pnpm --filter @whereabouts/web exec playwright install --with-deps chromium
       - name: Calculate latest manifest publication date

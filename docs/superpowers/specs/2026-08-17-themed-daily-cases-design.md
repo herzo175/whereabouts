@@ -4,7 +4,7 @@
 
 Every Whereabouts case has a visible daily theme. All 25 candidates must satisfy a narrow, predeclared interpretation of that theme, and the five rounds continue to score guesses by factual similarity to each target within the themed board.
 
-The content workflow chooses themes autonomously, researches each case from live sources, generates and critiques the case, and preserves the final immutable artifact in a pull request. The runtime remains deterministic and makes no model calls.
+The content workflow chooses themes autonomously, uses a model-first research agent to generate and critique each case, and preserves the final immutable artifact in a pull request. The runtime remains deterministic and makes no model calls.
 
 ## Product behavior
 
@@ -24,7 +24,7 @@ The following boundaries remain:
 - `packages/browser-state` owns revision-scoped local progress.
 - `packages/case-content` owns case parsing, immutable artifacts, manifest loading, and archive discovery.
 - `apps/web` owns the globe, candidate selection, theme briefing, reveals, scores, sharing, and navigation.
-- `packages/content-tools` owns research orchestration, generation, validation, review packets, and publication preparation.
+- `packages/content-tools` owns deterministic contracts, validation, review packets, and publication preparation. The Python package under `agent/` owns the agentic generation workflow and is managed with `uv`.
 
 The persistent POI and knowledge corpus is removed. `packages/content-tools/catalog/pois.json`, `packages/content-tools/catalog/knowledge.json`, corpus bootstrap, catalog expansion, deterministic catalog selection, and cached-knowledge lookup no longer participate in generation.
 
@@ -76,7 +76,7 @@ The planner returns a title, player introduction, narrow inclusion criteria, exp
 
 ### 2. Candidate research
 
-The researcher builds a pool of approximately 35 to 50 candidates using live Wikipedia, Wikidata, and Wikimedia data. Each candidate includes a canonical identity, city, country, coordinates, source URLs, and a factual claim showing why it satisfies the theme criteria. Proposed identities are resolved through the source adapters rather than accepted solely from model output.
+The researcher builds a pool of approximately 35 to 50 candidates from model knowledge, constrained by the exact inclusion and exclusion criteria. The agent may use provider-adaptive WebSearch and WebFetch tools when confidence is low, facts are obscure, or a citation is needed. Wikipedia is optional and never a required hydration pass; there is no precomputed knowledge corpus. Each candidate includes a canonical identity, city, country, coordinates, source URLs when used, and a factual claim showing why it satisfies the theme criteria.
 
 ### 3. Evidence hydration
 
@@ -151,7 +151,7 @@ Failures return to the narrowest responsible stage:
 - A clue leak, clue-answer mismatch, or unsupported relationship regenerates that round.
 - A schema, collection, or publication failure blocks repository writes.
 
-Stage outputs use explicit schemas and are saved in the temporary run workspace. Successful research does not need to be repeated when a later writing stage is retried. Logs identify the theme, stage, case date, attempt, and structured rejection reason without including secrets.
+Stage outputs use explicit schemas and are saved in the temporary run workspace. Successful research does not need to be repeated when a later writing stage is retried. Candidate research can run concurrently within a case, while dates are generated sequentially so prior target history is authoritative. Logs identify the theme, stage, case date, attempt, and structured rejection reason without including secrets.
 
 ## Review experience
 
