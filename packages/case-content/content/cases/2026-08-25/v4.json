@@ -1,0 +1,1147 @@
+{
+  "schemaVersion": 4,
+  "publicationDate": "2026-08-25",
+  "revision": 4,
+  "caseNumber": 20690,
+  "pois": [
+    {
+      "id": "hungarian-state-opera",
+      "name": "Hungarian State Opera",
+      "city": "Budapest",
+      "country": "Hungary",
+      "latitude": 47.502117,
+      "longitude": 19.058542,
+      "wikipediaTitle": "Hungarian State Opera House",
+      "blurb": "The Hungarian State Opera House (Hungarian: Magyar Állami Operaház [ˈmɒɟɒr ˈaːlːɒmi ˈopɛrɒɦaːz]) is a historic opera house located in central Budapest, on Andrássy avenue.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Opera_blue.jpg/1280px-Opera_blue.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Hungarian State Opera House",
+        "attribution": "Snóbli Iván · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "themeConnection": {
+        "text": "Purpose-built opera house opened in 1884 and still operating at its original Budapest address with public opera performances.",
+        "sourceIds": ["source-20"]
+      }
+    },
+    {
+      "id": "san-carlo-naples",
+      "name": "Teatro di San Carlo",
+      "city": "Naples",
+      "country": "Italy",
+      "latitude": 40.838906,
+      "longitude": 14.250857,
+      "wikipediaTitle": "Teatro di San Carlo",
+      "blurb": "The Teatro di San Carlo is an opera house in Naples, Italy. It opened in 1737 and is the oldest continuously active venue for public opera in Europe, with regular staged productions.",
+      "themeConnection": {
+        "text": "Public opera house opened in 1737 and still functioning at its historic central Naples site with regular opera productions.",
+        "sourceIds": ["source-03"]
+      }
+    },
+    {
+      "id": "vienna-staatsoper",
+      "name": "Vienna State Opera",
+      "city": "Vienna",
+      "country": "Austria",
+      "latitude": 48.202889,
+      "longitude": 16.369934,
+      "wikipediaTitle": "Vienna State Opera",
+      "blurb": "The Vienna State Opera (German: Wiener Staatsoper, IPA: [ˈviːnɐ ˈʃtaːtsˌʔoːpɐ]) is an opera house and opera company located in Vienna, Austria.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Wiener_Staatsoper_Front.jpg/1280px-Wiener_Staatsoper_Front.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Vienna State Opera",
+        "attribution": "Wiener Staatsoper GmbH · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "Major public opera house opened in 1869 and still operating in its original building with a substantial staged-opera programme.",
+        "sourceIds": ["source-15"]
+      }
+    },
+    {
+      "id": "teatro-real-madrid",
+      "name": "Teatro Real",
+      "city": "Madrid",
+      "country": "Spain",
+      "latitude": 40.418038,
+      "longitude": -3.711755,
+      "wikipediaTitle": "Teatro Real",
+      "blurb": "The Teatro Real is Madrid's principal opera house. It first opened in 1850 and, following restoration, reopened as a public opera venue in 1997 with regular staged opera.",
+      "themeConnection": {
+        "text": "Opera house opened in 1850 at its current site, restored and reopened as a public national opera venue with regular staged opera.",
+        "sourceIds": ["source-10"]
+      }
+    },
+    {
+      "id": "verdi-trieste",
+      "name": "Teatro Lirico Giuseppe Verdi",
+      "city": "Trieste",
+      "country": "Italy",
+      "latitude": 45.650207,
+      "longitude": 13.768058,
+      "wikipediaTitle": "Teatro Lirico Giuseppe Verdi",
+      "blurb": "The Teatro Lirico Giuseppe Verdi is an opera house in Trieste, Italy. It opened in 1801 and continues to serve as a public venue for opera, concerts, and related performances.",
+      "themeConnection": {
+        "text": "Purpose-built opera theatre opened in 1801 and still operating at its original Trieste location with public opera performances.",
+        "sourceIds": ["source-07"]
+      }
+    },
+    {
+      "id": "la-scala-milan",
+      "name": "Teatro alla Scala",
+      "city": "Milan",
+      "country": "Italy",
+      "latitude": 45.467613,
+      "longitude": 9.189978,
+      "wikipediaTitle": "La Scala",
+      "blurb": "La Scala is an opera house in Milan, Italy. The theatre was inaugurated on 3 August 1778 and remains one of the world's leading opera venues, presenting regular public performances.",
+      "themeConnection": {
+        "text": "Historic opera house opened in 1778, still operating at its original site and presenting a regular public opera season.",
+        "sourceIds": ["source-01"]
+      }
+    },
+    {
+      "id": "liceu-barcelona",
+      "name": "Gran Teatre del Liceu",
+      "city": "Barcelona",
+      "country": "Spain",
+      "latitude": 41.380245,
+      "longitude": 2.173984,
+      "wikipediaTitle": "Gran Teatre del Liceu",
+      "blurb": "The Gran Teatre del Liceu is an opera house on Barcelona's La Rambla. It opened in 1847, was reconstructed after a fire, and continues to present public opera performances.",
+      "themeConnection": {
+        "text": "Opera house opened in 1847, rebuilt on the same La Rambla site and operating with a regular public opera season.",
+        "sourceIds": ["source-11"]
+      }
+    },
+    {
+      "id": "palais-garnier-paris",
+      "name": "Palais Garnier",
+      "city": "Paris",
+      "country": "France",
+      "latitude": 48.871968,
+      "longitude": 2.331602,
+      "wikipediaTitle": "Palais Garnier",
+      "blurb": "The Palais Garnier (French: [palɛ ɡaʁnje] , \"Garnier Palace\"), also known as Opéra Garnier (French: [ɔpeʁa ɡaʁnje] , \"Garnier Opera\"), is a historic 1,979-seat opera house at the Place de l'Opéra in the 9th arrondissement of Paris, France.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Paris_Opera_full_frontal_architecture%2C_May_2009.jpg/1280px-Paris_Opera_full_frontal_architecture%2C_May_2009.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Palais Garnier",
+        "attribution": "Peter Rivera · CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "themeConnection": {
+        "text": "Opera house opened in 1875 and still functioning as a public Paris opera venue for regular staged productions.",
+        "sourceIds": ["source-12"]
+      }
+    },
+    {
+      "id": "amazonas-manaus",
+      "name": "Teatro Amazonas",
+      "city": "Manaus",
+      "country": "Brazil",
+      "latitude": -3.130291,
+      "longitude": -60.023274,
+      "wikipediaTitle": "Amazon Theatre",
+      "blurb": "The Amazon Theatre (Portuguese: Teatro Amazonas) is an opera house located in Manaus, Brazil, in the heart of the Amazon rainforest.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Noite_no_Teatro_Amazonas_%28cropped%29.jpg/1280px-Noite_no_Teatro_Amazonas_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Amazon Theatre",
+        "attribution": "Susan Valentim · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "Opera house opened in 1896, physically extant in Manaus and operating as a public performing-arts venue with staged opera.",
+        "sourceIds": ["source-08"]
+      }
+    },
+    {
+      "id": "massimo-palermo",
+      "name": "Teatro Massimo",
+      "city": "Palermo",
+      "country": "Italy",
+      "latitude": 38.120822,
+      "longitude": 13.357615,
+      "wikipediaTitle": "Teatro Massimo",
+      "blurb": "The Teatro Massimo is an opera house and opera company in Palermo, Sicily. It was opened in 1897 and remains a functioning public performing-arts venue with opera productions.",
+      "themeConnection": {
+        "text": "Opera house opened in 1897, physically extant at its original site and operating as Palermo's principal public opera venue.",
+        "sourceIds": ["source-04"]
+      }
+    },
+    {
+      "id": "municipal-santiago",
+      "name": "Teatro Municipal de Santiago",
+      "city": "Santiago",
+      "country": "Chile",
+      "latitude": -33.437797,
+      "longitude": -70.645394,
+      "wikipediaTitle": "Municipal Theatre of Santiago",
+      "blurb": "The Municipal Theatre of Santiago opened in 1857 and is Chile's principal opera house. It continues to present publicly ticketed opera, ballet, concerts, and other stage performances.",
+      "themeConnection": {
+        "text": "Opera theatre opened in 1857, extant at its historic site and operating with regular public productions by the municipal opera programme.",
+        "sourceIds": ["source-09"]
+      }
+    },
+    {
+      "id": "bayerische-staatsoper-munich",
+      "name": "Nationaltheater München",
+      "city": "Munich",
+      "country": "Germany",
+      "latitude": 48.139126,
+      "longitude": 11.578265,
+      "wikipediaTitle": "National Theatre Munich",
+      "blurb": "The Nationaltheater in Munich is the home of the Bavarian State Opera. The current building opened in 1818 after an earlier theatre and remains a major public opera venue.",
+      "themeConnection": {
+        "text": "Principal opera theatre of the Bavarian State Opera, opened in 1818 and reconstructed at the same site for continuing public opera.",
+        "sourceIds": ["source-18"]
+      }
+    },
+    {
+      "id": "zurich-opera",
+      "name": "Opernhaus Zürich",
+      "city": "Zürich",
+      "country": "Switzerland",
+      "latitude": 47.364742,
+      "longitude": 8.546068,
+      "wikipediaTitle": "Opernhaus Zürich",
+      "blurb": "The Opernhaus Zürich is the opera house of Zürich, Switzerland. Its present building opened in 1891 and remains the home of a resident company presenting regular public opera.",
+      "themeConnection": {
+        "text": "Opera house opened in 1891 and still operating at the same urban site with a resident company and regular public opera.",
+        "sourceIds": ["source-19"]
+      }
+    },
+    {
+      "id": "capitole-toulouse",
+      "name": "Théâtre du Capitole",
+      "city": "Toulouse",
+      "country": "France",
+      "latitude": 43.604469,
+      "longitude": 1.443309,
+      "wikipediaTitle": "Théâtre du Capitole",
+      "blurb": "The Théâtre du Capitole is an opera house in Toulouse, France. It has operated at the Capitole site since 1819 and remains home to a public programme of opera and ballet.",
+      "themeConnection": {
+        "text": "Opera and ballet venue opened in 1819 at the Capitole site and operating today with regular public opera productions.",
+        "sourceIds": ["source-14"]
+      }
+    },
+    {
+      "id": "opera-nice",
+      "name": "Opéra de Nice",
+      "city": "Nice",
+      "country": "France",
+      "latitude": 43.696887,
+      "longitude": 7.275624,
+      "wikipediaTitle": "Opéra de Nice",
+      "blurb": "The Opéra de Nice is the municipal opera house of Nice, France. The current building opened in 1885 and continues to present opera, ballet, and concerts to the public.",
+      "themeConnection": {
+        "text": "Municipal opera house opened in 1885 at its present site and continuing to present a regular public opera programme.",
+        "sourceIds": ["source-13"]
+      }
+    },
+    {
+      "id": "semperoper-dresden",
+      "name": "Semperoper",
+      "city": "Dresden",
+      "country": "Germany",
+      "latitude": 51.054357,
+      "longitude": 13.735127,
+      "wikipediaTitle": "Semperoper",
+      "blurb": "The Semperoper is the opera house of Dresden, Germany. It first opened in 1841, was rebuilt after destruction, and remains home to regular public opera performances by the Staatsoperette and opera company.",
+      "themeConnection": {
+        "text": "Named opera house first opened in 1841, rebuilt at the same site and operating with regular public performances by the Semperoper company.",
+        "sourceIds": ["source-16"]
+      }
+    },
+    {
+      "id": "berlin-staatsoper",
+      "name": "Staatsoper Unter den Linden",
+      "city": "Berlin",
+      "country": "Germany",
+      "latitude": 52.517724,
+      "longitude": 13.396981,
+      "wikipediaTitle": "Berlin State Opera",
+      "blurb": "The Staatsoper Unter den Linden is an opera house in Berlin, Germany. It opened in 1742, has been reconstructed several times, and continues to present a regular public opera programme.",
+      "themeConnection": {
+        "text": "Historic state opera opened in 1742, reconstructed at its original site and operating as a public opera venue.",
+        "sourceIds": ["source-17"]
+      }
+    },
+    {
+      "id": "la-fenice-venice",
+      "name": "Teatro La Fenice",
+      "city": "Venice",
+      "country": "Italy",
+      "latitude": 45.433404,
+      "longitude": 12.334355,
+      "wikipediaTitle": "La Fenice",
+      "blurb": "Teatro La Fenice (pronounced [teˈaːtro la feˈniːtʃe]; \"The Phoenix Theatre\") is a historic opera house in Venice, Italy.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Gran_Teatro_La_Fenice%2C_Venice_%2830906998336%29.jpg/1280px-Gran_Teatro_La_Fenice%2C_Venice_%2830906998336%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "La Fenice",
+        "attribution": "Dimitris Kamaras from Athens, Greece · CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "themeConnection": {
+        "text": "Individually named opera house opened in 1792, rebuilt after fires at the same site and operating with regular public opera performances.",
+        "sourceIds": ["source-02"]
+      }
+    },
+    {
+      "id": "regio-parma",
+      "name": "Teatro Regio di Parma",
+      "city": "Parma",
+      "country": "Italy",
+      "latitude": 44.801388,
+      "longitude": 10.327831,
+      "wikipediaTitle": "Teatro Regio (Parma)",
+      "blurb": "The Teatro Regio di Parma is an opera house in Parma, Italy. It was inaugurated in 1829 and continues to present opera, including the annual public Verdi Festival programme.",
+      "themeConnection": {
+        "text": "Historic opera house opened in 1829, extant in central Parma and still presenting regular public opera performances.",
+        "sourceIds": ["source-05"]
+      }
+    },
+    {
+      "id": "donizetti-bergamo",
+      "name": "Teatro Donizetti",
+      "city": "Bergamo",
+      "country": "Italy",
+      "latitude": 45.695088,
+      "longitude": 9.671104,
+      "wikipediaTitle": "Teatro Donizetti",
+      "blurb": "The Teatro Donizetti is an opera house in Bergamo, Italy. Founded in the eighteenth century and rebuilt at its present site, it remains a public venue for opera and theatre performances.",
+      "themeConnection": {
+        "text": "Opera theatre opened in 1791, surviving at its identifiable urban site and operating with publicly accessible opera productions.",
+        "sourceIds": ["source-06"]
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "round-1",
+      "targetPoiId": "la-fenice-venice",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Gran_Teatro_La_Fenice%2C_Venice_%2830906998336%29.jpg/1280px-Gran_Teatro_La_Fenice%2C_Venice_%2830906998336%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "La Fenice",
+        "attribution": "Dimitris Kamaras from Athens, Greece · CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "clue": {
+        "text": "This opera house takes its name from the mythical bird of rebirth, an apt emblem after repeated fires and reconstructions on the same site; it also became a major venue for 19th-century premieres by Rossini, Bellini, Donizetti, and Verdi.",
+        "sourceIds": ["source-02"]
+      },
+      "results": [
+        {
+          "poiId": "la-scala-milan",
+          "points": 72,
+          "text": "Teatro alla Scala is a themed comparison candidate: Historic opera house opened in 1778, still operating at its original site and presenting a regular public opera season.",
+          "sourceIds": ["source-01", "source-02"]
+        },
+        {
+          "poiId": "la-fenice-venice",
+          "points": 100,
+          "text": "Teatro La Fenice is the round target: Individually named opera house opened in 1792, rebuilt after fires at the same site and operating with regular public opera performances.",
+          "sourceIds": ["source-02"]
+        },
+        {
+          "poiId": "san-carlo-naples",
+          "points": 67,
+          "text": "Teatro di San Carlo is a themed comparison candidate: Public opera house opened in 1737 and still functioning at its historic central Naples site with regular opera productions.",
+          "sourceIds": ["source-03", "source-02"]
+        },
+        {
+          "poiId": "massimo-palermo",
+          "points": 44,
+          "text": "Teatro Massimo is a themed comparison candidate: Opera house opened in 1897, physically extant at its original site and operating as Palermo's principal public opera venue.",
+          "sourceIds": ["source-04", "source-02"]
+        },
+        {
+          "poiId": "regio-parma",
+          "points": 55,
+          "text": "Teatro Regio di Parma is a themed comparison candidate: Historic opera house opened in 1829, extant in central Parma and still presenting regular public opera performances.",
+          "sourceIds": ["source-05", "source-02"]
+        },
+        {
+          "poiId": "donizetti-bergamo",
+          "points": 51,
+          "text": "Teatro Donizetti is a themed comparison candidate: Opera theatre opened in 1791, surviving at its identifiable urban site and operating with publicly accessible opera productions.",
+          "sourceIds": ["source-06", "source-02"]
+        },
+        {
+          "poiId": "verdi-trieste",
+          "points": 49,
+          "text": "Teatro Lirico Giuseppe Verdi is a themed comparison candidate: Purpose-built opera theatre opened in 1801 and still operating at its original Trieste location with public opera performances.",
+          "sourceIds": ["source-07", "source-02"]
+        },
+        {
+          "poiId": "amazonas-manaus",
+          "points": 18,
+          "text": "Teatro Amazonas is a themed comparison candidate: Opera house opened in 1896, physically extant in Manaus and operating as a public performing-arts venue with staged opera.",
+          "sourceIds": ["source-08", "source-02"]
+        },
+        {
+          "poiId": "municipal-santiago",
+          "points": 21,
+          "text": "Teatro Municipal de Santiago is a themed comparison candidate: Opera theatre opened in 1857, extant at its historic site and operating with regular public productions by the municipal opera programme.",
+          "sourceIds": ["source-09", "source-02"]
+        },
+        {
+          "poiId": "teatro-real-madrid",
+          "points": 25,
+          "text": "Teatro Real is a themed comparison candidate: Opera house opened in 1850 at its current site, restored and reopened as a public national opera venue with regular staged opera.",
+          "sourceIds": ["source-10", "source-02"]
+        },
+        {
+          "poiId": "liceu-barcelona",
+          "points": 62,
+          "text": "Gran Teatre del Liceu is a themed comparison candidate: Opera house opened in 1847, rebuilt on the same La Rambla site and operating with a regular public opera season.",
+          "sourceIds": ["source-11", "source-02"]
+        },
+        {
+          "poiId": "palais-garnier-paris",
+          "points": 58,
+          "text": "Palais Garnier is a themed comparison candidate: Opera house opened in 1875 and still functioning as a public Paris opera venue for regular staged productions.",
+          "sourceIds": ["source-12", "source-02"]
+        },
+        {
+          "poiId": "opera-nice",
+          "points": 39,
+          "text": "Opéra de Nice is a themed comparison candidate: Municipal opera house opened in 1885 at its present site and continuing to present a regular public opera programme.",
+          "sourceIds": ["source-13", "source-02"]
+        },
+        {
+          "poiId": "capitole-toulouse",
+          "points": 34,
+          "text": "Théâtre du Capitole is a themed comparison candidate: Opera and ballet venue opened in 1819 at the Capitole site and operating today with regular public opera productions.",
+          "sourceIds": ["source-14", "source-02"]
+        },
+        {
+          "poiId": "vienna-staatsoper",
+          "points": 47,
+          "text": "Vienna State Opera is a themed comparison candidate: Major public opera house opened in 1869 and still operating in its original building with a substantial staged-opera programme.",
+          "sourceIds": ["source-15", "source-02"]
+        },
+        {
+          "poiId": "semperoper-dresden",
+          "points": 42,
+          "text": "Semperoper is a themed comparison candidate: Named opera house first opened in 1841, rebuilt at the same site and operating with regular public performances by the Semperoper company.",
+          "sourceIds": ["source-16", "source-02"]
+        },
+        {
+          "poiId": "berlin-staatsoper",
+          "points": 37,
+          "text": "Staatsoper Unter den Linden is a themed comparison candidate: Historic state opera opened in 1742, reconstructed at its original site and operating as a public opera venue.",
+          "sourceIds": ["source-17", "source-02"]
+        },
+        {
+          "poiId": "bayerische-staatsoper-munich",
+          "points": 40,
+          "text": "Nationaltheater München is a themed comparison candidate: Principal opera theatre of the Bavarian State Opera, opened in 1818 and reconstructed at the same site for continuing public opera.",
+          "sourceIds": ["source-18", "source-02"]
+        },
+        {
+          "poiId": "zurich-opera",
+          "points": 12,
+          "text": "Opernhaus Zürich is a themed comparison candidate: Opera house opened in 1891 and still operating at the same urban site with a resident company and regular public opera.",
+          "sourceIds": ["source-19", "source-02"]
+        },
+        {
+          "poiId": "hungarian-state-opera",
+          "points": 53,
+          "text": "Hungarian State Opera is a themed comparison candidate: Purpose-built opera house opened in 1884 and still operating at its original Budapest address with public opera performances.",
+          "sourceIds": ["source-20", "source-02"]
+        }
+      ]
+    },
+    {
+      "id": "round-2",
+      "targetPoiId": "amazonas-manaus",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Noite_no_Teatro_Amazonas_%28cropped%29.jpg/1280px-Noite_no_Teatro_Amazonas_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Amazon Theatre",
+        "attribution": "Susan Valentim · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "Built as a Belle Époque monument to wealth from a rubber boom, this theatre stands in the heart of a tropical rainforest and features a national-flag-colored tiled dome, imported European materials, and a curtain depicting the Meeting of the Waters.",
+        "sourceIds": ["source-08"]
+      },
+      "results": [
+        {
+          "poiId": "la-scala-milan",
+          "points": 8,
+          "text": "Teatro alla Scala is a themed comparison candidate: Historic opera house opened in 1778, still operating at its original site and presenting a regular public opera season.",
+          "sourceIds": ["source-01", "source-08"]
+        },
+        {
+          "poiId": "la-fenice-venice",
+          "points": 15,
+          "text": "Teatro La Fenice is a themed comparison candidate: Individually named opera house opened in 1792, rebuilt after fires at the same site and operating with regular public opera performances.",
+          "sourceIds": ["source-02", "source-08"]
+        },
+        {
+          "poiId": "san-carlo-naples",
+          "points": 11,
+          "text": "Teatro di San Carlo is a themed comparison candidate: Public opera house opened in 1737 and still functioning at its historic central Naples site with regular opera productions.",
+          "sourceIds": ["source-03", "source-08"]
+        },
+        {
+          "poiId": "massimo-palermo",
+          "points": 28,
+          "text": "Teatro Massimo is a themed comparison candidate: Opera house opened in 1897, physically extant at its original site and operating as Palermo's principal public opera venue.",
+          "sourceIds": ["source-04", "source-08"]
+        },
+        {
+          "poiId": "regio-parma",
+          "points": 7,
+          "text": "Teatro Regio di Parma is a themed comparison candidate: Historic opera house opened in 1829, extant in central Parma and still presenting regular public opera performances.",
+          "sourceIds": ["source-05", "source-08"]
+        },
+        {
+          "poiId": "donizetti-bergamo",
+          "points": 5,
+          "text": "Teatro Donizetti is a themed comparison candidate: Opera theatre opened in 1791, surviving at its identifiable urban site and operating with publicly accessible opera productions.",
+          "sourceIds": ["source-06", "source-08"]
+        },
+        {
+          "poiId": "verdi-trieste",
+          "points": 14,
+          "text": "Teatro Lirico Giuseppe Verdi is a themed comparison candidate: Purpose-built opera theatre opened in 1801 and still operating at its original Trieste location with public opera performances.",
+          "sourceIds": ["source-07", "source-08"]
+        },
+        {
+          "poiId": "amazonas-manaus",
+          "points": 100,
+          "text": "Teatro Amazonas is the round target: Opera house opened in 1896, physically extant in Manaus and operating as a public performing-arts venue with staged opera.",
+          "sourceIds": ["source-08"]
+        },
+        {
+          "poiId": "municipal-santiago",
+          "points": 31,
+          "text": "Teatro Municipal de Santiago is a themed comparison candidate: Opera theatre opened in 1857, extant at its historic site and operating with regular public productions by the municipal opera programme.",
+          "sourceIds": ["source-09", "source-08"]
+        },
+        {
+          "poiId": "teatro-real-madrid",
+          "points": 23,
+          "text": "Teatro Real is a themed comparison candidate: Opera house opened in 1850 at its current site, restored and reopened as a public national opera venue with regular staged opera.",
+          "sourceIds": ["source-10", "source-08"]
+        },
+        {
+          "poiId": "liceu-barcelona",
+          "points": 19,
+          "text": "Gran Teatre del Liceu is a themed comparison candidate: Opera house opened in 1847, rebuilt on the same La Rambla site and operating with a regular public opera season.",
+          "sourceIds": ["source-11", "source-08"]
+        },
+        {
+          "poiId": "palais-garnier-paris",
+          "points": 76,
+          "text": "Palais Garnier is a themed comparison candidate: Opera house opened in 1875 and still functioning as a public Paris opera venue for regular staged productions.",
+          "sourceIds": ["source-12", "source-08"]
+        },
+        {
+          "poiId": "opera-nice",
+          "points": 18,
+          "text": "Opéra de Nice is a themed comparison candidate: Municipal opera house opened in 1885 at its present site and continuing to present a regular public opera programme.",
+          "sourceIds": ["source-13", "source-08"]
+        },
+        {
+          "poiId": "capitole-toulouse",
+          "points": 13,
+          "text": "Théâtre du Capitole is a themed comparison candidate: Opera and ballet venue opened in 1819 at the Capitole site and operating today with regular public opera productions.",
+          "sourceIds": ["source-14", "source-08"]
+        },
+        {
+          "poiId": "vienna-staatsoper",
+          "points": 64,
+          "text": "Vienna State Opera is a themed comparison candidate: Major public opera house opened in 1869 and still operating in its original building with a substantial staged-opera programme.",
+          "sourceIds": ["source-15", "source-08"]
+        },
+        {
+          "poiId": "semperoper-dresden",
+          "points": 52,
+          "text": "Semperoper is a themed comparison candidate: Named opera house first opened in 1841, rebuilt at the same site and operating with regular public performances by the Semperoper company.",
+          "sourceIds": ["source-16", "source-08"]
+        },
+        {
+          "poiId": "berlin-staatsoper",
+          "points": 47,
+          "text": "Staatsoper Unter den Linden is a themed comparison candidate: Historic state opera opened in 1742, reconstructed at its original site and operating as a public opera venue.",
+          "sourceIds": ["source-17", "source-08"]
+        },
+        {
+          "poiId": "bayerische-staatsoper-munich",
+          "points": 43,
+          "text": "Nationaltheater München is a themed comparison candidate: Principal opera theatre of the Bavarian State Opera, opened in 1818 and reconstructed at the same site for continuing public opera.",
+          "sourceIds": ["source-18", "source-08"]
+        },
+        {
+          "poiId": "zurich-opera",
+          "points": 9,
+          "text": "Opernhaus Zürich is a themed comparison candidate: Opera house opened in 1891 and still operating at the same urban site with a resident company and regular public opera.",
+          "sourceIds": ["source-19", "source-08"]
+        },
+        {
+          "poiId": "hungarian-state-opera",
+          "points": 69,
+          "text": "Hungarian State Opera is a themed comparison candidate: Purpose-built opera house opened in 1884 and still operating at its original Budapest address with public opera performances.",
+          "sourceIds": ["source-20", "source-08"]
+        }
+      ]
+    },
+    {
+      "id": "round-3",
+      "targetPoiId": "palais-garnier-paris",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Paris_Opera_full_frontal_architecture%2C_May_2009.jpg/1280px-Paris_Opera_full_frontal_architecture%2C_May_2009.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Palais Garnier",
+        "attribution": "Peter Rivera · CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "clue": {
+        "text": "Commissioned under an emperor and designed in exuberant Napoleon III style, this opera house is famed for polychrome marble, gilded ornament, a ceremonial grand staircase, and its enduring association with The Phantom of the Opera.",
+        "sourceIds": ["source-12"]
+      },
+      "results": [
+        {
+          "poiId": "la-scala-milan",
+          "points": 43,
+          "text": "Teatro alla Scala is a themed comparison candidate: Historic opera house opened in 1778, still operating at its original site and presenting a regular public opera season.",
+          "sourceIds": ["source-01", "source-12"]
+        },
+        {
+          "poiId": "la-fenice-venice",
+          "points": 36,
+          "text": "Teatro La Fenice is a themed comparison candidate: Individually named opera house opened in 1792, rebuilt after fires at the same site and operating with regular public opera performances.",
+          "sourceIds": ["source-02", "source-12"]
+        },
+        {
+          "poiId": "san-carlo-naples",
+          "points": 39,
+          "text": "Teatro di San Carlo is a themed comparison candidate: Public opera house opened in 1737 and still functioning at its historic central Naples site with regular opera productions.",
+          "sourceIds": ["source-03", "source-12"]
+        },
+        {
+          "poiId": "massimo-palermo",
+          "points": 61,
+          "text": "Teatro Massimo is a themed comparison candidate: Opera house opened in 1897, physically extant at its original site and operating as Palermo's principal public opera venue.",
+          "sourceIds": ["source-04", "source-12"]
+        },
+        {
+          "poiId": "regio-parma",
+          "points": 22,
+          "text": "Teatro Regio di Parma is a themed comparison candidate: Historic opera house opened in 1829, extant in central Parma and still presenting regular public opera performances.",
+          "sourceIds": ["source-05", "source-12"]
+        },
+        {
+          "poiId": "donizetti-bergamo",
+          "points": 18,
+          "text": "Teatro Donizetti is a themed comparison candidate: Opera theatre opened in 1791, surviving at its identifiable urban site and operating with publicly accessible opera productions.",
+          "sourceIds": ["source-06", "source-12"]
+        },
+        {
+          "poiId": "verdi-trieste",
+          "points": 20,
+          "text": "Teatro Lirico Giuseppe Verdi is a themed comparison candidate: Purpose-built opera theatre opened in 1801 and still operating at its original Trieste location with public opera performances.",
+          "sourceIds": ["source-07", "source-12"]
+        },
+        {
+          "poiId": "amazonas-manaus",
+          "points": 78,
+          "text": "Teatro Amazonas is a themed comparison candidate: Opera house opened in 1896, physically extant in Manaus and operating as a public performing-arts venue with staged opera.",
+          "sourceIds": ["source-08", "source-12"]
+        },
+        {
+          "poiId": "municipal-santiago",
+          "points": 29,
+          "text": "Teatro Municipal de Santiago is a themed comparison candidate: Opera theatre opened in 1857, extant at its historic site and operating with regular public productions by the municipal opera programme.",
+          "sourceIds": ["source-09", "source-12"]
+        },
+        {
+          "poiId": "teatro-real-madrid",
+          "points": 55,
+          "text": "Teatro Real is a themed comparison candidate: Opera house opened in 1850 at its current site, restored and reopened as a public national opera venue with regular staged opera.",
+          "sourceIds": ["source-10", "source-12"]
+        },
+        {
+          "poiId": "liceu-barcelona",
+          "points": 48,
+          "text": "Gran Teatre del Liceu is a themed comparison candidate: Opera house opened in 1847, rebuilt on the same La Rambla site and operating with a regular public opera season.",
+          "sourceIds": ["source-11", "source-12"]
+        },
+        {
+          "poiId": "palais-garnier-paris",
+          "points": 100,
+          "text": "Palais Garnier is the round target: Opera house opened in 1875 and still functioning as a public Paris opera venue for regular staged productions.",
+          "sourceIds": ["source-12"]
+        },
+        {
+          "poiId": "opera-nice",
+          "points": 45,
+          "text": "Opéra de Nice is a themed comparison candidate: Municipal opera house opened in 1885 at its present site and continuing to present a regular public opera programme.",
+          "sourceIds": ["source-13", "source-12"]
+        },
+        {
+          "poiId": "capitole-toulouse",
+          "points": 32,
+          "text": "Théâtre du Capitole is a themed comparison candidate: Opera and ballet venue opened in 1819 at the Capitole site and operating today with regular public opera productions.",
+          "sourceIds": ["source-14", "source-12"]
+        },
+        {
+          "poiId": "vienna-staatsoper",
+          "points": 74,
+          "text": "Vienna State Opera is a themed comparison candidate: Major public opera house opened in 1869 and still operating in its original building with a substantial staged-opera programme.",
+          "sourceIds": ["source-15", "source-12"]
+        },
+        {
+          "poiId": "semperoper-dresden",
+          "points": 69,
+          "text": "Semperoper is a themed comparison candidate: Named opera house first opened in 1841, rebuilt at the same site and operating with regular public performances by the Semperoper company.",
+          "sourceIds": ["source-16", "source-12"]
+        },
+        {
+          "poiId": "berlin-staatsoper",
+          "points": 51,
+          "text": "Staatsoper Unter den Linden is a themed comparison candidate: Historic state opera opened in 1742, reconstructed at its original site and operating as a public opera venue.",
+          "sourceIds": ["source-17", "source-12"]
+        },
+        {
+          "poiId": "bayerische-staatsoper-munich",
+          "points": 57,
+          "text": "Nationaltheater München is a themed comparison candidate: Principal opera theatre of the Bavarian State Opera, opened in 1818 and reconstructed at the same site for continuing public opera.",
+          "sourceIds": ["source-18", "source-12"]
+        },
+        {
+          "poiId": "zurich-opera",
+          "points": 16,
+          "text": "Opernhaus Zürich is a themed comparison candidate: Opera house opened in 1891 and still operating at the same urban site with a resident company and regular public opera.",
+          "sourceIds": ["source-19", "source-12"]
+        },
+        {
+          "poiId": "hungarian-state-opera",
+          "points": 73,
+          "text": "Hungarian State Opera is a themed comparison candidate: Purpose-built opera house opened in 1884 and still operating at its original Budapest address with public opera performances.",
+          "sourceIds": ["source-20", "source-12"]
+        }
+      ]
+    },
+    {
+      "id": "round-4",
+      "targetPoiId": "vienna-staatsoper",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Wiener_Staatsoper_Front.jpg/1280px-Wiener_Staatsoper_Front.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Vienna State Opera",
+        "attribution": "Wiener Staatsoper GmbH · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "The first major building on a celebrated ring-road expansion, this Neo-Renaissance house is linked to the city’s philharmonic orchestra and annual opera ball; after wartime fire destroyed its auditorium, it was rebuilt with the façade and grand stairways preserved.",
+        "sourceIds": ["source-15"]
+      },
+      "results": [
+        {
+          "poiId": "la-scala-milan",
+          "points": 45,
+          "text": "Teatro alla Scala is a themed comparison candidate: Historic opera house opened in 1778, still operating at its original site and presenting a regular public opera season.",
+          "sourceIds": ["source-01", "source-15"]
+        },
+        {
+          "poiId": "la-fenice-venice",
+          "points": 31,
+          "text": "Teatro La Fenice is a themed comparison candidate: Individually named opera house opened in 1792, rebuilt after fires at the same site and operating with regular public opera performances.",
+          "sourceIds": ["source-02", "source-15"]
+        },
+        {
+          "poiId": "san-carlo-naples",
+          "points": 35,
+          "text": "Teatro di San Carlo is a themed comparison candidate: Public opera house opened in 1737 and still functioning at its historic central Naples site with regular opera productions.",
+          "sourceIds": ["source-03", "source-15"]
+        },
+        {
+          "poiId": "massimo-palermo",
+          "points": 42,
+          "text": "Teatro Massimo is a themed comparison candidate: Opera house opened in 1897, physically extant at its original site and operating as Palermo's principal public opera venue.",
+          "sourceIds": ["source-04", "source-15"]
+        },
+        {
+          "poiId": "regio-parma",
+          "points": 18,
+          "text": "Teatro Regio di Parma is a themed comparison candidate: Historic opera house opened in 1829, extant in central Parma and still presenting regular public opera performances.",
+          "sourceIds": ["source-05", "source-15"]
+        },
+        {
+          "poiId": "donizetti-bergamo",
+          "points": 15,
+          "text": "Teatro Donizetti is a themed comparison candidate: Opera theatre opened in 1791, surviving at its identifiable urban site and operating with publicly accessible opera productions.",
+          "sourceIds": ["source-06", "source-15"]
+        },
+        {
+          "poiId": "verdi-trieste",
+          "points": 37,
+          "text": "Teatro Lirico Giuseppe Verdi is a themed comparison candidate: Purpose-built opera theatre opened in 1801 and still operating at its original Trieste location with public opera performances.",
+          "sourceIds": ["source-07", "source-15"]
+        },
+        {
+          "poiId": "amazonas-manaus",
+          "points": 49,
+          "text": "Teatro Amazonas is a themed comparison candidate: Opera house opened in 1896, physically extant in Manaus and operating as a public performing-arts venue with staged opera.",
+          "sourceIds": ["source-08", "source-15"]
+        },
+        {
+          "poiId": "municipal-santiago",
+          "points": 28,
+          "text": "Teatro Municipal de Santiago is a themed comparison candidate: Opera theatre opened in 1857, extant at its historic site and operating with regular public productions by the municipal opera programme.",
+          "sourceIds": ["source-09", "source-15"]
+        },
+        {
+          "poiId": "teatro-real-madrid",
+          "points": 41,
+          "text": "Teatro Real is a themed comparison candidate: Opera house opened in 1850 at its current site, restored and reopened as a public national opera venue with regular staged opera.",
+          "sourceIds": ["source-10", "source-15"]
+        },
+        {
+          "poiId": "liceu-barcelona",
+          "points": 46,
+          "text": "Gran Teatre del Liceu is a themed comparison candidate: Opera house opened in 1847, rebuilt on the same La Rambla site and operating with a regular public opera season.",
+          "sourceIds": ["source-11", "source-15"]
+        },
+        {
+          "poiId": "palais-garnier-paris",
+          "points": 76,
+          "text": "Palais Garnier is a themed comparison candidate: Opera house opened in 1875 and still functioning as a public Paris opera venue for regular staged productions.",
+          "sourceIds": ["source-12", "source-15"]
+        },
+        {
+          "poiId": "opera-nice",
+          "points": 24,
+          "text": "Opéra de Nice is a themed comparison candidate: Municipal opera house opened in 1885 at its present site and continuing to present a regular public opera programme.",
+          "sourceIds": ["source-13", "source-15"]
+        },
+        {
+          "poiId": "capitole-toulouse",
+          "points": 21,
+          "text": "Théâtre du Capitole is a themed comparison candidate: Opera and ballet venue opened in 1819 at the Capitole site and operating today with regular public opera productions.",
+          "sourceIds": ["source-14", "source-15"]
+        },
+        {
+          "poiId": "vienna-staatsoper",
+          "points": 100,
+          "text": "Vienna State Opera is the round target: Major public opera house opened in 1869 and still operating in its original building with a substantial staged-opera programme.",
+          "sourceIds": ["source-15"]
+        },
+        {
+          "poiId": "semperoper-dresden",
+          "points": 82,
+          "text": "Semperoper is a themed comparison candidate: Named opera house first opened in 1841, rebuilt at the same site and operating with regular public performances by the Semperoper company.",
+          "sourceIds": ["source-16", "source-15"]
+        },
+        {
+          "poiId": "berlin-staatsoper",
+          "points": 71,
+          "text": "Staatsoper Unter den Linden is a themed comparison candidate: Historic state opera opened in 1742, reconstructed at its original site and operating as a public opera venue.",
+          "sourceIds": ["source-17", "source-15"]
+        },
+        {
+          "poiId": "bayerische-staatsoper-munich",
+          "points": 68,
+          "text": "Nationaltheater München is a themed comparison candidate: Principal opera theatre of the Bavarian State Opera, opened in 1818 and reconstructed at the same site for continuing public opera.",
+          "sourceIds": ["source-18", "source-15"]
+        },
+        {
+          "poiId": "zurich-opera",
+          "points": 12,
+          "text": "Opernhaus Zürich is a themed comparison candidate: Opera house opened in 1891 and still operating at the same urban site with a resident company and regular public opera.",
+          "sourceIds": ["source-19", "source-15"]
+        },
+        {
+          "poiId": "hungarian-state-opera",
+          "points": 63,
+          "text": "Hungarian State Opera is a themed comparison candidate: Purpose-built opera house opened in 1884 and still operating at its original Budapest address with public opera performances.",
+          "sourceIds": ["source-20", "source-15"]
+        }
+      ]
+    },
+    {
+      "id": "round-5",
+      "targetPoiId": "hungarian-state-opera",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Opera_blue.jpg/1280px-Opera_blue.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Hungarian State Opera House",
+        "attribution": "Snóbli Iván · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "clue": {
+        "text": "Designed by Miklós Ybl in a richly decorated Neo-Renaissance style, this house places statues of Ferenc Erkel and Franz Liszt at its entrance, hosts a national ballet, and has a centrally positioned royal box symbolizing four operatic voice types.",
+        "sourceIds": ["source-20"]
+      },
+      "results": [
+        {
+          "poiId": "la-scala-milan",
+          "points": 46,
+          "text": "Teatro alla Scala is a themed comparison candidate: Historic opera house opened in 1778, still operating at its original site and presenting a regular public opera season.",
+          "sourceIds": ["source-01", "source-20"]
+        },
+        {
+          "poiId": "la-fenice-venice",
+          "points": 34,
+          "text": "Teatro La Fenice is a themed comparison candidate: Individually named opera house opened in 1792, rebuilt after fires at the same site and operating with regular public opera performances.",
+          "sourceIds": ["source-02", "source-20"]
+        },
+        {
+          "poiId": "san-carlo-naples",
+          "points": 31,
+          "text": "Teatro di San Carlo is a themed comparison candidate: Public opera house opened in 1737 and still functioning at its historic central Naples site with regular opera productions.",
+          "sourceIds": ["source-03", "source-20"]
+        },
+        {
+          "poiId": "massimo-palermo",
+          "points": 49,
+          "text": "Teatro Massimo is a themed comparison candidate: Opera house opened in 1897, physically extant at its original site and operating as Palermo's principal public opera venue.",
+          "sourceIds": ["source-04", "source-20"]
+        },
+        {
+          "poiId": "regio-parma",
+          "points": 20,
+          "text": "Teatro Regio di Parma is a themed comparison candidate: Historic opera house opened in 1829, extant in central Parma and still presenting regular public opera performances.",
+          "sourceIds": ["source-05", "source-20"]
+        },
+        {
+          "poiId": "donizetti-bergamo",
+          "points": 17,
+          "text": "Teatro Donizetti is a themed comparison candidate: Opera theatre opened in 1791, surviving at its identifiable urban site and operating with publicly accessible opera productions.",
+          "sourceIds": ["source-06", "source-20"]
+        },
+        {
+          "poiId": "verdi-trieste",
+          "points": 32,
+          "text": "Teatro Lirico Giuseppe Verdi is a themed comparison candidate: Purpose-built opera theatre opened in 1801 and still operating at its original Trieste location with public opera performances.",
+          "sourceIds": ["source-07", "source-20"]
+        },
+        {
+          "poiId": "amazonas-manaus",
+          "points": 57,
+          "text": "Teatro Amazonas is a themed comparison candidate: Opera house opened in 1896, physically extant in Manaus and operating as a public performing-arts venue with staged opera.",
+          "sourceIds": ["source-08", "source-20"]
+        },
+        {
+          "poiId": "municipal-santiago",
+          "points": 25,
+          "text": "Teatro Municipal de Santiago is a themed comparison candidate: Opera theatre opened in 1857, extant at its historic site and operating with regular public productions by the municipal opera programme.",
+          "sourceIds": ["source-09", "source-20"]
+        },
+        {
+          "poiId": "teatro-real-madrid",
+          "points": 44,
+          "text": "Teatro Real is a themed comparison candidate: Opera house opened in 1850 at its current site, restored and reopened as a public national opera venue with regular staged opera.",
+          "sourceIds": ["source-10", "source-20"]
+        },
+        {
+          "poiId": "liceu-barcelona",
+          "points": 39,
+          "text": "Gran Teatre del Liceu is a themed comparison candidate: Opera house opened in 1847, rebuilt on the same La Rambla site and operating with a regular public opera season.",
+          "sourceIds": ["source-11", "source-20"]
+        },
+        {
+          "poiId": "palais-garnier-paris",
+          "points": 81,
+          "text": "Palais Garnier is a themed comparison candidate: Opera house opened in 1875 and still functioning as a public Paris opera venue for regular staged productions.",
+          "sourceIds": ["source-12", "source-20"]
+        },
+        {
+          "poiId": "opera-nice",
+          "points": 23,
+          "text": "Opéra de Nice is a themed comparison candidate: Municipal opera house opened in 1885 at its present site and continuing to present a regular public opera programme.",
+          "sourceIds": ["source-13", "source-20"]
+        },
+        {
+          "poiId": "capitole-toulouse",
+          "points": 19,
+          "text": "Théâtre du Capitole is a themed comparison candidate: Opera and ballet venue opened in 1819 at the Capitole site and operating today with regular public opera productions.",
+          "sourceIds": ["source-14", "source-20"]
+        },
+        {
+          "poiId": "vienna-staatsoper",
+          "points": 73,
+          "text": "Vienna State Opera is a themed comparison candidate: Major public opera house opened in 1869 and still operating in its original building with a substantial staged-opera programme.",
+          "sourceIds": ["source-15", "source-20"]
+        },
+        {
+          "poiId": "semperoper-dresden",
+          "points": 58,
+          "text": "Semperoper is a themed comparison candidate: Named opera house first opened in 1841, rebuilt at the same site and operating with regular public performances by the Semperoper company.",
+          "sourceIds": ["source-16", "source-20"]
+        },
+        {
+          "poiId": "berlin-staatsoper",
+          "points": 52,
+          "text": "Staatsoper Unter den Linden is a themed comparison candidate: Historic state opera opened in 1742, reconstructed at its original site and operating as a public opera venue.",
+          "sourceIds": ["source-17", "source-20"]
+        },
+        {
+          "poiId": "bayerische-staatsoper-munich",
+          "points": 61,
+          "text": "Nationaltheater München is a themed comparison candidate: Principal opera theatre of the Bavarian State Opera, opened in 1818 and reconstructed at the same site for continuing public opera.",
+          "sourceIds": ["source-18", "source-20"]
+        },
+        {
+          "poiId": "zurich-opera",
+          "points": 11,
+          "text": "Opernhaus Zürich is a themed comparison candidate: Opera house opened in 1891 and still operating at the same urban site with a resident company and regular public opera.",
+          "sourceIds": ["source-19", "source-20"]
+        },
+        {
+          "poiId": "hungarian-state-opera",
+          "points": 100,
+          "text": "Hungarian State Opera is the round target: Purpose-built opera house opened in 1884 and still operating at its original Budapest address with public opera performances.",
+          "sourceIds": ["source-20"]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-01",
+      "title": "La Scala",
+      "url": "https://en.wikipedia.org/wiki/La_Scala",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-02",
+      "title": "La Fenice",
+      "url": "https://en.wikipedia.org/wiki/La_Fenice",
+      "retrievedAt": "2026-08-18T22:02:16.325Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-03",
+      "title": "Teatro di San Carlo",
+      "url": "https://en.wikipedia.org/wiki/Teatro_di_San_Carlo",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-04",
+      "title": "Teatro Massimo",
+      "url": "https://en.wikipedia.org/wiki/Teatro_Massimo",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-05",
+      "title": "Teatro Regio (Parma)",
+      "url": "https://en.wikipedia.org/wiki/Teatro_Regio_(Parma)",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-06",
+      "title": "Teatro Donizetti",
+      "url": "https://en.wikipedia.org/wiki/Teatro_Donizetti",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-07",
+      "title": "Teatro Lirico Giuseppe Verdi",
+      "url": "https://en.wikipedia.org/wiki/Teatro_Lirico_Giuseppe_Verdi",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-08",
+      "title": "Amazon Theatre",
+      "url": "https://en.wikipedia.org/wiki/Amazon_Theatre",
+      "retrievedAt": "2026-08-18T22:02:16.294Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-09",
+      "title": "Municipal Theatre of Santiago",
+      "url": "https://en.wikipedia.org/wiki/Municipal_Theatre_of_Santiago",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-10",
+      "title": "Teatro Real",
+      "url": "https://en.wikipedia.org/wiki/Teatro_Real",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-11",
+      "title": "Gran Teatre del Liceu",
+      "url": "https://en.wikipedia.org/wiki/Gran_Teatre_del_Liceu",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-12",
+      "title": "Palais Garnier",
+      "url": "https://en.wikipedia.org/wiki/Palais_Garnier",
+      "retrievedAt": "2026-08-18T22:02:16.377Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-13",
+      "title": "Opéra de Nice",
+      "url": "https://en.wikipedia.org/wiki/Op%C3%A9ra_de_Nice",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-14",
+      "title": "Théâtre du Capitole",
+      "url": "https://en.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_du_Capitole",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-15",
+      "title": "Vienna State Opera",
+      "url": "https://en.wikipedia.org/wiki/Vienna_State_Opera",
+      "retrievedAt": "2026-08-18T22:02:16.309Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-16",
+      "title": "Semperoper",
+      "url": "https://en.wikipedia.org/wiki/Semperoper",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-17",
+      "title": "Berlin State Opera",
+      "url": "https://en.wikipedia.org/wiki/Berlin_State_Opera",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-18",
+      "title": "National Theatre Munich",
+      "url": "https://en.wikipedia.org/wiki/National_Theatre_Munich",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-19",
+      "title": "Opernhaus Zürich",
+      "url": "https://en.wikipedia.org/wiki/Opernhaus_Z%C3%BCrich",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-20",
+      "title": "Hungarian State Opera House",
+      "url": "https://en.wikipedia.org/wiki/Hungarian_State_Opera_House",
+      "retrievedAt": "2026-08-18T22:02:16.342Z",
+      "provenance": "verified"
+    }
+  ],
+  "theme": {
+    "title": "Operating Opera Houses Opened Before 1900",
+    "introduction": "Velvet, gilded balconies, and familiar overtures turn historic city centers into stages for a daily journey through living opera.",
+    "inclusionCriteria": "Include a location only when every condition is met: (1) it is an individually named opera house, opera theatre, or equivalent venue whose principal identity is as a public opera-performing institution; (2) the venue first opened to the public at its current identifiable site on or before 31 December 1899; (3) the present venue remains physically extant at that site, even if it was later reconstructed, restored, or substantially remodeled; (4) it is operating on the date of play as a public performing-arts venue and regularly presents fully staged opera productions under its own programme or resident-company programme; (5) performances are available to ordinary members of the public, whether ticketed or occasionally free; (6) the venue lies within the current administrative boundary of a present-day city or incorporated urban municipality; and (7) the opera house, its principal building, or its public entrance can be pinned as one exact map location. This definition is intended to yield a corpus of at least 35 plausible locations across multiple cities and countries."
+  }
+}

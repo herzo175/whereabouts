@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "publicationDate": "2026-08-25",
+  "revision": 4,
+  "themeVerdicts": [
+    {
+      "poiId": "la-scala-milan",
+      "status": "pass",
+      "explanation": "Individually named opera house in Milan, opened in 1778, physically extant and reconstructed at the same site, with a regular public opera season and an exact mapped location.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "la-fenice-venice",
+      "status": "pass",
+      "explanation": "Named opera house in Venice, inaugurated in 1792, repeatedly rebuilt on its original site, currently operating with public staged opera and precisely mappable.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "san-carlo-naples",
+      "status": "pass",
+      "explanation": "Individually named public opera house in Naples, opened in 1737, still extant at its historic urban site and presenting regular publicly accessible opera.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "massimo-palermo",
+      "status": "pass",
+      "explanation": "Teatro Massimo is Palermo's individually named principal opera venue, opened in 1897, extant at its site and operating with public opera productions.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "regio-parma",
+      "status": "pass",
+      "explanation": "Named opera house in Parma opened in 1829, remains extant at its urban site, and presents public opera including recurring resident or associated programmes.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "donizetti-bergamo",
+      "status": "pass",
+      "explanation": "Teatro Donizetti is an individually named opera theatre opened at its present Bergamo site in the eighteenth century, extant and operating with publicly accessible opera.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "verdi-trieste",
+      "status": "pass",
+      "explanation": "Named opera house in Trieste opened in 1801, remains at its identifiable urban site, and continues to present public opera performances.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "amazonas-manaus",
+      "status": "pass",
+      "explanation": "Teatro Amazonas is a fixed, individually named opera house in Manaus, inaugurated in 1896, physically extant and used for public staged opera, including its recurring opera festival.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "municipal-santiago",
+      "status": "pass",
+      "explanation": "The Municipal Theatre of Santiago is an individually named urban opera venue opened in 1857, extant at its historic site and presenting public opera under its municipal programme.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "teatro-real-madrid",
+      "status": "pass",
+      "explanation": "Teatro Real is Madrid's named opera house, first opened at the site in 1850, physically extant after restoration, and currently presenting regular public staged opera.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "liceu-barcelona",
+      "status": "pass",
+      "explanation": "Gran Teatre del Liceu is an individually named opera house opened in 1847, reconstructed on the same La Rambla site, and operating with a public opera season.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "palais-garnier-paris",
+      "status": "pass",
+      "explanation": "The Palais Garnier is an individually named Paris opera house opened in 1875, extant at its original site and used by the Paris Opera for public staged opera despite its substantial ballet activity.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "opera-nice",
+      "status": "pass",
+      "explanation": "Opéra de Nice is a named municipal opera house whose present building opened in 1885; it remains extant and presents a regular public opera programme.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "capitole-toulouse",
+      "status": "pass",
+      "explanation": "Théâtre du Capitole is an individually named Toulouse opera venue operating at the Capitole site since 1819, with regular public opera and an exact urban location.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "vienna-staatsoper",
+      "status": "pass",
+      "explanation": "Vienna State Opera is a named public opera house opened in 1869, rebuilt on the same site after wartime destruction, and still presents a substantial public staged-opera programme.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "semperoper-dresden",
+      "status": "pass",
+      "explanation": "Semperoper is Dresden's individually named opera house, first opened in 1841, rebuilt at the same site, and operating with regular public opera performances.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "berlin-staatsoper",
+      "status": "pass",
+      "explanation": "Staatsoper Unter den Linden is a named Berlin opera house opened in 1742, reconstructed at its original site and continuing as a public opera venue.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "bayerische-staatsoper-munich",
+      "status": "pass",
+      "explanation": "The Nationaltheater München is an individually named opera theatre opened in 1818, reconstructed at the same urban site, and remains the Bavarian State Opera's public opera venue.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "zurich-opera",
+      "status": "pass",
+      "explanation": "Opernhaus Zürich is a named opera house whose present building opened in 1891; it remains extant at the urban site with a resident company and regular public opera.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "hungarian-state-opera",
+      "status": "pass",
+      "explanation": "Hungarian State Opera House is an individually named Budapest opera house opened in 1884, extant at its original address and operating with public opera and resident-company programming.",
+      "sourceIds": ["source-01"]
+    }
+  ],
+  "clueVerdicts": [
+    {
+      "roundId": "round-1",
+      "declaredTargetPoiId": "la-fenice-venice",
+      "resolvedPoiId": "la-fenice-venice",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The phoenix name, repeated fires and same-site reconstruction, and premieres associated with four major Italian composers uniquely identify Teatro La Fenice."
+    },
+    {
+      "roundId": "round-2",
+      "declaredTargetPoiId": "amazonas-manaus",
+      "resolvedPoiId": "amazonas-manaus",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The Amazon rainforest setting, rubber-boom context, Brazilian-flag dome, imported materials, and Meeting of the Waters curtain uniquely identify Teatro Amazonas."
+    },
+    {
+      "roundId": "round-3",
+      "declaredTargetPoiId": "palais-garnier-paris",
+      "resolvedPoiId": "palais-garnier-paris",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "Napoleon III style, polychrome marble, gilded interiors, grand staircase, and Phantom of the Opera association uniquely identify the Palais Garnier."
+    },
+    {
+      "roundId": "round-4",
+      "declaredTargetPoiId": "vienna-staatsoper",
+      "resolvedPoiId": "vienna-staatsoper",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The Ringstrasse landmark, Vienna Philharmonic connection, Opera Ball, wartime fire, and preserved façade and stairways uniquely identify the Vienna State Opera."
+    },
+    {
+      "roundId": "round-5",
+      "declaredTargetPoiId": "hungarian-state-opera",
+      "resolvedPoiId": "hungarian-state-opera",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "Miklós Ybl, the Erkel and Liszt statues, national ballet, and royal-box symbolism for four voice types uniquely identify the Hungarian State Opera House."
+    }
+  ],
+  "repairs": []
+}
