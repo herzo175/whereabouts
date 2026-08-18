@@ -110,6 +110,7 @@ describe('generateRange', () => {
     const publish = vi.fn(async () => history());
     await generateRange(['--from', '2026-08-17', '--days', '10'], {
       history: async () => history(),
+      listExistingCasePaths: async () => [],
       requireUserAgent: () => 'test',
       orchestrate: async (input) => {
         requested.push({ date: input.date, revision: input.revision });

@@ -67,156 +67,128 @@ export function createWikimediaResearch(deps: Dependencies = {}): LiveResearch {
     deps.userAgent ??
     process.env.WIKIMEDIA_USER_AGENT ??
     'Whereabouts/0.1 (local development)';
-  return {
-    async search(query, limit) {
-      const params = new URLSearchParams({
-        action: 'query',
-        list: 'search',
-        srsearch: query,
-        srlimit: String(Math.max(1, limit)),
-        format: 'json',
-        formatversion: '2',
-      });
-      const data = (await json(
-        fetch,
-        `${API}?${params}`,
-        userAgent,
-        'MediaWiki search',
-        sleep,
-      )) as {
-        query?: { search?: Array<{ title?: unknown; snippet?: unknown }> };
+  const search = async (query: string, limit: number) => {
+    const params = new URLSearchParams({
+      action: 'query',
+      list: 'search',
+      srsearch: query,
+      srlimit: String(Math.max(1, limit)),
+      format: 'json',
+      formatversion: '2',
+    });
+    const data = (await json(
+      fetch,
+      `${API}?${params}`,
+      userAgent,
+      'MediaWiki search',
+      sleep,
+    )) as {
+      query?: { search?: Array<{ title?: unknown; snippet?: unknown }> };
+    };
+    return (data.query?.search ?? []).flatMap((item) => {
+      const title = typeof item.title === 'string' ? item.title : '';
+      const snippet = typeof item.snippet === 'string' ? item.snippet : '';
+      return title ? [{ title, snippet }] : [];
+    });
+  };
+  const hydrateTitle = async (
+    candidate: ResearchedCandidate,
+    title: string,
+  ): Promise<HydratedCandidate | null> => {
+    const params = new URLSearchParams({
+      action: 'query',
+      prop: 'extracts|info',
+      explaintext: '1',
+      inprop: 'url',
+      redirects: '1',
+      titles: title,
+      format: 'json',
+      formatversion: '2',
+    });
+    const data = (await json(
+      fetch,
+      `${API}?${params}`,
+      userAgent,
+      'MediaWiki hydration',
+      sleep,
+    )) as {
+      query?: {
+        pages?: Array<{
+          title?: string;
+          extract?: string;
+          fullurl?: string;
+        }>;
       };
-      return (data.query?.search ?? []).flatMap((item) => {
-        const title = typeof item.title === 'string' ? item.title : '';
-        const snippet = typeof item.snippet === 'string' ? item.snippet : '';
-        return title ? [{ title, snippet }] : [];
-      });
-    },
+    };
+    const page = data.query?.pages?.[0];
+    if (
+      !page?.title ||
+      !page.extract ||
+      page.extract.length < 100 ||
+      !page.fullurl
+    )
+      return null;
+    const compact = (value: string) =>
+      value
+        .normalize('NFKD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLocaleLowerCase()
+        .replace(/[^a-z0-9]/g, '');
+    const resolvedTitle = compact(page.title);
+    const identities = [candidate.name, candidate.wikipediaTitle].map(compact);
+    if (
+      !identities.some(
+        (identity) =>
+          identity.length >= 5 &&
+          (resolvedTitle.includes(identity) ||
+            identity.includes(resolvedTitle)),
+      )
+    )
+      return null;
+    const image = await fetchWikipediaImage(page.title, {
+      fetch,
+      now,
+      userAgent,
+    });
+    if (!image) return null;
+    return {
+      ...candidate,
+      wikipediaTitle: page.title,
+      source: {
+        title: page.title,
+        url: page.fullurl,
+        retrievedAt: now().toISOString(),
+        provenance: 'verified',
+        extract: page.extract,
+      },
+      image,
+    };
+  };
+  return {
+    search,
     async hydrate(candidate) {
-      {
-        const params = new URLSearchParams({
-          action: 'query',
-          prop: 'extracts|info|pageprops',
-          explaintext: '1',
-          inprop: 'url',
-          redirects: '1',
-          titles: candidate.wikipediaTitle,
-          format: 'json',
-          formatversion: '2',
-        });
-        const data = (await json(
-          fetch,
-          `${API}?${params}`,
-          userAgent,
-          'MediaWiki hydration',
-          sleep,
-        )) as {
-          query?: {
-            pages?: Array<{
-              title?: string;
-              extract?: string;
-              fullurl?: string;
-              pageprops?: { wikibase_item?: string };
-            }>;
-          };
-        };
-        const page = data.query?.pages?.[0];
-        const entityId = page?.pageprops?.wikibase_item;
-        if (
-          !page?.title ||
-          !page.extract ||
-          page.extract.length < 100 ||
-          !page.fullurl ||
-          !entityId
-        )
-          return null;
-        const entitiesParams = new URLSearchParams({
-          action: 'wbgetentities',
-          ids: entityId,
-          props: 'claims|labels',
-          languages: 'en',
-          languagefallback: '1',
-          format: 'json',
-          formatversion: '2',
-        });
-        const entities = (await json(
-          fetch,
-          `https://www.wikidata.org/w/api.php?${entitiesParams}`,
-          userAgent,
-          'Wikidata entity',
-          sleep,
-        )) as {
-          entities?: Record<
-            string,
-            {
-              claims?: Record<
-                string,
-                Array<{
-                  mainsnak?: {
-                    datavalue?: {
-                      value?: {
-                        id?: string;
-                        latitude?: number;
-                        longitude?: number;
-                      };
-                    };
-                  };
-                }>
-              >;
-            }
-          >;
-        };
-        const entity = entities.entities?.[entityId];
-        const coordinate =
-          entity?.claims?.P625?.[0]?.mainsnak?.datavalue?.value;
-        const countryId =
-          entity?.claims?.P17?.[0]?.mainsnak?.datavalue?.value?.id;
-        const cityId =
-          entity?.claims?.P131?.[0]?.mainsnak?.datavalue?.value?.id;
-        if (
-          !coordinate ||
-          typeof coordinate.latitude !== 'number' ||
-          typeof coordinate.longitude !== 'number' ||
-          !countryId ||
-          !cityId
-        )
-          return null;
-        const ids = [countryId, cityId].join('|');
-        const labelsData = (await json(
-          fetch,
-          `https://www.wikidata.org/w/api.php?${new URLSearchParams({ action: 'wbgetentities', ids, props: 'labels', languages: 'en', languagefallback: '1', format: 'json', formatversion: '2' })}`,
-          userAgent,
-          'Wikidata labels',
-          sleep,
-        )) as {
-          entities?: Record<string, { labels?: { en?: { value?: string } } }>;
-        };
-        const country = labelsData.entities?.[countryId]?.labels?.en?.value;
-        const city = labelsData.entities?.[cityId]?.labels?.en?.value;
-        if (typeof country !== 'string' || typeof city !== 'string')
-          return null;
-        const image = await fetchWikipediaImage(page.title, {
-          fetch,
-          now,
-          userAgent,
-        });
-        if (!image) return null;
-        return {
-          ...candidate,
-          city,
-          country,
-          latitude: coordinate.latitude,
-          longitude: coordinate.longitude,
-          source: {
-            title: page.title,
-            url: page.fullurl,
-            retrievedAt: now().toISOString(),
-            provenance: 'verified',
-            extract: page.extract,
-          },
-          image,
-        };
+      const attempted = new Set<string>();
+      const canonical = (title: string) =>
+        title
+          .trim()
+          .replaceAll('_', ' ')
+          .replace(/\s+/g, ' ')
+          .toLocaleLowerCase();
+      const tryTitle = async (title: string) => {
+        const key = canonical(title);
+        if (!title || attempted.has(key)) return null;
+        attempted.add(key);
+        return hydrateTitle(candidate, title);
+      };
+      const direct = await tryTitle(candidate.wikipediaTitle);
+      if (direct) return direct;
+      const query = `${candidate.name} ${candidate.city} ${candidate.country}`;
+      const results = await search(query, 3);
+      for (const result of results.slice(0, 3)) {
+        const hydrated = await tryTitle(result.title);
+        if (hydrated) return hydrated;
       }
+      return null;
     },
   };
 }

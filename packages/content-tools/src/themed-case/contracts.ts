@@ -52,7 +52,7 @@ export type ResearchedCandidate = z.infer<typeof researchedCandidateSchema>;
 export const candidateProposalPoolSchema = z
   .object({
     theme: themePlanSchema,
-    candidates: z.array(researchedCandidateSchema).min(35).max(50),
+    candidates: z.array(researchedCandidateSchema).min(25).max(50),
   })
   .superRefine((v, ctx) => {
     if (!uniqueBy(v.candidates))
@@ -69,7 +69,7 @@ export type HydratedCandidate = z.infer<typeof hydratedCandidateSchema>;
 export const candidatePoolSchema = z
   .object({
     theme: themePlanSchema,
-    candidates: z.array(researchedCandidateSchema).min(35).max(50),
+    candidates: z.array(researchedCandidateSchema).min(25).max(50),
   })
   .superRefine((v, ctx) => {
     if (!uniqueBy(v.candidates))

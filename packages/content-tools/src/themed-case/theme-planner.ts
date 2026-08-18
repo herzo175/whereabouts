@@ -12,6 +12,7 @@ export async function planTheme(input: {
   const prompt = [
     'Design one narrow, player-readable geography theme for a daily location game.',
     'It must have hard inclusion criteria and hard exclusion rules, 3 to 12 live discovery queries, and at least 35 plausible locations.',
+    'Prefer well-known, unambiguous locations distributed across many cities whose membership is direct and can be judged confidently from general knowledge. Avoid themes that depend on tangential associations or obscure local facts.',
     'The theme must be materially novel compared with every previous theme below. Do not suggest multiple themes.',
     'Previous themes (title — inclusion criteria):',
     ...previous.map((theme) => `- ${theme.title} — ${theme.inclusionCriteria}`),

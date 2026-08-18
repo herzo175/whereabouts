@@ -4,6 +4,7 @@ import {
   hydrateBoardTargets,
   InsufficientCandidatePoolError,
   researchCandidates,
+  type TargetHydrationError,
 } from './candidate-researcher.js';
 import type { HydratedCandidate, ResearchedCandidate } from './contracts.js';
 import { fixtureBoard, fixtureTheme } from './fixtures.js';
@@ -58,10 +59,16 @@ describe('researchCandidates', () => {
       model: {
         generate: async ({ prompt, schema }) => {
           expect(prompt).toContain('general knowledge first');
+          expect(prompt).toContain('35 to 40');
+          expect(prompt).toContain('unique coordinates');
           expect(prompt).not.toContain('Search evidence:');
-          expect(JSON.stringify(z.toJSONSchema(schema))).toContain(
-            '"items":{"type":"object"',
+          const jsonSchema = JSON.stringify(z.toJSONSchema(schema));
+          expect(jsonSchema).toContain('"items":{"type":"object"');
+          expect(jsonSchema).toContain(
+            '"extract":{"type":"string","minLength":100}',
           );
+          expect(jsonSchema).not.toContain('"format":"uri"');
+          expect(jsonSchema).not.toContain('"format":"date-time"');
           return { theme: fixtureTheme, candidates };
         },
       },
@@ -93,9 +100,9 @@ describe('researchCandidates', () => {
     ).toBe(true);
   });
 
-  it('rejects a model pool with fewer than 35 unique coordinates', async () => {
+  it('rejects a model pool with fewer than 25 unique coordinates', async () => {
     const candidates = Array.from({ length: 40 }, (_, index) =>
-      proposal(index % 34),
+      proposal(index % 24),
     );
     await expect(
       researchCandidates({
@@ -105,7 +112,7 @@ describe('researchCandidates', () => {
     ).rejects.toBeInstanceOf(InsufficientCandidatePoolError);
   });
 
-  it('hydrates only the five targets and permits missing non-target images', async () => {
+  it('keeps the board and replaces failed targets with verified on-board candidates', async () => {
     const board = {
       ...fixtureBoard,
       candidates: fixtureBoard.candidates.map(
@@ -113,23 +120,88 @@ describe('researchCandidates', () => {
       ),
     };
     const hydratedIds: string[] = [];
+    const failedIds = new Set(fixtureBoard.targetPoiIds.slice(0, 2));
+    const externallyExcluded = new Set([
+      fixtureBoard.candidates[5]?.id ?? 'missing-candidate',
+    ]);
     const result = await hydrateBoardTargets({
       board,
+      excludedTargetIds: externallyExcluded,
       research: {
         search: async () => [],
         hydrate: async (candidate) => {
           hydratedIds.push(candidate.id);
+          if (failedIds.has(candidate.id)) return null;
           return hydrated(candidate, Number(candidate.id.slice(-2)) - 1);
         },
       },
     });
-    expect(hydratedIds).toHaveLength(5);
-    expect(new Set(hydratedIds)).toEqual(new Set(fixtureBoard.targetPoiIds));
+    expect(hydratedIds).toHaveLength(10);
+    expect(result.candidates).toHaveLength(25);
+    expect(result.targetPoiIds).toHaveLength(5);
+    expect(result.targetPoiIds).not.toContain(fixtureBoard.targetPoiIds[0]);
+    expect(result.targetPoiIds).not.toContain(fixtureBoard.targetPoiIds[1]);
+    expect(result.targetPoiIds).not.toContain(fixtureBoard.candidates[5]?.id);
+    expect(
+      result.targetPoiIds.every((id) =>
+        fixtureBoard.candidates.some((candidate) => candidate.id === id),
+      ),
+    ).toBe(true);
     expect(
       result.candidates.filter((candidate) => candidate.image),
     ).toHaveLength(5);
     expect(
       result.candidates.filter((candidate) => !candidate.image),
     ).toHaveLength(20);
+  });
+
+  it('replaces a target when hydration resolves two candidates to the same page', async () => {
+    const board = {
+      ...fixtureBoard,
+      candidates: fixtureBoard.candidates.map(
+        ({ image: _image, ...candidate }) => candidate,
+      ),
+    };
+    const duplicateIds = new Set(fixtureBoard.targetPoiIds.slice(0, 2));
+    const result = await hydrateBoardTargets({
+      board,
+      research: {
+        search: async () => [],
+        hydrate: async (candidate) => {
+          const value = hydrated(candidate, Number(candidate.id.slice(-2)) - 1);
+          return duplicateIds.has(candidate.id)
+            ? {
+                ...value,
+                wikipediaTitle: 'Shared canonical article',
+                source: { ...value.source, title: 'Shared canonical article' },
+              }
+            : value;
+        },
+      },
+    });
+
+    expect(result.targetPoiIds).toHaveLength(5);
+    const targetTitles = result.targetPoiIds.map(
+      (id) =>
+        result.candidates.find((candidate) => candidate.id === id)
+          ?.wikipediaTitle,
+    );
+    expect(new Set(targetTitles).size).toBe(5);
+  });
+
+  it('reports all failed attempts when the board cannot yield five targets', async () => {
+    await expect(
+      hydrateBoardTargets({
+        board: fixtureBoard,
+        research: {
+          search: async () => [],
+          hydrate: async () => null,
+        },
+      }),
+    ).rejects.toMatchObject({
+      failedPoiIds: expect.arrayContaining(
+        fixtureBoard.candidates.map((candidate) => candidate.id),
+      ),
+    } satisfies Partial<TargetHydrationError>);
   });
 });

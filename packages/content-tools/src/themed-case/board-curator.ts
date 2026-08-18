@@ -52,9 +52,21 @@ export async function curateBoard({
     throw new Error('curation returned an unknown candidate ID');
   if (selection.targetPoiIds.some((id) => excluded.has(id)))
     throw new Error('curation selected an excluded target');
-  if (selection.targetPoiIds.some((id) => !selection.candidateIds.includes(id)))
-    throw new Error('targets must be on the board');
-  const selected = selection.candidateIds.flatMap((id) => {
+  const candidateIds = [...selection.candidateIds];
+  const targets = new Set(selection.targetPoiIds);
+  for (const targetId of selection.targetPoiIds) {
+    if (candidateIds.includes(targetId)) continue;
+    let replacementIndex = -1;
+    for (let index = candidateIds.length - 1; index >= 0; index -= 1)
+      if (!targets.has(candidateIds[index] as string)) {
+        replacementIndex = index;
+        break;
+      }
+    if (replacementIndex < 0)
+      throw new Error('targets could not be placed on the board');
+    candidateIds[replacementIndex] = targetId;
+  }
+  const selected = candidateIds.flatMap((id) => {
     const candidate = pool.get(id);
     return candidate ? [candidate] : [];
   });

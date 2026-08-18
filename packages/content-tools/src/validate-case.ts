@@ -9,6 +9,15 @@ function normalize(value: string): string {
   return value.toLocaleLowerCase().replace(/[^\p{L}\p{N}]/gu, '');
 }
 
+function leaksIdentity(text: string, identity: string): boolean {
+  const term = normalize(identity);
+  if (!term) return false;
+  if (term.length >= 4) return normalize(text).includes(term);
+  return (text.toLocaleLowerCase().match(/[\p{L}\p{N}]+/gu) ?? [])
+    .map(normalize)
+    .includes(term);
+}
+
 function canonicalDate(value: string): boolean {
   const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
   if (!match) return false;
@@ -61,12 +70,9 @@ export function validateCaseForPublication(value: unknown): ValidationIssue[] {
       });
       continue;
     }
-    const prohibited = new Set(
-      [target.name, target.city, target.country].map(normalize),
-    );
+    const prohibited = [target.name, target.city, target.country];
     for (const item of round.preReveal) {
-      const text = normalize(item.text);
-      if ([...prohibited].some((term) => text.includes(term))) {
+      if (prohibited.some((term) => leaksIdentity(item.text, term))) {
         issues.push({ path: item.path, message: leakMessage });
       }
     }

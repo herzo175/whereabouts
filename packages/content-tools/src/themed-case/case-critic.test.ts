@@ -1,5 +1,6 @@
 import { makeFiveRoundCase } from '@whereabouts/case-content/testing';
 import { describe, expect, it } from 'vitest';
+import { z } from 'zod';
 import { critiqueCase } from './case-critic.js';
 import type { StructuredModel } from './model.js';
 
@@ -73,6 +74,42 @@ function passingOutput() {
 }
 
 describe('critiqueCase', () => {
+  it('uses provider-compatible typed verdict schemas', async () => {
+    let jsonSchema: ReturnType<typeof z.toJSONSchema> | undefined;
+    let criticPrompt = '';
+    await critiqueCase({
+      criticModel: {
+        generate: async ({ schema, prompt }) => {
+          jsonSchema = z.toJSONSchema(schema);
+          criticPrompt = prompt;
+          return passingOutput();
+        },
+      },
+      theme: board.theme,
+      board,
+      draft,
+      publicationDate: caseData.publicationDate,
+      revision: caseData.revision,
+    });
+    const properties = (
+      jsonSchema as {
+        properties: Record<
+          string,
+          { items?: { type?: string }; minItems?: number; maxItems?: number }
+        >;
+      }
+    ).properties;
+    expect(properties.themeVerdicts?.items?.type).toBe('object');
+    expect(properties.clueVerdicts?.items?.type).toBe('object');
+    expect(properties.themeVerdicts).toMatchObject({
+      minItems: 25,
+      maxItems: 25,
+    });
+    expect(properties.clueVerdicts).toMatchObject({ minItems: 5, maxItems: 5 });
+    expect(properties.relationshipVerdicts).toBeUndefined();
+    expect(criticPrompt).toContain(`round-1 -> ${board.targetPoiIds[0]}`);
+  });
+
   it('publishes only when all 25 themes and five clues pass', async () => {
     const result = await critiqueCase({
       criticModel: modelWith(passingOutput()),
@@ -85,6 +122,28 @@ describe('critiqueCase', () => {
     expect(result.repairs).toEqual([]);
     expect(result.review.themeVerdicts).toHaveLength(25);
     expect(result.review.clueVerdicts).toHaveLength(5);
+  });
+
+  it('normalizes critic citations to the supplied board evidence source', async () => {
+    const output = passingOutput();
+    output.themeVerdicts = output.themeVerdicts.map((verdict) => ({
+      ...verdict,
+      sourceIds: ['invented-model-source'],
+    }));
+    const result = await critiqueCase({
+      criticModel: modelWith(output),
+      theme: board.theme,
+      board,
+      draft,
+      publicationDate: caseData.publicationDate,
+      revision: caseData.revision,
+    });
+    expect(result.repairs).toEqual([]);
+    expect(
+      result.review.themeVerdicts.every(
+        (verdict) => verdict.sourceIds[0] === 'source-01',
+      ),
+    ).toBe(true);
   });
 
   it('repairs a failed theme and does not accept tangential prose', async () => {
@@ -153,12 +212,10 @@ describe('critiqueCase', () => {
       true,
     );
     expect(result.repairs.some((repair) => repair.kind === 'clue')).toBe(true);
-    expect(
-      result.repairs.some((repair) => repair.kind === 'relationship'),
-    ).toBe(true);
+    expect(result.repairs.some((repair) => repair.kind === 'theme')).toBe(true);
   });
 
-  it('repairs missing and duplicate relationship verdicts', async () => {
+  it('leaves pairwise relationship prose for human audit', async () => {
     const output = passingOutput();
     output.relationshipVerdicts.pop();
     output.relationshipVerdicts[0] = { ...output.relationshipVerdicts[0] };
@@ -172,11 +229,11 @@ describe('critiqueCase', () => {
       revision: caseData.revision,
     });
     expect(
-      result.repairs.filter((repair) => repair.kind === 'relationship').length,
-    ).toBeGreaterThan(1);
+      result.repairs.filter((repair) => repair.kind === 'relationship'),
+    ).toEqual([]);
   });
 
-  it('adds validation repair even when a clue repair already exists', async () => {
+  it('keeps a resolvable clue defect scoped to the clue repair', async () => {
     const output = passingOutput();
     output.clueVerdicts[0].declaredTargetPoiId = 'poi-99';
     const result = await critiqueCase({
@@ -188,10 +245,79 @@ describe('critiqueCase', () => {
       revision: caseData.revision,
     });
     expect(result.repairs).toEqual(
+      expect.arrayContaining([expect.objectContaining({ kind: 'clue' })]),
+    );
+    expect(result.repairs.some((repair) => repair.kind === 'theme')).toBe(
+      false,
+    );
+  });
+
+  it('repairs clues that leak the target name, city, or country', async () => {
+    const target = board.candidates.find(
+      (candidate) => candidate.id === board.targetPoiIds[0],
+    );
+    if (!target) throw new Error('fixture target is missing from the board');
+    const leakingDraft = {
+      ...draft,
+      rounds: draft.rounds.map((round, index) =>
+        index === 0
+          ? {
+              ...round,
+              clue: {
+                ...round.clue,
+                text: `${round.clue.text} It is in ${target.city}.`,
+              },
+            }
+          : round,
+      ),
+    };
+    const result = await critiqueCase({
+      criticModel: modelWith(passingOutput()),
+      theme: board.theme,
+      board,
+      draft: leakingDraft,
+      publicationDate: caseData.publicationDate,
+      revision: caseData.revision,
+    });
+
+    expect(result.repairs).toEqual(
       expect.arrayContaining([
-        expect.objectContaining({ kind: 'clue' }),
-        expect.objectContaining({ kind: 'theme' }),
+        expect.objectContaining({ kind: 'clue', roundId: 'round-1' }),
       ]),
     );
+  });
+
+  it('does not treat a short country code embedded in another word as a leak', async () => {
+    const targetId = board.targetPoiIds[0];
+    const shortCountryBoard = {
+      ...board,
+      candidates: board.candidates.map((candidate) =>
+        candidate.id === targetId ? { ...candidate, country: 'US' } : candidate,
+      ),
+    };
+    const safeDraft = {
+      ...draft,
+      rounds: draft.rounds.map((round, index) =>
+        index === 0
+          ? {
+              ...round,
+              clue: {
+                ...round.clue,
+                text: 'This industrial landmark has two specific historical features.',
+              },
+            }
+          : round,
+      ),
+    };
+    const result = await critiqueCase({
+      criticModel: modelWith(passingOutput()),
+      theme: board.theme,
+      board: shortCountryBoard,
+      draft: safeDraft,
+      publicationDate: caseData.publicationDate,
+      revision: caseData.revision,
+    });
+
+    expect(result.repairs).toEqual([]);
   });
 });

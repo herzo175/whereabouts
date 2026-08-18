@@ -1,0 +1,1402 @@
+{
+  "schemaVersion": 3,
+  "publicationDate": "2026-08-19",
+  "revision": 1,
+  "caseNumber": 20684,
+  "pois": [
+    {
+      "id": "valparaiso-concepcion",
+      "name": "Ascensor Concepción",
+      "city": "Valparaíso",
+      "country": "Chile",
+      "latitude": -33.04389,
+      "longitude": -71.62653,
+      "wikipediaTitle": "Ascensor Concepción",
+      "blurb": "The Ascensor Concepción is the oldest of the funiculars of Valparaíso, Chile. Inaugurated on December 1, 1883, It connects the Elías Alley, which faces the Reloj Turri on the Plan de Valparaíso, with the Gervasoni Promenade on the Concepción Hill.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Ascensor_2.JPG/1280px-Ascensor_2.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Ascensor Concepción",
+        "attribution": "Ccaba77 · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "themeConnection": {
+        "text": "Named urban ascensor using cable-hauled rail vehicles on the Concepción hillside in Valparaíso.",
+        "sourceIds": ["source-18"]
+      }
+    },
+    {
+      "id": "pittsburgh-duquesne",
+      "name": "Duquesne Incline",
+      "city": "Pittsburgh",
+      "country": "United States",
+      "latitude": 40.44057,
+      "longitude": -80.01063,
+      "wikipediaTitle": "Duquesne Incline",
+      "blurb": "The Duquesne Incline is a cable-hauled inclined plane railway in Pittsburgh, Pennsylvania. It operates as a regularly open passenger attraction and climbs Mount Washington on rails.",
+      "themeConnection": {
+        "text": "Named operating cable railway on fixed rails between Pittsburgh's riverfront and Mount Washington.",
+        "sourceIds": ["source-21"]
+      }
+    },
+    {
+      "id": "naples-mergellina",
+      "name": "Funicolare di Mergellina",
+      "city": "Naples",
+      "country": "Italy",
+      "latitude": 40.82834,
+      "longitude": 14.21052,
+      "wikipediaTitle": "Mergellina funicular",
+      "blurb": "The Mergellina funicular is an operating funicular railway in Naples, Italy. It carries scheduled urban passengers from the Mergellina area toward the hilltop neighborhoods.",
+      "themeConnection": {
+        "text": "Named public funicular railway serving Naples between Mergellina and the Vomero hillside.",
+        "sourceIds": ["source-13"]
+      }
+    },
+    {
+      "id": "wiesbaden-neroberg",
+      "name": "Nerobergbahn",
+      "city": "Wiesbaden",
+      "country": "Germany",
+      "latitude": 50.09342,
+      "longitude": 8.23455,
+      "wikipediaTitle": "Nerobergbahn",
+      "blurb": "The Nerobergbahn is a funicular railway in Wiesbaden, Germany. The line links the city, with a station at the north of the Nerotalanlagen, with the Neroberg hill to its north, which offers a panorama view.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Wiesbaden_Nerobergbahn_ESWE_Verkehrsbetriebe_auf_Viadukt_von_1907_von_Talstation_zum_Hausberg_Foto_2008_Wolfgang_Pehlemann_Wiesbaden_0ICT0061.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Nerobergbahn",
+        "attribution": "Wolfgang Pehlemann Wiesbaden Germany · CC BY-SA 3.0 de",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"
+      },
+      "themeConnection": {
+        "text": "Named water-ballast funicular serving Wiesbaden's Neroberg hill as a regularly open visitor railway.",
+        "sourceIds": ["source-22"]
+      }
+    },
+    {
+      "id": "naples-montesanto",
+      "name": "Funicolare di Montesanto",
+      "city": "Naples",
+      "country": "Italy",
+      "latitude": 40.84757,
+      "longitude": 14.24611,
+      "wikipediaTitle": "Montesanto funicular",
+      "blurb": "The Montesanto funicular is one of the four operating funicular railways of Naples, Italy. It provides urban passenger service between Montesanto and the Vomero area.",
+      "themeConnection": {
+        "text": "Named Naples public funicular serving the Montesanto route and interchange.",
+        "sourceIds": ["source-11"]
+      }
+    },
+    {
+      "id": "bilbao-artxanda",
+      "name": "Funicular de Artxanda",
+      "city": "Bilbao",
+      "country": "Spain",
+      "latitude": 43.26791,
+      "longitude": -2.92282,
+      "wikipediaTitle": "Artxanda Funicular",
+      "blurb": "The Artxanda Funicular is a cable railway in Bilbao, Spain. It links the urban district near Campo Volantín with Mount Artxanda and operates regular public and visitor services.",
+      "themeConnection": {
+        "text": "Named Bilbao funicular providing regular passenger service from the city to Mount Artxanda.",
+        "sourceIds": ["source-17"]
+      }
+    },
+    {
+      "id": "istanbul-tunel",
+      "name": "Tünel",
+      "city": "Istanbul",
+      "country": "Turkey",
+      "latitude": 41.02574,
+      "longitude": 28.97437,
+      "wikipediaTitle": "Tünel",
+      "blurb": "The Tünel (English: Tunnel, designated as the F2 line on the Istanbul transport map) is a historic underground rubber-tyred funicular line in Istanbul, Turkey.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Istanbul_asv2020-02_img01_T%C3%BCnel_Karak%C3%B6y_station.jpg/1280px-Istanbul_asv2020-02_img01_T%C3%BCnel_Karak%C3%B6y_station.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Tünel",
+        "attribution": "A.Savin · FAL",
+        "licenseUrl": "http://artlibre.org/licence/lal/en"
+      },
+      "themeConnection": {
+        "text": "Named underground funicular railway providing scheduled public transport between Karaköy and Beyoğlu.",
+        "sourceIds": ["source-09"]
+      }
+    },
+    {
+      "id": "nazare-funicular",
+      "name": "Funicular de Nazaré",
+      "city": "Nazaré",
+      "country": "Portugal",
+      "latitude": 39.60335,
+      "longitude": -9.07118,
+      "wikipediaTitle": "Funicular of Nazaré",
+      "blurb": "The Nazaré Funicular is a funicular railway in Nazaré, Portugal. It links the town at sea level with the Sítio neighborhood on the promontory and carries regular passengers.",
+      "themeConnection": {
+        "text": "Named public passenger funicular connecting Nazaré's lower town with the Sítio district.",
+        "sourceIds": ["source-05"]
+      }
+    },
+    {
+      "id": "pittsburgh-monongahela",
+      "name": "Monongahela Incline",
+      "city": "Pittsburgh",
+      "country": "United States",
+      "latitude": 40.43131,
+      "longitude": -80.00669,
+      "wikipediaTitle": "Monongahela Incline",
+      "blurb": "The Monongahela Incline is an inclined plane railway in Pittsburgh, Pennsylvania. Its cars are hauled by cable on fixed rails between the riverfront and Mount Washington for public passengers.",
+      "themeConnection": {
+        "text": "Named cable-hauled inclined railway providing scheduled public passenger service in Pittsburgh.",
+        "sourceIds": ["source-20"]
+      }
+    },
+    {
+      "id": "valparaiso-el-peral",
+      "name": "Ascensor El Peral",
+      "city": "Valparaíso",
+      "country": "Chile",
+      "latitude": -33.04319,
+      "longitude": -71.62831,
+      "wikipediaTitle": "Ascensor El Peral",
+      "blurb": "Ascensor El Peral is an operating funicular railway in Valparaíso, Chile. It connects the Plaza de Justicia area with Cerro Alegre and is one of the city's historic hillside passenger lifts.",
+      "themeConnection": {
+        "text": "Named Valparaíso ascensor serving Cerro Alegre with cable-hauled cars on fixed inclined rails.",
+        "sourceIds": ["source-19"]
+      }
+    },
+    {
+      "id": "porto-guindais",
+      "name": "Funicular dos Guindais",
+      "city": "Porto",
+      "country": "Portugal",
+      "latitude": 41.14231,
+      "longitude": -8.60782,
+      "wikipediaTitle": "Funicular dos Guindais",
+      "blurb": "The Funicular dos Guindais is a funicular railway in Porto, Portugal. It connects the upper city near Batalha with the Ribeira district beside the Douro River.",
+      "themeConnection": {
+        "text": "Named cable-hauled funicular connecting Porto's Batalha area with the Ribeira riverfront.",
+        "sourceIds": ["source-04"]
+      }
+    },
+    {
+      "id": "lisbon-lavra",
+      "name": "Ascensor do Lavra",
+      "city": "Lisbon",
+      "country": "Portugal",
+      "latitude": 38.71823,
+      "longitude": -9.14071,
+      "wikipediaTitle": "Lavra Funicular",
+      "blurb": "The Lavra Funicular is a funicular railway in Lisbon, Portugal. It is operated by Carris and provides scheduled public passenger service on a steep urban street alignment.",
+      "themeConnection": {
+        "text": "Named urban funicular serving the Lavra route between Largo da Anunciada and Rua Câmara Pestana.",
+        "sourceIds": ["source-03"]
+      }
+    },
+    {
+      "id": "barcelona-montjuic",
+      "name": "Funicular de Montjuïc",
+      "city": "Barcelona",
+      "country": "Spain",
+      "latitude": 41.37341,
+      "longitude": 2.1701,
+      "wikipediaTitle": "Montjuïc Funicular",
+      "blurb": "The Montjuïc Funicular is a public transport funicular railway in Barcelona, Spain. It runs from Paral·lel station up Montjuïc hill and is operated as part of the metro network.",
+      "themeConnection": {
+        "text": "Named Barcelona public funicular connecting the Paral·lel metro interchange with Montjuïc.",
+        "sourceIds": ["source-15"]
+      }
+    },
+    {
+      "id": "naples-centrale",
+      "name": "Funicolare Centrale",
+      "city": "Naples",
+      "country": "Italy",
+      "latitude": 40.84237,
+      "longitude": 14.24845,
+      "wikipediaTitle": "Central Funicular",
+      "blurb": "The Central Funicular is a public funicular railway in Naples, Italy. It runs from the city center toward Vomero and is one of the principal operating cable railways in Naples.",
+      "themeConnection": {
+        "text": "Named central Naples funicular connecting Via Toledo with the Vomero district.",
+        "sourceIds": ["source-14"]
+      }
+    },
+    {
+      "id": "zagreb-uspijaca",
+      "name": "Zagrebačka uspinjača",
+      "city": "Zagreb",
+      "country": "Croatia",
+      "latitude": 45.81342,
+      "longitude": 15.97378,
+      "wikipediaTitle": "Zagreb Funicular",
+      "blurb": "The Zagreb Funicular is a cable-operated public transport railway in Zagreb, Croatia. It connects Tomić Street in the Lower Town with the Strossmayer Promenade in the Upper Town.",
+      "themeConnection": {
+        "text": "Named urban funicular linking the Lower Town and Upper Town of Zagreb.",
+        "sourceIds": ["source-08"]
+      }
+    },
+    {
+      "id": "naples-chiaia",
+      "name": "Funicolare di Chiaia",
+      "city": "Naples",
+      "country": "Italy",
+      "latitude": 40.83513,
+      "longitude": 14.22162,
+      "wikipediaTitle": "Chiaia Funicular",
+      "blurb": "The Chiaia Funicular is a public funicular railway in Naples, Italy. It links the Chiaia district with Vomero and is integrated into the city's scheduled transit system.",
+      "themeConnection": {
+        "text": "Named Naples urban funicular connecting the Chiaia district with Vomero.",
+        "sourceIds": ["source-12"]
+      }
+    },
+    {
+      "id": "kobe-maya-cable",
+      "name": "Maya Cable",
+      "city": "Kobe",
+      "country": "Japan",
+      "latitude": 34.72653,
+      "longitude": 135.20786,
+      "wikipediaTitle": "Maya Cablecar",
+      "blurb": "The Maya Cablecar, officially the Maya Cable Line (摩耶ケーブル線, Maya Kēburu-sen) is a funicular line in Kobe, Hyōgo, Japan, operated by the public company Kobe Future City Corporation.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Kobe_maya_cablecar03_2816.jpg/1280px-Kobe_maya_cablecar03_2816.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Maya Cablecar",
+        "attribution": "663highland · CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
+      },
+      "themeConnection": {
+        "text": "Named Japanese cable railway with fixed-rail cars climbing Mount Maya from an urban Kobe terminal.",
+        "sourceIds": ["source-24"]
+      }
+    },
+    {
+      "id": "barcelona-vallvidrera",
+      "name": "Funicular de Vallvidrera",
+      "city": "Barcelona",
+      "country": "Spain",
+      "latitude": 41.41835,
+      "longitude": 2.09861,
+      "wikipediaTitle": "Vallvidrera Funicular",
+      "blurb": "The Vallvidrera Funicular is a railway funicular in Barcelona, Spain. It provides regular public transport between the FGC railway interchange and the Vallvidrera neighborhood.",
+      "themeConnection": {
+        "text": "Named scheduled urban funicular connecting Peu del Funicular with Vallvidrera in Barcelona.",
+        "sourceIds": ["source-16"]
+      }
+    },
+    {
+      "id": "lisbon-gloria",
+      "name": "Ascensor da Glória",
+      "city": "Lisbon",
+      "country": "Portugal",
+      "latitude": 38.71548,
+      "longitude": -9.14277,
+      "wikipediaTitle": "Glória Funicular",
+      "blurb": "The Glória Funicular is a funicular railway in Lisbon, Portugal. It links the Restauradores Square with the Bairro Alto district and forms part of the city's public transport system.",
+      "themeConnection": {
+        "text": "Named public funicular linking Praça dos Restauradores with the Bairro Alto area on fixed rails.",
+        "sourceIds": ["source-02"]
+      }
+    },
+    {
+      "id": "paris-montmartre",
+      "name": "Funiculaire de Montmartre",
+      "city": "Paris",
+      "country": "France",
+      "latitude": 48.88402,
+      "longitude": 2.34261,
+      "wikipediaTitle": "Montmartre Funicular",
+      "blurb": "The Montmartre Funicular is a funicular railway serving Montmartre in Paris, France. It is operated by RATP and provides scheduled passenger transport on the hill.",
+      "themeConnection": {
+        "text": "Named urban funicular serving the Montmartre hillside between Boulevard de Rochechouart and Sacré-Cœur.",
+        "sourceIds": ["source-06"]
+      }
+    },
+    {
+      "id": "lisbon-bica",
+      "name": "Ascensor da Bica",
+      "city": "Lisbon",
+      "country": "Portugal",
+      "latitude": 38.71064,
+      "longitude": -9.14745,
+      "wikipediaTitle": "Bica Funicular",
+      "blurb": "The Bica Funicular is a funicular railway in Lisbon, Portugal. It connects Rua de Santa Catarina with the Calçada da Bica de Duarte Belo and is operated as public transport.",
+      "themeConnection": {
+        "text": "Named urban funicular operating on fixed rails between Rua de Santa Catarina and Rua da Bica de Duarte Belo.",
+        "sourceIds": ["source-01"]
+      }
+    },
+    {
+      "id": "budapest-buda-castle",
+      "name": "Budavári Sikló",
+      "city": "Budapest",
+      "country": "Hungary",
+      "latitude": 47.49745,
+      "longitude": 19.03949,
+      "wikipediaTitle": "Buda Castle Funicular",
+      "blurb": "The Buda Castle Funicular is a funicular railway in Budapest, Hungary. It links the Danube-side Clark Ádám Square with the Buda Castle district and carries public passengers.",
+      "themeConnection": {
+        "text": "Named public funicular connecting Clark Ádám tér with Buda Castle on fixed inclined rails.",
+        "sourceIds": ["source-07"]
+      }
+    },
+    {
+      "id": "fribourg-funicular",
+      "name": "Funiculaire de Fribourg",
+      "city": "Fribourg",
+      "country": "Switzerland",
+      "latitude": 46.80357,
+      "longitude": 7.16337,
+      "wikipediaTitle": "Fribourg funicular",
+      "blurb": "The Fribourg funicular, also known as the Neuveville - Saint-Pierre funicular, is a funicular railway in the Swiss town of Fribourg.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Fribourg_funicular.jpg/1280px-Fribourg_funicular.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Fribourg funicular",
+        "attribution": "User:Pakeha · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "themeConnection": {
+        "text": "Named water-powered funicular connecting Fribourg's lower Neuveville district with the upper city.",
+        "sourceIds": ["source-25"]
+      }
+    },
+    {
+      "id": "istanbul-f1",
+      "name": "F1 Taksim–Kabataş Funicular",
+      "city": "Istanbul",
+      "country": "Turkey",
+      "latitude": 41.03698,
+      "longitude": 28.98574,
+      "wikipediaTitle": "F1 (Istanbul Metro)",
+      "blurb": "The F1 Taksım–Kabataş funicular is a rapid transit funicular line in Istanbul, Turkey. It runs underground between Taksim and Kabataş with regular scheduled service.",
+      "themeConnection": {
+        "text": "Named modern urban funicular line connecting Taksim Square with Kabataş transit facilities.",
+        "sourceIds": ["source-10"]
+      }
+    },
+    {
+      "id": "tbilisi-funicular",
+      "name": "Tbilisi Funicular",
+      "city": "Tbilisi",
+      "country": "Georgia",
+      "latitude": 41.69554,
+      "longitude": 44.78903,
+      "wikipediaTitle": "Tbilisi Funicular",
+      "blurb": "The Tbilisi Funicular is a funicular railway in Tbilisi, Georgia. It climbs Mount Mtatsminda from the city and operates passenger services to the upper station and park.",
+      "themeConnection": {
+        "text": "Named cable railway carrying scheduled passengers up Mtatsminda within Tbilisi.",
+        "sourceIds": ["source-23"]
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "round-1",
+      "targetPoiId": "istanbul-tunel",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Istanbul_asv2020-02_img01_T%C3%BCnel_Karak%C3%B6y_station.jpg/1280px-Istanbul_asv2020-02_img01_T%C3%BCnel_Karak%C3%B6y_station.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Tünel",
+        "attribution": "A.Savin · FAL",
+        "licenseUrl": "http://artlibre.org/licence/lal/en"
+      },
+      "clue": {
+        "text": "Identify the historic line inaugurated in 1875: an underground, rubber-tyred funicular with only two stations, linking Karaköy and Beyoğlu through a roughly 573-metre tunnel.",
+        "sourceIds": ["source-09"]
+      },
+      "results": [
+        {
+          "poiId": "lisbon-bica",
+          "tier": "warm",
+          "text": "Ascensor da Bica is a themed comparison candidate: Named urban funicular operating on fixed rails between Rua de Santa Catarina and Rua da Bica de Duarte Belo.",
+          "sourceIds": ["source-01", "source-09"]
+        },
+        {
+          "poiId": "lisbon-gloria",
+          "tier": "warm",
+          "text": "Ascensor da Glória is a themed comparison candidate: Named public funicular linking Praça dos Restauradores with the Bairro Alto area on fixed rails.",
+          "sourceIds": ["source-02", "source-09"]
+        },
+        {
+          "poiId": "lisbon-lavra",
+          "tier": "warm",
+          "text": "Ascensor do Lavra is a themed comparison candidate: Named urban funicular serving the Lavra route between Largo da Anunciada and Rua Câmara Pestana.",
+          "sourceIds": ["source-03", "source-09"]
+        },
+        {
+          "poiId": "porto-guindais",
+          "tier": "cold",
+          "text": "Funicular dos Guindais is a themed comparison candidate: Named cable-hauled funicular connecting Porto's Batalha area with the Ribeira riverfront.",
+          "sourceIds": ["source-04", "source-09"]
+        },
+        {
+          "poiId": "nazare-funicular",
+          "tier": "cold",
+          "text": "Funicular de Nazaré is a themed comparison candidate: Named public passenger funicular connecting Nazaré's lower town with the Sítio district.",
+          "sourceIds": ["source-05", "source-09"]
+        },
+        {
+          "poiId": "paris-montmartre",
+          "tier": "hot",
+          "text": "Funiculaire de Montmartre is a themed comparison candidate: Named urban funicular serving the Montmartre hillside between Boulevard de Rochechouart and Sacré-Cœur.",
+          "sourceIds": ["source-06", "source-09"]
+        },
+        {
+          "poiId": "budapest-buda-castle",
+          "tier": "warm",
+          "text": "Budavári Sikló is a themed comparison candidate: Named public funicular connecting Clark Ádám tér with Buda Castle on fixed inclined rails.",
+          "sourceIds": ["source-07", "source-09"]
+        },
+        {
+          "poiId": "zagreb-uspijaca",
+          "tier": "warm",
+          "text": "Zagrebačka uspinjača is a themed comparison candidate: Named urban funicular linking the Lower Town and Upper Town of Zagreb.",
+          "sourceIds": ["source-08", "source-09"]
+        },
+        {
+          "poiId": "istanbul-tunel",
+          "tier": "correct",
+          "text": "Tünel is the round target: Named underground funicular railway providing scheduled public transport between Karaköy and Beyoğlu.",
+          "sourceIds": ["source-09"]
+        },
+        {
+          "poiId": "istanbul-f1",
+          "tier": "hot",
+          "text": "F1 Taksim–Kabataş Funicular is a themed comparison candidate: Named modern urban funicular line connecting Taksim Square with Kabataş transit facilities.",
+          "sourceIds": ["source-10", "source-09"]
+        },
+        {
+          "poiId": "naples-montesanto",
+          "tier": "warm",
+          "text": "Funicolare di Montesanto is a themed comparison candidate: Named Naples public funicular serving the Montesanto route and interchange.",
+          "sourceIds": ["source-11", "source-09"]
+        },
+        {
+          "poiId": "naples-chiaia",
+          "tier": "warm",
+          "text": "Funicolare di Chiaia is a themed comparison candidate: Named Naples urban funicular connecting the Chiaia district with Vomero.",
+          "sourceIds": ["source-12", "source-09"]
+        },
+        {
+          "poiId": "naples-mergellina",
+          "tier": "warm",
+          "text": "Funicolare di Mergellina is a themed comparison candidate: Named public funicular railway serving Naples between Mergellina and the Vomero hillside.",
+          "sourceIds": ["source-13", "source-09"]
+        },
+        {
+          "poiId": "naples-centrale",
+          "tier": "hot",
+          "text": "Funicolare Centrale is a themed comparison candidate: Named central Naples funicular connecting Via Toledo with the Vomero district.",
+          "sourceIds": ["source-14", "source-09"]
+        },
+        {
+          "poiId": "barcelona-montjuic",
+          "tier": "hot",
+          "text": "Funicular de Montjuïc is a themed comparison candidate: Named Barcelona public funicular connecting the Paral·lel metro interchange with Montjuïc.",
+          "sourceIds": ["source-15", "source-09"]
+        },
+        {
+          "poiId": "barcelona-vallvidrera",
+          "tier": "cold",
+          "text": "Funicular de Vallvidrera is a themed comparison candidate: Named scheduled urban funicular connecting Peu del Funicular with Vallvidrera in Barcelona.",
+          "sourceIds": ["source-16", "source-09"]
+        },
+        {
+          "poiId": "bilbao-artxanda",
+          "tier": "cold",
+          "text": "Funicular de Artxanda is a themed comparison candidate: Named Bilbao funicular providing regular passenger service from the city to Mount Artxanda.",
+          "sourceIds": ["source-17", "source-09"]
+        },
+        {
+          "poiId": "valparaiso-concepcion",
+          "tier": "cold",
+          "text": "Ascensor Concepción is a themed comparison candidate: Named urban ascensor using cable-hauled rail vehicles on the Concepción hillside in Valparaíso.",
+          "sourceIds": ["source-18", "source-09"]
+        },
+        {
+          "poiId": "valparaiso-el-peral",
+          "tier": "cold",
+          "text": "Ascensor El Peral is a themed comparison candidate: Named Valparaíso ascensor serving Cerro Alegre with cable-hauled cars on fixed inclined rails.",
+          "sourceIds": ["source-19", "source-09"]
+        },
+        {
+          "poiId": "pittsburgh-monongahela",
+          "tier": "cold",
+          "text": "Monongahela Incline is a themed comparison candidate: Named cable-hauled inclined railway providing scheduled public passenger service in Pittsburgh.",
+          "sourceIds": ["source-20", "source-09"]
+        },
+        {
+          "poiId": "pittsburgh-duquesne",
+          "tier": "cold",
+          "text": "Duquesne Incline is a themed comparison candidate: Named operating cable railway on fixed rails between Pittsburgh's riverfront and Mount Washington.",
+          "sourceIds": ["source-21", "source-09"]
+        },
+        {
+          "poiId": "wiesbaden-neroberg",
+          "tier": "cold",
+          "text": "Nerobergbahn is a themed comparison candidate: Named water-ballast funicular serving Wiesbaden's Neroberg hill as a regularly open visitor railway.",
+          "sourceIds": ["source-22", "source-09"]
+        },
+        {
+          "poiId": "tbilisi-funicular",
+          "tier": "cold",
+          "text": "Tbilisi Funicular is a themed comparison candidate: Named cable railway carrying scheduled passengers up Mtatsminda within Tbilisi.",
+          "sourceIds": ["source-23", "source-09"]
+        },
+        {
+          "poiId": "kobe-maya-cable",
+          "tier": "cold",
+          "text": "Maya Cable is a themed comparison candidate: Named Japanese cable railway with fixed-rail cars climbing Mount Maya from an urban Kobe terminal.",
+          "sourceIds": ["source-24", "source-09"]
+        },
+        {
+          "poiId": "fribourg-funicular",
+          "tier": "cold",
+          "text": "Funiculaire de Fribourg is a themed comparison candidate: Named water-powered funicular connecting Fribourg's lower Neuveville district with the upper city.",
+          "sourceIds": ["source-25", "source-09"]
+        }
+      ]
+    },
+    {
+      "id": "round-2",
+      "targetPoiId": "wiesbaden-neroberg",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Wiesbaden_Nerobergbahn_ESWE_Verkehrsbetriebe_auf_Viadukt_von_1907_von_Talstation_zum_Hausberg_Foto_2008_Wolfgang_Pehlemann_Wiesbaden_0ICT0061.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Nerobergbahn",
+        "attribution": "Wolfgang Pehlemann Wiesbaden Germany · CC BY-SA 3.0 de",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"
+      },
+      "clue": {
+        "text": "Find the visitor railway opened in 1888 whose downhill car is loaded with up to 7,000 litres of water, hauling the other car up a 452-metre line at a maximum 26% gradient.",
+        "sourceIds": ["source-22"]
+      },
+      "results": [
+        {
+          "poiId": "lisbon-bica",
+          "tier": "cold",
+          "text": "Ascensor da Bica is a themed comparison candidate: Named urban funicular operating on fixed rails between Rua de Santa Catarina and Rua da Bica de Duarte Belo.",
+          "sourceIds": ["source-01", "source-22"]
+        },
+        {
+          "poiId": "lisbon-gloria",
+          "tier": "cold",
+          "text": "Ascensor da Glória is a themed comparison candidate: Named public funicular linking Praça dos Restauradores with the Bairro Alto area on fixed rails.",
+          "sourceIds": ["source-02", "source-22"]
+        },
+        {
+          "poiId": "lisbon-lavra",
+          "tier": "cold",
+          "text": "Ascensor do Lavra is a themed comparison candidate: Named urban funicular serving the Lavra route between Largo da Anunciada and Rua Câmara Pestana.",
+          "sourceIds": ["source-03", "source-22"]
+        },
+        {
+          "poiId": "porto-guindais",
+          "tier": "warm",
+          "text": "Funicular dos Guindais is a themed comparison candidate: Named cable-hauled funicular connecting Porto's Batalha area with the Ribeira riverfront.",
+          "sourceIds": ["source-04", "source-22"]
+        },
+        {
+          "poiId": "nazare-funicular",
+          "tier": "warm",
+          "text": "Funicular de Nazaré is a themed comparison candidate: Named public passenger funicular connecting Nazaré's lower town with the Sítio district.",
+          "sourceIds": ["source-05", "source-22"]
+        },
+        {
+          "poiId": "paris-montmartre",
+          "tier": "warm",
+          "text": "Funiculaire de Montmartre is a themed comparison candidate: Named urban funicular serving the Montmartre hillside between Boulevard de Rochechouart and Sacré-Cœur.",
+          "sourceIds": ["source-06", "source-22"]
+        },
+        {
+          "poiId": "budapest-buda-castle",
+          "tier": "warm",
+          "text": "Budavári Sikló is a themed comparison candidate: Named public funicular connecting Clark Ádám tér with Buda Castle on fixed inclined rails.",
+          "sourceIds": ["source-07", "source-22"]
+        },
+        {
+          "poiId": "zagreb-uspijaca",
+          "tier": "cold",
+          "text": "Zagrebačka uspinjača is a themed comparison candidate: Named urban funicular linking the Lower Town and Upper Town of Zagreb.",
+          "sourceIds": ["source-08", "source-22"]
+        },
+        {
+          "poiId": "istanbul-tunel",
+          "tier": "cold",
+          "text": "Tünel is a themed comparison candidate: Named underground funicular railway providing scheduled public transport between Karaköy and Beyoğlu.",
+          "sourceIds": ["source-09", "source-22"]
+        },
+        {
+          "poiId": "istanbul-f1",
+          "tier": "cold",
+          "text": "F1 Taksim–Kabataş Funicular is a themed comparison candidate: Named modern urban funicular line connecting Taksim Square with Kabataş transit facilities.",
+          "sourceIds": ["source-10", "source-22"]
+        },
+        {
+          "poiId": "naples-montesanto",
+          "tier": "cold",
+          "text": "Funicolare di Montesanto is a themed comparison candidate: Named Naples public funicular serving the Montesanto route and interchange.",
+          "sourceIds": ["source-11", "source-22"]
+        },
+        {
+          "poiId": "naples-chiaia",
+          "tier": "cold",
+          "text": "Funicolare di Chiaia is a themed comparison candidate: Named Naples urban funicular connecting the Chiaia district with Vomero.",
+          "sourceIds": ["source-12", "source-22"]
+        },
+        {
+          "poiId": "naples-mergellina",
+          "tier": "cold",
+          "text": "Funicolare di Mergellina is a themed comparison candidate: Named public funicular railway serving Naples between Mergellina and the Vomero hillside.",
+          "sourceIds": ["source-13", "source-22"]
+        },
+        {
+          "poiId": "naples-centrale",
+          "tier": "cold",
+          "text": "Funicolare Centrale is a themed comparison candidate: Named central Naples funicular connecting Via Toledo with the Vomero district.",
+          "sourceIds": ["source-14", "source-22"]
+        },
+        {
+          "poiId": "barcelona-montjuic",
+          "tier": "cold",
+          "text": "Funicular de Montjuïc is a themed comparison candidate: Named Barcelona public funicular connecting the Paral·lel metro interchange with Montjuïc.",
+          "sourceIds": ["source-15", "source-22"]
+        },
+        {
+          "poiId": "barcelona-vallvidrera",
+          "tier": "cold",
+          "text": "Funicular de Vallvidrera is a themed comparison candidate: Named scheduled urban funicular connecting Peu del Funicular with Vallvidrera in Barcelona.",
+          "sourceIds": ["source-16", "source-22"]
+        },
+        {
+          "poiId": "bilbao-artxanda",
+          "tier": "warm",
+          "text": "Funicular de Artxanda is a themed comparison candidate: Named Bilbao funicular providing regular passenger service from the city to Mount Artxanda.",
+          "sourceIds": ["source-17", "source-22"]
+        },
+        {
+          "poiId": "valparaiso-concepcion",
+          "tier": "hot",
+          "text": "Ascensor Concepción is a themed comparison candidate: Named urban ascensor using cable-hauled rail vehicles on the Concepción hillside in Valparaíso.",
+          "sourceIds": ["source-18", "source-22"]
+        },
+        {
+          "poiId": "valparaiso-el-peral",
+          "tier": "hot",
+          "text": "Ascensor El Peral is a themed comparison candidate: Named Valparaíso ascensor serving Cerro Alegre with cable-hauled cars on fixed inclined rails.",
+          "sourceIds": ["source-19", "source-22"]
+        },
+        {
+          "poiId": "pittsburgh-monongahela",
+          "tier": "warm",
+          "text": "Monongahela Incline is a themed comparison candidate: Named cable-hauled inclined railway providing scheduled public passenger service in Pittsburgh.",
+          "sourceIds": ["source-20", "source-22"]
+        },
+        {
+          "poiId": "pittsburgh-duquesne",
+          "tier": "warm",
+          "text": "Duquesne Incline is a themed comparison candidate: Named operating cable railway on fixed rails between Pittsburgh's riverfront and Mount Washington.",
+          "sourceIds": ["source-21", "source-22"]
+        },
+        {
+          "poiId": "wiesbaden-neroberg",
+          "tier": "correct",
+          "text": "Nerobergbahn is the round target: Named water-ballast funicular serving Wiesbaden's Neroberg hill as a regularly open visitor railway.",
+          "sourceIds": ["source-22"]
+        },
+        {
+          "poiId": "tbilisi-funicular",
+          "tier": "warm",
+          "text": "Tbilisi Funicular is a themed comparison candidate: Named cable railway carrying scheduled passengers up Mtatsminda within Tbilisi.",
+          "sourceIds": ["source-23", "source-22"]
+        },
+        {
+          "poiId": "kobe-maya-cable",
+          "tier": "hot",
+          "text": "Maya Cable is a themed comparison candidate: Named Japanese cable railway with fixed-rail cars climbing Mount Maya from an urban Kobe terminal.",
+          "sourceIds": ["source-24", "source-22"]
+        },
+        {
+          "poiId": "fribourg-funicular",
+          "tier": "hot",
+          "text": "Funiculaire de Fribourg is a themed comparison candidate: Named water-powered funicular connecting Fribourg's lower Neuveville district with the upper city.",
+          "sourceIds": ["source-25", "source-22"]
+        }
+      ]
+    },
+    {
+      "id": "round-3",
+      "targetPoiId": "fribourg-funicular",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Fribourg_funicular.jpg/1280px-Fribourg_funicular.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Fribourg funicular",
+        "attribution": "User:Pakeha · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "clue": {
+        "text": "Which line, opened in 1899, uses wastewater from the upper district as ballast? Its two opposing Von Roll cabins connect Saint-Pierre and Neuveville, dumping the water into the lower district’s sewer.",
+        "sourceIds": ["source-25"]
+      },
+      "results": [
+        {
+          "poiId": "lisbon-bica",
+          "tier": "cold",
+          "text": "Ascensor da Bica is a themed comparison candidate: Named urban funicular operating on fixed rails between Rua de Santa Catarina and Rua da Bica de Duarte Belo.",
+          "sourceIds": ["source-01", "source-25"]
+        },
+        {
+          "poiId": "lisbon-gloria",
+          "tier": "cold",
+          "text": "Ascensor da Glória is a themed comparison candidate: Named public funicular linking Praça dos Restauradores with the Bairro Alto area on fixed rails.",
+          "sourceIds": ["source-02", "source-25"]
+        },
+        {
+          "poiId": "lisbon-lavra",
+          "tier": "cold",
+          "text": "Ascensor do Lavra is a themed comparison candidate: Named urban funicular serving the Lavra route between Largo da Anunciada and Rua Câmara Pestana.",
+          "sourceIds": ["source-03", "source-25"]
+        },
+        {
+          "poiId": "porto-guindais",
+          "tier": "hot",
+          "text": "Funicular dos Guindais is a themed comparison candidate: Named cable-hauled funicular connecting Porto's Batalha area with the Ribeira riverfront.",
+          "sourceIds": ["source-04", "source-25"]
+        },
+        {
+          "poiId": "nazare-funicular",
+          "tier": "warm",
+          "text": "Funicular de Nazaré is a themed comparison candidate: Named public passenger funicular connecting Nazaré's lower town with the Sítio district.",
+          "sourceIds": ["source-05", "source-25"]
+        },
+        {
+          "poiId": "paris-montmartre",
+          "tier": "cold",
+          "text": "Funiculaire de Montmartre is a themed comparison candidate: Named urban funicular serving the Montmartre hillside between Boulevard de Rochechouart and Sacré-Cœur.",
+          "sourceIds": ["source-06", "source-25"]
+        },
+        {
+          "poiId": "budapest-buda-castle",
+          "tier": "warm",
+          "text": "Budavári Sikló is a themed comparison candidate: Named public funicular connecting Clark Ádám tér with Buda Castle on fixed inclined rails.",
+          "sourceIds": ["source-07", "source-25"]
+        },
+        {
+          "poiId": "zagreb-uspijaca",
+          "tier": "warm",
+          "text": "Zagrebačka uspinjača is a themed comparison candidate: Named urban funicular linking the Lower Town and Upper Town of Zagreb.",
+          "sourceIds": ["source-08", "source-25"]
+        },
+        {
+          "poiId": "istanbul-tunel",
+          "tier": "cold",
+          "text": "Tünel is a themed comparison candidate: Named underground funicular railway providing scheduled public transport between Karaköy and Beyoğlu.",
+          "sourceIds": ["source-09", "source-25"]
+        },
+        {
+          "poiId": "istanbul-f1",
+          "tier": "cold",
+          "text": "F1 Taksim–Kabataş Funicular is a themed comparison candidate: Named modern urban funicular line connecting Taksim Square with Kabataş transit facilities.",
+          "sourceIds": ["source-10", "source-25"]
+        },
+        {
+          "poiId": "naples-montesanto",
+          "tier": "cold",
+          "text": "Funicolare di Montesanto is a themed comparison candidate: Named Naples public funicular serving the Montesanto route and interchange.",
+          "sourceIds": ["source-11", "source-25"]
+        },
+        {
+          "poiId": "naples-chiaia",
+          "tier": "cold",
+          "text": "Funicolare di Chiaia is a themed comparison candidate: Named Naples urban funicular connecting the Chiaia district with Vomero.",
+          "sourceIds": ["source-12", "source-25"]
+        },
+        {
+          "poiId": "naples-mergellina",
+          "tier": "cold",
+          "text": "Funicolare di Mergellina is a themed comparison candidate: Named public funicular railway serving Naples between Mergellina and the Vomero hillside.",
+          "sourceIds": ["source-13", "source-25"]
+        },
+        {
+          "poiId": "naples-centrale",
+          "tier": "cold",
+          "text": "Funicolare Centrale is a themed comparison candidate: Named central Naples funicular connecting Via Toledo with the Vomero district.",
+          "sourceIds": ["source-14", "source-25"]
+        },
+        {
+          "poiId": "barcelona-montjuic",
+          "tier": "cold",
+          "text": "Funicular de Montjuïc is a themed comparison candidate: Named Barcelona public funicular connecting the Paral·lel metro interchange with Montjuïc.",
+          "sourceIds": ["source-15", "source-25"]
+        },
+        {
+          "poiId": "barcelona-vallvidrera",
+          "tier": "cold",
+          "text": "Funicular de Vallvidrera is a themed comparison candidate: Named scheduled urban funicular connecting Peu del Funicular with Vallvidrera in Barcelona.",
+          "sourceIds": ["source-16", "source-25"]
+        },
+        {
+          "poiId": "bilbao-artxanda",
+          "tier": "warm",
+          "text": "Funicular de Artxanda is a themed comparison candidate: Named Bilbao funicular providing regular passenger service from the city to Mount Artxanda.",
+          "sourceIds": ["source-17", "source-25"]
+        },
+        {
+          "poiId": "valparaiso-concepcion",
+          "tier": "hot",
+          "text": "Ascensor Concepción is a themed comparison candidate: Named urban ascensor using cable-hauled rail vehicles on the Concepción hillside in Valparaíso.",
+          "sourceIds": ["source-18", "source-25"]
+        },
+        {
+          "poiId": "valparaiso-el-peral",
+          "tier": "hot",
+          "text": "Ascensor El Peral is a themed comparison candidate: Named Valparaíso ascensor serving Cerro Alegre with cable-hauled cars on fixed inclined rails.",
+          "sourceIds": ["source-19", "source-25"]
+        },
+        {
+          "poiId": "pittsburgh-monongahela",
+          "tier": "warm",
+          "text": "Monongahela Incline is a themed comparison candidate: Named cable-hauled inclined railway providing scheduled public passenger service in Pittsburgh.",
+          "sourceIds": ["source-20", "source-25"]
+        },
+        {
+          "poiId": "pittsburgh-duquesne",
+          "tier": "warm",
+          "text": "Duquesne Incline is a themed comparison candidate: Named operating cable railway on fixed rails between Pittsburgh's riverfront and Mount Washington.",
+          "sourceIds": ["source-21", "source-25"]
+        },
+        {
+          "poiId": "wiesbaden-neroberg",
+          "tier": "hot",
+          "text": "Nerobergbahn is a themed comparison candidate: Named water-ballast funicular serving Wiesbaden's Neroberg hill as a regularly open visitor railway.",
+          "sourceIds": ["source-22", "source-25"]
+        },
+        {
+          "poiId": "tbilisi-funicular",
+          "tier": "warm",
+          "text": "Tbilisi Funicular is a themed comparison candidate: Named cable railway carrying scheduled passengers up Mtatsminda within Tbilisi.",
+          "sourceIds": ["source-23", "source-25"]
+        },
+        {
+          "poiId": "kobe-maya-cable",
+          "tier": "warm",
+          "text": "Maya Cable is a themed comparison candidate: Named Japanese cable railway with fixed-rail cars climbing Mount Maya from an urban Kobe terminal.",
+          "sourceIds": ["source-24", "source-25"]
+        },
+        {
+          "poiId": "fribourg-funicular",
+          "tier": "correct",
+          "text": "Funiculaire de Fribourg is the round target: Named water-powered funicular connecting Fribourg's lower Neuveville district with the upper city.",
+          "sourceIds": ["source-25"]
+        }
+      ]
+    },
+    {
+      "id": "round-4",
+      "targetPoiId": "valparaiso-concepcion",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Ascensor_2.JPG/1280px-Ascensor_2.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Ascensor Concepción",
+        "attribution": "Ccaba77 · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "clue": {
+        "text": "Identify the oldest line in its local hillside system, inaugurated in 1883 and later declared a Historic Monument. It climbs a 69-metre, 46-degree slope from Elías Alley to Gervasoni Promenade.",
+        "sourceIds": ["source-18"]
+      },
+      "results": [
+        {
+          "poiId": "lisbon-bica",
+          "tier": "cold",
+          "text": "Ascensor da Bica is a themed comparison candidate: Named urban funicular operating on fixed rails between Rua de Santa Catarina and Rua da Bica de Duarte Belo.",
+          "sourceIds": ["source-01", "source-18"]
+        },
+        {
+          "poiId": "lisbon-gloria",
+          "tier": "cold",
+          "text": "Ascensor da Glória is a themed comparison candidate: Named public funicular linking Praça dos Restauradores with the Bairro Alto area on fixed rails.",
+          "sourceIds": ["source-02", "source-18"]
+        },
+        {
+          "poiId": "lisbon-lavra",
+          "tier": "cold",
+          "text": "Ascensor do Lavra is a themed comparison candidate: Named urban funicular serving the Lavra route between Largo da Anunciada and Rua Câmara Pestana.",
+          "sourceIds": ["source-03", "source-18"]
+        },
+        {
+          "poiId": "porto-guindais",
+          "tier": "warm",
+          "text": "Funicular dos Guindais is a themed comparison candidate: Named cable-hauled funicular connecting Porto's Batalha area with the Ribeira riverfront.",
+          "sourceIds": ["source-04", "source-18"]
+        },
+        {
+          "poiId": "nazare-funicular",
+          "tier": "warm",
+          "text": "Funicular de Nazaré is a themed comparison candidate: Named public passenger funicular connecting Nazaré's lower town with the Sítio district.",
+          "sourceIds": ["source-05", "source-18"]
+        },
+        {
+          "poiId": "paris-montmartre",
+          "tier": "cold",
+          "text": "Funiculaire de Montmartre is a themed comparison candidate: Named urban funicular serving the Montmartre hillside between Boulevard de Rochechouart and Sacré-Cœur.",
+          "sourceIds": ["source-06", "source-18"]
+        },
+        {
+          "poiId": "budapest-buda-castle",
+          "tier": "warm",
+          "text": "Budavári Sikló is a themed comparison candidate: Named public funicular connecting Clark Ádám tér with Buda Castle on fixed inclined rails.",
+          "sourceIds": ["source-07", "source-18"]
+        },
+        {
+          "poiId": "zagreb-uspijaca",
+          "tier": "warm",
+          "text": "Zagrebačka uspinjača is a themed comparison candidate: Named urban funicular linking the Lower Town and Upper Town of Zagreb.",
+          "sourceIds": ["source-08", "source-18"]
+        },
+        {
+          "poiId": "istanbul-tunel",
+          "tier": "cold",
+          "text": "Tünel is a themed comparison candidate: Named underground funicular railway providing scheduled public transport between Karaköy and Beyoğlu.",
+          "sourceIds": ["source-09", "source-18"]
+        },
+        {
+          "poiId": "istanbul-f1",
+          "tier": "cold",
+          "text": "F1 Taksim–Kabataş Funicular is a themed comparison candidate: Named modern urban funicular line connecting Taksim Square with Kabataş transit facilities.",
+          "sourceIds": ["source-10", "source-18"]
+        },
+        {
+          "poiId": "naples-montesanto",
+          "tier": "cold",
+          "text": "Funicolare di Montesanto is a themed comparison candidate: Named Naples public funicular serving the Montesanto route and interchange.",
+          "sourceIds": ["source-11", "source-18"]
+        },
+        {
+          "poiId": "naples-chiaia",
+          "tier": "cold",
+          "text": "Funicolare di Chiaia is a themed comparison candidate: Named Naples urban funicular connecting the Chiaia district with Vomero.",
+          "sourceIds": ["source-12", "source-18"]
+        },
+        {
+          "poiId": "naples-mergellina",
+          "tier": "cold",
+          "text": "Funicolare di Mergellina is a themed comparison candidate: Named public funicular railway serving Naples between Mergellina and the Vomero hillside.",
+          "sourceIds": ["source-13", "source-18"]
+        },
+        {
+          "poiId": "naples-centrale",
+          "tier": "cold",
+          "text": "Funicolare Centrale is a themed comparison candidate: Named central Naples funicular connecting Via Toledo with the Vomero district.",
+          "sourceIds": ["source-14", "source-18"]
+        },
+        {
+          "poiId": "barcelona-montjuic",
+          "tier": "cold",
+          "text": "Funicular de Montjuïc is a themed comparison candidate: Named Barcelona public funicular connecting the Paral·lel metro interchange with Montjuïc.",
+          "sourceIds": ["source-15", "source-18"]
+        },
+        {
+          "poiId": "barcelona-vallvidrera",
+          "tier": "cold",
+          "text": "Funicular de Vallvidrera is a themed comparison candidate: Named scheduled urban funicular connecting Peu del Funicular with Vallvidrera in Barcelona.",
+          "sourceIds": ["source-16", "source-18"]
+        },
+        {
+          "poiId": "bilbao-artxanda",
+          "tier": "warm",
+          "text": "Funicular de Artxanda is a themed comparison candidate: Named Bilbao funicular providing regular passenger service from the city to Mount Artxanda.",
+          "sourceIds": ["source-17", "source-18"]
+        },
+        {
+          "poiId": "valparaiso-concepcion",
+          "tier": "correct",
+          "text": "Ascensor Concepción is the round target: Named urban ascensor using cable-hauled rail vehicles on the Concepción hillside in Valparaíso.",
+          "sourceIds": ["source-18"]
+        },
+        {
+          "poiId": "valparaiso-el-peral",
+          "tier": "hot",
+          "text": "Ascensor El Peral is a themed comparison candidate: Named Valparaíso ascensor serving Cerro Alegre with cable-hauled cars on fixed inclined rails.",
+          "sourceIds": ["source-19", "source-18"]
+        },
+        {
+          "poiId": "pittsburgh-monongahela",
+          "tier": "hot",
+          "text": "Monongahela Incline is a themed comparison candidate: Named cable-hauled inclined railway providing scheduled public passenger service in Pittsburgh.",
+          "sourceIds": ["source-20", "source-18"]
+        },
+        {
+          "poiId": "pittsburgh-duquesne",
+          "tier": "warm",
+          "text": "Duquesne Incline is a themed comparison candidate: Named operating cable railway on fixed rails between Pittsburgh's riverfront and Mount Washington.",
+          "sourceIds": ["source-21", "source-18"]
+        },
+        {
+          "poiId": "wiesbaden-neroberg",
+          "tier": "hot",
+          "text": "Nerobergbahn is a themed comparison candidate: Named water-ballast funicular serving Wiesbaden's Neroberg hill as a regularly open visitor railway.",
+          "sourceIds": ["source-22", "source-18"]
+        },
+        {
+          "poiId": "tbilisi-funicular",
+          "tier": "warm",
+          "text": "Tbilisi Funicular is a themed comparison candidate: Named cable railway carrying scheduled passengers up Mtatsminda within Tbilisi.",
+          "sourceIds": ["source-23", "source-18"]
+        },
+        {
+          "poiId": "kobe-maya-cable",
+          "tier": "warm",
+          "text": "Maya Cable is a themed comparison candidate: Named Japanese cable railway with fixed-rail cars climbing Mount Maya from an urban Kobe terminal.",
+          "sourceIds": ["source-24", "source-18"]
+        },
+        {
+          "poiId": "fribourg-funicular",
+          "tier": "hot",
+          "text": "Funiculaire de Fribourg is a themed comparison candidate: Named water-powered funicular connecting Fribourg's lower Neuveville district with the upper city.",
+          "sourceIds": ["source-25", "source-18"]
+        }
+      ]
+    },
+    {
+      "id": "round-5",
+      "targetPoiId": "kobe-maya-cable",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Kobe_maya_cablecar03_2816.jpg/1280px-Kobe_maya_cablecar03_2816.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Maya Cablecar",
+        "attribution": "663highland · CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
+      },
+      "clue": {
+        "text": "Find the fixed-rail mountain line opened in 1925, originally built to serve a temple and now paired with a ropeway for scenic views. It is operated by a public city corporation.",
+        "sourceIds": ["source-24"]
+      },
+      "results": [
+        {
+          "poiId": "lisbon-bica",
+          "tier": "cold",
+          "text": "Ascensor da Bica is a themed comparison candidate: Named urban funicular operating on fixed rails between Rua de Santa Catarina and Rua da Bica de Duarte Belo.",
+          "sourceIds": ["source-01", "source-24"]
+        },
+        {
+          "poiId": "lisbon-gloria",
+          "tier": "cold",
+          "text": "Ascensor da Glória is a themed comparison candidate: Named public funicular linking Praça dos Restauradores with the Bairro Alto area on fixed rails.",
+          "sourceIds": ["source-02", "source-24"]
+        },
+        {
+          "poiId": "lisbon-lavra",
+          "tier": "cold",
+          "text": "Ascensor do Lavra is a themed comparison candidate: Named urban funicular serving the Lavra route between Largo da Anunciada and Rua Câmara Pestana.",
+          "sourceIds": ["source-03", "source-24"]
+        },
+        {
+          "poiId": "porto-guindais",
+          "tier": "warm",
+          "text": "Funicular dos Guindais is a themed comparison candidate: Named cable-hauled funicular connecting Porto's Batalha area with the Ribeira riverfront.",
+          "sourceIds": ["source-04", "source-24"]
+        },
+        {
+          "poiId": "nazare-funicular",
+          "tier": "warm",
+          "text": "Funicular de Nazaré is a themed comparison candidate: Named public passenger funicular connecting Nazaré's lower town with the Sítio district.",
+          "sourceIds": ["source-05", "source-24"]
+        },
+        {
+          "poiId": "paris-montmartre",
+          "tier": "warm",
+          "text": "Funiculaire de Montmartre is a themed comparison candidate: Named urban funicular serving the Montmartre hillside between Boulevard de Rochechouart and Sacré-Cœur.",
+          "sourceIds": ["source-06", "source-24"]
+        },
+        {
+          "poiId": "budapest-buda-castle",
+          "tier": "warm",
+          "text": "Budavári Sikló is a themed comparison candidate: Named public funicular connecting Clark Ádám tér with Buda Castle on fixed inclined rails.",
+          "sourceIds": ["source-07", "source-24"]
+        },
+        {
+          "poiId": "zagreb-uspijaca",
+          "tier": "warm",
+          "text": "Zagrebačka uspinjača is a themed comparison candidate: Named urban funicular linking the Lower Town and Upper Town of Zagreb.",
+          "sourceIds": ["source-08", "source-24"]
+        },
+        {
+          "poiId": "istanbul-tunel",
+          "tier": "cold",
+          "text": "Tünel is a themed comparison candidate: Named underground funicular railway providing scheduled public transport between Karaköy and Beyoğlu.",
+          "sourceIds": ["source-09", "source-24"]
+        },
+        {
+          "poiId": "istanbul-f1",
+          "tier": "cold",
+          "text": "F1 Taksim–Kabataş Funicular is a themed comparison candidate: Named modern urban funicular line connecting Taksim Square with Kabataş transit facilities.",
+          "sourceIds": ["source-10", "source-24"]
+        },
+        {
+          "poiId": "naples-montesanto",
+          "tier": "cold",
+          "text": "Funicolare di Montesanto is a themed comparison candidate: Named Naples public funicular serving the Montesanto route and interchange.",
+          "sourceIds": ["source-11", "source-24"]
+        },
+        {
+          "poiId": "naples-chiaia",
+          "tier": "cold",
+          "text": "Funicolare di Chiaia is a themed comparison candidate: Named Naples urban funicular connecting the Chiaia district with Vomero.",
+          "sourceIds": ["source-12", "source-24"]
+        },
+        {
+          "poiId": "naples-mergellina",
+          "tier": "cold",
+          "text": "Funicolare di Mergellina is a themed comparison candidate: Named public funicular railway serving Naples between Mergellina and the Vomero hillside.",
+          "sourceIds": ["source-13", "source-24"]
+        },
+        {
+          "poiId": "naples-centrale",
+          "tier": "cold",
+          "text": "Funicolare Centrale is a themed comparison candidate: Named central Naples funicular connecting Via Toledo with the Vomero district.",
+          "sourceIds": ["source-14", "source-24"]
+        },
+        {
+          "poiId": "barcelona-montjuic",
+          "tier": "cold",
+          "text": "Funicular de Montjuïc is a themed comparison candidate: Named Barcelona public funicular connecting the Paral·lel metro interchange with Montjuïc.",
+          "sourceIds": ["source-15", "source-24"]
+        },
+        {
+          "poiId": "barcelona-vallvidrera",
+          "tier": "cold",
+          "text": "Funicular de Vallvidrera is a themed comparison candidate: Named scheduled urban funicular connecting Peu del Funicular with Vallvidrera in Barcelona.",
+          "sourceIds": ["source-16", "source-24"]
+        },
+        {
+          "poiId": "bilbao-artxanda",
+          "tier": "hot",
+          "text": "Funicular de Artxanda is a themed comparison candidate: Named Bilbao funicular providing regular passenger service from the city to Mount Artxanda.",
+          "sourceIds": ["source-17", "source-24"]
+        },
+        {
+          "poiId": "valparaiso-concepcion",
+          "tier": "hot",
+          "text": "Ascensor Concepción is a themed comparison candidate: Named urban ascensor using cable-hauled rail vehicles on the Concepción hillside in Valparaíso.",
+          "sourceIds": ["source-18", "source-24"]
+        },
+        {
+          "poiId": "valparaiso-el-peral",
+          "tier": "warm",
+          "text": "Ascensor El Peral is a themed comparison candidate: Named Valparaíso ascensor serving Cerro Alegre with cable-hauled cars on fixed inclined rails.",
+          "sourceIds": ["source-19", "source-24"]
+        },
+        {
+          "poiId": "pittsburgh-monongahela",
+          "tier": "warm",
+          "text": "Monongahela Incline is a themed comparison candidate: Named cable-hauled inclined railway providing scheduled public passenger service in Pittsburgh.",
+          "sourceIds": ["source-20", "source-24"]
+        },
+        {
+          "poiId": "pittsburgh-duquesne",
+          "tier": "warm",
+          "text": "Duquesne Incline is a themed comparison candidate: Named operating cable railway on fixed rails between Pittsburgh's riverfront and Mount Washington.",
+          "sourceIds": ["source-21", "source-24"]
+        },
+        {
+          "poiId": "wiesbaden-neroberg",
+          "tier": "hot",
+          "text": "Nerobergbahn is a themed comparison candidate: Named water-ballast funicular serving Wiesbaden's Neroberg hill as a regularly open visitor railway.",
+          "sourceIds": ["source-22", "source-24"]
+        },
+        {
+          "poiId": "tbilisi-funicular",
+          "tier": "hot",
+          "text": "Tbilisi Funicular is a themed comparison candidate: Named cable railway carrying scheduled passengers up Mtatsminda within Tbilisi.",
+          "sourceIds": ["source-23", "source-24"]
+        },
+        {
+          "poiId": "kobe-maya-cable",
+          "tier": "correct",
+          "text": "Maya Cable is the round target: Named Japanese cable railway with fixed-rail cars climbing Mount Maya from an urban Kobe terminal.",
+          "sourceIds": ["source-24"]
+        },
+        {
+          "poiId": "fribourg-funicular",
+          "tier": "cold",
+          "text": "Funiculaire de Fribourg is a themed comparison candidate: Named water-powered funicular connecting Fribourg's lower Neuveville district with the upper city.",
+          "sourceIds": ["source-25", "source-24"]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-01",
+      "title": "Bica Funicular",
+      "url": "https://en.wikipedia.org/wiki/Bica_Funicular",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-02",
+      "title": "Glória Funicular",
+      "url": "https://en.wikipedia.org/wiki/Gl%C3%B3ria_Funicular",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-03",
+      "title": "Lavra Funicular",
+      "url": "https://en.wikipedia.org/wiki/Lavra_Funicular",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-04",
+      "title": "Funicular dos Guindais",
+      "url": "https://en.wikipedia.org/wiki/Funicular_dos_Guindais",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-05",
+      "title": "Funicular of Nazaré",
+      "url": "https://en.wikipedia.org/wiki/Funicular_of_Nazar%C3%A9",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-06",
+      "title": "Montmartre Funicular",
+      "url": "https://en.wikipedia.org/wiki/Montmartre_Funicular",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-07",
+      "title": "Buda Castle Funicular",
+      "url": "https://en.wikipedia.org/wiki/Buda_Castle_Funicular",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-08",
+      "title": "Zagreb Funicular",
+      "url": "https://en.wikipedia.org/wiki/Zagreb_Funicular",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-09",
+      "title": "Tünel",
+      "url": "https://en.wikipedia.org/wiki/T%C3%BCnel",
+      "retrievedAt": "2026-08-18T03:09:01.036Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-10",
+      "title": "F1 (Istanbul Metro)",
+      "url": "https://en.wikipedia.org/wiki/F1_(Istanbul_Metro)",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-11",
+      "title": "Montesanto funicular",
+      "url": "https://en.wikipedia.org/wiki/Montesanto_funicular",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-12",
+      "title": "Chiaia Funicular",
+      "url": "https://en.wikipedia.org/wiki/Chiaia_Funicular",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-13",
+      "title": "Mergellina funicular",
+      "url": "https://en.wikipedia.org/wiki/Mergellina_funicular",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-14",
+      "title": "Central Funicular",
+      "url": "https://en.wikipedia.org/wiki/Central_Funicular",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-15",
+      "title": "Montjuïc Funicular",
+      "url": "https://en.wikipedia.org/wiki/Montju%C3%AFc_Funicular",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-16",
+      "title": "Vallvidrera Funicular",
+      "url": "https://en.wikipedia.org/wiki/Vallvidrera_Funicular",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-17",
+      "title": "Artxanda Funicular",
+      "url": "https://en.wikipedia.org/wiki/Artxanda_Funicular",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-18",
+      "title": "Ascensor Concepción",
+      "url": "https://en.wikipedia.org/wiki/Ascensor_Concepci%C3%B3n",
+      "retrievedAt": "2026-08-18T03:09:01.110Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-19",
+      "title": "Ascensor El Peral",
+      "url": "https://en.wikipedia.org/wiki/Ascensor_El_Peral",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-20",
+      "title": "Monongahela Incline",
+      "url": "https://en.wikipedia.org/wiki/Monongahela_Incline",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-21",
+      "title": "Duquesne Incline",
+      "url": "https://en.wikipedia.org/wiki/Duquesne_Incline",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-22",
+      "title": "Nerobergbahn",
+      "url": "https://en.wikipedia.org/wiki/Nerobergbahn",
+      "retrievedAt": "2026-08-18T03:09:01.024Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-23",
+      "title": "Tbilisi Funicular",
+      "url": "https://en.wikipedia.org/wiki/Tbilisi_Funicular",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-24",
+      "title": "Maya Cablecar",
+      "url": "https://en.wikipedia.org/wiki/Maya_Cablecar",
+      "retrievedAt": "2026-08-18T03:09:00.442Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-25",
+      "title": "Fribourg funicular",
+      "url": "https://en.wikipedia.org/wiki/Fribourg_funicular",
+      "retrievedAt": "2026-08-18T03:09:01.042Z",
+      "provenance": "verified"
+    }
+  ],
+  "theme": {
+    "title": "Operating Funicular Railways in Cities",
+    "introduction": "A daily map game about named urban funicular railways that are currently in regular public passenger service. Each answer is a specific railway or station, not merely a hill, viewpoint, or transit system. Plausible locations include the Funiculaire de Montmartre in Paris; the Fourvière and Saint-Just funiculars in Lyon; Lisbon’s Bica, Glória, and Lavra funiculars; Porto’s Funicular dos Guindais; the Buda Castle Funicular in Budapest; Prague’s Petřín Funicular; Istanbul’s Tünel and F1 lines; Naples’ Centrale, Chiaia, Mergellina, and Montesanto lines; Genoa’s Zecca–Righi and Sant’Anna funiculars; Bergamo’s Città Alta and San Vigilio funiculars; Barcelona’s Montjuïc and Vallvidrera funiculars; Zurich’s Polybahn; Bern’s Marzilibahn; Fribourg’s Funicular; Dresden’s Standseilbahn; Wiesbaden’s Nerobergbahn; Valparaíso’s El Peral, Reina Victoria, Concepción, and Artillería ascensores; Tbilisi Funicular; Kyiv Funicular; Baku Funicular; Kobe’s Maya and Rokko cable railways; and Hong Kong’s Peak Tram.",
+    "inclusionCriteria": "Include a location only when all conditions are met: (1) it is an individually named railway, funicular, ascensor, standseilbahn, cable railway, or equivalent officially recognized funicular service; (2) vehicles travel on fixed rails up a sustained incline and are hauled or counterbalanced by a cable, including accepted single-track or single-car funicular designs; (3) it provides regularly scheduled public passenger service on the date of play, whether operated as transit or as a regularly open visitor railway; (4) at least one station or terminal lies within the current administrative boundary of a present-day city or incorporated urban municipality; and (5) the railway or a specific station can be pinned as one exact, visitable map location."
+  }
+}

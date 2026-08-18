@@ -112,6 +112,20 @@ describe('validateCaseForPublication', () => {
     expect(validateCaseForPublication(value)).toEqual([]);
   });
 
+  it('does not match a short country code inside another word', () => {
+    const value = makeCase();
+    value.pois[0].country = 'US';
+    value.rounds[0].clue.text =
+      'This industrial landmark has a sufficiently specific historical clue.';
+    expect(validateCaseForPublication(value)).toEqual([]);
+
+    value.rounds[0].clue.text =
+      'This landmark is in the US and therefore leaks its country.';
+    expect(messages(value)).toContain(
+      'Pre-reveal text leaks target POI, destination, city, or country',
+    );
+  });
+
   it('rejects a round without a useful spread of similarity tiers', () => {
     const value = makeCase();
     value.rounds[0].results = value.rounds[0].results.map((result) =>

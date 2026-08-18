@@ -38,6 +38,8 @@ describe('planTheme', () => {
     expect(prompt).not.toContain('Previous theme 0');
     expect(prompt).toContain('Previous criteria 99');
     expect(prompt).toContain('at least 35 plausible locations');
+    expect(prompt).toContain('well-known');
+    expect(prompt).toContain('unambiguous');
     expect(prompt).toContain('3 to 12');
   });
 

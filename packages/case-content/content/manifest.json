@@ -1,4 +1,55 @@
 {
   "schemaVersion": 2,
-  "cases": {}
+  "cases": {
+    "2026-08-17": {
+      "caseNumber": 20682,
+      "revision": 1,
+      "file": "./cases/2026-08-17/v1.json"
+    },
+    "2026-08-18": {
+      "caseNumber": 20683,
+      "revision": 1,
+      "file": "./cases/2026-08-18/v1.json"
+    },
+    "2026-08-19": {
+      "caseNumber": 20684,
+      "revision": 1,
+      "file": "./cases/2026-08-19/v1.json"
+    },
+    "2026-08-20": {
+      "caseNumber": 20685,
+      "revision": 1,
+      "file": "./cases/2026-08-20/v1.json"
+    },
+    "2026-08-21": {
+      "caseNumber": 20686,
+      "revision": 1,
+      "file": "./cases/2026-08-21/v1.json"
+    },
+    "2026-08-22": {
+      "caseNumber": 20687,
+      "revision": 1,
+      "file": "./cases/2026-08-22/v1.json"
+    },
+    "2026-08-23": {
+      "caseNumber": 20688,
+      "revision": 1,
+      "file": "./cases/2026-08-23/v1.json"
+    },
+    "2026-08-24": {
+      "caseNumber": 20689,
+      "revision": 1,
+      "file": "./cases/2026-08-24/v1.json"
+    },
+    "2026-08-25": {
+      "caseNumber": 20690,
+      "revision": 1,
+      "file": "./cases/2026-08-25/v1.json"
+    },
+    "2026-08-26": {
+      "caseNumber": 20691,
+      "revision": 1,
+      "file": "./cases/2026-08-26/v1.json"
+    }
+  }
 }

@@ -1,11 +1,11 @@
 import { z } from 'zod';
 import {
   type CandidatePool,
-  candidatePoolSchema,
   type CuratedBoard,
+  candidatePoolSchema,
   curatedBoardSchema,
-  hydratedCandidateSchema,
   type HydratedCandidate,
+  hydratedCandidateSchema,
   type ResearchedCandidate,
   researchedCandidateSchema,
   type ThemePlan,
@@ -13,8 +13,30 @@ import {
 import type { LiveResearch } from './live-research.js';
 import type { StructuredModel } from './model.js';
 
+// OpenAI-compatible structured-output providers reject JSON Schema's `uri`
+// format. Keep the provider contract format-free, then apply the stricter
+// publication schema after generation.
+const modelCandidateSchema = z.object({
+  id: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
+  name: z.string().min(2),
+  city: z.string().min(1),
+  country: z.string().min(2),
+  wikipediaTitle: z.string().min(2),
+  themeClaim: z.string().min(20),
+  latitude: z.number().min(-90).max(90),
+  longitude: z.number().min(-180).max(180),
+  source: z.object({
+    title: z.string().min(1),
+    url: z.string().regex(/^https?:\/\/\S+$/),
+    retrievedAt: z
+      .string()
+      .regex(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z$/),
+    provenance: z.enum(['model', 'verified']),
+    extract: z.string().min(100),
+  }),
+});
 const proposalResponseSchema = z.object({
-  candidates: z.array(researchedCandidateSchema).min(35).max(50),
+  candidates: z.array(modelCandidateSchema).min(35).max(40),
 });
 
 const canonicalTitle = (title: string) =>
@@ -31,9 +53,16 @@ const canonicalId = (id: string, title: string) => {
 export class InsufficientCandidatePoolError extends Error {
   constructor(count: number) {
     super(
-      `Insufficient candidate pool: ${count} candidates (need at least 35)`,
+      `Insufficient candidate pool: ${count} candidates (need at least 25)`,
     );
     this.name = 'InsufficientCandidatePoolError';
+  }
+}
+
+export class TargetHydrationError extends Error {
+  constructor(readonly failedPoiIds: readonly string[]) {
+    super(`Target hydration failed: ${failedPoiIds.join(', ')}`);
+    this.name = 'TargetHydrationError';
   }
 }
 
@@ -46,7 +75,7 @@ export async function researchCandidates(input: {
     `Theme: ${input.theme.title}`,
     `Inclusion rules: ${input.theme.inclusionCriteria}`,
     `Exclusion rules: ${input.theme.exclusions.join('; ')}`,
-    'Every proposal must be a distinct real location that independently satisfies every inclusion rule, and there must be at least 35 candidates.',
+    'Return 35 to 40 distinct real locations. Every proposal must independently satisfy every inclusion rule and must use unique coordinates accurate to that specific location (not a reused city center).',
     'For every proposal include reliable coordinates, a source URL, and a source extract of at least 100 characters. These are model evidence for later human audit, not independently verified facts. Do not invent a source or claim certainty when you do not know it.',
     "Set each proposal source provenance to 'model'; the pipeline ignores any other value from the model.",
     'Do not include an image; target images are verified separately after curation.',
@@ -91,7 +120,7 @@ export async function researchCandidates(input: {
     researched.push({ ...value, id });
     if (researched.length === 50) break;
   }
-  if (researched.length < 35)
+  if (researched.length < 25)
     throw new InsufficientCandidatePoolError(researched.length);
   return candidatePoolSchema.parse({
     theme: input.theme,
@@ -107,34 +136,96 @@ export async function researchCandidates(input: {
 export async function hydrateBoardTargets(input: {
   board: CuratedBoard;
   research: LiveResearch;
+  excludedTargetIds?: ReadonlySet<string>;
 }): Promise<CuratedBoard> {
   const candidatesById = new Map(
     input.board.candidates.map((candidate) => [candidate.id, candidate]),
   );
-  const hydrated = await Promise.all(
-    input.board.targetPoiIds.map(async (id) => {
-      const candidate = candidatesById.get(id);
-      if (!candidate) throw new Error(`target POI is absent from board: ${id}`);
-      const result = await input.research.hydrate(candidate);
-      if (!result)
-        throw new Error(
-          `target POI could not be researched: ${candidate.name}`,
-        );
-      const parsed = hydratedCandidateSchema.safeParse(result);
-      if (!parsed.success)
-        throw new Error(
-          `target POI research was incomplete for ${candidate.name}: ${parsed.error.message}`,
-        );
-      return parsed.data;
-    }),
+  const excluded = input.excludedTargetIds ?? new Set<string>();
+  const attempted = new Set<string>();
+  const hydratedById = new Map<string, HydratedCandidate>();
+  const failedPoiIds: string[] = [];
+  const canonicalTitle = (title: string) =>
+    title.trim().replaceAll('_', ' ').replace(/\s+/g, ' ').toLocaleLowerCase();
+  const originalTitleOwners = new Map(
+    input.board.candidates.map((candidate) => [
+      canonicalTitle(candidate.wikipediaTitle),
+      candidate.id,
+    ]),
   );
-  const hydratedById = new Map<string, HydratedCandidate>(
-    hydrated.map((candidate) => [candidate.id, candidate]),
+  const hydratedPageOwners = new Map<string, string>();
+
+  const hydrateBatch = async (ids: string[]) => {
+    for (const id of ids) attempted.add(id);
+    const attempts = await Promise.allSettled(
+      ids.map(async (id) => {
+        const candidate = candidatesById.get(id);
+        if (!candidate)
+          throw new Error(`target POI is absent from board: ${id}`);
+        const result = await input.research.hydrate(candidate);
+        if (!result)
+          throw new Error(
+            `target POI could not be researched: ${candidate.name}`,
+          );
+        const parsed = hydratedCandidateSchema.safeParse(result);
+        if (!parsed.success)
+          throw new Error(
+            `target POI research was incomplete for ${candidate.name}: ${parsed.error.message}`,
+          );
+        return parsed.data;
+      }),
+    );
+    attempts.forEach((attempt, index) => {
+      const id = ids[index];
+      if (!id) return;
+      if (attempt.status === 'fulfilled') {
+        const titleKey = canonicalTitle(attempt.value.wikipediaTitle);
+        const originalOwner = originalTitleOwners.get(titleKey);
+        const hydratedOwner = hydratedPageOwners.get(titleKey);
+        if (
+          (originalOwner && originalOwner !== id) ||
+          (hydratedOwner && hydratedOwner !== id)
+        ) {
+          failedPoiIds.push(id);
+          return;
+        }
+        hydratedPageOwners.set(titleKey, id);
+        hydratedById.set(id, { ...attempt.value, id });
+      } else failedPoiIds.push(id);
+    });
+  };
+
+  const preferred = input.board.targetPoiIds.filter((id) => !excluded.has(id));
+  await hydrateBatch(preferred);
+  const fallbackCandidates = input.board.candidates.filter(
+    (candidate) => !attempted.has(candidate.id) && !excluded.has(candidate.id),
   );
+  for (
+    let offset = 0;
+    hydratedById.size < 5 && offset < fallbackCandidates.length;
+    offset += 5
+  )
+    await hydrateBatch(
+      fallbackCandidates
+        .slice(offset, offset + 5)
+        .map((candidate) => candidate.id),
+    );
+  if (hydratedById.size < 5)
+    throw new TargetHydrationError([...new Set(failedPoiIds)]);
+
+  const targetPoiIds = [
+    ...preferred.filter((id) => hydratedById.has(id)),
+    ...fallbackCandidates
+      .map((candidate) => candidate.id)
+      .filter((id) => hydratedById.has(id)),
+  ].slice(0, 5);
   return curatedBoardSchema.parse({
     ...input.board,
-    candidates: input.board.candidates.map(
-      (candidate) => hydratedById.get(candidate.id) ?? candidate,
+    targetPoiIds,
+    candidates: input.board.candidates.map((candidate) =>
+      targetPoiIds.includes(candidate.id)
+        ? (hydratedById.get(candidate.id) ?? candidate)
+        : candidate,
     ),
   });
 }

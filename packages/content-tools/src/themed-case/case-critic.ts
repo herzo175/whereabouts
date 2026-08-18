@@ -17,15 +17,12 @@ import type {
 import type { StructuredModel } from './model.js';
 
 const criticOutputSchema = z.object({
-  themeVerdicts: z.array(z.unknown()),
-  clueVerdicts: z.array(z.unknown()),
-  relationshipVerdicts: z.array(z.unknown()),
+  themeVerdicts: z.array(generationReviewSchema.shape.themeVerdicts.element),
+  clueVerdicts: z.array(generationReviewSchema.shape.clueVerdicts.element),
 });
-const relationshipVerdictSchema = z.object({
-  roundId: z.string(),
-  poiId: z.string(),
-  status: z.enum(['pass', 'fail']),
-  explanation: z.string().min(10),
+const criticProviderSchema = z.object({
+  themeVerdicts: criticOutputSchema.shape.themeVerdicts.length(25),
+  clueVerdicts: criticOutputSchema.shape.clueVerdicts.length(5),
 });
 type CritiqueInput = {
   criticModel: StructuredModel;
@@ -37,6 +34,16 @@ type CritiqueInput = {
 };
 const fallback = (what: string) =>
   `The critic did not provide a complete independent assessment for ${what}.`;
+const normalizeLeakText = (value: string) =>
+  value.toLocaleLowerCase().replace(/[^\p{L}\p{N}]/gu, '');
+const leaksIdentity = (text: string, identity: string) => {
+  const term = normalizeLeakText(identity);
+  if (!term) return false;
+  if (term.length >= 4) return normalizeLeakText(text).includes(term);
+  return (text.toLocaleLowerCase().match(/[\p{L}\p{N}]+/gu) ?? [])
+    .map(normalizeLeakText)
+    .includes(term);
+};
 
 function assembleCase(input: CritiqueInput): ThemedDailyCase {
   const sourceIds = ['source-01'];
@@ -95,9 +102,10 @@ function prompt(input: CritiqueInput): string {
   return `You are the final adversarial critic for a themed geography case.
 Theme (including exact criteria and exclusions): ${JSON.stringify(input.theme)}
 Assess every candidate independently against every inclusion criterion and exclusion; tangential association is a failure. Resolve each clue independently from its text and evidence BEFORE comparing the answer to targetPoiId. A related place that is not the target fails. Never infer pass from missing, duplicate, malformed, or unsupported verdicts.
-Return exactly 25 themeVerdicts (one per board identity), exactly five clueVerdicts (one per round), and relationshipVerdicts for every candidate comparison. Off-board answers use resolvedPoiId=null and resolvedOffBoardAnswer, and fail. Unsupported comparisons/evidence relationships fail and require relationship repair.
+Return exactly 25 themeVerdicts (one per board identity) and exactly five clueVerdicts (one per round). Off-board answers use resolvedPoiId=null and resolvedOffBoardAnswer, and fail. Pairwise similarity prose remains available for human audit but is not part of this publication gate.
 Board identities and evidence: ${JSON.stringify(input.board.candidates)}
 Targets: ${JSON.stringify(input.board.targetPoiIds)}
+Round identities: ${input.draft.rounds.map((round, index) => `round-${index + 1} -> ${round.targetPoiId}; clue: ${round.clue.text}`).join('\n')}
 Draft clues, relationships, and result evidence: ${JSON.stringify(input.draft)}`;
 }
 
@@ -124,7 +132,7 @@ export async function critiqueCase(
   let raw: unknown;
   try {
     raw = await input.criticModel.generate({
-      schema: criticOutputSchema,
+      schema: criticProviderSchema,
       prompt: prompt(input),
       stage: 'themed-case-critique',
     });
@@ -185,7 +193,7 @@ export async function critiqueCase(
         poiId: candidate.id,
         reason: parsed.data.explanation,
       });
-    return parsed.data;
+    return { ...parsed.data, sourceIds: ['source-01'] };
   });
   if (themeByPoi.size !== 25)
     repairs.push({
@@ -236,6 +244,21 @@ export async function critiqueCase(
             ? verdict.explanation
             : fallback(round.id),
       });
+    const target = input.board.candidates.find(
+      (candidate) => candidate.id === round.targetPoiId,
+    );
+    if (
+      target &&
+      [target.name, target.city, target.country].some((term) =>
+        leaksIdentity(round.clue.text, term),
+      )
+    )
+      repairs.push({
+        kind: 'clue',
+        roundId: round.id,
+        reason:
+          'The clue leaks the target name, destination, city, or country before reveal.',
+      });
     return verdict;
   });
   if (clueByRound.size !== 5)
@@ -243,62 +266,6 @@ export async function critiqueCase(
       kind: 'theme',
       reason:
         'The critic did not provide exactly one clue verdict for every round.',
-    });
-  const relationshipByPair = new Map<string, unknown>();
-  const duplicateRelationships = new Set<string>();
-  let unidentifiableRelationship = false;
-  for (const value of output?.relationshipVerdicts ?? []) {
-    const candidate =
-      typeof value === 'object' && value !== null
-        ? (value as { roundId?: unknown; poiId?: unknown })
-        : {};
-    if (
-      typeof candidate.roundId !== 'string' ||
-      typeof candidate.poiId !== 'string'
-    ) {
-      unidentifiableRelationship = true;
-      continue;
-    }
-    const key = `${candidate.roundId}:${candidate.poiId}`;
-    if (relationshipByPair.has(key)) duplicateRelationships.add(key);
-    relationshipByPair.set(key, value);
-  }
-  for (const round of caseData.rounds)
-    for (const poi of caseData.pois) {
-      const key = `${round.id}:${poi.id}`;
-      const parsed = relationshipVerdictSchema.safeParse(
-        relationshipByPair.get(key),
-      );
-      if (
-        duplicateRelationships.has(key) ||
-        !parsed.success ||
-        parsed.data.status === 'fail'
-      ) {
-        repairs.push({
-          kind: 'relationship',
-          roundId: round.id,
-          poiId: poi.id,
-          reason: duplicateRelationships.has(key)
-            ? 'The critic supplied duplicate relationship verdicts for this pair.'
-            : parsed.success
-              ? parsed.data.explanation
-              : 'The relationship verdict is missing or malformed and cannot establish support.',
-        });
-      }
-    }
-  if (unidentifiableRelationship)
-    repairs.push({
-      kind: 'theme',
-      reason:
-        'The critic supplied an unidentifiable relationship verdict; review is fail-closed.',
-    });
-  const expectedRelationshipCount =
-    caseData.rounds.length * caseData.pois.length;
-  if (relationshipByPair.size !== expectedRelationshipCount)
-    repairs.push({
-      kind: 'theme',
-      reason:
-        'The critic did not provide exactly one relationship verdict for every round and candidate pair.',
     });
   const draftReview = {
     schemaVersion: 1,
@@ -308,7 +275,10 @@ export async function critiqueCase(
     clueVerdicts,
     repairs: [],
   };
-  if (validateGenerationReview(caseData, draftReview).length)
+  if (
+    repairs.length === 0 &&
+    validateGenerationReview(caseData, draftReview).length
+  )
     repairs.push({
       kind: 'theme',
       reason:

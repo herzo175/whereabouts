@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { z } from 'zod';
 import {
   bucketResults,
   repairCaseDraft,
@@ -10,22 +11,36 @@ describe('case writer', () => {
   it('writes and validates a complete board-aware draft', async () => {
     const draft = await writeCaseDraft({
       model: {
-        generate: async () => ({
-          rounds: fixtureCaseDraft.rounds.map((round) => ({
-            ...round,
-            results: round.results.map((result) => ({
-              ...result,
-              similarityScore:
-                result.poiId === round.targetPoiId
-                  ? 100
-                  : result.similarityScore,
-              evidencePoiIds:
-                result.poiId === round.targetPoiId
-                  ? [result.poiId]
-                  : [result.poiId, round.targetPoiId],
+        generate: async ({ schema }) => {
+          const json = z.toJSONSchema(schema) as {
+            properties?: {
+              rounds?: {
+                items?: {
+                  properties?: {
+                    results?: {
+                      items?: { properties?: Record<string, unknown> };
+                    };
+                  };
+                };
+              };
+            };
+          };
+          const resultProperties =
+            json.properties?.rounds?.items?.properties?.results?.items
+              ?.properties;
+          expect(resultProperties).not.toHaveProperty('text');
+          expect(resultProperties).not.toHaveProperty('evidencePoiIds');
+          return {
+            rounds: fixtureCaseDraft.rounds.map((round) => ({
+              targetPoiId: round.targetPoiId,
+              clue: { text: round.clue.text },
+              results: round.results.map((result) => ({
+                poiId: result.poiId,
+                similarityScore: result.similarityScore,
+              })),
             })),
-          })),
-        }),
+          };
+        },
       },
       theme: fixtureBoard.theme,
       board: fixtureBoard,
@@ -53,10 +68,7 @@ describe('case writer', () => {
   it('rejects a clue that cites an off-board evidence ID', async () => {
     const invalid = fixtureCaseDraft.rounds.map((round, index) => ({
       ...round,
-      clue:
-        index === 0
-          ? { ...round.clue, evidencePoiIds: ['not-on-board'] }
-          : round.clue,
+      targetPoiId: index === 0 ? 'not-on-board' : round.targetPoiId,
       results: round.results.map((result) => ({
         ...result,
         similarityScore:
@@ -73,7 +85,7 @@ describe('case writer', () => {
         theme: fixtureBoard.theme,
         board: fixtureBoard,
       }),
-    ).rejects.toThrow(/evidence not on board/);
+    ).rejects.toThrow(/target|board/);
   });
 
   it('normalizes omitted target and guessed-POI evidence IDs', async () => {
@@ -99,6 +111,29 @@ describe('case writer', () => {
     expect(nonTarget).toBeDefined();
     expect(nonTarget?.evidencePoiIds).toEqual(
       expect.arrayContaining([nonTarget?.poiId, round?.targetPoiId]),
+    );
+  });
+
+  it('normalizes duplicate result IDs back to the complete board', async () => {
+    const rounds = fixtureCaseDraft.rounds.map((round, roundIndex) => ({
+      ...round,
+      results: round.results.map((result, resultIndex) => ({
+        ...result,
+        poiId:
+          roundIndex === 0 && resultIndex === 24
+            ? round.results[0].poiId
+            : result.poiId,
+        similarityScore:
+          result.poiId === round.targetPoiId ? 100 : result.similarityScore,
+      })),
+    }));
+    const result = await writeCaseDraft({
+      model: { generate: async () => ({ rounds }) },
+      theme: fixtureBoard.theme,
+      board: fixtureBoard,
+    });
+    expect(result.rounds[0].results.map((item) => item.poiId)).toEqual(
+      fixtureBoard.candidates.map((candidate) => candidate.id),
     );
   });
 
@@ -149,7 +184,18 @@ describe('case writer', () => {
       })),
     };
     const result = await repairCaseDraft({
-      model: { generate: async () => ({ rounds: [repaired] }) },
+      model: {
+        generate: async ({ prompt }) => {
+          for (const candidate of fixtureBoard.candidates)
+            expect(prompt).toContain(candidate.id);
+          for (const candidate of fixtureBoard.candidates) {
+            expect(prompt).toContain(candidate.name);
+            expect(prompt).toContain(candidate.themeClaim);
+          }
+          expect(prompt).toContain(JSON.stringify(validDraft.rounds[0]));
+          return { rounds: [repaired] };
+        },
+      },
       theme: fixtureBoard.theme,
       board: fixtureBoard,
       draft: validDraft,
@@ -161,7 +207,14 @@ describe('case writer', () => {
         },
       ],
     });
-    expect(result.rounds[0]).toEqual(repaired);
+    expect(result.rounds[0]?.targetPoiId).toBe(repaired.targetPoiId);
+    expect(result.rounds[0]?.clue.text).toBe(repaired.clue.text);
+    expect(
+      result.rounds[0]?.results.map((item) => item.similarityScore),
+    ).toEqual(repaired.results.map((item) => item.similarityScore));
+    expect(result.rounds[0]?.results[0]?.text).toContain(
+      fixtureBoard.candidates[0]?.name,
+    );
     expect(result.rounds.slice(1)).toEqual(validDraft.rounds.slice(1));
   });
 

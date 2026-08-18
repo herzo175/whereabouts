@@ -20,6 +20,25 @@ describe('curateBoard', () => {
     expect(board.targetPoiIds).toEqual(ids.slice(0, 5));
   });
 
+  it('swaps valid selected targets onto the board when the model omits them', async () => {
+    const ids = fixtureCandidates.slice(0, 25).map((candidate) => candidate.id);
+    const omittedTarget = fixtureCandidates[25].id;
+    const targetPoiIds = [...ids.slice(0, 4), omittedTarget];
+    const board = await curateBoard({
+      model: {
+        generate: async () => ({ candidateIds: ids, targetPoiIds }),
+      },
+      theme: fixtureTheme,
+      candidates: fixtureCandidates,
+    });
+
+    expect(board.candidates).toHaveLength(25);
+    expect(board.candidates.map((candidate) => candidate.id)).toContain(
+      omittedTarget,
+    );
+    expect(board.targetPoiIds).toEqual(targetPoiIds);
+  });
+
   it('rejects duplicate coordinates through the board contract', async () => {
     const candidates = fixtureCandidates.map((candidate, index) =>
       index === 1

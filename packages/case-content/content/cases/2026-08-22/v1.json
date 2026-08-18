@@ -1,0 +1,1402 @@
+{
+  "schemaVersion": 3,
+  "publicationDate": "2026-08-22",
+  "revision": 1,
+  "caseNumber": 20687,
+  "pois": [
+    {
+      "id": "cologne-zoo",
+      "name": "Cologne Zoological Garden",
+      "city": "Cologne",
+      "country": "Germany",
+      "latitude": 50.9579,
+      "longitude": 6.968,
+      "wikipediaTitle": "Cologne Zoological Garden",
+      "blurb": "Cologne Zoological Garden is a zoo in Cologne, Germany. Founded in 1860, it is one of the oldest zoological gardens in the country and remains open to the public.",
+      "themeConnection": {
+        "text": "Founded in 1860 and still operating as a public zoological garden in Cologne.",
+        "sourceIds": ["source-14"]
+      }
+    },
+    {
+      "id": "cincinnati-zoo",
+      "name": "Cincinnati Zoo and Botanical Garden",
+      "city": "Cincinnati",
+      "country": "United States",
+      "latitude": 39.145,
+      "longitude": -84.5088,
+      "wikipediaTitle": "Cincinnati Zoo and Botanical Garden",
+      "blurb": "The Cincinnati Zoo and Botanical Garden is in Cincinnati, Ohio. It opened in 1875 and is the second-oldest zoo in the United States, continuing to admit the public to its zoo grounds.",
+      "themeConnection": {
+        "text": "Opened in 1875 at its current Cincinnati site and remains a public zoo.",
+        "sourceIds": ["source-25"]
+      }
+    },
+    {
+      "id": "helsinki-zoo",
+      "name": "Korkeasaari Zoo",
+      "city": "Helsinki",
+      "country": "Finland",
+      "latitude": 60.1756,
+      "longitude": 24.9884,
+      "wikipediaTitle": "Korkeasaari Zoo",
+      "blurb": "Korkeasaari Zoo (Finnish: Korkeasaaren eläintarha), also known as Helsinki Zoo, is the largest zoo in Finland, located in Helsinki's Korkeasaari island.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Snow_leopard_in_Korkeasaari_Zoo.jpg/1280px-Snow_leopard_in_Korkeasaari_Zoo.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Korkeasaari Zoo",
+        "attribution": "Annika Sorjonen / Korkeasaari Zoo · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "Opened to the public in 1889 on Korkeasaari Island and continues as Helsinki's public zoo.",
+        "sourceIds": ["source-17"]
+      }
+    },
+    {
+      "id": "philadelphia-zoo",
+      "name": "Philadelphia Zoo",
+      "city": "Philadelphia",
+      "country": "United States",
+      "latitude": 39.9711,
+      "longitude": -75.1956,
+      "wikipediaTitle": "Philadelphia Zoo",
+      "blurb": "The Philadelphia Zoo, located in Philadelphia, Pennsylvania, opened on July 1, 1874. It is the oldest zoo in the United States and remains a permanent public animal-display institution.",
+      "themeConnection": {
+        "text": "Opened in 1874 and continues as a public zoo at its West Philadelphia site.",
+        "sourceIds": ["source-24"]
+      }
+    },
+    {
+      "id": "wroclaw-zoo",
+      "name": "Wrocław Zoo",
+      "city": "Wrocław",
+      "country": "Poland",
+      "latitude": 51.1047,
+      "longitude": 17.0743,
+      "wikipediaTitle": "Wrocław Zoo",
+      "blurb": "Wrocław Zoo is a zoological garden in Wrocław, Poland. It was opened in 1865 and is the oldest zoo in Poland, continuing to operate as a public animal collection.",
+      "themeConnection": {
+        "text": "Opened in 1865 and continues as a public zoo at its site in Wrocław.",
+        "sourceIds": ["source-11"]
+      }
+    },
+    {
+      "id": "giza-zoo",
+      "name": "Giza Zoo",
+      "city": "Giza",
+      "country": "Egypt",
+      "latitude": 30.0167,
+      "longitude": 31.2089,
+      "wikipediaTitle": "Giza Zoo",
+      "blurb": "Giza Zoo is a zoological garden in Giza, Egypt. It opened in 1891 and remains one of the country's principal public zoos, displaying living non-domesticated animals to visitors.",
+      "themeConnection": {
+        "text": "Opened in 1891 and continues operating as a public zoological garden in Giza.",
+        "sourceIds": ["source-23"]
+      }
+    },
+    {
+      "id": "lahore-zoo",
+      "name": "Lahore Zoo",
+      "city": "Lahore",
+      "country": "Pakistan",
+      "latitude": 31.5497,
+      "longitude": 74.3243,
+      "wikipediaTitle": "Lahore Zoo",
+      "blurb": "Lahore Zoo is located in Lahore, Punjab, Pakistan, and is one of the oldest zoos in South Asia. It was established in 1872 and remains open to ordinary public visitors.",
+      "themeConnection": {
+        "text": "Established in 1872 and continues as a public zoo in central Lahore.",
+        "sourceIds": ["source-21"]
+      }
+    },
+    {
+      "id": "basel-zoo",
+      "name": "Zoo Basel",
+      "city": "Basel",
+      "country": "Switzerland",
+      "latitude": 47.5465,
+      "longitude": 7.5852,
+      "wikipediaTitle": "Zoo Basel",
+      "blurb": "Zoo Basel is a non-profit zoo in Basel, Switzerland. It opened in 1874 and is the oldest zoo in Switzerland, continuing to receive regular public visitors at its original urban site.",
+      "themeConnection": {
+        "text": "Opened in 1874 and continues operating as a public zoo at its Basel site.",
+        "sourceIds": ["source-13"]
+      }
+    },
+    {
+      "id": "artis-amsterdam",
+      "name": "ARTIS",
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "latitude": 52.3667,
+      "longitude": 4.9167,
+      "wikipediaTitle": "Artis (zoo)",
+      "blurb": "Natura Artis Magistra (Latin for \"Nature is the teacher of art\"), commonly known just as Artis (Dutch pronunciation: [ˈɑrtɪs]), is a zoo and botanical garden in the centre of Amsterdam.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/85/ArtisIngang.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Artis (zoo)",
+        "attribution": "The original uploader was Mtcv at Dutch Wikipedia. · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "themeConnection": {
+        "text": "Established in 1838 as Natura Artis Magistra and still operates as a public zoo at the site.",
+        "sourceIds": ["source-07"]
+      }
+    },
+    {
+      "id": "moscow-zoo",
+      "name": "Moscow Zoo",
+      "city": "Moscow",
+      "country": "Russia",
+      "latitude": 55.7653,
+      "longitude": 37.5793,
+      "wikipediaTitle": "Moscow Zoo",
+      "blurb": "Moscow Zoo is one of the oldest zoos in Europe. It was founded in 1864 and is located in central Moscow, where it continues to exhibit living animals to ordinary visitors.",
+      "themeConnection": {
+        "text": "Opened in 1864 and remains an operating public zoo on its historic Moscow site.",
+        "sourceIds": ["source-09"]
+      }
+    },
+    {
+      "id": "tiergarten-schonbrunn",
+      "name": "Tiergarten Schönbrunn",
+      "city": "Vienna",
+      "country": "Austria",
+      "latitude": 48.1814,
+      "longitude": 16.302,
+      "wikipediaTitle": "Tiergarten Schönbrunn",
+      "blurb": "Tiergarten Schönbrunn, also known as the Vienna Zoo, is located in the grounds of Schönbrunn Palace in Vienna. Founded in 1752, it is the world's oldest continuously operating zoo.",
+      "themeConnection": {
+        "text": "Founded as an imperial menagerie in 1752 and still operating as a public zoo at Schönbrunn.",
+        "sourceIds": ["source-04"]
+      }
+    },
+    {
+      "id": "berlin-zoo",
+      "name": "Zoologischer Garten Berlin",
+      "city": "Berlin",
+      "country": "Germany",
+      "latitude": 52.5086,
+      "longitude": 13.3376,
+      "wikipediaTitle": "Berlin Zoological Garden",
+      "blurb": "The Berlin Zoological Garden is the oldest surviving zoo in Germany and opened on 1 August 1844. It occupies a large site in Berlin and remains one of the city's principal public attractions.",
+      "themeConnection": {
+        "text": "Opened in 1844 at its current Zoological Garden site and continues as a public zoo.",
+        "sourceIds": ["source-06"]
+      }
+    },
+    {
+      "id": "alipore-zoo",
+      "name": "Alipore Zoological Gardens",
+      "city": "Kolkata",
+      "country": "India",
+      "latitude": 22.5374,
+      "longitude": 88.3312,
+      "wikipediaTitle": "Alipore Zoological Gardens",
+      "blurb": "Alipore Zoological Gardens, also called Alipore Zoo, is India's oldest formally stated zoological park. It opened to the public in 1876 and remains a public zoo in Kolkata.",
+      "themeConnection": {
+        "text": "Opened to the public in 1876 and remains an operating public zoo in Kolkata.",
+        "sourceIds": ["source-20"]
+      }
+    },
+    {
+      "id": "london-zoo",
+      "name": "ZSL London Zoo",
+      "city": "London",
+      "country": "United Kingdom",
+      "latitude": 51.5353,
+      "longitude": -0.1534,
+      "wikipediaTitle": "London Zoo",
+      "blurb": "London Zoo is one of the world's oldest scientific zoos. It was opened in 1828 and is located at the northern edge of Regent's Park in London, where it remains a public zoological garden.",
+      "themeConnection": {
+        "text": "Opened in 1828 in Regent's Park and remains a public zoo at the same identifiable site.",
+        "sourceIds": ["source-01"]
+      }
+    },
+    {
+      "id": "dresden-zoo",
+      "name": "Dresden Zoo",
+      "city": "Dresden",
+      "country": "Germany",
+      "latitude": 51.0274,
+      "longitude": 13.7516,
+      "wikipediaTitle": "Dresden Zoo",
+      "blurb": "Dresden Zoo is a zoo in Dresden, Germany. It was founded in 1861 and is located in the city's Großer Garten area, where it continues to present living animals to visitors.",
+      "themeConnection": {
+        "text": "Opened in 1861 and remains an operating public zoo within Dresden.",
+        "sourceIds": ["source-16"]
+      }
+    },
+    {
+      "id": "dublin-zoo",
+      "name": "Dublin Zoo",
+      "city": "Dublin",
+      "country": "Ireland",
+      "latitude": 53.3559,
+      "longitude": -6.3053,
+      "wikipediaTitle": "Dublin Zoo",
+      "blurb": "Dublin Zoo (Irish: Zú Bhaile Átha Cliath), in Phoenix Park, is a zoo in Dublin, Ireland, and one of Dublin's most popular attractions.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/DublinZooEntrance.jpg/1280px-DublinZooEntrance.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Dublin Zoo",
+        "attribution": "Rory Parle (Rparle at English Wikipedia) · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "themeConnection": {
+        "text": "Opened in 1831 in Phoenix Park and continues operating as a public zoo at that site.",
+        "sourceIds": ["source-02"]
+      }
+    },
+    {
+      "id": "menagerie-jardin-plantes",
+      "name": "Ménagerie du Jardin des Plantes",
+      "city": "Paris",
+      "country": "France",
+      "latitude": 48.843,
+      "longitude": 2.3599,
+      "wikipediaTitle": "Ménagerie du Jardin des plantes",
+      "blurb": "The Ménagerie du Jardin des Plantes (French pronunciation: [menaʒʁi dy ʒaʁdɛ̃ de plɑ̃t]) is a zoo in Paris, France, belonging to the botanical garden Jardin des Plantes.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/RotondeOuest1.JPG/1280px-RotondeOuest1.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Ménagerie du Jardin des plantes",
+        "attribution": "Spiridon MANOLIU · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:RotondeOuest1.JPG"
+      },
+      "themeConnection": {
+        "text": "The public menagerie opened in 1794 and remains an operating animal-display institution within Paris.",
+        "sourceIds": ["source-03"]
+      }
+    },
+    {
+      "id": "leningrad-zoo",
+      "name": "Leningrad Zoo",
+      "city": "Saint Petersburg",
+      "country": "Russia",
+      "latitude": 59.954,
+      "longitude": 30.299,
+      "wikipediaTitle": "Leningrad Zoo",
+      "blurb": "Leningrad Zoo, now in Saint Petersburg, was founded in 1865. It is situated in Alexandrovsky Park on Petrogradsky Island and remains a regularly visited public zoo.",
+      "themeConnection": {
+        "text": "Founded in 1865 and still operating as a public zoo at its historic Saint Petersburg location.",
+        "sourceIds": ["source-10"]
+      }
+    },
+    {
+      "id": "antwerp-zoo",
+      "name": "ZOO Antwerpen",
+      "city": "Antwerp",
+      "country": "Belgium",
+      "latitude": 51.2169,
+      "longitude": 4.4214,
+      "wikipediaTitle": "Antwerp Zoo",
+      "blurb": "Antwerp Zoo (Dutch: ZOO Antwerpen) is a zoo in the centre of Antwerp, Belgium, located next to the Antwerpen-Centraal railway station.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Antwerpen_Zoo_Entrance_2.jpg/1280px-Antwerpen_Zoo_Entrance_2.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Antwerp Zoo",
+        "attribution": "DRG-fan · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "Opened in 1843 on its present central Antwerp site and remains a public zoological garden.",
+        "sourceIds": ["source-05"]
+      }
+    },
+    {
+      "id": "copenhagen-zoo",
+      "name": "Copenhagen Zoo",
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "latitude": 55.6729,
+      "longitude": 12.5214,
+      "wikipediaTitle": "Copenhagen Zoo",
+      "blurb": "Copenhagen Zoo is a zoological garden in Copenhagen, Denmark. Founded in 1859, it is one of the oldest zoos in Europe and continues to operate as a public animal-display institution.",
+      "themeConnection": {
+        "text": "Founded in 1859 and still operating as a public zoo at Frederiksberg in Copenhagen.",
+        "sourceIds": ["source-08"]
+      }
+    },
+    {
+      "id": "trivandrum-zoo",
+      "name": "Thiruvananthapuram Zoo",
+      "city": "Thiruvananthapuram",
+      "country": "India",
+      "latitude": 8.509,
+      "longitude": 76.953,
+      "wikipediaTitle": "Thiruvananthapuram Zoo",
+      "blurb": "Thiruvananthapuram Zoo is located in the city of Thiruvananthapuram, Kerala, India. It was established in 1857 and remains a public zoo with regular visitor admission.",
+      "themeConnection": {
+        "text": "Established in 1857 and continues as a public zoo at its city site.",
+        "sourceIds": ["source-22"]
+      }
+    },
+    {
+      "id": "leipzig-zoo",
+      "name": "Leipzig Zoological Garden",
+      "city": "Leipzig",
+      "country": "Germany",
+      "latitude": 51.3456,
+      "longitude": 12.3692,
+      "wikipediaTitle": "Leipzig Zoological Garden",
+      "blurb": "Leipzig Zoological Garden is a zoo in Leipzig, Germany. It was founded in 1878 and has continued as a public zoological garden at the northern edge of the city.",
+      "themeConnection": {
+        "text": "Founded in 1878 and still operates as a public zoo at its Leipzig site.",
+        "sourceIds": ["source-15"]
+      }
+    },
+    {
+      "id": "adelaide-zoo",
+      "name": "Adelaide Zoo",
+      "city": "Adelaide",
+      "country": "Australia",
+      "latitude": -34.9136,
+      "longitude": 138.6033,
+      "wikipediaTitle": "Adelaide Zoo",
+      "blurb": "Adelaide Zoo is Australia's second-oldest zoo, opened in 1883. It is located just north of Adelaide's city centre and remains a regularly open public zoo with living animals.",
+      "themeConnection": {
+        "text": "Opened in 1883 and continues operating as a public zoo at its Adelaide site.",
+        "sourceIds": ["source-19"]
+      }
+    },
+    {
+      "id": "melbourne-zoo",
+      "name": "Melbourne Zoo",
+      "city": "Melbourne",
+      "country": "Australia",
+      "latitude": -37.784,
+      "longitude": 144.951,
+      "wikipediaTitle": "Melbourne Zoo",
+      "blurb": "Melbourne Zoo is located in Royal Park, Melbourne, Australia. It was opened in 1862 and is Australia's oldest zoo, continuing to operate as a major public zoological garden.",
+      "themeConnection": {
+        "text": "Opened in 1862 at Royal Park and remains a public zoo at that Melbourne site.",
+        "sourceIds": ["source-18"]
+      }
+    },
+    {
+      "id": "budapest-zoo",
+      "name": "Budapest Zoo and Botanical Garden",
+      "city": "Budapest",
+      "country": "Hungary",
+      "latitude": 47.5186,
+      "longitude": 19.0834,
+      "wikipediaTitle": "Budapest Zoo and Botanical Garden",
+      "blurb": "The Budapest Zoo and Botanical Garden is the oldest zoo park in Hungary. It opened in 1866 in Budapest's City Park and remains a public institution displaying living animals.",
+      "themeConnection": {
+        "text": "Opened in 1866 at its present City Park site and continues as a public zoo.",
+        "sourceIds": ["source-12"]
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "round-1",
+      "targetPoiId": "menagerie-jardin-plantes",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/RotondeOuest1.JPG/1280px-RotondeOuest1.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Ménagerie du Jardin des plantes",
+        "attribution": "Spiridon MANOLIU · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:RotondeOuest1.JPG"
+      },
+      "clue": {
+        "text": "Established in 1794 during the French Revolution, this menagerie received animals transferred from the dissolved royal collection at Versailles and became part of a national natural-history institution.",
+        "sourceIds": ["source-03"]
+      },
+      "results": [
+        {
+          "poiId": "london-zoo",
+          "tier": "hot",
+          "text": "ZSL London Zoo is a themed comparison candidate: Opened in 1828 in Regent's Park and remains a public zoo at the same identifiable site.",
+          "sourceIds": ["source-01", "source-03"]
+        },
+        {
+          "poiId": "dublin-zoo",
+          "tier": "hot",
+          "text": "Dublin Zoo is a themed comparison candidate: Opened in 1831 in Phoenix Park and continues operating as a public zoo at that site.",
+          "sourceIds": ["source-02", "source-03"]
+        },
+        {
+          "poiId": "menagerie-jardin-plantes",
+          "tier": "correct",
+          "text": "Ménagerie du Jardin des Plantes is the round target: The public menagerie opened in 1794 and remains an operating animal-display institution within Paris.",
+          "sourceIds": ["source-03"]
+        },
+        {
+          "poiId": "tiergarten-schonbrunn",
+          "tier": "hot",
+          "text": "Tiergarten Schönbrunn is a themed comparison candidate: Founded as an imperial menagerie in 1752 and still operating as a public zoo at Schönbrunn.",
+          "sourceIds": ["source-04", "source-03"]
+        },
+        {
+          "poiId": "antwerp-zoo",
+          "tier": "warm",
+          "text": "ZOO Antwerpen is a themed comparison candidate: Opened in 1843 on its present central Antwerp site and remains a public zoological garden.",
+          "sourceIds": ["source-05", "source-03"]
+        },
+        {
+          "poiId": "berlin-zoo",
+          "tier": "warm",
+          "text": "Zoologischer Garten Berlin is a themed comparison candidate: Opened in 1844 at its current Zoological Garden site and continues as a public zoo.",
+          "sourceIds": ["source-06", "source-03"]
+        },
+        {
+          "poiId": "artis-amsterdam",
+          "tier": "hot",
+          "text": "ARTIS is a themed comparison candidate: Established in 1838 as Natura Artis Magistra and still operates as a public zoo at the site.",
+          "sourceIds": ["source-07", "source-03"]
+        },
+        {
+          "poiId": "copenhagen-zoo",
+          "tier": "warm",
+          "text": "Copenhagen Zoo is a themed comparison candidate: Founded in 1859 and still operating as a public zoo at Frederiksberg in Copenhagen.",
+          "sourceIds": ["source-08", "source-03"]
+        },
+        {
+          "poiId": "moscow-zoo",
+          "tier": "warm",
+          "text": "Moscow Zoo is a themed comparison candidate: Opened in 1864 and remains an operating public zoo on its historic Moscow site.",
+          "sourceIds": ["source-09", "source-03"]
+        },
+        {
+          "poiId": "leningrad-zoo",
+          "tier": "warm",
+          "text": "Leningrad Zoo is a themed comparison candidate: Founded in 1865 and still operating as a public zoo at its historic Saint Petersburg location.",
+          "sourceIds": ["source-10", "source-03"]
+        },
+        {
+          "poiId": "wroclaw-zoo",
+          "tier": "warm",
+          "text": "Wrocław Zoo is a themed comparison candidate: Opened in 1865 and continues as a public zoo at its site in Wrocław.",
+          "sourceIds": ["source-11", "source-03"]
+        },
+        {
+          "poiId": "budapest-zoo",
+          "tier": "cold",
+          "text": "Budapest Zoo and Botanical Garden is a themed comparison candidate: Opened in 1866 at its present City Park site and continues as a public zoo.",
+          "sourceIds": ["source-12", "source-03"]
+        },
+        {
+          "poiId": "basel-zoo",
+          "tier": "cold",
+          "text": "Zoo Basel is a themed comparison candidate: Opened in 1874 and continues operating as a public zoo at its Basel site.",
+          "sourceIds": ["source-13", "source-03"]
+        },
+        {
+          "poiId": "cologne-zoo",
+          "tier": "warm",
+          "text": "Cologne Zoological Garden is a themed comparison candidate: Founded in 1860 and still operating as a public zoological garden in Cologne.",
+          "sourceIds": ["source-14", "source-03"]
+        },
+        {
+          "poiId": "leipzig-zoo",
+          "tier": "cold",
+          "text": "Leipzig Zoological Garden is a themed comparison candidate: Founded in 1878 and still operates as a public zoo at its Leipzig site.",
+          "sourceIds": ["source-15", "source-03"]
+        },
+        {
+          "poiId": "dresden-zoo",
+          "tier": "warm",
+          "text": "Dresden Zoo is a themed comparison candidate: Opened in 1861 and remains an operating public zoo within Dresden.",
+          "sourceIds": ["source-16", "source-03"]
+        },
+        {
+          "poiId": "helsinki-zoo",
+          "tier": "cold",
+          "text": "Korkeasaari Zoo is a themed comparison candidate: Opened to the public in 1889 on Korkeasaari Island and continues as Helsinki's public zoo.",
+          "sourceIds": ["source-17", "source-03"]
+        },
+        {
+          "poiId": "melbourne-zoo",
+          "tier": "cold",
+          "text": "Melbourne Zoo is a themed comparison candidate: Opened in 1862 at Royal Park and remains a public zoo at that Melbourne site.",
+          "sourceIds": ["source-18", "source-03"]
+        },
+        {
+          "poiId": "adelaide-zoo",
+          "tier": "cold",
+          "text": "Adelaide Zoo is a themed comparison candidate: Opened in 1883 and continues operating as a public zoo at its Adelaide site.",
+          "sourceIds": ["source-19", "source-03"]
+        },
+        {
+          "poiId": "alipore-zoo",
+          "tier": "cold",
+          "text": "Alipore Zoological Gardens is a themed comparison candidate: Opened to the public in 1876 and remains an operating public zoo in Kolkata.",
+          "sourceIds": ["source-20", "source-03"]
+        },
+        {
+          "poiId": "lahore-zoo",
+          "tier": "cold",
+          "text": "Lahore Zoo is a themed comparison candidate: Established in 1872 and continues as a public zoo in central Lahore.",
+          "sourceIds": ["source-21", "source-03"]
+        },
+        {
+          "poiId": "trivandrum-zoo",
+          "tier": "cold",
+          "text": "Thiruvananthapuram Zoo is a themed comparison candidate: Established in 1857 and continues as a public zoo at its city site.",
+          "sourceIds": ["source-22", "source-03"]
+        },
+        {
+          "poiId": "giza-zoo",
+          "tier": "cold",
+          "text": "Giza Zoo is a themed comparison candidate: Opened in 1891 and continues operating as a public zoological garden in Giza.",
+          "sourceIds": ["source-23", "source-03"]
+        },
+        {
+          "poiId": "philadelphia-zoo",
+          "tier": "cold",
+          "text": "Philadelphia Zoo is a themed comparison candidate: Opened in 1874 and continues as a public zoo at its West Philadelphia site.",
+          "sourceIds": ["source-24", "source-03"]
+        },
+        {
+          "poiId": "cincinnati-zoo",
+          "tier": "cold",
+          "text": "Cincinnati Zoo and Botanical Garden is a themed comparison candidate: Opened in 1875 at its current Cincinnati site and remains a public zoo.",
+          "sourceIds": ["source-25", "source-03"]
+        }
+      ]
+    },
+    {
+      "id": "round-2",
+      "targetPoiId": "artis-amsterdam",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/85/ArtisIngang.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Artis (zoo)",
+        "attribution": "The original uploader was Mtcv at Dutch Wikipedia. · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "clue": {
+        "text": "Founded in 1838 by three zoology enthusiasts, this institution combines a zoo with an aquarium, planetarium, arboretum, and botanical collections; its grounds contain 27 listed historic buildings.",
+        "sourceIds": ["source-07"]
+      },
+      "results": [
+        {
+          "poiId": "london-zoo",
+          "tier": "hot",
+          "text": "ZSL London Zoo is a themed comparison candidate: Opened in 1828 in Regent's Park and remains a public zoo at the same identifiable site.",
+          "sourceIds": ["source-01", "source-07"]
+        },
+        {
+          "poiId": "dublin-zoo",
+          "tier": "warm",
+          "text": "Dublin Zoo is a themed comparison candidate: Opened in 1831 in Phoenix Park and continues operating as a public zoo at that site.",
+          "sourceIds": ["source-02", "source-07"]
+        },
+        {
+          "poiId": "menagerie-jardin-plantes",
+          "tier": "hot",
+          "text": "Ménagerie du Jardin des Plantes is a themed comparison candidate: The public menagerie opened in 1794 and remains an operating animal-display institution within Paris.",
+          "sourceIds": ["source-03", "source-07"]
+        },
+        {
+          "poiId": "tiergarten-schonbrunn",
+          "tier": "hot",
+          "text": "Tiergarten Schönbrunn is a themed comparison candidate: Founded as an imperial menagerie in 1752 and still operating as a public zoo at Schönbrunn.",
+          "sourceIds": ["source-04", "source-07"]
+        },
+        {
+          "poiId": "antwerp-zoo",
+          "tier": "hot",
+          "text": "ZOO Antwerpen is a themed comparison candidate: Opened in 1843 on its present central Antwerp site and remains a public zoological garden.",
+          "sourceIds": ["source-05", "source-07"]
+        },
+        {
+          "poiId": "berlin-zoo",
+          "tier": "warm",
+          "text": "Zoologischer Garten Berlin is a themed comparison candidate: Opened in 1844 at its current Zoological Garden site and continues as a public zoo.",
+          "sourceIds": ["source-06", "source-07"]
+        },
+        {
+          "poiId": "artis-amsterdam",
+          "tier": "correct",
+          "text": "ARTIS is the round target: Established in 1838 as Natura Artis Magistra and still operates as a public zoo at the site.",
+          "sourceIds": ["source-07"]
+        },
+        {
+          "poiId": "copenhagen-zoo",
+          "tier": "warm",
+          "text": "Copenhagen Zoo is a themed comparison candidate: Founded in 1859 and still operating as a public zoo at Frederiksberg in Copenhagen.",
+          "sourceIds": ["source-08", "source-07"]
+        },
+        {
+          "poiId": "moscow-zoo",
+          "tier": "warm",
+          "text": "Moscow Zoo is a themed comparison candidate: Opened in 1864 and remains an operating public zoo on its historic Moscow site.",
+          "sourceIds": ["source-09", "source-07"]
+        },
+        {
+          "poiId": "leningrad-zoo",
+          "tier": "warm",
+          "text": "Leningrad Zoo is a themed comparison candidate: Founded in 1865 and still operating as a public zoo at its historic Saint Petersburg location.",
+          "sourceIds": ["source-10", "source-07"]
+        },
+        {
+          "poiId": "wroclaw-zoo",
+          "tier": "warm",
+          "text": "Wrocław Zoo is a themed comparison candidate: Opened in 1865 and continues as a public zoo at its site in Wrocław.",
+          "sourceIds": ["source-11", "source-07"]
+        },
+        {
+          "poiId": "budapest-zoo",
+          "tier": "cold",
+          "text": "Budapest Zoo and Botanical Garden is a themed comparison candidate: Opened in 1866 at its present City Park site and continues as a public zoo.",
+          "sourceIds": ["source-12", "source-07"]
+        },
+        {
+          "poiId": "basel-zoo",
+          "tier": "cold",
+          "text": "Zoo Basel is a themed comparison candidate: Opened in 1874 and continues operating as a public zoo at its Basel site.",
+          "sourceIds": ["source-13", "source-07"]
+        },
+        {
+          "poiId": "cologne-zoo",
+          "tier": "warm",
+          "text": "Cologne Zoological Garden is a themed comparison candidate: Founded in 1860 and still operating as a public zoological garden in Cologne.",
+          "sourceIds": ["source-14", "source-07"]
+        },
+        {
+          "poiId": "leipzig-zoo",
+          "tier": "cold",
+          "text": "Leipzig Zoological Garden is a themed comparison candidate: Founded in 1878 and still operates as a public zoo at its Leipzig site.",
+          "sourceIds": ["source-15", "source-07"]
+        },
+        {
+          "poiId": "dresden-zoo",
+          "tier": "warm",
+          "text": "Dresden Zoo is a themed comparison candidate: Opened in 1861 and remains an operating public zoo within Dresden.",
+          "sourceIds": ["source-16", "source-07"]
+        },
+        {
+          "poiId": "helsinki-zoo",
+          "tier": "cold",
+          "text": "Korkeasaari Zoo is a themed comparison candidate: Opened to the public in 1889 on Korkeasaari Island and continues as Helsinki's public zoo.",
+          "sourceIds": ["source-17", "source-07"]
+        },
+        {
+          "poiId": "melbourne-zoo",
+          "tier": "cold",
+          "text": "Melbourne Zoo is a themed comparison candidate: Opened in 1862 at Royal Park and remains a public zoo at that Melbourne site.",
+          "sourceIds": ["source-18", "source-07"]
+        },
+        {
+          "poiId": "adelaide-zoo",
+          "tier": "cold",
+          "text": "Adelaide Zoo is a themed comparison candidate: Opened in 1883 and continues operating as a public zoo at its Adelaide site.",
+          "sourceIds": ["source-19", "source-07"]
+        },
+        {
+          "poiId": "alipore-zoo",
+          "tier": "cold",
+          "text": "Alipore Zoological Gardens is a themed comparison candidate: Opened to the public in 1876 and remains an operating public zoo in Kolkata.",
+          "sourceIds": ["source-20", "source-07"]
+        },
+        {
+          "poiId": "lahore-zoo",
+          "tier": "cold",
+          "text": "Lahore Zoo is a themed comparison candidate: Established in 1872 and continues as a public zoo in central Lahore.",
+          "sourceIds": ["source-21", "source-07"]
+        },
+        {
+          "poiId": "trivandrum-zoo",
+          "tier": "cold",
+          "text": "Thiruvananthapuram Zoo is a themed comparison candidate: Established in 1857 and continues as a public zoo at its city site.",
+          "sourceIds": ["source-22", "source-07"]
+        },
+        {
+          "poiId": "giza-zoo",
+          "tier": "cold",
+          "text": "Giza Zoo is a themed comparison candidate: Opened in 1891 and continues operating as a public zoological garden in Giza.",
+          "sourceIds": ["source-23", "source-07"]
+        },
+        {
+          "poiId": "philadelphia-zoo",
+          "tier": "cold",
+          "text": "Philadelphia Zoo is a themed comparison candidate: Opened in 1874 and continues as a public zoo at its West Philadelphia site.",
+          "sourceIds": ["source-24", "source-07"]
+        },
+        {
+          "poiId": "cincinnati-zoo",
+          "tier": "cold",
+          "text": "Cincinnati Zoo and Botanical Garden is a themed comparison candidate: Opened in 1875 at its current Cincinnati site and remains a public zoo.",
+          "sourceIds": ["source-25", "source-07"]
+        }
+      ]
+    },
+    {
+      "id": "round-3",
+      "targetPoiId": "helsinki-zoo",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Snow_leopard_in_Korkeasaari_Zoo.jpg/1280px-Snow_leopard_in_Korkeasaari_Zoo.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Korkeasaari Zoo",
+        "attribution": "Annika Sorjonen / Korkeasaari Zoo · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "Opened in 1889 on an island reached by bridges, this nonprofit zoo holds European studbooks for markhors, forest reindeer, and snowy owls, and operates a wildlife hospital for injured animals.",
+        "sourceIds": ["source-17"]
+      },
+      "results": [
+        {
+          "poiId": "london-zoo",
+          "tier": "warm",
+          "text": "ZSL London Zoo is a themed comparison candidate: Opened in 1828 in Regent's Park and remains a public zoo at the same identifiable site.",
+          "sourceIds": ["source-01", "source-17"]
+        },
+        {
+          "poiId": "dublin-zoo",
+          "tier": "warm",
+          "text": "Dublin Zoo is a themed comparison candidate: Opened in 1831 in Phoenix Park and continues operating as a public zoo at that site.",
+          "sourceIds": ["source-02", "source-17"]
+        },
+        {
+          "poiId": "menagerie-jardin-plantes",
+          "tier": "hot",
+          "text": "Ménagerie du Jardin des Plantes is a themed comparison candidate: The public menagerie opened in 1794 and remains an operating animal-display institution within Paris.",
+          "sourceIds": ["source-03", "source-17"]
+        },
+        {
+          "poiId": "tiergarten-schonbrunn",
+          "tier": "hot",
+          "text": "Tiergarten Schönbrunn is a themed comparison candidate: Founded as an imperial menagerie in 1752 and still operating as a public zoo at Schönbrunn.",
+          "sourceIds": ["source-04", "source-17"]
+        },
+        {
+          "poiId": "antwerp-zoo",
+          "tier": "hot",
+          "text": "ZOO Antwerpen is a themed comparison candidate: Opened in 1843 on its present central Antwerp site and remains a public zoological garden.",
+          "sourceIds": ["source-05", "source-17"]
+        },
+        {
+          "poiId": "berlin-zoo",
+          "tier": "warm",
+          "text": "Zoologischer Garten Berlin is a themed comparison candidate: Opened in 1844 at its current Zoological Garden site and continues as a public zoo.",
+          "sourceIds": ["source-06", "source-17"]
+        },
+        {
+          "poiId": "artis-amsterdam",
+          "tier": "hot",
+          "text": "ARTIS is a themed comparison candidate: Established in 1838 as Natura Artis Magistra and still operates as a public zoo at the site.",
+          "sourceIds": ["source-07", "source-17"]
+        },
+        {
+          "poiId": "copenhagen-zoo",
+          "tier": "warm",
+          "text": "Copenhagen Zoo is a themed comparison candidate: Founded in 1859 and still operating as a public zoo at Frederiksberg in Copenhagen.",
+          "sourceIds": ["source-08", "source-17"]
+        },
+        {
+          "poiId": "moscow-zoo",
+          "tier": "warm",
+          "text": "Moscow Zoo is a themed comparison candidate: Opened in 1864 and remains an operating public zoo on its historic Moscow site.",
+          "sourceIds": ["source-09", "source-17"]
+        },
+        {
+          "poiId": "leningrad-zoo",
+          "tier": "warm",
+          "text": "Leningrad Zoo is a themed comparison candidate: Founded in 1865 and still operating as a public zoo at its historic Saint Petersburg location.",
+          "sourceIds": ["source-10", "source-17"]
+        },
+        {
+          "poiId": "wroclaw-zoo",
+          "tier": "warm",
+          "text": "Wrocław Zoo is a themed comparison candidate: Opened in 1865 and continues as a public zoo at its site in Wrocław.",
+          "sourceIds": ["source-11", "source-17"]
+        },
+        {
+          "poiId": "budapest-zoo",
+          "tier": "cold",
+          "text": "Budapest Zoo and Botanical Garden is a themed comparison candidate: Opened in 1866 at its present City Park site and continues as a public zoo.",
+          "sourceIds": ["source-12", "source-17"]
+        },
+        {
+          "poiId": "basel-zoo",
+          "tier": "cold",
+          "text": "Zoo Basel is a themed comparison candidate: Opened in 1874 and continues operating as a public zoo at its Basel site.",
+          "sourceIds": ["source-13", "source-17"]
+        },
+        {
+          "poiId": "cologne-zoo",
+          "tier": "warm",
+          "text": "Cologne Zoological Garden is a themed comparison candidate: Founded in 1860 and still operating as a public zoological garden in Cologne.",
+          "sourceIds": ["source-14", "source-17"]
+        },
+        {
+          "poiId": "leipzig-zoo",
+          "tier": "cold",
+          "text": "Leipzig Zoological Garden is a themed comparison candidate: Founded in 1878 and still operates as a public zoo at its Leipzig site.",
+          "sourceIds": ["source-15", "source-17"]
+        },
+        {
+          "poiId": "dresden-zoo",
+          "tier": "cold",
+          "text": "Dresden Zoo is a themed comparison candidate: Opened in 1861 and remains an operating public zoo within Dresden.",
+          "sourceIds": ["source-16", "source-17"]
+        },
+        {
+          "poiId": "helsinki-zoo",
+          "tier": "correct",
+          "text": "Korkeasaari Zoo is the round target: Opened to the public in 1889 on Korkeasaari Island and continues as Helsinki's public zoo.",
+          "sourceIds": ["source-17"]
+        },
+        {
+          "poiId": "melbourne-zoo",
+          "tier": "cold",
+          "text": "Melbourne Zoo is a themed comparison candidate: Opened in 1862 at Royal Park and remains a public zoo at that Melbourne site.",
+          "sourceIds": ["source-18", "source-17"]
+        },
+        {
+          "poiId": "adelaide-zoo",
+          "tier": "cold",
+          "text": "Adelaide Zoo is a themed comparison candidate: Opened in 1883 and continues operating as a public zoo at its Adelaide site.",
+          "sourceIds": ["source-19", "source-17"]
+        },
+        {
+          "poiId": "alipore-zoo",
+          "tier": "cold",
+          "text": "Alipore Zoological Gardens is a themed comparison candidate: Opened to the public in 1876 and remains an operating public zoo in Kolkata.",
+          "sourceIds": ["source-20", "source-17"]
+        },
+        {
+          "poiId": "lahore-zoo",
+          "tier": "cold",
+          "text": "Lahore Zoo is a themed comparison candidate: Established in 1872 and continues as a public zoo in central Lahore.",
+          "sourceIds": ["source-21", "source-17"]
+        },
+        {
+          "poiId": "trivandrum-zoo",
+          "tier": "cold",
+          "text": "Thiruvananthapuram Zoo is a themed comparison candidate: Established in 1857 and continues as a public zoo at its city site.",
+          "sourceIds": ["source-22", "source-17"]
+        },
+        {
+          "poiId": "giza-zoo",
+          "tier": "cold",
+          "text": "Giza Zoo is a themed comparison candidate: Opened in 1891 and continues operating as a public zoological garden in Giza.",
+          "sourceIds": ["source-23", "source-17"]
+        },
+        {
+          "poiId": "philadelphia-zoo",
+          "tier": "cold",
+          "text": "Philadelphia Zoo is a themed comparison candidate: Opened in 1874 and continues as a public zoo at its West Philadelphia site.",
+          "sourceIds": ["source-24", "source-17"]
+        },
+        {
+          "poiId": "cincinnati-zoo",
+          "tier": "cold",
+          "text": "Cincinnati Zoo and Botanical Garden is a themed comparison candidate: Opened in 1875 at its current Cincinnati site and remains a public zoo.",
+          "sourceIds": ["source-25", "source-17"]
+        }
+      ]
+    },
+    {
+      "id": "round-4",
+      "targetPoiId": "dublin-zoo",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/DublinZooEntrance.jpg/1280px-DublinZooEntrance.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Dublin Zoo",
+        "attribution": "Rory Parle (Rparle at English Wikipedia) · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "clue": {
+        "text": "Opened in 1831 after being designed by Decimus Burton, this garden occupies more than 28 hectares of a historic park; its first animals included 46 mammals and 72 birds donated by an older London institution, while Sunday admission initially cost one penny.",
+        "sourceIds": ["source-02"]
+      },
+      "results": [
+        {
+          "poiId": "london-zoo",
+          "tier": "hot",
+          "text": "ZSL London Zoo is a themed comparison candidate: Opened in 1828 in Regent's Park and remains a public zoo at the same identifiable site.",
+          "sourceIds": ["source-01", "source-02"]
+        },
+        {
+          "poiId": "dublin-zoo",
+          "tier": "correct",
+          "text": "Dublin Zoo is the round target: Opened in 1831 in Phoenix Park and continues operating as a public zoo at that site.",
+          "sourceIds": ["source-02"]
+        },
+        {
+          "poiId": "menagerie-jardin-plantes",
+          "tier": "hot",
+          "text": "Ménagerie du Jardin des Plantes is a themed comparison candidate: The public menagerie opened in 1794 and remains an operating animal-display institution within Paris.",
+          "sourceIds": ["source-03", "source-02"]
+        },
+        {
+          "poiId": "tiergarten-schonbrunn",
+          "tier": "warm",
+          "text": "Tiergarten Schönbrunn is a themed comparison candidate: Founded as an imperial menagerie in 1752 and still operating as a public zoo at Schönbrunn.",
+          "sourceIds": ["source-04", "source-02"]
+        },
+        {
+          "poiId": "antwerp-zoo",
+          "tier": "hot",
+          "text": "ZOO Antwerpen is a themed comparison candidate: Opened in 1843 on its present central Antwerp site and remains a public zoological garden.",
+          "sourceIds": ["source-05", "source-02"]
+        },
+        {
+          "poiId": "berlin-zoo",
+          "tier": "warm",
+          "text": "Zoologischer Garten Berlin is a themed comparison candidate: Opened in 1844 at its current Zoological Garden site and continues as a public zoo.",
+          "sourceIds": ["source-06", "source-02"]
+        },
+        {
+          "poiId": "artis-amsterdam",
+          "tier": "hot",
+          "text": "ARTIS is a themed comparison candidate: Established in 1838 as Natura Artis Magistra and still operates as a public zoo at the site.",
+          "sourceIds": ["source-07", "source-02"]
+        },
+        {
+          "poiId": "copenhagen-zoo",
+          "tier": "warm",
+          "text": "Copenhagen Zoo is a themed comparison candidate: Founded in 1859 and still operating as a public zoo at Frederiksberg in Copenhagen.",
+          "sourceIds": ["source-08", "source-02"]
+        },
+        {
+          "poiId": "moscow-zoo",
+          "tier": "warm",
+          "text": "Moscow Zoo is a themed comparison candidate: Opened in 1864 and remains an operating public zoo on its historic Moscow site.",
+          "sourceIds": ["source-09", "source-02"]
+        },
+        {
+          "poiId": "leningrad-zoo",
+          "tier": "warm",
+          "text": "Leningrad Zoo is a themed comparison candidate: Founded in 1865 and still operating as a public zoo at its historic Saint Petersburg location.",
+          "sourceIds": ["source-10", "source-02"]
+        },
+        {
+          "poiId": "wroclaw-zoo",
+          "tier": "warm",
+          "text": "Wrocław Zoo is a themed comparison candidate: Opened in 1865 and continues as a public zoo at its site in Wrocław.",
+          "sourceIds": ["source-11", "source-02"]
+        },
+        {
+          "poiId": "budapest-zoo",
+          "tier": "cold",
+          "text": "Budapest Zoo and Botanical Garden is a themed comparison candidate: Opened in 1866 at its present City Park site and continues as a public zoo.",
+          "sourceIds": ["source-12", "source-02"]
+        },
+        {
+          "poiId": "basel-zoo",
+          "tier": "cold",
+          "text": "Zoo Basel is a themed comparison candidate: Opened in 1874 and continues operating as a public zoo at its Basel site.",
+          "sourceIds": ["source-13", "source-02"]
+        },
+        {
+          "poiId": "cologne-zoo",
+          "tier": "warm",
+          "text": "Cologne Zoological Garden is a themed comparison candidate: Founded in 1860 and still operating as a public zoological garden in Cologne.",
+          "sourceIds": ["source-14", "source-02"]
+        },
+        {
+          "poiId": "leipzig-zoo",
+          "tier": "cold",
+          "text": "Leipzig Zoological Garden is a themed comparison candidate: Founded in 1878 and still operates as a public zoo at its Leipzig site.",
+          "sourceIds": ["source-15", "source-02"]
+        },
+        {
+          "poiId": "dresden-zoo",
+          "tier": "warm",
+          "text": "Dresden Zoo is a themed comparison candidate: Opened in 1861 and remains an operating public zoo within Dresden.",
+          "sourceIds": ["source-16", "source-02"]
+        },
+        {
+          "poiId": "helsinki-zoo",
+          "tier": "cold",
+          "text": "Korkeasaari Zoo is a themed comparison candidate: Opened to the public in 1889 on Korkeasaari Island and continues as Helsinki's public zoo.",
+          "sourceIds": ["source-17", "source-02"]
+        },
+        {
+          "poiId": "melbourne-zoo",
+          "tier": "cold",
+          "text": "Melbourne Zoo is a themed comparison candidate: Opened in 1862 at Royal Park and remains a public zoo at that Melbourne site.",
+          "sourceIds": ["source-18", "source-02"]
+        },
+        {
+          "poiId": "adelaide-zoo",
+          "tier": "cold",
+          "text": "Adelaide Zoo is a themed comparison candidate: Opened in 1883 and continues operating as a public zoo at its Adelaide site.",
+          "sourceIds": ["source-19", "source-02"]
+        },
+        {
+          "poiId": "alipore-zoo",
+          "tier": "cold",
+          "text": "Alipore Zoological Gardens is a themed comparison candidate: Opened to the public in 1876 and remains an operating public zoo in Kolkata.",
+          "sourceIds": ["source-20", "source-02"]
+        },
+        {
+          "poiId": "lahore-zoo",
+          "tier": "cold",
+          "text": "Lahore Zoo is a themed comparison candidate: Established in 1872 and continues as a public zoo in central Lahore.",
+          "sourceIds": ["source-21", "source-02"]
+        },
+        {
+          "poiId": "trivandrum-zoo",
+          "tier": "cold",
+          "text": "Thiruvananthapuram Zoo is a themed comparison candidate: Established in 1857 and continues as a public zoo at its city site.",
+          "sourceIds": ["source-22", "source-02"]
+        },
+        {
+          "poiId": "giza-zoo",
+          "tier": "cold",
+          "text": "Giza Zoo is a themed comparison candidate: Opened in 1891 and continues operating as a public zoological garden in Giza.",
+          "sourceIds": ["source-23", "source-02"]
+        },
+        {
+          "poiId": "philadelphia-zoo",
+          "tier": "cold",
+          "text": "Philadelphia Zoo is a themed comparison candidate: Opened in 1874 and continues as a public zoo at its West Philadelphia site.",
+          "sourceIds": ["source-24", "source-02"]
+        },
+        {
+          "poiId": "cincinnati-zoo",
+          "tier": "cold",
+          "text": "Cincinnati Zoo and Botanical Garden is a themed comparison candidate: Opened in 1875 at its current Cincinnati site and remains a public zoo.",
+          "sourceIds": ["source-25", "source-02"]
+        }
+      ]
+    },
+    {
+      "id": "round-5",
+      "targetPoiId": "antwerp-zoo",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Antwerpen_Zoo_Entrance_2.jpg/1280px-Antwerpen_Zoo_Entrance_2.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Antwerp Zoo",
+        "attribution": "DRG-fan · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "Opened in 1843 by a royal zoological society, this compact urban park stands beside a major railway station and preserves an Egyptian temple from 1856; it became the first zoo to house okapis in 1918.",
+        "sourceIds": ["source-05"]
+      },
+      "results": [
+        {
+          "poiId": "london-zoo",
+          "tier": "hot",
+          "text": "ZSL London Zoo is a themed comparison candidate: Opened in 1828 in Regent's Park and remains a public zoo at the same identifiable site.",
+          "sourceIds": ["source-01", "source-05"]
+        },
+        {
+          "poiId": "dublin-zoo",
+          "tier": "hot",
+          "text": "Dublin Zoo is a themed comparison candidate: Opened in 1831 in Phoenix Park and continues operating as a public zoo at that site.",
+          "sourceIds": ["source-02", "source-05"]
+        },
+        {
+          "poiId": "menagerie-jardin-plantes",
+          "tier": "warm",
+          "text": "Ménagerie du Jardin des Plantes is a themed comparison candidate: The public menagerie opened in 1794 and remains an operating animal-display institution within Paris.",
+          "sourceIds": ["source-03", "source-05"]
+        },
+        {
+          "poiId": "tiergarten-schonbrunn",
+          "tier": "warm",
+          "text": "Tiergarten Schönbrunn is a themed comparison candidate: Founded as an imperial menagerie in 1752 and still operating as a public zoo at Schönbrunn.",
+          "sourceIds": ["source-04", "source-05"]
+        },
+        {
+          "poiId": "antwerp-zoo",
+          "tier": "correct",
+          "text": "ZOO Antwerpen is the round target: Opened in 1843 on its present central Antwerp site and remains a public zoological garden.",
+          "sourceIds": ["source-05"]
+        },
+        {
+          "poiId": "berlin-zoo",
+          "tier": "hot",
+          "text": "Zoologischer Garten Berlin is a themed comparison candidate: Opened in 1844 at its current Zoological Garden site and continues as a public zoo.",
+          "sourceIds": ["source-06", "source-05"]
+        },
+        {
+          "poiId": "artis-amsterdam",
+          "tier": "hot",
+          "text": "ARTIS is a themed comparison candidate: Established in 1838 as Natura Artis Magistra and still operates as a public zoo at the site.",
+          "sourceIds": ["source-07", "source-05"]
+        },
+        {
+          "poiId": "copenhagen-zoo",
+          "tier": "warm",
+          "text": "Copenhagen Zoo is a themed comparison candidate: Founded in 1859 and still operating as a public zoo at Frederiksberg in Copenhagen.",
+          "sourceIds": ["source-08", "source-05"]
+        },
+        {
+          "poiId": "moscow-zoo",
+          "tier": "warm",
+          "text": "Moscow Zoo is a themed comparison candidate: Opened in 1864 and remains an operating public zoo on its historic Moscow site.",
+          "sourceIds": ["source-09", "source-05"]
+        },
+        {
+          "poiId": "leningrad-zoo",
+          "tier": "warm",
+          "text": "Leningrad Zoo is a themed comparison candidate: Founded in 1865 and still operating as a public zoo at its historic Saint Petersburg location.",
+          "sourceIds": ["source-10", "source-05"]
+        },
+        {
+          "poiId": "wroclaw-zoo",
+          "tier": "warm",
+          "text": "Wrocław Zoo is a themed comparison candidate: Opened in 1865 and continues as a public zoo at its site in Wrocław.",
+          "sourceIds": ["source-11", "source-05"]
+        },
+        {
+          "poiId": "budapest-zoo",
+          "tier": "cold",
+          "text": "Budapest Zoo and Botanical Garden is a themed comparison candidate: Opened in 1866 at its present City Park site and continues as a public zoo.",
+          "sourceIds": ["source-12", "source-05"]
+        },
+        {
+          "poiId": "basel-zoo",
+          "tier": "cold",
+          "text": "Zoo Basel is a themed comparison candidate: Opened in 1874 and continues operating as a public zoo at its Basel site.",
+          "sourceIds": ["source-13", "source-05"]
+        },
+        {
+          "poiId": "cologne-zoo",
+          "tier": "warm",
+          "text": "Cologne Zoological Garden is a themed comparison candidate: Founded in 1860 and still operating as a public zoological garden in Cologne.",
+          "sourceIds": ["source-14", "source-05"]
+        },
+        {
+          "poiId": "leipzig-zoo",
+          "tier": "cold",
+          "text": "Leipzig Zoological Garden is a themed comparison candidate: Founded in 1878 and still operates as a public zoo at its Leipzig site.",
+          "sourceIds": ["source-15", "source-05"]
+        },
+        {
+          "poiId": "dresden-zoo",
+          "tier": "warm",
+          "text": "Dresden Zoo is a themed comparison candidate: Opened in 1861 and remains an operating public zoo within Dresden.",
+          "sourceIds": ["source-16", "source-05"]
+        },
+        {
+          "poiId": "helsinki-zoo",
+          "tier": "cold",
+          "text": "Korkeasaari Zoo is a themed comparison candidate: Opened to the public in 1889 on Korkeasaari Island and continues as Helsinki's public zoo.",
+          "sourceIds": ["source-17", "source-05"]
+        },
+        {
+          "poiId": "melbourne-zoo",
+          "tier": "cold",
+          "text": "Melbourne Zoo is a themed comparison candidate: Opened in 1862 at Royal Park and remains a public zoo at that Melbourne site.",
+          "sourceIds": ["source-18", "source-05"]
+        },
+        {
+          "poiId": "adelaide-zoo",
+          "tier": "cold",
+          "text": "Adelaide Zoo is a themed comparison candidate: Opened in 1883 and continues operating as a public zoo at its Adelaide site.",
+          "sourceIds": ["source-19", "source-05"]
+        },
+        {
+          "poiId": "alipore-zoo",
+          "tier": "cold",
+          "text": "Alipore Zoological Gardens is a themed comparison candidate: Opened to the public in 1876 and remains an operating public zoo in Kolkata.",
+          "sourceIds": ["source-20", "source-05"]
+        },
+        {
+          "poiId": "lahore-zoo",
+          "tier": "cold",
+          "text": "Lahore Zoo is a themed comparison candidate: Established in 1872 and continues as a public zoo in central Lahore.",
+          "sourceIds": ["source-21", "source-05"]
+        },
+        {
+          "poiId": "trivandrum-zoo",
+          "tier": "cold",
+          "text": "Thiruvananthapuram Zoo is a themed comparison candidate: Established in 1857 and continues as a public zoo at its city site.",
+          "sourceIds": ["source-22", "source-05"]
+        },
+        {
+          "poiId": "giza-zoo",
+          "tier": "cold",
+          "text": "Giza Zoo is a themed comparison candidate: Opened in 1891 and continues operating as a public zoological garden in Giza.",
+          "sourceIds": ["source-23", "source-05"]
+        },
+        {
+          "poiId": "philadelphia-zoo",
+          "tier": "cold",
+          "text": "Philadelphia Zoo is a themed comparison candidate: Opened in 1874 and continues as a public zoo at its West Philadelphia site.",
+          "sourceIds": ["source-24", "source-05"]
+        },
+        {
+          "poiId": "cincinnati-zoo",
+          "tier": "cold",
+          "text": "Cincinnati Zoo and Botanical Garden is a themed comparison candidate: Opened in 1875 at its current Cincinnati site and remains a public zoo.",
+          "sourceIds": ["source-25", "source-05"]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-01",
+      "title": "London Zoo",
+      "url": "https://en.wikipedia.org/wiki/London_Zoo",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-02",
+      "title": "Dublin Zoo",
+      "url": "https://en.wikipedia.org/wiki/Dublin_Zoo",
+      "retrievedAt": "2026-08-18T04:11:00.824Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-03",
+      "title": "Ménagerie du Jardin des plantes",
+      "url": "https://en.wikipedia.org/wiki/M%C3%A9nagerie_du_Jardin_des_plantes",
+      "retrievedAt": "2026-08-18T04:09:00.178Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-04",
+      "title": "Tiergarten Schönbrunn",
+      "url": "https://en.wikipedia.org/wiki/Tiergarten_Sch%C3%B6nbrunn",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-05",
+      "title": "Antwerp Zoo",
+      "url": "https://en.wikipedia.org/wiki/Antwerp_Zoo",
+      "retrievedAt": "2026-08-18T04:11:00.794Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-06",
+      "title": "Berlin Zoological Garden",
+      "url": "https://en.wikipedia.org/wiki/Berlin_Zoological_Garden",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-07",
+      "title": "Artis (zoo)",
+      "url": "https://en.wikipedia.org/wiki/Artis_(zoo)",
+      "retrievedAt": "2026-08-18T04:08:32.003Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-08",
+      "title": "Copenhagen Zoo",
+      "url": "https://en.wikipedia.org/wiki/Copenhagen_Zoo",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-09",
+      "title": "Moscow Zoo",
+      "url": "https://en.wikipedia.org/wiki/Moscow_Zoo",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-10",
+      "title": "Leningrad Zoo",
+      "url": "https://en.wikipedia.org/wiki/Leningrad_Zoo",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-11",
+      "title": "Wrocław Zoo",
+      "url": "https://en.wikipedia.org/wiki/Wroc%C5%82aw_Zoo",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-12",
+      "title": "Budapest Zoo and Botanical Garden",
+      "url": "https://en.wikipedia.org/wiki/Budapest_Zoo_and_Botanical_Garden",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-13",
+      "title": "Zoo Basel",
+      "url": "https://en.wikipedia.org/wiki/University_of_Basel_Zoological_Garden",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-14",
+      "title": "Cologne Zoological Garden",
+      "url": "https://en.wikipedia.org/wiki/Cologne_Zoological_Garden",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-15",
+      "title": "Leipzig Zoological Garden",
+      "url": "https://en.wikipedia.org/wiki/Leipzig_Zoological_Garden",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-16",
+      "title": "Dresden Zoo",
+      "url": "https://en.wikipedia.org/wiki/Dresden_Zoo",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-17",
+      "title": "Korkeasaari Zoo",
+      "url": "https://en.wikipedia.org/wiki/Korkeasaari_Zoo",
+      "retrievedAt": "2026-08-18T04:09:01.146Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-18",
+      "title": "Melbourne Zoo",
+      "url": "https://en.wikipedia.org/wiki/Melbourne_Zoo",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-19",
+      "title": "Adelaide Zoo",
+      "url": "https://en.wikipedia.org/wiki/Adelaide_Zoo",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-20",
+      "title": "Alipore Zoological Gardens",
+      "url": "https://en.wikipedia.org/wiki/Alipore_Zoological_Gardens",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-21",
+      "title": "Lahore Zoo",
+      "url": "https://en.wikipedia.org/wiki/Lahore_Zoo",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-22",
+      "title": "Thiruvananthapuram Zoo",
+      "url": "https://en.wikipedia.org/wiki/Thiruvananthapuram_Zoo",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-23",
+      "title": "Giza Zoo",
+      "url": "https://en.wikipedia.org/wiki/Giza_Zoo",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-24",
+      "title": "Philadelphia Zoo",
+      "url": "https://en.wikipedia.org/wiki/Philadelphia_Zoo",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-25",
+      "title": "Cincinnati Zoo and Botanical Garden",
+      "url": "https://en.wikipedia.org/wiki/Cincinnati_Zoo_and_Botanical_Garden",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    }
+  ],
+  "theme": {
+    "title": "Operating Zoological Gardens Founded Before 1900",
+    "introduction": "A daily location game featuring long-running, publicly visitable zoos and zoological gardens in cities around the world. Plausible locations include London Zoo, Dublin Zoo, Ménagerie du Jardin des Plantes in Paris, Tiergarten Schönbrunn in Vienna, Berlin Zoological Garden, Antwerp Zoo, Frankfurt Zoo, Cologne Zoo, Leipzig Zoo, Wrocław Zoo, Copenhagen Zoo, Korkeasaari Zoo in Helsinki, Moscow Zoo, Budapest Zoo, Poznań Old Zoo, Dresden Zoo, Zoo de Lyon, Zoo Basel, Lisbon Zoo, Ueno Zoo in Tokyo, Giza Zoo in Cairo, Alipore Zoo in Kolkata, Mysuru Zoo, Lahore Zoo, Karachi Zoo, BioParque do Rio, Melbourne Zoo, Adelaide Zoo, Philadelphia Zoo, Cincinnati Zoo, Lincoln Park Zoo, Central Park Zoo, Smithsonian’s National Zoo, Buffalo Zoo, Milwaukee County Zoo, and Bronx Zoo.",
+    "inclusionCriteria": "Include a location only when every condition is met: (1) it is an individually named zoo, zoological garden, zoological park, menagerie, or equivalent institution whose principal function is the public display of living non-domesticated animals; (2) the institution was established or opened at the same identifiable site on or before 31 December 1899; (3) it still operates at that site as a permanent animal-display institution on the date of play; (4) it provides regularly scheduled public admission, whether ticketed or free; (5) the site lies within the current administrative boundary of a present-day city or incorporated urban municipality; and (6) the named zoo can be pinned as one exact visitable map location."
+  }
+}

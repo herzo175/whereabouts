@@ -159,7 +159,11 @@ export function createLiveOrchestratorStages(
     researchCandidates: (input) => researchCandidates({ model, ...input }),
     curateBoard: (input) => curateBoard({ model, ...input }),
     hydrateBoardTargets: (input) =>
-      hydrateBoardTargets({ board: input.board, research }),
+      hydrateBoardTargets({
+        board: input.board,
+        research,
+        excludedTargetIds: input.excludedTargetIds,
+      }),
     writeCaseDraft: (input) => writeCaseDraft({ model, ...input }),
     repairCaseDraft: (input) => repairCaseDraft({ model, ...input }),
     critiqueCase: (input) => critiqueCase({ criticModel, ...input }),

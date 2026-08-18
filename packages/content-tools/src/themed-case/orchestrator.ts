@@ -1,12 +1,15 @@
 import { generateCase, type PreparedCase } from '../generate-case.js';
 import type { GenerationReview } from '../generation-review.js';
-import { InsufficientCandidatePoolError } from './candidate-researcher.js';
+import {
+  InsufficientCandidatePoolError,
+  TargetHydrationError,
+} from './candidate-researcher.js';
 import type {
   CandidatePool,
   CaseDraft,
   CuratedBoard,
-  ResearchedCandidate,
   RepairRequest,
+  ResearchedCandidate,
   ThemePlan,
 } from './contracts.js';
 
@@ -23,6 +26,7 @@ export type OrchestratorStages = {
   hydrateBoardTargets?(input: {
     theme: ThemePlan;
     board: CuratedBoard;
+    excludedTargetIds: ReadonlySet<string>;
   }): Promise<CuratedBoard>;
   writeCaseDraft(input: {
     theme: ThemePlan;
@@ -79,15 +83,36 @@ function draftRepairs(
   );
 }
 
+function reportRepairs(repairs: RepairRequest[]): void {
+  if (!repairs.length) return;
+  console.warn(
+    `Critic requested ${repairs.length} repair(s): ${repairs
+      .map((repair) => {
+        const identity =
+          repair.kind === 'candidate'
+            ? repair.poiId
+            : repair.kind === 'clue'
+              ? repair.roundId
+              : repair.kind === 'relationship'
+                ? `${repair.roundId}/${repair.poiId}`
+                : 'theme';
+        return `${repair.kind}:${identity} — ${repair.reason}`;
+      })
+      .join(' | ')}`,
+  );
+}
+
 export async function orchestrateThemedCase(
   input: OrchestrateThemedCaseInput,
 ): Promise<PreparedCase> {
   let themeAttempts = 0;
-  let repairCycles = 0;
   let lastFailure: unknown;
 
   themeLoop: while (themeAttempts < 3) {
     themeAttempts += 1;
+    let candidateRepairCycles = 0;
+    let draftRepairCycles = 0;
+    const rejectedCandidateIds = new Set<string>();
     const theme = await input.stages.planTheme({
       recentThemes: input.recentThemes,
     });
@@ -104,8 +129,19 @@ export async function orchestrateThemedCase(
       candidates: pool.candidates,
       excludedTargetIds: input.excludedTargetIds,
     });
-    if (input.stages.hydrateBoardTargets)
-      board = await input.stages.hydrateBoardTargets({ theme, board });
+    if (input.stages.hydrateBoardTargets) {
+      try {
+        board = await input.stages.hydrateBoardTargets({
+          theme,
+          board,
+          excludedTargetIds: input.excludedTargetIds,
+        });
+      } catch (error) {
+        if (error instanceof TargetHydrationError && themeAttempts < 3)
+          continue;
+        throw error;
+      }
+    }
     let draft = await input.stages.writeCaseDraft({ theme, board });
     let critique = await input.stages.critiqueCase({
       theme,
@@ -114,6 +150,7 @@ export async function orchestrateThemedCase(
       publicationDate: input.date,
       revision: input.revision,
     });
+    reportRepairs(critique.repairs);
 
     while (true) {
       if (critique.repairs.length === 0)
@@ -126,9 +163,6 @@ export async function orchestrateThemedCase(
           draft,
           review: critique.review,
         });
-      if (repairCycles >= 2)
-        throw new Error('case critique failed after two repair cycles');
-      repairCycles += 1;
       lastFailure = critique.repairs;
       if (hasRepair(critique.repairs, 'theme')) {
         if (themeAttempts >= 3) break themeLoop;
@@ -138,8 +172,14 @@ export async function orchestrateThemedCase(
         candidateRepairs(critique.repairs).map((repair) => repair.poiId),
       );
       if (rejected.size) {
+        if (candidateRepairCycles >= 2) {
+          if (themeAttempts < 3) continue themeLoop;
+          throw new Error('case critique failed after two board repairs');
+        }
+        candidateRepairCycles += 1;
+        for (const id of rejected) rejectedCandidateIds.add(id);
         let candidates = pool.candidates.filter(
-          (candidate) => !rejected.has(candidate.id),
+          (candidate) => !rejectedCandidateIds.has(candidate.id),
         );
         if (candidates.length < 25) {
           try {
@@ -147,7 +187,7 @@ export async function orchestrateThemedCase(
               theme,
             });
             candidates = replacementPool.candidates.filter(
-              (candidate) => !rejected.has(candidate.id),
+              (candidate) => !rejectedCandidateIds.has(candidate.id),
             );
             pool = replacementPool;
           } catch (error) {
@@ -164,10 +204,24 @@ export async function orchestrateThemedCase(
           candidates,
           excludedTargetIds: input.excludedTargetIds,
         });
-        if (input.stages.hydrateBoardTargets)
-          board = await input.stages.hydrateBoardTargets({ theme, board });
+        if (input.stages.hydrateBoardTargets) {
+          try {
+            board = await input.stages.hydrateBoardTargets({
+              theme,
+              board,
+              excludedTargetIds: input.excludedTargetIds,
+            });
+          } catch (error) {
+            if (error instanceof TargetHydrationError && themeAttempts < 3)
+              continue themeLoop;
+            throw error;
+          }
+        }
         draft = await input.stages.writeCaseDraft({ theme, board });
       } else {
+        if (draftRepairCycles >= 3)
+          throw new Error('case critique failed after three clue repairs');
+        draftRepairCycles += 1;
         draft = await input.stages.repairCaseDraft({
           theme,
           board,
@@ -182,6 +236,7 @@ export async function orchestrateThemedCase(
         publicationDate: input.date,
         revision: input.revision,
       });
+      reportRepairs(critique.repairs);
     }
   }
   throw new Error(

@@ -1,0 +1,1402 @@
+{
+  "schemaVersion": 3,
+  "publicationDate": "2026-08-25",
+  "revision": 1,
+  "caseNumber": 20690,
+  "pois": [
+    {
+      "id": "de-frankfurt-hbf",
+      "name": "Frankfurt Hauptbahnhof",
+      "city": "Frankfurt am Main",
+      "country": "Germany",
+      "latitude": 50.1071,
+      "longitude": 8.6638,
+      "wikipediaTitle": "Frankfurt (Main) Hauptbahnhof",
+      "blurb": "Frankfurt (Main) Hauptbahnhof (short Frankfurt (Main) Hbf, in English Frankfurt Central Station) is the busiest train station in the German state of Hesse and the second busiest train station in Germany behind Hamburg Hauptbahnhof.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Hauptbahnhof_Frankfurt.jpg/1280px-Hauptbahnhof_Frankfurt.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Frankfurt (Main) Hauptbahnhof",
+        "attribution": "Thomas Wolf, www.foto-tw.de · CC BY-SA 3.0 de",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"
+      },
+      "themeConnection": {
+        "text": "Opened in 1888 and remains an active intercity, regional, and commuter station.",
+        "sourceIds": ["source-19"]
+      }
+    },
+    {
+      "id": "uk-edinburgh-waverley",
+      "name": "Edinburgh Waverley station",
+      "city": "Edinburgh",
+      "country": "United Kingdom",
+      "latitude": 55.952,
+      "longitude": -3.189,
+      "wikipediaTitle": "Edinburgh Waverley railway station",
+      "blurb": "Edinburgh Waverley station opened in 1866 and remains the principal railway station in Edinburgh, with frequent scheduled National Rail services.",
+      "themeConnection": {
+        "text": "Opened in 1866 and remains an active intercity and regional passenger station.",
+        "sourceIds": ["source-12"]
+      }
+    },
+    {
+      "id": "be-antwerp-centraal",
+      "name": "Antwerpen-Centraal station",
+      "city": "Antwerp",
+      "country": "Belgium",
+      "latitude": 51.2172,
+      "longitude": 4.4211,
+      "wikipediaTitle": "Antwerpen-Centraal railway station",
+      "blurb": "Antwerpen-Centraal railway station opened in 1836 and continues to operate as a major Belgian passenger station, including scheduled international trains.",
+      "themeConnection": {
+        "text": "Opened in 1836 and remains an active domestic and international passenger station.",
+        "sourceIds": ["source-17"]
+      }
+    },
+    {
+      "id": "uk-london-victoria",
+      "name": "London Victoria station",
+      "city": "London",
+      "country": "United Kingdom",
+      "latitude": 51.4952,
+      "longitude": -0.1439,
+      "wikipediaTitle": "London Victoria station",
+      "blurb": "London Victoria station opened in 1860 and continues to operate as a busy National Rail terminus for scheduled regional and commuter passenger trains.",
+      "themeConnection": {
+        "text": "Opened in 1860 and remains an active National Rail passenger station.",
+        "sourceIds": ["source-05"]
+      }
+    },
+    {
+      "id": "uk-bristol-temple-meads",
+      "name": "Bristol Temple Meads station",
+      "city": "Bristol",
+      "country": "United Kingdom",
+      "latitude": 51.449,
+      "longitude": -2.5813,
+      "wikipediaTitle": "Bristol Temple Meads railway station",
+      "blurb": "Bristol Temple Meads opened in 1840 and continues to serve scheduled Great Western Railway passenger services, including regional and intercity trains.",
+      "themeConnection": {
+        "text": "Opened in 1840 and remains an active National Rail passenger station.",
+        "sourceIds": ["source-11"]
+      }
+    },
+    {
+      "id": "uk-newcastle-central",
+      "name": "Newcastle Central station",
+      "city": "Newcastle upon Tyne",
+      "country": "United Kingdom",
+      "latitude": 54.9686,
+      "longitude": -1.6174,
+      "wikipediaTitle": "Newcastle railway station",
+      "blurb": "Newcastle station, also known as Newcastle Central, opened in 1850 and continues to provide scheduled National Rail passenger services.",
+      "themeConnection": {
+        "text": "Opened in 1850 and remains an active intercity and regional passenger station.",
+        "sourceIds": ["source-15"]
+      }
+    },
+    {
+      "id": "ch-zurich-hb",
+      "name": "Zürich Hauptbahnhof",
+      "city": "Zürich",
+      "country": "Switzerland",
+      "latitude": 47.3779,
+      "longitude": 8.5403,
+      "wikipediaTitle": "Zürich Hauptbahnhof",
+      "blurb": "Zürich Hauptbahnhof opened in 1847 and remains Switzerland's largest railway station, with regular domestic, international, and regional passenger trains.",
+      "themeConnection": {
+        "text": "Opened in 1847 and remains an active national and international passenger station.",
+        "sourceIds": ["source-20"]
+      }
+    },
+    {
+      "id": "it-rome-termini",
+      "name": "Roma Termini",
+      "city": "Rome",
+      "country": "Italy",
+      "latitude": 41.9009,
+      "longitude": 12.5018,
+      "wikipediaTitle": "Roma Termini railway station",
+      "blurb": "Roma Termini began operation in 1863 and remains Rome's principal railway station, with scheduled national, regional, and international passenger trains.",
+      "themeConnection": {
+        "text": "Opened in 1863 and remains an active national, regional, and commuter passenger station.",
+        "sourceIds": ["source-25"]
+      }
+    },
+    {
+      "id": "uk-birmingham-new-street",
+      "name": "Birmingham New Street station",
+      "city": "Birmingham",
+      "country": "United Kingdom",
+      "latitude": 52.4778,
+      "longitude": -1.9,
+      "wikipediaTitle": "Birmingham New Street railway station",
+      "blurb": "Birmingham New Street station opened in 1854 and remains a major active railway station with scheduled intercity, regional, and commuter passenger trains.",
+      "themeConnection": {
+        "text": "Opened in 1854 and remains an active intercity and regional passenger station.",
+        "sourceIds": ["source-10"]
+      }
+    },
+    {
+      "id": "uk-glasgow-central",
+      "name": "Glasgow Central station",
+      "city": "Glasgow",
+      "country": "United Kingdom",
+      "latitude": 55.8599,
+      "longitude": -4.258,
+      "wikipediaTitle": "Glasgow Central station",
+      "blurb": "Glasgow Central station opened in 1879 and continues to operate as a major Scottish passenger railway station with scheduled trains.",
+      "themeConnection": {
+        "text": "Opened in 1879 and remains an active intercity, regional, and commuter station.",
+        "sourceIds": ["source-13"]
+      }
+    },
+    {
+      "id": "nl-amsterdam-centraal",
+      "name": "Amsterdam Centraal station",
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "latitude": 52.3791,
+      "longitude": 4.9003,
+      "wikipediaTitle": "Amsterdam Centraal station",
+      "blurb": "Amsterdam Centraal station opened in 1889 and remains the Netherlands' principal railway station, served by scheduled domestic and international passenger trains.",
+      "themeConnection": {
+        "text": "Opened in 1889 and remains an active national and international passenger station.",
+        "sourceIds": ["source-16"]
+      }
+    },
+    {
+      "id": "uk-london-fenchurch",
+      "name": "London Fenchurch Street station",
+      "city": "London",
+      "country": "United Kingdom",
+      "latitude": 51.5117,
+      "longitude": -0.0789,
+      "wikipediaTitle": "Fenchurch Street railway station",
+      "blurb": "Fenchurch Street, also known as London Fenchurch Street, is a central London railway terminus in the south-eastern corner of the City of London.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Fenchurch_Street_station_%286553644825%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Fenchurch Street railway station",
+        "attribution": "Hugh Llewelyn · CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      "themeConnection": {
+        "text": "Opened in 1841 and remains an active scheduled passenger railway station.",
+        "sourceIds": ["source-07"]
+      }
+    },
+    {
+      "id": "uk-london-bridge",
+      "name": "London Bridge station",
+      "city": "London",
+      "country": "United Kingdom",
+      "latitude": 51.5052,
+      "longitude": -0.0864,
+      "wikipediaTitle": "London Bridge station",
+      "blurb": "London Bridge station first opened in 1836 and is one of London's major railway stations, continuing to provide frequent scheduled National Rail passenger services.",
+      "themeConnection": {
+        "text": "Opened in 1836 and remains an active National Rail station.",
+        "sourceIds": ["source-04"]
+      }
+    },
+    {
+      "id": "fr-paris-saint-lazare",
+      "name": "Gare Saint-Lazare",
+      "city": "Paris",
+      "country": "France",
+      "latitude": 48.8756,
+      "longitude": 2.325,
+      "wikipediaTitle": "Gare Saint-Lazare",
+      "blurb": "Gare Saint-Lazare opened in 1837 and remains a major Paris passenger station, handling scheduled regional and commuter railway services.",
+      "themeConnection": {
+        "text": "Opened in 1837 and remains an active commuter and regional passenger station.",
+        "sourceIds": ["source-23"]
+      }
+    },
+    {
+      "id": "fr-paris-est",
+      "name": "Gare de l'Est",
+      "city": "Paris",
+      "country": "France",
+      "latitude": 48.876,
+      "longitude": 2.359,
+      "wikipediaTitle": "Gare de l'Est",
+      "blurb": "Paris Gare de l'Est opened in 1850 and continues to serve scheduled French regional and intercity passenger trains, including high-speed services.",
+      "themeConnection": {
+        "text": "Opened in 1850 and remains an active intercity and regional passenger station.",
+        "sourceIds": ["source-22"]
+      }
+    },
+    {
+      "id": "fr-paris-austerlitz",
+      "name": "Gare d'Austerlitz",
+      "city": "Paris",
+      "country": "France",
+      "latitude": 48.8422,
+      "longitude": 2.3656,
+      "wikipediaTitle": "Gare d'Austerlitz",
+      "blurb": "Gare d'Austerlitz (English: Austerlitz station), officially Paris Austerlitz, is one of the seven large Paris railway terminal stations.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Paris_-_Gare_d%27Austerlitz_%2822592112743%29.jpg/1280px-Paris_-_Gare_d%27Austerlitz_%2822592112743%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Gare d'Austerlitz",
+        "attribution": "Fred Romero from Paris, France · CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "themeConnection": {
+        "text": "Opened in 1840 and remains an active scheduled passenger railway station.",
+        "sourceIds": ["source-24"]
+      }
+    },
+    {
+      "id": "uk-london-kings-cross",
+      "name": "London King's Cross station",
+      "city": "London",
+      "country": "United Kingdom",
+      "latitude": 51.5308,
+      "longitude": -0.1238,
+      "wikipediaTitle": "King's Cross railway station",
+      "blurb": "King's Cross railway station opened in 1852 and is still a major London passenger station, with scheduled Great Northern and London North Eastern Railway services.",
+      "themeConnection": {
+        "text": "Opened in 1852 and remains an active National Rail passenger station.",
+        "sourceIds": ["source-03"]
+      }
+    },
+    {
+      "id": "uk-york",
+      "name": "York station",
+      "city": "York",
+      "country": "United Kingdom",
+      "latitude": 53.958,
+      "longitude": -1.093,
+      "wikipediaTitle": "York railway station",
+      "blurb": "York railway station is a principal stop on the East Coast Main Line (ECML) serving the cathedral city of York, in North Yorkshire, England.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/York_Railway_Station_Paul_Hudson_1.jpg/1280px-York_Railway_Station_Paul_Hudson_1.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "York railway station",
+        "attribution": "Paul Hudson · CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "themeConnection": {
+        "text": "Opened in 1877 and remains an active intercity and regional passenger station.",
+        "sourceIds": ["source-14"]
+      }
+    },
+    {
+      "id": "nl-utrecht-centraal",
+      "name": "Utrecht Centraal station",
+      "city": "Utrecht",
+      "country": "Netherlands",
+      "latitude": 52.0894,
+      "longitude": 5.1102,
+      "wikipediaTitle": "Utrecht Centraal station",
+      "blurb": "Utrecht Centraal, officially Station Utrecht Centraal (Dutch: [staːˈɕɔn ˈytrɛxt sɛnˈtraːl]), is the transit hub that integrates three bicycle parkings, two bus stations, two tram stops and the central railway station for Utrecht, Netherlands.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Utrecht_centraal.jpg/1280px-Utrecht_centraal.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Utrecht Centraal station",
+        "attribution": "Jan dijkstra · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "Opened in 1843 and remains an active national passenger railway station.",
+        "sourceIds": ["source-18"]
+      }
+    },
+    {
+      "id": "uk-manchester-piccadilly",
+      "name": "Manchester Piccadilly station",
+      "city": "Manchester",
+      "country": "United Kingdom",
+      "latitude": 53.4774,
+      "longitude": -2.2295,
+      "wikipediaTitle": "Manchester Piccadilly station",
+      "blurb": "Manchester Piccadilly station originated as Store Street station, opened in 1842, and remains a major active National Rail passenger station.",
+      "themeConnection": {
+        "text": "Opened in 1842 and remains an active intercity, regional, and commuter station.",
+        "sourceIds": ["source-08"]
+      }
+    },
+    {
+      "id": "uk-london-euston",
+      "name": "London Euston station",
+      "city": "London",
+      "country": "United Kingdom",
+      "latitude": 51.5282,
+      "longitude": -0.1337,
+      "wikipediaTitle": "Euston railway station",
+      "blurb": "Euston station opened in 1837 as the London terminus of the London and Birmingham Railway and continues to handle scheduled National Rail passenger services.",
+      "themeConnection": {
+        "text": "Opened in 1837 and remains an active intercity and regional passenger station.",
+        "sourceIds": ["source-02"]
+      }
+    },
+    {
+      "id": "uk-london-waterloo",
+      "name": "London Waterloo station",
+      "city": "London",
+      "country": "United Kingdom",
+      "latitude": 51.5033,
+      "longitude": -0.1132,
+      "wikipediaTitle": "London Waterloo station",
+      "blurb": "Waterloo station opened in 1848 and remains one of Britain's busiest passenger railway stations, serving scheduled South Western Railway trains.",
+      "themeConnection": {
+        "text": "Opened in 1848 and remains an active commuter and regional railway station.",
+        "sourceIds": ["source-06"]
+      }
+    },
+    {
+      "id": "uk-london-paddington",
+      "name": "London Paddington station",
+      "city": "London",
+      "country": "United Kingdom",
+      "latitude": 51.5171,
+      "longitude": -0.1778,
+      "wikipediaTitle": "London Paddington station",
+      "blurb": "London Paddington station opened in 1838 and is a central London railway terminus served by National Rail passenger services, including trains operated by the Great Western Railway.",
+      "themeConnection": {
+        "text": "Opened in 1838 and remains an active National Rail terminal and station.",
+        "sourceIds": ["source-01"]
+      }
+    },
+    {
+      "id": "uk-liverpool-lime",
+      "name": "Liverpool Lime Street station",
+      "city": "Liverpool",
+      "country": "United Kingdom",
+      "latitude": 53.4073,
+      "longitude": -2.9777,
+      "wikipediaTitle": "Liverpool Lime Street railway station",
+      "blurb": "Liverpool Lime Street railway station opened in 1836 and continues to operate as the city's principal National Rail passenger terminus.",
+      "themeConnection": {
+        "text": "Opened in 1836 and remains an active intercity and regional passenger station.",
+        "sourceIds": ["source-09"]
+      }
+    },
+    {
+      "id": "fr-paris-nord",
+      "name": "Gare du Nord",
+      "city": "Paris",
+      "country": "France",
+      "latitude": 48.8809,
+      "longitude": 2.3553,
+      "wikipediaTitle": "Gare du Nord",
+      "blurb": "The Gare du Nord opened in 1846 and remains one of Europe's busiest passenger stations, serving scheduled regional, intercity, and international trains.",
+      "themeConnection": {
+        "text": "Opened in 1846 and remains an active intercity, regional, and international passenger station.",
+        "sourceIds": ["source-21"]
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "round-1",
+      "targetPoiId": "uk-london-fenchurch",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Fenchurch_Street_station_%286553644825%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Fenchurch Street railway station",
+        "attribution": "Hugh Llewelyn · CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      "clue": {
+        "text": "Opened in 1841, this compact terminal has four platforms on two elevated islands and is operated by c2c. It is the only central terminal of its kind without direct interchange with an underground railway.",
+        "sourceIds": ["source-07"]
+      },
+      "results": [
+        {
+          "poiId": "uk-london-paddington",
+          "tier": "hot",
+          "text": "London Paddington station is a themed comparison candidate: Opened in 1838 and remains an active National Rail terminal and station.",
+          "sourceIds": ["source-01", "source-07"]
+        },
+        {
+          "poiId": "uk-london-euston",
+          "tier": "hot",
+          "text": "London Euston station is a themed comparison candidate: Opened in 1837 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-02", "source-07"]
+        },
+        {
+          "poiId": "uk-london-kings-cross",
+          "tier": "warm",
+          "text": "London King's Cross station is a themed comparison candidate: Opened in 1852 and remains an active National Rail passenger station.",
+          "sourceIds": ["source-03", "source-07"]
+        },
+        {
+          "poiId": "uk-london-bridge",
+          "tier": "hot",
+          "text": "London Bridge station is a themed comparison candidate: Opened in 1836 and remains an active National Rail station.",
+          "sourceIds": ["source-04", "source-07"]
+        },
+        {
+          "poiId": "uk-london-victoria",
+          "tier": "warm",
+          "text": "London Victoria station is a themed comparison candidate: Opened in 1860 and remains an active National Rail passenger station.",
+          "sourceIds": ["source-05", "source-07"]
+        },
+        {
+          "poiId": "uk-london-waterloo",
+          "tier": "hot",
+          "text": "London Waterloo station is a themed comparison candidate: Opened in 1848 and remains an active commuter and regional railway station.",
+          "sourceIds": ["source-06", "source-07"]
+        },
+        {
+          "poiId": "uk-london-fenchurch",
+          "tier": "correct",
+          "text": "London Fenchurch Street station is the round target: Opened in 1841 and remains an active scheduled passenger railway station.",
+          "sourceIds": ["source-07"]
+        },
+        {
+          "poiId": "uk-manchester-piccadilly",
+          "tier": "warm",
+          "text": "Manchester Piccadilly station is a themed comparison candidate: Opened in 1842 and remains an active intercity, regional, and commuter station.",
+          "sourceIds": ["source-08", "source-07"]
+        },
+        {
+          "poiId": "uk-liverpool-lime",
+          "tier": "warm",
+          "text": "Liverpool Lime Street station is a themed comparison candidate: Opened in 1836 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-09", "source-07"]
+        },
+        {
+          "poiId": "uk-birmingham-new-street",
+          "tier": "warm",
+          "text": "Birmingham New Street station is a themed comparison candidate: Opened in 1854 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-10", "source-07"]
+        },
+        {
+          "poiId": "uk-bristol-temple-meads",
+          "tier": "warm",
+          "text": "Bristol Temple Meads station is a themed comparison candidate: Opened in 1840 and remains an active National Rail passenger station.",
+          "sourceIds": ["source-11", "source-07"]
+        },
+        {
+          "poiId": "uk-edinburgh-waverley",
+          "tier": "cold",
+          "text": "Edinburgh Waverley station is a themed comparison candidate: Opened in 1866 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-12", "source-07"]
+        },
+        {
+          "poiId": "uk-glasgow-central",
+          "tier": "cold",
+          "text": "Glasgow Central station is a themed comparison candidate: Opened in 1879 and remains an active intercity, regional, and commuter station.",
+          "sourceIds": ["source-13", "source-07"]
+        },
+        {
+          "poiId": "uk-york",
+          "tier": "warm",
+          "text": "York station is a themed comparison candidate: Opened in 1877 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-14", "source-07"]
+        },
+        {
+          "poiId": "uk-newcastle-central",
+          "tier": "warm",
+          "text": "Newcastle Central station is a themed comparison candidate: Opened in 1850 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-15", "source-07"]
+        },
+        {
+          "poiId": "nl-amsterdam-centraal",
+          "tier": "cold",
+          "text": "Amsterdam Centraal station is a themed comparison candidate: Opened in 1889 and remains an active national and international passenger station.",
+          "sourceIds": ["source-16", "source-07"]
+        },
+        {
+          "poiId": "be-antwerp-centraal",
+          "tier": "cold",
+          "text": "Antwerpen-Centraal station is a themed comparison candidate: Opened in 1836 and remains an active domestic and international passenger station.",
+          "sourceIds": ["source-17", "source-07"]
+        },
+        {
+          "poiId": "nl-utrecht-centraal",
+          "tier": "cold",
+          "text": "Utrecht Centraal station is a themed comparison candidate: Opened in 1843 and remains an active national passenger railway station.",
+          "sourceIds": ["source-18", "source-07"]
+        },
+        {
+          "poiId": "de-frankfurt-hbf",
+          "tier": "cold",
+          "text": "Frankfurt Hauptbahnhof is a themed comparison candidate: Opened in 1888 and remains an active intercity, regional, and commuter station.",
+          "sourceIds": ["source-19", "source-07"]
+        },
+        {
+          "poiId": "ch-zurich-hb",
+          "tier": "cold",
+          "text": "Zürich Hauptbahnhof is a themed comparison candidate: Opened in 1847 and remains an active national and international passenger station.",
+          "sourceIds": ["source-20", "source-07"]
+        },
+        {
+          "poiId": "fr-paris-nord",
+          "tier": "cold",
+          "text": "Gare du Nord is a themed comparison candidate: Opened in 1846 and remains an active intercity, regional, and international passenger station.",
+          "sourceIds": ["source-21", "source-07"]
+        },
+        {
+          "poiId": "fr-paris-est",
+          "tier": "cold",
+          "text": "Gare de l'Est is a themed comparison candidate: Opened in 1850 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-22", "source-07"]
+        },
+        {
+          "poiId": "fr-paris-saint-lazare",
+          "tier": "cold",
+          "text": "Gare Saint-Lazare is a themed comparison candidate: Opened in 1837 and remains an active commuter and regional passenger station.",
+          "sourceIds": ["source-23", "source-07"]
+        },
+        {
+          "poiId": "fr-paris-austerlitz",
+          "tier": "cold",
+          "text": "Gare d'Austerlitz is a themed comparison candidate: Opened in 1840 and remains an active scheduled passenger railway station.",
+          "sourceIds": ["source-24", "source-07"]
+        },
+        {
+          "poiId": "it-rome-termini",
+          "tier": "cold",
+          "text": "Roma Termini is a themed comparison candidate: Opened in 1863 and remains an active national, regional, and commuter passenger station.",
+          "sourceIds": ["source-25", "source-07"]
+        }
+      ]
+    },
+    {
+      "id": "round-2",
+      "targetPoiId": "uk-york",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/York_Railway_Station_Paul_Hudson_1.jpg/1280px-York_Railway_Station_Paul_Hudson_1.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "York railway station",
+        "attribution": "Paul Hudson · CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "clue": {
+        "text": "The present station opened on 25 June 1877 with 13 platforms and was then the world's largest. Its expansive design includes a distinctive curved train shed, and it is a key junction roughly halfway along the main route between two national capitals.",
+        "sourceIds": ["source-14"]
+      },
+      "results": [
+        {
+          "poiId": "uk-london-paddington",
+          "tier": "hot",
+          "text": "London Paddington station is a themed comparison candidate: Opened in 1838 and remains an active National Rail terminal and station.",
+          "sourceIds": ["source-01", "source-14"]
+        },
+        {
+          "poiId": "uk-london-euston",
+          "tier": "warm",
+          "text": "London Euston station is a themed comparison candidate: Opened in 1837 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-02", "source-14"]
+        },
+        {
+          "poiId": "uk-london-kings-cross",
+          "tier": "hot",
+          "text": "London King's Cross station is a themed comparison candidate: Opened in 1852 and remains an active National Rail passenger station.",
+          "sourceIds": ["source-03", "source-14"]
+        },
+        {
+          "poiId": "uk-london-bridge",
+          "tier": "warm",
+          "text": "London Bridge station is a themed comparison candidate: Opened in 1836 and remains an active National Rail station.",
+          "sourceIds": ["source-04", "source-14"]
+        },
+        {
+          "poiId": "uk-london-victoria",
+          "tier": "cold",
+          "text": "London Victoria station is a themed comparison candidate: Opened in 1860 and remains an active National Rail passenger station.",
+          "sourceIds": ["source-05", "source-14"]
+        },
+        {
+          "poiId": "uk-london-waterloo",
+          "tier": "warm",
+          "text": "London Waterloo station is a themed comparison candidate: Opened in 1848 and remains an active commuter and regional railway station.",
+          "sourceIds": ["source-06", "source-14"]
+        },
+        {
+          "poiId": "uk-london-fenchurch",
+          "tier": "cold",
+          "text": "London Fenchurch Street station is a themed comparison candidate: Opened in 1841 and remains an active scheduled passenger railway station.",
+          "sourceIds": ["source-07", "source-14"]
+        },
+        {
+          "poiId": "uk-manchester-piccadilly",
+          "tier": "warm",
+          "text": "Manchester Piccadilly station is a themed comparison candidate: Opened in 1842 and remains an active intercity, regional, and commuter station.",
+          "sourceIds": ["source-08", "source-14"]
+        },
+        {
+          "poiId": "uk-liverpool-lime",
+          "tier": "warm",
+          "text": "Liverpool Lime Street station is a themed comparison candidate: Opened in 1836 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-09", "source-14"]
+        },
+        {
+          "poiId": "uk-birmingham-new-street",
+          "tier": "warm",
+          "text": "Birmingham New Street station is a themed comparison candidate: Opened in 1854 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-10", "source-14"]
+        },
+        {
+          "poiId": "uk-bristol-temple-meads",
+          "tier": "warm",
+          "text": "Bristol Temple Meads station is a themed comparison candidate: Opened in 1840 and remains an active National Rail passenger station.",
+          "sourceIds": ["source-11", "source-14"]
+        },
+        {
+          "poiId": "uk-edinburgh-waverley",
+          "tier": "hot",
+          "text": "Edinburgh Waverley station is a themed comparison candidate: Opened in 1866 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-12", "source-14"]
+        },
+        {
+          "poiId": "uk-glasgow-central",
+          "tier": "warm",
+          "text": "Glasgow Central station is a themed comparison candidate: Opened in 1879 and remains an active intercity, regional, and commuter station.",
+          "sourceIds": ["source-13", "source-14"]
+        },
+        {
+          "poiId": "uk-york",
+          "tier": "correct",
+          "text": "York station is the round target: Opened in 1877 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-14"]
+        },
+        {
+          "poiId": "uk-newcastle-central",
+          "tier": "hot",
+          "text": "Newcastle Central station is a themed comparison candidate: Opened in 1850 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-15", "source-14"]
+        },
+        {
+          "poiId": "nl-amsterdam-centraal",
+          "tier": "cold",
+          "text": "Amsterdam Centraal station is a themed comparison candidate: Opened in 1889 and remains an active national and international passenger station.",
+          "sourceIds": ["source-16", "source-14"]
+        },
+        {
+          "poiId": "be-antwerp-centraal",
+          "tier": "cold",
+          "text": "Antwerpen-Centraal station is a themed comparison candidate: Opened in 1836 and remains an active domestic and international passenger station.",
+          "sourceIds": ["source-17", "source-14"]
+        },
+        {
+          "poiId": "nl-utrecht-centraal",
+          "tier": "cold",
+          "text": "Utrecht Centraal station is a themed comparison candidate: Opened in 1843 and remains an active national passenger railway station.",
+          "sourceIds": ["source-18", "source-14"]
+        },
+        {
+          "poiId": "de-frankfurt-hbf",
+          "tier": "cold",
+          "text": "Frankfurt Hauptbahnhof is a themed comparison candidate: Opened in 1888 and remains an active intercity, regional, and commuter station.",
+          "sourceIds": ["source-19", "source-14"]
+        },
+        {
+          "poiId": "ch-zurich-hb",
+          "tier": "cold",
+          "text": "Zürich Hauptbahnhof is a themed comparison candidate: Opened in 1847 and remains an active national and international passenger station.",
+          "sourceIds": ["source-20", "source-14"]
+        },
+        {
+          "poiId": "fr-paris-nord",
+          "tier": "cold",
+          "text": "Gare du Nord is a themed comparison candidate: Opened in 1846 and remains an active intercity, regional, and international passenger station.",
+          "sourceIds": ["source-21", "source-14"]
+        },
+        {
+          "poiId": "fr-paris-est",
+          "tier": "cold",
+          "text": "Gare de l'Est is a themed comparison candidate: Opened in 1850 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-22", "source-14"]
+        },
+        {
+          "poiId": "fr-paris-saint-lazare",
+          "tier": "cold",
+          "text": "Gare Saint-Lazare is a themed comparison candidate: Opened in 1837 and remains an active commuter and regional passenger station.",
+          "sourceIds": ["source-23", "source-14"]
+        },
+        {
+          "poiId": "fr-paris-austerlitz",
+          "tier": "cold",
+          "text": "Gare d'Austerlitz is a themed comparison candidate: Opened in 1840 and remains an active scheduled passenger railway station.",
+          "sourceIds": ["source-24", "source-14"]
+        },
+        {
+          "poiId": "it-rome-termini",
+          "tier": "cold",
+          "text": "Roma Termini is a themed comparison candidate: Opened in 1863 and remains an active national, regional, and commuter passenger station.",
+          "sourceIds": ["source-25", "source-14"]
+        }
+      ]
+    },
+    {
+      "id": "round-3",
+      "targetPoiId": "nl-utrecht-centraal",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Utrecht_centraal.jpg/1280px-Utrecht_centraal.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Utrecht Centraal station",
+        "attribution": "Jan dijkstra · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "The first station at this site opened in 1843; the modern hub has 16 platform tracks, more than 1,000 departures daily, and the world's largest bicycle parking facility, holding 12,500 bicycles.",
+        "sourceIds": ["source-18"]
+      },
+      "results": [
+        {
+          "poiId": "uk-london-paddington",
+          "tier": "warm",
+          "text": "London Paddington station is a themed comparison candidate: Opened in 1838 and remains an active National Rail terminal and station.",
+          "sourceIds": ["source-01", "source-18"]
+        },
+        {
+          "poiId": "uk-london-euston",
+          "tier": "cold",
+          "text": "London Euston station is a themed comparison candidate: Opened in 1837 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-02", "source-18"]
+        },
+        {
+          "poiId": "uk-london-kings-cross",
+          "tier": "warm",
+          "text": "London King's Cross station is a themed comparison candidate: Opened in 1852 and remains an active National Rail passenger station.",
+          "sourceIds": ["source-03", "source-18"]
+        },
+        {
+          "poiId": "uk-london-bridge",
+          "tier": "warm",
+          "text": "London Bridge station is a themed comparison candidate: Opened in 1836 and remains an active National Rail station.",
+          "sourceIds": ["source-04", "source-18"]
+        },
+        {
+          "poiId": "uk-london-victoria",
+          "tier": "cold",
+          "text": "London Victoria station is a themed comparison candidate: Opened in 1860 and remains an active National Rail passenger station.",
+          "sourceIds": ["source-05", "source-18"]
+        },
+        {
+          "poiId": "uk-london-waterloo",
+          "tier": "cold",
+          "text": "London Waterloo station is a themed comparison candidate: Opened in 1848 and remains an active commuter and regional railway station.",
+          "sourceIds": ["source-06", "source-18"]
+        },
+        {
+          "poiId": "uk-london-fenchurch",
+          "tier": "cold",
+          "text": "London Fenchurch Street station is a themed comparison candidate: Opened in 1841 and remains an active scheduled passenger railway station.",
+          "sourceIds": ["source-07", "source-18"]
+        },
+        {
+          "poiId": "uk-manchester-piccadilly",
+          "tier": "warm",
+          "text": "Manchester Piccadilly station is a themed comparison candidate: Opened in 1842 and remains an active intercity, regional, and commuter station.",
+          "sourceIds": ["source-08", "source-18"]
+        },
+        {
+          "poiId": "uk-liverpool-lime",
+          "tier": "warm",
+          "text": "Liverpool Lime Street station is a themed comparison candidate: Opened in 1836 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-09", "source-18"]
+        },
+        {
+          "poiId": "uk-birmingham-new-street",
+          "tier": "warm",
+          "text": "Birmingham New Street station is a themed comparison candidate: Opened in 1854 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-10", "source-18"]
+        },
+        {
+          "poiId": "uk-bristol-temple-meads",
+          "tier": "warm",
+          "text": "Bristol Temple Meads station is a themed comparison candidate: Opened in 1840 and remains an active National Rail passenger station.",
+          "sourceIds": ["source-11", "source-18"]
+        },
+        {
+          "poiId": "uk-edinburgh-waverley",
+          "tier": "cold",
+          "text": "Edinburgh Waverley station is a themed comparison candidate: Opened in 1866 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-12", "source-18"]
+        },
+        {
+          "poiId": "uk-glasgow-central",
+          "tier": "cold",
+          "text": "Glasgow Central station is a themed comparison candidate: Opened in 1879 and remains an active intercity, regional, and commuter station.",
+          "sourceIds": ["source-13", "source-18"]
+        },
+        {
+          "poiId": "uk-york",
+          "tier": "warm",
+          "text": "York station is a themed comparison candidate: Opened in 1877 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-14", "source-18"]
+        },
+        {
+          "poiId": "uk-newcastle-central",
+          "tier": "cold",
+          "text": "Newcastle Central station is a themed comparison candidate: Opened in 1850 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-15", "source-18"]
+        },
+        {
+          "poiId": "nl-amsterdam-centraal",
+          "tier": "hot",
+          "text": "Amsterdam Centraal station is a themed comparison candidate: Opened in 1889 and remains an active national and international passenger station.",
+          "sourceIds": ["source-16", "source-18"]
+        },
+        {
+          "poiId": "be-antwerp-centraal",
+          "tier": "hot",
+          "text": "Antwerpen-Centraal station is a themed comparison candidate: Opened in 1836 and remains an active domestic and international passenger station.",
+          "sourceIds": ["source-17", "source-18"]
+        },
+        {
+          "poiId": "nl-utrecht-centraal",
+          "tier": "correct",
+          "text": "Utrecht Centraal station is the round target: Opened in 1843 and remains an active national passenger railway station.",
+          "sourceIds": ["source-18"]
+        },
+        {
+          "poiId": "de-frankfurt-hbf",
+          "tier": "hot",
+          "text": "Frankfurt Hauptbahnhof is a themed comparison candidate: Opened in 1888 and remains an active intercity, regional, and commuter station.",
+          "sourceIds": ["source-19", "source-18"]
+        },
+        {
+          "poiId": "ch-zurich-hb",
+          "tier": "hot",
+          "text": "Zürich Hauptbahnhof is a themed comparison candidate: Opened in 1847 and remains an active national and international passenger station.",
+          "sourceIds": ["source-20", "source-18"]
+        },
+        {
+          "poiId": "fr-paris-nord",
+          "tier": "cold",
+          "text": "Gare du Nord is a themed comparison candidate: Opened in 1846 and remains an active intercity, regional, and international passenger station.",
+          "sourceIds": ["source-21", "source-18"]
+        },
+        {
+          "poiId": "fr-paris-est",
+          "tier": "cold",
+          "text": "Gare de l'Est is a themed comparison candidate: Opened in 1850 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-22", "source-18"]
+        },
+        {
+          "poiId": "fr-paris-saint-lazare",
+          "tier": "cold",
+          "text": "Gare Saint-Lazare is a themed comparison candidate: Opened in 1837 and remains an active commuter and regional passenger station.",
+          "sourceIds": ["source-23", "source-18"]
+        },
+        {
+          "poiId": "fr-paris-austerlitz",
+          "tier": "cold",
+          "text": "Gare d'Austerlitz is a themed comparison candidate: Opened in 1840 and remains an active scheduled passenger railway station.",
+          "sourceIds": ["source-24", "source-18"]
+        },
+        {
+          "poiId": "it-rome-termini",
+          "tier": "cold",
+          "text": "Roma Termini is a themed comparison candidate: Opened in 1863 and remains an active national, regional, and commuter passenger station.",
+          "sourceIds": ["source-25", "source-18"]
+        }
+      ]
+    },
+    {
+      "id": "round-4",
+      "targetPoiId": "de-frankfurt-hbf",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Hauptbahnhof_Frankfurt.jpg/1280px-Hauptbahnhof_Frankfurt.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Frankfurt (Main) Hauptbahnhof",
+        "attribution": "Thomas Wolf, www.foto-tw.de · CC BY-SA 3.0 de",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"
+      },
+      "clue": {
+        "text": "Inaugurated on 18 August 1888 after five years of construction, this terminal was Europe's largest until 1915. Its train shed comprises five steel-and-glass halls, serving 24 above-ground mainline tracks.",
+        "sourceIds": ["source-19"]
+      },
+      "results": [
+        {
+          "poiId": "uk-london-paddington",
+          "tier": "warm",
+          "text": "London Paddington station is a themed comparison candidate: Opened in 1838 and remains an active National Rail terminal and station.",
+          "sourceIds": ["source-01", "source-19"]
+        },
+        {
+          "poiId": "uk-london-euston",
+          "tier": "cold",
+          "text": "London Euston station is a themed comparison candidate: Opened in 1837 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-02", "source-19"]
+        },
+        {
+          "poiId": "uk-london-kings-cross",
+          "tier": "warm",
+          "text": "London King's Cross station is a themed comparison candidate: Opened in 1852 and remains an active National Rail passenger station.",
+          "sourceIds": ["source-03", "source-19"]
+        },
+        {
+          "poiId": "uk-london-bridge",
+          "tier": "cold",
+          "text": "London Bridge station is a themed comparison candidate: Opened in 1836 and remains an active National Rail station.",
+          "sourceIds": ["source-04", "source-19"]
+        },
+        {
+          "poiId": "uk-london-victoria",
+          "tier": "cold",
+          "text": "London Victoria station is a themed comparison candidate: Opened in 1860 and remains an active National Rail passenger station.",
+          "sourceIds": ["source-05", "source-19"]
+        },
+        {
+          "poiId": "uk-london-waterloo",
+          "tier": "cold",
+          "text": "London Waterloo station is a themed comparison candidate: Opened in 1848 and remains an active commuter and regional railway station.",
+          "sourceIds": ["source-06", "source-19"]
+        },
+        {
+          "poiId": "uk-london-fenchurch",
+          "tier": "cold",
+          "text": "London Fenchurch Street station is a themed comparison candidate: Opened in 1841 and remains an active scheduled passenger railway station.",
+          "sourceIds": ["source-07", "source-19"]
+        },
+        {
+          "poiId": "uk-manchester-piccadilly",
+          "tier": "cold",
+          "text": "Manchester Piccadilly station is a themed comparison candidate: Opened in 1842 and remains an active intercity, regional, and commuter station.",
+          "sourceIds": ["source-08", "source-19"]
+        },
+        {
+          "poiId": "uk-liverpool-lime",
+          "tier": "cold",
+          "text": "Liverpool Lime Street station is a themed comparison candidate: Opened in 1836 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-09", "source-19"]
+        },
+        {
+          "poiId": "uk-birmingham-new-street",
+          "tier": "cold",
+          "text": "Birmingham New Street station is a themed comparison candidate: Opened in 1854 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-10", "source-19"]
+        },
+        {
+          "poiId": "uk-bristol-temple-meads",
+          "tier": "cold",
+          "text": "Bristol Temple Meads station is a themed comparison candidate: Opened in 1840 and remains an active National Rail passenger station.",
+          "sourceIds": ["source-11", "source-19"]
+        },
+        {
+          "poiId": "uk-edinburgh-waverley",
+          "tier": "cold",
+          "text": "Edinburgh Waverley station is a themed comparison candidate: Opened in 1866 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-12", "source-19"]
+        },
+        {
+          "poiId": "uk-glasgow-central",
+          "tier": "cold",
+          "text": "Glasgow Central station is a themed comparison candidate: Opened in 1879 and remains an active intercity, regional, and commuter station.",
+          "sourceIds": ["source-13", "source-19"]
+        },
+        {
+          "poiId": "uk-york",
+          "tier": "warm",
+          "text": "York station is a themed comparison candidate: Opened in 1877 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-14", "source-19"]
+        },
+        {
+          "poiId": "uk-newcastle-central",
+          "tier": "cold",
+          "text": "Newcastle Central station is a themed comparison candidate: Opened in 1850 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-15", "source-19"]
+        },
+        {
+          "poiId": "nl-amsterdam-centraal",
+          "tier": "hot",
+          "text": "Amsterdam Centraal station is a themed comparison candidate: Opened in 1889 and remains an active national and international passenger station.",
+          "sourceIds": ["source-16", "source-19"]
+        },
+        {
+          "poiId": "be-antwerp-centraal",
+          "tier": "hot",
+          "text": "Antwerpen-Centraal station is a themed comparison candidate: Opened in 1836 and remains an active domestic and international passenger station.",
+          "sourceIds": ["source-17", "source-19"]
+        },
+        {
+          "poiId": "nl-utrecht-centraal",
+          "tier": "hot",
+          "text": "Utrecht Centraal station is a themed comparison candidate: Opened in 1843 and remains an active national passenger railway station.",
+          "sourceIds": ["source-18", "source-19"]
+        },
+        {
+          "poiId": "de-frankfurt-hbf",
+          "tier": "correct",
+          "text": "Frankfurt Hauptbahnhof is the round target: Opened in 1888 and remains an active intercity, regional, and commuter station.",
+          "sourceIds": ["source-19"]
+        },
+        {
+          "poiId": "ch-zurich-hb",
+          "tier": "hot",
+          "text": "Zürich Hauptbahnhof is a themed comparison candidate: Opened in 1847 and remains an active national and international passenger station.",
+          "sourceIds": ["source-20", "source-19"]
+        },
+        {
+          "poiId": "fr-paris-nord",
+          "tier": "warm",
+          "text": "Gare du Nord is a themed comparison candidate: Opened in 1846 and remains an active intercity, regional, and international passenger station.",
+          "sourceIds": ["source-21", "source-19"]
+        },
+        {
+          "poiId": "fr-paris-est",
+          "tier": "warm",
+          "text": "Gare de l'Est is a themed comparison candidate: Opened in 1850 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-22", "source-19"]
+        },
+        {
+          "poiId": "fr-paris-saint-lazare",
+          "tier": "warm",
+          "text": "Gare Saint-Lazare is a themed comparison candidate: Opened in 1837 and remains an active commuter and regional passenger station.",
+          "sourceIds": ["source-23", "source-19"]
+        },
+        {
+          "poiId": "fr-paris-austerlitz",
+          "tier": "warm",
+          "text": "Gare d'Austerlitz is a themed comparison candidate: Opened in 1840 and remains an active scheduled passenger railway station.",
+          "sourceIds": ["source-24", "source-19"]
+        },
+        {
+          "poiId": "it-rome-termini",
+          "tier": "warm",
+          "text": "Roma Termini is a themed comparison candidate: Opened in 1863 and remains an active national, regional, and commuter passenger station.",
+          "sourceIds": ["source-25", "source-19"]
+        }
+      ]
+    },
+    {
+      "id": "round-5",
+      "targetPoiId": "fr-paris-austerlitz",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Paris_-_Gare_d%27Austerlitz_%2822592112743%29.jpg/1280px-Paris_-_Gare_d%27Austerlitz_%2822592112743%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Gare d'Austerlitz",
+        "attribution": "Fred Romero from Paris, France · CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "clue": {
+        "text": "This active passenger terminal opened on 20 September 1840; its first platform was designed by Félix-Emmanuel Callet. It was rebuilt from 1862 to 1869 with a 280-metre iron train shed, which a Metro line pierced in 1906, and parts of its façades and glass roof received historical-monument protection in 1997.",
+        "sourceIds": ["source-24"]
+      },
+      "results": [
+        {
+          "poiId": "uk-london-paddington",
+          "tier": "warm",
+          "text": "London Paddington station is a themed comparison candidate: Opened in 1838 and remains an active National Rail terminal and station.",
+          "sourceIds": ["source-01", "source-24"]
+        },
+        {
+          "poiId": "uk-london-euston",
+          "tier": "cold",
+          "text": "London Euston station is a themed comparison candidate: Opened in 1837 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-02", "source-24"]
+        },
+        {
+          "poiId": "uk-london-kings-cross",
+          "tier": "warm",
+          "text": "London King's Cross station is a themed comparison candidate: Opened in 1852 and remains an active National Rail passenger station.",
+          "sourceIds": ["source-03", "source-24"]
+        },
+        {
+          "poiId": "uk-london-bridge",
+          "tier": "cold",
+          "text": "London Bridge station is a themed comparison candidate: Opened in 1836 and remains an active National Rail station.",
+          "sourceIds": ["source-04", "source-24"]
+        },
+        {
+          "poiId": "uk-london-victoria",
+          "tier": "cold",
+          "text": "London Victoria station is a themed comparison candidate: Opened in 1860 and remains an active National Rail passenger station.",
+          "sourceIds": ["source-05", "source-24"]
+        },
+        {
+          "poiId": "uk-london-waterloo",
+          "tier": "cold",
+          "text": "London Waterloo station is a themed comparison candidate: Opened in 1848 and remains an active commuter and regional railway station.",
+          "sourceIds": ["source-06", "source-24"]
+        },
+        {
+          "poiId": "uk-london-fenchurch",
+          "tier": "cold",
+          "text": "London Fenchurch Street station is a themed comparison candidate: Opened in 1841 and remains an active scheduled passenger railway station.",
+          "sourceIds": ["source-07", "source-24"]
+        },
+        {
+          "poiId": "uk-manchester-piccadilly",
+          "tier": "cold",
+          "text": "Manchester Piccadilly station is a themed comparison candidate: Opened in 1842 and remains an active intercity, regional, and commuter station.",
+          "sourceIds": ["source-08", "source-24"]
+        },
+        {
+          "poiId": "uk-liverpool-lime",
+          "tier": "cold",
+          "text": "Liverpool Lime Street station is a themed comparison candidate: Opened in 1836 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-09", "source-24"]
+        },
+        {
+          "poiId": "uk-birmingham-new-street",
+          "tier": "cold",
+          "text": "Birmingham New Street station is a themed comparison candidate: Opened in 1854 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-10", "source-24"]
+        },
+        {
+          "poiId": "uk-bristol-temple-meads",
+          "tier": "warm",
+          "text": "Bristol Temple Meads station is a themed comparison candidate: Opened in 1840 and remains an active National Rail passenger station.",
+          "sourceIds": ["source-11", "source-24"]
+        },
+        {
+          "poiId": "uk-edinburgh-waverley",
+          "tier": "cold",
+          "text": "Edinburgh Waverley station is a themed comparison candidate: Opened in 1866 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-12", "source-24"]
+        },
+        {
+          "poiId": "uk-glasgow-central",
+          "tier": "cold",
+          "text": "Glasgow Central station is a themed comparison candidate: Opened in 1879 and remains an active intercity, regional, and commuter station.",
+          "sourceIds": ["source-13", "source-24"]
+        },
+        {
+          "poiId": "uk-york",
+          "tier": "cold",
+          "text": "York station is a themed comparison candidate: Opened in 1877 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-14", "source-24"]
+        },
+        {
+          "poiId": "uk-newcastle-central",
+          "tier": "cold",
+          "text": "Newcastle Central station is a themed comparison candidate: Opened in 1850 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-15", "source-24"]
+        },
+        {
+          "poiId": "nl-amsterdam-centraal",
+          "tier": "warm",
+          "text": "Amsterdam Centraal station is a themed comparison candidate: Opened in 1889 and remains an active national and international passenger station.",
+          "sourceIds": ["source-16", "source-24"]
+        },
+        {
+          "poiId": "be-antwerp-centraal",
+          "tier": "warm",
+          "text": "Antwerpen-Centraal station is a themed comparison candidate: Opened in 1836 and remains an active domestic and international passenger station.",
+          "sourceIds": ["source-17", "source-24"]
+        },
+        {
+          "poiId": "nl-utrecht-centraal",
+          "tier": "warm",
+          "text": "Utrecht Centraal station is a themed comparison candidate: Opened in 1843 and remains an active national passenger railway station.",
+          "sourceIds": ["source-18", "source-24"]
+        },
+        {
+          "poiId": "de-frankfurt-hbf",
+          "tier": "warm",
+          "text": "Frankfurt Hauptbahnhof is a themed comparison candidate: Opened in 1888 and remains an active intercity, regional, and commuter station.",
+          "sourceIds": ["source-19", "source-24"]
+        },
+        {
+          "poiId": "ch-zurich-hb",
+          "tier": "warm",
+          "text": "Zürich Hauptbahnhof is a themed comparison candidate: Opened in 1847 and remains an active national and international passenger station.",
+          "sourceIds": ["source-20", "source-24"]
+        },
+        {
+          "poiId": "fr-paris-nord",
+          "tier": "hot",
+          "text": "Gare du Nord is a themed comparison candidate: Opened in 1846 and remains an active intercity, regional, and international passenger station.",
+          "sourceIds": ["source-21", "source-24"]
+        },
+        {
+          "poiId": "fr-paris-est",
+          "tier": "hot",
+          "text": "Gare de l'Est is a themed comparison candidate: Opened in 1850 and remains an active intercity and regional passenger station.",
+          "sourceIds": ["source-22", "source-24"]
+        },
+        {
+          "poiId": "fr-paris-saint-lazare",
+          "tier": "hot",
+          "text": "Gare Saint-Lazare is a themed comparison candidate: Opened in 1837 and remains an active commuter and regional passenger station.",
+          "sourceIds": ["source-23", "source-24"]
+        },
+        {
+          "poiId": "fr-paris-austerlitz",
+          "tier": "correct",
+          "text": "Gare d'Austerlitz is the round target: Opened in 1840 and remains an active scheduled passenger railway station.",
+          "sourceIds": ["source-24"]
+        },
+        {
+          "poiId": "it-rome-termini",
+          "tier": "hot",
+          "text": "Roma Termini is a themed comparison candidate: Opened in 1863 and remains an active national, regional, and commuter passenger station.",
+          "sourceIds": ["source-25", "source-24"]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-01",
+      "title": "London Paddington station",
+      "url": "https://en.wikipedia.org/wiki/London_Paddington_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-02",
+      "title": "Euston railway station",
+      "url": "https://en.wikipedia.org/wiki/Euston_railway_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-03",
+      "title": "King's Cross railway station",
+      "url": "https://en.wikipedia.org/wiki/King%27s_Cross_railway_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-04",
+      "title": "London Bridge station",
+      "url": "https://en.wikipedia.org/wiki/London_Bridge_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-05",
+      "title": "London Victoria station",
+      "url": "https://en.wikipedia.org/wiki/London_Victoria_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-06",
+      "title": "London Waterloo station",
+      "url": "https://en.wikipedia.org/wiki/London_Waterloo_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-07",
+      "title": "Fenchurch Street railway station",
+      "url": "https://en.wikipedia.org/wiki/Fenchurch_Street_railway_station",
+      "retrievedAt": "2026-08-18T04:53:00.957Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-08",
+      "title": "Manchester Piccadilly station",
+      "url": "https://en.wikipedia.org/wiki/Manchester_Piccadilly_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-09",
+      "title": "Liverpool Lime Street railway station",
+      "url": "https://en.wikipedia.org/wiki/Liverpool_Lime_Street_railway_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-10",
+      "title": "Birmingham New Street railway station",
+      "url": "https://en.wikipedia.org/wiki/Birmingham_New_Street_railway_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-11",
+      "title": "Bristol Temple Meads railway station",
+      "url": "https://en.wikipedia.org/wiki/Bristol_Temple_Meads_railway_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-12",
+      "title": "Edinburgh Waverley railway station",
+      "url": "https://en.wikipedia.org/wiki/Edinburgh_Waverley_railway_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-13",
+      "title": "Glasgow Central station",
+      "url": "https://en.wikipedia.org/wiki/Glasgow_Central_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-14",
+      "title": "York railway station",
+      "url": "https://en.wikipedia.org/wiki/York_railway_station",
+      "retrievedAt": "2026-08-18T04:52:03.697Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-15",
+      "title": "Newcastle railway station",
+      "url": "https://en.wikipedia.org/wiki/Newcastle_railway_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-16",
+      "title": "Amsterdam Centraal station",
+      "url": "https://en.wikipedia.org/wiki/Amsterdam_Centraal_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-17",
+      "title": "Antwerpen-Centraal railway station",
+      "url": "https://en.wikipedia.org/wiki/Antwerpen-Centraal_railway_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-18",
+      "title": "Utrecht Centraal station",
+      "url": "https://en.wikipedia.org/wiki/Utrecht_Centraal_station",
+      "retrievedAt": "2026-08-18T04:52:03.715Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-19",
+      "title": "Frankfurt (Main) Hauptbahnhof",
+      "url": "https://en.wikipedia.org/wiki/Frankfurt_(Main)_Hauptbahnhof",
+      "retrievedAt": "2026-08-18T04:53:01.039Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-20",
+      "title": "Zürich Hauptbahnhof",
+      "url": "https://en.wikipedia.org/wiki/Z%C3%BCrich_Hauptbahnhof",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-21",
+      "title": "Gare du Nord",
+      "url": "https://en.wikipedia.org/wiki/Gare_du_Nord",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-22",
+      "title": "Gare de l'Est",
+      "url": "https://en.wikipedia.org/wiki/Gare_de_l%27Est",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-23",
+      "title": "Gare Saint-Lazare",
+      "url": "https://en.wikipedia.org/wiki/Gare_Saint-Lazare",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-24",
+      "title": "Gare d'Austerlitz",
+      "url": "https://en.wikipedia.org/wiki/Gare_d%27Austerlitz",
+      "retrievedAt": "2026-08-18T04:53:00.848Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-25",
+      "title": "Roma Termini railway station",
+      "url": "https://en.wikipedia.org/wiki/Roma_Termini_railway_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    }
+  ],
+  "theme": {
+    "title": "Operating Passenger Railway Stations Opened Before 1900",
+    "introduction": "A location qualifies when it is a named railway station that began scheduled passenger rail service at its present site no later than 31 December 1899 and still has regularly scheduled passenger trains today. Plausible locations include London Paddington, London King's Cross, London St Pancras, London Liverpool Street, London Victoria, Paris Gare du Nord, Frankfurt Hauptbahnhof, Amsterdam Centraal, Zürich Hauptbahnhof, Basel SBB, Geneva Cornavin, Lausanne, Praha hlavní nádraží, Budapest-Nyugati, Budapest-Keleti, Stockholm Centralstation, Milano Cadorna, Torino Porta Nuova, Genova Piazza Principe, Roma Termini, Napoli Centrale, Lisboa Rossio, Porto Campanhã, Madrid Atocha, Bordeaux Saint-Jean, Lyon-Perrache, Marseille Saint-Charles, Toulouse-Matabiau, Mumbai Chhatrapati Shivaji Maharaj Terminus, Kolkata Sealdah, Chennai Central, Tokyo Ueno, Yokohama Station, Kyoto Station, Osaka Station, Melbourne Flinders Street, Buenos Aires Constitución, Buenos Aires Once, New York Grand Central Terminal, Boston South Station, Toronto Union Station, Mexico City Buenavista, Rio de Janeiro Central do Brasil, and São Paulo Luz.",
+    "inclusionCriteria": "Include only a location satisfying every condition: (1) it is an individually named railway station with platforms or a station building that can be pinned as one exact map location; (2) scheduled passenger rail service began at that same identifiable site on or before 31 December 1899, even if the station building was later rebuilt or replaced; (3) the station currently has regularly scheduled passenger trains on the date of play, including intercity, regional, commuter, or national rail; (4) the station lies within the current administrative boundary of a present-day city or incorporated urban municipality; and (5) the qualifying historical opening date and present passenger operation are documented or generally unambiguous."
+  }
+}

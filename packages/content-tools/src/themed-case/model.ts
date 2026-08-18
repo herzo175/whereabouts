@@ -30,6 +30,8 @@ export function createOpenRouterModel(
       prompt: string;
       stage: string;
     }): Promise<T> => {
+      const startedAt = Date.now();
+      console.info(`Starting ${stage}...`);
       try {
         const result = await generateText({
           model: client.chat(model),
@@ -38,6 +40,9 @@ export function createOpenRouterModel(
           output: Output.object({ schema }),
           prompt,
         });
+        console.info(
+          `Completed ${stage} in ${Math.round((Date.now() - startedAt) / 1_000)}s`,
+        );
         return result.output as T;
       } catch (error) {
         throw new Error(

@@ -1,0 +1,1402 @@
+{
+  "schemaVersion": 3,
+  "publicationDate": "2026-08-26",
+  "revision": 1,
+  "caseNumber": 20691,
+  "pois": [
+    {
+      "id": "reading-terminal-philadelphia",
+      "name": "Reading Terminal Market",
+      "city": "Philadelphia",
+      "country": "United States",
+      "latitude": 39.9533,
+      "longitude": -75.1594,
+      "wikipediaTitle": "Reading Terminal Market",
+      "blurb": "Reading Terminal Market is an enclosed public market in Philadelphia. It opened in 1893 and remains an operating market with many independent vendors selling food, produce, prepared meals and goods.",
+      "themeConnection": {
+        "text": "Permanent enclosed public market opened in 1893 and still operating with independent food, produce and merchandise vendors.",
+        "sourceIds": ["source-11"]
+      }
+    },
+    {
+      "id": "sant-antoni-barcelona",
+      "name": "Mercat de Sant Antoni",
+      "city": "Barcelona",
+      "country": "Spain",
+      "latitude": 41.3758,
+      "longitude": 2.1638,
+      "wikipediaTitle": "Mercat de Sant Antoni",
+      "blurb": "Sant Antoni Market is a large public market in Barcelona, built in the late nineteenth century. The market opened in 1882 and continues to provide food, household and other retail stalls.",
+      "themeConnection": {
+        "text": "Permanent covered municipal market opened in 1882 and continuing as a public food and merchandise market.",
+        "sourceIds": ["source-03"]
+      }
+    },
+    {
+      "id": "khan-el-khalili-cairo",
+      "name": "Khan el-Khalili",
+      "city": "Cairo",
+      "country": "Egypt",
+      "latitude": 30.0477,
+      "longitude": 31.2628,
+      "wikipediaTitle": "Khan el-Khalili",
+      "blurb": "Khan el-Khalili is a major souq and bazaar in Cairo’s historic centre. It was established in the fourteenth century and remains an operating covered market area with public shops and stalls.",
+      "themeConnection": {
+        "text": "Historic covered bazaar district founded in the fourteenth century and still operating as a contiguous public retail market.",
+        "sourceIds": ["source-19"]
+      }
+    },
+    {
+      "id": "nishiki-kyoto",
+      "name": "Nishiki Market",
+      "city": "Kyoto",
+      "country": "Japan",
+      "latitude": 35.005,
+      "longitude": 135.7649,
+      "wikipediaTitle": "Nishiki Market",
+      "blurb": "Nishiki Market (錦市場, Nishiki Ichiba; literally \"brocade market\") is a marketplace in downtown Kyoto, located on the east end of Nishikikōji Street, one block north and parallel to Shijō Street (四条通, Shijō-dōri) and west of Teramachi Street (寺町通, Teramachi-dōri).",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Nishiki_Ichiba_by_matsuyuki.jpg/1280px-Nishiki_Ichiba_by_matsuyuki.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Nishiki Market",
+        "attribution": "matsuyuki · CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      "themeConnection": {
+        "text": "Named covered market street with a fixed roofed retail complex and documented market use since the early seventeenth century.",
+        "sourceIds": ["source-18"]
+      }
+    },
+    {
+      "id": "leadenhall-london",
+      "name": "Leadenhall Market",
+      "city": "London",
+      "country": "United Kingdom",
+      "latitude": 51.5128,
+      "longitude": -0.0837,
+      "wikipediaTitle": "Leadenhall Market",
+      "blurb": "Leadenhall Market is a covered market in the City of London. A market has existed on the site since the fourteenth century, and the present structure contains public shops and food establishments.",
+      "themeConnection": {
+        "text": "Named covered market occupying a fixed historic complex with origins in the fourteenth century and current public shops and stalls.",
+        "sourceIds": ["source-07"]
+      }
+    },
+    {
+      "id": "santa-caterina-barcelona",
+      "name": "Mercat de Santa Caterina",
+      "city": "Barcelona",
+      "country": "Spain",
+      "latitude": 41.3864,
+      "longitude": 2.1777,
+      "wikipediaTitle": "Mercat de Santa Caterina",
+      "blurb": "The Santa Caterina Market is a public market in Barcelona. It was established in 1845 and has occupied the same site, although the market building was substantially rebuilt and reopened in the twenty-first century.",
+      "themeConnection": {
+        "text": "Named municipal covered market established in 1845 and still operating on the same historic site after rebuilding.",
+        "sourceIds": ["source-02"]
+      }
+    },
+    {
+      "id": "st-lawrence-toronto",
+      "name": "St. Lawrence Market",
+      "city": "Toronto",
+      "country": "Canada",
+      "latitude": 43.6487,
+      "longitude": -79.3715,
+      "wikipediaTitle": "St. Lawrence Market",
+      "blurb": "St. Lawrence Market is a major public market in Toronto. Public markets have occupied the site since 1803, while the present South Market building dates from 1845 and remains an operating food market.",
+      "themeConnection": {
+        "text": "Permanent covered public market whose South Market building dates from the nineteenth century on Toronto’s historic market site.",
+        "sourceIds": ["source-09"]
+      }
+    },
+    {
+      "id": "new-market-kolkata",
+      "name": "New Market",
+      "city": "Kolkata",
+      "country": "India",
+      "latitude": 22.56,
+      "longitude": 88.352,
+      "wikipediaTitle": "New Market, Kolkata",
+      "blurb": "New Market is a historic covered market in central Kolkata. It opened in 1874 as a municipal market and continues to operate with public shops and stalls selling food, clothing and household goods.",
+      "themeConnection": {
+        "text": "Permanent covered market opened in 1874 and continuing as a public retail complex with food, clothing and household shops.",
+        "sourceIds": ["source-23"]
+      }
+    },
+    {
+      "id": "atarazanas-malaga",
+      "name": "Mercado Central de Atarazanas",
+      "city": "Málaga",
+      "country": "Spain",
+      "latitude": 36.7189,
+      "longitude": -4.4235,
+      "wikipediaTitle": "Atarazanas Market",
+      "blurb": "Atarazanas Market is Málaga’s municipal market. The present iron market hall dates from the nineteenth century, and the building remains an operating public market for food and everyday provisions.",
+      "themeConnection": {
+        "text": "Permanent covered municipal market occupying a historic site and operating since the nineteenth century.",
+        "sourceIds": ["source-05"]
+      }
+    },
+    {
+      "id": "covent-garden-london",
+      "name": "Covent Garden Market",
+      "city": "London",
+      "country": "United Kingdom",
+      "latitude": 51.5118,
+      "longitude": -0.12204,
+      "wikipediaTitle": "Covent Garden",
+      "blurb": "Covent Garden has been a market site since the seventeenth century. The present market buildings form a fixed covered complex containing public shops, food businesses and market stalls.",
+      "themeConnection": {
+        "text": "Covered market complex with documented market origins before 1700 and continuing public retail activity in its permanent market buildings.",
+        "sourceIds": ["source-08"]
+      }
+    },
+    {
+      "id": "central-market-tunis",
+      "name": "Marché Central de Tunis",
+      "city": "Tunis",
+      "country": "Tunisia",
+      "latitude": 36.799,
+      "longitude": 10.1817,
+      "wikipediaTitle": "Central Market of Tunis",
+      "blurb": "The Central Market of Tunis is a covered public market in the medina area. It was established in 1891 and continues to operate with vendors selling fish, meat, produce and other food.",
+      "themeConnection": {
+        "text": "Permanent covered central market established in 1891 and still operating as a public food and produce market.",
+        "sourceIds": ["source-21"]
+      }
+    },
+    {
+      "id": "mahane-yehuda",
+      "name": "Mahane Yehuda Market",
+      "city": "Jerusalem",
+      "country": "Israel",
+      "latitude": 31.785,
+      "longitude": 35.2123,
+      "wikipediaTitle": "Mahane Yehuda Market",
+      "blurb": "Mahane Yehuda Market is a permanent public market in Jerusalem. It was established in 1887 and today occupies a fixed network of covered market streets and shops selling food and other goods.",
+      "themeConnection": {
+        "text": "Historic permanent market complex founded in 1887 and now operating with covered streets, stalls and shops.",
+        "sourceIds": ["source-20"]
+      }
+    },
+    {
+      "id": "crawford-mumbai",
+      "name": "Mahatma Jyotiba Phule Mandai",
+      "city": "Mumbai",
+      "country": "India",
+      "latitude": 18.9477,
+      "longitude": 72.8311,
+      "wikipediaTitle": "Crawford Market",
+      "blurb": "Crawford Market, now officially Mahatma Jyotiba Phule Mandai, is a historic covered market in Mumbai. It opened in 1869 and remains an operating public market with food and merchandise vendors.",
+      "themeConnection": {
+        "text": "Historic covered municipal market opened in 1869 and still operating as a public retail market for food and household goods.",
+        "sourceIds": ["source-22"]
+      }
+    },
+    {
+      "id": "metz-covered-market",
+      "name": "Marché couvert de Metz",
+      "city": "Metz",
+      "country": "France",
+      "latitude": 49.1193,
+      "longitude": 6.175,
+      "wikipediaTitle": "Marché couvert de Metz",
+      "blurb": "The Marché couvert de Metz is a permanent covered food market beside Metz Cathedral. Its market use dates to the nineteenth century, and the building remains open to the public with regular vendors.",
+      "themeConnection": {
+        "text": "Historic covered public market established in the nineteenth century and continuously used for retail food trading.",
+        "sourceIds": ["source-14"]
+      }
+    },
+    {
+      "id": "nancy-central-market",
+      "name": "Marché couvert de Nancy",
+      "city": "Nancy",
+      "country": "France",
+      "latitude": 48.6926,
+      "longitude": 6.1826,
+      "wikipediaTitle": "Marché couvert de Nancy",
+      "blurb": "Nancy’s covered market is a permanent municipal market in the city centre. The market dates from the nineteenth century and continues to provide public stalls selling food and ordinary household provisions.",
+      "themeConnection": {
+        "text": "Named permanent covered municipal market established in the nineteenth century and still operating for everyday food retail.",
+        "sourceIds": ["source-13"]
+      }
+    },
+    {
+      "id": "adelaide-central-market",
+      "name": "Adelaide Central Market",
+      "city": "Adelaide",
+      "country": "Australia",
+      "latitude": -34.9308,
+      "longitude": 138.6008,
+      "wikipediaTitle": "Adelaide Central Market",
+      "blurb": "Adelaide Central Market is a covered food and produce market in the city centre. It was established in 1869 and remains an operating public market with many independent traders.",
+      "themeConnection": {
+        "text": "Permanent covered public market founded in 1869 on the present city site and still trading in food and ordinary merchandise.",
+        "sourceIds": ["source-25"]
+      }
+    },
+    {
+      "id": "boqueria-barcelona",
+      "name": "Mercat de Sant Josep de la Boqueria",
+      "city": "Barcelona",
+      "country": "Spain",
+      "latitude": 41.3817,
+      "longitude": 2.1719,
+      "wikipediaTitle": "La Boqueria",
+      "blurb": "The Mercat de Sant Josep de la Boqueria (Catalan: [məɾˈkad də ˈsaɲ ʒuˈzɛb də lə βukəˈɾi.ə]; Spanish: Mercado de San José de la Boquería), usually simply referred to as La Boqueria, is a large public market in the Ciutat Vella district of Barcelona, Catalonia, Spain, and one of…",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Barcelona_-_Mercat_de_Sant_Josep_%28la_Boqueria%29_-_Entrance.jpg/1280px-Barcelona_-_Mercat_de_Sant_Josep_%28la_Boqueria%29_-_Entrance.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "La Boqueria",
+        "attribution": "Didier Descouens · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "Permanent covered public market on La Rambla, established at its present site in the nineteenth century and still operating with food stalls.",
+        "sourceIds": ["source-01"]
+      }
+    },
+    {
+      "id": "borough-london",
+      "name": "Borough Market",
+      "city": "London",
+      "country": "United Kingdom",
+      "latitude": 51.5055,
+      "longitude": -0.09102025,
+      "wikipediaTitle": "Borough Market",
+      "blurb": "Borough Market is a wholesale and retail food market in Southwark, London. A market has operated on or near the present site for centuries, and the current market is a permanent covered public complex.",
+      "themeConnection": {
+        "text": "Operating covered food market on its historic Southwark site, documented there since the eighteenth century and housed under permanent structures.",
+        "sourceIds": ["source-06"]
+      }
+    },
+    {
+      "id": "spice-bazaar-istanbul",
+      "name": "Spice Bazaar",
+      "city": "Istanbul",
+      "country": "Türkiye",
+      "latitude": 41.0166,
+      "longitude": 28.9709,
+      "wikipediaTitle": "Spice Bazaar, Istanbul",
+      "blurb": "The Spice Bazaar is a historic covered market in Istanbul. It was completed in 1664 and continues to function as a visitor-accessible public bazaar selling spices, food, sweets and other goods.",
+      "themeConnection": {
+        "text": "Permanent covered bazaar opened in 1664 and still operating with public food, spice and merchandise shops.",
+        "sourceIds": ["source-17"]
+      }
+    },
+    {
+      "id": "quincy-boston",
+      "name": "Quincy Market",
+      "city": "Boston",
+      "country": "United States",
+      "latitude": 42.3601,
+      "longitude": -71.0567,
+      "wikipediaTitle": "Quincy Market",
+      "blurb": "Quincy Market is a historic market complex in downtown Boston. The market building was completed in 1826 and continues to operate as a public covered marketplace with food vendors and shops.",
+      "themeConnection": {
+        "text": "Historic covered public market hall completed in 1826 and still operating as a visitor-accessible food and merchandise market.",
+        "sourceIds": ["source-10"]
+      }
+    },
+    {
+      "id": "queen-victoria-market",
+      "name": "Queen Victoria Market",
+      "city": "Melbourne",
+      "country": "Australia",
+      "latitude": -37.8076,
+      "longitude": 144.9568,
+      "wikipediaTitle": "Queen Victoria Market",
+      "blurb": "The Queen Victoria Market (also known colloquially as the Vic Market or Queen Vic) is a major landmark and public marketplace in the central business district (CBD) of Melbourne, Victoria, Australia.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Aerial_photograph_of_Queen_Victoria_Market.jpg/1280px-Aerial_photograph_of_Queen_Victoria_Market.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Queen Victoria Market",
+        "attribution": "Bob T · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "Permanent covered and enclosed market complex founded in 1878 and still operating as Melbourne’s public retail market.",
+        "sourceIds": ["source-24"]
+      }
+    },
+    {
+      "id": "grand-bazaar-istanbul",
+      "name": "Grand Bazaar",
+      "city": "Istanbul",
+      "country": "Türkiye",
+      "latitude": 41.0106,
+      "longitude": 28.968,
+      "wikipediaTitle": "Grand Bazaar, Istanbul",
+      "blurb": "The Grand Bazaar (Turkish: Kapalıçarşı, meaning ‘Covered Market’; also Büyük Çarşı, meaning ‘Grand Market’) in Istanbul is one of the largest and oldest covered markets in the world, with 61 covered streets and over 4,000 shops on a total area of 30,700 m2, attracting between…",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Istanbul_asv2021-11_img41_Grand_Bazaar.jpg/1280px-Istanbul_asv2021-11_img41_Grand_Bazaar.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Grand Bazaar, Istanbul",
+        "attribution": "A.Savin · FAL",
+        "licenseUrl": "http://artlibre.org/licence/lal/en"
+      },
+      "themeConnection": {
+        "text": "Individually named historic covered bazaar established in the fifteenth century and still operating with public retail shops.",
+        "sourceIds": ["source-16"]
+      }
+    },
+    {
+      "id": "concepcio-barcelona",
+      "name": "Mercat de la Concepció",
+      "city": "Barcelona",
+      "country": "Spain",
+      "latitude": 41.3944,
+      "longitude": 2.1746,
+      "wikipediaTitle": "Mercat de la Concepció",
+      "blurb": "The Mercat de la Concepció is one of Barcelona’s historic municipal markets. It opened in 1888 and is a permanent covered market with food shops and other everyday retail services.",
+      "themeConnection": {
+        "text": "Historic iron-covered public market dating from 1888 and operating as a neighborhood retail market.",
+        "sourceIds": ["source-04"]
+      }
+    },
+    {
+      "id": "colmar-halles",
+      "name": "Marché couvert de Colmar",
+      "city": "Colmar",
+      "country": "France",
+      "latitude": 48.0787,
+      "longitude": 7.3574,
+      "wikipediaTitle": "Marché couvert de Colmar",
+      "blurb": "Colmar’s covered market is a historic market hall built in the nineteenth century. It remains an operating public market in the old town, with stalls selling produce, meat, fish and other foods.",
+      "themeConnection": {
+        "text": "Nineteenth-century covered market hall in Colmar, still functioning as a public market for food and produce.",
+        "sourceIds": ["source-15"]
+      }
+    },
+    {
+      "id": "budapest-great-market-hall",
+      "name": "Great Market Hall",
+      "city": "Budapest",
+      "country": "Hungary",
+      "latitude": 47.286,
+      "longitude": 19.0571,
+      "wikipediaTitle": "Great Market Hall",
+      "blurb": "The Great Market Hall or Central Market Hall, Market Hall I (Hungarian: Nagyvásárcsarnok [ˈnɒɟvaːʃaːt͡ʃɒrnok]) is the largest and oldest indoor market in Budapest, Hungary.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/VasarcsarnokFotoThalerTamas.JPG/1280px-VasarcsarnokFotoThalerTamas.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Great Market Hall",
+        "attribution": "Thaler Tamas · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "Large permanent covered municipal market opened in 1897 and still operating in its original Budapest location.",
+        "sourceIds": ["source-12"]
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "round-1",
+      "targetPoiId": "nishiki-kyoto",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Nishiki_Ichiba_by_matsuyuki.jpg/1280px-Nishiki_Ichiba_by_matsuyuki.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Nishiki Market",
+        "attribution": "matsuyuki · CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      "clue": {
+        "text": "A narrow roofed shopping arcade runs about 400 metres along a single street, with roughly 130 food shops; its fish-selling tradition received official permission in 1615, and its present cobblestone floor and canopy date from 1984 and 1993.",
+        "sourceIds": ["source-18"]
+      },
+      "results": [
+        {
+          "poiId": "boqueria-barcelona",
+          "tier": "warm",
+          "text": "Mercat de Sant Josep de la Boqueria is a themed comparison candidate: Permanent covered public market on La Rambla, established at its present site in the nineteenth century and still operating with food stalls.",
+          "sourceIds": ["source-01", "source-18"]
+        },
+        {
+          "poiId": "santa-caterina-barcelona",
+          "tier": "cold",
+          "text": "Mercat de Santa Caterina is a themed comparison candidate: Named municipal covered market established in 1845 and still operating on the same historic site after rebuilding.",
+          "sourceIds": ["source-02", "source-18"]
+        },
+        {
+          "poiId": "sant-antoni-barcelona",
+          "tier": "cold",
+          "text": "Mercat de Sant Antoni is a themed comparison candidate: Permanent covered municipal market opened in 1882 and continuing as a public food and merchandise market.",
+          "sourceIds": ["source-03", "source-18"]
+        },
+        {
+          "poiId": "concepcio-barcelona",
+          "tier": "cold",
+          "text": "Mercat de la Concepció is a themed comparison candidate: Historic iron-covered public market dating from 1888 and operating as a neighborhood retail market.",
+          "sourceIds": ["source-04", "source-18"]
+        },
+        {
+          "poiId": "atarazanas-malaga",
+          "tier": "warm",
+          "text": "Mercado Central de Atarazanas is a themed comparison candidate: Permanent covered municipal market occupying a historic site and operating since the nineteenth century.",
+          "sourceIds": ["source-05", "source-18"]
+        },
+        {
+          "poiId": "borough-london",
+          "tier": "warm",
+          "text": "Borough Market is a themed comparison candidate: Operating covered food market on its historic Southwark site, documented there since the eighteenth century and housed under permanent structures.",
+          "sourceIds": ["source-06", "source-18"]
+        },
+        {
+          "poiId": "leadenhall-london",
+          "tier": "cold",
+          "text": "Leadenhall Market is a themed comparison candidate: Named covered market occupying a fixed historic complex with origins in the fourteenth century and current public shops and stalls.",
+          "sourceIds": ["source-07", "source-18"]
+        },
+        {
+          "poiId": "covent-garden-london",
+          "tier": "cold",
+          "text": "Covent Garden Market is a themed comparison candidate: Covered market complex with documented market origins before 1700 and continuing public retail activity in its permanent market buildings.",
+          "sourceIds": ["source-08", "source-18"]
+        },
+        {
+          "poiId": "st-lawrence-toronto",
+          "tier": "warm",
+          "text": "St. Lawrence Market is a themed comparison candidate: Permanent covered public market whose South Market building dates from the nineteenth century on Toronto’s historic market site.",
+          "sourceIds": ["source-09", "source-18"]
+        },
+        {
+          "poiId": "quincy-boston",
+          "tier": "warm",
+          "text": "Quincy Market is a themed comparison candidate: Historic covered public market hall completed in 1826 and still operating as a visitor-accessible food and merchandise market.",
+          "sourceIds": ["source-10", "source-18"]
+        },
+        {
+          "poiId": "reading-terminal-philadelphia",
+          "tier": "warm",
+          "text": "Reading Terminal Market is a themed comparison candidate: Permanent enclosed public market opened in 1893 and still operating with independent food, produce and merchandise vendors.",
+          "sourceIds": ["source-11", "source-18"]
+        },
+        {
+          "poiId": "budapest-great-market-hall",
+          "tier": "hot",
+          "text": "Great Market Hall is a themed comparison candidate: Large permanent covered municipal market opened in 1897 and still operating in its original Budapest location.",
+          "sourceIds": ["source-12", "source-18"]
+        },
+        {
+          "poiId": "nancy-central-market",
+          "tier": "cold",
+          "text": "Marché couvert de Nancy is a themed comparison candidate: Named permanent covered municipal market established in the nineteenth century and still operating for everyday food retail.",
+          "sourceIds": ["source-13", "source-18"]
+        },
+        {
+          "poiId": "metz-covered-market",
+          "tier": "cold",
+          "text": "Marché couvert de Metz is a themed comparison candidate: Historic covered public market established in the nineteenth century and continuously used for retail food trading.",
+          "sourceIds": ["source-14", "source-18"]
+        },
+        {
+          "poiId": "colmar-halles",
+          "tier": "cold",
+          "text": "Marché couvert de Colmar is a themed comparison candidate: Nineteenth-century covered market hall in Colmar, still functioning as a public market for food and produce.",
+          "sourceIds": ["source-15", "source-18"]
+        },
+        {
+          "poiId": "grand-bazaar-istanbul",
+          "tier": "hot",
+          "text": "Grand Bazaar is a themed comparison candidate: Individually named historic covered bazaar established in the fifteenth century and still operating with public retail shops.",
+          "sourceIds": ["source-16", "source-18"]
+        },
+        {
+          "poiId": "spice-bazaar-istanbul",
+          "tier": "hot",
+          "text": "Spice Bazaar is a themed comparison candidate: Permanent covered bazaar opened in 1664 and still operating with public food, spice and merchandise shops.",
+          "sourceIds": ["source-17", "source-18"]
+        },
+        {
+          "poiId": "nishiki-kyoto",
+          "tier": "correct",
+          "text": "Nishiki Market is the round target: Named covered market street with a fixed roofed retail complex and documented market use since the early seventeenth century.",
+          "sourceIds": ["source-18"]
+        },
+        {
+          "poiId": "khan-el-khalili-cairo",
+          "tier": "hot",
+          "text": "Khan el-Khalili is a themed comparison candidate: Historic covered bazaar district founded in the fourteenth century and still operating as a contiguous public retail market.",
+          "sourceIds": ["source-19", "source-18"]
+        },
+        {
+          "poiId": "mahane-yehuda",
+          "tier": "warm",
+          "text": "Mahane Yehuda Market is a themed comparison candidate: Historic permanent market complex founded in 1887 and now operating with covered streets, stalls and shops.",
+          "sourceIds": ["source-20", "source-18"]
+        },
+        {
+          "poiId": "central-market-tunis",
+          "tier": "cold",
+          "text": "Marché Central de Tunis is a themed comparison candidate: Permanent covered central market established in 1891 and still operating as a public food and produce market.",
+          "sourceIds": ["source-21", "source-18"]
+        },
+        {
+          "poiId": "crawford-mumbai",
+          "tier": "cold",
+          "text": "Mahatma Jyotiba Phule Mandai is a themed comparison candidate: Historic covered municipal market opened in 1869 and still operating as a public retail market for food and household goods.",
+          "sourceIds": ["source-22", "source-18"]
+        },
+        {
+          "poiId": "new-market-kolkata",
+          "tier": "cold",
+          "text": "New Market is a themed comparison candidate: Permanent covered market opened in 1874 and continuing as a public retail complex with food, clothing and household shops.",
+          "sourceIds": ["source-23", "source-18"]
+        },
+        {
+          "poiId": "queen-victoria-market",
+          "tier": "warm",
+          "text": "Queen Victoria Market is a themed comparison candidate: Permanent covered and enclosed market complex founded in 1878 and still operating as Melbourne’s public retail market.",
+          "sourceIds": ["source-24", "source-18"]
+        },
+        {
+          "poiId": "adelaide-central-market",
+          "tier": "cold",
+          "text": "Adelaide Central Market is a themed comparison candidate: Permanent covered public market founded in 1869 on the present city site and still trading in food and ordinary merchandise.",
+          "sourceIds": ["source-25", "source-18"]
+        }
+      ]
+    },
+    {
+      "id": "round-2",
+      "targetPoiId": "grand-bazaar-istanbul",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Istanbul_asv2021-11_img41_Grand_Bazaar.jpg/1280px-Istanbul_asv2021-11_img41_Grand_Bazaar.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Grand Bazaar, Istanbul",
+        "attribution": "A.Savin · FAL",
+        "licenseUrl": "http://artlibre.org/licence/lal/en"
+      },
+      "clue": {
+        "text": "Its covered core began in 1455–56 and grew into a maze of 61 covered streets containing more than 4,000 shops across 30,700 square metres; two historic bedestens anchor the still-operating complex.",
+        "sourceIds": ["source-16"]
+      },
+      "results": [
+        {
+          "poiId": "boqueria-barcelona",
+          "tier": "warm",
+          "text": "Mercat de Sant Josep de la Boqueria is a themed comparison candidate: Permanent covered public market on La Rambla, established at its present site in the nineteenth century and still operating with food stalls.",
+          "sourceIds": ["source-01", "source-16"]
+        },
+        {
+          "poiId": "santa-caterina-barcelona",
+          "tier": "cold",
+          "text": "Mercat de Santa Caterina is a themed comparison candidate: Named municipal covered market established in 1845 and still operating on the same historic site after rebuilding.",
+          "sourceIds": ["source-02", "source-16"]
+        },
+        {
+          "poiId": "sant-antoni-barcelona",
+          "tier": "cold",
+          "text": "Mercat de Sant Antoni is a themed comparison candidate: Permanent covered municipal market opened in 1882 and continuing as a public food and merchandise market.",
+          "sourceIds": ["source-03", "source-16"]
+        },
+        {
+          "poiId": "concepcio-barcelona",
+          "tier": "cold",
+          "text": "Mercat de la Concepció is a themed comparison candidate: Historic iron-covered public market dating from 1888 and operating as a neighborhood retail market.",
+          "sourceIds": ["source-04", "source-16"]
+        },
+        {
+          "poiId": "atarazanas-malaga",
+          "tier": "cold",
+          "text": "Mercado Central de Atarazanas is a themed comparison candidate: Permanent covered municipal market occupying a historic site and operating since the nineteenth century.",
+          "sourceIds": ["source-05", "source-16"]
+        },
+        {
+          "poiId": "borough-london",
+          "tier": "warm",
+          "text": "Borough Market is a themed comparison candidate: Operating covered food market on its historic Southwark site, documented there since the eighteenth century and housed under permanent structures.",
+          "sourceIds": ["source-06", "source-16"]
+        },
+        {
+          "poiId": "leadenhall-london",
+          "tier": "warm",
+          "text": "Leadenhall Market is a themed comparison candidate: Named covered market occupying a fixed historic complex with origins in the fourteenth century and current public shops and stalls.",
+          "sourceIds": ["source-07", "source-16"]
+        },
+        {
+          "poiId": "covent-garden-london",
+          "tier": "warm",
+          "text": "Covent Garden Market is a themed comparison candidate: Covered market complex with documented market origins before 1700 and continuing public retail activity in its permanent market buildings.",
+          "sourceIds": ["source-08", "source-16"]
+        },
+        {
+          "poiId": "st-lawrence-toronto",
+          "tier": "cold",
+          "text": "St. Lawrence Market is a themed comparison candidate: Permanent covered public market whose South Market building dates from the nineteenth century on Toronto’s historic market site.",
+          "sourceIds": ["source-09", "source-16"]
+        },
+        {
+          "poiId": "quincy-boston",
+          "tier": "warm",
+          "text": "Quincy Market is a themed comparison candidate: Historic covered public market hall completed in 1826 and still operating as a visitor-accessible food and merchandise market.",
+          "sourceIds": ["source-10", "source-16"]
+        },
+        {
+          "poiId": "reading-terminal-philadelphia",
+          "tier": "warm",
+          "text": "Reading Terminal Market is a themed comparison candidate: Permanent enclosed public market opened in 1893 and still operating with independent food, produce and merchandise vendors.",
+          "sourceIds": ["source-11", "source-16"]
+        },
+        {
+          "poiId": "budapest-great-market-hall",
+          "tier": "warm",
+          "text": "Great Market Hall is a themed comparison candidate: Large permanent covered municipal market opened in 1897 and still operating in its original Budapest location.",
+          "sourceIds": ["source-12", "source-16"]
+        },
+        {
+          "poiId": "nancy-central-market",
+          "tier": "cold",
+          "text": "Marché couvert de Nancy is a themed comparison candidate: Named permanent covered municipal market established in the nineteenth century and still operating for everyday food retail.",
+          "sourceIds": ["source-13", "source-16"]
+        },
+        {
+          "poiId": "metz-covered-market",
+          "tier": "cold",
+          "text": "Marché couvert de Metz is a themed comparison candidate: Historic covered public market established in the nineteenth century and continuously used for retail food trading.",
+          "sourceIds": ["source-14", "source-16"]
+        },
+        {
+          "poiId": "colmar-halles",
+          "tier": "cold",
+          "text": "Marché couvert de Colmar is a themed comparison candidate: Nineteenth-century covered market hall in Colmar, still functioning as a public market for food and produce.",
+          "sourceIds": ["source-15", "source-16"]
+        },
+        {
+          "poiId": "grand-bazaar-istanbul",
+          "tier": "correct",
+          "text": "Grand Bazaar is the round target: Individually named historic covered bazaar established in the fifteenth century and still operating with public retail shops.",
+          "sourceIds": ["source-16"]
+        },
+        {
+          "poiId": "spice-bazaar-istanbul",
+          "tier": "hot",
+          "text": "Spice Bazaar is a themed comparison candidate: Permanent covered bazaar opened in 1664 and still operating with public food, spice and merchandise shops.",
+          "sourceIds": ["source-17", "source-16"]
+        },
+        {
+          "poiId": "nishiki-kyoto",
+          "tier": "hot",
+          "text": "Nishiki Market is a themed comparison candidate: Named covered market street with a fixed roofed retail complex and documented market use since the early seventeenth century.",
+          "sourceIds": ["source-18", "source-16"]
+        },
+        {
+          "poiId": "khan-el-khalili-cairo",
+          "tier": "hot",
+          "text": "Khan el-Khalili is a themed comparison candidate: Historic covered bazaar district founded in the fourteenth century and still operating as a contiguous public retail market.",
+          "sourceIds": ["source-19", "source-16"]
+        },
+        {
+          "poiId": "mahane-yehuda",
+          "tier": "warm",
+          "text": "Mahane Yehuda Market is a themed comparison candidate: Historic permanent market complex founded in 1887 and now operating with covered streets, stalls and shops.",
+          "sourceIds": ["source-20", "source-16"]
+        },
+        {
+          "poiId": "central-market-tunis",
+          "tier": "cold",
+          "text": "Marché Central de Tunis is a themed comparison candidate: Permanent covered central market established in 1891 and still operating as a public food and produce market.",
+          "sourceIds": ["source-21", "source-16"]
+        },
+        {
+          "poiId": "crawford-mumbai",
+          "tier": "cold",
+          "text": "Mahatma Jyotiba Phule Mandai is a themed comparison candidate: Historic covered municipal market opened in 1869 and still operating as a public retail market for food and household goods.",
+          "sourceIds": ["source-22", "source-16"]
+        },
+        {
+          "poiId": "new-market-kolkata",
+          "tier": "cold",
+          "text": "New Market is a themed comparison candidate: Permanent covered market opened in 1874 and continuing as a public retail complex with food, clothing and household shops.",
+          "sourceIds": ["source-23", "source-16"]
+        },
+        {
+          "poiId": "queen-victoria-market",
+          "tier": "hot",
+          "text": "Queen Victoria Market is a themed comparison candidate: Permanent covered and enclosed market complex founded in 1878 and still operating as Melbourne’s public retail market.",
+          "sourceIds": ["source-24", "source-16"]
+        },
+        {
+          "poiId": "adelaide-central-market",
+          "tier": "cold",
+          "text": "Adelaide Central Market is a themed comparison candidate: Permanent covered public market founded in 1869 on the present city site and still trading in food and ordinary merchandise.",
+          "sourceIds": ["source-25", "source-16"]
+        }
+      ]
+    },
+    {
+      "id": "round-3",
+      "targetPoiId": "budapest-great-market-hall",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/VasarcsarnokFotoThalerTamas.JPG/1280px-VasarcsarnokFotoThalerTamas.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Great Market Hall",
+        "attribution": "Thaler Tamas · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "Opened on 15 February 1897, this three-floor hall occupies 10,000 square metres beneath a steel structure; its restored roof is distinguished by colourful Zsolnay tiles, while produce and spices remain sold on the ground floor.",
+        "sourceIds": ["source-12"]
+      },
+      "results": [
+        {
+          "poiId": "boqueria-barcelona",
+          "tier": "hot",
+          "text": "Mercat de Sant Josep de la Boqueria is a themed comparison candidate: Permanent covered public market on La Rambla, established at its present site in the nineteenth century and still operating with food stalls.",
+          "sourceIds": ["source-01", "source-12"]
+        },
+        {
+          "poiId": "santa-caterina-barcelona",
+          "tier": "cold",
+          "text": "Mercat de Santa Caterina is a themed comparison candidate: Named municipal covered market established in 1845 and still operating on the same historic site after rebuilding.",
+          "sourceIds": ["source-02", "source-12"]
+        },
+        {
+          "poiId": "sant-antoni-barcelona",
+          "tier": "cold",
+          "text": "Mercat de Sant Antoni is a themed comparison candidate: Permanent covered municipal market opened in 1882 and continuing as a public food and merchandise market.",
+          "sourceIds": ["source-03", "source-12"]
+        },
+        {
+          "poiId": "concepcio-barcelona",
+          "tier": "cold",
+          "text": "Mercat de la Concepció is a themed comparison candidate: Historic iron-covered public market dating from 1888 and operating as a neighborhood retail market.",
+          "sourceIds": ["source-04", "source-12"]
+        },
+        {
+          "poiId": "atarazanas-malaga",
+          "tier": "warm",
+          "text": "Mercado Central de Atarazanas is a themed comparison candidate: Permanent covered municipal market occupying a historic site and operating since the nineteenth century.",
+          "sourceIds": ["source-05", "source-12"]
+        },
+        {
+          "poiId": "borough-london",
+          "tier": "warm",
+          "text": "Borough Market is a themed comparison candidate: Operating covered food market on its historic Southwark site, documented there since the eighteenth century and housed under permanent structures.",
+          "sourceIds": ["source-06", "source-12"]
+        },
+        {
+          "poiId": "leadenhall-london",
+          "tier": "cold",
+          "text": "Leadenhall Market is a themed comparison candidate: Named covered market occupying a fixed historic complex with origins in the fourteenth century and current public shops and stalls.",
+          "sourceIds": ["source-07", "source-12"]
+        },
+        {
+          "poiId": "covent-garden-london",
+          "tier": "cold",
+          "text": "Covent Garden Market is a themed comparison candidate: Covered market complex with documented market origins before 1700 and continuing public retail activity in its permanent market buildings.",
+          "sourceIds": ["source-08", "source-12"]
+        },
+        {
+          "poiId": "st-lawrence-toronto",
+          "tier": "hot",
+          "text": "St. Lawrence Market is a themed comparison candidate: Permanent covered public market whose South Market building dates from the nineteenth century on Toronto’s historic market site.",
+          "sourceIds": ["source-09", "source-12"]
+        },
+        {
+          "poiId": "quincy-boston",
+          "tier": "warm",
+          "text": "Quincy Market is a themed comparison candidate: Historic covered public market hall completed in 1826 and still operating as a visitor-accessible food and merchandise market.",
+          "sourceIds": ["source-10", "source-12"]
+        },
+        {
+          "poiId": "reading-terminal-philadelphia",
+          "tier": "hot",
+          "text": "Reading Terminal Market is a themed comparison candidate: Permanent enclosed public market opened in 1893 and still operating with independent food, produce and merchandise vendors.",
+          "sourceIds": ["source-11", "source-12"]
+        },
+        {
+          "poiId": "budapest-great-market-hall",
+          "tier": "correct",
+          "text": "Great Market Hall is the round target: Large permanent covered municipal market opened in 1897 and still operating in its original Budapest location.",
+          "sourceIds": ["source-12"]
+        },
+        {
+          "poiId": "nancy-central-market",
+          "tier": "cold",
+          "text": "Marché couvert de Nancy is a themed comparison candidate: Named permanent covered municipal market established in the nineteenth century and still operating for everyday food retail.",
+          "sourceIds": ["source-13", "source-12"]
+        },
+        {
+          "poiId": "metz-covered-market",
+          "tier": "cold",
+          "text": "Marché couvert de Metz is a themed comparison candidate: Historic covered public market established in the nineteenth century and continuously used for retail food trading.",
+          "sourceIds": ["source-14", "source-12"]
+        },
+        {
+          "poiId": "colmar-halles",
+          "tier": "cold",
+          "text": "Marché couvert de Colmar is a themed comparison candidate: Nineteenth-century covered market hall in Colmar, still functioning as a public market for food and produce.",
+          "sourceIds": ["source-15", "source-12"]
+        },
+        {
+          "poiId": "grand-bazaar-istanbul",
+          "tier": "warm",
+          "text": "Grand Bazaar is a themed comparison candidate: Individually named historic covered bazaar established in the fifteenth century and still operating with public retail shops.",
+          "sourceIds": ["source-16", "source-12"]
+        },
+        {
+          "poiId": "spice-bazaar-istanbul",
+          "tier": "warm",
+          "text": "Spice Bazaar is a themed comparison candidate: Permanent covered bazaar opened in 1664 and still operating with public food, spice and merchandise shops.",
+          "sourceIds": ["source-17", "source-12"]
+        },
+        {
+          "poiId": "nishiki-kyoto",
+          "tier": "warm",
+          "text": "Nishiki Market is a themed comparison candidate: Named covered market street with a fixed roofed retail complex and documented market use since the early seventeenth century.",
+          "sourceIds": ["source-18", "source-12"]
+        },
+        {
+          "poiId": "khan-el-khalili-cairo",
+          "tier": "cold",
+          "text": "Khan el-Khalili is a themed comparison candidate: Historic covered bazaar district founded in the fourteenth century and still operating as a contiguous public retail market.",
+          "sourceIds": ["source-19", "source-12"]
+        },
+        {
+          "poiId": "mahane-yehuda",
+          "tier": "cold",
+          "text": "Mahane Yehuda Market is a themed comparison candidate: Historic permanent market complex founded in 1887 and now operating with covered streets, stalls and shops.",
+          "sourceIds": ["source-20", "source-12"]
+        },
+        {
+          "poiId": "central-market-tunis",
+          "tier": "cold",
+          "text": "Marché Central de Tunis is a themed comparison candidate: Permanent covered central market established in 1891 and still operating as a public food and produce market.",
+          "sourceIds": ["source-21", "source-12"]
+        },
+        {
+          "poiId": "crawford-mumbai",
+          "tier": "warm",
+          "text": "Mahatma Jyotiba Phule Mandai is a themed comparison candidate: Historic covered municipal market opened in 1869 and still operating as a public retail market for food and household goods.",
+          "sourceIds": ["source-22", "source-12"]
+        },
+        {
+          "poiId": "new-market-kolkata",
+          "tier": "warm",
+          "text": "New Market is a themed comparison candidate: Permanent covered market opened in 1874 and continuing as a public retail complex with food, clothing and household shops.",
+          "sourceIds": ["source-23", "source-12"]
+        },
+        {
+          "poiId": "queen-victoria-market",
+          "tier": "hot",
+          "text": "Queen Victoria Market is a themed comparison candidate: Permanent covered and enclosed market complex founded in 1878 and still operating as Melbourne’s public retail market.",
+          "sourceIds": ["source-24", "source-12"]
+        },
+        {
+          "poiId": "adelaide-central-market",
+          "tier": "cold",
+          "text": "Adelaide Central Market is a themed comparison candidate: Permanent covered public market founded in 1869 on the present city site and still trading in food and ordinary merchandise.",
+          "sourceIds": ["source-25", "source-12"]
+        }
+      ]
+    },
+    {
+      "id": "round-4",
+      "targetPoiId": "boqueria-barcelona",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Barcelona_-_Mercat_de_Sant_Josep_%28la_Boqueria%29_-_Entrance.jpg/1280px-Barcelona_-_Mercat_de_Sant_Josep_%28la_Boqueria%29_-_Entrance.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "La Boqueria",
+        "attribution": "Didier Descouens · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "This permanent food market has an entrance from a famous central boulevard near an opera house; although its history reaches back to 1217, the present structure was inaugurated in 1853 and retains a metal roof built in 1914.",
+        "sourceIds": ["source-01"]
+      },
+      "results": [
+        {
+          "poiId": "boqueria-barcelona",
+          "tier": "correct",
+          "text": "Mercat de Sant Josep de la Boqueria is the round target: Permanent covered public market on La Rambla, established at its present site in the nineteenth century and still operating with food stalls.",
+          "sourceIds": ["source-01"]
+        },
+        {
+          "poiId": "santa-caterina-barcelona",
+          "tier": "hot",
+          "text": "Mercat de Santa Caterina is a themed comparison candidate: Named municipal covered market established in 1845 and still operating on the same historic site after rebuilding.",
+          "sourceIds": ["source-02", "source-01"]
+        },
+        {
+          "poiId": "sant-antoni-barcelona",
+          "tier": "hot",
+          "text": "Mercat de Sant Antoni is a themed comparison candidate: Permanent covered municipal market opened in 1882 and continuing as a public food and merchandise market.",
+          "sourceIds": ["source-03", "source-01"]
+        },
+        {
+          "poiId": "concepcio-barcelona",
+          "tier": "hot",
+          "text": "Mercat de la Concepció is a themed comparison candidate: Historic iron-covered public market dating from 1888 and operating as a neighborhood retail market.",
+          "sourceIds": ["source-04", "source-01"]
+        },
+        {
+          "poiId": "atarazanas-malaga",
+          "tier": "hot",
+          "text": "Mercado Central de Atarazanas is a themed comparison candidate: Permanent covered municipal market occupying a historic site and operating since the nineteenth century.",
+          "sourceIds": ["source-05", "source-01"]
+        },
+        {
+          "poiId": "borough-london",
+          "tier": "warm",
+          "text": "Borough Market is a themed comparison candidate: Operating covered food market on its historic Southwark site, documented there since the eighteenth century and housed under permanent structures.",
+          "sourceIds": ["source-06", "source-01"]
+        },
+        {
+          "poiId": "leadenhall-london",
+          "tier": "cold",
+          "text": "Leadenhall Market is a themed comparison candidate: Named covered market occupying a fixed historic complex with origins in the fourteenth century and current public shops and stalls.",
+          "sourceIds": ["source-07", "source-01"]
+        },
+        {
+          "poiId": "covent-garden-london",
+          "tier": "cold",
+          "text": "Covent Garden Market is a themed comparison candidate: Covered market complex with documented market origins before 1700 and continuing public retail activity in its permanent market buildings.",
+          "sourceIds": ["source-08", "source-01"]
+        },
+        {
+          "poiId": "st-lawrence-toronto",
+          "tier": "warm",
+          "text": "St. Lawrence Market is a themed comparison candidate: Permanent covered public market whose South Market building dates from the nineteenth century on Toronto’s historic market site.",
+          "sourceIds": ["source-09", "source-01"]
+        },
+        {
+          "poiId": "quincy-boston",
+          "tier": "warm",
+          "text": "Quincy Market is a themed comparison candidate: Historic covered public market hall completed in 1826 and still operating as a visitor-accessible food and merchandise market.",
+          "sourceIds": ["source-10", "source-01"]
+        },
+        {
+          "poiId": "reading-terminal-philadelphia",
+          "tier": "warm",
+          "text": "Reading Terminal Market is a themed comparison candidate: Permanent enclosed public market opened in 1893 and still operating with independent food, produce and merchandise vendors.",
+          "sourceIds": ["source-11", "source-01"]
+        },
+        {
+          "poiId": "budapest-great-market-hall",
+          "tier": "warm",
+          "text": "Great Market Hall is a themed comparison candidate: Large permanent covered municipal market opened in 1897 and still operating in its original Budapest location.",
+          "sourceIds": ["source-12", "source-01"]
+        },
+        {
+          "poiId": "nancy-central-market",
+          "tier": "cold",
+          "text": "Marché couvert de Nancy is a themed comparison candidate: Named permanent covered municipal market established in the nineteenth century and still operating for everyday food retail.",
+          "sourceIds": ["source-13", "source-01"]
+        },
+        {
+          "poiId": "metz-covered-market",
+          "tier": "cold",
+          "text": "Marché couvert de Metz is a themed comparison candidate: Historic covered public market established in the nineteenth century and continuously used for retail food trading.",
+          "sourceIds": ["source-14", "source-01"]
+        },
+        {
+          "poiId": "colmar-halles",
+          "tier": "cold",
+          "text": "Marché couvert de Colmar is a themed comparison candidate: Nineteenth-century covered market hall in Colmar, still functioning as a public market for food and produce.",
+          "sourceIds": ["source-15", "source-01"]
+        },
+        {
+          "poiId": "grand-bazaar-istanbul",
+          "tier": "cold",
+          "text": "Grand Bazaar is a themed comparison candidate: Individually named historic covered bazaar established in the fifteenth century and still operating with public retail shops.",
+          "sourceIds": ["source-16", "source-01"]
+        },
+        {
+          "poiId": "spice-bazaar-istanbul",
+          "tier": "cold",
+          "text": "Spice Bazaar is a themed comparison candidate: Permanent covered bazaar opened in 1664 and still operating with public food, spice and merchandise shops.",
+          "sourceIds": ["source-17", "source-01"]
+        },
+        {
+          "poiId": "nishiki-kyoto",
+          "tier": "warm",
+          "text": "Nishiki Market is a themed comparison candidate: Named covered market street with a fixed roofed retail complex and documented market use since the early seventeenth century.",
+          "sourceIds": ["source-18", "source-01"]
+        },
+        {
+          "poiId": "khan-el-khalili-cairo",
+          "tier": "cold",
+          "text": "Khan el-Khalili is a themed comparison candidate: Historic covered bazaar district founded in the fourteenth century and still operating as a contiguous public retail market.",
+          "sourceIds": ["source-19", "source-01"]
+        },
+        {
+          "poiId": "mahane-yehuda",
+          "tier": "cold",
+          "text": "Mahane Yehuda Market is a themed comparison candidate: Historic permanent market complex founded in 1887 and now operating with covered streets, stalls and shops.",
+          "sourceIds": ["source-20", "source-01"]
+        },
+        {
+          "poiId": "central-market-tunis",
+          "tier": "cold",
+          "text": "Marché Central de Tunis is a themed comparison candidate: Permanent covered central market established in 1891 and still operating as a public food and produce market.",
+          "sourceIds": ["source-21", "source-01"]
+        },
+        {
+          "poiId": "crawford-mumbai",
+          "tier": "cold",
+          "text": "Mahatma Jyotiba Phule Mandai is a themed comparison candidate: Historic covered municipal market opened in 1869 and still operating as a public retail market for food and household goods.",
+          "sourceIds": ["source-22", "source-01"]
+        },
+        {
+          "poiId": "new-market-kolkata",
+          "tier": "cold",
+          "text": "New Market is a themed comparison candidate: Permanent covered market opened in 1874 and continuing as a public retail complex with food, clothing and household shops.",
+          "sourceIds": ["source-23", "source-01"]
+        },
+        {
+          "poiId": "queen-victoria-market",
+          "tier": "warm",
+          "text": "Queen Victoria Market is a themed comparison candidate: Permanent covered and enclosed market complex founded in 1878 and still operating as Melbourne’s public retail market.",
+          "sourceIds": ["source-24", "source-01"]
+        },
+        {
+          "poiId": "adelaide-central-market",
+          "tier": "warm",
+          "text": "Adelaide Central Market is a themed comparison candidate: Permanent covered public market founded in 1869 on the present city site and still trading in food and ordinary merchandise.",
+          "sourceIds": ["source-25", "source-01"]
+        }
+      ]
+    },
+    {
+      "id": "round-5",
+      "targetPoiId": "queen-victoria-market",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Aerial_photograph_of_Queen_Victoria_Market.jpg/1280px-Aerial_photograph_of_Queen_Victoria_Market.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Queen Victoria Market",
+        "attribution": "Bob T · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "Officially opened in 1878, this market now spans more than seven hectares and combines food halls, sheds and non-food stalls; it expanded across the site of an old cemetery and added solar panels in 2003.",
+        "sourceIds": ["source-24"]
+      },
+      "results": [
+        {
+          "poiId": "boqueria-barcelona",
+          "tier": "hot",
+          "text": "Mercat de Sant Josep de la Boqueria is a themed comparison candidate: Permanent covered public market on La Rambla, established at its present site in the nineteenth century and still operating with food stalls.",
+          "sourceIds": ["source-01", "source-24"]
+        },
+        {
+          "poiId": "santa-caterina-barcelona",
+          "tier": "cold",
+          "text": "Mercat de Santa Caterina is a themed comparison candidate: Named municipal covered market established in 1845 and still operating on the same historic site after rebuilding.",
+          "sourceIds": ["source-02", "source-24"]
+        },
+        {
+          "poiId": "sant-antoni-barcelona",
+          "tier": "warm",
+          "text": "Mercat de Sant Antoni is a themed comparison candidate: Permanent covered municipal market opened in 1882 and continuing as a public food and merchandise market.",
+          "sourceIds": ["source-03", "source-24"]
+        },
+        {
+          "poiId": "concepcio-barcelona",
+          "tier": "cold",
+          "text": "Mercat de la Concepció is a themed comparison candidate: Historic iron-covered public market dating from 1888 and operating as a neighborhood retail market.",
+          "sourceIds": ["source-04", "source-24"]
+        },
+        {
+          "poiId": "atarazanas-malaga",
+          "tier": "warm",
+          "text": "Mercado Central de Atarazanas is a themed comparison candidate: Permanent covered municipal market occupying a historic site and operating since the nineteenth century.",
+          "sourceIds": ["source-05", "source-24"]
+        },
+        {
+          "poiId": "borough-london",
+          "tier": "warm",
+          "text": "Borough Market is a themed comparison candidate: Operating covered food market on its historic Southwark site, documented there since the eighteenth century and housed under permanent structures.",
+          "sourceIds": ["source-06", "source-24"]
+        },
+        {
+          "poiId": "leadenhall-london",
+          "tier": "cold",
+          "text": "Leadenhall Market is a themed comparison candidate: Named covered market occupying a fixed historic complex with origins in the fourteenth century and current public shops and stalls.",
+          "sourceIds": ["source-07", "source-24"]
+        },
+        {
+          "poiId": "covent-garden-london",
+          "tier": "cold",
+          "text": "Covent Garden Market is a themed comparison candidate: Covered market complex with documented market origins before 1700 and continuing public retail activity in its permanent market buildings.",
+          "sourceIds": ["source-08", "source-24"]
+        },
+        {
+          "poiId": "st-lawrence-toronto",
+          "tier": "hot",
+          "text": "St. Lawrence Market is a themed comparison candidate: Permanent covered public market whose South Market building dates from the nineteenth century on Toronto’s historic market site.",
+          "sourceIds": ["source-09", "source-24"]
+        },
+        {
+          "poiId": "quincy-boston",
+          "tier": "warm",
+          "text": "Quincy Market is a themed comparison candidate: Historic covered public market hall completed in 1826 and still operating as a visitor-accessible food and merchandise market.",
+          "sourceIds": ["source-10", "source-24"]
+        },
+        {
+          "poiId": "reading-terminal-philadelphia",
+          "tier": "hot",
+          "text": "Reading Terminal Market is a themed comparison candidate: Permanent enclosed public market opened in 1893 and still operating with independent food, produce and merchandise vendors.",
+          "sourceIds": ["source-11", "source-24"]
+        },
+        {
+          "poiId": "budapest-great-market-hall",
+          "tier": "hot",
+          "text": "Great Market Hall is a themed comparison candidate: Large permanent covered municipal market opened in 1897 and still operating in its original Budapest location.",
+          "sourceIds": ["source-12", "source-24"]
+        },
+        {
+          "poiId": "nancy-central-market",
+          "tier": "cold",
+          "text": "Marché couvert de Nancy is a themed comparison candidate: Named permanent covered municipal market established in the nineteenth century and still operating for everyday food retail.",
+          "sourceIds": ["source-13", "source-24"]
+        },
+        {
+          "poiId": "metz-covered-market",
+          "tier": "cold",
+          "text": "Marché couvert de Metz is a themed comparison candidate: Historic covered public market established in the nineteenth century and continuously used for retail food trading.",
+          "sourceIds": ["source-14", "source-24"]
+        },
+        {
+          "poiId": "colmar-halles",
+          "tier": "cold",
+          "text": "Marché couvert de Colmar is a themed comparison candidate: Nineteenth-century covered market hall in Colmar, still functioning as a public market for food and produce.",
+          "sourceIds": ["source-15", "source-24"]
+        },
+        {
+          "poiId": "grand-bazaar-istanbul",
+          "tier": "cold",
+          "text": "Grand Bazaar is a themed comparison candidate: Individually named historic covered bazaar established in the fifteenth century and still operating with public retail shops.",
+          "sourceIds": ["source-16", "source-24"]
+        },
+        {
+          "poiId": "spice-bazaar-istanbul",
+          "tier": "cold",
+          "text": "Spice Bazaar is a themed comparison candidate: Permanent covered bazaar opened in 1664 and still operating with public food, spice and merchandise shops.",
+          "sourceIds": ["source-17", "source-24"]
+        },
+        {
+          "poiId": "nishiki-kyoto",
+          "tier": "warm",
+          "text": "Nishiki Market is a themed comparison candidate: Named covered market street with a fixed roofed retail complex and documented market use since the early seventeenth century.",
+          "sourceIds": ["source-18", "source-24"]
+        },
+        {
+          "poiId": "khan-el-khalili-cairo",
+          "tier": "cold",
+          "text": "Khan el-Khalili is a themed comparison candidate: Historic covered bazaar district founded in the fourteenth century and still operating as a contiguous public retail market.",
+          "sourceIds": ["source-19", "source-24"]
+        },
+        {
+          "poiId": "mahane-yehuda",
+          "tier": "cold",
+          "text": "Mahane Yehuda Market is a themed comparison candidate: Historic permanent market complex founded in 1887 and now operating with covered streets, stalls and shops.",
+          "sourceIds": ["source-20", "source-24"]
+        },
+        {
+          "poiId": "central-market-tunis",
+          "tier": "cold",
+          "text": "Marché Central de Tunis is a themed comparison candidate: Permanent covered central market established in 1891 and still operating as a public food and produce market.",
+          "sourceIds": ["source-21", "source-24"]
+        },
+        {
+          "poiId": "crawford-mumbai",
+          "tier": "warm",
+          "text": "Mahatma Jyotiba Phule Mandai is a themed comparison candidate: Historic covered municipal market opened in 1869 and still operating as a public retail market for food and household goods.",
+          "sourceIds": ["source-22", "source-24"]
+        },
+        {
+          "poiId": "new-market-kolkata",
+          "tier": "warm",
+          "text": "New Market is a themed comparison candidate: Permanent covered market opened in 1874 and continuing as a public retail complex with food, clothing and household shops.",
+          "sourceIds": ["source-23", "source-24"]
+        },
+        {
+          "poiId": "queen-victoria-market",
+          "tier": "correct",
+          "text": "Queen Victoria Market is the round target: Permanent covered and enclosed market complex founded in 1878 and still operating as Melbourne’s public retail market.",
+          "sourceIds": ["source-24"]
+        },
+        {
+          "poiId": "adelaide-central-market",
+          "tier": "warm",
+          "text": "Adelaide Central Market is a themed comparison candidate: Permanent covered public market founded in 1869 on the present city site and still trading in food and ordinary merchandise.",
+          "sourceIds": ["source-25", "source-24"]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-01",
+      "title": "La Boqueria",
+      "url": "https://en.wikipedia.org/wiki/La_Boqueria",
+      "retrievedAt": "2026-08-18T05:18:00.855Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-02",
+      "title": "Mercat de Santa Caterina",
+      "url": "https://en.wikipedia.org/wiki/Mercat_de_Santa_Caterina",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-03",
+      "title": "Mercat de Sant Antoni",
+      "url": "https://en.wikipedia.org/wiki/Mercat_de_Sant_Antoni",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-04",
+      "title": "Mercat de la Concepció",
+      "url": "https://ajuntament.barcelona.cat/mercats/en/mercat/mercat-de-la-concepcio",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-05",
+      "title": "Atarazanas Market",
+      "url": "https://en.wikipedia.org/wiki/Atarazanas_Market",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-06",
+      "title": "Borough Market",
+      "url": "https://en.wikipedia.org/wiki/Borough_Market",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-07",
+      "title": "Leadenhall Market",
+      "url": "https://en.wikipedia.org/wiki/Leadenhall_Market",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-08",
+      "title": "Covent Garden",
+      "url": "https://en.wikipedia.org/wiki/Covent_Garden",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-09",
+      "title": "St. Lawrence Market",
+      "url": "https://en.wikipedia.org/wiki/St._Lawrence_Market",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-10",
+      "title": "Quincy Market",
+      "url": "https://en.wikipedia.org/wiki/Quincy_Market",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-11",
+      "title": "Reading Terminal Market",
+      "url": "https://en.wikipedia.org/wiki/Reading_Terminal_Market",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-12",
+      "title": "Great Market Hall",
+      "url": "https://en.wikipedia.org/wiki/Great_Market_Hall",
+      "retrievedAt": "2026-08-18T05:18:00.866Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-13",
+      "title": "Marché couvert de Nancy",
+      "url": "https://www.nancy.fr/commerce/marches",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-14",
+      "title": "Marché couvert de Metz",
+      "url": "https://www.metz.fr/decouvrir/commerce/marches",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-15",
+      "title": "Marché couvert de Colmar",
+      "url": "https://en.wikipedia.org/wiki/March%C3%A9_couvert_de_Colmar",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-16",
+      "title": "Grand Bazaar, Istanbul",
+      "url": "https://en.wikipedia.org/wiki/Grand_Bazaar,_Istanbul",
+      "retrievedAt": "2026-08-18T05:18:00.943Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-17",
+      "title": "Spice Bazaar, Istanbul",
+      "url": "https://en.wikipedia.org/wiki/Spice_Bazaar,_Istanbul",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-18",
+      "title": "Nishiki Market",
+      "url": "https://en.wikipedia.org/wiki/Nishiki_Market",
+      "retrievedAt": "2026-08-18T05:17:16.789Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-19",
+      "title": "Khan el-Khalili",
+      "url": "https://en.wikipedia.org/wiki/Khan_el-Khalili",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-20",
+      "title": "Mahane Yehuda Market",
+      "url": "https://en.wikipedia.org/wiki/Mahane_Yehuda_Market",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-21",
+      "title": "Central Market of Tunis",
+      "url": "https://en.wikipedia.org/wiki/Central_Market_of_Tunis",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-22",
+      "title": "Crawford Market",
+      "url": "https://en.wikipedia.org/wiki/Crawford_Market",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-23",
+      "title": "New Market, Kolkata",
+      "url": "https://en.wikipedia.org/wiki/New_Market,_Kolkata",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-24",
+      "title": "Queen Victoria Market",
+      "url": "https://en.wikipedia.org/wiki/Queen_Victoria_Market",
+      "retrievedAt": "2026-08-18T05:18:00.853Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-25",
+      "title": "Adelaide Central Market",
+      "url": "https://en.wikipedia.org/wiki/Adelaide_Central_Market",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    }
+  ],
+  "theme": {
+    "title": "Operating Historic Covered Markets in Cities",
+    "introduction": "A daily map game about permanent, publicly accessible covered markets with pre-1900 roots at their present identifiable sites. Plausible locations include Borough Market, Leadenhall Market, Covent Garden Market, St Nicholas Market, Oxford Covered Market, Kirkgate Market, Grainger Market, Derby Market Hall, Queen Victoria Market, South Melbourne Market, Prahran Market, Adelaide Central Market, La Boqueria, Mercat de Sant Antoni, Mercado Central de Atarazanas, Mercado de Abastos de Santiago de Compostela, Mercado Central de Cádiz, Marché Couvert de Nancy, Marché Couvert de Dijon, Halles de Béziers, Budapest Central Market Hall, Mercado de San Telmo, Mercado del Puerto, Mercado Central de Santiago, Mercado Público de Porto Alegre, Mercado de São José, Mercado Público de Florianópolis, Mercado Central de San José, Mahane Yehuda Market, Nishiki Market, Kuromon Ichiba Market, Istanbul Grand Bazaar, Egyptian Spice Bazaar, Khan el-Khalili, Mercado Central de Asunción, Shrewsbury Market Hall, Reading Market, and the Central Market of Córdoba. The theme is materially distinct from transport systems, museums, gardens, zoos, aquariums, planetariums, observation decks, heritage designations, and railway stations.",
+    "inclusionCriteria": "Include a location only when every condition is met: (1) it is an individually named permanent market hall, covered market, covered bazaar, or covered market street whose principal function is public retail trading in food, household goods, crafts, or other ordinary merchandise; (2) it has regularly operating public stalls or shops on the date of play and is ordinarily accessible to visitors during published or customary market hours; (3) the market occupies a fixed, mappable complex, building, or contiguous covered street that can be treated as one exact location; (4) the market was established, opened, or first documented at that same identifiable site on or before 31 December 1899, even if its roof or buildings were later rebuilt; (5) it lies within the current administrative boundary of a present-day city or incorporated urban municipality; and (6) its market identity and historical date are documented or widely unambiguous from official or reputable sources."
+  }
+}
