@@ -255,6 +255,20 @@ export async function critiqueCase(
         reason:
           'The clue leaks the target name, destination, city, or country before reveal.',
       });
+    const incorrectPoints = round.results
+      .filter((result) => result.poiId !== round.targetPoiId)
+      .map((result) => result.points);
+    const spansEveryBand =
+      incorrectPoints.some((points) => points >= 75) &&
+      incorrectPoints.some((points) => points >= 40 && points < 75) &&
+      incorrectPoints.some((points) => points < 40);
+    if (!spansEveryBand || new Set(incorrectPoints).size < 8)
+      repairs.push({
+        kind: 'clue',
+        roundId: round.id,
+        reason:
+          'The authored scores must include hot, warm, and cold candidates with at least eight distinct incorrect values.',
+      });
     return verdict;
   });
   if (clueByRound.size !== 5)
