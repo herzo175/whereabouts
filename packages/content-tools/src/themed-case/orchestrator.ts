@@ -16,6 +16,7 @@ import type {
 export type OrchestratorStages = {
   planTheme(input: {
     recentThemes: Array<{ title: string; inclusionCriteria: string }>;
+    requestedTheme?: string;
   }): Promise<ThemePlan>;
   researchCandidates(input: { theme: ThemePlan }): Promise<CandidatePool>;
   curateBoard(input: {
@@ -53,6 +54,7 @@ export type OrchestrateThemedCaseInput = {
   caseNumber: number;
   recentThemes: Array<{ title: string; inclusionCriteria: string }>;
   excludedTargetIds: ReadonlySet<string>;
+  requestedTheme?: string;
   stages: OrchestratorStages;
 };
 
@@ -115,6 +117,7 @@ export async function orchestrateThemedCase(
     const rejectedCandidateIds = new Set<string>();
     const theme = await input.stages.planTheme({
       recentThemes: input.recentThemes,
+      requestedTheme: input.requestedTheme,
     });
     let pool: CandidatePool;
     try {

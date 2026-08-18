@@ -73,4 +73,21 @@ describe('planTheme', () => {
       }),
     ).rejects.toThrow(/duplicate/i);
   });
+
+  it('treats a requested theme as required direction', async () => {
+    let prompt = '';
+    await planTheme({
+      model: {
+        generate: async ({ prompt: value }) => {
+          prompt = value;
+          return theme;
+        },
+      },
+      recentThemes: [],
+      requestedTheme: 'Railway hotels',
+    });
+
+    expect(prompt).toContain('Requested theme: Railway hotels');
+    expect(prompt).toContain('must use this theme');
+  });
 });

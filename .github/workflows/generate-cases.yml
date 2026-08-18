@@ -6,6 +6,15 @@ on:
     # offsets, then let the guard below select the actual midnight run.
     - cron: '0 4,5 * * *'
   workflow_dispatch:
+    inputs:
+      theme:
+        description: Optional theme direction for the generated case
+        required: false
+        type: string
+      date:
+        description: Publication date (YYYY-MM-DD); defaults to seven days from now
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -46,8 +55,16 @@ jobs:
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
         name: Calculate and validate Eastern publication dates
         id: dates
+        env:
+          REQUESTED_DATE: ${{ inputs.date || '' }}
         run: |
-          START_DATE="$(TZ=America/New_York date +%F)"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            START_DATE="${REQUESTED_DATE:-$(TZ=America/New_York date -d '+7 days' +%F)}"
+            DAYS=1
+          else
+            START_DATE="$(TZ=America/New_York date +%F)"
+            DAYS=10
+          fi
           if [[ ! "$START_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
             echo "Invalid Eastern publication date: $START_DATE" >&2
             exit 1
@@ -56,7 +73,7 @@ jobs:
             echo "Non-canonical Eastern publication date: $START_DATE" >&2
             exit 1
           fi
-          END_DATE="$(date -d "$START_DATE + 9 days" +%F)"
+          END_DATE="$(date -d "$START_DATE + $((DAYS - 1)) days" +%F)"
           if [[ ! "$END_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
             echo "Invalid publication ceiling: $END_DATE" >&2
             exit 1
@@ -65,8 +82,19 @@ jobs:
             echo "Non-canonical publication ceiling: $END_DATE" >&2
             exit 1
           fi
+          LATEST_DATE="$(jq -r '.cases | keys | max // empty' packages/case-content/content/manifest.json)"
+          if [ -n "$LATEST_DATE" ] && [[ ! "$LATEST_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "Invalid latest manifest date: $LATEST_DATE" >&2
+            exit 1
+          fi
+          PUBLICATION_CEILING="$END_DATE"
+          if [ -n "$LATEST_DATE" ] && [[ "$LATEST_DATE" > "$PUBLICATION_CEILING" ]]; then
+            PUBLICATION_CEILING="$LATEST_DATE"
+          fi
           echo "start=$START_DATE" >> "$GITHUB_OUTPUT"
           echo "end=$END_DATE" >> "$GITHUB_OUTPUT"
+          echo "days=$DAYS" >> "$GITHUB_OUTPUT"
+          echo "ceiling=$PUBLICATION_CEILING" >> "$GITHUB_OUTPUT"
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
         name: Create generated-content branch
         env:
@@ -78,20 +106,27 @@ jobs:
           fi
           git switch --create "$CONTENT_BRANCH" origin/main
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        name: Generate the next ten cases
+        name: Generate requested case or maintain buffer
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY || secrets.openrouter_api_key }}
           WIKIMEDIA_USER_AGENT: ${{ secrets.WIKIMEDIA_USER_AGENT || 'Whereabouts/1.0 (https://github.com/herzo175/whereabouts)' }}
           WHEREABOUTS_MODEL: ${{ vars.WHEREABOUTS_MODEL || vars.whereabouts_model || 'openai/gpt-5.6-luna' }}
           START_DATE: ${{ steps.dates.outputs.start }}
-        run: pnpm content:prepare-buffer -- --from "$START_DATE" --days 10
+          DAYS: ${{ steps.dates.outputs.days }}
+          THEME: ${{ inputs.theme || '' }}
+        run: |
+          ARGS=(--from "$START_DATE" --days "$DAYS")
+          if [ -n "$THEME" ]; then
+            ARGS+=(--theme "$THEME")
+          fi
+          pnpm content:prepare-buffer -- "${ARGS[@]}"
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
         name: Format generated case content
         run: pnpm exec biome format --write packages/case-content/content
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
         name: Validate generated publication buffer
         env:
-          PUBLICATION_CEILING: ${{ steps.dates.outputs.end }}
+          PUBLICATION_CEILING: ${{ steps.dates.outputs.ceiling }}
         run: |
           if [[ -z "$PUBLICATION_CEILING" || ! "$PUBLICATION_CEILING" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
             echo "Invalid publication ceiling: $PUBLICATION_CEILING" >&2

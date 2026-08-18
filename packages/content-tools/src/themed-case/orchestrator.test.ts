@@ -78,6 +78,7 @@ describe('orchestrateThemedCase', () => {
       caseNumber: 1,
       recentThemes: [],
       excludedTargetIds: new Set(),
+      requestedTheme: 'Railway hotels',
       stages,
     });
     expect(order).toEqual([
@@ -87,6 +88,10 @@ describe('orchestrateThemedCase', () => {
       'writer',
       'critic',
     ]);
+    expect(stages.planTheme).toHaveBeenCalledWith({
+      recentThemes: [],
+      requestedTheme: 'Railway hotels',
+    });
     expect(result.caseData.schemaVersion).toBe(3);
     expect(result.generationReview).toEqual(review);
   });

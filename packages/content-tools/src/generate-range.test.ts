@@ -77,6 +77,7 @@ describe('parseRangeArguments', () => {
       days: 10,
       revision: undefined,
       missingOnly: false,
+      theme: undefined,
     });
     expect(
       parseRangeArguments([
@@ -87,8 +88,16 @@ describe('parseRangeArguments', () => {
         '--missing-only',
         '--revision',
         '2',
+        '--theme',
+        'Railway hotels',
       ]),
-    ).toEqual({ from: '2026-08-17', days: 10, revision: 2, missingOnly: true });
+    ).toEqual({
+      from: '2026-08-17',
+      days: 10,
+      revision: 2,
+      missingOnly: true,
+      theme: 'Railway hotels',
+    });
   });
 
   it('rejects non-canonical dates and invalid day counts', () => {
@@ -129,6 +138,24 @@ describe('generateRange', () => {
     );
     expect(publish).toHaveBeenCalledTimes(1);
     expect(publish.mock.calls[0]?.[0].prepared).toHaveLength(10);
+  });
+
+  it('passes an optional requested theme into orchestration', async () => {
+    const requestedThemes: Array<string | undefined> = [];
+    await generateRange(
+      ['--from', '2026-08-27', '--days', '1', '--theme', 'Railway hotels'],
+      {
+        history: async () => history(),
+        listExistingCasePaths: async () => [],
+        orchestrate: async (input) => {
+          requestedThemes.push(input.requestedTheme);
+          return prepared(input.date, input.revision);
+        },
+        publishBatch: async () => history(),
+      },
+    );
+
+    expect(requestedThemes).toEqual(['Railway hotels']);
   });
 
   it('skips manifested dates in missing-only mode', async () => {

@@ -41,6 +41,7 @@ export type RangeArguments = {
   days: number;
   revision: number | undefined;
   missingOnly: boolean;
+  theme: string | undefined;
 };
 
 export type RangeHistory = {
@@ -59,7 +60,7 @@ export type GenerateRangeDependencies = {
 
 function usage(): never {
   throw new Error(
-    'Usage: content:generate-range -- --from YYYY-MM-DD --days N [--revision N] [--missing-only]',
+    'Usage: content:generate-range -- --from YYYY-MM-DD --days N [--revision N] [--theme TEXT] [--missing-only]',
   );
 }
 
@@ -75,8 +76,15 @@ export function parseRangeArguments(arguments_: string[]): RangeArguments {
   const from = valueAfter(arguments_, '--from');
   const daysText = valueAfter(arguments_, '--days');
   const revisionText = valueAfter(arguments_, '--revision');
+  const themeText = valueAfter(arguments_, '--theme');
   const missingOnly = arguments_.includes('--missing-only');
-  const known = new Set(['--from', '--days', '--revision', '--missing-only']);
+  const known = new Set([
+    '--from',
+    '--days',
+    '--revision',
+    '--theme',
+    '--missing-only',
+  ]);
   if (
     arguments_.some(
       (argument) => argument.startsWith('--') && !known.has(argument),
@@ -99,9 +107,12 @@ export function parseRangeArguments(arguments_: string[]): RangeArguments {
       revision < 1)
   )
     throw new Error('revision must be a positive integer');
+  const theme = themeText?.trim();
+  if (theme !== undefined && (theme.length < 3 || theme.length > 160))
+    throw new Error('theme must be between 3 and 160 characters');
   // bufferDates performs the full calendar validity check for the start date.
   bufferDates(from, 1);
-  return { from, days, revision, missingOnly };
+  return { from, days, revision, missingOnly, theme };
 }
 
 async function loadPublishedHistory(): Promise<RangeHistory> {
@@ -286,6 +297,7 @@ export async function generateRange(
       caseNumber: caseNumberForDate(date),
       recentThemes: rollingThemes(casesByDate, date),
       excludedTargetIds: rollingTargets(casesByDate, date),
+      requestedTheme: options.theme,
       stages,
     });
     prepared.push(result);
