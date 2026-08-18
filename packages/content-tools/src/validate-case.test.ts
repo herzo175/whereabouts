@@ -119,20 +119,13 @@ describe('validateCaseForPublication', () => {
     );
   });
 
-  it('rejects a round without a useful spread of authored points', () => {
+  it('accepts LLM-authored points even when they occupy one UI band', () => {
     const value = makeCase();
     value.rounds[0].results = value.rounds[0].results.map((result) =>
       result.points === 100 ? result : { ...result, points: 20 },
     );
 
-    expect(validateCaseForPublication(value)).toEqual(
-      expect.arrayContaining([
-        expect.objectContaining({
-          path: 'rounds[0].results',
-          message: expect.stringMatching(/hot.*warm.*cold.*variation/i),
-        }),
-      ]),
-    );
+    expect(validateCaseForPublication(value)).toEqual([]);
   });
 
   it('reports POIs with duplicate coordinates rounded to four decimals', () => {

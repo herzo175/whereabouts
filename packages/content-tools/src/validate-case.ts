@@ -82,23 +82,6 @@ export function validateCaseForPublication(value: unknown): ValidationIssue[] {
     }
   }
 
-  for (const [roundIndex, round] of dailyCase.rounds.entries()) {
-    const incorrectPoints = round.results
-      .filter((result) => result.poiId !== round.targetPoiId)
-      .map((result) => result.points);
-    const spansEveryBand =
-      incorrectPoints.some((points) => points >= 75) &&
-      incorrectPoints.some((points) => points >= 40 && points < 75) &&
-      incorrectPoints.some((points) => points < 40);
-    if (!spansEveryBand || new Set(incorrectPoints).size < 8) {
-      issues.push({
-        path: `rounds[${roundIndex}].results`,
-        message:
-          'Round scores must span hot, warm, and cold bands with meaningful variation',
-      });
-    }
-  }
-
   const coordinates = new Map<string, number>();
   for (const [index, poi] of dailyCase.pois.entries()) {
     const key = `${poi.latitude.toFixed(4)},${poi.longitude.toFixed(4)}`;
