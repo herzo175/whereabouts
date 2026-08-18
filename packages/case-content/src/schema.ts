@@ -86,9 +86,17 @@ function record(value: unknown, path: string): Record<string, unknown> {
   return value as Record<string, unknown>;
 }
 
-function string(value: unknown, path: string, minimum = 1): string {
+function string(
+  value: unknown,
+  path: string,
+  minimum = 1,
+  maximum?: number,
+): string {
   if (typeof value !== 'string' || value.length < minimum) {
     fail(path, `must be a string with at least ${minimum} character(s)`);
+  }
+  if (maximum !== undefined && value.length > maximum) {
+    fail(path, `must be a string with at most ${maximum} character(s)`);
   }
   return value;
 }
@@ -353,7 +361,12 @@ const themedDailyCaseSchema: Schema<ThemedDailyCase> = {
     const themeValue = record(parsed.theme, 'theme');
     const theme: DailyTheme = {
       title: string(themeValue.title, 'theme.title', 3),
-      introduction: string(themeValue.introduction, 'theme.introduction', 20),
+      introduction: string(
+        themeValue.introduction,
+        'theme.introduction',
+        20,
+        160,
+      ),
       inclusionCriteria: string(
         themeValue.inclusionCriteria,
         'theme.inclusionCriteria',

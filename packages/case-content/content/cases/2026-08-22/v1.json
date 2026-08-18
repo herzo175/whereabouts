@@ -1396,7 +1396,7 @@
   ],
   "theme": {
     "title": "Operating Zoological Gardens Founded Before 1900",
-    "introduction": "A daily location game featuring long-running, publicly visitable zoos and zoological gardens in cities around the world. Plausible locations include London Zoo, Dublin Zoo, Ménagerie du Jardin des Plantes in Paris, Tiergarten Schönbrunn in Vienna, Berlin Zoological Garden, Antwerp Zoo, Frankfurt Zoo, Cologne Zoo, Leipzig Zoo, Wrocław Zoo, Copenhagen Zoo, Korkeasaari Zoo in Helsinki, Moscow Zoo, Budapest Zoo, Poznań Old Zoo, Dresden Zoo, Zoo de Lyon, Zoo Basel, Lisbon Zoo, Ueno Zoo in Tokyo, Giza Zoo in Cairo, Alipore Zoo in Kolkata, Mysuru Zoo, Lahore Zoo, Karachi Zoo, BioParque do Rio, Melbourne Zoo, Adelaide Zoo, Philadelphia Zoo, Cincinnati Zoo, Lincoln Park Zoo, Central Park Zoo, Smithsonian’s National Zoo, Buffalo Zoo, Milwaukee County Zoo, and Bronx Zoo.",
+    "introduction": "Meet the historic city zoos that have welcomed generations of visitors since the nineteenth century.",
     "inclusionCriteria": "Include a location only when every condition is met: (1) it is an individually named zoo, zoological garden, zoological park, menagerie, or equivalent institution whose principal function is the public display of living non-domesticated animals; (2) the institution was established or opened at the same identifiable site on or before 31 December 1899; (3) it still operates at that site as a permanent animal-display institution on the date of play; (4) it provides regularly scheduled public admission, whether ticketed or free; (5) the site lies within the current administrative boundary of a present-day city or incorporated urban municipality; and (6) the named zoo can be pinned as one exact visitable map location."
   }
 }

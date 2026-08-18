@@ -41,6 +41,23 @@ describe('planTheme', () => {
     expect(prompt).toContain('well-known');
     expect(prompt).toContain('unambiguous');
     expect(prompt).toContain('3 to 12');
+    expect(prompt).toContain('one atmospheric sentence');
+    expect(prompt).toContain('160 characters');
+    expect(prompt).toContain('Do not list candidate locations');
+  });
+
+  it('rejects a player introduction longer than 160 characters', async () => {
+    await expect(
+      planTheme({
+        model: {
+          generate: async () => ({
+            ...theme,
+            introduction: 'A'.repeat(161),
+          }),
+        },
+        recentThemes: [],
+      }),
+    ).rejects.toThrow(/160|too_big/i);
   });
 
   it('rejects an exact normalized title and criteria duplicate', async () => {

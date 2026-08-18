@@ -7,7 +7,7 @@ const uniqueBy = (items: Array<{ id: string; wikipediaTitle: string }>) =>
 
 export const themePlanSchema = z.object({
   title: z.string().min(3),
-  introduction: z.string().min(20),
+  introduction: z.string().min(20).max(160),
   inclusionCriteria: z.string().min(20),
   exclusions: z.array(z.string().min(10)).min(1),
   searchQueries: z.array(z.string().min(3)).min(3).max(12),

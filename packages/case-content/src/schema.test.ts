@@ -22,6 +22,12 @@ describe('dailyCaseSchema', () => {
     expect(parsed.pois[0]?.themeConnection.sourceIds).toEqual(['source-01']);
   });
 
+  it('rejects a player introduction longer than 160 characters', () => {
+    const value = makeFiveRoundCase();
+    value.theme.introduction = 'A'.repeat(161);
+    expect(() => dailyCaseSchema.parse(value)).toThrow(/160|at most/i);
+  });
+
   it('rejects a themed POI without a theme connection', () => {
     const value = makeFiveRoundCase();
     delete value.pois[0].themeConnection;
