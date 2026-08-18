@@ -36,14 +36,7 @@ export function makeFiveRoundCase(
     },
     results: pois.map((poi, index) => ({
       poiId: poi.id,
-      tier:
-        poi.id === target.id
-          ? ('correct' as const)
-          : index < 4
-            ? ('hot' as const)
-            : index < 12
-              ? ('warm' as const)
-              : ('cold' as const),
+      points: poi.id === target.id ? 100 : Math.max(0, 96 - index * 4),
       text:
         poi.id === target.id
           ? 'Correct location.'
@@ -52,7 +45,7 @@ export function makeFiveRoundCase(
     })),
   }));
   return {
-    schemaVersion: 3,
+    schemaVersion: 4,
     publicationDate: '2026-08-14',
     revision: 1,
     caseNumber: 1,

@@ -3,7 +3,7 @@ export {
   createFiveRoundProgress,
   GameRuleError,
   getCurrentRound,
-  getRoundScore,
+  getScoreBand,
   getTotalScore,
   submitRoundGuess,
 } from './engine.js';

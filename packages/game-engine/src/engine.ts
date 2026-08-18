@@ -15,7 +15,7 @@ export function createFiveRoundProgress(
   caseData: FiveRoundDailyCase,
 ): FiveRoundProgress {
   return {
-    schemaVersion: 2,
+    schemaVersion: 3,
     caseDate: caseData.publicationDate,
     caseRevision: caseData.revision,
     guesses: [],
@@ -36,11 +36,11 @@ export function acknowledgeRoundReveal(
   };
 }
 
-export function getRoundScore(tier: RoundTier): 100 | 75 | 50 | 25 {
-  if (tier === 'correct') return 100;
-  if (tier === 'hot') return 75;
-  if (tier === 'warm') return 50;
-  return 25;
+export function getScoreBand(points: number): RoundTier {
+  if (points === 100) return 'correct';
+  if (points >= 75) return 'hot';
+  if (points >= 40) return 'warm';
+  return 'cold';
 }
 
 function parseFiveRoundProgress(
@@ -71,11 +71,7 @@ function parseFiveRoundProgress(
     const result = round.results.find(
       (candidate) => candidate.poiId === guess.poiId,
     );
-    if (
-      !result ||
-      result.tier !== guess.tier ||
-      getRoundScore(result.tier) !== guess.points
-    ) {
+    if (!result || result.points !== guess.points) {
       throw new GameRuleError(
         'Progress does not match an authored round result',
       );
@@ -123,8 +119,7 @@ export function submitRoundGuess(
     {
       roundId: round.id,
       poiId,
-      tier: result.tier,
-      points: getRoundScore(result.tier),
+      points: result.points,
     },
   ];
   if (guesses.length < caseData.rounds.length) return { ...current, guesses };

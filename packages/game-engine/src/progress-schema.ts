@@ -1,12 +1,11 @@
 export type FiveRoundGuess = {
   roundId: string;
   poiId: string;
-  tier: 'correct' | 'hot' | 'warm' | 'cold';
-  points: 100 | 75 | 50 | 25;
+  points: number;
 };
 
 export type FiveRoundProgress = {
-  schemaVersion: 2;
+  schemaVersion: 3;
   caseDate: string;
   caseRevision: number;
   guesses: FiveRoundGuess[];
@@ -56,24 +55,16 @@ function completedAt(value: unknown): string | undefined {
 export const fiveRoundProgressSchema: Schema<FiveRoundProgress> = {
   parse(value) {
     const parsed = record(value);
-    if (parsed.schemaVersion !== 2) fail('schemaVersion', 'must equal 2');
+    if (parsed.schemaVersion !== 3) fail('schemaVersion', 'must equal 3');
     if (!Array.isArray(parsed.guesses)) fail('guesses', 'must be an array');
     const guesses = parsed.guesses.map((value, index) => {
       const guess = record(value);
-      const tier = guess.tier as FiveRoundGuess['tier'];
-      const expectedPoints =
-        tier === 'correct'
-          ? 100
-          : tier === 'hot'
-            ? 75
-            : tier === 'warm'
-              ? 50
-              : tier === 'cold'
-                ? 25
-                : null;
-      if (expectedPoints === null) fail(`guesses[${index}].tier`, 'is invalid');
-      if (guess.points !== expectedPoints)
-        fail(`guesses[${index}].points`, 'must match its tier');
+      if (
+        !Number.isInteger(guess.points) ||
+        (guess.points as number) < 0 ||
+        (guess.points as number) > 100
+      )
+        fail(`guesses[${index}].points`, 'must be an integer from 0 to 100');
       if (typeof guess.roundId !== 'string' || !guess.roundId)
         fail(`guesses[${index}].roundId`, 'must be a string');
       if (typeof guess.poiId !== 'string' || !guess.poiId)
@@ -81,8 +72,7 @@ export const fiveRoundProgressSchema: Schema<FiveRoundProgress> = {
       return {
         roundId: guess.roundId,
         poiId: guess.poiId,
-        tier,
-        points: expectedPoints as FiveRoundGuess['points'],
+        points: guess.points as number,
       };
     });
     if (guesses.length > 5)
@@ -104,7 +94,7 @@ export const fiveRoundProgressSchema: Schema<FiveRoundProgress> = {
     if (guesses.length < 5 && parsedCompletedAt !== undefined)
       fail('completedAt', 'is only allowed after round five');
     return {
-      schemaVersion: 2,
+      schemaVersion: 3,
       caseDate: date(parsed.caseDate),
       caseRevision: positiveInteger(parsed.caseRevision),
       guesses,

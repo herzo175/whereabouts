@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "publicationDate": "2026-08-17",
   "revision": 1,
   "caseNumber": 20682,
@@ -402,153 +402,153 @@
       "results": [
         {
           "poiId": "brussels-grand-place",
-          "tier": "hot",
           "text": "Grand-Place is a themed comparison candidate: The Grand-Place is the individually inscribed UNESCO property Grand-Place, Brussels, within the Brussels municipal boundary.",
-          "sourceIds": ["source-01", "source-04"]
+          "sourceIds": ["source-01", "source-04"],
+          "points": 96
         },
         {
           "poiId": "brussels-hotel-tassel",
-          "tier": "hot",
           "text": "Hôtel Tassel is a themed comparison candidate: Hôtel Tassel is one of the four specifically named buildings comprising UNESCO's Major Town Houses of Victor Horta property in Brussels.",
-          "sourceIds": ["source-02", "source-04"]
+          "sourceIds": ["source-02", "source-04"],
+          "points": 91
         },
         {
           "poiId": "brussels-hotel-solvay",
-          "tier": "hot",
           "text": "Hôtel Solvay is a themed comparison candidate: Hôtel Solvay is an individually named component of UNESCO's Major Town Houses of Victor Horta property inside Brussels.",
-          "sourceIds": ["source-03", "source-04"]
+          "sourceIds": ["source-03", "source-04"],
+          "points": 86
         },
         {
           "poiId": "brussels-hotel-van-eetvelde",
-          "tier": "correct",
           "text": "Hôtel van Eetvelde is the round target: Hôtel van Eetvelde is a specifically named component of the active Horta town-houses UNESCO property in Brussels.",
-          "sourceIds": ["source-04"]
+          "sourceIds": ["source-04"],
+          "points": 100
         },
         {
           "poiId": "brussels-horta-house-studio",
-          "tier": "hot",
           "text": "Maison and Atelier Horta is a themed comparison candidate: Maison and Atelier Horta is the specifically named fourth component of the UNESCO Horta town-houses property in Brussels.",
-          "sourceIds": ["source-05", "source-04"]
+          "sourceIds": ["source-05", "source-04"],
+          "points": 81
         },
         {
           "poiId": "berlin-museum-island",
-          "tier": "warm",
           "text": "Museum Island is a themed comparison candidate: Museum Island is the individually inscribed UNESCO World Heritage property located on the Spree island within Berlin.",
-          "sourceIds": ["source-06", "source-04"]
+          "sourceIds": ["source-06", "source-04"],
+          "points": 72
         },
         {
           "poiId": "cairo-historic-cairo",
-          "tier": "warm",
           "text": "Historic Cairo is a themed comparison candidate: Historic Cairo is the individually inscribed UNESCO property encompassing the historic urban area inside present-day Cairo.",
-          "sourceIds": ["source-07", "source-04"]
+          "sourceIds": ["source-07", "source-04"],
+          "points": 68
         },
         {
           "poiId": "kathmandu-hanuman-dhoka",
-          "tier": "cold",
           "text": "Hanuman Dhoka Durbar Square is a themed comparison candidate: Hanuman Dhoka is one of the seven specifically named monument zones of UNESCO's Kathmandu Valley property and lies in Kathmandu.",
-          "sourceIds": ["source-08", "source-04"]
+          "sourceIds": ["source-08", "source-04"],
+          "points": 38
         },
         {
           "poiId": "kathmandu-swayambhu",
-          "tier": "cold",
           "text": "Swayambhunath Stupa is a themed comparison candidate: Swayambhu is a specifically named monument zone of the UNESCO Kathmandu Valley property within Kathmandu municipality.",
-          "sourceIds": ["source-09", "source-04"]
+          "sourceIds": ["source-09", "source-04"],
+          "points": 35
         },
         {
           "poiId": "kathmandu-boudhanath",
-          "tier": "cold",
           "text": "Bauddhanath Stupa is a themed comparison candidate: Bauddhanath is a separately named component of the UNESCO Kathmandu Valley property, physically inside Kathmandu.",
-          "sourceIds": ["source-10", "source-04"]
+          "sourceIds": ["source-10", "source-04"],
+          "points": 32
         },
         {
           "poiId": "kathmandu-pashupati",
-          "tier": "cold",
           "text": "Pashupati is a themed comparison candidate: Pashupati is one of UNESCO's named Kathmandu Valley monument zones and is located within the current Kathmandu capital municipality.",
-          "sourceIds": ["source-11", "source-04"]
+          "sourceIds": ["source-11", "source-04"],
+          "points": 29
         },
         {
           "poiId": "mexico-city-historic-centre",
-          "tier": "cold",
           "text": "Historic Centre of Mexico City is a themed comparison candidate: The Historic Centre of Mexico City is an individually inscribed UNESCO property within the capital's municipal boundaries.",
-          "sourceIds": ["source-12", "source-04"]
+          "sourceIds": ["source-12", "source-04"],
+          "points": 26
         },
         {
           "poiId": "mexico-city-barragan-house",
-          "tier": "warm",
           "text": "Luis Barragán House and Studio is a themed comparison candidate: Luis Barragán House and Studio is an individually inscribed UNESCO property located in Mexico City.",
-          "sourceIds": ["source-13", "source-04"]
+          "sourceIds": ["source-13", "source-04"],
+          "points": 64
         },
         {
           "poiId": "brasilia-monumental-axis",
-          "tier": "warm",
           "text": "Brasilia is a themed comparison candidate: Brasília's specifically inscribed UNESCO property covers the planned monumental city within the current Brazilian capital.",
-          "sourceIds": ["source-14", "source-04"]
+          "sourceIds": ["source-14", "source-04"],
+          "points": 60
         },
         {
           "poiId": "lima-historic-centre",
-          "tier": "cold",
           "text": "Historic Centre of Lima is a themed comparison candidate: The Historic Centre of Lima is the individually inscribed UNESCO property physically located in Peru's current capital city.",
-          "sourceIds": ["source-15", "source-04"]
+          "sourceIds": ["source-15", "source-04"],
+          "points": 23
         },
         {
           "poiId": "sucre-historic-city",
-          "tier": "cold",
           "text": "Historic City of Sucre is a themed comparison candidate: The Historic City of Sucre is an individually inscribed UNESCO property in Bolivia's constitutionally recognized national capital.",
-          "sourceIds": ["source-16", "source-04"]
+          "sourceIds": ["source-16", "source-04"],
+          "points": 20
         },
         {
           "poiId": "asmara-modernist-city",
-          "tier": "warm",
           "text": "Asmara: A Modernist African City is a themed comparison candidate: Asmara: A Modernist African City is an individually inscribed UNESCO property contained within Eritrea's current capital.",
-          "sourceIds": ["source-17", "source-04"]
+          "sourceIds": ["source-17", "source-04"],
+          "points": 56
         },
         {
           "poiId": "san-marino-historic-centre",
-          "tier": "cold",
           "text": "Historic Centre of San Marino and Mount Titano is a themed comparison candidate: The Historic Centre of San Marino is the visitable urban portion of UNESCO's property within the capital city of San Marino.",
-          "sourceIds": ["source-18", "source-04"]
+          "sourceIds": ["source-18", "source-04"],
+          "points": 17
         },
         {
           "poiId": "valletta-city",
-          "tier": "warm",
           "text": "City of Valletta is a themed comparison candidate: The City of Valletta is an individually inscribed UNESCO property occupying Malta's present national capital.",
-          "sourceIds": ["source-19", "source-04"]
+          "sourceIds": ["source-19", "source-04"],
+          "points": 52
         },
         {
           "poiId": "prague-historic-centre",
-          "tier": "warm",
           "text": "Historic Centre of Prague is a themed comparison candidate: The Historic Centre of Prague is an individually inscribed UNESCO property inside the present Czech national capital.",
-          "sourceIds": ["source-20", "source-04"]
+          "sourceIds": ["source-20", "source-04"],
+          "points": 48
         },
         {
           "poiId": "budapest-danube-buda-castle",
-          "tier": "warm",
           "text": "Budapest, including the Banks of the Danube, the Buda Castle Quarter and Andrássy Avenue is a themed comparison candidate: This UNESCO property is an individually named urban heritage site physically located within Hungary's current capital city.",
-          "sourceIds": ["source-21", "source-04"]
+          "sourceIds": ["source-21", "source-04"],
+          "points": 44
         },
         {
           "poiId": "warsaw-historic-centre",
-          "tier": "cold",
           "text": "Historic Centre of Warsaw is a themed comparison candidate: The Historic Centre of Warsaw is an individually inscribed UNESCO property within Poland's current capital municipality.",
-          "sourceIds": ["source-22", "source-04"]
+          "sourceIds": ["source-22", "source-04"],
+          "points": 14
         },
         {
           "poiId": "vilnius-historic-centre",
-          "tier": "cold",
           "text": "Vilnius Historic Centre is a themed comparison candidate: Vilnius Historic Centre is the individually inscribed UNESCO property situated inside Lithuania's current capital.",
-          "sourceIds": ["source-23", "source-04"]
+          "sourceIds": ["source-23", "source-04"],
+          "points": 11
         },
         {
           "poiId": "tallinn-old-town",
-          "tier": "cold",
           "text": "Historic Centre (Old Town) of Tallinn is a themed comparison candidate: Tallinn Old Town is the individually inscribed UNESCO property located within Estonia's current national capital.",
-          "sourceIds": ["source-24", "source-04"]
+          "sourceIds": ["source-24", "source-04"],
+          "points": 8
         },
         {
           "poiId": "moscow-kremlin-red-square",
-          "tier": "cold",
           "text": "Kremlin and Red Square is a themed comparison candidate: Kremlin and Red Square is an individually inscribed UNESCO property at the heart of Russia's current capital.",
-          "sourceIds": ["source-25", "source-04"]
+          "sourceIds": ["source-25", "source-04"],
+          "points": 5
         }
       ]
     },
@@ -568,153 +568,153 @@
       "results": [
         {
           "poiId": "brussels-grand-place",
-          "tier": "warm",
           "text": "Grand-Place is a themed comparison candidate: The Grand-Place is the individually inscribed UNESCO property Grand-Place, Brussels, within the Brussels municipal boundary.",
-          "sourceIds": ["source-01", "source-11"]
+          "sourceIds": ["source-01", "source-11"],
+          "points": 72
         },
         {
           "poiId": "brussels-hotel-tassel",
-          "tier": "cold",
           "text": "Hôtel Tassel is a themed comparison candidate: Hôtel Tassel is one of the four specifically named buildings comprising UNESCO's Major Town Houses of Victor Horta property in Brussels.",
-          "sourceIds": ["source-02", "source-11"]
+          "sourceIds": ["source-02", "source-11"],
+          "points": 38
         },
         {
           "poiId": "brussels-hotel-solvay",
-          "tier": "cold",
           "text": "Hôtel Solvay is a themed comparison candidate: Hôtel Solvay is an individually named component of UNESCO's Major Town Houses of Victor Horta property inside Brussels.",
-          "sourceIds": ["source-03", "source-11"]
+          "sourceIds": ["source-03", "source-11"],
+          "points": 35
         },
         {
           "poiId": "brussels-hotel-van-eetvelde",
-          "tier": "cold",
           "text": "Hôtel van Eetvelde is a themed comparison candidate: Hôtel van Eetvelde is a specifically named component of the active Horta town-houses UNESCO property in Brussels.",
-          "sourceIds": ["source-04", "source-11"]
+          "sourceIds": ["source-04", "source-11"],
+          "points": 32
         },
         {
           "poiId": "brussels-horta-house-studio",
-          "tier": "cold",
           "text": "Maison and Atelier Horta is a themed comparison candidate: Maison and Atelier Horta is the specifically named fourth component of the UNESCO Horta town-houses property in Brussels.",
-          "sourceIds": ["source-05", "source-11"]
+          "sourceIds": ["source-05", "source-11"],
+          "points": 29
         },
         {
           "poiId": "berlin-museum-island",
-          "tier": "cold",
           "text": "Museum Island is a themed comparison candidate: Museum Island is the individually inscribed UNESCO World Heritage property located on the Spree island within Berlin.",
-          "sourceIds": ["source-06", "source-11"]
+          "sourceIds": ["source-06", "source-11"],
+          "points": 26
         },
         {
           "poiId": "cairo-historic-cairo",
-          "tier": "hot",
           "text": "Historic Cairo is a themed comparison candidate: Historic Cairo is the individually inscribed UNESCO property encompassing the historic urban area inside present-day Cairo.",
-          "sourceIds": ["source-07", "source-11"]
+          "sourceIds": ["source-07", "source-11"],
+          "points": 96
         },
         {
           "poiId": "kathmandu-hanuman-dhoka",
-          "tier": "hot",
           "text": "Hanuman Dhoka Durbar Square is a themed comparison candidate: Hanuman Dhoka is one of the seven specifically named monument zones of UNESCO's Kathmandu Valley property and lies in Kathmandu.",
-          "sourceIds": ["source-08", "source-11"]
+          "sourceIds": ["source-08", "source-11"],
+          "points": 91
         },
         {
           "poiId": "kathmandu-swayambhu",
-          "tier": "hot",
           "text": "Swayambhunath Stupa is a themed comparison candidate: Swayambhu is a specifically named monument zone of the UNESCO Kathmandu Valley property within Kathmandu municipality.",
-          "sourceIds": ["source-09", "source-11"]
+          "sourceIds": ["source-09", "source-11"],
+          "points": 86
         },
         {
           "poiId": "kathmandu-boudhanath",
-          "tier": "hot",
           "text": "Bauddhanath Stupa is a themed comparison candidate: Bauddhanath is a separately named component of the UNESCO Kathmandu Valley property, physically inside Kathmandu.",
-          "sourceIds": ["source-10", "source-11"]
+          "sourceIds": ["source-10", "source-11"],
+          "points": 81
         },
         {
           "poiId": "kathmandu-pashupati",
-          "tier": "correct",
           "text": "Pashupati is the round target: Pashupati is one of UNESCO's named Kathmandu Valley monument zones and is located within the current Kathmandu capital municipality.",
-          "sourceIds": ["source-11"]
+          "sourceIds": ["source-11"],
+          "points": 100
         },
         {
           "poiId": "mexico-city-historic-centre",
-          "tier": "cold",
           "text": "Historic Centre of Mexico City is a themed comparison candidate: The Historic Centre of Mexico City is an individually inscribed UNESCO property within the capital's municipal boundaries.",
-          "sourceIds": ["source-12", "source-11"]
+          "sourceIds": ["source-12", "source-11"],
+          "points": 23
         },
         {
           "poiId": "mexico-city-barragan-house",
-          "tier": "cold",
           "text": "Luis Barragán House and Studio is a themed comparison candidate: Luis Barragán House and Studio is an individually inscribed UNESCO property located in Mexico City.",
-          "sourceIds": ["source-13", "source-11"]
+          "sourceIds": ["source-13", "source-11"],
+          "points": 20
         },
         {
           "poiId": "brasilia-monumental-axis",
-          "tier": "cold",
           "text": "Brasilia is a themed comparison candidate: Brasília's specifically inscribed UNESCO property covers the planned monumental city within the current Brazilian capital.",
-          "sourceIds": ["source-14", "source-11"]
+          "sourceIds": ["source-14", "source-11"],
+          "points": 17
         },
         {
           "poiId": "lima-historic-centre",
-          "tier": "warm",
           "text": "Historic Centre of Lima is a themed comparison candidate: The Historic Centre of Lima is the individually inscribed UNESCO property physically located in Peru's current capital city.",
-          "sourceIds": ["source-15", "source-11"]
+          "sourceIds": ["source-15", "source-11"],
+          "points": 68
         },
         {
           "poiId": "sucre-historic-city",
-          "tier": "warm",
           "text": "Historic City of Sucre is a themed comparison candidate: The Historic City of Sucre is an individually inscribed UNESCO property in Bolivia's constitutionally recognized national capital.",
-          "sourceIds": ["source-16", "source-11"]
+          "sourceIds": ["source-16", "source-11"],
+          "points": 64
         },
         {
           "poiId": "asmara-modernist-city",
-          "tier": "cold",
           "text": "Asmara: A Modernist African City is a themed comparison candidate: Asmara: A Modernist African City is an individually inscribed UNESCO property contained within Eritrea's current capital.",
-          "sourceIds": ["source-17", "source-11"]
+          "sourceIds": ["source-17", "source-11"],
+          "points": 14
         },
         {
           "poiId": "san-marino-historic-centre",
-          "tier": "warm",
           "text": "Historic Centre of San Marino and Mount Titano is a themed comparison candidate: The Historic Centre of San Marino is the visitable urban portion of UNESCO's property within the capital city of San Marino.",
-          "sourceIds": ["source-18", "source-11"]
+          "sourceIds": ["source-18", "source-11"],
+          "points": 60
         },
         {
           "poiId": "valletta-city",
-          "tier": "warm",
           "text": "City of Valletta is a themed comparison candidate: The City of Valletta is an individually inscribed UNESCO property occupying Malta's present national capital.",
-          "sourceIds": ["source-19", "source-11"]
+          "sourceIds": ["source-19", "source-11"],
+          "points": 56
         },
         {
           "poiId": "prague-historic-centre",
-          "tier": "warm",
           "text": "Historic Centre of Prague is a themed comparison candidate: The Historic Centre of Prague is an individually inscribed UNESCO property inside the present Czech national capital.",
-          "sourceIds": ["source-20", "source-11"]
+          "sourceIds": ["source-20", "source-11"],
+          "points": 52
         },
         {
           "poiId": "budapest-danube-buda-castle",
-          "tier": "warm",
           "text": "Budapest, including the Banks of the Danube, the Buda Castle Quarter and Andrássy Avenue is a themed comparison candidate: This UNESCO property is an individually named urban heritage site physically located within Hungary's current capital city.",
-          "sourceIds": ["source-21", "source-11"]
+          "sourceIds": ["source-21", "source-11"],
+          "points": 48
         },
         {
           "poiId": "warsaw-historic-centre",
-          "tier": "cold",
           "text": "Historic Centre of Warsaw is a themed comparison candidate: The Historic Centre of Warsaw is an individually inscribed UNESCO property within Poland's current capital municipality.",
-          "sourceIds": ["source-22", "source-11"]
+          "sourceIds": ["source-22", "source-11"],
+          "points": 11
         },
         {
           "poiId": "vilnius-historic-centre",
-          "tier": "cold",
           "text": "Vilnius Historic Centre is a themed comparison candidate: Vilnius Historic Centre is the individually inscribed UNESCO property situated inside Lithuania's current capital.",
-          "sourceIds": ["source-23", "source-11"]
+          "sourceIds": ["source-23", "source-11"],
+          "points": 8
         },
         {
           "poiId": "tallinn-old-town",
-          "tier": "cold",
           "text": "Historic Centre (Old Town) of Tallinn is a themed comparison candidate: Tallinn Old Town is the individually inscribed UNESCO property located within Estonia's current national capital.",
-          "sourceIds": ["source-24", "source-11"]
+          "sourceIds": ["source-24", "source-11"],
+          "points": 5
         },
         {
           "poiId": "moscow-kremlin-red-square",
-          "tier": "warm",
           "text": "Kremlin and Red Square is a themed comparison candidate: Kremlin and Red Square is an individually inscribed UNESCO property at the heart of Russia's current capital.",
-          "sourceIds": ["source-25", "source-11"]
+          "sourceIds": ["source-25", "source-11"],
+          "points": 44
         }
       ]
     },
@@ -734,153 +734,153 @@
       "results": [
         {
           "poiId": "brussels-grand-place",
-          "tier": "cold",
           "text": "Grand-Place is a themed comparison candidate: The Grand-Place is the individually inscribed UNESCO property Grand-Place, Brussels, within the Brussels municipal boundary.",
-          "sourceIds": ["source-01", "source-14"]
+          "sourceIds": ["source-01", "source-14"],
+          "points": 38
         },
         {
           "poiId": "brussels-hotel-tassel",
-          "tier": "hot",
           "text": "Hôtel Tassel is a themed comparison candidate: Hôtel Tassel is one of the four specifically named buildings comprising UNESCO's Major Town Houses of Victor Horta property in Brussels.",
-          "sourceIds": ["source-02", "source-14"]
+          "sourceIds": ["source-02", "source-14"],
+          "points": 96
         },
         {
           "poiId": "brussels-hotel-solvay",
-          "tier": "warm",
           "text": "Hôtel Solvay is a themed comparison candidate: Hôtel Solvay is an individually named component of UNESCO's Major Town Houses of Victor Horta property inside Brussels.",
-          "sourceIds": ["source-03", "source-14"]
+          "sourceIds": ["source-03", "source-14"],
+          "points": 72
         },
         {
           "poiId": "brussels-hotel-van-eetvelde",
-          "tier": "hot",
           "text": "Hôtel van Eetvelde is a themed comparison candidate: Hôtel van Eetvelde is a specifically named component of the active Horta town-houses UNESCO property in Brussels.",
-          "sourceIds": ["source-04", "source-14"]
+          "sourceIds": ["source-04", "source-14"],
+          "points": 91
         },
         {
           "poiId": "brussels-horta-house-studio",
-          "tier": "warm",
           "text": "Maison and Atelier Horta is a themed comparison candidate: Maison and Atelier Horta is the specifically named fourth component of the UNESCO Horta town-houses property in Brussels.",
-          "sourceIds": ["source-05", "source-14"]
+          "sourceIds": ["source-05", "source-14"],
+          "points": 68
         },
         {
           "poiId": "berlin-museum-island",
-          "tier": "warm",
           "text": "Museum Island is a themed comparison candidate: Museum Island is the individually inscribed UNESCO World Heritage property located on the Spree island within Berlin.",
-          "sourceIds": ["source-06", "source-14"]
+          "sourceIds": ["source-06", "source-14"],
+          "points": 64
         },
         {
           "poiId": "cairo-historic-cairo",
-          "tier": "cold",
           "text": "Historic Cairo is a themed comparison candidate: Historic Cairo is the individually inscribed UNESCO property encompassing the historic urban area inside present-day Cairo.",
-          "sourceIds": ["source-07", "source-14"]
+          "sourceIds": ["source-07", "source-14"],
+          "points": 35
         },
         {
           "poiId": "kathmandu-hanuman-dhoka",
-          "tier": "cold",
           "text": "Hanuman Dhoka Durbar Square is a themed comparison candidate: Hanuman Dhoka is one of the seven specifically named monument zones of UNESCO's Kathmandu Valley property and lies in Kathmandu.",
-          "sourceIds": ["source-08", "source-14"]
+          "sourceIds": ["source-08", "source-14"],
+          "points": 32
         },
         {
           "poiId": "kathmandu-swayambhu",
-          "tier": "cold",
           "text": "Swayambhunath Stupa is a themed comparison candidate: Swayambhu is a specifically named monument zone of the UNESCO Kathmandu Valley property within Kathmandu municipality.",
-          "sourceIds": ["source-09", "source-14"]
+          "sourceIds": ["source-09", "source-14"],
+          "points": 29
         },
         {
           "poiId": "kathmandu-boudhanath",
-          "tier": "cold",
           "text": "Bauddhanath Stupa is a themed comparison candidate: Bauddhanath is a separately named component of the UNESCO Kathmandu Valley property, physically inside Kathmandu.",
-          "sourceIds": ["source-10", "source-14"]
+          "sourceIds": ["source-10", "source-14"],
+          "points": 26
         },
         {
           "poiId": "kathmandu-pashupati",
-          "tier": "cold",
           "text": "Pashupati is a themed comparison candidate: Pashupati is one of UNESCO's named Kathmandu Valley monument zones and is located within the current Kathmandu capital municipality.",
-          "sourceIds": ["source-11", "source-14"]
+          "sourceIds": ["source-11", "source-14"],
+          "points": 23
         },
         {
           "poiId": "mexico-city-historic-centre",
-          "tier": "cold",
           "text": "Historic Centre of Mexico City is a themed comparison candidate: The Historic Centre of Mexico City is an individually inscribed UNESCO property within the capital's municipal boundaries.",
-          "sourceIds": ["source-12", "source-14"]
+          "sourceIds": ["source-12", "source-14"],
+          "points": 20
         },
         {
           "poiId": "mexico-city-barragan-house",
-          "tier": "hot",
           "text": "Luis Barragán House and Studio is a themed comparison candidate: Luis Barragán House and Studio is an individually inscribed UNESCO property located in Mexico City.",
-          "sourceIds": ["source-13", "source-14"]
+          "sourceIds": ["source-13", "source-14"],
+          "points": 86
         },
         {
           "poiId": "brasilia-monumental-axis",
-          "tier": "correct",
           "text": "Brasilia is the round target: Brasília's specifically inscribed UNESCO property covers the planned monumental city within the current Brazilian capital.",
-          "sourceIds": ["source-14"]
+          "sourceIds": ["source-14"],
+          "points": 100
         },
         {
           "poiId": "lima-historic-centre",
-          "tier": "cold",
           "text": "Historic Centre of Lima is a themed comparison candidate: The Historic Centre of Lima is the individually inscribed UNESCO property physically located in Peru's current capital city.",
-          "sourceIds": ["source-15", "source-14"]
+          "sourceIds": ["source-15", "source-14"],
+          "points": 17
         },
         {
           "poiId": "sucre-historic-city",
-          "tier": "cold",
           "text": "Historic City of Sucre is a themed comparison candidate: The Historic City of Sucre is an individually inscribed UNESCO property in Bolivia's constitutionally recognized national capital.",
-          "sourceIds": ["source-16", "source-14"]
+          "sourceIds": ["source-16", "source-14"],
+          "points": 14
         },
         {
           "poiId": "asmara-modernist-city",
-          "tier": "hot",
           "text": "Asmara: A Modernist African City is a themed comparison candidate: Asmara: A Modernist African City is an individually inscribed UNESCO property contained within Eritrea's current capital.",
-          "sourceIds": ["source-17", "source-14"]
+          "sourceIds": ["source-17", "source-14"],
+          "points": 81
         },
         {
           "poiId": "san-marino-historic-centre",
-          "tier": "warm",
           "text": "Historic Centre of San Marino and Mount Titano is a themed comparison candidate: The Historic Centre of San Marino is the visitable urban portion of UNESCO's property within the capital city of San Marino.",
-          "sourceIds": ["source-18", "source-14"]
+          "sourceIds": ["source-18", "source-14"],
+          "points": 60
         },
         {
           "poiId": "valletta-city",
-          "tier": "warm",
           "text": "City of Valletta is a themed comparison candidate: The City of Valletta is an individually inscribed UNESCO property occupying Malta's present national capital.",
-          "sourceIds": ["source-19", "source-14"]
+          "sourceIds": ["source-19", "source-14"],
+          "points": 56
         },
         {
           "poiId": "prague-historic-centre",
-          "tier": "warm",
           "text": "Historic Centre of Prague is a themed comparison candidate: The Historic Centre of Prague is an individually inscribed UNESCO property inside the present Czech national capital.",
-          "sourceIds": ["source-20", "source-14"]
+          "sourceIds": ["source-20", "source-14"],
+          "points": 52
         },
         {
           "poiId": "budapest-danube-buda-castle",
-          "tier": "warm",
           "text": "Budapest, including the Banks of the Danube, the Buda Castle Quarter and Andrássy Avenue is a themed comparison candidate: This UNESCO property is an individually named urban heritage site physically located within Hungary's current capital city.",
-          "sourceIds": ["source-21", "source-14"]
+          "sourceIds": ["source-21", "source-14"],
+          "points": 48
         },
         {
           "poiId": "warsaw-historic-centre",
-          "tier": "warm",
           "text": "Historic Centre of Warsaw is a themed comparison candidate: The Historic Centre of Warsaw is an individually inscribed UNESCO property within Poland's current capital municipality.",
-          "sourceIds": ["source-22", "source-14"]
+          "sourceIds": ["source-22", "source-14"],
+          "points": 44
         },
         {
           "poiId": "vilnius-historic-centre",
-          "tier": "cold",
           "text": "Vilnius Historic Centre is a themed comparison candidate: Vilnius Historic Centre is the individually inscribed UNESCO property situated inside Lithuania's current capital.",
-          "sourceIds": ["source-23", "source-14"]
+          "sourceIds": ["source-23", "source-14"],
+          "points": 11
         },
         {
           "poiId": "tallinn-old-town",
-          "tier": "cold",
           "text": "Historic Centre (Old Town) of Tallinn is a themed comparison candidate: Tallinn Old Town is the individually inscribed UNESCO property located within Estonia's current national capital.",
-          "sourceIds": ["source-24", "source-14"]
+          "sourceIds": ["source-24", "source-14"],
+          "points": 8
         },
         {
           "poiId": "moscow-kremlin-red-square",
-          "tier": "cold",
           "text": "Kremlin and Red Square is a themed comparison candidate: Kremlin and Red Square is an individually inscribed UNESCO property at the heart of Russia's current capital.",
-          "sourceIds": ["source-25", "source-14"]
+          "sourceIds": ["source-25", "source-14"],
+          "points": 5
         }
       ]
     },
@@ -900,153 +900,153 @@
       "results": [
         {
           "poiId": "brussels-grand-place",
-          "tier": "cold",
           "text": "Grand-Place is a themed comparison candidate: The Grand-Place is the individually inscribed UNESCO property Grand-Place, Brussels, within the Brussels municipal boundary.",
-          "sourceIds": ["source-01", "source-17"]
+          "sourceIds": ["source-01", "source-17"],
+          "points": 38
         },
         {
           "poiId": "brussels-hotel-tassel",
-          "tier": "hot",
           "text": "Hôtel Tassel is a themed comparison candidate: Hôtel Tassel is one of the four specifically named buildings comprising UNESCO's Major Town Houses of Victor Horta property in Brussels.",
-          "sourceIds": ["source-02", "source-17"]
+          "sourceIds": ["source-02", "source-17"],
+          "points": 96
         },
         {
           "poiId": "brussels-hotel-solvay",
-          "tier": "hot",
           "text": "Hôtel Solvay is a themed comparison candidate: Hôtel Solvay is an individually named component of UNESCO's Major Town Houses of Victor Horta property inside Brussels.",
-          "sourceIds": ["source-03", "source-17"]
+          "sourceIds": ["source-03", "source-17"],
+          "points": 91
         },
         {
           "poiId": "brussels-hotel-van-eetvelde",
-          "tier": "hot",
           "text": "Hôtel van Eetvelde is a themed comparison candidate: Hôtel van Eetvelde is a specifically named component of the active Horta town-houses UNESCO property in Brussels.",
-          "sourceIds": ["source-04", "source-17"]
+          "sourceIds": ["source-04", "source-17"],
+          "points": 86
         },
         {
           "poiId": "brussels-horta-house-studio",
-          "tier": "warm",
           "text": "Maison and Atelier Horta is a themed comparison candidate: Maison and Atelier Horta is the specifically named fourth component of the UNESCO Horta town-houses property in Brussels.",
-          "sourceIds": ["source-05", "source-17"]
+          "sourceIds": ["source-05", "source-17"],
+          "points": 72
         },
         {
           "poiId": "berlin-museum-island",
-          "tier": "warm",
           "text": "Museum Island is a themed comparison candidate: Museum Island is the individually inscribed UNESCO World Heritage property located on the Spree island within Berlin.",
-          "sourceIds": ["source-06", "source-17"]
+          "sourceIds": ["source-06", "source-17"],
+          "points": 68
         },
         {
           "poiId": "cairo-historic-cairo",
-          "tier": "cold",
           "text": "Historic Cairo is a themed comparison candidate: Historic Cairo is the individually inscribed UNESCO property encompassing the historic urban area inside present-day Cairo.",
-          "sourceIds": ["source-07", "source-17"]
+          "sourceIds": ["source-07", "source-17"],
+          "points": 35
         },
         {
           "poiId": "kathmandu-hanuman-dhoka",
-          "tier": "cold",
           "text": "Hanuman Dhoka Durbar Square is a themed comparison candidate: Hanuman Dhoka is one of the seven specifically named monument zones of UNESCO's Kathmandu Valley property and lies in Kathmandu.",
-          "sourceIds": ["source-08", "source-17"]
+          "sourceIds": ["source-08", "source-17"],
+          "points": 32
         },
         {
           "poiId": "kathmandu-swayambhu",
-          "tier": "cold",
           "text": "Swayambhunath Stupa is a themed comparison candidate: Swayambhu is a specifically named monument zone of the UNESCO Kathmandu Valley property within Kathmandu municipality.",
-          "sourceIds": ["source-09", "source-17"]
+          "sourceIds": ["source-09", "source-17"],
+          "points": 29
         },
         {
           "poiId": "kathmandu-boudhanath",
-          "tier": "cold",
           "text": "Bauddhanath Stupa is a themed comparison candidate: Bauddhanath is a separately named component of the UNESCO Kathmandu Valley property, physically inside Kathmandu.",
-          "sourceIds": ["source-10", "source-17"]
+          "sourceIds": ["source-10", "source-17"],
+          "points": 26
         },
         {
           "poiId": "kathmandu-pashupati",
-          "tier": "cold",
           "text": "Pashupati is a themed comparison candidate: Pashupati is one of UNESCO's named Kathmandu Valley monument zones and is located within the current Kathmandu capital municipality.",
-          "sourceIds": ["source-11", "source-17"]
+          "sourceIds": ["source-11", "source-17"],
+          "points": 23
         },
         {
           "poiId": "mexico-city-historic-centre",
-          "tier": "cold",
           "text": "Historic Centre of Mexico City is a themed comparison candidate: The Historic Centre of Mexico City is an individually inscribed UNESCO property within the capital's municipal boundaries.",
-          "sourceIds": ["source-12", "source-17"]
+          "sourceIds": ["source-12", "source-17"],
+          "points": 20
         },
         {
           "poiId": "mexico-city-barragan-house",
-          "tier": "warm",
           "text": "Luis Barragán House and Studio is a themed comparison candidate: Luis Barragán House and Studio is an individually inscribed UNESCO property located in Mexico City.",
-          "sourceIds": ["source-13", "source-17"]
+          "sourceIds": ["source-13", "source-17"],
+          "points": 64
         },
         {
           "poiId": "brasilia-monumental-axis",
-          "tier": "hot",
           "text": "Brasilia is a themed comparison candidate: Brasília's specifically inscribed UNESCO property covers the planned monumental city within the current Brazilian capital.",
-          "sourceIds": ["source-14", "source-17"]
+          "sourceIds": ["source-14", "source-17"],
+          "points": 81
         },
         {
           "poiId": "lima-historic-centre",
-          "tier": "cold",
           "text": "Historic Centre of Lima is a themed comparison candidate: The Historic Centre of Lima is the individually inscribed UNESCO property physically located in Peru's current capital city.",
-          "sourceIds": ["source-15", "source-17"]
+          "sourceIds": ["source-15", "source-17"],
+          "points": 17
         },
         {
           "poiId": "sucre-historic-city",
-          "tier": "cold",
           "text": "Historic City of Sucre is a themed comparison candidate: The Historic City of Sucre is an individually inscribed UNESCO property in Bolivia's constitutionally recognized national capital.",
-          "sourceIds": ["source-16", "source-17"]
+          "sourceIds": ["source-16", "source-17"],
+          "points": 14
         },
         {
           "poiId": "asmara-modernist-city",
-          "tier": "correct",
           "text": "Asmara: A Modernist African City is the round target: Asmara: A Modernist African City is an individually inscribed UNESCO property contained within Eritrea's current capital.",
-          "sourceIds": ["source-17"]
+          "sourceIds": ["source-17"],
+          "points": 100
         },
         {
           "poiId": "san-marino-historic-centre",
-          "tier": "warm",
           "text": "Historic Centre of San Marino and Mount Titano is a themed comparison candidate: The Historic Centre of San Marino is the visitable urban portion of UNESCO's property within the capital city of San Marino.",
-          "sourceIds": ["source-18", "source-17"]
+          "sourceIds": ["source-18", "source-17"],
+          "points": 60
         },
         {
           "poiId": "valletta-city",
-          "tier": "warm",
           "text": "City of Valletta is a themed comparison candidate: The City of Valletta is an individually inscribed UNESCO property occupying Malta's present national capital.",
-          "sourceIds": ["source-19", "source-17"]
+          "sourceIds": ["source-19", "source-17"],
+          "points": 56
         },
         {
           "poiId": "prague-historic-centre",
-          "tier": "warm",
           "text": "Historic Centre of Prague is a themed comparison candidate: The Historic Centre of Prague is an individually inscribed UNESCO property inside the present Czech national capital.",
-          "sourceIds": ["source-20", "source-17"]
+          "sourceIds": ["source-20", "source-17"],
+          "points": 52
         },
         {
           "poiId": "budapest-danube-buda-castle",
-          "tier": "warm",
           "text": "Budapest, including the Banks of the Danube, the Buda Castle Quarter and Andrássy Avenue is a themed comparison candidate: This UNESCO property is an individually named urban heritage site physically located within Hungary's current capital city.",
-          "sourceIds": ["source-21", "source-17"]
+          "sourceIds": ["source-21", "source-17"],
+          "points": 48
         },
         {
           "poiId": "warsaw-historic-centre",
-          "tier": "warm",
           "text": "Historic Centre of Warsaw is a themed comparison candidate: The Historic Centre of Warsaw is an individually inscribed UNESCO property within Poland's current capital municipality.",
-          "sourceIds": ["source-22", "source-17"]
+          "sourceIds": ["source-22", "source-17"],
+          "points": 44
         },
         {
           "poiId": "vilnius-historic-centre",
-          "tier": "cold",
           "text": "Vilnius Historic Centre is a themed comparison candidate: Vilnius Historic Centre is the individually inscribed UNESCO property situated inside Lithuania's current capital.",
-          "sourceIds": ["source-23", "source-17"]
+          "sourceIds": ["source-23", "source-17"],
+          "points": 11
         },
         {
           "poiId": "tallinn-old-town",
-          "tier": "cold",
           "text": "Historic Centre (Old Town) of Tallinn is a themed comparison candidate: Tallinn Old Town is the individually inscribed UNESCO property located within Estonia's current national capital.",
-          "sourceIds": ["source-24", "source-17"]
+          "sourceIds": ["source-24", "source-17"],
+          "points": 8
         },
         {
           "poiId": "moscow-kremlin-red-square",
-          "tier": "cold",
           "text": "Kremlin and Red Square is a themed comparison candidate: Kremlin and Red Square is an individually inscribed UNESCO property at the heart of Russia's current capital.",
-          "sourceIds": ["source-25", "source-17"]
+          "sourceIds": ["source-25", "source-17"],
+          "points": 5
         }
       ]
     },
@@ -1066,153 +1066,153 @@
       "results": [
         {
           "poiId": "brussels-grand-place",
-          "tier": "warm",
           "text": "Grand-Place is a themed comparison candidate: The Grand-Place is the individually inscribed UNESCO property Grand-Place, Brussels, within the Brussels municipal boundary.",
-          "sourceIds": ["source-01", "source-18"]
+          "sourceIds": ["source-01", "source-18"],
+          "points": 72
         },
         {
           "poiId": "brussels-hotel-tassel",
-          "tier": "cold",
           "text": "Hôtel Tassel is a themed comparison candidate: Hôtel Tassel is one of the four specifically named buildings comprising UNESCO's Major Town Houses of Victor Horta property in Brussels.",
-          "sourceIds": ["source-02", "source-18"]
+          "sourceIds": ["source-02", "source-18"],
+          "points": 38
         },
         {
           "poiId": "brussels-hotel-solvay",
-          "tier": "cold",
           "text": "Hôtel Solvay is a themed comparison candidate: Hôtel Solvay is an individually named component of UNESCO's Major Town Houses of Victor Horta property inside Brussels.",
-          "sourceIds": ["source-03", "source-18"]
+          "sourceIds": ["source-03", "source-18"],
+          "points": 35
         },
         {
           "poiId": "brussels-hotel-van-eetvelde",
-          "tier": "cold",
           "text": "Hôtel van Eetvelde is a themed comparison candidate: Hôtel van Eetvelde is a specifically named component of the active Horta town-houses UNESCO property in Brussels.",
-          "sourceIds": ["source-04", "source-18"]
+          "sourceIds": ["source-04", "source-18"],
+          "points": 32
         },
         {
           "poiId": "brussels-horta-house-studio",
-          "tier": "cold",
           "text": "Maison and Atelier Horta is a themed comparison candidate: Maison and Atelier Horta is the specifically named fourth component of the UNESCO Horta town-houses property in Brussels.",
-          "sourceIds": ["source-05", "source-18"]
+          "sourceIds": ["source-05", "source-18"],
+          "points": 29
         },
         {
           "poiId": "berlin-museum-island",
-          "tier": "cold",
           "text": "Museum Island is a themed comparison candidate: Museum Island is the individually inscribed UNESCO World Heritage property located on the Spree island within Berlin.",
-          "sourceIds": ["source-06", "source-18"]
+          "sourceIds": ["source-06", "source-18"],
+          "points": 26
         },
         {
           "poiId": "cairo-historic-cairo",
-          "tier": "warm",
           "text": "Historic Cairo is a themed comparison candidate: Historic Cairo is the individually inscribed UNESCO property encompassing the historic urban area inside present-day Cairo.",
-          "sourceIds": ["source-07", "source-18"]
+          "sourceIds": ["source-07", "source-18"],
+          "points": 68
         },
         {
           "poiId": "kathmandu-hanuman-dhoka",
-          "tier": "warm",
           "text": "Hanuman Dhoka Durbar Square is a themed comparison candidate: Hanuman Dhoka is one of the seven specifically named monument zones of UNESCO's Kathmandu Valley property and lies in Kathmandu.",
-          "sourceIds": ["source-08", "source-18"]
+          "sourceIds": ["source-08", "source-18"],
+          "points": 64
         },
         {
           "poiId": "kathmandu-swayambhu",
-          "tier": "cold",
           "text": "Swayambhunath Stupa is a themed comparison candidate: Swayambhu is a specifically named monument zone of the UNESCO Kathmandu Valley property within Kathmandu municipality.",
-          "sourceIds": ["source-09", "source-18"]
+          "sourceIds": ["source-09", "source-18"],
+          "points": 23
         },
         {
           "poiId": "kathmandu-boudhanath",
-          "tier": "cold",
           "text": "Bauddhanath Stupa is a themed comparison candidate: Bauddhanath is a separately named component of the UNESCO Kathmandu Valley property, physically inside Kathmandu.",
-          "sourceIds": ["source-10", "source-18"]
+          "sourceIds": ["source-10", "source-18"],
+          "points": 20
         },
         {
           "poiId": "kathmandu-pashupati",
-          "tier": "cold",
           "text": "Pashupati is a themed comparison candidate: Pashupati is one of UNESCO's named Kathmandu Valley monument zones and is located within the current Kathmandu capital municipality.",
-          "sourceIds": ["source-11", "source-18"]
+          "sourceIds": ["source-11", "source-18"],
+          "points": 17
         },
         {
           "poiId": "mexico-city-historic-centre",
-          "tier": "cold",
           "text": "Historic Centre of Mexico City is a themed comparison candidate: The Historic Centre of Mexico City is an individually inscribed UNESCO property within the capital's municipal boundaries.",
-          "sourceIds": ["source-12", "source-18"]
+          "sourceIds": ["source-12", "source-18"],
+          "points": 14
         },
         {
           "poiId": "mexico-city-barragan-house",
-          "tier": "cold",
           "text": "Luis Barragán House and Studio is a themed comparison candidate: Luis Barragán House and Studio is an individually inscribed UNESCO property located in Mexico City.",
-          "sourceIds": ["source-13", "source-18"]
+          "sourceIds": ["source-13", "source-18"],
+          "points": 11
         },
         {
           "poiId": "brasilia-monumental-axis",
-          "tier": "cold",
           "text": "Brasilia is a themed comparison candidate: Brasília's specifically inscribed UNESCO property covers the planned monumental city within the current Brazilian capital.",
-          "sourceIds": ["source-14", "source-18"]
+          "sourceIds": ["source-14", "source-18"],
+          "points": 8
         },
         {
           "poiId": "lima-historic-centre",
-          "tier": "warm",
           "text": "Historic Centre of Lima is a themed comparison candidate: The Historic Centre of Lima is the individually inscribed UNESCO property physically located in Peru's current capital city.",
-          "sourceIds": ["source-15", "source-18"]
+          "sourceIds": ["source-15", "source-18"],
+          "points": 60
         },
         {
           "poiId": "sucre-historic-city",
-          "tier": "warm",
           "text": "Historic City of Sucre is a themed comparison candidate: The Historic City of Sucre is an individually inscribed UNESCO property in Bolivia's constitutionally recognized national capital.",
-          "sourceIds": ["source-16", "source-18"]
+          "sourceIds": ["source-16", "source-18"],
+          "points": 56
         },
         {
           "poiId": "asmara-modernist-city",
-          "tier": "cold",
           "text": "Asmara: A Modernist African City is a themed comparison candidate: Asmara: A Modernist African City is an individually inscribed UNESCO property contained within Eritrea's current capital.",
-          "sourceIds": ["source-17", "source-18"]
+          "sourceIds": ["source-17", "source-18"],
+          "points": 5
         },
         {
           "poiId": "san-marino-historic-centre",
-          "tier": "correct",
           "text": "Historic Centre of San Marino and Mount Titano is the round target: The Historic Centre of San Marino is the visitable urban portion of UNESCO's property within the capital city of San Marino.",
-          "sourceIds": ["source-18"]
+          "sourceIds": ["source-18"],
+          "points": 100
         },
         {
           "poiId": "valletta-city",
-          "tier": "hot",
           "text": "City of Valletta is a themed comparison candidate: The City of Valletta is an individually inscribed UNESCO property occupying Malta's present national capital.",
-          "sourceIds": ["source-19", "source-18"]
+          "sourceIds": ["source-19", "source-18"],
+          "points": 96
         },
         {
           "poiId": "prague-historic-centre",
-          "tier": "hot",
           "text": "Historic Centre of Prague is a themed comparison candidate: The Historic Centre of Prague is an individually inscribed UNESCO property inside the present Czech national capital.",
-          "sourceIds": ["source-20", "source-18"]
+          "sourceIds": ["source-20", "source-18"],
+          "points": 91
         },
         {
           "poiId": "budapest-danube-buda-castle",
-          "tier": "hot",
           "text": "Budapest, including the Banks of the Danube, the Buda Castle Quarter and Andrássy Avenue is a themed comparison candidate: This UNESCO property is an individually named urban heritage site physically located within Hungary's current capital city.",
-          "sourceIds": ["source-21", "source-18"]
+          "sourceIds": ["source-21", "source-18"],
+          "points": 86
         },
         {
           "poiId": "warsaw-historic-centre",
-          "tier": "warm",
           "text": "Historic Centre of Warsaw is a themed comparison candidate: The Historic Centre of Warsaw is an individually inscribed UNESCO property within Poland's current capital municipality.",
-          "sourceIds": ["source-22", "source-18"]
+          "sourceIds": ["source-22", "source-18"],
+          "points": 52
         },
         {
           "poiId": "vilnius-historic-centre",
-          "tier": "warm",
           "text": "Vilnius Historic Centre is a themed comparison candidate: Vilnius Historic Centre is the individually inscribed UNESCO property situated inside Lithuania's current capital.",
-          "sourceIds": ["source-23", "source-18"]
+          "sourceIds": ["source-23", "source-18"],
+          "points": 48
         },
         {
           "poiId": "tallinn-old-town",
-          "tier": "hot",
           "text": "Historic Centre (Old Town) of Tallinn is a themed comparison candidate: Tallinn Old Town is the individually inscribed UNESCO property located within Estonia's current national capital.",
-          "sourceIds": ["source-24", "source-18"]
+          "sourceIds": ["source-24", "source-18"],
+          "points": 81
         },
         {
           "poiId": "moscow-kremlin-red-square",
-          "tier": "warm",
           "text": "Kremlin and Red Square is a themed comparison candidate: Kremlin and Red Square is an individually inscribed UNESCO property at the heart of Russia's current capital.",
-          "sourceIds": ["source-25", "source-18"]
+          "sourceIds": ["source-25", "source-18"],
+          "points": 44
         }
       ]
     }

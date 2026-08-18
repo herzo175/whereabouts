@@ -7,6 +7,7 @@ import {
   createFiveRoundProgress,
   type FiveRoundProgress,
   getCurrentRound,
+  getScoreBand,
   submitRoundGuess,
 } from '@whereabouts/game-engine';
 import { useEffect, useState } from 'react';
@@ -49,15 +50,16 @@ function FiveRoundHeader({ progress }: { progress: FiveRoundProgress }) {
       <ol className="flex gap-4" aria-label="Daily round progress">
         {Array.from({ length: 5 }, (_, index) => {
           const guess = progress.guesses[index];
+          const tier = guess ? getScoreBand(guess.points) : undefined;
           return (
             <li key={`round-${index + 1}`}>
               <span
                 aria-label={
                   guess
-                    ? `Round ${index + 1}: ${guess.tier}, ${guess.points} points`
+                    ? `Round ${index + 1}: ${tier}, ${guess.points} points`
                     : `Round ${index + 1}: not played`
                 }
-                className={`block size-8 rounded-full border-2 ${guess ? tierDotStyles[guess.tier] : 'border-rule bg-transparent'}`}
+                className={`block size-8 rounded-full border-2 ${tier ? tierDotStyles[tier] : 'border-rule bg-transparent'}`}
                 role="img"
               />
             </li>
@@ -158,7 +160,7 @@ export function FiveRoundGameScreen({
         <main className="min-h-screen bg-background px-4 py-5 text-paper sm:px-6 sm:py-8">
           <div className="mx-auto max-w-2xl space-y-6">
             <FiveRoundHeader progress={progress} />
-            {caseData.schemaVersion === 3 ? (
+            {caseData.schemaVersion === 4 ? (
               <ThemeBriefing theme={caseData.theme} />
             ) : null}
             <RoundReveal
@@ -167,7 +169,6 @@ export function FiveRoundGameScreen({
               points={viewedGuess.points}
               round={revealedRound}
               roundNumber={viewedRevealIndex + 1}
-              tier={viewedGuess.tier}
             />
             <nav aria-label="Result history" className="flex gap-3">
               {viewedRevealIndex > 0 ? (
@@ -233,7 +234,7 @@ export function FiveRoundGameScreen({
       <main className="min-h-screen bg-background px-4 py-5 text-paper sm:px-6 sm:py-8">
         <div className="mx-auto max-w-2xl space-y-6">
           <FiveRoundHeader progress={progress} />
-          {caseData.schemaVersion === 3 ? (
+          {caseData.schemaVersion === 4 ? (
             <ThemeBriefing theme={caseData.theme} />
           ) : null}
           <DailyScorePanel
@@ -281,7 +282,7 @@ export function FiveRoundGameScreen({
     <main className="min-h-screen bg-background px-4 py-5 text-paper sm:px-6 sm:py-8">
       <div className="mx-auto max-w-2xl space-y-6">
         <FiveRoundHeader progress={progress} />
-        {caseData.schemaVersion === 3 ? (
+        {caseData.schemaVersion === 4 ? (
           <ThemeBriefing theme={caseData.theme} />
         ) : null}
         <RoundBriefing round={currentRound} roundNumber={roundNumber} />

@@ -1,6 +1,7 @@
 import type { FiveRoundDailyCase } from '@whereabouts/case-content';
 import {
   type FiveRoundProgress,
+  getScoreBand,
   getTotalScore,
 } from '@whereabouts/game-engine';
 import { useState } from 'react';
@@ -58,11 +59,12 @@ export function DailyScorePanel({
       <ol className="grid grid-cols-5 gap-2" aria-label="Round results">
         {progress.guesses.map((guess, index) => {
           const place = caseData.pois.find((poi) => poi.id === guess.poiId);
+          const tier = getScoreBand(guess.points);
           return (
             <li className="space-y-2 text-center" key={guess.roundId}>
               <span
                 aria-hidden="true"
-                className={`mx-auto grid size-11 place-items-center rounded-full border ${tierStyles[guess.tier]}`}
+                className={`mx-auto grid size-11 place-items-center rounded-full border ${tierStyles[tier]}`}
               >
                 {guess.points}
               </span>
@@ -73,7 +75,7 @@ export function DailyScorePanel({
                 {place?.name ?? 'Unknown place'}
               </span>
               <span className="block text-xs font-semibold capitalize">
-                {guess.tier}
+                {tier}
               </span>
             </li>
           );

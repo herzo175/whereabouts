@@ -59,23 +59,16 @@ function assembleCase(input: CritiqueInput): ThemedDailyCase {
       targetPoiId: round.targetPoiId,
       image: target?.image,
       clue: { text: round.clue.text, sourceIds },
-      results: round.results.map((result, resultIndex) => ({
+      results: round.results.map((result) => ({
         poiId: result.poiId,
-        tier:
-          result.poiId === round.targetPoiId
-            ? ('correct' as const)
-            : resultIndex < 4
-              ? ('hot' as const)
-              : resultIndex < 12
-                ? ('warm' as const)
-                : ('cold' as const),
+        points: result.similarityScore,
         text: result.text,
         sourceIds,
       })),
     };
   });
   return dailyCaseSchema.parse({
-    schemaVersion: 3,
+    schemaVersion: 4,
     publicationDate: input.publicationDate,
     revision: input.revision,
     caseNumber: 1,

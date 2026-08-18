@@ -33,7 +33,7 @@ function sourceList(caseData: DailyCase): string {
 }
 
 function themedReviewPacket(
-  caseData: Extract<DailyCase, { schemaVersion: 3 }>,
+  caseData: Extract<DailyCase, { schemaVersion: 4 }>,
   review?: GenerationReview,
 ): string {
   const pois = new Map(caseData.pois.map((poi) => [poi.id, poi]));
@@ -57,7 +57,7 @@ function themedReviewPacket(
       const results = round.results
         .map(
           (result) =>
-            `- **${result.tier} · ${pois.get(result.poiId)?.name ?? result.poiId}**: ${result.text} (${linked(result.sourceIds)})`,
+            `- **${result.points} points · ${pois.get(result.poiId)?.name ?? result.poiId}**: ${result.text} (${linked(result.sourceIds)})`,
         )
         .join('\n');
       const verdict = review?.clueVerdicts.find(

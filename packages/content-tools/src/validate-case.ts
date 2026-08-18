@@ -79,21 +79,18 @@ export function validateCaseForPublication(value: unknown): ValidationIssue[] {
   }
 
   for (const [roundIndex, round] of dailyCase.rounds.entries()) {
-    const counts = { hot: 0, warm: 0, cold: 0 };
-    for (const result of round.results) {
-      if (result.tier !== 'correct') counts[result.tier] += 1;
-    }
-    if (
-      counts.hot < 3 ||
-      counts.hot > 5 ||
-      counts.warm < 7 ||
-      counts.warm > 10 ||
-      counts.cold < 9 ||
-      counts.cold > 14
-    ) {
+    const incorrectPoints = round.results
+      .filter((result) => result.poiId !== round.targetPoiId)
+      .map((result) => result.points);
+    const spansEveryBand =
+      incorrectPoints.some((points) => points >= 75) &&
+      incorrectPoints.some((points) => points >= 40 && points < 75) &&
+      incorrectPoints.some((points) => points < 40);
+    if (!spansEveryBand || new Set(incorrectPoints).size < 8) {
       issues.push({
         path: `rounds[${roundIndex}].results`,
-        message: 'Round must contain 3–5 hot, 7–10 warm, and 9–14 cold results',
+        message:
+          'Round scores must span hot, warm, and cold bands with meaningful variation',
       });
     }
   }

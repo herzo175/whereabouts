@@ -1,6 +1,7 @@
 import type { FiveRoundDailyCase } from '@whereabouts/case-content';
 import {
   type FiveRoundProgress,
+  getScoreBand,
   getTotalScore,
 } from '@whereabouts/game-engine';
 
@@ -50,7 +51,9 @@ export function buildShareText(
   const normalizedOrigin = origin.replace(/\/+$/, '');
   return [
     'WHEREABOUTS',
-    progress.guesses.map((guess) => tokenEmoji[guess.tier]).join(' '),
+    progress.guesses
+      .map((guess) => tokenEmoji[getScoreBand(guess.points)])
+      .join(' '),
     `${getTotalScore(progress)} / 500`,
     normalizedOrigin,
   ].join('\n');

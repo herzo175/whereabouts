@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "publicationDate": "2026-08-24",
   "revision": 1,
   "caseNumber": 20689,
@@ -402,153 +402,153 @@
       "results": [
         {
           "poiId": "obs-001",
-          "tier": "cold",
           "text": "Empire State Building Observatory is a themed comparison candidate: Public observatories on the 86th and 102nd floors provide panoramic views from New York's landmark skyscraper.",
-          "sourceIds": ["source-01", "source-09"]
+          "sourceIds": ["source-01", "source-09"],
+          "points": 38
         },
         {
           "poiId": "obs-002",
-          "tier": "cold",
           "text": "Top of the Rock is a themed comparison candidate: Top of the Rock is a named public observation deck in Rockefeller Center's 30 Rockefeller Plaza.",
-          "sourceIds": ["source-02", "source-09"]
+          "sourceIds": ["source-02", "source-09"],
+          "points": 35
         },
         {
           "poiId": "obs-003",
-          "tier": "cold",
           "text": "One World Observatory is a themed comparison candidate: One World Observatory is a ticketed public viewing attraction at the top of One World Trade Center.",
-          "sourceIds": ["source-03", "source-09"]
+          "sourceIds": ["source-03", "source-09"],
+          "points": 32
         },
         {
           "poiId": "obs-004",
-          "tier": "cold",
           "text": "Edge is a themed comparison candidate: Edge is a named, regularly ticketed observation deck projecting from the 100th floor of 30 Hudson Yards.",
-          "sourceIds": ["source-04", "source-09"]
+          "sourceIds": ["source-04", "source-09"],
+          "points": 29
         },
         {
           "poiId": "obs-005",
-          "tier": "cold",
           "text": "SUMMIT One Vanderbilt is a themed comparison candidate: SUMMIT One Vanderbilt is a permanent public observation experience occupying upper floors of One Vanderbilt.",
-          "sourceIds": ["source-05", "source-09"]
+          "sourceIds": ["source-05", "source-09"],
+          "points": 26
         },
         {
           "poiId": "obs-006",
-          "tier": "warm",
           "text": "Skydeck Chicago is a themed comparison candidate: Skydeck Chicago is the named public observation deck on the upper floors of Willis Tower.",
-          "sourceIds": ["source-06", "source-09"]
+          "sourceIds": ["source-06", "source-09"],
+          "points": 72
         },
         {
           "poiId": "obs-007",
-          "tier": "cold",
           "text": "360 Chicago is a themed comparison candidate: 360 Chicago is the public observation venue on the 94th floor of the former John Hancock Center.",
-          "sourceIds": ["source-07", "source-09"]
+          "sourceIds": ["source-07", "source-09"],
+          "points": 23
         },
         {
           "poiId": "obs-008",
-          "tier": "hot",
           "text": "CN Tower Observation Decks is a themed comparison candidate: The CN Tower contains several named public viewing levels, including the LookOut Level and SkyPod.",
-          "sourceIds": ["source-08", "source-09"]
+          "sourceIds": ["source-08", "source-09"],
+          "points": 96
         },
         {
           "poiId": "obs-009",
-          "tier": "correct",
           "text": "Space Needle Observation Deck is the round target: The Space Needle is a purpose-built landmark observation tower with publicly accessible viewing levels.",
-          "sourceIds": ["source-09"]
+          "sourceIds": ["source-09"],
+          "points": 100
         },
         {
           "poiId": "obs-010",
-          "tier": "hot",
           "text": "Vancouver Lookout is a themed comparison candidate: Vancouver Lookout is a dedicated public observation deck in the Harbour Centre high-rise.",
-          "sourceIds": ["source-10", "source-09"]
+          "sourceIds": ["source-10", "source-09"],
+          "points": 91
         },
         {
           "poiId": "obs-013",
-          "tier": "warm",
           "text": "Tokyo Skytree Tembo Deck is a themed comparison candidate: Tembo Deck is a dedicated public observation level inside the Tokyo Skytree tower.",
-          "sourceIds": ["source-11", "source-09"]
+          "sourceIds": ["source-11", "source-09"],
+          "points": 68
         },
         {
           "poiId": "obs-014",
-          "tier": "hot",
           "text": "Tokyo Tower Main Deck is a themed comparison candidate: Tokyo Tower's Main Deck is a permanent public observation level in the landmark communications tower.",
-          "sourceIds": ["source-12", "source-09"]
+          "sourceIds": ["source-12", "source-09"],
+          "points": 86
         },
         {
           "poiId": "obs-015",
-          "tier": "cold",
           "text": "Shibuya Sky is a themed comparison candidate: Shibuya Sky is a named rooftop observation facility atop the Shibuya Scramble Square high-rise.",
-          "sourceIds": ["source-13", "source-09"]
+          "sourceIds": ["source-13", "source-09"],
+          "points": 20
         },
         {
           "poiId": "obs-016",
-          "tier": "cold",
           "text": "Kuchu Teien Observatory is a themed comparison candidate: Kuchu Teien Observatory is the named public viewing venue at the top of Osaka's Umeda Sky Building.",
-          "sourceIds": ["source-14", "source-09"]
+          "sourceIds": ["source-14", "source-09"],
+          "points": 17
         },
         {
           "poiId": "obs-017",
-          "tier": "cold",
           "text": "Harukas 300 is a themed comparison candidate: Harukas 300 is the named observation facility occupying floors 58 through 60 of Abeno Harukas.",
-          "sourceIds": ["source-15", "source-09"]
+          "sourceIds": ["source-15", "source-09"],
+          "points": 14
         },
         {
           "poiId": "obs-018",
-          "tier": "cold",
           "text": "Shanghai Tower Observation Deck is a themed comparison candidate: Shanghai Tower has a dedicated public observation deck on one of the world's tallest skyscrapers.",
-          "sourceIds": ["source-16", "source-09"]
+          "sourceIds": ["source-16", "source-09"],
+          "points": 11
         },
         {
           "poiId": "obs-019",
-          "tier": "hot",
           "text": "Canton Tower Observation Deck is a themed comparison candidate: Canton Tower contains multiple public observation levels in a purpose-built landmark tower.",
-          "sourceIds": ["source-17", "source-09"]
+          "sourceIds": ["source-17", "source-09"],
+          "points": 81
         },
         {
           "poiId": "obs-020",
-          "tier": "warm",
           "text": "Taipei 101 Observatory is a themed comparison candidate: Taipei 101 Observatory is a dedicated public viewing facility within the landmark skyscraper.",
-          "sourceIds": ["source-18", "source-09"]
+          "sourceIds": ["source-18", "source-09"],
+          "points": 64
         },
         {
           "poiId": "obs-021",
-          "tier": "warm",
           "text": "Macau Tower Observation Deck is a themed comparison candidate: Macau Tower's observation levels are a named, ticketed public viewing venue in the landmark tower.",
-          "sourceIds": ["source-19", "source-09"]
+          "sourceIds": ["source-19", "source-09"],
+          "points": 60
         },
         {
           "poiId": "obs-022",
-          "tier": "warm",
           "text": "KL Tower Observation Deck is a themed comparison candidate: KL Tower offers dedicated public observation decks in a freestanding landmark telecommunications tower.",
-          "sourceIds": ["source-20", "source-09"]
+          "sourceIds": ["source-20", "source-09"],
+          "points": 56
         },
         {
           "poiId": "obs-023",
-          "tier": "warm",
           "text": "Petronas Twin Towers Skybridge and Observation Deck is a themed comparison candidate: The Petronas Towers' public Skybridge and observation deck form a dedicated viewing venue in the skyscraper complex.",
-          "sourceIds": ["source-21", "source-09"]
+          "sourceIds": ["source-21", "source-09"],
+          "points": 52
         },
         {
           "poiId": "obs-024",
-          "tier": "warm",
           "text": "At the Top, Burj Khalifa is a themed comparison candidate: At the Top is the named public observation attraction occupying elevated levels of Burj Khalifa.",
-          "sourceIds": ["source-22", "source-09"]
+          "sourceIds": ["source-22", "source-09"],
+          "points": 48
         },
         {
           "poiId": "obs-025",
-          "tier": "cold",
           "text": "Dubai Frame Observation Deck is a themed comparison candidate: The Dubai Frame is a purpose-built landmark structure with a regularly accessible elevated viewing bridge.",
-          "sourceIds": ["source-23", "source-09"]
+          "sourceIds": ["source-23", "source-09"],
+          "points": 8
         },
         {
           "poiId": "obs-039",
-          "tier": "cold",
           "text": "Sky100 Hong Kong Observation Deck is a themed comparison candidate: Sky100 is a named indoor public observation deck on the 100th floor of the International Commerce Centre.",
-          "sourceIds": ["source-24", "source-09"]
+          "sourceIds": ["source-24", "source-09"],
+          "points": 5
         },
         {
           "poiId": "obs-040",
-          "tier": "warm",
           "text": "Seoul Sky is a themed comparison candidate: Seoul Sky is the named public observation facility occupying upper floors of Lotte World Tower.",
-          "sourceIds": ["source-25", "source-09"]
+          "sourceIds": ["source-25", "source-09"],
+          "points": 44
         }
       ]
     },
@@ -568,153 +568,153 @@
       "results": [
         {
           "poiId": "obs-001",
-          "tier": "cold",
           "text": "Empire State Building Observatory is a themed comparison candidate: Public observatories on the 86th and 102nd floors provide panoramic views from New York's landmark skyscraper.",
-          "sourceIds": ["source-01", "source-16"]
+          "sourceIds": ["source-01", "source-16"],
+          "points": 38
         },
         {
           "poiId": "obs-002",
-          "tier": "cold",
           "text": "Top of the Rock is a themed comparison candidate: Top of the Rock is a named public observation deck in Rockefeller Center's 30 Rockefeller Plaza.",
-          "sourceIds": ["source-02", "source-16"]
+          "sourceIds": ["source-02", "source-16"],
+          "points": 35
         },
         {
           "poiId": "obs-003",
-          "tier": "hot",
           "text": "One World Observatory is a themed comparison candidate: One World Observatory is a ticketed public viewing attraction at the top of One World Trade Center.",
-          "sourceIds": ["source-03", "source-16"]
+          "sourceIds": ["source-03", "source-16"],
+          "points": 96
         },
         {
           "poiId": "obs-004",
-          "tier": "cold",
           "text": "Edge is a themed comparison candidate: Edge is a named, regularly ticketed observation deck projecting from the 100th floor of 30 Hudson Yards.",
-          "sourceIds": ["source-04", "source-16"]
+          "sourceIds": ["source-04", "source-16"],
+          "points": 32
         },
         {
           "poiId": "obs-005",
-          "tier": "cold",
           "text": "SUMMIT One Vanderbilt is a themed comparison candidate: SUMMIT One Vanderbilt is a permanent public observation experience occupying upper floors of One Vanderbilt.",
-          "sourceIds": ["source-05", "source-16"]
+          "sourceIds": ["source-05", "source-16"],
+          "points": 29
         },
         {
           "poiId": "obs-006",
-          "tier": "warm",
           "text": "Skydeck Chicago is a themed comparison candidate: Skydeck Chicago is the named public observation deck on the upper floors of Willis Tower.",
-          "sourceIds": ["source-06", "source-16"]
+          "sourceIds": ["source-06", "source-16"],
+          "points": 72
         },
         {
           "poiId": "obs-007",
-          "tier": "cold",
           "text": "360 Chicago is a themed comparison candidate: 360 Chicago is the public observation venue on the 94th floor of the former John Hancock Center.",
-          "sourceIds": ["source-07", "source-16"]
+          "sourceIds": ["source-07", "source-16"],
+          "points": 26
         },
         {
           "poiId": "obs-008",
-          "tier": "warm",
           "text": "CN Tower Observation Decks is a themed comparison candidate: The CN Tower contains several named public viewing levels, including the LookOut Level and SkyPod.",
-          "sourceIds": ["source-08", "source-16"]
+          "sourceIds": ["source-08", "source-16"],
+          "points": 68
         },
         {
           "poiId": "obs-009",
-          "tier": "cold",
           "text": "Space Needle Observation Deck is a themed comparison candidate: The Space Needle is a purpose-built landmark observation tower with publicly accessible viewing levels.",
-          "sourceIds": ["source-09", "source-16"]
+          "sourceIds": ["source-09", "source-16"],
+          "points": 23
         },
         {
           "poiId": "obs-010",
-          "tier": "cold",
           "text": "Vancouver Lookout is a themed comparison candidate: Vancouver Lookout is a dedicated public observation deck in the Harbour Centre high-rise.",
-          "sourceIds": ["source-10", "source-16"]
+          "sourceIds": ["source-10", "source-16"],
+          "points": 20
         },
         {
           "poiId": "obs-013",
-          "tier": "hot",
           "text": "Tokyo Skytree Tembo Deck is a themed comparison candidate: Tembo Deck is a dedicated public observation level inside the Tokyo Skytree tower.",
-          "sourceIds": ["source-11", "source-16"]
+          "sourceIds": ["source-11", "source-16"],
+          "points": 91
         },
         {
           "poiId": "obs-014",
-          "tier": "cold",
           "text": "Tokyo Tower Main Deck is a themed comparison candidate: Tokyo Tower's Main Deck is a permanent public observation level in the landmark communications tower.",
-          "sourceIds": ["source-12", "source-16"]
+          "sourceIds": ["source-12", "source-16"],
+          "points": 17
         },
         {
           "poiId": "obs-015",
-          "tier": "cold",
           "text": "Shibuya Sky is a themed comparison candidate: Shibuya Sky is a named rooftop observation facility atop the Shibuya Scramble Square high-rise.",
-          "sourceIds": ["source-13", "source-16"]
+          "sourceIds": ["source-13", "source-16"],
+          "points": 14
         },
         {
           "poiId": "obs-016",
-          "tier": "cold",
           "text": "Kuchu Teien Observatory is a themed comparison candidate: Kuchu Teien Observatory is the named public viewing venue at the top of Osaka's Umeda Sky Building.",
-          "sourceIds": ["source-14", "source-16"]
+          "sourceIds": ["source-14", "source-16"],
+          "points": 11
         },
         {
           "poiId": "obs-017",
-          "tier": "warm",
           "text": "Harukas 300 is a themed comparison candidate: Harukas 300 is the named observation facility occupying floors 58 through 60 of Abeno Harukas.",
-          "sourceIds": ["source-15", "source-16"]
+          "sourceIds": ["source-15", "source-16"],
+          "points": 64
         },
         {
           "poiId": "obs-018",
-          "tier": "correct",
           "text": "Shanghai Tower Observation Deck is the round target: Shanghai Tower has a dedicated public observation deck on one of the world's tallest skyscrapers.",
-          "sourceIds": ["source-16"]
+          "sourceIds": ["source-16"],
+          "points": 100
         },
         {
           "poiId": "obs-019",
-          "tier": "warm",
           "text": "Canton Tower Observation Deck is a themed comparison candidate: Canton Tower contains multiple public observation levels in a purpose-built landmark tower.",
-          "sourceIds": ["source-17", "source-16"]
+          "sourceIds": ["source-17", "source-16"],
+          "points": 60
         },
         {
           "poiId": "obs-020",
-          "tier": "hot",
           "text": "Taipei 101 Observatory is a themed comparison candidate: Taipei 101 Observatory is a dedicated public viewing facility within the landmark skyscraper.",
-          "sourceIds": ["source-18", "source-16"]
+          "sourceIds": ["source-18", "source-16"],
+          "points": 86
         },
         {
           "poiId": "obs-021",
-          "tier": "warm",
           "text": "Macau Tower Observation Deck is a themed comparison candidate: Macau Tower's observation levels are a named, ticketed public viewing venue in the landmark tower.",
-          "sourceIds": ["source-19", "source-16"]
+          "sourceIds": ["source-19", "source-16"],
+          "points": 56
         },
         {
           "poiId": "obs-022",
-          "tier": "warm",
           "text": "KL Tower Observation Deck is a themed comparison candidate: KL Tower offers dedicated public observation decks in a freestanding landmark telecommunications tower.",
-          "sourceIds": ["source-20", "source-16"]
+          "sourceIds": ["source-20", "source-16"],
+          "points": 52
         },
         {
           "poiId": "obs-023",
-          "tier": "warm",
           "text": "Petronas Twin Towers Skybridge and Observation Deck is a themed comparison candidate: The Petronas Towers' public Skybridge and observation deck form a dedicated viewing venue in the skyscraper complex.",
-          "sourceIds": ["source-21", "source-16"]
+          "sourceIds": ["source-21", "source-16"],
+          "points": 48
         },
         {
           "poiId": "obs-024",
-          "tier": "hot",
           "text": "At the Top, Burj Khalifa is a themed comparison candidate: At the Top is the named public observation attraction occupying elevated levels of Burj Khalifa.",
-          "sourceIds": ["source-22", "source-16"]
+          "sourceIds": ["source-22", "source-16"],
+          "points": 81
         },
         {
           "poiId": "obs-025",
-          "tier": "cold",
           "text": "Dubai Frame Observation Deck is a themed comparison candidate: The Dubai Frame is a purpose-built landmark structure with a regularly accessible elevated viewing bridge.",
-          "sourceIds": ["source-23", "source-16"]
+          "sourceIds": ["source-23", "source-16"],
+          "points": 8
         },
         {
           "poiId": "obs-039",
-          "tier": "cold",
           "text": "Sky100 Hong Kong Observation Deck is a themed comparison candidate: Sky100 is a named indoor public observation deck on the 100th floor of the International Commerce Centre.",
-          "sourceIds": ["source-24", "source-16"]
+          "sourceIds": ["source-24", "source-16"],
+          "points": 5
         },
         {
           "poiId": "obs-040",
-          "tier": "warm",
           "text": "Seoul Sky is a themed comparison candidate: Seoul Sky is the named public observation facility occupying upper floors of Lotte World Tower.",
-          "sourceIds": ["source-25", "source-16"]
+          "sourceIds": ["source-25", "source-16"],
+          "points": 44
         }
       ]
     },
@@ -734,153 +734,153 @@
       "results": [
         {
           "poiId": "obs-001",
-          "tier": "cold",
           "text": "Empire State Building Observatory is a themed comparison candidate: Public observatories on the 86th and 102nd floors provide panoramic views from New York's landmark skyscraper.",
-          "sourceIds": ["source-01", "source-23"]
+          "sourceIds": ["source-01", "source-23"],
+          "points": 38
         },
         {
           "poiId": "obs-002",
-          "tier": "cold",
           "text": "Top of the Rock is a themed comparison candidate: Top of the Rock is a named public observation deck in Rockefeller Center's 30 Rockefeller Plaza.",
-          "sourceIds": ["source-02", "source-23"]
+          "sourceIds": ["source-02", "source-23"],
+          "points": 35
         },
         {
           "poiId": "obs-003",
-          "tier": "cold",
           "text": "One World Observatory is a themed comparison candidate: One World Observatory is a ticketed public viewing attraction at the top of One World Trade Center.",
-          "sourceIds": ["source-03", "source-23"]
+          "sourceIds": ["source-03", "source-23"],
+          "points": 32
         },
         {
           "poiId": "obs-004",
-          "tier": "cold",
           "text": "Edge is a themed comparison candidate: Edge is a named, regularly ticketed observation deck projecting from the 100th floor of 30 Hudson Yards.",
-          "sourceIds": ["source-04", "source-23"]
+          "sourceIds": ["source-04", "source-23"],
+          "points": 29
         },
         {
           "poiId": "obs-005",
-          "tier": "cold",
           "text": "SUMMIT One Vanderbilt is a themed comparison candidate: SUMMIT One Vanderbilt is a permanent public observation experience occupying upper floors of One Vanderbilt.",
-          "sourceIds": ["source-05", "source-23"]
+          "sourceIds": ["source-05", "source-23"],
+          "points": 26
         },
         {
           "poiId": "obs-006",
-          "tier": "cold",
           "text": "Skydeck Chicago is a themed comparison candidate: Skydeck Chicago is the named public observation deck on the upper floors of Willis Tower.",
-          "sourceIds": ["source-06", "source-23"]
+          "sourceIds": ["source-06", "source-23"],
+          "points": 23
         },
         {
           "poiId": "obs-007",
-          "tier": "cold",
           "text": "360 Chicago is a themed comparison candidate: 360 Chicago is the public observation venue on the 94th floor of the former John Hancock Center.",
-          "sourceIds": ["source-07", "source-23"]
+          "sourceIds": ["source-07", "source-23"],
+          "points": 20
         },
         {
           "poiId": "obs-008",
-          "tier": "hot",
           "text": "CN Tower Observation Decks is a themed comparison candidate: The CN Tower contains several named public viewing levels, including the LookOut Level and SkyPod.",
-          "sourceIds": ["source-08", "source-23"]
+          "sourceIds": ["source-08", "source-23"],
+          "points": 96
         },
         {
           "poiId": "obs-009",
-          "tier": "warm",
           "text": "Space Needle Observation Deck is a themed comparison candidate: The Space Needle is a purpose-built landmark observation tower with publicly accessible viewing levels.",
-          "sourceIds": ["source-09", "source-23"]
+          "sourceIds": ["source-09", "source-23"],
+          "points": 72
         },
         {
           "poiId": "obs-010",
-          "tier": "warm",
           "text": "Vancouver Lookout is a themed comparison candidate: Vancouver Lookout is a dedicated public observation deck in the Harbour Centre high-rise.",
-          "sourceIds": ["source-10", "source-23"]
+          "sourceIds": ["source-10", "source-23"],
+          "points": 68
         },
         {
           "poiId": "obs-013",
-          "tier": "warm",
           "text": "Tokyo Skytree Tembo Deck is a themed comparison candidate: Tembo Deck is a dedicated public observation level inside the Tokyo Skytree tower.",
-          "sourceIds": ["source-11", "source-23"]
+          "sourceIds": ["source-11", "source-23"],
+          "points": 64
         },
         {
           "poiId": "obs-014",
-          "tier": "warm",
           "text": "Tokyo Tower Main Deck is a themed comparison candidate: Tokyo Tower's Main Deck is a permanent public observation level in the landmark communications tower.",
-          "sourceIds": ["source-12", "source-23"]
+          "sourceIds": ["source-12", "source-23"],
+          "points": 60
         },
         {
           "poiId": "obs-015",
-          "tier": "cold",
           "text": "Shibuya Sky is a themed comparison candidate: Shibuya Sky is a named rooftop observation facility atop the Shibuya Scramble Square high-rise.",
-          "sourceIds": ["source-13", "source-23"]
+          "sourceIds": ["source-13", "source-23"],
+          "points": 17
         },
         {
           "poiId": "obs-016",
-          "tier": "cold",
           "text": "Kuchu Teien Observatory is a themed comparison candidate: Kuchu Teien Observatory is the named public viewing venue at the top of Osaka's Umeda Sky Building.",
-          "sourceIds": ["source-14", "source-23"]
+          "sourceIds": ["source-14", "source-23"],
+          "points": 14
         },
         {
           "poiId": "obs-017",
-          "tier": "cold",
           "text": "Harukas 300 is a themed comparison candidate: Harukas 300 is the named observation facility occupying floors 58 through 60 of Abeno Harukas.",
-          "sourceIds": ["source-15", "source-23"]
+          "sourceIds": ["source-15", "source-23"],
+          "points": 11
         },
         {
           "poiId": "obs-018",
-          "tier": "cold",
           "text": "Shanghai Tower Observation Deck is a themed comparison candidate: Shanghai Tower has a dedicated public observation deck on one of the world's tallest skyscrapers.",
-          "sourceIds": ["source-16", "source-23"]
+          "sourceIds": ["source-16", "source-23"],
+          "points": 8
         },
         {
           "poiId": "obs-019",
-          "tier": "hot",
           "text": "Canton Tower Observation Deck is a themed comparison candidate: Canton Tower contains multiple public observation levels in a purpose-built landmark tower.",
-          "sourceIds": ["source-17", "source-23"]
+          "sourceIds": ["source-17", "source-23"],
+          "points": 91
         },
         {
           "poiId": "obs-020",
-          "tier": "warm",
           "text": "Taipei 101 Observatory is a themed comparison candidate: Taipei 101 Observatory is a dedicated public viewing facility within the landmark skyscraper.",
-          "sourceIds": ["source-18", "source-23"]
+          "sourceIds": ["source-18", "source-23"],
+          "points": 56
         },
         {
           "poiId": "obs-021",
-          "tier": "hot",
           "text": "Macau Tower Observation Deck is a themed comparison candidate: Macau Tower's observation levels are a named, ticketed public viewing venue in the landmark tower.",
-          "sourceIds": ["source-19", "source-23"]
+          "sourceIds": ["source-19", "source-23"],
+          "points": 86
         },
         {
           "poiId": "obs-022",
-          "tier": "hot",
           "text": "KL Tower Observation Deck is a themed comparison candidate: KL Tower offers dedicated public observation decks in a freestanding landmark telecommunications tower.",
-          "sourceIds": ["source-20", "source-23"]
+          "sourceIds": ["source-20", "source-23"],
+          "points": 81
         },
         {
           "poiId": "obs-023",
-          "tier": "warm",
           "text": "Petronas Twin Towers Skybridge and Observation Deck is a themed comparison candidate: The Petronas Towers' public Skybridge and observation deck form a dedicated viewing venue in the skyscraper complex.",
-          "sourceIds": ["source-21", "source-23"]
+          "sourceIds": ["source-21", "source-23"],
+          "points": 52
         },
         {
           "poiId": "obs-024",
-          "tier": "warm",
           "text": "At the Top, Burj Khalifa is a themed comparison candidate: At the Top is the named public observation attraction occupying elevated levels of Burj Khalifa.",
-          "sourceIds": ["source-22", "source-23"]
+          "sourceIds": ["source-22", "source-23"],
+          "points": 48
         },
         {
           "poiId": "obs-025",
-          "tier": "correct",
           "text": "Dubai Frame Observation Deck is the round target: The Dubai Frame is a purpose-built landmark structure with a regularly accessible elevated viewing bridge.",
-          "sourceIds": ["source-23"]
+          "sourceIds": ["source-23"],
+          "points": 100
         },
         {
           "poiId": "obs-039",
-          "tier": "cold",
           "text": "Sky100 Hong Kong Observation Deck is a themed comparison candidate: Sky100 is a named indoor public observation deck on the 100th floor of the International Commerce Centre.",
-          "sourceIds": ["source-24", "source-23"]
+          "sourceIds": ["source-24", "source-23"],
+          "points": 5
         },
         {
           "poiId": "obs-040",
-          "tier": "warm",
           "text": "Seoul Sky is a themed comparison candidate: Seoul Sky is the named public observation facility occupying upper floors of Lotte World Tower.",
-          "sourceIds": ["source-25", "source-23"]
+          "sourceIds": ["source-25", "source-23"],
+          "points": 44
         }
       ]
     },
@@ -900,153 +900,153 @@
       "results": [
         {
           "poiId": "obs-001",
-          "tier": "cold",
           "text": "Empire State Building Observatory is a themed comparison candidate: Public observatories on the 86th and 102nd floors provide panoramic views from New York's landmark skyscraper.",
-          "sourceIds": ["source-01", "source-24"]
+          "sourceIds": ["source-01", "source-24"],
+          "points": 38
         },
         {
           "poiId": "obs-002",
-          "tier": "cold",
           "text": "Top of the Rock is a themed comparison candidate: Top of the Rock is a named public observation deck in Rockefeller Center's 30 Rockefeller Plaza.",
-          "sourceIds": ["source-02", "source-24"]
+          "sourceIds": ["source-02", "source-24"],
+          "points": 35
         },
         {
           "poiId": "obs-003",
-          "tier": "hot",
           "text": "One World Observatory is a themed comparison candidate: One World Observatory is a ticketed public viewing attraction at the top of One World Trade Center.",
-          "sourceIds": ["source-03", "source-24"]
+          "sourceIds": ["source-03", "source-24"],
+          "points": 96
         },
         {
           "poiId": "obs-004",
-          "tier": "cold",
           "text": "Edge is a themed comparison candidate: Edge is a named, regularly ticketed observation deck projecting from the 100th floor of 30 Hudson Yards.",
-          "sourceIds": ["source-04", "source-24"]
+          "sourceIds": ["source-04", "source-24"],
+          "points": 32
         },
         {
           "poiId": "obs-005",
-          "tier": "cold",
           "text": "SUMMIT One Vanderbilt is a themed comparison candidate: SUMMIT One Vanderbilt is a permanent public observation experience occupying upper floors of One Vanderbilt.",
-          "sourceIds": ["source-05", "source-24"]
+          "sourceIds": ["source-05", "source-24"],
+          "points": 29
         },
         {
           "poiId": "obs-006",
-          "tier": "warm",
           "text": "Skydeck Chicago is a themed comparison candidate: Skydeck Chicago is the named public observation deck on the upper floors of Willis Tower.",
-          "sourceIds": ["source-06", "source-24"]
+          "sourceIds": ["source-06", "source-24"],
+          "points": 72
         },
         {
           "poiId": "obs-007",
-          "tier": "cold",
           "text": "360 Chicago is a themed comparison candidate: 360 Chicago is the public observation venue on the 94th floor of the former John Hancock Center.",
-          "sourceIds": ["source-07", "source-24"]
+          "sourceIds": ["source-07", "source-24"],
+          "points": 26
         },
         {
           "poiId": "obs-008",
-          "tier": "warm",
           "text": "CN Tower Observation Decks is a themed comparison candidate: The CN Tower contains several named public viewing levels, including the LookOut Level and SkyPod.",
-          "sourceIds": ["source-08", "source-24"]
+          "sourceIds": ["source-08", "source-24"],
+          "points": 68
         },
         {
           "poiId": "obs-009",
-          "tier": "cold",
           "text": "Space Needle Observation Deck is a themed comparison candidate: The Space Needle is a purpose-built landmark observation tower with publicly accessible viewing levels.",
-          "sourceIds": ["source-09", "source-24"]
+          "sourceIds": ["source-09", "source-24"],
+          "points": 23
         },
         {
           "poiId": "obs-010",
-          "tier": "warm",
           "text": "Vancouver Lookout is a themed comparison candidate: Vancouver Lookout is a dedicated public observation deck in the Harbour Centre high-rise.",
-          "sourceIds": ["source-10", "source-24"]
+          "sourceIds": ["source-10", "source-24"],
+          "points": 64
         },
         {
           "poiId": "obs-013",
-          "tier": "hot",
           "text": "Tokyo Skytree Tembo Deck is a themed comparison candidate: Tembo Deck is a dedicated public observation level inside the Tokyo Skytree tower.",
-          "sourceIds": ["source-11", "source-24"]
+          "sourceIds": ["source-11", "source-24"],
+          "points": 91
         },
         {
           "poiId": "obs-014",
-          "tier": "cold",
           "text": "Tokyo Tower Main Deck is a themed comparison candidate: Tokyo Tower's Main Deck is a permanent public observation level in the landmark communications tower.",
-          "sourceIds": ["source-12", "source-24"]
+          "sourceIds": ["source-12", "source-24"],
+          "points": 20
         },
         {
           "poiId": "obs-015",
-          "tier": "cold",
           "text": "Shibuya Sky is a themed comparison candidate: Shibuya Sky is a named rooftop observation facility atop the Shibuya Scramble Square high-rise.",
-          "sourceIds": ["source-13", "source-24"]
+          "sourceIds": ["source-13", "source-24"],
+          "points": 17
         },
         {
           "poiId": "obs-016",
-          "tier": "cold",
           "text": "Kuchu Teien Observatory is a themed comparison candidate: Kuchu Teien Observatory is the named public viewing venue at the top of Osaka's Umeda Sky Building.",
-          "sourceIds": ["source-14", "source-24"]
+          "sourceIds": ["source-14", "source-24"],
+          "points": 14
         },
         {
           "poiId": "obs-017",
-          "tier": "warm",
           "text": "Harukas 300 is a themed comparison candidate: Harukas 300 is the named observation facility occupying floors 58 through 60 of Abeno Harukas.",
-          "sourceIds": ["source-15", "source-24"]
+          "sourceIds": ["source-15", "source-24"],
+          "points": 60
         },
         {
           "poiId": "obs-018",
-          "tier": "hot",
           "text": "Shanghai Tower Observation Deck is a themed comparison candidate: Shanghai Tower has a dedicated public observation deck on one of the world's tallest skyscrapers.",
-          "sourceIds": ["source-16", "source-24"]
+          "sourceIds": ["source-16", "source-24"],
+          "points": 86
         },
         {
           "poiId": "obs-019",
-          "tier": "cold",
           "text": "Canton Tower Observation Deck is a themed comparison candidate: Canton Tower contains multiple public observation levels in a purpose-built landmark tower.",
-          "sourceIds": ["source-17", "source-24"]
+          "sourceIds": ["source-17", "source-24"],
+          "points": 11
         },
         {
           "poiId": "obs-020",
-          "tier": "hot",
           "text": "Taipei 101 Observatory is a themed comparison candidate: Taipei 101 Observatory is a dedicated public viewing facility within the landmark skyscraper.",
-          "sourceIds": ["source-18", "source-24"]
+          "sourceIds": ["source-18", "source-24"],
+          "points": 81
         },
         {
           "poiId": "obs-021",
-          "tier": "warm",
           "text": "Macau Tower Observation Deck is a themed comparison candidate: Macau Tower's observation levels are a named, ticketed public viewing venue in the landmark tower.",
-          "sourceIds": ["source-19", "source-24"]
+          "sourceIds": ["source-19", "source-24"],
+          "points": 56
         },
         {
           "poiId": "obs-022",
-          "tier": "cold",
           "text": "KL Tower Observation Deck is a themed comparison candidate: KL Tower offers dedicated public observation decks in a freestanding landmark telecommunications tower.",
-          "sourceIds": ["source-20", "source-24"]
+          "sourceIds": ["source-20", "source-24"],
+          "points": 8
         },
         {
           "poiId": "obs-023",
-          "tier": "warm",
           "text": "Petronas Twin Towers Skybridge and Observation Deck is a themed comparison candidate: The Petronas Towers' public Skybridge and observation deck form a dedicated viewing venue in the skyscraper complex.",
-          "sourceIds": ["source-21", "source-24"]
+          "sourceIds": ["source-21", "source-24"],
+          "points": 52
         },
         {
           "poiId": "obs-024",
-          "tier": "warm",
           "text": "At the Top, Burj Khalifa is a themed comparison candidate: At the Top is the named public observation attraction occupying elevated levels of Burj Khalifa.",
-          "sourceIds": ["source-22", "source-24"]
+          "sourceIds": ["source-22", "source-24"],
+          "points": 48
         },
         {
           "poiId": "obs-025",
-          "tier": "cold",
           "text": "Dubai Frame Observation Deck is a themed comparison candidate: The Dubai Frame is a purpose-built landmark structure with a regularly accessible elevated viewing bridge.",
-          "sourceIds": ["source-23", "source-24"]
+          "sourceIds": ["source-23", "source-24"],
+          "points": 5
         },
         {
           "poiId": "obs-039",
-          "tier": "correct",
           "text": "Sky100 Hong Kong Observation Deck is the round target: Sky100 is a named indoor public observation deck on the 100th floor of the International Commerce Centre.",
-          "sourceIds": ["source-24"]
+          "sourceIds": ["source-24"],
+          "points": 100
         },
         {
           "poiId": "obs-040",
-          "tier": "warm",
           "text": "Seoul Sky is a themed comparison candidate: Seoul Sky is the named public observation facility occupying upper floors of Lotte World Tower.",
-          "sourceIds": ["source-25", "source-24"]
+          "sourceIds": ["source-25", "source-24"],
+          "points": 44
         }
       ]
     },
@@ -1066,153 +1066,153 @@
       "results": [
         {
           "poiId": "obs-001",
-          "tier": "correct",
           "text": "Empire State Building Observatory is the round target: Public observatories on the 86th and 102nd floors provide panoramic views from New York's landmark skyscraper.",
-          "sourceIds": ["source-01"]
+          "sourceIds": ["source-01"],
+          "points": 100
         },
         {
           "poiId": "obs-002",
-          "tier": "hot",
           "text": "Top of the Rock is a themed comparison candidate: Top of the Rock is a named public observation deck in Rockefeller Center's 30 Rockefeller Plaza.",
-          "sourceIds": ["source-02", "source-01"]
+          "sourceIds": ["source-02", "source-01"],
+          "points": 96
         },
         {
           "poiId": "obs-003",
-          "tier": "hot",
           "text": "One World Observatory is a themed comparison candidate: One World Observatory is a ticketed public viewing attraction at the top of One World Trade Center.",
-          "sourceIds": ["source-03", "source-01"]
+          "sourceIds": ["source-03", "source-01"],
+          "points": 91
         },
         {
           "poiId": "obs-004",
-          "tier": "warm",
           "text": "Edge is a themed comparison candidate: Edge is a named, regularly ticketed observation deck projecting from the 100th floor of 30 Hudson Yards.",
-          "sourceIds": ["source-04", "source-01"]
+          "sourceIds": ["source-04", "source-01"],
+          "points": 72
         },
         {
           "poiId": "obs-005",
-          "tier": "warm",
           "text": "SUMMIT One Vanderbilt is a themed comparison candidate: SUMMIT One Vanderbilt is a permanent public observation experience occupying upper floors of One Vanderbilt.",
-          "sourceIds": ["source-05", "source-01"]
+          "sourceIds": ["source-05", "source-01"],
+          "points": 68
         },
         {
           "poiId": "obs-006",
-          "tier": "hot",
           "text": "Skydeck Chicago is a themed comparison candidate: Skydeck Chicago is the named public observation deck on the upper floors of Willis Tower.",
-          "sourceIds": ["source-06", "source-01"]
+          "sourceIds": ["source-06", "source-01"],
+          "points": 86
         },
         {
           "poiId": "obs-007",
-          "tier": "cold",
           "text": "360 Chicago is a themed comparison candidate: 360 Chicago is the public observation venue on the 94th floor of the former John Hancock Center.",
-          "sourceIds": ["source-07", "source-01"]
+          "sourceIds": ["source-07", "source-01"],
+          "points": 38
         },
         {
           "poiId": "obs-008",
-          "tier": "cold",
           "text": "CN Tower Observation Decks is a themed comparison candidate: The CN Tower contains several named public viewing levels, including the LookOut Level and SkyPod.",
-          "sourceIds": ["source-08", "source-01"]
+          "sourceIds": ["source-08", "source-01"],
+          "points": 35
         },
         {
           "poiId": "obs-009",
-          "tier": "cold",
           "text": "Space Needle Observation Deck is a themed comparison candidate: The Space Needle is a purpose-built landmark observation tower with publicly accessible viewing levels.",
-          "sourceIds": ["source-09", "source-01"]
+          "sourceIds": ["source-09", "source-01"],
+          "points": 32
         },
         {
           "poiId": "obs-010",
-          "tier": "cold",
           "text": "Vancouver Lookout is a themed comparison candidate: Vancouver Lookout is a dedicated public observation deck in the Harbour Centre high-rise.",
-          "sourceIds": ["source-10", "source-01"]
+          "sourceIds": ["source-10", "source-01"],
+          "points": 29
         },
         {
           "poiId": "obs-013",
-          "tier": "warm",
           "text": "Tokyo Skytree Tembo Deck is a themed comparison candidate: Tembo Deck is a dedicated public observation level inside the Tokyo Skytree tower.",
-          "sourceIds": ["source-11", "source-01"]
+          "sourceIds": ["source-11", "source-01"],
+          "points": 64
         },
         {
           "poiId": "obs-014",
-          "tier": "cold",
           "text": "Tokyo Tower Main Deck is a themed comparison candidate: Tokyo Tower's Main Deck is a permanent public observation level in the landmark communications tower.",
-          "sourceIds": ["source-12", "source-01"]
+          "sourceIds": ["source-12", "source-01"],
+          "points": 26
         },
         {
           "poiId": "obs-015",
-          "tier": "cold",
           "text": "Shibuya Sky is a themed comparison candidate: Shibuya Sky is a named rooftop observation facility atop the Shibuya Scramble Square high-rise.",
-          "sourceIds": ["source-13", "source-01"]
+          "sourceIds": ["source-13", "source-01"],
+          "points": 23
         },
         {
           "poiId": "obs-016",
-          "tier": "cold",
           "text": "Kuchu Teien Observatory is a themed comparison candidate: Kuchu Teien Observatory is the named public viewing venue at the top of Osaka's Umeda Sky Building.",
-          "sourceIds": ["source-14", "source-01"]
+          "sourceIds": ["source-14", "source-01"],
+          "points": 20
         },
         {
           "poiId": "obs-017",
-          "tier": "warm",
           "text": "Harukas 300 is a themed comparison candidate: Harukas 300 is the named observation facility occupying floors 58 through 60 of Abeno Harukas.",
-          "sourceIds": ["source-15", "source-01"]
+          "sourceIds": ["source-15", "source-01"],
+          "points": 60
         },
         {
           "poiId": "obs-018",
-          "tier": "hot",
           "text": "Shanghai Tower Observation Deck is a themed comparison candidate: Shanghai Tower has a dedicated public observation deck on one of the world's tallest skyscrapers.",
-          "sourceIds": ["source-16", "source-01"]
+          "sourceIds": ["source-16", "source-01"],
+          "points": 81
         },
         {
           "poiId": "obs-019",
-          "tier": "cold",
           "text": "Canton Tower Observation Deck is a themed comparison candidate: Canton Tower contains multiple public observation levels in a purpose-built landmark tower.",
-          "sourceIds": ["source-17", "source-01"]
+          "sourceIds": ["source-17", "source-01"],
+          "points": 17
         },
         {
           "poiId": "obs-020",
-          "tier": "warm",
           "text": "Taipei 101 Observatory is a themed comparison candidate: Taipei 101 Observatory is a dedicated public viewing facility within the landmark skyscraper.",
-          "sourceIds": ["source-18", "source-01"]
+          "sourceIds": ["source-18", "source-01"],
+          "points": 56
         },
         {
           "poiId": "obs-021",
-          "tier": "cold",
           "text": "Macau Tower Observation Deck is a themed comparison candidate: Macau Tower's observation levels are a named, ticketed public viewing venue in the landmark tower.",
-          "sourceIds": ["source-19", "source-01"]
+          "sourceIds": ["source-19", "source-01"],
+          "points": 14
         },
         {
           "poiId": "obs-022",
-          "tier": "cold",
           "text": "KL Tower Observation Deck is a themed comparison candidate: KL Tower offers dedicated public observation decks in a freestanding landmark telecommunications tower.",
-          "sourceIds": ["source-20", "source-01"]
+          "sourceIds": ["source-20", "source-01"],
+          "points": 11
         },
         {
           "poiId": "obs-023",
-          "tier": "warm",
           "text": "Petronas Twin Towers Skybridge and Observation Deck is a themed comparison candidate: The Petronas Towers' public Skybridge and observation deck form a dedicated viewing venue in the skyscraper complex.",
-          "sourceIds": ["source-21", "source-01"]
+          "sourceIds": ["source-21", "source-01"],
+          "points": 52
         },
         {
           "poiId": "obs-024",
-          "tier": "warm",
           "text": "At the Top, Burj Khalifa is a themed comparison candidate: At the Top is the named public observation attraction occupying elevated levels of Burj Khalifa.",
-          "sourceIds": ["source-22", "source-01"]
+          "sourceIds": ["source-22", "source-01"],
+          "points": 48
         },
         {
           "poiId": "obs-025",
-          "tier": "cold",
           "text": "Dubai Frame Observation Deck is a themed comparison candidate: The Dubai Frame is a purpose-built landmark structure with a regularly accessible elevated viewing bridge.",
-          "sourceIds": ["source-23", "source-01"]
+          "sourceIds": ["source-23", "source-01"],
+          "points": 8
         },
         {
           "poiId": "obs-039",
-          "tier": "cold",
           "text": "Sky100 Hong Kong Observation Deck is a themed comparison candidate: Sky100 is a named indoor public observation deck on the 100th floor of the International Commerce Centre.",
-          "sourceIds": ["source-24", "source-01"]
+          "sourceIds": ["source-24", "source-01"],
+          "points": 5
         },
         {
           "poiId": "obs-040",
-          "tier": "warm",
           "text": "Seoul Sky is a themed comparison candidate: Seoul Sky is the named public observation facility occupying upper floors of Lotte World Tower.",
-          "sourceIds": ["source-25", "source-01"]
+          "sourceIds": ["source-25", "source-01"],
+          "points": 44
         }
       ]
     }

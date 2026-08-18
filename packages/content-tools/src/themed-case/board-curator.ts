@@ -37,21 +37,37 @@ export async function curateBoard({
     candidates.map((candidate) => [candidate.id, candidate]),
   );
   const prompt = `You are curating a themed geography board. Theme: ${theme.title}\nIntroduction: ${theme.introduction}\nExact inclusion criteria: ${theme.inclusionCriteria}\nExact exclusions: ${theme.exclusions.join('; ')}\nCandidate evidence (id, name, claim, coordinates):\n${candidates.map((candidate) => `${candidate.id} | ${candidate.name} | ${candidate.themeClaim} | ${candidate.latitude},${candidate.longitude}`).join('\n')}\nExcluded target IDs (never select these as targets): ${[...excluded].join(', ') || '(none)'}\nReturn only JSON with exactly 25 candidateIds and exactly 5 targetPoiIds, all IDs from this pool. Every one of the 25 must independently satisfy every inclusion criterion and no exclusion. Targets must be five distinct board IDs. Choose difficulty from meaningful within-theme distinctions, not arbitrary popularity. Do not copy or invent candidate records; IDs only.`;
-  const raw = await model.generate({
-    schema: selectionSchema,
-    prompt,
-    stage: 'curate-board',
-  });
-  const selection = selectionSchema.parse(raw);
-  if (duplicate(selection.candidateIds) || duplicate(selection.targetPoiIds))
-    throw new Error('curation returned duplicate IDs');
-  if (
-    selection.candidateIds.some((id) => !pool.has(id)) ||
-    selection.targetPoiIds.some((id) => !pool.has(id))
-  )
-    throw new Error('curation returned an unknown candidate ID');
-  if (selection.targetPoiIds.some((id) => excluded.has(id)))
-    throw new Error('curation selected an excluded target');
+  let selection: BoardSelection | undefined;
+  let correction = '';
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    const raw = await model.generate({
+      schema: selectionSchema,
+      prompt: `${prompt}${correction}`,
+      stage: 'curate-board',
+    });
+    const candidate = selectionSchema.parse(raw);
+    const unknown = [
+      ...candidate.candidateIds,
+      ...candidate.targetPoiIds,
+    ].filter((id) => !pool.has(id));
+    const duplicated =
+      duplicate(candidate.candidateIds) || duplicate(candidate.targetPoiIds);
+    const excludedTargets = candidate.targetPoiIds.filter((id) =>
+      excluded.has(id),
+    );
+    if (!unknown.length && !duplicated && !excludedTargets.length) {
+      selection = candidate;
+      break;
+    }
+    if (attempt === 1) {
+      if (unknown.length)
+        throw new Error('curation returned an unknown candidate ID');
+      if (duplicated) throw new Error('curation returned duplicate IDs');
+      throw new Error('curation selected an excluded target');
+    }
+    correction = `\nYour previous selection was invalid. Unknown IDs: ${unknown.join(', ') || '(none)'}. Duplicate IDs: ${duplicated ? 'yes' : 'no'}. Excluded targets selected: ${excludedTargets.join(', ') || '(none)'}. Correct the JSON using only the exact candidate IDs listed above.`;
+  }
+  if (!selection) throw new Error('curation did not return a valid selection');
   const candidateIds = [...selection.candidateIds];
   const targets = new Set(selection.targetPoiIds);
   for (const targetId of selection.targetPoiIds) {

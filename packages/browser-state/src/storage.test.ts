@@ -62,8 +62,7 @@ describe('browser progress storage', () => {
           {
             roundId: 'round-1',
             poiId: 'poi-10',
-            tier: 'hot',
-            points: 75,
+            points: 87,
           },
         ],
         acknowledgedRoundCount: 1,
@@ -84,8 +83,7 @@ describe('browser progress storage', () => {
         {
           roundId: 'round-1',
           poiId: 'poi-10',
-          tier: 'warm' as const,
-          points: 50 as const,
+          points: 56,
         },
       ],
       acknowledgedRoundCount: 0,

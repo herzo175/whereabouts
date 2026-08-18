@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "publicationDate": "2026-08-25",
   "revision": 1,
   "caseNumber": 20690,
@@ -402,153 +402,153 @@
       "results": [
         {
           "poiId": "uk-london-paddington",
-          "tier": "hot",
           "text": "London Paddington station is a themed comparison candidate: Opened in 1838 and remains an active National Rail terminal and station.",
-          "sourceIds": ["source-01", "source-07"]
+          "sourceIds": ["source-01", "source-07"],
+          "points": 96
         },
         {
           "poiId": "uk-london-euston",
-          "tier": "hot",
           "text": "London Euston station is a themed comparison candidate: Opened in 1837 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-02", "source-07"]
+          "sourceIds": ["source-02", "source-07"],
+          "points": 91
         },
         {
           "poiId": "uk-london-kings-cross",
-          "tier": "warm",
           "text": "London King's Cross station is a themed comparison candidate: Opened in 1852 and remains an active National Rail passenger station.",
-          "sourceIds": ["source-03", "source-07"]
+          "sourceIds": ["source-03", "source-07"],
+          "points": 72
         },
         {
           "poiId": "uk-london-bridge",
-          "tier": "hot",
           "text": "London Bridge station is a themed comparison candidate: Opened in 1836 and remains an active National Rail station.",
-          "sourceIds": ["source-04", "source-07"]
+          "sourceIds": ["source-04", "source-07"],
+          "points": 86
         },
         {
           "poiId": "uk-london-victoria",
-          "tier": "warm",
           "text": "London Victoria station is a themed comparison candidate: Opened in 1860 and remains an active National Rail passenger station.",
-          "sourceIds": ["source-05", "source-07"]
+          "sourceIds": ["source-05", "source-07"],
+          "points": 68
         },
         {
           "poiId": "uk-london-waterloo",
-          "tier": "hot",
           "text": "London Waterloo station is a themed comparison candidate: Opened in 1848 and remains an active commuter and regional railway station.",
-          "sourceIds": ["source-06", "source-07"]
+          "sourceIds": ["source-06", "source-07"],
+          "points": 81
         },
         {
           "poiId": "uk-london-fenchurch",
-          "tier": "correct",
           "text": "London Fenchurch Street station is the round target: Opened in 1841 and remains an active scheduled passenger railway station.",
-          "sourceIds": ["source-07"]
+          "sourceIds": ["source-07"],
+          "points": 100
         },
         {
           "poiId": "uk-manchester-piccadilly",
-          "tier": "warm",
           "text": "Manchester Piccadilly station is a themed comparison candidate: Opened in 1842 and remains an active intercity, regional, and commuter station.",
-          "sourceIds": ["source-08", "source-07"]
+          "sourceIds": ["source-08", "source-07"],
+          "points": 64
         },
         {
           "poiId": "uk-liverpool-lime",
-          "tier": "warm",
           "text": "Liverpool Lime Street station is a themed comparison candidate: Opened in 1836 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-09", "source-07"]
+          "sourceIds": ["source-09", "source-07"],
+          "points": 60
         },
         {
           "poiId": "uk-birmingham-new-street",
-          "tier": "warm",
           "text": "Birmingham New Street station is a themed comparison candidate: Opened in 1854 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-10", "source-07"]
+          "sourceIds": ["source-10", "source-07"],
+          "points": 56
         },
         {
           "poiId": "uk-bristol-temple-meads",
-          "tier": "warm",
           "text": "Bristol Temple Meads station is a themed comparison candidate: Opened in 1840 and remains an active National Rail passenger station.",
-          "sourceIds": ["source-11", "source-07"]
+          "sourceIds": ["source-11", "source-07"],
+          "points": 52
         },
         {
           "poiId": "uk-edinburgh-waverley",
-          "tier": "cold",
           "text": "Edinburgh Waverley station is a themed comparison candidate: Opened in 1866 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-12", "source-07"]
+          "sourceIds": ["source-12", "source-07"],
+          "points": 38
         },
         {
           "poiId": "uk-glasgow-central",
-          "tier": "cold",
           "text": "Glasgow Central station is a themed comparison candidate: Opened in 1879 and remains an active intercity, regional, and commuter station.",
-          "sourceIds": ["source-13", "source-07"]
+          "sourceIds": ["source-13", "source-07"],
+          "points": 35
         },
         {
           "poiId": "uk-york",
-          "tier": "warm",
           "text": "York station is a themed comparison candidate: Opened in 1877 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-14", "source-07"]
+          "sourceIds": ["source-14", "source-07"],
+          "points": 48
         },
         {
           "poiId": "uk-newcastle-central",
-          "tier": "warm",
           "text": "Newcastle Central station is a themed comparison candidate: Opened in 1850 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-15", "source-07"]
+          "sourceIds": ["source-15", "source-07"],
+          "points": 44
         },
         {
           "poiId": "nl-amsterdam-centraal",
-          "tier": "cold",
           "text": "Amsterdam Centraal station is a themed comparison candidate: Opened in 1889 and remains an active national and international passenger station.",
-          "sourceIds": ["source-16", "source-07"]
+          "sourceIds": ["source-16", "source-07"],
+          "points": 32
         },
         {
           "poiId": "be-antwerp-centraal",
-          "tier": "cold",
           "text": "Antwerpen-Centraal station is a themed comparison candidate: Opened in 1836 and remains an active domestic and international passenger station.",
-          "sourceIds": ["source-17", "source-07"]
+          "sourceIds": ["source-17", "source-07"],
+          "points": 29
         },
         {
           "poiId": "nl-utrecht-centraal",
-          "tier": "cold",
           "text": "Utrecht Centraal station is a themed comparison candidate: Opened in 1843 and remains an active national passenger railway station.",
-          "sourceIds": ["source-18", "source-07"]
+          "sourceIds": ["source-18", "source-07"],
+          "points": 26
         },
         {
           "poiId": "de-frankfurt-hbf",
-          "tier": "cold",
           "text": "Frankfurt Hauptbahnhof is a themed comparison candidate: Opened in 1888 and remains an active intercity, regional, and commuter station.",
-          "sourceIds": ["source-19", "source-07"]
+          "sourceIds": ["source-19", "source-07"],
+          "points": 23
         },
         {
           "poiId": "ch-zurich-hb",
-          "tier": "cold",
           "text": "Zürich Hauptbahnhof is a themed comparison candidate: Opened in 1847 and remains an active national and international passenger station.",
-          "sourceIds": ["source-20", "source-07"]
+          "sourceIds": ["source-20", "source-07"],
+          "points": 20
         },
         {
           "poiId": "fr-paris-nord",
-          "tier": "cold",
           "text": "Gare du Nord is a themed comparison candidate: Opened in 1846 and remains an active intercity, regional, and international passenger station.",
-          "sourceIds": ["source-21", "source-07"]
+          "sourceIds": ["source-21", "source-07"],
+          "points": 17
         },
         {
           "poiId": "fr-paris-est",
-          "tier": "cold",
           "text": "Gare de l'Est is a themed comparison candidate: Opened in 1850 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-22", "source-07"]
+          "sourceIds": ["source-22", "source-07"],
+          "points": 14
         },
         {
           "poiId": "fr-paris-saint-lazare",
-          "tier": "cold",
           "text": "Gare Saint-Lazare is a themed comparison candidate: Opened in 1837 and remains an active commuter and regional passenger station.",
-          "sourceIds": ["source-23", "source-07"]
+          "sourceIds": ["source-23", "source-07"],
+          "points": 11
         },
         {
           "poiId": "fr-paris-austerlitz",
-          "tier": "cold",
           "text": "Gare d'Austerlitz is a themed comparison candidate: Opened in 1840 and remains an active scheduled passenger railway station.",
-          "sourceIds": ["source-24", "source-07"]
+          "sourceIds": ["source-24", "source-07"],
+          "points": 8
         },
         {
           "poiId": "it-rome-termini",
-          "tier": "cold",
           "text": "Roma Termini is a themed comparison candidate: Opened in 1863 and remains an active national, regional, and commuter passenger station.",
-          "sourceIds": ["source-25", "source-07"]
+          "sourceIds": ["source-25", "source-07"],
+          "points": 5
         }
       ]
     },
@@ -568,153 +568,153 @@
       "results": [
         {
           "poiId": "uk-london-paddington",
-          "tier": "hot",
           "text": "London Paddington station is a themed comparison candidate: Opened in 1838 and remains an active National Rail terminal and station.",
-          "sourceIds": ["source-01", "source-14"]
+          "sourceIds": ["source-01", "source-14"],
+          "points": 96
         },
         {
           "poiId": "uk-london-euston",
-          "tier": "warm",
           "text": "London Euston station is a themed comparison candidate: Opened in 1837 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-02", "source-14"]
+          "sourceIds": ["source-02", "source-14"],
+          "points": 72
         },
         {
           "poiId": "uk-london-kings-cross",
-          "tier": "hot",
           "text": "London King's Cross station is a themed comparison candidate: Opened in 1852 and remains an active National Rail passenger station.",
-          "sourceIds": ["source-03", "source-14"]
+          "sourceIds": ["source-03", "source-14"],
+          "points": 91
         },
         {
           "poiId": "uk-london-bridge",
-          "tier": "warm",
           "text": "London Bridge station is a themed comparison candidate: Opened in 1836 and remains an active National Rail station.",
-          "sourceIds": ["source-04", "source-14"]
+          "sourceIds": ["source-04", "source-14"],
+          "points": 68
         },
         {
           "poiId": "uk-london-victoria",
-          "tier": "cold",
           "text": "London Victoria station is a themed comparison candidate: Opened in 1860 and remains an active National Rail passenger station.",
-          "sourceIds": ["source-05", "source-14"]
+          "sourceIds": ["source-05", "source-14"],
+          "points": 38
         },
         {
           "poiId": "uk-london-waterloo",
-          "tier": "warm",
           "text": "London Waterloo station is a themed comparison candidate: Opened in 1848 and remains an active commuter and regional railway station.",
-          "sourceIds": ["source-06", "source-14"]
+          "sourceIds": ["source-06", "source-14"],
+          "points": 64
         },
         {
           "poiId": "uk-london-fenchurch",
-          "tier": "cold",
           "text": "London Fenchurch Street station is a themed comparison candidate: Opened in 1841 and remains an active scheduled passenger railway station.",
-          "sourceIds": ["source-07", "source-14"]
+          "sourceIds": ["source-07", "source-14"],
+          "points": 35
         },
         {
           "poiId": "uk-manchester-piccadilly",
-          "tier": "warm",
           "text": "Manchester Piccadilly station is a themed comparison candidate: Opened in 1842 and remains an active intercity, regional, and commuter station.",
-          "sourceIds": ["source-08", "source-14"]
+          "sourceIds": ["source-08", "source-14"],
+          "points": 60
         },
         {
           "poiId": "uk-liverpool-lime",
-          "tier": "warm",
           "text": "Liverpool Lime Street station is a themed comparison candidate: Opened in 1836 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-09", "source-14"]
+          "sourceIds": ["source-09", "source-14"],
+          "points": 56
         },
         {
           "poiId": "uk-birmingham-new-street",
-          "tier": "warm",
           "text": "Birmingham New Street station is a themed comparison candidate: Opened in 1854 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-10", "source-14"]
+          "sourceIds": ["source-10", "source-14"],
+          "points": 52
         },
         {
           "poiId": "uk-bristol-temple-meads",
-          "tier": "warm",
           "text": "Bristol Temple Meads station is a themed comparison candidate: Opened in 1840 and remains an active National Rail passenger station.",
-          "sourceIds": ["source-11", "source-14"]
+          "sourceIds": ["source-11", "source-14"],
+          "points": 48
         },
         {
           "poiId": "uk-edinburgh-waverley",
-          "tier": "hot",
           "text": "Edinburgh Waverley station is a themed comparison candidate: Opened in 1866 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-12", "source-14"]
+          "sourceIds": ["source-12", "source-14"],
+          "points": 86
         },
         {
           "poiId": "uk-glasgow-central",
-          "tier": "warm",
           "text": "Glasgow Central station is a themed comparison candidate: Opened in 1879 and remains an active intercity, regional, and commuter station.",
-          "sourceIds": ["source-13", "source-14"]
+          "sourceIds": ["source-13", "source-14"],
+          "points": 44
         },
         {
           "poiId": "uk-york",
-          "tier": "correct",
           "text": "York station is the round target: Opened in 1877 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-14"]
+          "sourceIds": ["source-14"],
+          "points": 100
         },
         {
           "poiId": "uk-newcastle-central",
-          "tier": "hot",
           "text": "Newcastle Central station is a themed comparison candidate: Opened in 1850 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-15", "source-14"]
+          "sourceIds": ["source-15", "source-14"],
+          "points": 81
         },
         {
           "poiId": "nl-amsterdam-centraal",
-          "tier": "cold",
           "text": "Amsterdam Centraal station is a themed comparison candidate: Opened in 1889 and remains an active national and international passenger station.",
-          "sourceIds": ["source-16", "source-14"]
+          "sourceIds": ["source-16", "source-14"],
+          "points": 32
         },
         {
           "poiId": "be-antwerp-centraal",
-          "tier": "cold",
           "text": "Antwerpen-Centraal station is a themed comparison candidate: Opened in 1836 and remains an active domestic and international passenger station.",
-          "sourceIds": ["source-17", "source-14"]
+          "sourceIds": ["source-17", "source-14"],
+          "points": 29
         },
         {
           "poiId": "nl-utrecht-centraal",
-          "tier": "cold",
           "text": "Utrecht Centraal station is a themed comparison candidate: Opened in 1843 and remains an active national passenger railway station.",
-          "sourceIds": ["source-18", "source-14"]
+          "sourceIds": ["source-18", "source-14"],
+          "points": 26
         },
         {
           "poiId": "de-frankfurt-hbf",
-          "tier": "cold",
           "text": "Frankfurt Hauptbahnhof is a themed comparison candidate: Opened in 1888 and remains an active intercity, regional, and commuter station.",
-          "sourceIds": ["source-19", "source-14"]
+          "sourceIds": ["source-19", "source-14"],
+          "points": 23
         },
         {
           "poiId": "ch-zurich-hb",
-          "tier": "cold",
           "text": "Zürich Hauptbahnhof is a themed comparison candidate: Opened in 1847 and remains an active national and international passenger station.",
-          "sourceIds": ["source-20", "source-14"]
+          "sourceIds": ["source-20", "source-14"],
+          "points": 20
         },
         {
           "poiId": "fr-paris-nord",
-          "tier": "cold",
           "text": "Gare du Nord is a themed comparison candidate: Opened in 1846 and remains an active intercity, regional, and international passenger station.",
-          "sourceIds": ["source-21", "source-14"]
+          "sourceIds": ["source-21", "source-14"],
+          "points": 17
         },
         {
           "poiId": "fr-paris-est",
-          "tier": "cold",
           "text": "Gare de l'Est is a themed comparison candidate: Opened in 1850 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-22", "source-14"]
+          "sourceIds": ["source-22", "source-14"],
+          "points": 14
         },
         {
           "poiId": "fr-paris-saint-lazare",
-          "tier": "cold",
           "text": "Gare Saint-Lazare is a themed comparison candidate: Opened in 1837 and remains an active commuter and regional passenger station.",
-          "sourceIds": ["source-23", "source-14"]
+          "sourceIds": ["source-23", "source-14"],
+          "points": 11
         },
         {
           "poiId": "fr-paris-austerlitz",
-          "tier": "cold",
           "text": "Gare d'Austerlitz is a themed comparison candidate: Opened in 1840 and remains an active scheduled passenger railway station.",
-          "sourceIds": ["source-24", "source-14"]
+          "sourceIds": ["source-24", "source-14"],
+          "points": 8
         },
         {
           "poiId": "it-rome-termini",
-          "tier": "cold",
           "text": "Roma Termini is a themed comparison candidate: Opened in 1863 and remains an active national, regional, and commuter passenger station.",
-          "sourceIds": ["source-25", "source-14"]
+          "sourceIds": ["source-25", "source-14"],
+          "points": 5
         }
       ]
     },
@@ -734,153 +734,153 @@
       "results": [
         {
           "poiId": "uk-london-paddington",
-          "tier": "warm",
           "text": "London Paddington station is a themed comparison candidate: Opened in 1838 and remains an active National Rail terminal and station.",
-          "sourceIds": ["source-01", "source-18"]
+          "sourceIds": ["source-01", "source-18"],
+          "points": 72
         },
         {
           "poiId": "uk-london-euston",
-          "tier": "cold",
           "text": "London Euston station is a themed comparison candidate: Opened in 1837 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-02", "source-18"]
+          "sourceIds": ["source-02", "source-18"],
+          "points": 38
         },
         {
           "poiId": "uk-london-kings-cross",
-          "tier": "warm",
           "text": "London King's Cross station is a themed comparison candidate: Opened in 1852 and remains an active National Rail passenger station.",
-          "sourceIds": ["source-03", "source-18"]
+          "sourceIds": ["source-03", "source-18"],
+          "points": 68
         },
         {
           "poiId": "uk-london-bridge",
-          "tier": "warm",
           "text": "London Bridge station is a themed comparison candidate: Opened in 1836 and remains an active National Rail station.",
-          "sourceIds": ["source-04", "source-18"]
+          "sourceIds": ["source-04", "source-18"],
+          "points": 64
         },
         {
           "poiId": "uk-london-victoria",
-          "tier": "cold",
           "text": "London Victoria station is a themed comparison candidate: Opened in 1860 and remains an active National Rail passenger station.",
-          "sourceIds": ["source-05", "source-18"]
+          "sourceIds": ["source-05", "source-18"],
+          "points": 35
         },
         {
           "poiId": "uk-london-waterloo",
-          "tier": "cold",
           "text": "London Waterloo station is a themed comparison candidate: Opened in 1848 and remains an active commuter and regional railway station.",
-          "sourceIds": ["source-06", "source-18"]
+          "sourceIds": ["source-06", "source-18"],
+          "points": 32
         },
         {
           "poiId": "uk-london-fenchurch",
-          "tier": "cold",
           "text": "London Fenchurch Street station is a themed comparison candidate: Opened in 1841 and remains an active scheduled passenger railway station.",
-          "sourceIds": ["source-07", "source-18"]
+          "sourceIds": ["source-07", "source-18"],
+          "points": 29
         },
         {
           "poiId": "uk-manchester-piccadilly",
-          "tier": "warm",
           "text": "Manchester Piccadilly station is a themed comparison candidate: Opened in 1842 and remains an active intercity, regional, and commuter station.",
-          "sourceIds": ["source-08", "source-18"]
+          "sourceIds": ["source-08", "source-18"],
+          "points": 60
         },
         {
           "poiId": "uk-liverpool-lime",
-          "tier": "warm",
           "text": "Liverpool Lime Street station is a themed comparison candidate: Opened in 1836 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-09", "source-18"]
+          "sourceIds": ["source-09", "source-18"],
+          "points": 56
         },
         {
           "poiId": "uk-birmingham-new-street",
-          "tier": "warm",
           "text": "Birmingham New Street station is a themed comparison candidate: Opened in 1854 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-10", "source-18"]
+          "sourceIds": ["source-10", "source-18"],
+          "points": 52
         },
         {
           "poiId": "uk-bristol-temple-meads",
-          "tier": "warm",
           "text": "Bristol Temple Meads station is a themed comparison candidate: Opened in 1840 and remains an active National Rail passenger station.",
-          "sourceIds": ["source-11", "source-18"]
+          "sourceIds": ["source-11", "source-18"],
+          "points": 48
         },
         {
           "poiId": "uk-edinburgh-waverley",
-          "tier": "cold",
           "text": "Edinburgh Waverley station is a themed comparison candidate: Opened in 1866 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-12", "source-18"]
+          "sourceIds": ["source-12", "source-18"],
+          "points": 26
         },
         {
           "poiId": "uk-glasgow-central",
-          "tier": "cold",
           "text": "Glasgow Central station is a themed comparison candidate: Opened in 1879 and remains an active intercity, regional, and commuter station.",
-          "sourceIds": ["source-13", "source-18"]
+          "sourceIds": ["source-13", "source-18"],
+          "points": 23
         },
         {
           "poiId": "uk-york",
-          "tier": "warm",
           "text": "York station is a themed comparison candidate: Opened in 1877 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-14", "source-18"]
+          "sourceIds": ["source-14", "source-18"],
+          "points": 44
         },
         {
           "poiId": "uk-newcastle-central",
-          "tier": "cold",
           "text": "Newcastle Central station is a themed comparison candidate: Opened in 1850 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-15", "source-18"]
+          "sourceIds": ["source-15", "source-18"],
+          "points": 20
         },
         {
           "poiId": "nl-amsterdam-centraal",
-          "tier": "hot",
           "text": "Amsterdam Centraal station is a themed comparison candidate: Opened in 1889 and remains an active national and international passenger station.",
-          "sourceIds": ["source-16", "source-18"]
+          "sourceIds": ["source-16", "source-18"],
+          "points": 96
         },
         {
           "poiId": "be-antwerp-centraal",
-          "tier": "hot",
           "text": "Antwerpen-Centraal station is a themed comparison candidate: Opened in 1836 and remains an active domestic and international passenger station.",
-          "sourceIds": ["source-17", "source-18"]
+          "sourceIds": ["source-17", "source-18"],
+          "points": 91
         },
         {
           "poiId": "nl-utrecht-centraal",
-          "tier": "correct",
           "text": "Utrecht Centraal station is the round target: Opened in 1843 and remains an active national passenger railway station.",
-          "sourceIds": ["source-18"]
+          "sourceIds": ["source-18"],
+          "points": 100
         },
         {
           "poiId": "de-frankfurt-hbf",
-          "tier": "hot",
           "text": "Frankfurt Hauptbahnhof is a themed comparison candidate: Opened in 1888 and remains an active intercity, regional, and commuter station.",
-          "sourceIds": ["source-19", "source-18"]
+          "sourceIds": ["source-19", "source-18"],
+          "points": 86
         },
         {
           "poiId": "ch-zurich-hb",
-          "tier": "hot",
           "text": "Zürich Hauptbahnhof is a themed comparison candidate: Opened in 1847 and remains an active national and international passenger station.",
-          "sourceIds": ["source-20", "source-18"]
+          "sourceIds": ["source-20", "source-18"],
+          "points": 81
         },
         {
           "poiId": "fr-paris-nord",
-          "tier": "cold",
           "text": "Gare du Nord is a themed comparison candidate: Opened in 1846 and remains an active intercity, regional, and international passenger station.",
-          "sourceIds": ["source-21", "source-18"]
+          "sourceIds": ["source-21", "source-18"],
+          "points": 17
         },
         {
           "poiId": "fr-paris-est",
-          "tier": "cold",
           "text": "Gare de l'Est is a themed comparison candidate: Opened in 1850 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-22", "source-18"]
+          "sourceIds": ["source-22", "source-18"],
+          "points": 14
         },
         {
           "poiId": "fr-paris-saint-lazare",
-          "tier": "cold",
           "text": "Gare Saint-Lazare is a themed comparison candidate: Opened in 1837 and remains an active commuter and regional passenger station.",
-          "sourceIds": ["source-23", "source-18"]
+          "sourceIds": ["source-23", "source-18"],
+          "points": 11
         },
         {
           "poiId": "fr-paris-austerlitz",
-          "tier": "cold",
           "text": "Gare d'Austerlitz is a themed comparison candidate: Opened in 1840 and remains an active scheduled passenger railway station.",
-          "sourceIds": ["source-24", "source-18"]
+          "sourceIds": ["source-24", "source-18"],
+          "points": 8
         },
         {
           "poiId": "it-rome-termini",
-          "tier": "cold",
           "text": "Roma Termini is a themed comparison candidate: Opened in 1863 and remains an active national, regional, and commuter passenger station.",
-          "sourceIds": ["source-25", "source-18"]
+          "sourceIds": ["source-25", "source-18"],
+          "points": 5
         }
       ]
     },
@@ -900,153 +900,153 @@
       "results": [
         {
           "poiId": "uk-london-paddington",
-          "tier": "warm",
           "text": "London Paddington station is a themed comparison candidate: Opened in 1838 and remains an active National Rail terminal and station.",
-          "sourceIds": ["source-01", "source-19"]
+          "sourceIds": ["source-01", "source-19"],
+          "points": 72
         },
         {
           "poiId": "uk-london-euston",
-          "tier": "cold",
           "text": "London Euston station is a themed comparison candidate: Opened in 1837 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-02", "source-19"]
+          "sourceIds": ["source-02", "source-19"],
+          "points": 38
         },
         {
           "poiId": "uk-london-kings-cross",
-          "tier": "warm",
           "text": "London King's Cross station is a themed comparison candidate: Opened in 1852 and remains an active National Rail passenger station.",
-          "sourceIds": ["source-03", "source-19"]
+          "sourceIds": ["source-03", "source-19"],
+          "points": 68
         },
         {
           "poiId": "uk-london-bridge",
-          "tier": "cold",
           "text": "London Bridge station is a themed comparison candidate: Opened in 1836 and remains an active National Rail station.",
-          "sourceIds": ["source-04", "source-19"]
+          "sourceIds": ["source-04", "source-19"],
+          "points": 35
         },
         {
           "poiId": "uk-london-victoria",
-          "tier": "cold",
           "text": "London Victoria station is a themed comparison candidate: Opened in 1860 and remains an active National Rail passenger station.",
-          "sourceIds": ["source-05", "source-19"]
+          "sourceIds": ["source-05", "source-19"],
+          "points": 32
         },
         {
           "poiId": "uk-london-waterloo",
-          "tier": "cold",
           "text": "London Waterloo station is a themed comparison candidate: Opened in 1848 and remains an active commuter and regional railway station.",
-          "sourceIds": ["source-06", "source-19"]
+          "sourceIds": ["source-06", "source-19"],
+          "points": 29
         },
         {
           "poiId": "uk-london-fenchurch",
-          "tier": "cold",
           "text": "London Fenchurch Street station is a themed comparison candidate: Opened in 1841 and remains an active scheduled passenger railway station.",
-          "sourceIds": ["source-07", "source-19"]
+          "sourceIds": ["source-07", "source-19"],
+          "points": 26
         },
         {
           "poiId": "uk-manchester-piccadilly",
-          "tier": "cold",
           "text": "Manchester Piccadilly station is a themed comparison candidate: Opened in 1842 and remains an active intercity, regional, and commuter station.",
-          "sourceIds": ["source-08", "source-19"]
+          "sourceIds": ["source-08", "source-19"],
+          "points": 23
         },
         {
           "poiId": "uk-liverpool-lime",
-          "tier": "cold",
           "text": "Liverpool Lime Street station is a themed comparison candidate: Opened in 1836 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-09", "source-19"]
+          "sourceIds": ["source-09", "source-19"],
+          "points": 20
         },
         {
           "poiId": "uk-birmingham-new-street",
-          "tier": "cold",
           "text": "Birmingham New Street station is a themed comparison candidate: Opened in 1854 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-10", "source-19"]
+          "sourceIds": ["source-10", "source-19"],
+          "points": 17
         },
         {
           "poiId": "uk-bristol-temple-meads",
-          "tier": "cold",
           "text": "Bristol Temple Meads station is a themed comparison candidate: Opened in 1840 and remains an active National Rail passenger station.",
-          "sourceIds": ["source-11", "source-19"]
+          "sourceIds": ["source-11", "source-19"],
+          "points": 14
         },
         {
           "poiId": "uk-edinburgh-waverley",
-          "tier": "cold",
           "text": "Edinburgh Waverley station is a themed comparison candidate: Opened in 1866 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-12", "source-19"]
+          "sourceIds": ["source-12", "source-19"],
+          "points": 11
         },
         {
           "poiId": "uk-glasgow-central",
-          "tier": "cold",
           "text": "Glasgow Central station is a themed comparison candidate: Opened in 1879 and remains an active intercity, regional, and commuter station.",
-          "sourceIds": ["source-13", "source-19"]
+          "sourceIds": ["source-13", "source-19"],
+          "points": 8
         },
         {
           "poiId": "uk-york",
-          "tier": "warm",
           "text": "York station is a themed comparison candidate: Opened in 1877 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-14", "source-19"]
+          "sourceIds": ["source-14", "source-19"],
+          "points": 64
         },
         {
           "poiId": "uk-newcastle-central",
-          "tier": "cold",
           "text": "Newcastle Central station is a themed comparison candidate: Opened in 1850 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-15", "source-19"]
+          "sourceIds": ["source-15", "source-19"],
+          "points": 5
         },
         {
           "poiId": "nl-amsterdam-centraal",
-          "tier": "hot",
           "text": "Amsterdam Centraal station is a themed comparison candidate: Opened in 1889 and remains an active national and international passenger station.",
-          "sourceIds": ["source-16", "source-19"]
+          "sourceIds": ["source-16", "source-19"],
+          "points": 96
         },
         {
           "poiId": "be-antwerp-centraal",
-          "tier": "hot",
           "text": "Antwerpen-Centraal station is a themed comparison candidate: Opened in 1836 and remains an active domestic and international passenger station.",
-          "sourceIds": ["source-17", "source-19"]
+          "sourceIds": ["source-17", "source-19"],
+          "points": 91
         },
         {
           "poiId": "nl-utrecht-centraal",
-          "tier": "hot",
           "text": "Utrecht Centraal station is a themed comparison candidate: Opened in 1843 and remains an active national passenger railway station.",
-          "sourceIds": ["source-18", "source-19"]
+          "sourceIds": ["source-18", "source-19"],
+          "points": 86
         },
         {
           "poiId": "de-frankfurt-hbf",
-          "tier": "correct",
           "text": "Frankfurt Hauptbahnhof is the round target: Opened in 1888 and remains an active intercity, regional, and commuter station.",
-          "sourceIds": ["source-19"]
+          "sourceIds": ["source-19"],
+          "points": 100
         },
         {
           "poiId": "ch-zurich-hb",
-          "tier": "hot",
           "text": "Zürich Hauptbahnhof is a themed comparison candidate: Opened in 1847 and remains an active national and international passenger station.",
-          "sourceIds": ["source-20", "source-19"]
+          "sourceIds": ["source-20", "source-19"],
+          "points": 81
         },
         {
           "poiId": "fr-paris-nord",
-          "tier": "warm",
           "text": "Gare du Nord is a themed comparison candidate: Opened in 1846 and remains an active intercity, regional, and international passenger station.",
-          "sourceIds": ["source-21", "source-19"]
+          "sourceIds": ["source-21", "source-19"],
+          "points": 60
         },
         {
           "poiId": "fr-paris-est",
-          "tier": "warm",
           "text": "Gare de l'Est is a themed comparison candidate: Opened in 1850 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-22", "source-19"]
+          "sourceIds": ["source-22", "source-19"],
+          "points": 56
         },
         {
           "poiId": "fr-paris-saint-lazare",
-          "tier": "warm",
           "text": "Gare Saint-Lazare is a themed comparison candidate: Opened in 1837 and remains an active commuter and regional passenger station.",
-          "sourceIds": ["source-23", "source-19"]
+          "sourceIds": ["source-23", "source-19"],
+          "points": 52
         },
         {
           "poiId": "fr-paris-austerlitz",
-          "tier": "warm",
           "text": "Gare d'Austerlitz is a themed comparison candidate: Opened in 1840 and remains an active scheduled passenger railway station.",
-          "sourceIds": ["source-24", "source-19"]
+          "sourceIds": ["source-24", "source-19"],
+          "points": 48
         },
         {
           "poiId": "it-rome-termini",
-          "tier": "warm",
           "text": "Roma Termini is a themed comparison candidate: Opened in 1863 and remains an active national, regional, and commuter passenger station.",
-          "sourceIds": ["source-25", "source-19"]
+          "sourceIds": ["source-25", "source-19"],
+          "points": 44
         }
       ]
     },
@@ -1066,153 +1066,153 @@
       "results": [
         {
           "poiId": "uk-london-paddington",
-          "tier": "warm",
           "text": "London Paddington station is a themed comparison candidate: Opened in 1838 and remains an active National Rail terminal and station.",
-          "sourceIds": ["source-01", "source-24"]
+          "sourceIds": ["source-01", "source-24"],
+          "points": 72
         },
         {
           "poiId": "uk-london-euston",
-          "tier": "cold",
           "text": "London Euston station is a themed comparison candidate: Opened in 1837 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-02", "source-24"]
+          "sourceIds": ["source-02", "source-24"],
+          "points": 38
         },
         {
           "poiId": "uk-london-kings-cross",
-          "tier": "warm",
           "text": "London King's Cross station is a themed comparison candidate: Opened in 1852 and remains an active National Rail passenger station.",
-          "sourceIds": ["source-03", "source-24"]
+          "sourceIds": ["source-03", "source-24"],
+          "points": 68
         },
         {
           "poiId": "uk-london-bridge",
-          "tier": "cold",
           "text": "London Bridge station is a themed comparison candidate: Opened in 1836 and remains an active National Rail station.",
-          "sourceIds": ["source-04", "source-24"]
+          "sourceIds": ["source-04", "source-24"],
+          "points": 35
         },
         {
           "poiId": "uk-london-victoria",
-          "tier": "cold",
           "text": "London Victoria station is a themed comparison candidate: Opened in 1860 and remains an active National Rail passenger station.",
-          "sourceIds": ["source-05", "source-24"]
+          "sourceIds": ["source-05", "source-24"],
+          "points": 32
         },
         {
           "poiId": "uk-london-waterloo",
-          "tier": "cold",
           "text": "London Waterloo station is a themed comparison candidate: Opened in 1848 and remains an active commuter and regional railway station.",
-          "sourceIds": ["source-06", "source-24"]
+          "sourceIds": ["source-06", "source-24"],
+          "points": 29
         },
         {
           "poiId": "uk-london-fenchurch",
-          "tier": "cold",
           "text": "London Fenchurch Street station is a themed comparison candidate: Opened in 1841 and remains an active scheduled passenger railway station.",
-          "sourceIds": ["source-07", "source-24"]
+          "sourceIds": ["source-07", "source-24"],
+          "points": 26
         },
         {
           "poiId": "uk-manchester-piccadilly",
-          "tier": "cold",
           "text": "Manchester Piccadilly station is a themed comparison candidate: Opened in 1842 and remains an active intercity, regional, and commuter station.",
-          "sourceIds": ["source-08", "source-24"]
+          "sourceIds": ["source-08", "source-24"],
+          "points": 23
         },
         {
           "poiId": "uk-liverpool-lime",
-          "tier": "cold",
           "text": "Liverpool Lime Street station is a themed comparison candidate: Opened in 1836 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-09", "source-24"]
+          "sourceIds": ["source-09", "source-24"],
+          "points": 20
         },
         {
           "poiId": "uk-birmingham-new-street",
-          "tier": "cold",
           "text": "Birmingham New Street station is a themed comparison candidate: Opened in 1854 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-10", "source-24"]
+          "sourceIds": ["source-10", "source-24"],
+          "points": 17
         },
         {
           "poiId": "uk-bristol-temple-meads",
-          "tier": "warm",
           "text": "Bristol Temple Meads station is a themed comparison candidate: Opened in 1840 and remains an active National Rail passenger station.",
-          "sourceIds": ["source-11", "source-24"]
+          "sourceIds": ["source-11", "source-24"],
+          "points": 64
         },
         {
           "poiId": "uk-edinburgh-waverley",
-          "tier": "cold",
           "text": "Edinburgh Waverley station is a themed comparison candidate: Opened in 1866 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-12", "source-24"]
+          "sourceIds": ["source-12", "source-24"],
+          "points": 14
         },
         {
           "poiId": "uk-glasgow-central",
-          "tier": "cold",
           "text": "Glasgow Central station is a themed comparison candidate: Opened in 1879 and remains an active intercity, regional, and commuter station.",
-          "sourceIds": ["source-13", "source-24"]
+          "sourceIds": ["source-13", "source-24"],
+          "points": 11
         },
         {
           "poiId": "uk-york",
-          "tier": "cold",
           "text": "York station is a themed comparison candidate: Opened in 1877 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-14", "source-24"]
+          "sourceIds": ["source-14", "source-24"],
+          "points": 8
         },
         {
           "poiId": "uk-newcastle-central",
-          "tier": "cold",
           "text": "Newcastle Central station is a themed comparison candidate: Opened in 1850 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-15", "source-24"]
+          "sourceIds": ["source-15", "source-24"],
+          "points": 5
         },
         {
           "poiId": "nl-amsterdam-centraal",
-          "tier": "warm",
           "text": "Amsterdam Centraal station is a themed comparison candidate: Opened in 1889 and remains an active national and international passenger station.",
-          "sourceIds": ["source-16", "source-24"]
+          "sourceIds": ["source-16", "source-24"],
+          "points": 60
         },
         {
           "poiId": "be-antwerp-centraal",
-          "tier": "warm",
           "text": "Antwerpen-Centraal station is a themed comparison candidate: Opened in 1836 and remains an active domestic and international passenger station.",
-          "sourceIds": ["source-17", "source-24"]
+          "sourceIds": ["source-17", "source-24"],
+          "points": 56
         },
         {
           "poiId": "nl-utrecht-centraal",
-          "tier": "warm",
           "text": "Utrecht Centraal station is a themed comparison candidate: Opened in 1843 and remains an active national passenger railway station.",
-          "sourceIds": ["source-18", "source-24"]
+          "sourceIds": ["source-18", "source-24"],
+          "points": 52
         },
         {
           "poiId": "de-frankfurt-hbf",
-          "tier": "warm",
           "text": "Frankfurt Hauptbahnhof is a themed comparison candidate: Opened in 1888 and remains an active intercity, regional, and commuter station.",
-          "sourceIds": ["source-19", "source-24"]
+          "sourceIds": ["source-19", "source-24"],
+          "points": 48
         },
         {
           "poiId": "ch-zurich-hb",
-          "tier": "warm",
           "text": "Zürich Hauptbahnhof is a themed comparison candidate: Opened in 1847 and remains an active national and international passenger station.",
-          "sourceIds": ["source-20", "source-24"]
+          "sourceIds": ["source-20", "source-24"],
+          "points": 44
         },
         {
           "poiId": "fr-paris-nord",
-          "tier": "hot",
           "text": "Gare du Nord is a themed comparison candidate: Opened in 1846 and remains an active intercity, regional, and international passenger station.",
-          "sourceIds": ["source-21", "source-24"]
+          "sourceIds": ["source-21", "source-24"],
+          "points": 96
         },
         {
           "poiId": "fr-paris-est",
-          "tier": "hot",
           "text": "Gare de l'Est is a themed comparison candidate: Opened in 1850 and remains an active intercity and regional passenger station.",
-          "sourceIds": ["source-22", "source-24"]
+          "sourceIds": ["source-22", "source-24"],
+          "points": 91
         },
         {
           "poiId": "fr-paris-saint-lazare",
-          "tier": "hot",
           "text": "Gare Saint-Lazare is a themed comparison candidate: Opened in 1837 and remains an active commuter and regional passenger station.",
-          "sourceIds": ["source-23", "source-24"]
+          "sourceIds": ["source-23", "source-24"],
+          "points": 86
         },
         {
           "poiId": "fr-paris-austerlitz",
-          "tier": "correct",
           "text": "Gare d'Austerlitz is the round target: Opened in 1840 and remains an active scheduled passenger railway station.",
-          "sourceIds": ["source-24"]
+          "sourceIds": ["source-24"],
+          "points": 100
         },
         {
           "poiId": "it-rome-termini",
-          "tier": "hot",
           "text": "Roma Termini is a themed comparison candidate: Opened in 1863 and remains an active national, regional, and commuter passenger station.",
-          "sourceIds": ["source-25", "source-24"]
+          "sourceIds": ["source-25", "source-24"],
+          "points": 81
         }
       ]
     }

@@ -103,7 +103,7 @@ export const curatedBoardSchema = z
 export type CuratedBoard = z.infer<typeof curatedBoardSchema>;
 export const scoredResultSchema = z.object({
   poiId: z.string().min(1),
-  similarityScore: z.number().min(0).max(100),
+  similarityScore: z.number().int().min(0).max(100),
   text: z.string().min(10),
   evidencePoiIds: z.array(z.string().min(1)).min(1),
 });

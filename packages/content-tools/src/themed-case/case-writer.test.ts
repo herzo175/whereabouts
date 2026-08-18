@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { z } from 'zod';
 import {
-  bucketResults,
+  authorResults,
   repairCaseDraft,
   writeCaseDraft,
 } from './case-writer.js';
@@ -49,20 +49,19 @@ describe('case writer', () => {
     expect(draft.rounds[0].results).toHaveLength(25);
   });
 
-  it('uses deterministic score and ID tie ordering for hot/warm/cold buckets', () => {
+  it('preserves exact model-authored points for every candidate', () => {
     const results = fixtureBoard.candidates.map((candidate, index) => ({
       poiId: candidate.id,
       similarityScore: index === 0 ? 100 : 50,
       text: `Evidence for ${candidate.name} is documented here.`,
       evidencePoiIds: [candidate.id, fixtureBoard.targetPoiIds[0]],
     }));
-    const bucketed = bucketResults(results, fixtureBoard.targetPoiIds[0]);
-    expect(bucketed.filter((result) => result.tier === 'hot')).toHaveLength(4);
-    expect(bucketed.filter((result) => result.tier === 'warm')).toHaveLength(8);
-    expect(bucketed.filter((result) => result.tier === 'cold')).toHaveLength(
-      12,
+    const bucketed = authorResults(results, fixtureBoard.targetPoiIds[0]);
+    expect(bucketed.map((result) => result.points)).toEqual(
+      results.map((result) => result.similarityScore),
     );
-    expect(bucketed[0]?.tier).toBe('correct');
+    expect(bucketed[0]?.points).toBe(100);
+    expect(bucketed.every((result) => !('tier' in result))).toBe(true);
   });
 
   it('rejects a clue that cites an off-board evidence ID', async () => {
@@ -86,6 +85,25 @@ describe('case writer', () => {
         board: fixtureBoard,
       }),
     ).rejects.toThrow(/target|board/);
+  });
+
+  it('rejects fractional candidate scores from the model', async () => {
+    const rounds = fixtureCaseDraft.rounds.map((round) => ({
+      targetPoiId: round.targetPoiId,
+      clue: { text: round.clue.text },
+      results: round.results.map((result) => ({
+        poiId: result.poiId,
+        similarityScore: result.poiId === round.targetPoiId ? 100 : 74.5,
+      })),
+    }));
+
+    await expect(
+      writeCaseDraft({
+        model: { generate: async () => ({ rounds }) },
+        theme: fixtureBoard.theme,
+        board: fixtureBoard,
+      }),
+    ).rejects.toThrow(/int|integer/i);
   });
 
   it('normalizes omitted target and guessed-POI evidence IDs', async () => {

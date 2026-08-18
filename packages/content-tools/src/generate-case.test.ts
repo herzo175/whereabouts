@@ -52,9 +52,9 @@ const input = {
 };
 
 describe('generateCase', () => {
-  it('assembles a validated themed v3 prepared case without writing files', async () => {
+  it('assembles a validated themed v4 prepared case without writing files', async () => {
     const prepared = await generateCase(input);
-    expect(prepared.caseData.schemaVersion).toBe(3);
+    expect(prepared.caseData.schemaVersion).toBe(4);
     expect(prepared.caseData.theme.title).toBe(fixtureTheme.title);
     expect(prepared.caseData.pois).toHaveLength(25);
     expect(prepared.caseData.rounds.map((round) => round.targetPoiId)).toEqual(

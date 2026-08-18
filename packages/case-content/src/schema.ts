@@ -27,7 +27,7 @@ export type Source = {
 
 export type RoundResult = {
   poiId: string;
-  tier: RoundTier;
+  points: number;
   text: string;
   sourceIds: string[];
 };
@@ -54,7 +54,7 @@ export type ThemeConnection = {
 export type ThemedPoi = Poi & { themeConnection: ThemeConnection };
 
 export type ThemedDailyCase = {
-  schemaVersion: 3;
+  schemaVersion: 4;
   publicationDate: string;
   revision: number;
   caseNumber: number;
@@ -132,6 +132,17 @@ function numberInRange(
     fail(path, `must be a number between ${minimum} and ${maximum}`);
   }
   return value;
+}
+
+function integerInRange(
+  value: unknown,
+  path: string,
+  minimum: number,
+  maximum: number,
+): number {
+  const parsed = numberInRange(value, path, minimum, maximum);
+  if (!Number.isInteger(parsed)) fail(path, 'must be an integer');
+  return parsed;
 }
 
 function positiveInteger(value: unknown, path: string): number {
@@ -244,7 +255,7 @@ function parseFiveRoundDailyCase(
   value: unknown,
   poiParser: (value: unknown, path: string) => Poi,
 ): {
-  schemaVersion: 3;
+  schemaVersion: 4;
   publicationDate: string;
   revision: number;
   caseNumber: number;
@@ -253,7 +264,7 @@ function parseFiveRoundDailyCase(
   sources: Source[];
 } {
   const parsed = record(value, 'daily case');
-  if (parsed.schemaVersion !== 3) fail('schemaVersion', 'must equal 3');
+  if (parsed.schemaVersion !== 4) fail('schemaVersion', 'must equal 4');
   const publicationDate = string(parsed.publicationDate, 'publicationDate');
   if (!datePattern.test(publicationDate))
     fail('publicationDate', 'must be an ISO date');
@@ -288,17 +299,14 @@ function parseFiveRoundDailyCase(
       (result, resultIndex): RoundResult => {
         const resultPath = `${path}.results[${resultIndex}]`;
         const resultEntry = record(result, resultPath);
-        const tier = resultEntry.tier as RoundTier;
-        if (
-          tier !== 'correct' &&
-          tier !== 'hot' &&
-          tier !== 'warm' &&
-          tier !== 'cold'
-        )
-          fail(`${resultPath}.tier`, 'must be correct, hot, warm, or cold');
         return {
           poiId: id(resultEntry.poiId, `${resultPath}.poiId`),
-          tier,
+          points: integerInRange(
+            resultEntry.points,
+            `${resultPath}.points`,
+            0,
+            100,
+          ),
           text: string(resultEntry.text, `${resultPath}.text`, 10),
           sourceIds: parseSourceIds(
             resultEntry.sourceIds,
@@ -316,9 +324,9 @@ function parseFiveRoundDailyCase(
       poiIds.some((poiId) => !resultPoiIds.includes(poiId))
     )
       fail(`${path}.results`, 'must cover every board POI exactly once');
-    const correct = results.filter((result) => result.tier === 'correct');
-    if (correct.length !== 1 || correct[0]?.poiId !== targetPoiId)
-      fail(`${path}.results`, 'only the target may be marked correct');
+    const perfect = results.filter((result) => result.points === 100);
+    if (perfect.length !== 1 || perfect[0]?.poiId !== targetPoiId)
+      fail(`${path}.results`, 'only the target may receive 100 points');
     const sourceReferences = [
       ...parsedClue.sourceIds,
       ...results.flatMap((result) => result.sourceIds),
@@ -345,7 +353,7 @@ function parseFiveRoundDailyCase(
     'Round target ids',
   );
   return {
-    schemaVersion: 3,
+    schemaVersion: 4,
     publicationDate,
     revision: positiveInteger(parsed.revision, 'revision'),
     caseNumber: positiveInteger(parsed.caseNumber, 'caseNumber'),
@@ -396,7 +404,7 @@ const themedDailyCaseSchema: Schema<ThemedDailyCase> = {
 export const dailyCaseSchema: Schema<DailyCase> = {
   parse(value) {
     const parsed = record(value, 'daily case');
-    if (parsed.schemaVersion === 3) return themedDailyCaseSchema.parse(value);
-    fail('schemaVersion', 'must equal 3');
+    if (parsed.schemaVersion === 4) return themedDailyCaseSchema.parse(value);
+    fail('schemaVersion', 'must equal 4');
   },
 };

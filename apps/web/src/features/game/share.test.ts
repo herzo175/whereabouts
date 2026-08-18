@@ -10,23 +10,21 @@ function fiveRoundProgress(
   overrides: Partial<FiveRoundProgress> = {},
 ): FiveRoundProgress {
   return {
-    schemaVersion: 2,
+    schemaVersion: 3,
     caseDate: '2026-08-14',
     caseRevision: 1,
     guesses: [
       {
         roundId: 'round-1',
         poiId: 'known-place',
-        tier: 'correct',
         points: 100,
       },
-      { roundId: 'round-2', poiId: 'known-place', tier: 'hot', points: 75 },
-      { roundId: 'round-3', poiId: 'known-place', tier: 'warm', points: 50 },
-      { roundId: 'round-4', poiId: 'known-place', tier: 'cold', points: 25 },
+      { roundId: 'round-2', poiId: 'known-place', points: 87 },
+      { roundId: 'round-3', poiId: 'known-place', points: 63 },
+      { roundId: 'round-4', poiId: 'known-place', points: 24 },
       {
         roundId: 'round-5',
         poiId: 'known-place',
-        tier: 'correct',
         points: 100,
       },
     ],
@@ -45,7 +43,7 @@ describe('buildShareText', () => {
     );
 
     expect(text).toBe(
-      'WHEREABOUTS\n🟢 🟠 🟡 🔵 🟢\n350 / 500\nhttps://whereabouts.test',
+      'WHEREABOUTS\n🟢 🟠 🟡 🔵 🟢\n374 / 500\nhttps://whereabouts.test',
     );
     expect(text).not.toContain(fiveRoundCase.publicationDate);
     expect(text).not.toContain('Known place');

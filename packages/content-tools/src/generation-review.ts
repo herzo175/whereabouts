@@ -55,7 +55,7 @@ export function validateGenerationReview(
       },
     ];
   }
-  if (dailyCase.schemaVersion !== 3)
+  if (dailyCase.schemaVersion !== 4)
     return [
       {
         path: 'case.schemaVersion',

@@ -14,7 +14,7 @@ const compactRoundSchema = z.object({
     .array(
       z.object({
         poiId: z.string(),
-        similarityScore: z.number().min(0).max(100),
+        similarityScore: z.number().int().min(0).max(100),
       }),
     )
     .length(25),
@@ -153,7 +153,7 @@ export async function writeCaseDraft({
   theme: CuratedBoard['theme'];
   board: CuratedBoard;
 }): Promise<CaseDraft> {
-  const prompt = `Write a five-round themed geography case for ${theme.title}. Board records and evidence are supplied below; use only their IDs. Explicit target order: ${board.targetPoiIds.join(', ')}. Return exactly five compact rounds, in that order. Each clue must uniquely resolve to its target among the 25 board candidates using at least two concrete facts from that target's evidence; do not merely restate the shared theme. Before reveal, never include the target's name, city, or country in the clue. Each round must contain its targetPoiId, a clue text, and exactly 25 ranked {poiId, similarityScore} entries covering every board ID exactly once. The target must score 100; use meaningful scores to rank within-theme relationships. Do not return per-result prose or evidence arrays; the pipeline assembles those deterministically from the board.\n${board.candidates.map((candidate) => `${candidate.id}: ${candidate.name}; ${candidate.themeClaim}; source extract: ${candidate.source.extract}`).join('\n')}`;
+  const prompt = `Write a five-round themed geography case for ${theme.title}. Board records and evidence are supplied below; use only their IDs. Explicit target order: ${board.targetPoiIds.join(', ')}. Return exactly five compact rounds, in that order. Each clue must uniquely resolve to its target among the 25 board candidates using at least two concrete facts from that target's evidence; do not merely restate the shared theme. Before reveal, never include the target's name, city, or country in the clue. Each round must contain its targetPoiId, a clue text, and exactly 25 {poiId, similarityScore} entries covering every board ID exactly once. Set the target to 100 and every other candidate to a custom integer from 0 through 99 based on how strongly that specific place fits the clue. Use the full useful range: hot is 75–99, warm is 40–74, and cold is 0–39; every round must include all three bands and at least eight distinct incorrect scores. Do not return per-result prose or evidence arrays; the pipeline assembles those deterministically from the board.\n${board.candidates.map((candidate) => `${candidate.id}: ${candidate.name}; ${candidate.themeClaim}; source extract: ${candidate.source.extract}`).join('\n')}`;
   const raw = await model.generate({
     schema: generatedSchema,
     prompt,
@@ -162,42 +162,26 @@ export async function writeCaseDraft({
   return assembleDraft(raw, board);
 }
 
-export type BucketedResult = {
+export type AuthoredResult = {
   poiId: string;
-  tier: 'correct' | 'hot' | 'warm' | 'cold';
+  points: number;
   text: string;
   sourceIds: string[];
 };
-export function bucketResults(
+export function authorResults(
   results: CaseDraft['rounds'][number]['results'],
   targetPoiId: string,
-): BucketedResult[] {
+): AuthoredResult[] {
   if (results.filter((result) => result.poiId === targetPoiId).length !== 1)
     throw new Error('target must occur exactly once');
-  const ranked = results
-    .filter((result) => result.poiId !== targetPoiId)
-    .sort(
-      (a, b) =>
-        b.similarityScore - a.similarityScore || a.poiId.localeCompare(b.poiId),
-    );
-  const tiers = new Map(
-    ranked.map(
-      (result, index) =>
-        [
-          result.poiId,
-          index < 4 ? 'hot' : index < 12 ? 'warm' : 'cold',
-        ] as const,
-    ),
-  );
-  return results.map(
-    ({ similarityScore: _score, evidencePoiIds, ...result }) => {
-      const tier =
-        result.poiId === targetPoiId ? 'correct' : tiers.get(result.poiId);
-      if (!tier)
-        throw new Error(`missing similarity bucket for ${result.poiId}`);
-      return { ...result, tier, sourceIds: evidencePoiIds };
-    },
-  );
+  const target = results.find((result) => result.poiId === targetPoiId);
+  if (target?.similarityScore !== 100)
+    throw new Error('target must score exactly 100');
+  return results.map(({ similarityScore, evidencePoiIds, ...result }) => ({
+    ...result,
+    points: similarityScore,
+    sourceIds: evidencePoiIds,
+  }));
 }
 
 export async function repairCaseDraft({
@@ -236,7 +220,7 @@ export async function repairCaseDraft({
       .array(generatedSchema.shape.rounds.element)
       .length(roundIndexes.length),
   });
-  const prompt = `Repair only these defective rounds: ${repairs.map((repair) => `${repair.roundId} (array index ${Number(/^round-([1-5])$/.exec(repair.roundId)?.[1] ?? 0) - 1}) ${repair.kind} ${repair.poiId ?? ''}: ${repair.reason}`).join('; ')}. Preserve all unaffected rounds exactly. Each repaired clue must uniquely resolve to its declared target among the 25 board candidates using at least two concrete facts from that target's evidence; do not merely restate the shared theme. Before reveal, never include the target's name, city, or country in the clue. Return replacement rounds in the same requested round order, each with a targetPoiId, clue text, and compact ranked {poiId, similarityScore} entries for all 25 board IDs. Do not return per-result prose or evidence arrays. Theme: ${theme.title}. Board evidence: ${board.candidates.map((candidate) => `${candidate.id}: ${candidate.name}; ${candidate.themeClaim}; ${candidate.source.extract}`).join('\n')}. Board candidate IDs (use each exactly once per replacement round): ${board.candidates.map((candidate) => candidate.id).join(', ')}. Board targets: ${board.targetPoiIds.join(', ')}. Current defective rounds: ${roundIndexes.map((index) => JSON.stringify(draft.rounds[index])).join('\n')}`;
+  const prompt = `Repair only these defective rounds: ${repairs.map((repair) => `${repair.roundId} (array index ${Number(/^round-([1-5])$/.exec(repair.roundId)?.[1] ?? 0) - 1}) ${repair.kind} ${repair.poiId ?? ''}: ${repair.reason}`).join('; ')}. Preserve all unaffected rounds exactly. Each repaired clue must uniquely resolve to its declared target among the 25 board candidates using at least two concrete facts from that target's evidence; do not merely restate the shared theme. Before reveal, never include the target's name, city, or country in the clue. Return replacement rounds in the same requested round order, each with a targetPoiId, clue text, and exactly 25 {poiId, similarityScore} entries. Set the target to 100 and every other candidate to a custom integer from 0 through 99. Include hot (75–99), warm (40–74), and cold (0–39) candidates with at least eight distinct incorrect scores per round. Do not return per-result prose or evidence arrays. Theme: ${theme.title}. Board evidence: ${board.candidates.map((candidate) => `${candidate.id}: ${candidate.name}; ${candidate.themeClaim}; ${candidate.source.extract}`).join('\n')}. Board candidate IDs (use each exactly once per replacement round): ${board.candidates.map((candidate) => candidate.id).join(', ')}. Board targets: ${board.targetPoiIds.join(', ')}. Current defective rounds: ${roundIndexes.map((index) => JSON.stringify(draft.rounds[index])).join('\n')}`;
   const replacements = replacementSchema.parse(
     await model.generate({
       schema: replacementSchema,
