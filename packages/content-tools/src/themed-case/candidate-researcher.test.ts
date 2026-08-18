@@ -137,7 +137,7 @@ describe('researchCandidates', () => {
       },
     });
     expect(hydratedIds).toHaveLength(10);
-    expect(result.candidates).toHaveLength(25);
+    expect(result.candidates).toHaveLength(20);
     expect(result.targetPoiIds).toHaveLength(5);
     expect(result.targetPoiIds).not.toContain(fixtureBoard.targetPoiIds[0]);
     expect(result.targetPoiIds).not.toContain(fixtureBoard.targetPoiIds[1]);
@@ -152,7 +152,7 @@ describe('researchCandidates', () => {
     ).toHaveLength(5);
     expect(
       result.candidates.filter((candidate) => !candidate.image),
-    ).toHaveLength(20);
+    ).toHaveLength(15);
   });
 
   it('replaces a target when hydration resolves two candidates to the same page', async () => {

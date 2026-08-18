@@ -6,12 +6,12 @@ import { makeFiveRoundCase } from '../test/fixtures.js';
 import { dailyCaseSchema } from './schema.js';
 
 describe('dailyCaseSchema', () => {
-  it('accepts five distinct rounds over a shared 25-location board', () => {
+  it('accepts five distinct rounds over a shared 20-location board', () => {
     const parsed = dailyCaseSchema.parse(makeFiveRoundCase());
     expect(parsed.schemaVersion).toBe(4);
     if (parsed.schemaVersion !== 4) throw new Error('expected version 4');
     expect(parsed.rounds).toHaveLength(5);
-    expect(parsed.rounds[0]?.results).toHaveLength(25);
+    expect(parsed.rounds[0]?.results).toHaveLength(20);
   });
 
   it('accepts a sourced v4 themed case with authored candidate points', () => {
@@ -66,7 +66,31 @@ describe('dailyCaseSchema', () => {
   it('rejects incomplete five-round candidate coverage', () => {
     const value = makeFiveRoundCase();
     value.rounds[0].results.pop();
-    expect(() => dailyCaseSchema.parse(value)).toThrow(/25|cover/i);
+    expect(() => dailyCaseSchema.parse(value)).toThrow(/20|cover/i);
+  });
+
+  it('rejects boards above or below twenty candidates', () => {
+    const tooFew = makeFiveRoundCase();
+    tooFew.pois.pop();
+    for (const round of tooFew.rounds) round.results.pop();
+    expect(() => dailyCaseSchema.parse(tooFew)).toThrow(/exactly 20/i);
+
+    const tooMany = makeFiveRoundCase();
+    const extra = {
+      ...tooMany.pois[19],
+      id: 'poi-20',
+      name: 'Place 20',
+      latitude: 20,
+      longitude: 20,
+    };
+    tooMany.pois.push(extra);
+    for (const round of tooMany.rounds)
+      round.results.push({
+        ...round.results[19],
+        poiId: extra.id,
+        points: 1,
+      });
+    expect(() => dailyCaseSchema.parse(tooMany)).toThrow(/exactly 20/i);
   });
 
   it('allows non-target candidates without images while requiring round target images', () => {

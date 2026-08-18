@@ -1,3 +1,4 @@
+import { DAILY_BOARD_SIZE } from '@whereabouts/case-content';
 import { generateCase, type PreparedCase } from '../generate-case.js';
 import type { GenerationReview } from '../generation-review.js';
 import {
@@ -184,7 +185,7 @@ export async function orchestrateThemedCase(
         let candidates = pool.candidates.filter(
           (candidate) => !rejectedCandidateIds.has(candidate.id),
         );
-        if (candidates.length < 25) {
+        if (candidates.length < DAILY_BOARD_SIZE) {
           try {
             const replacementPool = await input.stages.researchCandidates({
               theme,

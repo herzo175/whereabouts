@@ -1,4 +1,5 @@
 import {
+  DAILY_BOARD_SIZE,
   dailyCaseSchema,
   type ThemedDailyCase,
 } from '@whereabouts/case-content';
@@ -18,7 +19,7 @@ export const generationReviewSchema = z.object({
         sourceIds: z.array(z.string()).min(1),
       }),
     )
-    .length(25),
+    .length(DAILY_BOARD_SIZE),
   clueVerdicts: z
     .array(
       z.object({

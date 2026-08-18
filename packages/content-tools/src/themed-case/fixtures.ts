@@ -56,7 +56,7 @@ export const fixtureCandidatePool: CandidatePool = {
 };
 export const fixtureBoard: CuratedBoard = {
   theme: fixtureTheme,
-  candidates: fixtureCandidates.slice(0, 25),
+  candidates: fixtureCandidates.slice(0, 20),
   targetPoiIds: fixtureCandidates.slice(0, 5).map((candidate) => candidate.id),
 };
 export function buildFixtureCaseDraft(

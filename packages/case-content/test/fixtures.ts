@@ -5,7 +5,7 @@ const timestamp = '2026-08-14T00:00:00Z';
 export function makeFiveRoundCase(
   overrides: Partial<ThemedDailyCase> = {},
 ): ThemedDailyCase {
-  const pois: Poi[] = Array.from({ length: 25 }, (_, index) => ({
+  const pois: Poi[] = Array.from({ length: 20 }, (_, index) => ({
     id: `poi-${String(index).padStart(2, '0')}`,
     name:
       index === 0 ? 'Target Place' : `Place ${String(index).padStart(2, '0')}`,
