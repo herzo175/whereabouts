@@ -143,6 +143,21 @@ describe('validateCaseForPublication', () => {
       'POI coordinates duplicate another POI at four decimal places',
     );
   });
+
+  it('rejects candidate pairs less than 10 km apart', () => {
+    const value = makeCase();
+    value.pois[1].latitude = 0.01;
+    value.pois[1].longitude = 0;
+
+    expect(validateCaseForPublication(value)).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          path: 'pois',
+          message: expect.stringMatching(/poi-00.*poi-01.*10 km/i),
+        }),
+      ]),
+    );
+  });
 });
 
 describe('validateCollection', () => {

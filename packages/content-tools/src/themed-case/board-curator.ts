@@ -1,6 +1,10 @@
 import { DAILY_BOARD_SIZE } from '@whereabouts/case-content';
 import { z } from 'zod';
 import {
+  candidateSpacingViolations,
+  MIN_CANDIDATE_DISTANCE_KM,
+} from '../candidate-spacing.js';
+import {
   type CuratedBoard,
   curatedBoardSchema,
   type ResearchedCandidate,
@@ -25,6 +29,24 @@ function duplicate(values: string[]): boolean {
   return new Set(values).size !== values.length;
 }
 
+function includeTargets(candidateIds: string[], targetPoiIds: string[]) {
+  const included = [...candidateIds];
+  const targets = new Set(targetPoiIds);
+  for (const targetId of targetPoiIds) {
+    if (included.includes(targetId)) continue;
+    let replacementIndex = -1;
+    for (let index = included.length - 1; index >= 0; index -= 1)
+      if (!targets.has(included[index] as string)) {
+        replacementIndex = index;
+        break;
+      }
+    if (replacementIndex < 0)
+      throw new Error('targets could not be placed on the board');
+    included[replacementIndex] = targetId;
+  }
+  return included;
+}
+
 export async function curateBoard({
   model,
   theme,
@@ -39,8 +61,9 @@ export async function curateBoard({
   const pool = new Map(
     candidates.map((candidate) => [candidate.id, candidate]),
   );
-  const prompt = `You are curating a themed geography board. Theme: ${theme.title}\nIntroduction: ${theme.introduction}\nExact inclusion criteria: ${theme.inclusionCriteria}\nExact exclusions: ${theme.exclusions.join('; ')}\nCandidate evidence (id, name, claim, coordinates):\n${candidates.map((candidate) => `${candidate.id} | ${candidate.name} | ${candidate.themeClaim} | ${candidate.latitude},${candidate.longitude}`).join('\n')}\nExcluded target IDs (never select these as targets): ${[...excluded].join(', ') || '(none)'}\nReturn only JSON with exactly ${DAILY_BOARD_SIZE} candidateIds and exactly 5 targetPoiIds, all IDs from this pool. Every selected candidate must independently satisfy every inclusion criterion and no exclusion. Targets must be five distinct board IDs. Choose difficulty from meaningful within-theme distinctions, not arbitrary popularity. Do not copy or invent candidate records; IDs only.`;
+  const prompt = `You are curating a themed geography board. Theme: ${theme.title}\nIntroduction: ${theme.introduction}\nExact inclusion criteria: ${theme.inclusionCriteria}\nExact exclusions: ${theme.exclusions.join('; ')}\nCandidate evidence (id, name, claim, coordinates):\n${candidates.map((candidate) => `${candidate.id} | ${candidate.name} | ${candidate.themeClaim} | ${candidate.latitude},${candidate.longitude}`).join('\n')}\nExcluded target IDs (never select these as targets): ${[...excluded].join(', ') || '(none)'}\nReturn only JSON with exactly ${DAILY_BOARD_SIZE} candidateIds and exactly 5 targetPoiIds, all IDs from this pool. Every selected candidate must independently satisfy every inclusion criterion and no exclusion. Every pair of selected candidates must be at least ${MIN_CANDIDATE_DISTANCE_KM} km apart so globe markers remain distinct. Targets must be five distinct board IDs. Choose difficulty from meaningful within-theme distinctions, not arbitrary popularity. Do not copy or invent candidate records; IDs only.`;
   let selection: BoardSelection | undefined;
+  let selectedCandidateIds: string[] | undefined;
   let correction = '';
   for (let attempt = 0; attempt < 2; attempt += 1) {
     const raw = await model.generate({
@@ -58,34 +81,53 @@ export async function curateBoard({
     const excludedTargets = candidate.targetPoiIds.filter((id) =>
       excluded.has(id),
     );
-    if (!unknown.length && !duplicated && !excludedTargets.length) {
+    const finalCandidateIds =
+      !unknown.length && !duplicated && !excludedTargets.length
+        ? includeTargets(candidate.candidateIds, candidate.targetPoiIds)
+        : [];
+    const finalCandidates = finalCandidateIds.flatMap((id) => {
+      const item = pool.get(id);
+      return item ? [item] : [];
+    });
+    const spacingViolations = candidateSpacingViolations(finalCandidates);
+    const coordinates = finalCandidates.map(
+      (item) => `${item.latitude},${item.longitude}`,
+    );
+    const duplicateCoordinates =
+      new Set(coordinates).size !== coordinates.length;
+    if (
+      !unknown.length &&
+      !duplicated &&
+      !excludedTargets.length &&
+      !spacingViolations.length
+    ) {
       selection = candidate;
+      selectedCandidateIds = finalCandidateIds;
       break;
     }
     if (attempt === 1) {
       if (unknown.length)
         throw new Error('curation returned an unknown candidate ID');
       if (duplicated) throw new Error('curation returned duplicate IDs');
-      throw new Error('curation selected an excluded target');
+      if (excludedTargets.length)
+        throw new Error('curation selected an excluded target');
+      if (duplicateCoordinates)
+        throw new Error('curation selected duplicate coordinates');
+      throw new Error(
+        `curation selected candidates less than ${MIN_CANDIDATE_DISTANCE_KM} km apart`,
+      );
     }
-    correction = `\nYour previous selection was invalid. Unknown IDs: ${unknown.join(', ') || '(none)'}. Duplicate IDs: ${duplicated ? 'yes' : 'no'}. Excluded targets selected: ${excludedTargets.join(', ') || '(none)'}. Correct the JSON using only the exact candidate IDs listed above.`;
+    const spacing = spacingViolations
+      .map(
+        (violation) =>
+          `${violation.firstId} and ${violation.secondId} (${violation.distanceKm.toFixed(1)} km)`,
+      )
+      .join(', ');
+    correction = `\nYour previous selection was invalid. Unknown IDs: ${unknown.join(', ') || '(none)'}. Duplicate IDs: ${duplicated ? 'yes' : 'no'}. Excluded targets selected: ${excludedTargets.join(', ') || '(none)'}. Candidate pairs closer than ${MIN_CANDIDATE_DISTANCE_KM} km: ${spacing || '(none)'}. Correct the JSON using only the exact candidate IDs listed above.`;
   }
-  if (!selection) throw new Error('curation did not return a valid selection');
-  const candidateIds = [...selection.candidateIds];
-  const targets = new Set(selection.targetPoiIds);
-  for (const targetId of selection.targetPoiIds) {
-    if (candidateIds.includes(targetId)) continue;
-    let replacementIndex = -1;
-    for (let index = candidateIds.length - 1; index >= 0; index -= 1)
-      if (!targets.has(candidateIds[index] as string)) {
-        replacementIndex = index;
-        break;
-      }
-    if (replacementIndex < 0)
-      throw new Error('targets could not be placed on the board');
-    candidateIds[replacementIndex] = targetId;
-  }
-  const selected = candidateIds.flatMap((id) => {
+  if (!selection || !selectedCandidateIds)
+    throw new Error('curation did not return a valid selection');
+  const selected = selectedCandidateIds.flatMap((id) => {
     const candidate = pool.get(id);
     return candidate ? [candidate] : [];
   });

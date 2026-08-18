@@ -63,6 +63,44 @@ describe('curateBoard', () => {
     expect(board.candidates.map((candidate) => candidate.id)).toEqual(ids);
   });
 
+  it('corrects a selection containing candidates less than 10 km apart', async () => {
+    const candidates = fixtureCandidates.map((candidate, index) =>
+      index === 19
+        ? { ...candidate, latitude: -19.99, longitude: -60 }
+        : candidate,
+    );
+    const clusteredIds = candidates
+      .slice(0, 20)
+      .map((candidate) => candidate.id);
+    const correctedIds = [...clusteredIds.slice(0, 19), candidates[20].id];
+    let calls = 0;
+
+    const board = await curateBoard({
+      model: {
+        generate: async ({ prompt }) => {
+          calls += 1;
+          if (calls === 1)
+            return {
+              candidateIds: clusteredIds,
+              targetPoiIds: clusteredIds.slice(0, 5),
+            };
+          expect(prompt).toMatch(/market-square-01.*market-square-20/i);
+          return {
+            candidateIds: correctedIds,
+            targetPoiIds: clusteredIds.slice(0, 5),
+          };
+        },
+      },
+      theme: fixtureTheme,
+      candidates,
+    });
+
+    expect(calls).toBe(2);
+    expect(board.candidates.map((candidate) => candidate.id)).toEqual(
+      correctedIds,
+    );
+  });
+
   it('rejects duplicate coordinates through the board contract', async () => {
     const candidates = fixtureCandidates.map((candidate, index) =>
       index === 1
