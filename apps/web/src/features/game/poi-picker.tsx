@@ -11,7 +11,7 @@ type PoiPickerProps = {
   guessedPoiIds?: Set<string>;
   disabledPoiIds?: Set<string>;
   dossierDetail?: 'full' | 'identity';
-  globe?: (selectPoi: (poi: Poi) => void) => ReactNode;
+  globe?: (selectPoi: (poi: Poi) => void, fallback: ReactNode) => ReactNode;
 } & (
   | { mode?: 'guess'; onGuess: (poi: Poi) => void }
   | { mode: 'browse'; onGuess?: never }
@@ -43,22 +43,27 @@ export function PoiPicker({
     setSelectedPoi(null);
   };
 
+  const search = (
+    <PoiSearch
+      disabledPoiIds={eliminatedPoiIds}
+      onSelect={selectPoi}
+      pois={pois}
+    />
+  );
+
   return (
     <section className="space-y-4" aria-label="Choose a location">
-      {globe ? globe(selectPoi) : null}
+      {globe ? globe(selectPoi, search) : null}
       {!globe ? (
         <GlobePicker
           disabledPoiIds={eliminatedPoiIds}
+          fallback={mode === 'guess' ? search : undefined}
           onSelect={selectPoi}
           pois={pois}
           selectedPoiId={selectedPoi?.id ?? null}
         />
       ) : null}
-      <PoiSearch
-        disabledPoiIds={eliminatedPoiIds}
-        onSelect={selectPoi}
-        pois={pois}
-      />
+      {mode === 'browse' ? search : null}
       <PoiDossier
         detail={dossierDetail}
         onOpenChange={(open) => {
