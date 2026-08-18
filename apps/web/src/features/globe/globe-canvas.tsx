@@ -13,9 +13,13 @@ import { useEffect, useMemo, useRef } from 'react';
 export const POI_HIT_RADIUS = 24;
 export const POI_BEAM_RADIUS = 0.25;
 export const POI_BEAM_OPACITY: ExpressionSpecification = [
-  '*',
-  ['get', 'opacity'],
-  ['interpolate', ['linear'], ['zoom'], 2.4, 0, 3.2, 1],
+  'interpolate',
+  ['linear'],
+  ['zoom'],
+  2.4,
+  0,
+  3.2,
+  0.82,
 ];
 const POI_BEAM_SEGMENTS = 16;
 
