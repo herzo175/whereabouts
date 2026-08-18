@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "publicationDate": "2026-08-25",
+  "revision": 5,
+  "themeVerdicts": [
+    {
+      "poiId": "leadenhall-market",
+      "status": "pass",
+      "explanation": "Individually named, roofed market at a precise City of London location. The evidence describes public food and merchandise stalls, a current market with weekday access, and the current ornate market structure dating to 1881, within the pre-1900 cutoff.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "mercat-sant-antoni",
+      "status": "pass",
+      "explanation": "The evidence identifies a permanent iron market hall at the Barcelona site, built in the late nineteenth century, with an active public market selling food and other goods. It is named and mappable as one location.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "mercado-atarazanas",
+      "status": "pass",
+      "explanation": "A named municipal covered market in Málaga, with a nineteenth-century iron structure and ongoing public food-market operation. The supplied coordinates identify one exact site within the city.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "mercado-central-cadiz",
+      "status": "pass",
+      "explanation": "The named Central Market of Cádiz is a covered public market whose building opened in 1838 and still contains permanent food and merchandise stalls at its identifiable city-center site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "halles-dijon",
+      "status": "pass",
+      "explanation": "A named permanent covered market in central Dijon, housed in a nineteenth-century hall and still accommodating food merchants and regular public trading at one mappable location.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "great-market-hall-budapest",
+      "status": "pass",
+      "explanation": "The evidence directly supports a named steel-covered market hall opened in 1897, with public food, craft, and merchandise stalls, current Monday-to-Saturday access, and a precise Budapest location.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "egyptian-spice-bazaar",
+      "status": "pass",
+      "explanation": "A named roofed bazaar constructed from 1660, still operating in Istanbul with 85 public-facing shops selling spices, sweets, dried fruit, nuts, and other merchandise. Its location is precisely identifiable.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "tabriz-bazaar",
+      "status": "pass",
+      "explanation": "The individually named Tabriz Historic Bazaar Complex consists of permanent interconnected covered market structures with medieval origins and continuing public trade in food, crafts, carpets, and other goods at a mappable urban site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "sukiennice",
+      "status": "pass",
+      "explanation": "Sukiennice is an individually named covered market building at the Kraków Main Market Square. Its market use is centuries old and its ground-floor arcade still has public merchandise stalls and shops at the same site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "mercato-centrale-florence",
+      "status": "pass",
+      "explanation": "A named permanent indoor market in Florence, housed in an iron-and-glass building completed in 1874, with continuing public food and specialty stalls at a precise site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "varvakios-market",
+      "status": "pass",
+      "explanation": "Varvakios Agora is a named covered central food market established in the nineteenth century and still operating with public meat, fish, produce, and grocery stalls in Athens.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "crawford-market",
+      "status": "pass",
+      "explanation": "The named Crawford Market occupies a permanent covered municipal building completed in 1869 and remains a public market selling food, produce, household goods, and other merchandise in Mumbai.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "new-market-kolkata",
+      "status": "pass",
+      "explanation": "New Market is an individually named Victorian covered market opened in 1874. The historic complex remains a busy public market with food, clothing, household, and other merchandise stalls in Kolkata.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "mercado-central-santiago",
+      "status": "pass",
+      "explanation": "A named wrought-iron covered market building opened in 1872 and still functioning as a public fish, seafood, produce, and food market at one identifiable Santiago location.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "mercado-san-telmo",
+      "status": "pass",
+      "explanation": "San Telmo Market is a named covered market inaugurated in 1897. Its historic iron structure continues to house public food, antique, craft, and merchandise vendors in Buenos Aires.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "mercado-del-puerto",
+      "status": "pass",
+      "explanation": "The named Mercado del Puerto opened in 1868 in a cast-iron market hall and remains a publicly accessible food-market destination with food stalls and market trading at the original Montevideo site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "mercado-modelo-recife",
+      "status": "pass",
+      "explanation": "Mercado de São José is a named public market in a permanent prefabricated-iron building founded in 1871. Its 545 shops sell fish, spices, herbs, crafts, and cordel literature at a precise Recife location.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "quincy-market",
+      "status": "pass",
+      "explanation": "Quincy Market is an individually named historic market hall completed in 1826 and still publicly accessible with food stalls and market-oriented retail. The evidence supports continuity of the named market identity rather than a solely modern mall use.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "reading-terminal-market",
+      "status": "pass",
+      "explanation": "A named enclosed public market opened in 1893 and continues operating in Philadelphia with independent public vendors selling food, produce, meat, seafood, baked goods, and merchandise at one exact site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "eastern-market-dc",
+      "status": "pass",
+      "explanation": "Eastern Market is a named nineteenth-century brick public market opened in 1873. After the 2007 fire it reopened in the restored historic building, retaining indoor stalls and ongoing public market activity at its Capitol Hill site.",
+      "sourceIds": ["source-01"]
+    }
+  ],
+  "clueVerdicts": [
+    {
+      "roundId": "round-1",
+      "declaredTargetPoiId": "great-market-hall-budapest",
+      "resolvedPoiId": "great-market-hall-budapest",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The steel market hall, neogothic entrance, colorful Zsolnay roof tiles, location by Liberty Bridge and Váci utca, and regulated inspected-food purpose uniquely identify Budapest's Great Market Hall even without the opening year or other exact numbers."
+    },
+    {
+      "roundId": "round-2",
+      "declaredTargetPoiId": "egyptian-spice-bazaar",
+      "resolvedPoiId": "egyptian-spice-bazaar",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The Ottoman bazaar's integration into the New Mosque complex, rent-supported religious foundation, post-fire origin, and distinctive spice, dried-fruit, nut, and sweet trade uniquely identify the Egyptian/Spice Bazaar."
+    },
+    {
+      "roundId": "round-3",
+      "declaredTargetPoiId": "mercado-modelo-recife",
+      "resolvedPoiId": "mercado-modelo-recife",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "Prefabricated cast iron combined with fish, spices, herbs, crafts, and cordel literature is a distinctive non-numeric signature of Recife's Mercado de São José; the heritage reference reinforces the identification."
+    },
+    {
+      "roundId": "round-4",
+      "declaredTargetPoiId": "eastern-market-dc",
+      "resolvedPoiId": "eastern-market-dc",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The Capitol Hill setting, nineteenth-century brick hall, major fire, restored historic skylight, outdoor farmers' market, and arts programming uniquely identify Eastern Market in Washington, D.C., without relying on exact dates or measurements."
+    },
+    {
+      "roundId": "round-5",
+      "declaredTargetPoiId": "leadenhall-market",
+      "resolvedPoiId": "leadenhall-market",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The Roman London commercial setting, cobbled floors, distinctive green-maroon-cream roof, Dutch-style gabled entrance, and Lamb Tavern serving nearby insurance workers uniquely identify Leadenhall Market without exact numerical details."
+    }
+  ],
+  "repairs": []
+}
