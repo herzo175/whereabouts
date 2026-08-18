@@ -30,6 +30,12 @@ describe('DailyScorePanel', () => {
       />,
     );
 
+    for (const round of caseData.rounds) {
+      const place = caseData.pois.find((poi) => poi.id === round.targetPoiId);
+      expect(place).toBeDefined();
+      if (place) expect(screen.getByText(place.name)).toBeVisible();
+    }
+
     await user.click(screen.getByRole('button', { name: /copy result/i }));
 
     const fallback = screen.getByRole('textbox', {

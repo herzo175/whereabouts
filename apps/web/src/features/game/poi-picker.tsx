@@ -11,9 +11,11 @@ type PoiPickerProps = {
   guessedPoiIds?: Set<string>;
   disabledPoiIds?: Set<string>;
   dossierDetail?: 'full' | 'identity';
-  onGuess: (poi: Poi) => void;
   globe?: (selectPoi: (poi: Poi) => void) => ReactNode;
-};
+} & (
+  | { mode?: 'guess'; onGuess: (poi: Poi) => void }
+  | { mode: 'browse'; onGuess?: never }
+);
 
 export function PoiPicker({
   pois,
@@ -22,6 +24,7 @@ export function PoiPicker({
   dossierDetail = 'full',
   onGuess,
   globe,
+  mode = 'guess',
 }: PoiPickerProps) {
   const [selectedPoi, setSelectedPoi] = useState<Poi | null>(null);
   const eliminatedPoiIds = useMemo(() => {
@@ -35,7 +38,7 @@ export function PoiPicker({
   };
 
   const confirmSelection = () => {
-    if (!selectedPoi) return;
+    if (!selectedPoi || !onGuess) return;
     onGuess(selectedPoi);
     setSelectedPoi(null);
   };
@@ -58,11 +61,11 @@ export function PoiPicker({
       />
       <PoiDossier
         detail={dossierDetail}
-        onConfirm={confirmSelection}
         onOpenChange={(open) => {
           if (!open) setSelectedPoi(null);
         }}
         open={selectedPoi !== null}
+        onConfirm={mode === 'guess' ? confirmSelection : undefined}
         poi={selectedPoi}
       />
     </section>

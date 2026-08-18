@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { makeFiveRoundCase } from '@whereabouts/case-content/testing';
 import {
+  acknowledgeRoundReveal,
   createFiveRoundProgress,
   submitRoundGuess,
 } from '@whereabouts/game-engine';
@@ -154,10 +155,25 @@ describe('FiveRoundGameScreen', () => {
     ).toBeVisible();
     expect(screen.getByText('500 / 500')).toBeVisible();
     expect(screen.getAllByText(/^correct$/i)).toHaveLength(5);
+    expect(
+      screen.getByRole('list', { name: /matching locations/i }),
+    ).toBeVisible();
+    expect(screen.getByText(/globe unavailable/i)).toBeVisible();
 
     await user.click(screen.getByRole('button', { name: /copy result/i }));
     expect(onShare).toHaveBeenCalledWith(caseData, completed);
     expect(screen.getByRole('button', { name: /copied/i })).toBeVisible();
+
+    await user.click(
+      screen.getByRole('button', { name: /back to previous result/i }),
+    );
+    expect(
+      screen.getByRole('heading', { name: /round 5 revealed/i }),
+    ).toBeVisible();
+    await user.click(
+      screen.getByRole('button', { name: /return to daily summary/i }),
+    );
+    expect(screen.getByRole('heading', { name: /daily score/i })).toBeVisible();
   });
 
   it('restores an unacknowledged reveal instead of skipping to the next round', async () => {
@@ -184,5 +200,59 @@ describe('FiveRoundGameScreen', () => {
       await screen.findByRole('heading', { name: /round 1 revealed/i }),
     ).toBeVisible();
     expect(screen.getByRole('button', { name: /next round/i })).toBeVisible();
+  });
+
+  it('navigates backward and forward through previous results without changing progress', async () => {
+    const user = userEvent.setup();
+    const caseData = makeFiveRoundCase();
+    const progress = caseData.rounds
+      .slice(0, 2)
+      .reduce(
+        (current, round) =>
+          acknowledgeRoundReveal(
+            submitRoundGuess(caseData, current, round.targetPoiId),
+          ),
+        createFiveRoundProgress(caseData),
+      );
+    const storage = makeStorage({
+      [`whereabouts:case:${caseData.publicationDate}`]:
+        JSON.stringify(progress),
+    });
+
+    render(
+      <FiveRoundGameScreen
+        caseData={caseData}
+        globeSupported={false}
+        storage={storage}
+      />,
+    );
+
+    expect(await screen.findByText('Round 3 / 5')).toBeVisible();
+    await user.click(
+      screen.getByRole('button', { name: /back to previous result/i }),
+    );
+    expect(
+      screen.getByRole('heading', { name: /round 2 revealed/i }),
+    ).toBeVisible();
+
+    await user.click(
+      screen.getByRole('button', { name: /back to round 1 result/i }),
+    );
+    expect(
+      screen.getByRole('heading', { name: /round 1 revealed/i }),
+    ).toBeVisible();
+
+    await user.click(
+      screen.getByRole('button', { name: /forward to round 2 result/i }),
+    );
+    expect(
+      screen.getByRole('heading', { name: /round 2 revealed/i }),
+    ).toBeVisible();
+
+    await user.click(
+      screen.getByRole('button', { name: /return to round 3/i }),
+    );
+    expect(screen.getByText('Round 3 / 5')).toBeVisible();
+    expect(storage.setItem).not.toHaveBeenCalled();
   });
 });

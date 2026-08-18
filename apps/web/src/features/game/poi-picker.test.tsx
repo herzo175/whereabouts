@@ -100,6 +100,21 @@ describe('PoiPicker', () => {
     expect(onGuess).toHaveBeenCalledWith(pois[0]);
   });
 
+  it('opens full dossiers without a submit action in browse mode', async () => {
+    const user = userEvent.setup();
+    render(<PoiPicker mode="browse" pois={pois} />);
+
+    await user.click(screen.getByRole('button', { name: /sagrada família/i }));
+
+    expect(
+      screen.getByRole('dialog', { name: /sagrada família/i }),
+    ).toBeVisible();
+    expect(
+      screen.queryByRole('button', { name: /submit this lead/i }),
+    ).toBeNull();
+    expect(screen.getByRole('button', { name: /^close$/i })).toBeVisible();
+  });
+
   it('marks guessed POIs as eliminated and prevents selection', async () => {
     const user = userEvent.setup();
     render(

@@ -45,8 +45,9 @@ describe('buildShareText', () => {
     );
 
     expect(text).toBe(
-      'WHEREABOUTS\n🟢 🟠 🟡 🔵 🟢\n350 / 500\nhttps://whereabouts.test/2026-08-14',
+      'WHEREABOUTS\n🟢 🟠 🟡 🔵 🟢\n350 / 500\nhttps://whereabouts.test',
     );
+    expect(text).not.toContain(fiveRoundCase.publicationDate);
     expect(text).not.toContain('Known place');
     expect(text).not.toContain('Evidence photograph');
     expect(text).not.toContain('A revealing clue');
