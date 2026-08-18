@@ -19,4 +19,3 @@ The seven affected dates—2026-08-17, 2026-08-18, 2026-08-19, 2026-08-21, 2026-
 ## Testing
 
 Tests will cover haversine boundary behavior, curator correction after a clustered selection, and publication rejection. Content validation will prove every manifested board has 20 candidates, includes every clue answer, and satisfies spacing and semantic review requirements.
-

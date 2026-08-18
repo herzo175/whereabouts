@@ -109,4 +109,3 @@ Expected: 16 successful tasks.
 - [ ] **Step 2: Commit and push**
 
 Commit the spacing code/tests and content revisions in focused commits, then push `agent/easier-twenty-candidate-cases` to update pull request #8.
-

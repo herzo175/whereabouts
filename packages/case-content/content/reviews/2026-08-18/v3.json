@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "publicationDate": "2026-08-18",
+  "revision": 3,
+  "themeVerdicts": [
+    {
+      "poiId": "oxford-botanic-garden",
+      "status": "pass",
+      "explanation": "The University of Oxford Botanic Garden is a distinct botanical garden in Oxford, founded at its current site in 1621, physically maintained, and publicly visitable.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "peter-the-great-botanical-garden",
+      "status": "pass",
+      "explanation": "The Saint Petersburg garden occupies Aptekarsky Island and descends from the Apothecary Garden established there in 1714. It remains a maintained botanical garden with public outdoor and guided greenhouse access.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "copenhagen-botanical-garden",
+      "status": "pass",
+      "explanation": "The University of Copenhagen Botanical Garden is a distinct botanical garden whose current site was laid out in 1874, before the cutoff, and is publicly accessible.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "orto-botanico-florence",
+      "status": "pass",
+      "explanation": "Orto Botanico di Firenze, also known as the Giardino dei Semplici, is an individually named university botanical garden founded in 1545 and still maintained and visitable in Florence.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "real-jardin-botanico-madrid",
+      "status": "pass",
+      "explanation": "Madrid's Royal Botanical Garden was founded in 1755 and moved to its present Paseo del Prado site in 1781. It remains maintained and open to visitors within Madrid.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "orto-botanico-palermo",
+      "status": "pass",
+      "explanation": "Palermo's Orto Botanico is a named university botanical garden founded in 1789, still physically maintained and open to the public within the city.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "jardim-botanico-coimbra",
+      "status": "pass",
+      "explanation": "The University of Coimbra Botanical Garden was founded in 1772, remains a maintained garden on its historic urban site, and is open to visitors.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "botanical-garden-wroclaw",
+      "status": "pass",
+      "explanation": "The Botanical Garden of the University of Wrocław was established in 1811 at its historic urban site, remains a maintained garden, and has a public entrance.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "jardin-des-plantes-paris",
+      "status": "pass",
+      "explanation": "Paris's Jardin des Plantes is a distinct officially named botanical garden whose medicinal-plant garden was formally founded in 1635. It survives as a maintained public garden within Paris.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "orto-botanico-pisa",
+      "status": "pass",
+      "explanation": "Orto botanico di Pisa is an individually named botanical garden founded in 1544 and located at its present site since 1591. It remains open to visitors in Pisa.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "jardin-des-plantes-montpellier",
+      "status": "pass",
+      "explanation": "Montpellier's Jardin des plantes is an officially named botanical and teaching garden founded in 1593, still maintained and visitable within the city.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "national-botanic-gardens-glasnevin",
+      "status": "pass",
+      "explanation": "The National Botanic Gardens of Ireland at Glasnevin are a distinct botanical garden within Dublin, founded in 1795, maintained, and open to the public.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "ortobotanico-padua",
+      "status": "pass",
+      "explanation": "Orto Botanico di Padova is a distinct botanical garden in Padua, founded in 1545 and still located at its original site as a maintained, publicly accessible garden.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "kew-royal-botanic-gardens",
+      "status": "pass",
+      "explanation": "The evidence identifies a distinct botanical garden in London, founded on its current site in 1840, maintained, and open to the public. It satisfies the pre-1900 date, urban-location, survival, and visitation requirements.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "cambridge-university-botanic-garden",
+      "status": "pass",
+      "explanation": "The garden is an individually named botanic garden in Cambridge. Although established earlier, its current site opened in 1846, before the cutoff, and it remains maintained and regularly open to visitors.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "jardim-botanico-ajuda",
+      "status": "pass",
+      "explanation": "Ajuda Botanical Garden is a distinct named botanical garden in Lisbon, created in 1768 and still maintained with public access.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "acharya-jagadish-chandra-bose-indian-botanic-garden",
+      "status": "pass",
+      "explanation": "This is a distinct botanical garden in Shibpur, within Howrah, authorized and established in 1787. It survives as a maintained 109-hectare garden with ticketed public access.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "lalbagh-botanical-garden",
+      "status": "pass",
+      "explanation": "Lalbagh Botanical Garden is an officially named botanical garden in Bengaluru, begun in 1760, maintained by the state horticulture department, and open to visitors.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "fomin-botanical-garden",
+      "status": "pass",
+      "explanation": "O.V. Fomin Botanical Garden is a distinct university botanical garden in Kyiv, established in 1839, maintained, and regularly accessible to visitors.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "orto-botanico-catania",
+      "status": "pass",
+      "explanation": "The Orto Botanico dell'Università di Catania is a distinct urban botanical garden established in 1858, with surviving collections and visitor access.",
+      "sourceIds": ["source-01"]
+    }
+  ],
+  "clueVerdicts": [
+    {
+      "roundId": "round-1",
+      "declaredTargetPoiId": "oxford-botanic-garden",
+      "resolvedPoiId": "oxford-botanic-garden",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The 1621 physic-garden foundation, more than 5,000 species, and Danby Gate attribution to Nicholas Stone in 1632–33 identify Oxford Botanic Garden.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-2",
+      "declaredTargetPoiId": "ortobotanico-padua",
+      "resolvedPoiId": "ortobotanico-padua",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The 1545 republican foundation, square-within-circle design, and 1585 “Goethe's palm” are distinctive features of Orto Botanico di Padova.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-3",
+      "declaredTargetPoiId": "jardin-des-plantes-paris",
+      "resolvedPoiId": "jardin-des-plantes-paris",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The 1635 Royal Garden of Medicinal Plants, 28-hectare site, National Herbarium, and 1795 menagerie identify Paris's Jardin des Plantes.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-4",
+      "declaredTargetPoiId": "peter-the-great-botanical-garden",
+      "resolvedPoiId": "peter-the-great-botanical-garden",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The 1714 Apothecary Garden, Aptekarsky Island location, 18.9-hectare area, and historic greenhouses identify the Peter the Great Botanical Garden in Saint Petersburg.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-5",
+      "declaredTargetPoiId": "acharya-jagadish-chandra-bose-indian-botanic-garden",
+      "resolvedPoiId": "acharya-jagadish-chandra-bose-indian-botanic-garden",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The 1787 East India Company authorization, commercial-crop mission, Chinese tea history, 109-hectare extent, and enormous banyan identify the Acharya Jagadish Chandra Bose Indian Botanic Garden.",
+      "resolvableWithoutExactNumbers": true
+    }
+  ],
+  "repairs": [
+    {
+      "stage": "candidate-spacing",
+      "summary": "Replaced clustered distractors and rescored all relationships to enforce the 10 km minimum."
+    }
+  ]
+}

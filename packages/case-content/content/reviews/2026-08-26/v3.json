@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "publicationDate": "2026-08-26",
+  "revision": 3,
+  "themeVerdicts": [
+    {
+      "poiId": "nishiki-kyoto",
+      "status": "pass",
+      "explanation": "Named roofed market street in a fixed Kyoto arcade, with documented market authorization at the site in 1615 and approximately 130 operating food and goods shops.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "boqueria-barcelona",
+      "status": "pass",
+      "explanation": "Permanent publicly accessible covered food market in Barcelona; its present-site market structure was inaugurated in 1853, with the current metal roof added in 1914, and it remains operational.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "queen-victoria-market",
+      "status": "pass",
+      "explanation": "Permanent named market complex officially opened in 1878 and still operates with covered halls and sheds, food and non-food retail, and public access. Its mixed open-air components do not trigger the exclusion for markets that are entirely open-air.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "grand-bazaar-istanbul",
+      "status": "pass",
+      "explanation": "Named covered bazaar complex in Istanbul whose core construction began in 1455–56; it remains a fixed, publicly accessible retail complex with thousands of shops and regular hours.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "budapest-great-market-hall",
+      "status": "pass",
+      "explanation": "Permanent indoor municipal market opened in 1897 at its Budapest site, with operating stalls, published hours, and food and merchandise retail.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "reading-terminal-philadelphia",
+      "status": "pass",
+      "explanation": "Permanent enclosed public market opened in 1893 and remains operational with independent food, produce, prepared-food, and merchandise vendors.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "khan-el-khalili-cairo",
+      "status": "pass",
+      "explanation": "Historic named bazaar in Cairo established in the fourteenth century and still operating as a contiguous covered public retail market area.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "leadenhall-london",
+      "status": "pass",
+      "explanation": "Individually named covered market in a fixed City of London complex, with market use on the site since the fourteenth century and current public shops and food businesses.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "st-lawrence-toronto",
+      "status": "pass",
+      "explanation": "Public markets have occupied the Toronto site since 1803; the operating South Market building dates from 1845 and functions as a permanent covered food market.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "new-market-kolkata",
+      "status": "pass",
+      "explanation": "Permanent covered municipal market opened in 1874 and continuing as a public retail complex with food, clothing, and household shops.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "atarazanas-malaga",
+      "status": "pass",
+      "explanation": "Málaga’s permanent municipal market occupies a fixed historic complex; the present iron hall dates from the nineteenth century and remains an operating public food market.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "central-market-tunis",
+      "status": "pass",
+      "explanation": "Covered public central market established in 1891 in Tunis and still operating with regular food and produce vendors.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "mahane-yehuda",
+      "status": "pass",
+      "explanation": "Fixed Jerusalem market complex established in 1887, now operating year-round with covered streets, public stalls, and shops selling food and other goods.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "crawford-mumbai",
+      "status": "pass",
+      "explanation": "Historic covered municipal market opened in 1869 in Mumbai and still operating as a public retail market for food and household merchandise.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "metz-covered-market",
+      "status": "pass",
+      "explanation": "Permanent covered public food market beside Metz Cathedral with nineteenth-century market use and regular operating vendors.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "nancy-central-market",
+      "status": "pass",
+      "explanation": "Named permanent covered municipal market in Nancy dating from the nineteenth century and still operating with public food and provisions stalls.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "adelaide-central-market",
+      "status": "pass",
+      "explanation": "Permanent covered public food and produce market established in 1869 on its present Adelaide city site and still operating with independent traders.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "quincy-boston",
+      "status": "pass",
+      "explanation": "Historic covered public market hall completed in 1826 and still operating with visitor-accessible food vendors and shops in a fixed Boston complex.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "colmar-halles",
+      "status": "pass",
+      "explanation": "Nineteenth-century covered market hall in Colmar that remains an operating public market for produce, meat, fish, and other foods.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "paris-enfants-rouges",
+      "status": "pass",
+      "explanation": "This covered Paris market dates to the seventeenth century and continues to operate with public food stalls. The verified source and mapped coordinates support its inclusion in this board.",
+      "sourceIds": ["source-26"]
+    }
+  ],
+  "clueVerdicts": [
+    {
+      "roundId": "round-1",
+      "declaredTargetPoiId": "nishiki-kyoto",
+      "resolvedPoiId": "nishiki-kyoto",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The clue uniquely matches Nishiki Market: its approximately 400-metre roofed arcade, roughly 130 shops, 1615 fish-selling authorization, 1984 floor, and 1993 canopy are all stated in the supplied evidence.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-2",
+      "declaredTargetPoiId": "grand-bazaar-istanbul",
+      "resolvedPoiId": "grand-bazaar-istanbul",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The covered core beginning in 1455–56, 61 covered streets, more than 4,000 shops, 30,700-square-metre area, and two bedestens directly identify Istanbul’s Grand Bazaar.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-3",
+      "declaredTargetPoiId": "budapest-great-market-hall",
+      "resolvedPoiId": "budapest-great-market-hall",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The 15 February 1897 opening, three-floor 10,000-square-metre steel hall, Zsolnay roof tiles, and ground-floor produce and spice stalls directly match the Great Market Hall.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-4",
+      "declaredTargetPoiId": "boqueria-barcelona",
+      "resolvedPoiId": "boqueria-barcelona",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The La Rambla entrance near the Liceu, 1217 history, 1853 inauguration, and 1914 metal roof uniquely identify Mercat de Sant Josep de la Boqueria.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-5",
+      "declaredTargetPoiId": "queen-victoria-market",
+      "resolvedPoiId": "queen-victoria-market",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The 1878 opening, seven-hectare scale, food halls and sheds, cemetery-site expansion, and 2003 solar panels directly match Queen Victoria Market.",
+      "resolvableWithoutExactNumbers": true
+    }
+  ],
+  "repairs": [
+    {
+      "stage": "candidate-spacing",
+      "summary": "Replaced clustered distractors and rescored all relationships to enforce the 10 km minimum."
+    }
+  ]
+}

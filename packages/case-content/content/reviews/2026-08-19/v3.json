@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "publicationDate": "2026-08-19",
+  "revision": 3,
+  "themeVerdicts": [
+    {
+      "poiId": "valparaiso-concepcion",
+      "status": "pass",
+      "explanation": "Ascensor Concepción is an individually named Valparaíso ascensor using cable-hauled vehicles on fixed inclined rails, with exact urban stations and restored passenger service.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "wiesbaden-neroberg",
+      "status": "pass",
+      "explanation": "Nerobergbahn is a named water-ballast funicular with a city station in Wiesbaden and regularly open visitor passenger service.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "istanbul-tunel",
+      "status": "pass",
+      "explanation": "Tünel is an officially recognized historic urban funicular with fixed guideway, cable operation, two stations, and continuing municipal passenger service in Istanbul.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "kobe-maya-cable",
+      "status": "pass",
+      "explanation": "Maya Cable is an officially recognized fixed-rail funicular line in Kobe, operated by a public city corporation and regularly used for passenger scenic access.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "fribourg-funicular",
+      "status": "pass",
+      "explanation": "The Fribourg funicular is an individually named water-powered funicular on fixed rails connecting Saint-Pierre and Neuveville within Fribourg.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "bilbao-artxanda",
+      "status": "pass",
+      "explanation": "Funicular de Artxanda is a named cable railway with regular public and visitor passenger service from Bilbao to Mount Artxanda, with an urban terminal.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "nazare-funicular",
+      "status": "pass",
+      "explanation": "Funicular de Nazaré is a named public passenger funicular on fixed inclined rails connecting Nazaré's lower town and Sítio district within the municipality.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "pittsburgh-monongahela",
+      "status": "pass",
+      "explanation": "The Monongahela Incline is a named cable-hauled inclined railway on fixed rails with scheduled public passenger service inside Pittsburgh.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "porto-guindais",
+      "status": "pass",
+      "explanation": "Funicular dos Guindais is an individually named funicular railway connecting two exact urban stations within Porto.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "lisbon-lavra",
+      "status": "pass",
+      "explanation": "Ascensor do Lavra is a named, cable-operated urban funicular providing scheduled passenger service on an exact route within Lisbon.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "barcelona-montjuic",
+      "status": "pass",
+      "explanation": "Funicular de Montjuïc is a named public transport funicular on fixed rails within Barcelona and is integrated with the metro network.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "naples-centrale",
+      "status": "pass",
+      "explanation": "Funicolare Centrale is a named public cable railway on fixed rails serving Naples and the Vomero district.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "zagreb-uspijaca",
+      "status": "pass",
+      "explanation": "Zagrebačka uspinjača is a named cable-operated public transport railway on a fixed urban incline in Zagreb.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "paris-montmartre",
+      "status": "pass",
+      "explanation": "The Montmartre Funicular is a named RATP-operated urban funicular providing scheduled passenger transport in Paris.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "budapest-buda-castle",
+      "status": "pass",
+      "explanation": "Budavári Sikló is a named public funicular on fixed inclined rails connecting Clark Ádám Square and Buda Castle in Budapest.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "tbilisi-funicular",
+      "status": "pass",
+      "explanation": "Tbilisi Funicular is a named cable railway on a fixed incline carrying passengers between exact stations within Tbilisi.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "bergen-floibanen",
+      "status": "pass",
+      "explanation": "This operating public funicular carries passengers from central Bergen up the slope of Mount Fløyen. The verified source and mapped coordinates support its inclusion in this board.",
+      "sourceIds": ["source-26"]
+    },
+    {
+      "poiId": "hong-kong-peak-tram",
+      "status": "pass",
+      "explanation": "This operating cable-hauled funicular carries public passengers between Central and Victoria Peak. The verified source and mapped coordinates support its inclusion in this board.",
+      "sourceIds": ["source-27"]
+    },
+    {
+      "poiId": "wellington-cable-car",
+      "status": "pass",
+      "explanation": "This operating public cable railway climbs between central Wellington and the hill suburb of Kelburn. The verified source and mapped coordinates support its inclusion in this board.",
+      "sourceIds": ["source-28"]
+    },
+    {
+      "poiId": "zurich-polybahn",
+      "status": "pass",
+      "explanation": "This operating urban funicular links central Zürich with the university terrace above the city. The verified source and mapped coordinates support its inclusion in this board.",
+      "sourceIds": ["source-29"]
+    }
+  ],
+  "clueVerdicts": [
+    {
+      "roundId": "round-1",
+      "declaredTargetPoiId": "istanbul-tunel",
+      "resolvedPoiId": "istanbul-tunel",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The 1875 inauguration, rubber-tyred underground operation, two stations, Karaköy–Beyoğlu route, and approximately 573-metre tunnel uniquely identify Tünel.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-2",
+      "declaredTargetPoiId": "wiesbaden-neroberg",
+      "resolvedPoiId": "wiesbaden-neroberg",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The 1888 opening, water ballast, 7,000-litre load, 452-metre cable, and 26% maximum gradient uniquely identify Nerobergbahn.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-3",
+      "declaredTargetPoiId": "fribourg-funicular",
+      "resolvedPoiId": "fribourg-funicular",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The wastewater ballast system, Von Roll cabins, 1899 opening, and Saint-Pierre–Neuveville connection uniquely identify the Fribourg funicular.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-4",
+      "declaredTargetPoiId": "valparaiso-concepcion",
+      "resolvedPoiId": "valparaiso-concepcion",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The 1883 inauguration, oldest-local-line distinction, Historic Monument designation, and Elías Alley–Gervasoni Promenade route uniquely identify Ascensor Concepción.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-5",
+      "declaredTargetPoiId": "kobe-maya-cable",
+      "resolvedPoiId": "kobe-maya-cable",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The 1925 opening, temple-serving origin, fixed-rail mountain route, Maya Ropeway pairing, and public city-corporation operation uniquely identify Maya Cable.",
+      "resolvableWithoutExactNumbers": true
+    }
+  ],
+  "repairs": [
+    {
+      "stage": "candidate-spacing",
+      "summary": "Replaced clustered distractors and rescored all relationships to enforce the 10 km minimum."
+    }
+  ]
+}
