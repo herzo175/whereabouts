@@ -16,6 +16,7 @@ const selectionSchema = z.object({
   candidateIds: z.array(z.string()).length(DAILY_BOARD_SIZE),
   targetPoiIds: z.array(z.string()).length(5),
 });
+const MAX_CURATION_ATTEMPTS = 3;
 export type BoardSelection = z.infer<typeof selectionSchema>;
 
 export type CurateBoardInput = {
@@ -65,7 +66,7 @@ export async function curateBoard({
   let selection: BoardSelection | undefined;
   let selectedCandidateIds: string[] | undefined;
   let correction = '';
-  for (let attempt = 0; attempt < 2; attempt += 1) {
+  for (let attempt = 0; attempt < MAX_CURATION_ATTEMPTS; attempt += 1) {
     const raw = await model.generate({
       schema: selectionSchema,
       prompt: `${prompt}${correction}`,
@@ -105,7 +106,7 @@ export async function curateBoard({
       selectedCandidateIds = finalCandidateIds;
       break;
     }
-    if (attempt === 1) {
+    if (attempt === MAX_CURATION_ATTEMPTS - 1) {
       if (unknown.length)
         throw new Error('curation returned an unknown candidate ID');
       if (duplicated) throw new Error('curation returned duplicate IDs');

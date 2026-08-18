@@ -63,7 +63,7 @@ describe('curateBoard', () => {
     expect(board.candidates.map((candidate) => candidate.id)).toEqual(ids);
   });
 
-  it('corrects a selection containing candidates less than 10 km apart', async () => {
+  it('corrects repeated selections containing candidates less than 10 km apart', async () => {
     const candidates = fixtureCandidates.map((candidate, index) =>
       index === 19
         ? { ...candidate, latitude: -19.99, longitude: -60 }
@@ -79,7 +79,7 @@ describe('curateBoard', () => {
       model: {
         generate: async ({ prompt }) => {
           calls += 1;
-          if (calls === 1)
+          if (calls < 3)
             return {
               candidateIds: clusteredIds,
               targetPoiIds: clusteredIds.slice(0, 5),
@@ -95,7 +95,7 @@ describe('curateBoard', () => {
       candidates,
     });
 
-    expect(calls).toBe(2);
+    expect(calls).toBe(3);
     expect(board.candidates.map((candidate) => candidate.id)).toEqual(
       correctedIds,
     );
