@@ -24,4 +24,16 @@ describe('generate cases workflow', () => {
       /pnpm content:prepare-buffer -- "\$\{ARGS\[@\]\}"/,
     );
   });
+
+  it('merges the generated pull request without requiring repository auto-merge', async () => {
+    const workflow = await readFile(workflowUrl, 'utf8');
+    const publicationStep = workflow.slice(
+      workflow.indexOf(
+        'name: Commit and publish generated buffer pull request',
+      ),
+    );
+
+    expect(publicationStep).toContain('gh pr merge --squash "$PR_URL"');
+    expect(publicationStep).not.toContain('gh pr merge --auto');
+  });
 });

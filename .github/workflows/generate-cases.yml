@@ -172,4 +172,4 @@ jobs:
             echo "Invalid pull request URL: $PR_URL" >&2
             exit 1
           fi
-          gh pr merge --auto --squash "$PR_URL"
+          gh pr merge --squash "$PR_URL"
