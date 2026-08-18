@@ -47,6 +47,19 @@ export function missingBufferDates(
   });
 }
 
+export function effectivePublicationCeiling(
+  requestedCeiling: string,
+  manifestDates: Iterable<string>,
+): string {
+  assertDate(requestedCeiling);
+  let ceiling = requestedCeiling;
+  for (const date of manifestDates) {
+    assertDate(date);
+    if (date > ceiling) ceiling = date;
+  }
+  return ceiling;
+}
+
 export function caseNumberForDate(date: string): number {
   assertDate(date);
   return Math.floor(Date.parse(`${date}T00:00:00Z`) / DAY);

@@ -7,6 +7,7 @@ import {
   validateGenerationReview,
 } from './generation-review.js';
 import { caseContentRoot, casePath, generationReviewPath } from './paths.js';
+import { effectivePublicationCeiling } from './publication-buffer.js';
 import {
   type ValidationIssue,
   validateCaseForPublication,
@@ -59,10 +60,10 @@ async function artifactPaths(): Promise<string[]> {
 }
 
 export async function validateAll(
-  publicationCeiling = todayUtc(),
+  requestedPublicationCeiling = todayUtc(),
 ): Promise<ValidationIssue[]> {
   const issues: ValidationIssue[] = [];
-  if (!canonicalDate(publicationCeiling))
+  if (!canonicalDate(requestedPublicationCeiling))
     return [
       { path: 'publicationCeiling', message: 'must be a canonical ISO date' },
     ];
@@ -78,6 +79,17 @@ export async function validateAll(
     return [{ path: 'manifest.cases', message: 'must be an object' }];
   }
   const manifestDates = new Set(Object.keys(manifest.cases));
+  let publicationCeiling: string;
+  try {
+    publicationCeiling = effectivePublicationCeiling(
+      requestedPublicationCeiling,
+      manifestDates,
+    );
+  } catch {
+    return [
+      { path: 'manifest.cases', message: 'contains a non-canonical date' },
+    ];
+  }
   const cases: unknown[] = [];
   const referenced = new Set<string>();
   for (const [date, entry] of Object.entries(manifest.cases)) {
