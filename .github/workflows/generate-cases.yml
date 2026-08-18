@@ -119,7 +119,11 @@ jobs:
           if [ -n "$THEME" ]; then
             ARGS+=(--theme "$THEME")
           fi
-          pnpm content:prepare-buffer -- "${ARGS[@]}"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            pnpm content:generate-range -- "${ARGS[@]}"
+          else
+            pnpm content:prepare-buffer -- "${ARGS[@]}"
+          fi
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
         name: Format generated case content
         run: pnpm exec biome format --write packages/case-content/content
