@@ -41,7 +41,7 @@ describe('planTheme', () => {
     expect(prompt).toContain('well-known');
     expect(prompt).toContain('unambiguous');
     expect(prompt).toContain('3 to 12');
-    expect(prompt).toContain('one atmospheric sentence');
+    expect(prompt).toContain('one or two atmospheric sentences');
     expect(prompt).toContain('160 characters');
     expect(prompt).toContain('Do not list candidate locations');
   });
