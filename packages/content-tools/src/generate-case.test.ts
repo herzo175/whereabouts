@@ -23,6 +23,7 @@ const review: GenerationReview = {
     declaredTargetPoiId: targetPoiId,
     resolvedPoiId: targetPoiId,
     resolvedOffBoardAnswer: null,
+    resolvableWithoutExactNumbers: true,
     status: 'pass',
     explanation:
       'The clue resolves independently to the declared board target.',

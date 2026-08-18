@@ -19,6 +19,7 @@ function makeReview() {
       declaredTargetPoiId: round.targetPoiId,
       resolvedPoiId: round.targetPoiId,
       resolvedOffBoardAnswer: null,
+      resolvableWithoutExactNumbers: true,
       status: 'pass' as const,
       explanation:
         'The clue evidence resolves directly to the declared board target.',
@@ -52,6 +53,18 @@ describe('validateGenerationReview', () => {
     review.clueVerdicts[0] = {
       ...review.clueVerdicts[0],
       resolvedPoiId: 'poi-06',
+    };
+    expect(
+      validateGenerationReview(makeFiveRoundCase(), review).some(
+        (issue) => issue.path === 'clueVerdicts[0]',
+      ),
+    ).toBe(true);
+  });
+  it('rejects a clue that depends on exact numeric recall', () => {
+    const review = makeReview();
+    review.clueVerdicts[0] = {
+      ...review.clueVerdicts[0],
+      resolvableWithoutExactNumbers: false,
     };
     expect(
       validateGenerationReview(makeFiveRoundCase(), review).some(

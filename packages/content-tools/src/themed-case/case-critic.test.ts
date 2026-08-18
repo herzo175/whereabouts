@@ -59,6 +59,7 @@ function passingOutput() {
       declaredTargetPoiId: round.targetPoiId,
       resolvedPoiId: round.targetPoiId,
       resolvedOffBoardAnswer: null,
+      resolvableWithoutExactNumbers: true,
       status: 'pass',
       explanation: 'Resolving the clue independently identifies the target.',
     })),
@@ -196,6 +197,27 @@ describe('critiqueCase', () => {
     expect(
       result.repairs.filter((repair) => repair.kind === 'clue'),
     ).toHaveLength(3);
+  });
+
+  it('repairs only a clue that depends on exact numeric recall', async () => {
+    const output = passingOutput();
+    output.clueVerdicts[0] = {
+      ...output.clueVerdicts[0],
+      resolvableWithoutExactNumbers: false,
+      explanation:
+        'The exact opening year is the only fact separating two candidates.',
+    };
+    const result = await critiqueCase({
+      criticModel: modelWith(output),
+      theme: board.theme,
+      board,
+      draft,
+      publicationDate: caseData.publicationDate,
+      revision: caseData.revision,
+    });
+    expect(result.repairs).toEqual([
+      expect.objectContaining({ kind: 'clue', roundId: 'round-1' }),
+    ]);
   });
 
   it('fails closed when required arrays are missing', async () => {
