@@ -1,4 +1,8 @@
 import { type DailyCase, dailyCaseSchema } from '@whereabouts/case-content';
+import {
+  candidateSpacingViolations,
+  MIN_CANDIDATE_DISTANCE_KM,
+} from './candidate-spacing.js';
 
 export type ValidationIssue = { path: string; message: string };
 
@@ -105,6 +109,11 @@ export function validateCaseForPublication(value: unknown): ValidationIssue[] {
       });
     } else coordinates.set(key, index);
   }
+  for (const violation of candidateSpacingViolations(dailyCase.pois))
+    issues.push({
+      path: 'pois',
+      message: `Candidate POIs ${violation.firstId} and ${violation.secondId} are ${violation.distanceKm.toFixed(2)} km apart; minimum is ${MIN_CANDIDATE_DISTANCE_KM} km`,
+    });
   return issues;
 }
 
