@@ -1,0 +1,1392 @@
+{
+  "schemaVersion": 2,
+  "publicationDate": "2026-08-18",
+  "revision": 1,
+  "caseNumber": 20683,
+  "pois": [
+    {
+      "id": "khirokitia",
+      "name": "Khirokitia",
+      "city": "Larnaca District",
+      "country": "Cyprus",
+      "latitude": 34.796725,
+      "longitude": 33.343719444,
+      "wikipediaTitle": "Khirokitia",
+      "blurb": "Khirokitia (sometimes spelled Choirokoitia; Greek: Χοιροκοιτία [çiɾociˈti.a], suggested meaning Pig-cradle, from χοίρος 'pig, boar' + κοιτίς 'place of origin, cradle') is an archaeological site on the island of Cyprus dating from the Neolithic age.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Khirokitia_near_Larnaca_01-2017_img7.jpg/1280px-Khirokitia_near_Larnaca_01-2017_img7.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Khirokitia",
+        "attribution": "A.Savin · FAL",
+        "licenseUrl": "http://artlibre.org/licence/lal/en"
+      }
+    },
+    {
+      "id": "st-joseph-s-seminary-and-church",
+      "name": "St. Joseph's Seminary and Church",
+      "city": "Macau",
+      "country": "People's Republic of China",
+      "latitude": 22.1919,
+      "longitude": 113.537,
+      "wikipediaTitle": "St. Joseph's Seminary and Church",
+      "blurb": "The St. Joseph's Seminary and Church (Chinese: 聖若瑟修院及聖堂; Portuguese: Igreja e Seminário de São José) is a seminary and church located in São Lourenço, Macau, China.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Exterior_of_Igreja_e_Semin%C3%A1rio_de_S%C3%A3o_Jos%C3%A9_%28Macau%29%2C_2023_%2802%29.jpg/1280px-Exterior_of_Igreja_e_Semin%C3%A1rio_de_S%C3%A3o_Jos%C3%A9_%28Macau%29%2C_2023_%2802%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "St. Joseph's Seminary and Church",
+        "attribution": "Bahnfrend · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "tongariro-national-park",
+      "name": "Tongariro National Park",
+      "city": "Manawatū-Whanganui Region",
+      "country": "New Zealand",
+      "latitude": -39.2,
+      "longitude": 175.583333,
+      "wikipediaTitle": "Tongariro National Park",
+      "blurb": "Tongariro National Park (; Māori: [tɔŋaɾiɾɔ]), located in the central North Island, is the oldest national park in New Zealand and the sixth national park established in the world.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Tongariro_Mahuia_River_n.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Tongariro National Park",
+        "attribution": "Wikimedia Commons contributor · CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
+      }
+    },
+    {
+      "id": "dholavira",
+      "name": "Dholavira",
+      "city": "Bhachau Taluka",
+      "country": "India",
+      "latitude": 23.88611111,
+      "longitude": 70.21666667,
+      "wikipediaTitle": "Dholavira",
+      "blurb": "Dholavira (Gujarati: ધોળાવીરા, IPA: [d̪ʰoɭaʋiɾaː]) is an archaeological site at Khadirbet in Bhachau Taluka of Kutch District, in the state of Gujarat, western India, which is named after a modern-day village 1 kilometre (0.62 mi) south of it.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/DHOLAVIRA_SITE_%2824%29.jpg/1280px-DHOLAVIRA_SITE_%2824%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Dholavira",
+        "attribution": "Lalit Gajjer · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "cueva-de-las-manos",
+      "name": "Cueva de las Manos",
+      "city": "Lago Buenos Aires",
+      "country": "Argentina",
+      "latitude": -47.15,
+      "longitude": -70.666666666,
+      "wikipediaTitle": "Cueva de las Manos",
+      "blurb": "Cueva de las Manos (Spanish for Cave of the Hands or Cave of Hands) is a cave and complex of rock art sites in the province of Santa Cruz, Argentina, 163 km (101 mi) south of the town of Perito Moreno.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/SantaCruz-CuevaManos-P2210651b.jpg/1280px-SantaCruz-CuevaManos-P2210651b.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Cueva de las Manos",
+        "attribution": "Mariano · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:SantaCruz-CuevaManos-P2210651b.jpg"
+      }
+    },
+    {
+      "id": "terracotta-army",
+      "name": "Terracotta Army",
+      "city": "Xi'an",
+      "country": "China",
+      "latitude": 34.3853,
+      "longitude": 109.2739,
+      "wikipediaTitle": "Terracotta Army",
+      "blurb": "The Terracotta Army is a collection of terracotta sculptures depicting the armies of Qin Shi Huang, the first emperor of China.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/51714-Terracota-Army.jpg/1280px-51714-Terracota-Army.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Terracotta Army",
+        "attribution": "xiquinhosilva · CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "id": "hadrian-s-villa",
+      "name": "Hadrian's Villa",
+      "city": "Tivoli",
+      "country": "Italy",
+      "latitude": 41.941944,
+      "longitude": 12.775278,
+      "wikipediaTitle": "Hadrian's Villa",
+      "blurb": "Hadrian's Villa (Italian: Villa Adriana; Latin: Villa Hadriana) was a monumental villa or palace complex built around AD 120 by emperor Hadrian (r.117–138) near Tivoli, about 20 km from Rome.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Villa_Hadriana_%28Villa_Adriana_Tivoli%29_1000_03.jpg/1280px-Villa_Hadriana_%28Villa_Adriana_Tivoli%29_1000_03.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Hadrian's Villa",
+        "attribution": "FrDr · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "hiroshima-peace-memorial",
+      "name": "Hiroshima Peace Memorial",
+      "city": "Ōtemachi",
+      "country": "Japan",
+      "latitude": 34.395555555,
+      "longitude": 132.453611111,
+      "wikipediaTitle": "Hiroshima Peace Memorial",
+      "blurb": "The Hiroshima Peace Memorial (広島平和記念碑, Hiroshima Heiwa Kinenhi), originally the Hiroshima Prefectural Industrial Promotion Hall, and now commonly called the Genbaku Dome, Atomic Bomb Dome or A-Bomb Dome (原爆ドーム, Genbaku Dōmu), is part of Hiroshima Peace Memorial Park in…",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Genbaku_Dome04-r.JPG/1280px-Genbaku_Dome04-r.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Hiroshima Peace Memorial",
+        "attribution": "Oilstreet · CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
+      }
+    },
+    {
+      "id": "estacio-del-nord-valencia",
+      "name": "Estació del Nord (Valencia)",
+      "city": "Valencia",
+      "country": "Spain",
+      "latitude": 39.466994,
+      "longitude": -0.377125,
+      "wikipediaTitle": "Estació del Nord (Valencia)",
+      "blurb": "The Estació del Nord (Valencian) or Estación del Norte (Spanish), both meaning \"North Station\", is the major railway station in Valencia, Spain.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Estaci%C3%B3n_del_Norte%2C_Valencia%2C_Espa%C3%B1a%2C_2014-06-30%2C_DD_122.JPG/1280px-Estaci%C3%B3n_del_Norte%2C_Valencia%2C_Espa%C3%B1a%2C_2014-06-30%2C_DD_122.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Estació del Nord (Valencia)",
+        "attribution": "Diego Delso · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "rio-platano-biosphere-reserve",
+      "name": "Río Plátano Biosphere Reserve",
+      "city": "Mosquitia",
+      "country": "Honduras",
+      "latitude": 15.25,
+      "longitude": -84.73,
+      "wikipediaTitle": "Río Plátano Biosphere Reserve",
+      "blurb": "The Río Plátano Biosphere Reserve is a protected area in the Gracias a Dios department region on the Caribbean coast of Honduras.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Cerro_Chachahuate.jpg/1280px-Cerro_Chachahuate.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Río Plátano Biosphere Reserve",
+        "attribution": "Marcio Martínez · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "great-barrier-reef",
+      "name": "Great Barrier Reef",
+      "city": "Cairns",
+      "country": "Australia",
+      "latitude": -18.2871,
+      "longitude": 147.6992,
+      "wikipediaTitle": "Great Barrier Reef",
+      "blurb": "The Great Barrier Reef is the world's largest coral reef system, composed of over 2,900 individual reefs and 900 islands stretching for over 2,300 kilometres (1,400 mi) over an area of approximately 344,400 square kilometres (133,000 mi2).",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/ISS-45_StoryOfWater%2C_Great_Barrier_Reef%2C_Australia.jpg/1280px-ISS-45_StoryOfWater%2C_Great_Barrier_Reef%2C_Australia.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Great Barrier Reef",
+        "attribution": "NASA/Kjell Lindgren · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:ISS-45_StoryOfWater,_Great_Barrier_Reef,_Australia.jpg"
+      }
+    },
+    {
+      "id": "soltaniyeh",
+      "name": "Soltaniyeh",
+      "city": "Central District",
+      "country": "Iran",
+      "latitude": 36.434722,
+      "longitude": 48.7975,
+      "wikipediaTitle": "Soltaniyeh",
+      "blurb": "Soltaniyeh (Persian: سلطانيه) is a city in the Central District of Soltaniyeh County, Zanjan province, Iran, serving as capital of both the county and the district.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Soltaniyeh_Dome.JPG/1280px-Soltaniyeh_Dome.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Soltaniyeh",
+        "attribution": "Hammu-rapium · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "margravial-opera-house",
+      "name": "Margravial Opera House",
+      "city": "Bayreuth",
+      "country": "Germany",
+      "latitude": 49.944344697,
+      "longitude": 11.57866362,
+      "wikipediaTitle": "Margravial Opera House",
+      "blurb": "The Margravial Opera House (German: Markgräfliches Opernhaus) is a Baroque opera house in the town of Bayreuth, Germany.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Markgr%C3%A4fliches_Opernhaus_-_Bayreuth_-_2013.jpg/1280px-Markgr%C3%A4fliches_Opernhaus_-_Bayreuth_-_2013.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Margravial Opera House",
+        "attribution": "Avda · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "baroque-churches-of-the-philippines",
+      "name": "Baroque Churches of the Philippines",
+      "city": "Philippines",
+      "country": "Philippines",
+      "latitude": 14.58886,
+      "longitude": 120.97535,
+      "wikipediaTitle": "Baroque Churches of the Philippines",
+      "blurb": "The Baroque Churches of the Philippines are a collection of four Spanish Colonial-era baroque churches in the Philippines, which were included in UNESCO's World Heritage List in 1993.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Miagao_Church.jpg/1280px-Miagao_Church.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Baroque Churches of the Philippines",
+        "attribution": "Alienscream · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "salar-de-uyuni",
+      "name": "Salar de Uyuni",
+      "city": "Uyuni",
+      "country": "Bolivia",
+      "latitude": -20.1338,
+      "longitude": -67.4891,
+      "wikipediaTitle": "Salar de Uyuni",
+      "blurb": "Salar de Uyuni is the largest salt flat in the world, with an area of approximately 10,582 square kilometres (4,086 mi2).",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Salar_Uyuni_au01.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Salar de Uyuni",
+        "attribution": "Anouchka Unel · FAL",
+        "licenseUrl": "http://artlibre.org/licence/lal/en"
+      }
+    },
+    {
+      "id": "phong-nha-ke-bang-national-park",
+      "name": "Phong Nha–Kẻ Bàng National Park",
+      "city": "Bố Trạch",
+      "country": "Vietnam",
+      "latitude": 17.533333333,
+      "longitude": 106.15,
+      "wikipediaTitle": "Phong Nha–Kẻ Bàng National Park",
+      "blurb": "Phong Nha–Kẻ Bàng (Vietnamese: Vườn quốc gia Phong Nha–Kẻ Bàng, Vietnamese pronunciation: [vɯ̀ən kʷǒk.ʑā fɔ̄ŋ.ɲā kɛ̂.ɓàŋ]) is a national park and UNESCO World Heritage Site in the Bố Trạch and Minh Hóa Commune of central Quảng Trị Province in the North Central Coast region of…",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Phongnhakebang6.jpg/1280px-Phongnhakebang6.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Phong Nha–Kẻ Bàng National Park",
+        "attribution": "Genghiskhanviet · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Phongnhakebang6.jpg"
+      }
+    },
+    {
+      "id": "table-mountain",
+      "name": "Table Mountain",
+      "city": "Cape Town",
+      "country": "South Africa",
+      "latitude": -33.9628,
+      "longitude": 18.4098,
+      "wikipediaTitle": "Table Mountain",
+      "blurb": "Table Mountain (Khoekhoe: Huriǂoaxa, lit. 'sea-emerging'; Afrikaans: Tafelberg) is a flat-topped mountain forming a prominent landmark overlooking the city of Cape Town in South Africa.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Table_Mountain_DanieVDM.jpg/1280px-Table_Mountain_DanieVDM.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Table Mountain",
+        "attribution": "Danie van der Merwe from Cape Town, South Africa · CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "id": "west-norwegian-fjords",
+      "name": "West Norwegian Fjords",
+      "city": "Western Norway",
+      "country": "Norway",
+      "latitude": 60.965776,
+      "longitude": 6.977692,
+      "wikipediaTitle": "West Norwegian Fjords",
+      "blurb": "The West Norwegian Fjords is the common name of two fjords in Norway listed as a World Heritage Site by UNESCO: the Geirangerfjord and the Nærøyfjord.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/207_Geirangerfjord.jpg/1280px-207_Geirangerfjord.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "West Norwegian Fjords",
+        "attribution": "Mikiwikipikidikipedia at English Wikipedia · CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
+      }
+    },
+    {
+      "id": "wooden-churches-of-the-slovak-carpathians",
+      "name": "Wooden churches of the Slovak Carpathians",
+      "city": "Slovakia",
+      "country": "Slovakia",
+      "latitude": 49.336111,
+      "longitude": 19.558333,
+      "wikipediaTitle": "Wooden churches of the Slovak Carpathians",
+      "blurb": "Carpathian Wooden Churches is the name of a UNESCO World Heritage Site that consists of nine wooden religious buildings constructed between the 16th and 18th centuries in eight different locations in Slovakia.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Hronsek_-_Dreven%C3%BD_artikul%C3%A1rny_kostol_-_02.jpg/1280px-Hronsek_-_Dreven%C3%BD_artikul%C3%A1rny_kostol_-_02.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Wooden churches of the Slovak Carpathians",
+        "attribution": "Ladislav Luppa · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "pirin-national-park",
+      "name": "Pirin National Park",
+      "city": "Blagoevgrad",
+      "country": "Bulgaria",
+      "latitude": 41.672222222,
+      "longitude": 23.487777777,
+      "wikipediaTitle": "Pirin National Park",
+      "blurb": "Pirin National Park (Bulgarian: Национален парк \"Пирин\"), originally named Vihren National Park, covering the larger part of the Pirin Mountains in southwestern Bulgaria, spanning an area of 403.56 square kilometers (155.82 mi2).",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Pirin_-_Gergiyski_ezera_-_IMG_4439.jpg/1280px-Pirin_-_Gergiyski_ezera_-_IMG_4439.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Pirin National Park",
+        "attribution": "Dido3 · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "shibam",
+      "name": "Shibam",
+      "city": "Shibam District",
+      "country": "Yemen",
+      "latitude": 15.926944444,
+      "longitude": 48.626666666,
+      "wikipediaTitle": "Shibam",
+      "blurb": "Shibam (Arabic: شِبَام, romanized: Shibām), officially the Old Walled City of Shibam (Arabic: مدينة شبام القديمة وسورها), is a town in Wadi Hadhramaut in eastern Yemen with about 7,000 inhabitants.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/%D9%85%D8%AF%D9%8A%D9%86%D8%A9_%D8%B4%D8%A8%D8%A7%D9%85_%D8%AD%D8%B6%D8%B1%D9%85%D9%88%D8%AA.jpg/1280px-%D9%85%D8%AF%D9%8A%D9%86%D8%A9_%D8%B4%D8%A8%D8%A7%D9%85_%D8%AD%D8%B6%D8%B1%D9%85%D9%88%D8%AA.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Shibam",
+        "attribution": "Bkar6190 · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "chogha-zanbil",
+      "name": "Chogha Zanbil",
+      "city": "Khuzestan Province",
+      "country": "Iran",
+      "latitude": 32.008333333,
+      "longitude": 48.520833333,
+      "wikipediaTitle": "Chogha Zanbil",
+      "blurb": "Chogha Zanbil is an ancient Elamite complex in the Khuzestan province of Iran. It is one of the few existing ziggurats outside Mesopotamia.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/%D8%B2%DB%8C%DA%AF%D9%88%D8%B1%D8%A7%D8%AA_%DA%86%D8%BA%D8%A7_%D8%B2%D9%86%D8%A8%DB%8C%D9%84.jpg/1280px-%D8%B2%DB%8C%DA%AF%D9%88%D8%B1%D8%A7%D8%AA_%DA%86%D8%BA%D8%A7_%D8%B2%D9%86%D8%A8%DB%8C%D9%84.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Chogha Zanbil",
+        "attribution": "Mobina ghanbaryan · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "lincoln-school-madison-wisconsin",
+      "name": "Lincoln School (Madison, Wisconsin)",
+      "city": "Madison",
+      "country": "United States",
+      "latitude": 43.083213466,
+      "longitude": -89.380388209,
+      "wikipediaTitle": "Lincoln School (Madison, Wisconsin)",
+      "blurb": "Lincoln School is a historic school building at 728 E. Gorham Street in Madison, Wisconsin. The school was built in 1915 on the site of the Second Ward School, which had been in operation since 1866.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Lincoln_School_Madison_Wisconsin_2021-3750.jpg/1280px-Lincoln_School_Madison_Wisconsin_2021-3750.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Lincoln School (Madison, Wisconsin)",
+        "attribution": "Paul R. Burley · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "qutb-minar",
+      "name": "Qutb Minar",
+      "city": "Delhi",
+      "country": "India",
+      "latitude": 28.524355,
+      "longitude": 77.185248,
+      "wikipediaTitle": "Qutb Minar",
+      "blurb": "The Qutb Minar, also spelled Qutub Minar and Qutab Minar, is a minaret and victory tower, built during the Delhi sultanate, and comprising the Qutb complex, a UNESCO World Heritage Site in Mehrauli, South Delhi, India.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Qutb_Minar_2022.jpg/1280px-Qutb_Minar_2022.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Qutb Minar",
+        "attribution": "Wasir kasab · CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+      }
+    },
+    {
+      "id": "chinese-pavilion-at-drottningholm",
+      "name": "Chinese Pavilion at Drottningholm",
+      "city": "Ekerö Municipality",
+      "country": "Sweden",
+      "latitude": 59.31694444,
+      "longitude": 17.87861111,
+      "wikipediaTitle": "Chinese Pavilion at Drottningholm",
+      "blurb": "The Chinese Pavilion (Swedish: Kina slott), located in the grounds of the Drottningholm Palace park, is a Chinese-inspired royal pavilion originally built between 1753 and 1769.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Kina_slott_October_2016_01.jpg/1280px-Kina_slott_October_2016_01.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Chinese Pavilion at Drottningholm",
+        "attribution": "Arild Vågen · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "round-1",
+      "targetPoiId": "chogha-zanbil",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/%D8%B2%DB%8C%DA%AF%D9%88%D8%B1%D8%A7%D8%AA_%DA%86%D8%BA%D8%A7_%D8%B2%D9%86%D8%A8%DB%8C%D9%84.jpg/1280px-%D8%B2%DB%8C%DA%AF%D9%88%D8%B1%D8%A7%D8%AA_%DA%86%D8%BA%D8%A7_%D8%B2%D9%86%D8%A8%DB%8C%D9%84.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Chogha Zanbil",
+        "attribution": "Mobina ghanbaryan · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "This ancient sacred complex is centered on a five-level stepped monument built mainly of mud brick, enclosed by three concentric walls and originally surrounded by numerous temples.",
+        "sourceIds": ["source-01"]
+      },
+      "results": [
+        {
+          "poiId": "chogha-zanbil",
+          "tier": "correct",
+          "text": "Correct: an ancient sacred city centered on a five-level mud-brick ziggurat and enclosed by three walls.",
+          "sourceIds": ["source-01"]
+        },
+        {
+          "poiId": "dholavira",
+          "tier": "hot",
+          "text": "Both are ancient archaeological urban sites with substantial excavated remains and UNESCO recognition.",
+          "sourceIds": ["source-01", "source-09"]
+        },
+        {
+          "poiId": "terracotta-army",
+          "tier": "hot",
+          "text": "Both are major ancient archaeological complexes associated with powerful rulers and UNESCO heritage protection.",
+          "sourceIds": ["source-01", "source-23"]
+        },
+        {
+          "poiId": "khirokitia",
+          "tier": "hot",
+          "text": "Both preserve very early archaeological settlements and are UNESCO World Heritage Sites.",
+          "sourceIds": ["source-01", "source-19"]
+        },
+        {
+          "poiId": "soltaniyeh",
+          "tier": "hot",
+          "text": "Both are UNESCO-listed historic sites connected with powerful premodern rulers and monumental construction.",
+          "sourceIds": ["source-01", "source-16"]
+        },
+        {
+          "poiId": "hadrian-s-villa",
+          "tier": "warm",
+          "text": "Both are large ancient complexes containing multiple monumental structures and religious or ceremonial spaces.",
+          "sourceIds": ["source-01", "source-24"]
+        },
+        {
+          "poiId": "shibam",
+          "tier": "warm",
+          "text": "Both are UNESCO-listed historic settlements whose architecture reflects long-term regional traditions.",
+          "sourceIds": ["source-01", "source-17"]
+        },
+        {
+          "poiId": "cueva-de-las-manos",
+          "tier": "warm",
+          "text": "Both are UNESCO archaeological sites preserving evidence of ancient societies.",
+          "sourceIds": ["source-01", "source-14"]
+        },
+        {
+          "poiId": "qutb-minar",
+          "tier": "warm",
+          "text": "Both feature a monumental masonry structure and have UNESCO World Heritage recognition.",
+          "sourceIds": ["source-01", "source-04"]
+        },
+        {
+          "poiId": "st-joseph-s-seminary-and-church",
+          "tier": "warm",
+          "text": "Both are UNESCO-recognized historic religious places with substantial architectural remains.",
+          "sourceIds": ["source-01", "source-13"]
+        },
+        {
+          "poiId": "baroque-churches-of-the-philippines",
+          "tier": "warm",
+          "text": "Both are UNESCO-listed religious heritage sites whose architecture expresses a distinct regional tradition.",
+          "sourceIds": ["source-01", "source-06"]
+        },
+        {
+          "poiId": "wooden-churches-of-the-slovak-carpathians",
+          "tier": "warm",
+          "text": "Both are UNESCO religious heritage sites comprising purpose-built sacred architecture.",
+          "sourceIds": ["source-01", "source-21"]
+        },
+        {
+          "poiId": "margravial-opera-house",
+          "tier": "warm",
+          "text": "Both are UNESCO-listed monumental buildings with carefully preserved historic architecture.",
+          "sourceIds": ["source-01", "source-11"]
+        },
+        {
+          "poiId": "chinese-pavilion-at-drottningholm",
+          "tier": "cold",
+          "text": "Both are UNESCO heritage properties built as architecturally distinctive complexes for elite or royal purposes.",
+          "sourceIds": ["source-01", "source-07"]
+        },
+        {
+          "poiId": "hiroshima-peace-memorial",
+          "tier": "cold",
+          "text": "Both are UNESCO sites preserved as powerful reminders of historical events.",
+          "sourceIds": ["source-01", "source-02"]
+        },
+        {
+          "poiId": "tongariro-national-park",
+          "tier": "cold",
+          "text": "Both are UNESCO sites with important cultural and religious associations.",
+          "sourceIds": ["source-01", "source-03"]
+        },
+        {
+          "poiId": "table-mountain",
+          "tier": "cold",
+          "text": "Both are prominent UNESCO-associated heritage attractions visited for their distinctive physical setting.",
+          "sourceIds": ["source-01", "source-05"]
+        },
+        {
+          "poiId": "phong-nha-ke-bang-national-park",
+          "tier": "cold",
+          "text": "Both are UNESCO properties containing extensive protected archaeological or geological landscapes.",
+          "sourceIds": ["source-01", "source-18"]
+        },
+        {
+          "poiId": "pirin-national-park",
+          "tier": "cold",
+          "text": "Both are UNESCO-listed protected heritage places with important landscapes and long historical significance.",
+          "sourceIds": ["source-01", "source-20"]
+        },
+        {
+          "poiId": "west-norwegian-fjords",
+          "tier": "cold",
+          "text": "Both are UNESCO World Heritage properties recognized for distinctive, well-preserved environments.",
+          "sourceIds": ["source-01", "source-08"]
+        },
+        {
+          "poiId": "great-barrier-reef",
+          "tier": "cold",
+          "text": "Both have UNESCO World Heritage status and require protection from modern environmental threats.",
+          "sourceIds": ["source-01", "source-22"]
+        },
+        {
+          "poiId": "rio-platano-biosphere-reserve",
+          "tier": "cold",
+          "text": "Both are UNESCO properties whose preservation is threatened by human activities.",
+          "sourceIds": ["source-01", "source-25"]
+        },
+        {
+          "poiId": "salar-de-uyuni",
+          "tier": "cold",
+          "text": "Both are large-scale heritage attractions with distinctive landforms and strong tourism interest.",
+          "sourceIds": ["source-01", "source-12"]
+        },
+        {
+          "poiId": "lincoln-school-madison-wisconsin",
+          "tier": "cold",
+          "text": "Both are preserved historic structures recognized for architectural and historical significance.",
+          "sourceIds": ["source-01", "source-10"]
+        },
+        {
+          "poiId": "estacio-del-nord-valencia",
+          "tier": "cold",
+          "text": "Both are protected heritage architecture distinguished by their construction and design traditions.",
+          "sourceIds": ["source-01", "source-15"]
+        }
+      ]
+    },
+    {
+      "id": "round-2",
+      "targetPoiId": "hiroshima-peace-memorial",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Genbaku_Dome04-r.JPG/1280px-Genbaku_Dome04-r.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Hiroshima Peace Memorial",
+        "attribution": "Oilstreet · CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
+      },
+      "clue": {
+        "text": "This preserved ruin was originally an industrial exhibition hall and remained standing near the hypocenter of the first atomic bomb used in war.",
+        "sourceIds": ["source-02"]
+      },
+      "results": [
+        {
+          "poiId": "hiroshima-peace-memorial",
+          "tier": "correct",
+          "text": "Correct: an exhibition hall ruin preserved as a memorial after the 1945 atomic bombing.",
+          "sourceIds": ["source-02"]
+        },
+        {
+          "poiId": "cueva-de-las-manos",
+          "tier": "hot",
+          "text": "Both are preserved UNESCO sites whose surviving structures or artwork serve as evidence of traumatic or transformative history.",
+          "sourceIds": ["source-02", "source-14"]
+        },
+        {
+          "poiId": "chogha-zanbil",
+          "tier": "hot",
+          "text": "Both are UNESCO sites preserved as archaeological reminders of destruction and historical change.",
+          "sourceIds": ["source-02", "source-01"]
+        },
+        {
+          "poiId": "shibam",
+          "tier": "hot",
+          "text": "Both are historic sites that suffered destructive events yet retain prominent surviving architecture.",
+          "sourceIds": ["source-02", "source-17"]
+        },
+        {
+          "poiId": "soltaniyeh",
+          "tier": "hot",
+          "text": "Both are UNESCO heritage places whose surviving ruins convey the consequences of historical upheaval.",
+          "sourceIds": ["source-02", "source-16"]
+        },
+        {
+          "poiId": "dholavira",
+          "tier": "warm",
+          "text": "Both are UNESCO archaeological sites where preserved remains document vanished urban life.",
+          "sourceIds": ["source-02", "source-09"]
+        },
+        {
+          "poiId": "terracotta-army",
+          "tier": "warm",
+          "text": "Both are UNESCO sites whose preservation gives visitors material evidence of major historical events.",
+          "sourceIds": ["source-02", "source-23"]
+        },
+        {
+          "poiId": "hadrian-s-villa",
+          "tier": "warm",
+          "text": "Both preserve substantial historic architecture as internationally recognized heritage.",
+          "sourceIds": ["source-02", "source-24"]
+        },
+        {
+          "poiId": "margravial-opera-house",
+          "tier": "warm",
+          "text": "Both are protected historic buildings whose survival and preservation are central to their significance.",
+          "sourceIds": ["source-02", "source-11"]
+        },
+        {
+          "poiId": "qutb-minar",
+          "tier": "warm",
+          "text": "Both are UNESCO monuments whose architectural remains have undergone preservation after damage or threat.",
+          "sourceIds": ["source-02", "source-04"]
+        },
+        {
+          "poiId": "st-joseph-s-seminary-and-church",
+          "tier": "warm",
+          "text": "Both are UNESCO-associated monuments preserved for their cultural and historical meaning.",
+          "sourceIds": ["source-02", "source-13"]
+        },
+        {
+          "poiId": "baroque-churches-of-the-philippines",
+          "tier": "warm",
+          "text": "Both are heritage sites where architecture communicates a difficult historical past.",
+          "sourceIds": ["source-02", "source-06"]
+        },
+        {
+          "poiId": "wooden-churches-of-the-slovak-carpathians",
+          "tier": "warm",
+          "text": "Both are protected cultural properties whose surviving buildings preserve historical memory.",
+          "sourceIds": ["source-02", "source-21"]
+        },
+        {
+          "poiId": "chinese-pavilion-at-drottningholm",
+          "tier": "cold",
+          "text": "Both are UNESCO properties maintained in recognition of their architectural and historical value.",
+          "sourceIds": ["source-02", "source-07"]
+        },
+        {
+          "poiId": "tongariro-national-park",
+          "tier": "cold",
+          "text": "Both are UNESCO sites where preservation is linked to cultural meaning and public remembrance.",
+          "sourceIds": ["source-02", "source-03"]
+        },
+        {
+          "poiId": "table-mountain",
+          "tier": "cold",
+          "text": "Both are major protected attractions with strong symbolic importance and large visitor interest.",
+          "sourceIds": ["source-02", "source-05"]
+        },
+        {
+          "poiId": "phong-nha-ke-bang-national-park",
+          "tier": "cold",
+          "text": "Both are UNESCO properties preserved because they provide exceptional evidence of natural or human history.",
+          "sourceIds": ["source-02", "source-18"]
+        },
+        {
+          "poiId": "pirin-national-park",
+          "tier": "cold",
+          "text": "Both are internationally protected sites maintained for their exceptional heritage values.",
+          "sourceIds": ["source-02", "source-20"]
+        },
+        {
+          "poiId": "west-norwegian-fjords",
+          "tier": "cold",
+          "text": "Both are UNESCO sites protected to preserve distinctive landscapes for future generations.",
+          "sourceIds": ["source-02", "source-08"]
+        },
+        {
+          "poiId": "great-barrier-reef",
+          "tier": "cold",
+          "text": "Both are UNESCO properties facing ongoing preservation challenges and public concern.",
+          "sourceIds": ["source-02", "source-22"]
+        },
+        {
+          "poiId": "rio-platano-biosphere-reserve",
+          "tier": "cold",
+          "text": "Both are UNESCO sites where conservation is threatened by human activity.",
+          "sourceIds": ["source-02", "source-25"]
+        },
+        {
+          "poiId": "salar-de-uyuni",
+          "tier": "cold",
+          "text": "Both are internationally notable attractions whose distinctive appearance drives tourism.",
+          "sourceIds": ["source-02", "source-12"]
+        },
+        {
+          "poiId": "lincoln-school-madison-wisconsin",
+          "tier": "cold",
+          "text": "Both are preserved buildings whose architectural character supports historic recognition.",
+          "sourceIds": ["source-02", "source-10"]
+        },
+        {
+          "poiId": "estacio-del-nord-valencia",
+          "tier": "cold",
+          "text": "Both are prominent preserved civic buildings with important architectural histories.",
+          "sourceIds": ["source-02", "source-15"]
+        },
+        {
+          "poiId": "khirokitia",
+          "tier": "cold",
+          "text": "Both preserve material remains that help interpret earlier human communities.",
+          "sourceIds": ["source-02", "source-19"]
+        }
+      ]
+    },
+    {
+      "id": "round-3",
+      "targetPoiId": "tongariro-national-park",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Tongariro_Mahuia_River_n.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Tongariro National Park",
+        "attribution": "Wikimedia Commons contributor · CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
+      },
+      "clue": {
+        "text": "This protected landscape combines three active volcanic mountains, alpine ecosystems, ski fields, and sacred summits associated with Māori religious traditions.",
+        "sourceIds": ["source-03"]
+      },
+      "results": [
+        {
+          "poiId": "tongariro-national-park",
+          "tier": "correct",
+          "text": "Correct: a protected volcanic landscape with active mountains, ski fields, alpine ecosystems, and sacred summits.",
+          "sourceIds": ["source-03"]
+        },
+        {
+          "poiId": "pirin-national-park",
+          "tier": "hot",
+          "text": "Both are mountain national parks with high peaks, protected ecosystems, and extensive outdoor recreation.",
+          "sourceIds": ["source-03", "source-20"]
+        },
+        {
+          "poiId": "table-mountain",
+          "tier": "hot",
+          "text": "Both are prominent protected mountain landscapes offering hiking and distinctive alpine or montane flora.",
+          "sourceIds": ["source-03", "source-05"]
+        },
+        {
+          "poiId": "phong-nha-ke-bang-national-park",
+          "tier": "hot",
+          "text": "Both are UNESCO national parks protecting exceptional geological landscapes and native biodiversity.",
+          "sourceIds": ["source-03", "source-18"]
+        },
+        {
+          "poiId": "west-norwegian-fjords",
+          "tier": "hot",
+          "text": "Both are UNESCO landscapes shaped by dramatic mountain terrain and valued for natural scenery.",
+          "sourceIds": ["source-03", "source-08"]
+        },
+        {
+          "poiId": "great-barrier-reef",
+          "tier": "warm",
+          "text": "Both are UNESCO natural heritage areas supporting diverse ecosystems and major tourism.",
+          "sourceIds": ["source-03", "source-22"]
+        },
+        {
+          "poiId": "rio-platano-biosphere-reserve",
+          "tier": "warm",
+          "text": "Both are protected UNESCO-area landscapes combining biodiversity conservation with human cultural interests.",
+          "sourceIds": ["source-03", "source-25"]
+        },
+        {
+          "poiId": "salar-de-uyuni",
+          "tier": "warm",
+          "text": "Both are dramatic high-elevation landscapes that support tourism and have distinctive geological features.",
+          "sourceIds": ["source-03", "source-12"]
+        },
+        {
+          "poiId": "chogha-zanbil",
+          "tier": "warm",
+          "text": "Both have strong sacred significance and are internationally recognized heritage sites.",
+          "sourceIds": ["source-03", "source-01"]
+        },
+        {
+          "poiId": "khirokitia",
+          "tier": "warm",
+          "text": "Both are UNESCO sites preserving evidence of long-standing cultural relationships with their landscapes.",
+          "sourceIds": ["source-03", "source-19"]
+        },
+        {
+          "poiId": "cueva-de-las-manos",
+          "tier": "warm",
+          "text": "Both are UNESCO sites where cultural traditions are closely connected to a dramatic natural setting.",
+          "sourceIds": ["source-03", "source-14"]
+        },
+        {
+          "poiId": "dholavira",
+          "tier": "warm",
+          "text": "Both are UNESCO sites where environmental conditions shaped human use and cultural history.",
+          "sourceIds": ["source-03", "source-09"]
+        },
+        {
+          "poiId": "shibam",
+          "tier": "warm",
+          "text": "Both are UNESCO heritage places whose built or cultural traditions reflect adaptation to their environment.",
+          "sourceIds": ["source-03", "source-17"]
+        },
+        {
+          "poiId": "hadrian-s-villa",
+          "tier": "cold",
+          "text": "Both are large UNESCO properties combining designed spaces with notable natural surroundings.",
+          "sourceIds": ["source-03", "source-24"]
+        },
+        {
+          "poiId": "qutb-minar",
+          "tier": "cold",
+          "text": "Both are UNESCO attractions with strong cultural symbolism and substantial tourism.",
+          "sourceIds": ["source-03", "source-04"]
+        },
+        {
+          "poiId": "baroque-churches-of-the-philippines",
+          "tier": "cold",
+          "text": "Both are UNESCO properties where cultural traditions influenced the character of protected places.",
+          "sourceIds": ["source-03", "source-06"]
+        },
+        {
+          "poiId": "wooden-churches-of-the-slovak-carpathians",
+          "tier": "cold",
+          "text": "Both represent regional cultural traditions preserved through heritage designation.",
+          "sourceIds": ["source-03", "source-21"]
+        },
+        {
+          "poiId": "st-joseph-s-seminary-and-church",
+          "tier": "cold",
+          "text": "Both are UNESCO-associated sites with continuing religious significance.",
+          "sourceIds": ["source-03", "source-13"]
+        },
+        {
+          "poiId": "chinese-pavilion-at-drottningholm",
+          "tier": "cold",
+          "text": "Both are protected attractions set within landscaped grounds and associated with cultural traditions.",
+          "sourceIds": ["source-03", "source-07"]
+        },
+        {
+          "poiId": "margravial-opera-house",
+          "tier": "cold",
+          "text": "Both are internationally recognized heritage attractions visited for distinctive cultural experiences.",
+          "sourceIds": ["source-03", "source-11"]
+        },
+        {
+          "poiId": "terracotta-army",
+          "tier": "cold",
+          "text": "Both are major heritage attractions with ritual or cultural significance and substantial tourism.",
+          "sourceIds": ["source-03", "source-23"]
+        },
+        {
+          "poiId": "hiroshima-peace-memorial",
+          "tier": "cold",
+          "text": "Both are UNESCO sites with strong public significance beyond their physical structures.",
+          "sourceIds": ["source-03", "source-02"]
+        },
+        {
+          "poiId": "soltaniyeh",
+          "tier": "cold",
+          "text": "Both are UNESCO sites shaped by historical religious and political traditions.",
+          "sourceIds": ["source-03", "source-16"]
+        },
+        {
+          "poiId": "lincoln-school-madison-wisconsin",
+          "tier": "cold",
+          "text": "Both are preserved heritage places associated with public access and historic significance.",
+          "sourceIds": ["source-03", "source-10"]
+        },
+        {
+          "poiId": "estacio-del-nord-valencia",
+          "tier": "cold",
+          "text": "Both are notable visitor destinations whose architecture or landscape contributes to local identity.",
+          "sourceIds": ["source-03", "source-15"]
+        }
+      ]
+    },
+    {
+      "id": "round-4",
+      "targetPoiId": "qutb-minar",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Qutb_Minar_2022.jpg/1280px-Qutb_Minar_2022.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Qutb Minar",
+        "attribution": "Wasir kasab · CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+      },
+      "clue": {
+        "text": "This UNESCO monument is a tapering brick minaret and victory tower begun in 1199, with fluted shafts, balconies, and a long spiral staircase.",
+        "sourceIds": ["source-04"]
+      },
+      "results": [
+        {
+          "poiId": "qutb-minar",
+          "tier": "correct",
+          "text": "Correct: a tapering brick minaret and victory tower begun in 1199, with fluting, balconies, and a spiral staircase.",
+          "sourceIds": ["source-04"]
+        },
+        {
+          "poiId": "soltaniyeh",
+          "tier": "hot",
+          "text": "Both are UNESCO monuments associated with Islamic-era dynasties and monumental architecture.",
+          "sourceIds": ["source-04", "source-16"]
+        },
+        {
+          "poiId": "st-joseph-s-seminary-and-church",
+          "tier": "hot",
+          "text": "Both are UNESCO-associated religious monuments with strong architectural and historical significance.",
+          "sourceIds": ["source-04", "source-13"]
+        },
+        {
+          "poiId": "baroque-churches-of-the-philippines",
+          "tier": "hot",
+          "text": "Both are UNESCO religious heritage sites whose architecture reflects interaction between imported and local traditions.",
+          "sourceIds": ["source-04", "source-06"]
+        },
+        {
+          "poiId": "wooden-churches-of-the-slovak-carpathians",
+          "tier": "hot",
+          "text": "Both are UNESCO religious architecture sites representing distinctive regional building traditions.",
+          "sourceIds": ["source-04", "source-21"]
+        },
+        {
+          "poiId": "chogha-zanbil",
+          "tier": "warm",
+          "text": "Both feature monumental religious architecture and are UNESCO World Heritage Sites.",
+          "sourceIds": ["source-04", "source-01"]
+        },
+        {
+          "poiId": "shibam",
+          "tier": "warm",
+          "text": "Both are UNESCO heritage places known for striking vertical architecture and historic urban form.",
+          "sourceIds": ["source-04", "source-17"]
+        },
+        {
+          "poiId": "margravial-opera-house",
+          "tier": "warm",
+          "text": "Both are UNESCO monuments celebrated for elaborate historic architecture and preservation.",
+          "sourceIds": ["source-04", "source-11"]
+        },
+        {
+          "poiId": "hadrian-s-villa",
+          "tier": "warm",
+          "text": "Both are UNESCO sites containing ambitious monumental architecture from an earlier imperial era.",
+          "sourceIds": ["source-04", "source-24"]
+        },
+        {
+          "poiId": "chinese-pavilion-at-drottningholm",
+          "tier": "warm",
+          "text": "Both are UNESCO properties built as architecturally distinctive monuments with elaborate decoration.",
+          "sourceIds": ["source-04", "source-07"]
+        },
+        {
+          "poiId": "terracotta-army",
+          "tier": "warm",
+          "text": "Both are major heritage attractions connected with powerful rulers and monumental construction.",
+          "sourceIds": ["source-04", "source-23"]
+        },
+        {
+          "poiId": "dholavira",
+          "tier": "warm",
+          "text": "Both are UNESCO archaeological sites with planned monumental construction and historic urban remains.",
+          "sourceIds": ["source-04", "source-09"]
+        },
+        {
+          "poiId": "khirokitia",
+          "tier": "warm",
+          "text": "Both preserve significant architectural evidence of earlier societies and have UNESCO status.",
+          "sourceIds": ["source-04", "source-19"]
+        },
+        {
+          "poiId": "cueva-de-las-manos",
+          "tier": "cold",
+          "text": "Both are UNESCO cultural sites preserving distinctive evidence of past human activity.",
+          "sourceIds": ["source-04", "source-14"]
+        },
+        {
+          "poiId": "hiroshima-peace-memorial",
+          "tier": "cold",
+          "text": "Both are UNESCO monuments whose physical form carries strong historical symbolism.",
+          "sourceIds": ["source-04", "source-02"]
+        },
+        {
+          "poiId": "tongariro-national-park",
+          "tier": "cold",
+          "text": "Both are UNESCO sites with major cultural and religious significance.",
+          "sourceIds": ["source-04", "source-03"]
+        },
+        {
+          "poiId": "table-mountain",
+          "tier": "cold",
+          "text": "Both are prominent heritage attractions defined by a striking vertical or elevated profile.",
+          "sourceIds": ["source-04", "source-05"]
+        },
+        {
+          "poiId": "phong-nha-ke-bang-national-park",
+          "tier": "cold",
+          "text": "Both are UNESCO attractions notable for distinctive geological or architectural forms.",
+          "sourceIds": ["source-04", "source-18"]
+        },
+        {
+          "poiId": "pirin-national-park",
+          "tier": "cold",
+          "text": "Both are UNESCO sites with dramatic elevated features and substantial visitor interest.",
+          "sourceIds": ["source-04", "source-20"]
+        },
+        {
+          "poiId": "west-norwegian-fjords",
+          "tier": "cold",
+          "text": "Both are UNESCO properties recognized for dramatic vertical scenery.",
+          "sourceIds": ["source-04", "source-08"]
+        },
+        {
+          "poiId": "great-barrier-reef",
+          "tier": "cold",
+          "text": "Both are major UNESCO attractions with distinctive large-scale structures and tourism.",
+          "sourceIds": ["source-04", "source-22"]
+        },
+        {
+          "poiId": "rio-platano-biosphere-reserve",
+          "tier": "cold",
+          "text": "Both are UNESCO properties requiring conservation of culturally and environmentally important places.",
+          "sourceIds": ["source-04", "source-25"]
+        },
+        {
+          "poiId": "salar-de-uyuni",
+          "tier": "cold",
+          "text": "Both are visually distinctive heritage attractions with strong tourism appeal.",
+          "sourceIds": ["source-04", "source-12"]
+        },
+        {
+          "poiId": "lincoln-school-madison-wisconsin",
+          "tier": "cold",
+          "text": "Both are recognized historic buildings distinguished by their architectural design.",
+          "sourceIds": ["source-04", "source-10"]
+        },
+        {
+          "poiId": "estacio-del-nord-valencia",
+          "tier": "cold",
+          "text": "Both are prominent civic structures recognized for distinctive architecture and historic importance.",
+          "sourceIds": ["source-04", "source-15"]
+        }
+      ]
+    },
+    {
+      "id": "round-5",
+      "targetPoiId": "table-mountain",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Table_Mountain_DanieVDM.jpg/1280px-Table_Mountain_DanieVDM.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Table Mountain",
+        "attribution": "Danie van der Merwe from Cape Town, South Africa · CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "clue": {
+        "text": "This flat-topped mountain rises about a kilometre above the surrounding city, is reached by cableway or steep trails, and supports exceptionally rich endemic fynbos.",
+        "sourceIds": ["source-05"]
+      },
+      "results": [
+        {
+          "poiId": "table-mountain",
+          "tier": "correct",
+          "text": "Correct: a flat-topped mountain with a cableway, steep hiking routes, and exceptionally rich endemic fynbos.",
+          "sourceIds": ["source-05"]
+        },
+        {
+          "poiId": "tongariro-national-park",
+          "tier": "hot",
+          "text": "Both are major protected mountain attractions offering hiking and distinctive native ecosystems.",
+          "sourceIds": ["source-05", "source-03"]
+        },
+        {
+          "poiId": "pirin-national-park",
+          "tier": "hot",
+          "text": "Both are protected mountain landscapes with high peaks, hiking, and diverse flora and fauna.",
+          "sourceIds": ["source-05", "source-20"]
+        },
+        {
+          "poiId": "west-norwegian-fjords",
+          "tier": "hot",
+          "text": "Both are UNESCO natural landscapes characterized by dramatic mountainous scenery and tourism.",
+          "sourceIds": ["source-05", "source-08"]
+        },
+        {
+          "poiId": "phong-nha-ke-bang-national-park",
+          "tier": "hot",
+          "text": "Both protect distinctive natural landforms and rich biodiversity under UNESCO recognition.",
+          "sourceIds": ["source-05", "source-18"]
+        },
+        {
+          "poiId": "great-barrier-reef",
+          "tier": "warm",
+          "text": "Both are major UNESCO natural attractions supporting exceptional biodiversity and extensive tourism.",
+          "sourceIds": ["source-05", "source-22"]
+        },
+        {
+          "poiId": "rio-platano-biosphere-reserve",
+          "tier": "warm",
+          "text": "Both are large protected natural areas with high biodiversity and conservation pressures.",
+          "sourceIds": ["source-05", "source-25"]
+        },
+        {
+          "poiId": "salar-de-uyuni",
+          "tier": "warm",
+          "text": "Both are visually striking natural landscapes that attract visitors and have distinctive geology.",
+          "sourceIds": ["source-05", "source-12"]
+        },
+        {
+          "poiId": "chogha-zanbil",
+          "tier": "warm",
+          "text": "Both are prominent heritage attractions with distinctive physical forms and strong tourism interest.",
+          "sourceIds": ["source-05", "source-01"]
+        },
+        {
+          "poiId": "khirokitia",
+          "tier": "warm",
+          "text": "Both are UNESCO sites situated in distinctive landscapes and valued for preserved heritage.",
+          "sourceIds": ["source-05", "source-19"]
+        },
+        {
+          "poiId": "cueva-de-las-manos",
+          "tier": "warm",
+          "text": "Both are protected sites where natural terrain frames an important cultural attraction.",
+          "sourceIds": ["source-05", "source-14"]
+        },
+        {
+          "poiId": "dholavira",
+          "tier": "warm",
+          "text": "Both are heritage attractions whose environmental setting is central to understanding the site.",
+          "sourceIds": ["source-05", "source-09"]
+        },
+        {
+          "poiId": "shibam",
+          "tier": "warm",
+          "text": "Both are visually distinctive heritage places strongly shaped by their surrounding environment.",
+          "sourceIds": ["source-05", "source-17"]
+        },
+        {
+          "poiId": "qutb-minar",
+          "tier": "cold",
+          "text": "Both are prominent tourist landmarks recognized for an immediately distinctive silhouette.",
+          "sourceIds": ["source-05", "source-04"]
+        },
+        {
+          "poiId": "hadrian-s-villa",
+          "tier": "cold",
+          "text": "Both are extensive attractions combining designed spaces with gardens or natural surroundings.",
+          "sourceIds": ["source-05", "source-24"]
+        },
+        {
+          "poiId": "margravial-opera-house",
+          "tier": "cold",
+          "text": "Both are major visitor attractions recognized for distinctive visual and cultural character.",
+          "sourceIds": ["source-05", "source-11"]
+        },
+        {
+          "poiId": "chinese-pavilion-at-drottningholm",
+          "tier": "cold",
+          "text": "Both are notable attractions set within landscaped environments and valued for visual design.",
+          "sourceIds": ["source-05", "source-07"]
+        },
+        {
+          "poiId": "baroque-churches-of-the-philippines",
+          "tier": "cold",
+          "text": "Both are heritage attractions whose distinctive forms contribute to regional identity.",
+          "sourceIds": ["source-05", "source-06"]
+        },
+        {
+          "poiId": "wooden-churches-of-the-slovak-carpathians",
+          "tier": "cold",
+          "text": "Both preserve distinctive regional heritage and attract visitors for their unusual appearance.",
+          "sourceIds": ["source-05", "source-21"]
+        },
+        {
+          "poiId": "st-joseph-s-seminary-and-church",
+          "tier": "cold",
+          "text": "Both are protected attractions with strong cultural significance and visitor interest.",
+          "sourceIds": ["source-05", "source-13"]
+        },
+        {
+          "poiId": "terracotta-army",
+          "tier": "cold",
+          "text": "Both are highly visited heritage attractions with distinctive visual presentation.",
+          "sourceIds": ["source-05", "source-23"]
+        },
+        {
+          "poiId": "hiroshima-peace-memorial",
+          "tier": "cold",
+          "text": "Both are prominent landmarks attracting visitors because of their powerful symbolic significance.",
+          "sourceIds": ["source-05", "source-02"]
+        },
+        {
+          "poiId": "soltaniyeh",
+          "tier": "cold",
+          "text": "Both are heritage attractions with distinctive large-scale forms and historical importance.",
+          "sourceIds": ["source-05", "source-16"]
+        },
+        {
+          "poiId": "lincoln-school-madison-wisconsin",
+          "tier": "cold",
+          "text": "Both are recognizable landmarks preserved for architectural and local historical significance.",
+          "sourceIds": ["source-05", "source-10"]
+        },
+        {
+          "poiId": "estacio-del-nord-valencia",
+          "tier": "cold",
+          "text": "Both are prominent landmarks whose distinctive design contributes to the identity of a city or region.",
+          "sourceIds": ["source-05", "source-15"]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-01",
+      "title": "Chogha Zanbil",
+      "url": "https://en.wikipedia.org/wiki/Chogha_Zanbil",
+      "retrievedAt": "2026-08-14T22:48:06.401Z"
+    },
+    {
+      "id": "source-02",
+      "title": "Hiroshima Peace Memorial",
+      "url": "https://en.wikipedia.org/wiki/Hiroshima_Peace_Memorial",
+      "retrievedAt": "2026-08-14T22:48:21.462Z"
+    },
+    {
+      "id": "source-03",
+      "title": "Tongariro National Park",
+      "url": "https://en.wikipedia.org/wiki/Tongariro_National_Park",
+      "retrievedAt": "2026-08-14T22:47:35.799Z"
+    },
+    {
+      "id": "source-04",
+      "title": "Qutb Minar",
+      "url": "https://en.wikipedia.org/wiki/Qutb_Minar",
+      "retrievedAt": "2026-08-14T22:49:04.872Z"
+    },
+    {
+      "id": "source-05",
+      "title": "Table Mountain",
+      "url": "https://en.wikipedia.org/wiki/Table_Mountain",
+      "retrievedAt": "2026-08-14T22:47:28.037Z"
+    },
+    {
+      "id": "source-06",
+      "title": "Baroque Churches of the Philippines",
+      "url": "https://en.wikipedia.org/wiki/Baroque_Churches_of_the_Philippines",
+      "retrievedAt": "2026-08-14T22:48:04.839Z"
+    },
+    {
+      "id": "source-07",
+      "title": "Chinese Pavilion at Drottningholm",
+      "url": "https://en.wikipedia.org/wiki/Chinese_Pavilion_at_Drottningholm",
+      "retrievedAt": "2026-08-14T22:48:14.757Z"
+    },
+    {
+      "id": "source-08",
+      "title": "West Norwegian Fjords",
+      "url": "https://en.wikipedia.org/wiki/West_Norwegian_Fjords",
+      "retrievedAt": "2026-08-14T22:47:37.044Z"
+    },
+    {
+      "id": "source-09",
+      "title": "Dholavira",
+      "url": "https://en.wikipedia.org/wiki/Dholavira",
+      "retrievedAt": "2026-08-14T22:48:12.364Z"
+    },
+    {
+      "id": "source-10",
+      "title": "Lincoln School (Madison, Wisconsin)",
+      "url": "https://en.wikipedia.org/wiki/Lincoln_School_(Madison,_Wisconsin)",
+      "retrievedAt": "2026-08-14T22:48:15.321Z"
+    },
+    {
+      "id": "source-11",
+      "title": "Margravial Opera House",
+      "url": "https://en.wikipedia.org/wiki/Margravial_Opera_House",
+      "retrievedAt": "2026-08-14T22:48:01.413Z"
+    },
+    {
+      "id": "source-12",
+      "title": "Salar de Uyuni",
+      "url": "https://en.wikipedia.org/wiki/Salar_de_Uyuni",
+      "retrievedAt": "2026-08-14T22:47:26.894Z"
+    },
+    {
+      "id": "source-13",
+      "title": "St. Joseph's Seminary and Church",
+      "url": "https://en.wikipedia.org/wiki/St._Joseph%27s_Seminary_and_Church",
+      "retrievedAt": "2026-08-14T22:48:07.591Z"
+    },
+    {
+      "id": "source-14",
+      "title": "Cueva de las Manos",
+      "url": "https://en.wikipedia.org/wiki/Cueva_de_las_Manos",
+      "retrievedAt": "2026-08-14T22:47:37.419Z"
+    },
+    {
+      "id": "source-15",
+      "title": "Estació del Nord (Valencia)",
+      "url": "https://en.wikipedia.org/wiki/Estaci%C3%B3_del_Nord_(Valencia)",
+      "retrievedAt": "2026-08-14T22:47:37.365Z"
+    },
+    {
+      "id": "source-16",
+      "title": "Soltaniyeh",
+      "url": "https://en.wikipedia.org/wiki/Soltaniyeh",
+      "retrievedAt": "2026-08-14T22:49:01.651Z"
+    },
+    {
+      "id": "source-17",
+      "title": "Shibam",
+      "url": "https://en.wikipedia.org/wiki/Shibam",
+      "retrievedAt": "2026-08-14T22:49:11.487Z"
+    },
+    {
+      "id": "source-18",
+      "title": "Phong Nha–Kẻ Bàng National Park",
+      "url": "https://en.wikipedia.org/wiki/Phong_Nha%E2%80%93K%E1%BA%BB_B%C3%A0ng_National_Park",
+      "retrievedAt": "2026-08-14T22:49:04.821Z"
+    },
+    {
+      "id": "source-19",
+      "title": "Khirokitia",
+      "url": "https://en.wikipedia.org/wiki/Khirokitia",
+      "retrievedAt": "2026-08-14T22:49:01.062Z"
+    },
+    {
+      "id": "source-20",
+      "title": "Pirin National Park",
+      "url": "https://en.wikipedia.org/wiki/Pirin_National_Park",
+      "retrievedAt": "2026-08-14T22:48:15.368Z"
+    },
+    {
+      "id": "source-21",
+      "title": "Wooden churches of the Slovak Carpathians",
+      "url": "https://en.wikipedia.org/wiki/Wooden_churches_of_the_Slovak_Carpathians",
+      "retrievedAt": "2026-08-14T22:47:50.347Z"
+    },
+    {
+      "id": "source-22",
+      "title": "Great Barrier Reef",
+      "url": "https://en.wikipedia.org/wiki/Great_Barrier_Reef",
+      "retrievedAt": "2026-08-14T22:47:30.250Z"
+    },
+    {
+      "id": "source-23",
+      "title": "Terracotta Army",
+      "url": "https://en.wikipedia.org/wiki/Terracotta_Army",
+      "retrievedAt": "2026-08-14T22:47:29.330Z"
+    },
+    {
+      "id": "source-24",
+      "title": "Hadrian's Villa",
+      "url": "https://en.wikipedia.org/wiki/Hadrian%27s_Villa",
+      "retrievedAt": "2026-08-14T22:47:52.684Z"
+    },
+    {
+      "id": "source-25",
+      "title": "Río Plátano Biosphere Reserve",
+      "url": "https://en.wikipedia.org/wiki/R%C3%ADo_Pl%C3%A1tano_Biosphere_Reserve",
+      "retrievedAt": "2026-08-14T22:49:01.287Z"
+    }
+  ]
+}
