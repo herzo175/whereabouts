@@ -256,7 +256,7 @@ test.describe('Whereabouts five-round desktop journeys', () => {
           .map((guess) => emojiByTier[getScoreBand(guess.points)])
           .join(' '),
         `${total} / 500`,
-        `http://127.0.0.1:3000/${CASE_DATE}`,
+        'http://127.0.0.1:3000',
       ].join('\n'),
     );
     for (const round of caseData.rounds) {
