@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import {
   bufferDates,
   caseNumberForDate,
+  effectivePublicationCeiling,
   missingBufferDates,
   nextRevision,
   pathExists,
@@ -33,6 +34,15 @@ describe('publication buffer helpers', () => {
         },
       }),
     ).toEqual(['2026-11-01', '2026-11-03']);
+  });
+
+  it('includes the latest manifested case in the publication ceiling', () => {
+    expect(
+      effectivePublicationCeiling('2026-08-25', ['2026-08-17', '2026-08-26']),
+    ).toBe('2026-08-26');
+    expect(effectivePublicationCeiling('2026-08-27', ['2026-08-26'])).toBe(
+      '2026-08-27',
+    );
   });
 
   it('preserves Unix-day case numbers and allocates the next revision', () => {
