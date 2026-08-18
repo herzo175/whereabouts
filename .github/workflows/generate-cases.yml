@@ -1,4 +1,4 @@
-name: Generate and publish daily case
+name: Generate case buffer
 
 on:
   schedule:
@@ -6,16 +6,27 @@ on:
     # offsets, then let the guard below select the actual midnight run.
     - cron: '0 4,5 * * *'
   workflow_dispatch:
+    inputs:
+      theme:
+        description: Optional theme direction for the generated case
+        required: false
+        type: string
+      date:
+        description: Publication date (YYYY-MM-DD); defaults to seven days from now
+        required: false
+        type: string
 
 permissions:
   contents: write
+  pull-requests: write
+
+concurrency:
+  group: generated-case-buffer
+  cancel-in-progress: false
 
 jobs:
   generate:
     runs-on: ubuntu-latest
-    outputs:
-      commit_sha: ${{ steps.commit.outputs.commit_sha }}
-      published: ${{ steps.commit.outputs.published }}
     steps:
       - name: Check for midnight Eastern
         id: schedule
@@ -27,6 +38,8 @@ jobs:
           fi
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
         uses: actions/checkout@v4
+        with:
+          ref: main
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
         uses: pnpm/action-setup@v4
         with:
@@ -40,103 +53,119 @@ jobs:
         name: Install dependencies
         run: pnpm install --frozen-lockfile
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        name: Calculate the Eastern publication date
+        name: Calculate and validate Eastern publication dates
         id: dates
-        run: echo "start=$(TZ=America/New_York date +%F)" >> "$GITHUB_OUTPUT"
-      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        name: Allocate the next immutable revision
-        id: revision
         env:
-          START_DATE: ${{ steps.dates.outputs.start }}
+          REQUESTED_DATE: ${{ inputs.date || '' }}
         run: |
-          case_dir="packages/case-content/content/cases/${START_DATE}"
-          highest=0
-          if [ -d "$case_dir" ]; then
-            for path in "$case_dir"/v*.json; do
-              [ -e "$path" ] || continue
-              name=${path##*/}
-              if [[ "$name" =~ ^v([1-9][0-9]*)\.json$ ]] && (( BASH_REMATCH[1] > highest )); then
-                highest=${BASH_REMATCH[1]}
-              fi
-            done
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            START_DATE="${REQUESTED_DATE:-$(TZ=America/New_York date -d '+7 days' +%F)}"
+            DAYS=1
+          else
+            START_DATE="$(TZ=America/New_York date +%F)"
+            DAYS=10
           fi
-          revision=$((highest + 1))
-          echo "value=${revision}" >> "$GITHUB_OUTPUT"
+          if [[ ! "$START_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "Invalid Eastern publication date: $START_DATE" >&2
+            exit 1
+          fi
+          if [ "$(date -d "$START_DATE" +%F)" != "$START_DATE" ]; then
+            echo "Non-canonical Eastern publication date: $START_DATE" >&2
+            exit 1
+          fi
+          END_DATE="$(date -d "$START_DATE + $((DAYS - 1)) days" +%F)"
+          if [[ ! "$END_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "Invalid publication ceiling: $END_DATE" >&2
+            exit 1
+          fi
+          if [ "$(date -d "$END_DATE" +%F)" != "$END_DATE" ]; then
+            echo "Non-canonical publication ceiling: $END_DATE" >&2
+            exit 1
+          fi
+          LATEST_DATE="$(jq -r '.cases | keys | max // empty' packages/case-content/content/manifest.json)"
+          if [ -n "$LATEST_DATE" ] && [[ ! "$LATEST_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "Invalid latest manifest date: $LATEST_DATE" >&2
+            exit 1
+          fi
+          PUBLICATION_CEILING="$END_DATE"
+          if [ -n "$LATEST_DATE" ] && [[ "$LATEST_DATE" > "$PUBLICATION_CEILING" ]]; then
+            PUBLICATION_CEILING="$LATEST_DATE"
+          fi
+          echo "start=$START_DATE" >> "$GITHUB_OUTPUT"
+          echo "end=$END_DATE" >> "$GITHUB_OUTPUT"
+          echo "days=$DAYS" >> "$GITHUB_OUTPUT"
+          echo "ceiling=$PUBLICATION_CEILING" >> "$GITHUB_OUTPUT"
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        name: Generate today's case
+        name: Create generated-content branch
+        env:
+          CONTENT_BRANCH: content/generated-buffer-${{ github.run_id }}
+        run: |
+          if [[ -z "$CONTENT_BRANCH" || ! "$CONTENT_BRANCH" =~ ^content/generated-buffer-[1-9][0-9]*$ ]]; then
+            echo "Invalid generated-content branch: $CONTENT_BRANCH" >&2
+            exit 1
+          fi
+          git switch --create "$CONTENT_BRANCH" origin/main
+      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
+        name: Generate requested case or maintain buffer
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY || secrets.openrouter_api_key }}
           WIKIMEDIA_USER_AGENT: ${{ secrets.WIKIMEDIA_USER_AGENT || 'Whereabouts/1.0 (https://github.com/herzo175/whereabouts)' }}
           WHEREABOUTS_MODEL: ${{ vars.WHEREABOUTS_MODEL || vars.whereabouts_model || 'openai/gpt-5.6-luna' }}
-        run: pnpm content:generate-range -- --from "${{ steps.dates.outputs.start }}" --days 1 --revision "${{ steps.revision.outputs.value }}"
+          START_DATE: ${{ steps.dates.outputs.start }}
+          DAYS: ${{ steps.dates.outputs.days }}
+          THEME: ${{ inputs.theme || '' }}
+        run: |
+          ARGS=(--from "$START_DATE" --days "$DAYS")
+          if [ -n "$THEME" ]; then
+            ARGS+=(--theme "$THEME")
+          fi
+          pnpm content:prepare-buffer -- "${ARGS[@]}"
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
         name: Format generated case content
-        run: pnpm exec biome format --write "packages/case-content/content/cases/${{ steps.dates.outputs.start }}/v${{ steps.revision.outputs.value }}.json"
+        run: pnpm exec biome format --write packages/case-content/content
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        name: Publish today's generated revision
+        name: Validate generated publication buffer
         env:
-          DATE: ${{ steps.dates.outputs.start }}
-          REVISION: ${{ steps.revision.outputs.value }}
+          PUBLICATION_CEILING: ${{ steps.dates.outputs.ceiling }}
         run: |
-          node <<'NODE'
-          import { readFile, writeFile } from 'node:fs/promises';
-
-          const { DATE: date, REVISION: revisionText } = process.env;
-          const revision = Number(revisionText);
-          if (!/^\d{4}-\d{2}-\d{2}$/.test(date))
-            throw new Error(`Invalid Eastern publication date: ${date}`);
-          if (!Number.isInteger(revision) || revision < 1)
-            throw new Error(`Invalid revision: ${revisionText}`);
-
-          const manifestPath = 'packages/case-content/content/manifest.json';
-          const artifactPath = `packages/case-content/content/cases/${date}/v${revision}.json`;
-          const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
-          const artifact = JSON.parse(await readFile(artifactPath, 'utf8'));
-          if (
-            artifact.publicationDate !== date ||
-            artifact.revision !== revision ||
-            !Number.isInteger(artifact.caseNumber) ||
-            artifact.caseNumber < 1
-          ) {
-            throw new Error(`Invalid publication metadata in ${artifactPath}`);
-          }
-          manifest.cases ??= {};
-          manifest.cases[date] = {
-            caseNumber: artifact.caseNumber,
-            revision,
-            file: `./cases/${date}/v${revision}.json`,
-          };
-          await writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
-          NODE
+          if [[ -z "$PUBLICATION_CEILING" || ! "$PUBLICATION_CEILING" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "Invalid publication ceiling: $PUBLICATION_CEILING" >&2
+            exit 1
+          fi
+          pnpm content:validate
+          pnpm quality
       - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        name: Validate today's publication boundary
+        name: Commit and publish generated buffer pull request
         env:
-          PUBLICATION_CEILING: ${{ steps.dates.outputs.start }}
-        run: pnpm content:validate
-      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        name: Commit the generated case
-        id: commit
-        env:
+          CONTENT_BRANCH: content/generated-buffer-${{ github.run_id }}
           START_DATE: ${{ steps.dates.outputs.start }}
-          REVISION: ${{ steps.revision.outputs.value }}
+          END_DATE: ${{ steps.dates.outputs.end }}
+          GH_TOKEN: ${{ github.token }}
         run: |
-          git add packages/case-content/content/cases packages/case-content/content/manifest.json
+          if [[ -z "$CONTENT_BRANCH" || ! "$CONTENT_BRANCH" =~ ^content/generated-buffer-[1-9][0-9]*$ ]]; then
+            echo "Invalid generated-content branch: $CONTENT_BRANCH" >&2
+            exit 1
+          fi
+          if [[ -z "$START_DATE" || ! "$START_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "Invalid start date: $START_DATE" >&2
+            exit 1
+          fi
+          if [[ -z "$END_DATE" || ! "$END_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "Invalid end date: $END_DATE" >&2
+            exit 1
+          fi
+          git add packages/case-content/content/cases packages/case-content/content/manifest.json packages/case-content/content/reviews
           if git diff --cached --quiet; then
-            echo "published=false" >> "$GITHUB_OUTPUT"
-            echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+            echo "Generated buffer is already current; no pull request needed."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "content: add Whereabouts case ${START_DATE} v${REVISION}"
-          git push origin HEAD:main
-          echo "published=true" >> "$GITHUB_OUTPUT"
-          echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
-
-  deploy:
-    needs: generate
-    if: needs.generate.outputs.published == 'true'
-    uses: ./.github/workflows/deploy-fly.yml
-    with:
-      ref: ${{ needs.generate.outputs.commit_sha }}
-    secrets: inherit
+          git commit -m "content: generate case buffer ${START_DATE} through ${END_DATE}"
+          git push --set-upstream origin "$CONTENT_BRANCH"
+          PR_URL="$(gh pr create --base main --head "$CONTENT_BRANCH" --title "content: generate case buffer ${START_DATE} through ${END_DATE}" --body-file packages/case-content/content/reviews/index.md)"
+          if [[ -z "$PR_URL" || ! "$PR_URL" =~ ^https://github\.com/.+/pull/[1-9][0-9]*$ ]]; then
+            echo "Invalid pull request URL: $PR_URL" >&2
+            exit 1
+          fi
+          gh pr merge --auto --squash "$PR_URL"

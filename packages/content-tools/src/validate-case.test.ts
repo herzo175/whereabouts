@@ -22,16 +22,28 @@ function makeCase(overrides: Record<string, unknown> = {}) {
     },
   }));
   return {
-    schemaVersion: 2,
+    schemaVersion: 3,
     publicationDate: '2026-08-14',
     revision: 1,
     caseNumber: 1,
-    pois,
+    theme: {
+      title: 'Fixture theme',
+      introduction: 'A sufficiently detailed fixture theme introduction.',
+      inclusionCriteria: 'A sufficiently detailed fixture inclusion criterion.',
+    },
+    pois: pois.map((poi) => ({
+      ...poi,
+      themeConnection: {
+        text: 'This place has a documented connection to the fixture theme.',
+        sourceIds: ['source-01'],
+      },
+    })),
     sources: ['source-01', 'source-02'].map((id) => ({
       id,
       title: `Fixture source ${id}`,
       url: `https://example.com/${id}`,
       retrievedAt: '2026-08-14T00:00:00Z',
+      provenance: 'verified',
     })),
     rounds: pois.slice(0, 5).map((target, roundIndex) => ({
       id: `round-${roundIndex + 1}`,
@@ -67,11 +79,11 @@ function messages(value: unknown): string[] {
 }
 
 describe('validateCaseForPublication', () => {
-  it('accepts a schema-valid v2 case', () => {
+  it('accepts a schema-valid v3 case', () => {
     expect(validateCaseForPublication(makeCase())).toEqual([]);
   });
 
-  it('rejects non-v2 values as malformed', () => {
+  it('rejects malformed values as malformed', () => {
     expect(validateCaseForPublication({ schemaVersion: 3 })[0]?.path).toBe(
       'schema',
     );
@@ -98,6 +110,20 @@ describe('validateCaseForPublication', () => {
     const value = makeCase();
     value.rounds[1].results[0].text = 'City 1 reveals the target location.';
     expect(validateCaseForPublication(value)).toEqual([]);
+  });
+
+  it('does not match a short country code inside another word', () => {
+    const value = makeCase();
+    value.pois[0].country = 'US';
+    value.rounds[0].clue.text =
+      'This industrial landmark has a sufficiently specific historical clue.';
+    expect(validateCaseForPublication(value)).toEqual([]);
+
+    value.rounds[0].clue.text =
+      'This landmark is in the US and therefore leaks its country.';
+    expect(messages(value)).toContain(
+      'Pre-reveal text leaks target POI, destination, city, or country',
+    );
   });
 
   it('rejects a round without a useful spread of similarity tiers', () => {

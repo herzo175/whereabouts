@@ -16,6 +16,7 @@ import { DailyScorePanel } from './daily-score-panel';
 import { PoiPicker } from './poi-picker';
 import { RoundBriefing } from './round-briefing';
 import { RoundReveal } from './round-reveal';
+import { ThemeBriefing } from './theme-briefing';
 
 type FiveRoundGameScreenProps = {
   caseData: FiveRoundDailyCase;
@@ -77,7 +78,9 @@ export function FiveRoundGameScreen({
     createFiveRoundProgress(caseData),
   );
   const [isReady, setIsReady] = useState(false);
-  const [revealOpen, setRevealOpen] = useState(false);
+  const [viewedRevealIndex, setViewedRevealIndex] = useState<number | null>(
+    null,
+  );
 
   useEffect(() => {
     const activeStorage = getStorage(storage);
@@ -85,19 +88,23 @@ export function FiveRoundGameScreen({
       ? loadProgress(caseData, activeStorage)
       : createFiveRoundProgress(caseData);
     setProgress(nextProgress);
-    setRevealOpen(
-      nextProgress.guesses.length > nextProgress.acknowledgedRoundCount,
+    setViewedRevealIndex(
+      nextProgress.guesses.length > nextProgress.acknowledgedRoundCount
+        ? nextProgress.guesses.length - 1
+        : null,
     );
     setIsReady(true);
   }, [caseData, storage]);
 
   const currentRound = getCurrentRound(caseData, progress);
-  const latestGuess = progress.guesses.at(-1);
-  const revealedRound =
-    revealOpen && latestGuess
-      ? (caseData.rounds.find((round) => round.id === latestGuess.roundId) ??
-        null)
-      : null;
+  const viewedGuess =
+    viewedRevealIndex === null
+      ? undefined
+      : progress.guesses[viewedRevealIndex];
+  const revealedRound = viewedGuess
+    ? (caseData.rounds.find((round) => round.id === viewedGuess.roundId) ??
+      null)
+    : null;
   const revealedTargetIds = new Set(
     progress.guesses.flatMap((guess) => {
       const round = caseData.rounds.find(
@@ -108,12 +115,12 @@ export function FiveRoundGameScreen({
   );
 
   const submitGuess = (poi: Poi) => {
-    if (!currentRound || revealOpen) return;
+    if (!currentRound || viewedRevealIndex !== null) return;
     const nextProgress = submitRoundGuess(caseData, progress, poi.id);
     setProgress(nextProgress);
     const activeStorage = getStorage(storage);
     if (activeStorage) saveProgress(nextProgress, activeStorage);
-    setRevealOpen(true);
+    setViewedRevealIndex(nextProgress.guesses.length - 1);
   };
 
   const acknowledgeReveal = () => {
@@ -121,8 +128,11 @@ export function FiveRoundGameScreen({
     setProgress(nextProgress);
     const activeStorage = getStorage(storage);
     if (activeStorage) saveProgress(nextProgress, activeStorage);
-    setRevealOpen(false);
+    setViewedRevealIndex(null);
   };
+
+  const openLatestReveal = () =>
+    setViewedRevealIndex(progress.guesses.length - 1);
 
   if (!isReady) {
     return (
@@ -132,34 +142,86 @@ export function FiveRoundGameScreen({
     );
   }
 
-  if (revealedRound && latestGuess) {
+  if (revealedRound && viewedGuess && viewedRevealIndex !== null) {
     const guessedPoi = caseData.pois.find(
-      (poi) => poi.id === latestGuess.poiId,
+      (poi) => poi.id === viewedGuess.poiId,
     );
     const correctPoi = caseData.pois.find(
       (poi) => poi.id === revealedRound.targetPoiId,
     );
     if (guessedPoi && correctPoi) {
       const isFinalRound = progress.guesses.length === caseData.rounds.length;
+      const isLatestReveal = viewedRevealIndex === progress.guesses.length - 1;
+      const latestRevealIsPending =
+        progress.guesses.length > progress.acknowledgedRoundCount;
       return (
         <main className="min-h-screen bg-background px-4 py-5 text-paper sm:px-6 sm:py-8">
           <div className="mx-auto max-w-2xl space-y-6">
             <FiveRoundHeader progress={progress} />
+            {caseData.schemaVersion === 3 ? (
+              <ThemeBriefing theme={caseData.theme} />
+            ) : null}
             <RoundReveal
               correctPoi={correctPoi}
               guessedPoi={guessedPoi}
-              points={latestGuess.points}
+              points={viewedGuess.points}
               round={revealedRound}
-              roundNumber={progress.guesses.length}
-              tier={latestGuess.tier}
+              roundNumber={viewedRevealIndex + 1}
+              tier={viewedGuess.tier}
             />
-            <button
-              className="min-h-12 rounded-md bg-paper px-5 text-sm font-semibold text-ink hover:bg-paper/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
-              onClick={acknowledgeReveal}
-              type="button"
-            >
-              {isFinalRound ? 'View daily summary' : 'Next round'}
-            </button>
+            <nav aria-label="Result history" className="flex gap-3">
+              {viewedRevealIndex > 0 ? (
+                <button
+                  aria-label={`Back to round ${viewedRevealIndex} result`}
+                  className="min-h-12 rounded-md border border-rule px-5 text-sm font-semibold text-paper hover:border-paper/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
+                  onClick={() =>
+                    setViewedRevealIndex((index) =>
+                      index === null ? null : index - 1,
+                    )
+                  }
+                  type="button"
+                >
+                  Back
+                </button>
+              ) : null}
+              {!isLatestReveal ? (
+                <button
+                  aria-label={`Forward to round ${viewedRevealIndex + 2} result`}
+                  className="min-h-12 rounded-md bg-paper px-5 text-sm font-semibold text-ink hover:bg-paper/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
+                  onClick={() =>
+                    setViewedRevealIndex((index) =>
+                      index === null ? null : index + 1,
+                    )
+                  }
+                  type="button"
+                >
+                  Forward
+                </button>
+              ) : latestRevealIsPending ? (
+                <button
+                  className="min-h-12 rounded-md bg-paper px-5 text-sm font-semibold text-ink hover:bg-paper/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
+                  onClick={acknowledgeReveal}
+                  type="button"
+                >
+                  {isFinalRound ? 'View daily summary' : 'Next round'}
+                </button>
+              ) : (
+                <button
+                  aria-label={
+                    currentRound
+                      ? `Return to round ${progress.guesses.length + 1}`
+                      : 'Return to daily summary'
+                  }
+                  className="min-h-12 rounded-md bg-paper px-5 text-sm font-semibold text-ink hover:bg-paper/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
+                  onClick={() => setViewedRevealIndex(null)}
+                  type="button"
+                >
+                  {currentRound
+                    ? 'Return to current round'
+                    : 'Return to summary'}
+                </button>
+              )}
+            </nav>
           </div>
         </main>
       );
@@ -171,11 +233,44 @@ export function FiveRoundGameScreen({
       <main className="min-h-screen bg-background px-4 py-5 text-paper sm:px-6 sm:py-8">
         <div className="mx-auto max-w-2xl space-y-6">
           <FiveRoundHeader progress={progress} />
+          {caseData.schemaVersion === 3 ? (
+            <ThemeBriefing theme={caseData.theme} />
+          ) : null}
           <DailyScorePanel
             caseData={caseData}
             onShare={onShare}
             progress={progress}
           />
+          <button
+            className="min-h-12 rounded-md border border-rule px-5 text-sm font-semibold text-paper hover:border-paper/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
+            onClick={openLatestReveal}
+            type="button"
+          >
+            Back to previous result
+          </button>
+          <section
+            aria-labelledby="explore-case-locations"
+            className="space-y-4 border-t border-rule pt-6"
+          >
+            <h2
+              className="font-serif text-3xl text-paper"
+              id="explore-case-locations"
+            >
+              Explore locations
+            </h2>
+            <PoiPicker
+              globe={(selectPoi) => (
+                <GlobePicker
+                  disabledPoiIds={new Set<string>()}
+                  onSelect={selectPoi}
+                  pois={caseData.pois}
+                  supported={globeSupported}
+                />
+              )}
+              mode="browse"
+              pois={caseData.pois}
+            />
+          </section>
         </div>
       </main>
     );
@@ -186,7 +281,19 @@ export function FiveRoundGameScreen({
     <main className="min-h-screen bg-background px-4 py-5 text-paper sm:px-6 sm:py-8">
       <div className="mx-auto max-w-2xl space-y-6">
         <FiveRoundHeader progress={progress} />
+        {caseData.schemaVersion === 3 ? (
+          <ThemeBriefing theme={caseData.theme} />
+        ) : null}
         <RoundBriefing round={currentRound} roundNumber={roundNumber} />
+        {progress.guesses.length > 0 ? (
+          <button
+            className="min-h-12 rounded-md border border-rule px-5 text-sm font-semibold text-paper hover:border-paper/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
+            onClick={openLatestReveal}
+            type="button"
+          >
+            Back to previous result
+          </button>
+        ) : null}
         <section
           aria-label="Choose a location"
           className="border-t border-rule pt-6"

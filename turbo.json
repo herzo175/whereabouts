@@ -39,7 +39,8 @@
       "passThroughEnv": [
         "OPENROUTER_API_KEY",
         "WIKIMEDIA_USER_AGENT",
-        "WHEREABOUTS_MODEL"
+        "WHEREABOUTS_MODEL",
+        "WHEREABOUTS_CRITIC_MODEL"
       ]
     },
     "content:generate-range": {
@@ -47,21 +48,18 @@
       "passThroughEnv": [
         "OPENROUTER_API_KEY",
         "WIKIMEDIA_USER_AGENT",
-        "WHEREABOUTS_MODEL"
+        "WHEREABOUTS_MODEL",
+        "WHEREABOUTS_CRITIC_MODEL"
       ]
     },
-    "content:expand-catalog": {
+    "content:prepare-buffer": {
       "cache": false,
       "passThroughEnv": [
         "OPENROUTER_API_KEY",
         "WIKIMEDIA_USER_AGENT",
-        "WHEREABOUTS_CATALOG_MODEL",
-        "WHEREABOUTS_MODEL"
+        "WHEREABOUTS_MODEL",
+        "WHEREABOUTS_CRITIC_MODEL"
       ]
-    },
-    "content:bootstrap-corpus": {
-      "cache": false,
-      "passThroughEnv": ["WIKIMEDIA_USER_AGENT"]
     },
     "content:review": {
       "cache": false

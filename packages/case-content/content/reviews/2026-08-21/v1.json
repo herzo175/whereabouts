@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "publicationDate": "2026-08-21",
+  "revision": 1,
+  "themeVerdicts": [
+    {
+      "poiId": "la-paz-mi-teleferico-central",
+      "status": "pass",
+      "explanation": "Mi Teleférico is an individually named operating urban gondola system carrying regular public passengers, and the named Estación Central is pinned within La Paz.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "medellin-metrocable-k",
+      "status": "pass",
+      "explanation": "Medellín Metrocable Line K is an operating overhead passenger gondola integrated with public transit, with the named Acevedo Station pinned in Medellín.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "medellin-metrocable-l",
+      "status": "pass",
+      "explanation": "Line L is an individually named operating aerial gondola carrying public passengers between Santo Domingo and Parque Arví, with Santo Domingo Station in Medellín.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "manizales-cable-areeo",
+      "status": "pass",
+      "explanation": "Cable Aéreo Manizales is an operating urban gondola network for public transport. Fundadores Station is a named, pinned terminal in Manizales, and the evidence identifies its three operating lines.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "quito-teleferiqo",
+      "status": "pass",
+      "explanation": "TelefériQo is an individually named operating passenger gondola visitor attraction with a named lower terminal pinned inside Quito.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "guayaquil-aerovia-julian-coronel",
+      "status": "pass",
+      "explanation": "Aerovía is an operating aerial cable-car public transport system with the named Julián Coronel Station pinned in Guayaquil.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "santo-domingo-teleferico",
+      "status": "pass",
+      "explanation": "The Santo Domingo cable car is an operating public-transit gondola line with named stations, including the pinned Gualey Station within Santo Domingo.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "rio-sugarloaf-bondinho",
+      "status": "pass",
+      "explanation": "Bondinho do Pão de Açúcar is an operating aerial tramway for visitors between named stations, including the pinned Praia Vermelha Station in Rio de Janeiro.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "caracas-teleferico-warairarepano",
+      "status": "pass",
+      "explanation": "Teleférico Warairarepano is an operating passenger cableway visitor service with the named Maripérez Station pinned in Caracas.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "merida-teleferico-barinitas",
+      "status": "pass",
+      "explanation": "The Mérida cable car is an operating passenger aerial tramway beginning at the named, pinned Barinitas Station in Mérida.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "mexico-city-cablebus-line-1",
+      "status": "pass",
+      "explanation": "Cablebús Line 1 is part of Mexico City's operating scheduled public gondola transit network, with the named Indios Verdes Station pinned in Mexico City.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "ecatepec-mexicable",
+      "status": "pass",
+      "explanation": "Mexicable Line 1 is an operating scheduled public aerial gondola system serving Ecatepec, with the named Santa Clara Station pinned in the incorporated municipality.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "puebla-teleferico",
+      "status": "pass",
+      "explanation": "The Puebla Cable Car is an individually named operating aerial gondola attraction with named stations, including the pinned Centro Expositor Station inside Puebla.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "portland-aerial-tram",
+      "status": "pass",
+      "explanation": "The Portland Aerial Tram is an operating public aerial tramway with the named South Waterfront terminal pinned within Portland.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "new-york-roosevelt-island-tram",
+      "status": "pass",
+      "explanation": "The Roosevelt Island Tramway is an operating scheduled public aerial tramway between Manhattan and Roosevelt Island, with the named Manhattan Station pinned in New York City.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "london-air-line",
+      "status": "pass",
+      "explanation": "The IFS Cloud Cable Car is an operating urban gondola service between named terminals, including the pinned Royal Docks Station in London.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "palm-springs-aerial-tramway",
+      "status": "pass",
+      "explanation": "The Palm Springs Aerial Tramway is an operating visitor aerial tramway with its named Valley Station pinned in Palm Springs.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "telluride-gondola",
+      "status": "pass",
+      "explanation": "The Telluride Gondola is a named operating free public pedestrian gondola connecting Telluride and Mountain Village. Its town-access function means it is not solely a restricted ski lift, and the Telluride terminal is pinned within the incorporated town.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "singapore-cable-car-mount-faber",
+      "status": "pass",
+      "explanation": "The Singapore Cable Car is an operating passenger gondola with named stations, including the pinned Mount Faber Station in Singapore, providing visitor service across the harbour to Sentosa.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "taipei-maokong-gondola",
+      "status": "pass",
+      "explanation": "The Maokong Gondola is an operating passenger gondola with named stations, including the pinned Taipei Zoo Station in Taipei.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "seoul-namsan-cable-car",
+      "status": "pass",
+      "explanation": "The Namsan Cable Car is an operating visitor aerial cableway with the named Hoehyeon lower station pinned in Seoul.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "busan-songdo-cable-car",
+      "status": "pass",
+      "explanation": "Busan Air Cruise is an operating public visitor gondola attraction over Songdo Bay, with the named Songdo Bay Station pinned in Busan.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "yeosu-maritime-cable-car",
+      "status": "pass",
+      "explanation": "The Yeosu Maritime Cable Car is an operating gondola lift between named parks, including the pinned Dolsan Park Station within Yeosu.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "hakodate-ropeway",
+      "status": "pass",
+      "explanation": "The Mt. Hakodate Ropeway is an operating visitor aerial tramway with scheduled cabins, a named Sanroku Station, and that station pinned in Hakodate.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "hong-kong-ngong-ping-360",
+      "status": "pass",
+      "explanation": "Ngong Ping 360 is an operating scheduled visitor gondola with the named Tung Chung Station pinned in Hong Kong.",
+      "sourceIds": ["source-01"]
+    }
+  ],
+  "clueVerdicts": [
+    {
+      "roundId": "round-1",
+      "declaredTargetPoiId": "manizales-cable-areeo",
+      "resolvedPoiId": "manizales-cable-areeo",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The three operating lines, 2 km original route, 705 m Cámbulos–Villamaría extension, central Manizales terminal, and municipal connection match Cable Aéreo Manizales."
+    },
+    {
+      "roundId": "round-2",
+      "declaredTargetPoiId": "telluride-gondola",
+      "resolvedPoiId": "telluride-gondola",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The clue matches the free pedestrian gondola opened in 1996 between historic Telluride and Mountain Village across Telluride Ski Resort, which has more than 2,000 skiable acres."
+    },
+    {
+      "roundId": "round-3",
+      "declaredTargetPoiId": "yeosu-maritime-cable-car",
+      "resolvedPoiId": "yeosu-maritime-cable-car",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The island-to-mainland park route, first Korean aerial lift over water, and specially ticketed transparent-floor crystal cabins uniquely identify the Yeosu Maritime Cable Car."
+    },
+    {
+      "roundId": "round-4",
+      "declaredTargetPoiId": "hakodate-ropeway",
+      "resolvedPoiId": "hakodate-ropeway",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The 787 m length, 278 m vertical interval, two track cables plus haulage rope, 125-passenger cabins, ten-minute departures, and three-minute ride match the Mt. Hakodate Ropeway."
+    },
+    {
+      "roundId": "round-5",
+      "declaredTargetPoiId": "singapore-cable-car-mount-faber",
+      "resolvedPoiId": "singapore-cable-car-mount-faber",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The 1974 opening, Mount Faber–Sentosa harbour crossing, second-harbour-ropeway distinction, and later glass-bottom cabins match the Singapore Cable Car."
+    }
+  ],
+  "repairs": []
+}

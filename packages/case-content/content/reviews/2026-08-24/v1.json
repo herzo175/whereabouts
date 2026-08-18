@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "publicationDate": "2026-08-24",
+  "revision": 1,
+  "themeVerdicts": [
+    {
+      "poiId": "obs-001",
+      "status": "pass",
+      "explanation": "The Empire State Building is a landmark skyscraper with individually named public observatories on the 86th and 102nd floors, a fixed visitor entrance, and regularly operating public admission in New York City.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-002",
+      "status": "pass",
+      "explanation": "Top of the Rock is a named public observation deck with multiple elevated viewing levels in 30 Rockefeller Plaza, a high-rise in New York City.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-003",
+      "status": "pass",
+      "explanation": "One World Observatory is a named, ticketed public observation venue on floors 100–102 of One World Trade Center, with an exact visitor facility in New York City.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-004",
+      "status": "pass",
+      "explanation": "Edge is a named, regularly ticketed observation deck on the 100th floor of 30 Hudson Yards, with a fixed public entrance in New York City.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-005",
+      "status": "pass",
+      "explanation": "SUMMIT One Vanderbilt is a permanent, named public observation experience on the upper floors of the One Vanderbilt skyscraper, offering panoramic views from a fixed visitor facility.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-006",
+      "status": "pass",
+      "explanation": "Skydeck Chicago is a named public observation deck on the 103rd floor of Willis Tower, a high-rise in Chicago, with fixed visitor access.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-007",
+      "status": "pass",
+      "explanation": "360 Chicago is a named public observation venue on the 94th floor of 875 North Michigan Avenue, providing panoramic views from a fixed high-rise facility.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-008",
+      "status": "pass",
+      "explanation": "The CN Tower is a purpose-built landmark tower with named public viewing levels including the LookOut Level and SkyPod, located within Toronto.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-009",
+      "status": "pass",
+      "explanation": "The Space Needle is a purpose-built landmark observation tower in Seattle with publicly accessible elevated viewing levels and a fixed visitor facility.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-010",
+      "status": "pass",
+      "explanation": "Vancouver Lookout is a dedicated public observation deck atop Harbour Centre, a high-rise in Vancouver, reached through a fixed visitor facility.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-013",
+      "status": "pass",
+      "explanation": "Tokyo Skytree's Tembo Deck and Tembo Galleria are named public observation levels in a landmark tower in Tokyo, with fixed public admission facilities.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-014",
+      "status": "pass",
+      "explanation": "Tokyo Tower's Main Deck is a named permanent public observation level in a landmark tower within Tokyo.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-015",
+      "status": "pass",
+      "explanation": "Shibuya Sky is a named public rooftop observation facility atop the Shibuya Scramble Square high-rise, with an exact visitor location in Tokyo.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-016",
+      "status": "pass",
+      "explanation": "Kuchu Teien Observatory is a named public viewing venue at the top of Osaka's Umeda Sky Building, a landmark high-rise with a fixed visitor facility.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-017",
+      "status": "pass",
+      "explanation": "Harukas 300 is a named public observation facility spanning floors 58–60 of Abeno Harukas in Osaka.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-018",
+      "status": "pass",
+      "explanation": "Shanghai Tower has dedicated public sightseeing decks on floors 118 and 119, with regular public access in Shanghai and a fixed observation-deck facility.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-019",
+      "status": "pass",
+      "explanation": "Canton Tower is a purpose-built landmark observation and communications tower with multiple public indoor and outdoor viewing decks in Guangzhou.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-020",
+      "status": "pass",
+      "explanation": "Taipei 101 has dedicated public indoor and outdoor observation decks on elevated floors of the landmark skyscraper in Taipei.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-021",
+      "status": "pass",
+      "explanation": "Macau Tower provides named, ticketed public observation levels and an outdoor viewing platform in the landmark tower within Macau.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-022",
+      "status": "pass",
+      "explanation": "Kuala Lumpur Tower contains dedicated public observation facilities, including an enclosed deck and Sky Deck, in a freestanding landmark tower within Kuala Lumpur.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-023",
+      "status": "pass",
+      "explanation": "The Petronas Towers provide a dedicated public viewing venue comprising the Skybridge and an observation deck on the 86th floor, with a fixed visitor facility in Kuala Lumpur.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-024",
+      "status": "pass",
+      "explanation": "At the Top is a named public observation attraction on elevated levels of Burj Khalifa, with ticketed visitor admission in Dubai.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-025",
+      "status": "pass",
+      "explanation": "Dubai Frame is a purpose-built landmark observatory in Zabeel Park with a public elevated Sky Deck and viewing bridge, a fixed visitor facility within Dubai.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-039",
+      "status": "pass",
+      "explanation": "Sky100 is a named indoor 360-degree public observation deck on the 100th floor of the International Commerce Centre in Hong Kong, reached through dedicated high-speed lifts.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-040",
+      "status": "pass",
+      "explanation": "Seoul Sky is a named public observation facility on floors 117–123 of Lotte World Tower, a landmark high-rise in Seoul.",
+      "sourceIds": ["source-01"]
+    }
+  ],
+  "clueVerdicts": [
+    {
+      "roundId": "round-1",
+      "declaredTargetPoiId": "obs-009",
+      "resolvedPoiId": "obs-009",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The clue's 1962 World's Fair completion, 605-foot height, 520-foot observation deck, and 41-second elevator ride uniquely identify the Space Needle."
+    },
+    {
+      "roundId": "round-2",
+      "declaredTargetPoiId": "obs-018",
+      "resolvedPoiId": "obs-018",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The 128-story, 632-meter height, floors 118 and 119 observation decks, and 20.5-meter-per-second elevator record identify Shanghai Tower."
+    },
+    {
+      "roundId": "round-3",
+      "declaredTargetPoiId": "obs-025",
+      "resolvedPoiId": "obs-025",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The world's-largest-frame description, dimensions, Zabeel Park setting, and contrasting old and new Dubai views identify Dubai Frame."
+    },
+    {
+      "roundId": "round-4",
+      "declaredTargetPoiId": "obs-039",
+      "resolvedPoiId": "obs-039",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The indoor 360-degree deck on the 100th floor, 60-second lift journey from the second floor, and April 2011 opening identify Sky100."
+    },
+    {
+      "roundId": "round-5",
+      "declaredTargetPoiId": "obs-001",
+      "resolvedPoiId": "obs-001",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The 102-story Art Deco design, 1930–31 construction, 1,250-foot roof height, and 86th- and 102nd-floor observatories identify the Empire State Building Observatory."
+    }
+  ],
+  "repairs": []
+}

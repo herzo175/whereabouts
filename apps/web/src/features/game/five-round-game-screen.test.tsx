@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { makeFiveRoundCase } from '@whereabouts/case-content/testing';
 import {
+  acknowledgeRoundReveal,
   createFiveRoundProgress,
   submitRoundGuess,
 } from '@whereabouts/game-engine';
@@ -27,6 +28,44 @@ function makeStorage(initial?: Record<string, string>): Storage {
 }
 
 describe('FiveRoundGameScreen', () => {
+  it("shows today's theme before a guess and both dossier connections after submission", async () => {
+    const user = userEvent.setup();
+    const caseData = makeFiveRoundCase();
+    const guessedPoi = caseData.pois[10];
+
+    render(
+      <FiveRoundGameScreen
+        caseData={caseData}
+        globeSupported={false}
+        storage={makeStorage()}
+      />,
+    );
+
+    expect(
+      await screen.findByRole('heading', { name: 'Railway Hotels' }),
+    ).toBeVisible();
+    expect(screen.getByText(caseData.theme.introduction)).toBeVisible();
+    expect(screen.queryByText(guessedPoi.themeConnection.text)).toBeNull();
+
+    const search = screen.getByRole('searchbox', { name: /search locations/i });
+    await user.type(search, guessedPoi.name);
+    await user.click(
+      screen.getByRole('button', { name: new RegExp(guessedPoi.name, 'i') }),
+    );
+    await user.click(screen.getByRole('button', { name: /submit this lead/i }));
+
+    expect(screen.getAllByText("Why it fits today's theme")).toHaveLength(2);
+    expect(screen.getAllByText(guessedPoi.themeConnection.text)).toHaveLength(
+      1,
+    );
+    const correctPoi = caseData.pois.find(
+      (poi) => poi.id === caseData.rounds[0].targetPoiId,
+    );
+    expect(correctPoi).toBeDefined();
+    if (!correctPoi) return;
+    expect(screen.getByText(correctPoi.themeConnection.text)).toBeVisible();
+  });
+
   it('shows a neutral briefing, then reveals the scored relationship before the next round', async () => {
     const user = userEvent.setup();
     const caseData = makeFiveRoundCase();
@@ -116,10 +155,25 @@ describe('FiveRoundGameScreen', () => {
     ).toBeVisible();
     expect(screen.getByText('500 / 500')).toBeVisible();
     expect(screen.getAllByText(/^correct$/i)).toHaveLength(5);
+    expect(
+      screen.getByRole('list', { name: /matching locations/i }),
+    ).toBeVisible();
+    expect(screen.getByText(/globe unavailable/i)).toBeVisible();
 
     await user.click(screen.getByRole('button', { name: /copy result/i }));
     expect(onShare).toHaveBeenCalledWith(caseData, completed);
     expect(screen.getByRole('button', { name: /copied/i })).toBeVisible();
+
+    await user.click(
+      screen.getByRole('button', { name: /back to previous result/i }),
+    );
+    expect(
+      screen.getByRole('heading', { name: /round 5 revealed/i }),
+    ).toBeVisible();
+    await user.click(
+      screen.getByRole('button', { name: /return to daily summary/i }),
+    );
+    expect(screen.getByRole('heading', { name: /daily score/i })).toBeVisible();
   });
 
   it('restores an unacknowledged reveal instead of skipping to the next round', async () => {
@@ -146,5 +200,59 @@ describe('FiveRoundGameScreen', () => {
       await screen.findByRole('heading', { name: /round 1 revealed/i }),
     ).toBeVisible();
     expect(screen.getByRole('button', { name: /next round/i })).toBeVisible();
+  });
+
+  it('navigates backward and forward through previous results without changing progress', async () => {
+    const user = userEvent.setup();
+    const caseData = makeFiveRoundCase();
+    const progress = caseData.rounds
+      .slice(0, 2)
+      .reduce(
+        (current, round) =>
+          acknowledgeRoundReveal(
+            submitRoundGuess(caseData, current, round.targetPoiId),
+          ),
+        createFiveRoundProgress(caseData),
+      );
+    const storage = makeStorage({
+      [`whereabouts:case:${caseData.publicationDate}`]:
+        JSON.stringify(progress),
+    });
+
+    render(
+      <FiveRoundGameScreen
+        caseData={caseData}
+        globeSupported={false}
+        storage={storage}
+      />,
+    );
+
+    expect(await screen.findByText('Round 3 / 5')).toBeVisible();
+    await user.click(
+      screen.getByRole('button', { name: /back to previous result/i }),
+    );
+    expect(
+      screen.getByRole('heading', { name: /round 2 revealed/i }),
+    ).toBeVisible();
+
+    await user.click(
+      screen.getByRole('button', { name: /back to round 1 result/i }),
+    );
+    expect(
+      screen.getByRole('heading', { name: /round 1 revealed/i }),
+    ).toBeVisible();
+
+    await user.click(
+      screen.getByRole('button', { name: /forward to round 2 result/i }),
+    );
+    expect(
+      screen.getByRole('heading', { name: /round 2 revealed/i }),
+    ).toBeVisible();
+
+    await user.click(
+      screen.getByRole('button', { name: /return to round 3/i }),
+    );
+    expect(screen.getByText('Round 3 / 5')).toBeVisible();
+    expect(storage.setItem).not.toHaveBeenCalled();
   });
 });

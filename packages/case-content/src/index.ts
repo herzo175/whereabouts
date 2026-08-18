@@ -1,10 +1,14 @@
 export type {
   DailyCase,
   DailyRound,
+  DailyTheme,
   FiveRoundDailyCase,
   Poi,
   RoundResult,
   RoundTier,
   Source,
+  ThemeConnection,
+  ThemedDailyCase,
+  ThemedPoi,
 } from './schema.js';
 export { dailyCaseSchema, poiSchema, sourceSchema } from './schema.js';

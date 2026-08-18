@@ -1,315 +1,323 @@
-import { createHash } from 'node:crypto';
-import { readFile } from 'node:fs/promises';
+import { readdir, readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
-import { dailyCaseSchema } from '@whereabouts/case-content';
+import {
+  type DailyCase,
+  dailyCaseSchema,
+  type ThemedDailyCase,
+} from '@whereabouts/case-content';
 
 import { loadLocalEnvironment } from './environment.js';
-import { generateCase } from './generate-case.js';
 import { caseContentRoot } from './paths.js';
 import {
-  fetchWikipediaImage,
-  requireProductionUserAgent,
-} from './wikipedia.js';
+  bufferDates,
+  caseNumberForDate,
+  missingBufferDates,
+  nextRevision,
+} from './publication-buffer.js';
+import {
+  type CaseManifest,
+  type PreparedCase,
+  publishBatch,
+} from './publish-batch.js';
+import { curateBoard } from './themed-case/board-curator.js';
+import {
+  hydrateBoardTargets,
+  researchCandidates,
+} from './themed-case/candidate-researcher.js';
+import { critiqueCase } from './themed-case/case-critic.js';
+import { repairCaseDraft, writeCaseDraft } from './themed-case/case-writer.js';
+import { createWikimediaResearch } from './themed-case/live-research.js';
+import { createOpenRouterModel } from './themed-case/model.js';
+import {
+  type OrchestrateThemedCaseInput,
+  type OrchestratorStages,
+  orchestrateThemedCase,
+} from './themed-case/orchestrator.js';
+import { planTheme } from './themed-case/theme-planner.js';
+import { requireProductionUserAgent } from './wikipedia.js';
 
-type CatalogPoi = Parameters<typeof generateCase>[0]['pois'][number] & {
-  region: string;
+export type RangeArguments = {
+  from: string;
+  days: number;
+  revision: number | undefined;
+  missingOnly: boolean;
+  theme: string | undefined;
+};
+
+export type RangeHistory = {
+  manifest: CaseManifest;
+  cases: readonly DailyCase[];
+};
+
+export type GenerateRangeDependencies = {
+  history?: RangeHistory | (() => Promise<RangeHistory>);
+  listExistingCasePaths?: (date: string) => Promise<readonly string[]>;
+  orchestrate?: (input: OrchestrateThemedCaseInput) => Promise<PreparedCase>;
+  publishBatch?: typeof publishBatch;
+  stages?: OrchestratorStages;
+  requireUserAgent?: () => string;
 };
 
 function usage(): never {
   throw new Error(
-    'Usage: content:generate-range -- --from YYYY-MM-DD --days N [--revision N]',
+    'Usage: content:generate-range -- --from YYYY-MM-DD --days N [--revision N] [--theme TEXT] [--missing-only]',
   );
 }
-function parse(arguments_: string[]): {
-  from: string;
-  days: number;
-  revision: number;
-} {
-  const from = arguments_[arguments_.indexOf('--from') + 1];
-  const daysText = arguments_[arguments_.indexOf('--days') + 1];
-  const revisionIndex = arguments_.indexOf('--revision');
-  const revisionText =
-    revisionIndex === -1 ? '1' : arguments_[revisionIndex + 1];
+
+function valueAfter(arguments_: string[], name: string): string | undefined {
+  const index = arguments_.indexOf(name);
+  if (index === -1) return undefined;
+  const value = arguments_[index + 1];
+  if (!value || value.startsWith('--')) usage();
+  return value;
+}
+
+export function parseRangeArguments(arguments_: string[]): RangeArguments {
+  const from = valueAfter(arguments_, '--from');
+  const daysText = valueAfter(arguments_, '--days');
+  const revisionText = valueAfter(arguments_, '--revision');
+  const themeText = valueAfter(arguments_, '--theme');
+  const missingOnly = arguments_.includes('--missing-only');
+  const known = new Set([
+    '--from',
+    '--days',
+    '--revision',
+    '--theme',
+    '--missing-only',
+  ]);
   if (
-    !from ||
-    !/^\d{4}-\d{2}-\d{2}$/.test(from) ||
-    !daysText ||
-    !/^\d+$/.test(daysText) ||
-    Number(daysText) < 1 ||
-    !revisionText ||
-    !/^\d+$/.test(revisionText) ||
-    Number(revisionText) < 1
+    arguments_.some(
+      (argument) => argument.startsWith('--') && !known.has(argument),
+    )
   )
     usage();
-  return {
-    from,
-    days: Number(daysText),
-    revision: Number(revisionText),
-  };
-}
-function dateAfter(from: string, offset: number): string {
-  const date = new Date(`${from}T00:00:00Z`);
-  date.setUTCDate(date.getUTCDate() + offset);
-  return date.toISOString().slice(0, 10);
-}
-
-function hashOrder(seed: string, poi: CatalogPoi): string {
-  return createHash('sha256').update(`${seed}:${poi.id}`).digest('hex');
-}
-
-type TargetHistory = ReadonlyMap<string, Iterable<string>>;
-
-export function targetExclusionsForDate(
-  history: TargetHistory,
-  date: string,
-): Set<string> {
-  const previousDates = [...history.keys()]
-    .filter((candidate) => candidate <= date)
-    .sort((left, right) => right.localeCompare(left))
-    .slice(0, 30);
-  return new Set(
-    previousDates.flatMap((previousDate) => [
-      ...(history.get(previousDate) ?? []),
-    ]),
-  );
+  if (!from || !/^\d{4}-\d{2}-\d{2}$/.test(from))
+    throw new Error('from must be a canonical ISO date');
+  if (!daysText) throw new Error('days must be a positive integer');
+  const days = Number(daysText);
+  const revision =
+    revisionText === undefined ? undefined : Number(revisionText);
+  if (!/^\d+$/.test(daysText) || !Number.isInteger(days) || days < 1)
+    throw new Error('days must be a positive integer');
+  if (
+    revisionText !== undefined &&
+    (!/^\d+$/.test(revisionText) ||
+      revision === undefined ||
+      !Number.isInteger(revision) ||
+      revision < 1)
+  )
+    throw new Error('revision must be a positive integer');
+  const theme = themeText?.trim();
+  if (theme !== undefined && (theme.length < 3 || theme.length > 160))
+    throw new Error('theme must be between 3 and 160 characters');
+  // bufferDates performs the full calendar validity check for the start date.
+  bufferDates(from, 1);
+  return { from, days, revision, missingOnly, theme };
 }
 
-async function publishedTargetHistory(): Promise<Map<string, string[]>> {
+async function loadPublishedHistory(): Promise<RangeHistory> {
   const manifest = JSON.parse(
     await readFile(resolve(caseContentRoot, 'manifest.json'), 'utf8'),
-  ) as { cases?: Record<string, { file?: string }> };
-  const history = new Map<string, string[]>();
-  for (const [date, entry] of Object.entries(manifest.cases ?? {})) {
-    if (!entry.file) throw new Error(`manifest case ${date} has no file`);
-    const caseData = dailyCaseSchema.parse(
-      JSON.parse(await readFile(resolve(caseContentRoot, entry.file), 'utf8')),
-    );
-    history.set(
-      date,
-      caseData.rounds.map((round) => round.targetPoiId),
-    );
-  }
-  return history;
-}
-
-export function selectPoisForDate(
-  catalog: CatalogPoi[],
-  date: string,
-  excludedTargetIds: ReadonlySet<string> = new Set(),
-  revision = 1,
-): CatalogPoi[] {
-  if (catalog.length < 25)
-    throw new Error('catalog must contain at least 25 POIs');
-  if (!Number.isInteger(revision) || revision < 1)
-    throw new Error('revision must be a positive integer');
-
-  const day = Math.floor(Date.parse(`${date}T00:00:00Z`) / 86_400_000);
-  const targetOrder = [...catalog].sort((left, right) =>
-    hashOrder(`whereabouts-target-v3:${date}:v${revision}`, left).localeCompare(
-      hashOrder(`whereabouts-target-v3:${date}:v${revision}`, right),
-    ),
-  );
-  const targetCandidates = targetOrder.filter(
-    (poi) => !excludedTargetIds.has(poi.id),
-  );
-  if (targetCandidates.length < 5)
-    throw new Error('catalog must contain five eligible targets');
-  const targetStart =
-    ((day % targetCandidates.length) + targetCandidates.length) %
-    targetCandidates.length;
-  const targets = Array.from(
-    { length: 5 },
-    (_, index) =>
-      targetCandidates[(targetStart + index) % targetCandidates.length],
-  );
-  if (targets.some((target) => !target))
-    throw new Error('five target POIs are required');
-
-  const regionCount = new Map<string, number>();
-  for (const target of targets) {
-    if (!target) continue;
-    regionCount.set(target.region, (regionCount.get(target.region) ?? 0) + 1);
-  }
-  const regionLimit = Math.ceil(
-    25 / new Set(catalog.map((poi) => poi.region)).size,
-  );
-  const ranked = catalog
-    .filter((poi) => !targets.some((target) => target?.id === poi.id))
-    .sort((left, right) =>
-      hashOrder(
-        `whereabouts-candidates-v3:${date}:v${revision}`,
-        left,
-      ).localeCompare(
-        hashOrder(`whereabouts-candidates-v3:${date}:v${revision}`, right),
-      ),
-    );
-  const selected = targets.filter((target): target is CatalogPoi =>
-    Boolean(target),
-  );
-  for (const poi of ranked) {
-    if ((regionCount.get(poi.region) ?? 0) >= regionLimit) continue;
-    selected.push(poi);
-    regionCount.set(poi.region, (regionCount.get(poi.region) ?? 0) + 1);
-    if (selected.length === 25) return selected;
-  }
-  for (const poi of ranked) {
-    if (selected.some((candidate) => candidate.id === poi.id)) continue;
-    selected.push(poi);
-    if (selected.length === 25) return selected;
-  }
-  throw new Error('catalog could not produce 25 unique POIs');
-}
-
-export async function attachWikipediaImages(
-  pois: CatalogPoi[],
-  fetchImage: typeof fetchWikipediaImage = fetchWikipediaImage,
-): Promise<CatalogPoi[]> {
-  const sourcedPois: CatalogPoi[] = [];
-  for (let offset = 0; offset < pois.length; offset += 5) {
-    const batch = pois.slice(offset, offset + 5);
-    const images = await Promise.all(
-      batch.map((poi) => fetchImage(poi.wikipediaTitle)),
-    );
-    for (const [index, poi] of batch.entries()) {
-      const image = images[index];
-      sourcedPois.push(image ? { ...poi, image } : poi);
-    }
-  }
-  return sourcedPois;
-}
-
-export async function ensureImageBackedPois(
-  selected: CatalogPoi[],
-  catalog: CatalogPoi[],
-  date: string,
-  fetchImage: typeof fetchWikipediaImage = fetchWikipediaImage,
-  excludedTargetIds: ReadonlySet<string> = new Set(),
-  revision = 1,
-): Promise<CatalogPoi[]> {
-  const targetSize = selected.length;
-  const enriched = await attachWikipediaImages(selected, fetchImage);
-  const usedIds = new Set(selected.map((poi) => poi.id));
-  const replacements = catalog
-    .filter((poi) => !usedIds.has(poi.id) && !excludedTargetIds.has(poi.id))
-    .sort((left, right) =>
-      hashOrder(
-        `whereabouts-image-replacement-v2:${date}:v${revision}`,
-        left,
-      ).localeCompare(
-        hashOrder(
-          `whereabouts-image-replacement-v2:${date}:v${revision}`,
-          right,
+  ) as CaseManifest;
+  const cases: DailyCase[] = [];
+  for (const entry of Object.values(manifest.cases ?? {})) {
+    if (!entry.file) throw new Error('manifest case has no file');
+    cases.push(
+      dailyCaseSchema.parse(
+        JSON.parse(
+          await readFile(resolve(caseContentRoot, entry.file), 'utf8'),
         ),
       ),
     );
-
-  const imageBackedReplacements: CatalogPoi[] = [];
-  for (let offset = 0; offset < replacements.length; offset += 5) {
-    if (imageBackedReplacements.length >= targetSize) break;
-    const batch = await attachWikipediaImages(
-      replacements.slice(offset, offset + 5),
-      fetchImage,
-    );
-    for (const poi of batch) {
-      if (!poi.image) continue;
-      imageBackedReplacements.push(poi);
-      if (imageBackedReplacements.length === targetSize) break;
-    }
   }
-  const sourced = enriched.map((poi) =>
-    poi.image ? poi : imageBackedReplacements.shift(),
-  );
-  if (sourced.some((poi) => !poi) || sourced.length !== targetSize) {
-    throw new Error(
-      `catalog could not produce ${targetSize} image-backed POIs`,
-    );
-  }
-  return sourced as CatalogPoi[];
+  return { manifest, cases };
 }
 
-function isDeterministicGenerationError(error: unknown): boolean {
-  const message = error instanceof Error ? error.message : String(error);
-  return [
-    'catalog ',
-    'corpus context missing',
-    'generation requires ',
-    'OPENROUTER_API_KEY',
-    'manifest case ',
-    'cannot build a POI blurb',
-  ].some((fragment) => message.includes(fragment));
-}
-
-export async function generateWithRetries<T>(
-  generate: () => Promise<T>,
-  attempts = 3,
-): Promise<T> {
-  let lastError: unknown;
-  for (let attempt = 0; attempt < attempts; attempt++) {
-    try {
-      return await generate();
-    } catch (error) {
-      if (isDeterministicGenerationError(error)) throw error;
-      lastError = error;
-    }
+async function defaultListExistingCasePaths(
+  date: string,
+): Promise<readonly string[]> {
+  const directory = resolve(caseContentRoot, 'cases', date);
+  try {
+    const entries = await readdir(directory, { withFileTypes: true });
+    return entries
+      .filter((entry) => entry.isFile() && entry.name.endsWith('.json'))
+      .map((entry) => resolve(directory, entry.name));
+  } catch (error) {
+    if (
+      typeof error === 'object' &&
+      error !== null &&
+      'code' in error &&
+      error.code === 'ENOENT'
+    )
+      return [];
+    throw error;
   }
-  throw lastError;
 }
 
-export async function generateRange(arguments_: string[]): Promise<void> {
-  const { from, days, revision } = parse(arguments_);
-  requireProductionUserAgent();
-  const catalog = (
-    await import('../catalog/pois.json', { with: { type: 'json' } })
-  ).default as CatalogPoi[];
-  const knowledge = JSON.parse(
-    await readFile(
-      new URL('../catalog/knowledge.json', import.meta.url),
-      'utf8',
-    ),
-  ) as Array<{
-    poiId: string;
-    title: string;
-    extract: string;
-    url: string;
-    retrievedAt: string;
-  }>;
-  const knowledgeByPoi = new Map(
-    knowledge.map((entry) => [entry.poiId, entry]),
-  );
-  if (catalog.length < 25)
-    throw new Error('catalog must contain at least 25 POIs');
-  const history = await publishedTargetHistory();
-  for (let offset = 0; offset < days; offset++) {
-    const date = dateAfter(from, offset);
-    const excludedTargetIds = targetExclusionsForDate(history, date);
-    const pois = selectPoisForDate(catalog, date, excludedTargetIds, revision);
-    const sourcedPois = await ensureImageBackedPois(
-      pois,
-      catalog,
-      date,
-      fetchWikipediaImage,
-      excludedTargetIds,
-      revision,
-    );
-    const extracts = sourcedPois.map((poi) => {
-      const entry = knowledgeByPoi.get(poi.id);
-      if (!entry) throw new Error(`corpus context missing for ${poi.id}`);
-      return entry;
-    });
-    await generateWithRetries(() =>
-      generateCase({
-        date,
-        revision,
-        caseNumber: Math.floor(Date.parse(`${date}T00:00:00Z`) / 86_400_000),
-        pois: sourcedPois,
-        extracts,
+export function createLiveOrchestratorStages(
+  environment: Readonly<Record<string, string | undefined>> = process.env,
+): OrchestratorStages {
+  const model = createOpenRouterModel(environment);
+  const criticModel = createOpenRouterModel({
+    ...environment,
+    WHEREABOUTS_MODEL:
+      environment.WHEREABOUTS_CRITIC_MODEL?.trim() ||
+      environment.WHEREABOUTS_MODEL,
+  });
+  const research = createWikimediaResearch();
+  return {
+    planTheme: (input) => planTheme({ model, ...input }),
+    researchCandidates: (input) => researchCandidates({ model, ...input }),
+    curateBoard: (input) => curateBoard({ model, ...input }),
+    hydrateBoardTargets: (input) =>
+      hydrateBoardTargets({
+        board: input.board,
+        research,
+        excludedTargetIds: input.excludedTargetIds,
       }),
+    writeCaseDraft: (input) => writeCaseDraft({ model, ...input }),
+    repairCaseDraft: (input) => repairCaseDraft({ model, ...input }),
+    critiqueCase: (input) => critiqueCase({ criticModel, ...input }),
+  };
+}
+
+function latestCasesByDate(
+  cases: readonly DailyCase[],
+): Map<string, DailyCase> {
+  const latest = new Map<string, DailyCase>();
+  for (const caseData of [...cases].sort(
+    (left, right) =>
+      left.publicationDate.localeCompare(right.publicationDate) ||
+      left.revision - right.revision,
+  ))
+    latest.set(caseData.publicationDate, caseData);
+  return latest;
+}
+
+function rollingThemes(
+  casesByDate: ReadonlyMap<string, DailyCase>,
+  date: string,
+): Array<{ title: string; inclusionCriteria: string }> {
+  return [...casesByDate.entries()]
+    .filter(([candidate]) => candidate <= date)
+    .sort(([left], [right]) => left.localeCompare(right))
+    .map(([, caseData]) => caseData)
+    .filter(
+      (caseData): caseData is ThemedDailyCase =>
+        caseData.schemaVersion === 3 && 'theme' in caseData,
+    )
+    .slice(-90)
+    .map(({ theme }) => ({
+      title: theme.title,
+      inclusionCriteria: theme.inclusionCriteria,
+    }));
+}
+
+function rollingTargets(
+  casesByDate: ReadonlyMap<string, DailyCase>,
+  date: string,
+): Set<string> {
+  return new Set(
+    [...casesByDate.entries()]
+      .filter(([candidate]) => candidate <= date)
+      .sort(([left], [right]) => right.localeCompare(left))
+      .slice(0, 30)
+      .flatMap(([, caseData]) =>
+        caseData.rounds.map((round) => round.targetPoiId),
+      ),
+  );
+}
+
+async function resolveHistory(
+  dependency: GenerateRangeDependencies['history'],
+): Promise<RangeHistory> {
+  if (!dependency) return loadPublishedHistory();
+  return typeof dependency === 'function' ? dependency() : dependency;
+}
+
+export async function generateRange(
+  arguments_: string[],
+  dependencies: GenerateRangeDependencies = {},
+): Promise<void> {
+  const options = parseRangeArguments(arguments_);
+  if (dependencies.requireUserAgent) dependencies.requireUserAgent();
+  else if (
+    !dependencies.history &&
+    !dependencies.orchestrate &&
+    !dependencies.stages
+  )
+    requireProductionUserAgent();
+  const history = await resolveHistory(dependencies.history);
+  const dates = options.missingOnly
+    ? missingBufferDates(
+        bufferDates(options.from, options.days),
+        history.manifest.cases,
+      )
+    : bufferDates(options.from, options.days);
+  if (!dates.length) return;
+
+  const listExistingCasePaths =
+    dependencies.listExistingCasePaths ?? defaultListExistingCasePaths;
+  const plans: Array<{ date: string; revision: number }> = [];
+  for (const date of dates) {
+    const manifestEntry = history.manifest.cases[date];
+    const existingPaths = [
+      ...(await listExistingCasePaths(date)),
+      ...(manifestEntry?.file ? [manifestEntry.file] : []),
+    ];
+    const highestExistingRevision = Math.max(
+      manifestEntry?.revision ?? 0,
+      nextRevision(date, existingPaths) - 1,
     );
-    history.set(
+    if (
+      options.revision !== undefined &&
+      options.revision <= highestExistingRevision
+    )
+      throw new Error(
+        `revision ${options.revision} for ${date} must be greater than existing revision ${highestExistingRevision}`,
+      );
+    plans.push({
       date,
-      sourcedPois.slice(0, 5).map((poi) => poi.id),
+      revision: options.revision ?? highestExistingRevision + 1,
+    });
+  }
+
+  const casesByDate = latestCasesByDate(history.cases);
+  const prepared: PreparedCase[] = [];
+  const orchestrator = dependencies.orchestrate ?? orchestrateThemedCase;
+  const stages =
+    dependencies.stages ??
+    (dependencies.orchestrate
+      ? ({} as OrchestratorStages)
+      : createLiveOrchestratorStages());
+  for (const { date, revision } of plans) {
+    const result = await orchestrator({
+      date,
+      revision,
+      caseNumber: caseNumberForDate(date),
+      recentThemes: rollingThemes(casesByDate, date),
+      excludedTargetIds: rollingTargets(casesByDate, date),
+      requestedTheme: options.theme,
+      stages,
+    });
+    prepared.push(result);
+    casesByDate.set(date, result.caseData);
+    console.info(
+      `Prepared themed case ${date} (${prepared.length}/${plans.length})`,
     );
   }
+
+  const generatedDates = new Set(
+    prepared.map((item) => item.caseData.publicationDate),
+  );
+  const existingCases = history.cases.filter(
+    (caseData) => !generatedDates.has(caseData.publicationDate),
+  );
+  await (dependencies.publishBatch ?? publishBatch)({
+    prepared,
+    manifest: history.manifest,
+    existingCases,
+  });
 }
 
 if (

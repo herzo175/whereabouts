@@ -2,7 +2,11 @@ import { readdir, readFile, stat } from 'node:fs/promises';
 import { relative, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { dailyCaseSchema } from '@whereabouts/case-content';
-import { caseContentRoot, casePath } from './paths.js';
+import {
+  generationReviewSchema,
+  validateGenerationReview,
+} from './generation-review.js';
+import { caseContentRoot, casePath, generationReviewPath } from './paths.js';
 import {
   type ValidationIssue,
   validateCaseForPublication,
@@ -142,6 +146,38 @@ export async function validateAll(
         path: `${relative(caseContentRoot, file)}:${issue.path}`,
       })),
     );
+    try {
+      const parsed = dailyCaseSchema.parse(value);
+      {
+        const reviewFile = generationReviewPath(date, entry.revision);
+        let review: unknown;
+        try {
+          review = await json(reviewFile);
+        } catch {
+          issues.push({
+            path: relative(caseContentRoot, reviewFile),
+            message: 'references a missing or unreadable generation review',
+          });
+          continue;
+        }
+        try {
+          generationReviewSchema.parse(review);
+        } catch {
+          issues.push({
+            path: relative(caseContentRoot, reviewFile),
+            message: 'generation review is malformed',
+          });
+          continue;
+        }
+        for (const issue of validateGenerationReview(parsed, review))
+          issues.push({
+            ...issue,
+            path: `${relative(caseContentRoot, reviewFile)}:${issue.path}`,
+          });
+      }
+    } catch {
+      /* structural validation above reports malformed cases */
+    }
   }
   issues.push(...validateCollection(cases, publicationCeiling));
   for (const file of await artifactPaths()) {

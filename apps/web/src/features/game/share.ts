@@ -52,7 +52,7 @@ export function buildShareText(
     'WHEREABOUTS',
     progress.guesses.map((guess) => tokenEmoji[guess.tier]).join(' '),
     `${getTotalScore(progress)} / 500`,
-    `${normalizedOrigin}/${caseData.publicationDate}`,
+    normalizedOrigin,
   ].join('\n');
 }
 

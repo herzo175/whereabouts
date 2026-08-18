@@ -7,7 +7,7 @@ type PoiDossierProps = {
   poi: Poi | null;
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  onConfirm: () => void;
+  onConfirm?: () => void;
 };
 
 export function PoiDossier({
@@ -19,6 +19,7 @@ export function PoiDossier({
 }: PoiDossierProps) {
   const dialogRef = useRef<HTMLDivElement>(null);
   const previouslyFocusedRef = useRef<HTMLElement | null>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
   const confirmRef = useRef<HTMLButtonElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const titleId = useId();
@@ -29,13 +30,13 @@ export function PoiDossier({
       previouslyFocusedRef.current =
         document.activeElement as HTMLElement | null;
       setIsSubmitting(false);
-      confirmRef.current?.focus();
+      (onConfirm ? confirmRef : closeRef).current?.focus();
       return;
     }
 
     const previouslyFocused = previouslyFocusedRef.current;
     if (previouslyFocused?.isConnected) previouslyFocused.focus();
-  }, [open]);
+  }, [onConfirm, open]);
 
   useEffect(() => {
     if (!open) return;
@@ -67,7 +68,7 @@ export function PoiDossier({
   if (!open || !poi) return null;
 
   const submit = () => {
-    if (isSubmitting) return;
+    if (isSubmitting || !onConfirm) return;
     setIsSubmitting(true);
     onConfirm();
   };
@@ -96,6 +97,7 @@ export function PoiDossier({
             aria-label="Close dossier"
             className="grid size-11 place-items-center rounded-md text-muted-foreground hover:bg-foreground/[0.06] hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/30"
             onClick={() => onOpenChange(false)}
+            ref={closeRef}
             type="button"
           >
             <X aria-hidden="true" className="size-5" />
@@ -136,17 +138,19 @@ export function PoiDossier({
             onClick={() => onOpenChange(false)}
             type="button"
           >
-            Cancel
+            {onConfirm ? 'Cancel' : 'Close'}
           </button>
-          <button
-            className="min-h-12 rounded-md bg-foreground px-5 text-sm font-semibold text-background hover:bg-foreground/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
-            disabled={isSubmitting}
-            onClick={submit}
-            ref={confirmRef}
-            type="button"
-          >
-            Submit this lead
-          </button>
+          {onConfirm ? (
+            <button
+              className="min-h-12 rounded-md bg-foreground px-5 text-sm font-semibold text-background hover:bg-foreground/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
+              disabled={isSubmitting}
+              onClick={submit}
+              ref={confirmRef}
+              type="button"
+            >
+              Submit this lead
+            </button>
+          ) : null}
         </div>
       </div>
     </div>

@@ -8,10 +8,50 @@ import { dailyCaseSchema } from './schema.js';
 describe('dailyCaseSchema', () => {
   it('accepts five distinct rounds over a shared 25-location board', () => {
     const parsed = dailyCaseSchema.parse(makeFiveRoundCase());
-    expect(parsed.schemaVersion).toBe(2);
-    if (parsed.schemaVersion !== 2) throw new Error('expected version 2');
+    expect(parsed.schemaVersion).toBe(3);
+    if (parsed.schemaVersion !== 3) throw new Error('expected version 3');
     expect(parsed.rounds).toHaveLength(5);
     expect(parsed.rounds[0]?.results).toHaveLength(25);
+  });
+
+  it('accepts a sourced v3 themed case', () => {
+    const parsed = dailyCaseSchema.parse(makeFiveRoundCase());
+    expect(parsed.schemaVersion).toBe(3);
+    if (parsed.schemaVersion !== 3) throw new Error('expected version 3');
+    expect(parsed.theme.title).toBe('Railway Hotels');
+    expect(parsed.pois[0]?.themeConnection.sourceIds).toEqual(['source-01']);
+  });
+
+  it('rejects a player introduction longer than 160 characters', () => {
+    const value = makeFiveRoundCase();
+    value.theme.introduction = 'A'.repeat(161);
+    expect(() => dailyCaseSchema.parse(value)).toThrow(/160|at most/i);
+  });
+
+  it('rejects a themed POI without a theme connection', () => {
+    const value = makeFiveRoundCase();
+    delete value.pois[0].themeConnection;
+    expect(() => dailyCaseSchema.parse(value)).toThrow(/themeConnection/i);
+  });
+
+  it('rejects a themed POI with an unknown theme source', () => {
+    const value = makeFiveRoundCase();
+    value.pois[0].themeConnection.sourceIds = ['source-unknown'];
+    expect(() => dailyCaseSchema.parse(value)).toThrow(/source/i);
+  });
+
+  it('requires explicit source provenance', () => {
+    const value = makeFiveRoundCase();
+    const source = value.sources[0];
+    if (!source) throw new Error('fixture source missing');
+    delete (source as { provenance?: unknown }).provenance;
+    expect(() => dailyCaseSchema.parse(value)).toThrow(/provenance/i);
+  });
+
+  it('rejects a themed target absent from the board', () => {
+    const value = makeFiveRoundCase();
+    value.rounds[0].targetPoiId = 'missing-poi';
+    expect(() => dailyCaseSchema.parse(value)).toThrow(/board/i);
   });
 
   it('rejects duplicate five-round targets', () => {
@@ -28,10 +68,12 @@ describe('dailyCaseSchema', () => {
     expect(() => dailyCaseSchema.parse(value)).toThrow(/25|cover/i);
   });
 
-  it('requires an attributed image for every five-round candidate', () => {
+  it('allows non-target candidates without images while requiring round target images', () => {
     const value = makeFiveRoundCase();
     delete value.pois[10].image;
-    expect(() => dailyCaseSchema.parse(value)).toThrow(/every.*image/i);
+    expect(() => dailyCaseSchema.parse(value)).not.toThrow();
+    delete value.rounds[0].image;
+    expect(() => dailyCaseSchema.parse(value)).toThrow(/rounds\[0\].*image/i);
   });
 
   it('rejects a non-target marked correct', () => {
@@ -42,12 +84,14 @@ describe('dailyCaseSchema', () => {
 
   it('rejects unsupported schema versions', () => {
     const unsupported = {
-      schemaVersion: 3,
+      schemaVersion: 4,
       publicationDate: '2026-08-14',
       revision: 1,
       caseNumber: 1,
     };
 
-    expect(() => dailyCaseSchema.parse(unsupported)).toThrow(/must equal 2/i);
+    expect(() => dailyCaseSchema.parse(unsupported)).toThrow(
+      /schemaVersion|unsupported/i,
+    );
   });
 });

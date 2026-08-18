@@ -1,1238 +1,1218 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "publicationDate": "2026-08-18",
   "revision": 1,
   "caseNumber": 20683,
   "pois": [
     {
-      "id": "khirokitia",
-      "name": "Khirokitia",
-      "city": "Larnaca District",
-      "country": "Cyprus",
-      "latitude": 34.796725,
-      "longitude": 33.343719444,
-      "wikipediaTitle": "Khirokitia",
-      "blurb": "Khirokitia (sometimes spelled Choirokoitia; Greek: Χοιροκοιτία [çiɾociˈti.a], suggested meaning Pig-cradle, from χοίρος 'pig, boar' + κοιτίς 'place of origin, cradle') is an archaeological site on the island of Cyprus dating from the Neolithic age.",
+      "id": "dimitrie-brandza-botanical-garden",
+      "name": "Dimitrie Brândză Botanical Garden",
+      "city": "Bucharest",
+      "country": "Romania",
+      "latitude": 44.4353,
+      "longitude": 26.0633,
+      "wikipediaTitle": "Dimitrie Brândză Botanical Garden",
+      "blurb": "The Dimitrie Brândză Botanical Garden is a botanical garden in Bucharest, Romania, founded in 1891. It is managed by the University of Bucharest and is open to visitors.",
+      "themeConnection": {
+        "text": "Bucharest's Dimitrie Brândză Botanical Garden was founded in 1891 and remains an individually named maintained botanical garden open to visitors.",
+        "sourceIds": ["source-21"]
+      }
+    },
+    {
+      "id": "orto-botanico-catania",
+      "name": "Orto Botanico dell'Università di Catania",
+      "city": "Catania",
+      "country": "Italy",
+      "latitude": 37.5074,
+      "longitude": 15.0845,
+      "wikipediaTitle": "Orto botanico dell'Università di Catania",
+      "blurb": "The Orto botanico dell'Università di Catania is the botanical garden of the University of Catania, established in 1858. It contains historic collections and receives visitors.",
+      "themeConnection": {
+        "text": "Catania's university botanical garden was founded in 1858 and continues as a distinct urban garden available for public visits.",
+        "sourceIds": ["source-12"]
+      }
+    },
+    {
+      "id": "oslo-botanical-garden",
+      "name": "University of Oslo Botanical Garden",
+      "city": "Oslo",
+      "country": "Norway",
+      "latitude": 59.9173,
+      "longitude": 10.767,
+      "wikipediaTitle": "University of Oslo Botanical Garden",
+      "blurb": "The University of Oslo Botanical Garden was established in 1814 at Tøyen in Oslo. It is maintained by the Natural History Museum and is open to the public.",
+      "themeConnection": {
+        "text": "The University of Oslo Botanical Garden was founded in 1814 at Tøyen and remains a maintained public botanical garden in the city.",
+        "sourceIds": ["source-19"]
+      }
+    },
+    {
+      "id": "oxford-botanic-garden",
+      "name": "University of Oxford Botanic Garden",
+      "city": "Oxford",
+      "country": "United Kingdom",
+      "latitude": 51.7516,
+      "longitude": -1.2487,
+      "wikipediaTitle": "University of Oxford Botanic Garden",
+      "blurb": "The University of Oxford Botanic Garden is the oldest botanic garden in Great Britain and one of the oldest scientific gardens in the world.",
       "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Khirokitia_near_Larnaca_01-2017_img7.jpg/1280px-Khirokitia_near_Larnaca_01-2017_img7.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Khirokitia",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Oxford_Botanic_Garden_LV_2025.jpg/1280px-Oxford_Botanic_Garden_LV_2025.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "University of Oxford Botanic Garden",
+        "attribution": "Honcques Laus · CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      },
+      "themeConnection": {
+        "text": "Oxford Botanic Garden was founded in 1621 as a physic garden and continues as a distinct, maintained, publicly visitable botanical garden.",
+        "sourceIds": ["source-03"]
+      }
+    },
+    {
+      "id": "peter-the-great-botanical-garden",
+      "name": "Botanical Garden of the Komarov Botanical Institute",
+      "city": "Saint Petersburg",
+      "country": "Russia",
+      "latitude": 59.9717,
+      "longitude": 30.3234,
+      "wikipediaTitle": "Saint Petersburg Botanical Garden",
+      "blurb": "The main Saint Petersburg Botanical Garden, officially known as the Russian Academy of Sciences Vladimir Komarov Botanical Institute's Botanical Garden of Peter the Great (Russian: Ботанический сад Петра Великого Ботанического института им.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Spb_Aptekarsky_Island_Botanical_Garden_asv2019-09_img1.jpg/1280px-Spb_Aptekarsky_Island_Botanical_Garden_asv2019-09_img1.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Saint Petersburg Botanical Garden",
         "attribution": "A.Savin · FAL",
         "licenseUrl": "http://artlibre.org/licence/lal/en"
+      },
+      "themeConnection": {
+        "text": "The botanical garden on Saint Petersburg's Aptekarsky Island descends from the Apothecary Garden founded in 1714 and remains a visitable maintained garden.",
+        "sourceIds": ["source-22"]
       }
     },
     {
-      "id": "st-joseph-s-seminary-and-church",
-      "name": "St. Joseph's Seminary and Church",
-      "city": "Macau",
-      "country": "People's Republic of China",
-      "latitude": 22.1919,
-      "longitude": 113.537,
-      "wikipediaTitle": "St. Joseph's Seminary and Church",
-      "blurb": "The St. Joseph's Seminary and Church (Chinese: 聖若瑟修院及聖堂; Portuguese: Igreja e Seminário de São José) is a seminary and church located in São Lourenço, Macau, China.",
-      "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Exterior_of_Igreja_e_Semin%C3%A1rio_de_S%C3%A3o_Jos%C3%A9_%28Macau%29%2C_2023_%2802%29.jpg/1280px-Exterior_of_Igreja_e_Semin%C3%A1rio_de_S%C3%A3o_Jos%C3%A9_%28Macau%29%2C_2023_%2802%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "St. Joseph's Seminary and Church",
-        "attribution": "Bahnfrend · CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
-      }
-    },
-    {
-      "id": "tongariro-national-park",
-      "name": "Tongariro National Park",
-      "city": "Manawatū-Whanganui Region",
-      "country": "New Zealand",
-      "latitude": -39.2,
-      "longitude": 175.583333,
-      "wikipediaTitle": "Tongariro National Park",
-      "blurb": "Tongariro National Park (; Māori: [tɔŋaɾiɾɔ]), located in the central North Island, is the oldest national park in New Zealand and the sixth national park established in the world.",
-      "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Tongariro_Mahuia_River_n.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "alt": "Tongariro National Park",
-        "attribution": "Wikimedia Commons contributor · CC BY 2.5",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
-      }
-    },
-    {
-      "id": "dholavira",
-      "name": "Dholavira",
-      "city": "Bhachau Taluka",
-      "country": "India",
-      "latitude": 23.88611111,
-      "longitude": 70.21666667,
-      "wikipediaTitle": "Dholavira",
-      "blurb": "Dholavira (Gujarati: ધોળાવીરા, IPA: [d̪ʰoɭaʋiɾaː]) is an archaeological site at Khadirbet in Bhachau Taluka of Kutch District, in the state of Gujarat, western India, which is named after a modern-day village 1 kilometre (0.62 mi) south of it.",
-      "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/DHOLAVIRA_SITE_%2824%29.jpg/1280px-DHOLAVIRA_SITE_%2824%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Dholavira",
-        "attribution": "Lalit Gajjer · CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
-      }
-    },
-    {
-      "id": "cueva-de-las-manos",
-      "name": "Cueva de las Manos",
-      "city": "Lago Buenos Aires",
-      "country": "Argentina",
-      "latitude": -47.15,
-      "longitude": -70.666666666,
-      "wikipediaTitle": "Cueva de las Manos",
-      "blurb": "Cueva de las Manos (Spanish for Cave of the Hands or Cave of Hands) is a cave and complex of rock art sites in the province of Santa Cruz, Argentina, 163 km (101 mi) south of the town of Perito Moreno.",
-      "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/SantaCruz-CuevaManos-P2210651b.jpg/1280px-SantaCruz-CuevaManos-P2210651b.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Cueva de las Manos",
-        "attribution": "Mariano · Public domain",
-        "licenseUrl": "https://commons.wikimedia.org/wiki/File:SantaCruz-CuevaManos-P2210651b.jpg"
-      }
-    },
-    {
-      "id": "terracotta-army",
-      "name": "Terracotta Army",
-      "city": "Xi'an",
-      "country": "China",
-      "latitude": 34.3853,
-      "longitude": 109.2739,
-      "wikipediaTitle": "Terracotta Army",
-      "blurb": "The Terracotta Army is a collection of terracotta sculptures depicting the armies of Qin Shi Huang, the first emperor of China.",
-      "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/51714-Terracota-Army.jpg/1280px-51714-Terracota-Army.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Terracotta Army",
-        "attribution": "xiquinhosilva · CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
-      }
-    },
-    {
-      "id": "hadrian-s-villa",
-      "name": "Hadrian's Villa",
-      "city": "Tivoli",
+      "id": "orto-botanico-rome",
+      "name": "Orto Botanico di Roma",
+      "city": "Rome",
       "country": "Italy",
-      "latitude": 41.941944,
-      "longitude": 12.775278,
-      "wikipediaTitle": "Hadrian's Villa",
-      "blurb": "Hadrian's Villa (Italian: Villa Adriana; Latin: Villa Hadriana) was a monumental villa or palace complex built around AD 120 by emperor Hadrian (r.117–138) near Tivoli, about 20 km from Rome.",
-      "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Villa_Hadriana_%28Villa_Adriana_Tivoli%29_1000_03.jpg/1280px-Villa_Hadriana_%28Villa_Adriana_Tivoli%29_1000_03.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Hadrian's Villa",
-        "attribution": "FrDr · CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      "latitude": 41.8918,
+      "longitude": 12.4642,
+      "wikipediaTitle": "Orto botanico di Roma",
+      "blurb": "The Orto botanico di Roma is a botanical garden operated by Sapienza University of Rome. It was established at its present Trastevere site in 1883 and is open to visitors.",
+      "themeConnection": {
+        "text": "Rome's current Orto Botanico was established at the Villa Corsini site in 1883 and remains a maintained public botanical garden.",
+        "sourceIds": ["source-13"]
       }
     },
     {
-      "id": "hiroshima-peace-memorial",
-      "name": "Hiroshima Peace Memorial",
-      "city": "Ōtemachi",
-      "country": "Japan",
-      "latitude": 34.395555555,
-      "longitude": 132.453611111,
-      "wikipediaTitle": "Hiroshima Peace Memorial",
-      "blurb": "The Hiroshima Peace Memorial (広島平和記念碑, Hiroshima Heiwa Kinenhi), originally the Hiroshima Prefectural Industrial Promotion Hall, and now commonly called the Genbaku Dome, Atomic Bomb Dome or A-Bomb Dome (原爆ドーム, Genbaku Dōmu), is part of Hiroshima Peace Memorial Park in…",
-      "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Genbaku_Dome04-r.JPG/1280px-Genbaku_Dome04-r.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Hiroshima Peace Memorial",
-        "attribution": "Oilstreet · CC BY 2.5",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
+      "id": "copenhagen-botanical-garden",
+      "name": "University of Copenhagen Botanical Garden",
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "latitude": 55.6879,
+      "longitude": 12.5729,
+      "wikipediaTitle": "University of Copenhagen Botanical Garden",
+      "blurb": "The University of Copenhagen Botanical Garden is a botanical garden in central Copenhagen. The present garden was laid out in 1874 and includes historic glasshouses open to visitors.",
+      "themeConnection": {
+        "text": "Copenhagen's botanical garden traces its institution to 1600 and has occupied its current garden site since 1874, remaining publicly accessible.",
+        "sourceIds": ["source-18"]
       }
     },
     {
-      "id": "estacio-del-nord-valencia",
-      "name": "Estació del Nord (Valencia)",
-      "city": "Valencia",
+      "id": "orto-botanico-florence",
+      "name": "Orto Botanico di Firenze",
+      "city": "Florence",
+      "country": "Italy",
+      "latitude": 43.7795,
+      "longitude": 11.2596,
+      "wikipediaTitle": "Orto botanico di Firenze",
+      "blurb": "The Orto botanico di Firenze, known as the Giardino dei Semplici, was founded in 1545 by Cosimo I de' Medici. It is a university botanical garden open to visitors.",
+      "themeConnection": {
+        "text": "Florence's Orto Botanico, also called the Giardino dei Semplici, was founded in 1545 and remains a visitable maintained garden.",
+        "sourceIds": ["source-14"]
+      }
+    },
+    {
+      "id": "real-jardin-botanico-madrid",
+      "name": "Real Jardín Botánico de Madrid",
+      "city": "Madrid",
       "country": "Spain",
-      "latitude": 39.466994,
-      "longitude": -0.377125,
-      "wikipediaTitle": "Estació del Nord (Valencia)",
-      "blurb": "The Estació del Nord (Valencian) or Estación del Norte (Spanish), both meaning \"North Station\", is the major railway station in Valencia, Spain.",
-      "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Estaci%C3%B3n_del_Norte%2C_Valencia%2C_Espa%C3%B1a%2C_2014-06-30%2C_DD_122.JPG/1280px-Estaci%C3%B3n_del_Norte%2C_Valencia%2C_Espa%C3%B1a%2C_2014-06-30%2C_DD_122.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Estació del Nord (Valencia)",
-        "attribution": "Diego Delso · CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      "latitude": 40.4117,
+      "longitude": -3.6892,
+      "wikipediaTitle": "Royal Botanical Garden of Madrid",
+      "blurb": "The Royal Botanical Garden of Madrid was founded in 1755 and moved to its present location beside the Prado Museum in 1781. It is maintained and open to visitors.",
+      "themeConnection": {
+        "text": "Madrid's Royal Botanical Garden was founded in 1755 and moved to its current Paseo del Prado site in 1781, where it remains public.",
+        "sourceIds": ["source-15"]
       }
     },
     {
-      "id": "rio-platano-biosphere-reserve",
-      "name": "Río Plátano Biosphere Reserve",
-      "city": "Mosquitia",
-      "country": "Honduras",
-      "latitude": 15.25,
-      "longitude": -84.73,
-      "wikipediaTitle": "Río Plátano Biosphere Reserve",
-      "blurb": "The Río Plátano Biosphere Reserve is a protected area in the Gracias a Dios department region on the Caribbean coast of Honduras.",
-      "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Cerro_Chachahuate.jpg/1280px-Cerro_Chachahuate.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Río Plátano Biosphere Reserve",
-        "attribution": "Marcio Martínez · CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      "id": "orto-botanico-palermo",
+      "name": "Orto Botanico di Palermo",
+      "city": "Palermo",
+      "country": "Italy",
+      "latitude": 38.1056,
+      "longitude": 13.371,
+      "wikipediaTitle": "Orto botanico di Palermo",
+      "blurb": "The Orto botanico di Palermo is a botanical garden in Palermo, Sicily, founded in 1789. It is administered by the University of Palermo and is open to the public.",
+      "themeConnection": {
+        "text": "Palermo's Orto Botanico was established in 1789 and remains a large, named, maintained botanical garden open to ordinary visitors.",
+        "sourceIds": ["source-11"]
       }
     },
     {
-      "id": "great-barrier-reef",
-      "name": "Great Barrier Reef",
-      "city": "Cairns",
-      "country": "Australia",
-      "latitude": -18.2871,
-      "longitude": 147.6992,
-      "wikipediaTitle": "Great Barrier Reef",
-      "blurb": "The Great Barrier Reef is the world's largest coral reef system, composed of over 2,900 individual reefs and 900 islands stretching for over 2,300 kilometres (1,400 mi) over an area of approximately 344,400 square kilometres (133,000 mi2).",
-      "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/ISS-45_StoryOfWater%2C_Great_Barrier_Reef%2C_Australia.jpg/1280px-ISS-45_StoryOfWater%2C_Great_Barrier_Reef%2C_Australia.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Great Barrier Reef",
-        "attribution": "NASA/Kjell Lindgren · Public domain",
-        "licenseUrl": "https://commons.wikimedia.org/wiki/File:ISS-45_StoryOfWater,_Great_Barrier_Reef,_Australia.jpg"
+      "id": "jardim-botanico-coimbra",
+      "name": "Jardim Botânico da Universidade de Coimbra",
+      "city": "Coimbra",
+      "country": "Portugal",
+      "latitude": 40.2064,
+      "longitude": -8.4255,
+      "wikipediaTitle": "Botanical Garden of the University of Coimbra",
+      "blurb": "The Botanical Garden of the University of Coimbra was founded in 1772 by the Marquis of Pombal. It occupies terraces near the university and is open to visitors.",
+      "themeConnection": {
+        "text": "The Botanical Garden of the University of Coimbra was founded in 1772 and remains a maintained, publicly visitable garden within Coimbra.",
+        "sourceIds": ["source-17"]
       }
     },
     {
-      "id": "soltaniyeh",
-      "name": "Soltaniyeh",
-      "city": "Central District",
-      "country": "Iran",
-      "latitude": 36.434722,
-      "longitude": 48.7975,
-      "wikipediaTitle": "Soltaniyeh",
-      "blurb": "Soltaniyeh (Persian: سلطانيه) is a city in the Central District of Soltaniyeh County, Zanjan province, Iran, serving as capital of both the county and the district.",
-      "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Soltaniyeh_Dome.JPG/1280px-Soltaniyeh_Dome.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Soltaniyeh",
-        "attribution": "Hammu-rapium · CC BY-SA 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      "id": "tartu-botanical-garden",
+      "name": "University of Tartu Botanical Garden",
+      "city": "Tartu",
+      "country": "Estonia",
+      "latitude": 58.3835,
+      "longitude": 26.7196,
+      "wikipediaTitle": "University of Tartu Botanical Gardens",
+      "blurb": "The University of Tartu Botanical Gardens were founded in 1803 and are located in the centre of Tartu. The garden is maintained by the university and welcomes visitors.",
+      "themeConnection": {
+        "text": "The University of Tartu Botanical Garden was founded in 1803 and continues as a maintained, publicly visitable garden within Tartu.",
+        "sourceIds": ["source-20"]
       }
     },
     {
-      "id": "margravial-opera-house",
-      "name": "Margravial Opera House",
-      "city": "Bayreuth",
-      "country": "Germany",
-      "latitude": 49.944344697,
-      "longitude": 11.57866362,
-      "wikipediaTitle": "Margravial Opera House",
-      "blurb": "The Margravial Opera House (German: Markgräfliches Opernhaus) is a Baroque opera house in the town of Bayreuth, Germany.",
-      "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Markgr%C3%A4fliches_Opernhaus_-_Bayreuth_-_2013.jpg/1280px-Markgr%C3%A4fliches_Opernhaus_-_Bayreuth_-_2013.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Margravial Opera House",
-        "attribution": "Avda · CC BY-SA 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      "id": "botanical-garden-wroclaw",
+      "name": "Botanical Garden of the University of Wrocław",
+      "city": "Wrocław",
+      "country": "Poland",
+      "latitude": 51.1167,
+      "longitude": 17.0464,
+      "wikipediaTitle": "Botanical Garden of the University of Wrocław",
+      "blurb": "The Botanical Garden of the University of Wrocław was established in 1811. It occupies a historic site on the university island and is open seasonally to visitors.",
+      "themeConnection": {
+        "text": "Wrocław's university botanical garden was founded in 1811 and continues as a distinct maintained garden with a public entrance.",
+        "sourceIds": ["source-08"]
       }
     },
     {
-      "id": "baroque-churches-of-the-philippines",
-      "name": "Baroque Churches of the Philippines",
-      "city": "Philippines",
-      "country": "Philippines",
-      "latitude": 14.58886,
-      "longitude": 120.97535,
-      "wikipediaTitle": "Baroque Churches of the Philippines",
-      "blurb": "The Baroque Churches of the Philippines are a collection of four Spanish Colonial-era baroque churches in the Philippines, which were included in UNESCO's World Heritage List in 1993.",
+      "id": "jardin-des-plantes-paris",
+      "name": "Jardin des Plantes",
+      "city": "Paris",
+      "country": "France",
+      "latitude": 48.843,
+      "longitude": 2.3599,
+      "wikipediaTitle": "Jardin des Plantes",
+      "blurb": "The Jardin des Plantes (French pronunciation: [ʒaʁdɛ̃ de plɑ̃t] , lit. 'Garden of the Plants'), known as the Jardin des Plantes de Paris (French: [- də paʁi]) when distinguished from those in other cities, is the main botanical garden in France.",
       "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Miagao_Church.jpg/1280px-Miagao_Church.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Baroque Churches of the Philippines",
-        "attribution": "Alienscream · CC BY-SA 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Paris_75005_Grande_Galerie_de_l%27Evolution_20070804.jpg/1280px-Paris_75005_Grande_Galerie_de_l%27Evolution_20070804.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Jardin des Plantes",
+        "attribution": "Benh LIEU SONG · CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      },
+      "themeConnection": {
+        "text": "Paris's Jardin des Plantes originated as the Royal Garden of Medicinal Plants in 1626 and remains an officially named public botanical garden.",
+        "sourceIds": ["source-07"]
       }
     },
     {
-      "id": "salar-de-uyuni",
-      "name": "Salar de Uyuni",
-      "city": "Uyuni",
-      "country": "Bolivia",
-      "latitude": -20.1338,
-      "longitude": -67.4891,
-      "wikipediaTitle": "Salar de Uyuni",
-      "blurb": "Salar de Uyuni is the largest salt flat in the world, with an area of approximately 10,582 square kilometres (4,086 mi2).",
-      "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Salar_Uyuni_au01.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "alt": "Salar de Uyuni",
-        "attribution": "Anouchka Unel · FAL",
-        "licenseUrl": "http://artlibre.org/licence/lal/en"
+      "id": "orto-botanico-pisa",
+      "name": "Orto botanico di Pisa",
+      "city": "Pisa",
+      "country": "Italy",
+      "latitude": 43.7216,
+      "longitude": 10.3955,
+      "wikipediaTitle": "Orto botanico di Pisa",
+      "blurb": "The Orto botanico di Pisa is a botanical garden founded in 1544 by the University of Pisa. The garden has occupied its present location since 1591 and is open to visitors.",
+      "themeConnection": {
+        "text": "Pisa's botanical garden was founded in 1544 and moved within Pisa before settling at its present site in the sixteenth century, where it remains public.",
+        "sourceIds": ["source-10"]
       }
     },
     {
-      "id": "phong-nha-ke-bang-national-park",
-      "name": "Phong Nha–Kẻ Bàng National Park",
-      "city": "Bố Trạch",
-      "country": "Vietnam",
-      "latitude": 17.533333333,
-      "longitude": 106.15,
-      "wikipediaTitle": "Phong Nha–Kẻ Bàng National Park",
-      "blurb": "Phong Nha–Kẻ Bàng (Vietnamese: Vườn quốc gia Phong Nha–Kẻ Bàng, Vietnamese pronunciation: [vɯ̀ən kʷǒk.ʑā fɔ̄ŋ.ɲā kɛ̂.ɓàŋ]) is a national park and UNESCO World Heritage Site in the Bố Trạch and Minh Hóa Commune of central Quảng Trị Province in the North Central Coast region of…",
-      "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Phongnhakebang6.jpg/1280px-Phongnhakebang6.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Phong Nha–Kẻ Bàng National Park",
-        "attribution": "Genghiskhanviet · Public domain",
-        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Phongnhakebang6.jpg"
+      "id": "jardin-des-plantes-montpellier",
+      "name": "Jardin des plantes de Montpellier",
+      "city": "Montpellier",
+      "country": "France",
+      "latitude": 43.6168,
+      "longitude": 3.8648,
+      "wikipediaTitle": "Jardin des plantes de Montpellier",
+      "blurb": "The Jardin des plantes de Montpellier is a historic botanical garden founded in 1593 by King Henry IV. It remains beside the University of Montpellier and is open to visitors.",
+      "themeConnection": {
+        "text": "Montpellier's Jardin des plantes was established in 1593 as a botanical and teaching garden and remains a visitable maintained garden in the city.",
+        "sourceIds": ["source-06"]
       }
     },
     {
-      "id": "table-mountain",
-      "name": "Table Mountain",
-      "city": "Cape Town",
-      "country": "South Africa",
-      "latitude": -33.9628,
-      "longitude": 18.4098,
-      "wikipediaTitle": "Table Mountain",
-      "blurb": "Table Mountain (Khoekhoe: Huriǂoaxa, lit. 'sea-emerging'; Afrikaans: Tafelberg) is a flat-topped mountain forming a prominent landmark overlooking the city of Cape Town in South Africa.",
-      "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Table_Mountain_DanieVDM.jpg/1280px-Table_Mountain_DanieVDM.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Table Mountain",
-        "attribution": "Danie van der Merwe from Cape Town, South Africa · CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      "id": "national-botanic-gardens-glasnevin",
+      "name": "National Botanic Gardens of Ireland, Glasnevin",
+      "city": "Dublin",
+      "country": "Ireland",
+      "latitude": 53.3725,
+      "longitude": -6.2699,
+      "wikipediaTitle": "National Botanic Gardens of Ireland",
+      "blurb": "The National Botanic Gardens of Ireland are located in Glasnevin, Dublin, and were founded in 1795. The gardens are open to the public without charge.",
+      "themeConnection": {
+        "text": "The National Botanic Gardens of Ireland at Glasnevin were founded in 1795 and remain a maintained, free public botanical garden within Dublin.",
+        "sourceIds": ["source-05"]
       }
     },
     {
-      "id": "west-norwegian-fjords",
-      "name": "West Norwegian Fjords",
-      "city": "Western Norway",
-      "country": "Norway",
-      "latitude": 60.965776,
-      "longitude": 6.977692,
-      "wikipediaTitle": "West Norwegian Fjords",
-      "blurb": "The West Norwegian Fjords is the common name of two fjords in Norway listed as a World Heritage Site by UNESCO: the Geirangerfjord and the Nærøyfjord.",
+      "id": "ortobotanico-padua",
+      "name": "Orto Botanico di Padova",
+      "city": "Padua",
+      "country": "Italy",
+      "latitude": 45.3991,
+      "longitude": 11.8817,
+      "wikipediaTitle": "Orto botanico di Padova",
+      "blurb": "The Orto Botanico di Padova is a botanical garden in Padua, in the northeastern part of Italy. Founded in June 1545 by the Venetian Republic, it is the world's oldest academic botanical garden that is still in its original location.",
       "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/207_Geirangerfjord.jpg/1280px-207_Geirangerfjord.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "West Norwegian Fjords",
-        "attribution": "Mikiwikipikidikipedia at English Wikipedia · CC BY 2.5",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Orto_botanico_padova.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Orto botanico di Padova",
+        "attribution": "Wikimedia Commons contributor · CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5"
+      },
+      "themeConnection": {
+        "text": "Padua's Orto Botanico was founded in 1545 and survives as a named, maintained public botanical garden at its historic site.",
+        "sourceIds": ["source-09"]
       }
     },
     {
-      "id": "wooden-churches-of-the-slovak-carpathians",
-      "name": "Wooden churches of the Slovak Carpathians",
-      "city": "Slovakia",
-      "country": "Slovakia",
-      "latitude": 49.336111,
-      "longitude": 19.558333,
-      "wikipediaTitle": "Wooden churches of the Slovak Carpathians",
-      "blurb": "Carpathian Wooden Churches is the name of a UNESCO World Heritage Site that consists of nine wooden religious buildings constructed between the 16th and 18th centuries in eight different locations in Slovakia.",
-      "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Hronsek_-_Dreven%C3%BD_artikul%C3%A1rny_kostol_-_02.jpg/1280px-Hronsek_-_Dreven%C3%BD_artikul%C3%A1rny_kostol_-_02.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Wooden churches of the Slovak Carpathians",
-        "attribution": "Ladislav Luppa · CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      "id": "kew-royal-botanic-gardens",
+      "name": "Royal Botanic Gardens, Kew",
+      "city": "London",
+      "country": "United Kingdom",
+      "latitude": 51.4788,
+      "longitude": -0.2956,
+      "wikipediaTitle": "Royal Botanic Gardens, Kew",
+      "blurb": "The Royal Botanic Gardens, Kew, usually referred to as Kew Gardens, is a botanical garden in southwest London. It was founded in 1840 and remains a maintained public garden.",
+      "themeConnection": {
+        "text": "The Royal Botanic Gardens at Kew developed as a botanical garden on its present site in the eighteenth and nineteenth centuries and is maintained as a major public garden.",
+        "sourceIds": ["source-01"]
       }
     },
     {
-      "id": "pirin-national-park",
-      "name": "Pirin National Park",
-      "city": "Blagoevgrad",
-      "country": "Bulgaria",
-      "latitude": 41.672222222,
-      "longitude": 23.487777777,
-      "wikipediaTitle": "Pirin National Park",
-      "blurb": "Pirin National Park (Bulgarian: Национален парк \"Пирин\"), originally named Vihren National Park, covering the larger part of the Pirin Mountains in southwestern Bulgaria, spanning an area of 403.56 square kilometers (155.82 mi2).",
-      "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Pirin_-_Gergiyski_ezera_-_IMG_4439.jpg/1280px-Pirin_-_Gergiyski_ezera_-_IMG_4439.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Pirin National Park",
-        "attribution": "Dido3 · CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      "id": "cambridge-university-botanic-garden",
+      "name": "Cambridge University Botanic Garden",
+      "city": "Cambridge",
+      "country": "United Kingdom",
+      "latitude": 52.1938,
+      "longitude": 0.1265,
+      "wikipediaTitle": "Cambridge University Botanic Garden",
+      "blurb": "Cambridge University Botanic Garden is a botanical garden of the University of Cambridge. The present garden opened in 1846 and is regularly open to visitors.",
+      "themeConnection": {
+        "text": "Cambridge University Botanic Garden was established in 1831 and opened at its current site in 1846, where it remains a maintained public botanic garden.",
+        "sourceIds": ["source-04"]
       }
     },
     {
-      "id": "shibam",
-      "name": "Shibam",
-      "city": "Shibam District",
-      "country": "Yemen",
-      "latitude": 15.926944444,
-      "longitude": 48.626666666,
-      "wikipediaTitle": "Shibam",
-      "blurb": "Shibam (Arabic: شِبَام, romanized: Shibām), officially the Old Walled City of Shibam (Arabic: مدينة شبام القديمة وسورها), is a town in Wadi Hadhramaut in eastern Yemen with about 7,000 inhabitants.",
-      "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/%D9%85%D8%AF%D9%8A%D9%86%D8%A9_%D8%B4%D8%A8%D8%A7%D9%85_%D8%AD%D8%B6%D8%B1%D9%85%D9%88%D8%AA.jpg/1280px-%D9%85%D8%AF%D9%8A%D9%86%D8%A9_%D8%B4%D8%A8%D8%A7%D9%85_%D8%AD%D8%B6%D8%B1%D9%85%D9%88%D8%AA.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Shibam",
-        "attribution": "Bkar6190 · CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      "id": "jardim-botanico-ajuda",
+      "name": "Jardim Botânico da Ajuda",
+      "city": "Lisbon",
+      "country": "Portugal",
+      "latitude": 38.7064,
+      "longitude": -9.1993,
+      "wikipediaTitle": "Ajuda Botanical Garden",
+      "blurb": "The Ajuda Botanical Garden is a botanical garden in Lisbon, Portugal, created in 1768. It is one of the oldest botanical gardens in Portugal and is open to the public.",
+      "themeConnection": {
+        "text": "Ajuda Botanical Garden was established in 1768 and remains a distinct maintained botanical garden with public access in Lisbon.",
+        "sourceIds": ["source-16"]
       }
     },
     {
-      "id": "chogha-zanbil",
-      "name": "Chogha Zanbil",
-      "city": "Khuzestan Province",
-      "country": "Iran",
-      "latitude": 32.008333333,
-      "longitude": 48.520833333,
-      "wikipediaTitle": "Chogha Zanbil",
-      "blurb": "Chogha Zanbil is an ancient Elamite complex in the Khuzestan province of Iran. It is one of the few existing ziggurats outside Mesopotamia.",
-      "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/%D8%B2%DB%8C%DA%AF%D9%88%D8%B1%D8%A7%D8%AA_%DA%86%D8%BA%D8%A7_%D8%B2%D9%86%D8%A8%DB%8C%D9%84.jpg/1280px-%D8%B2%DB%8C%DA%AF%D9%88%D8%B1%D8%A7%D8%AA_%DA%86%D8%BA%D8%A7_%D8%B2%D9%86%D8%A8%DB%8C%D9%84.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Chogha Zanbil",
-        "attribution": "Mobina ghanbaryan · CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
-      }
-    },
-    {
-      "id": "lincoln-school-madison-wisconsin",
-      "name": "Lincoln School (Madison, Wisconsin)",
-      "city": "Madison",
-      "country": "United States",
-      "latitude": 43.083213466,
-      "longitude": -89.380388209,
-      "wikipediaTitle": "Lincoln School (Madison, Wisconsin)",
-      "blurb": "Lincoln School is a historic school building at 728 E. Gorham Street in Madison, Wisconsin. The school was built in 1915 on the site of the Second Ward School, which had been in operation since 1866.",
-      "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Lincoln_School_Madison_Wisconsin_2021-3750.jpg/1280px-Lincoln_School_Madison_Wisconsin_2021-3750.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Lincoln School (Madison, Wisconsin)",
-        "attribution": "Paul R. Burley · CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
-      }
-    },
-    {
-      "id": "qutb-minar",
-      "name": "Qutb Minar",
-      "city": "Delhi",
+      "id": "acharya-jagadish-chandra-bose-indian-botanic-garden",
+      "name": "Acharya Jagadish Chandra Bose Indian Botanic Garden",
+      "city": "Howrah",
       "country": "India",
-      "latitude": 28.524355,
-      "longitude": 77.185248,
-      "wikipediaTitle": "Qutb Minar",
-      "blurb": "The Qutb Minar, also spelled Qutub Minar and Qutab Minar, is a minaret and victory tower, built during the Delhi sultanate, and comprising the Qutb complex, a UNESCO World Heritage Site in Mehrauli, South Delhi, India.",
+      "latitude": 22.5575,
+      "longitude": 88.308,
+      "wikipediaTitle": "Acharya Jagadish Chandra Bose Indian Botanic Garden",
+      "blurb": "The Acharya Jagadish Chandra Bose Indian Botanic Garden, previously known as the Indian Botanic Garden, Calcutta Botanic Garden, and Royal Botanic Garden, Calcutta, is a botanical garden situated in Shibpur, Howrah near Kolkata.",
       "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Qutb_Minar_2022.jpg/1280px-Qutb_Minar_2022.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Qutb Minar",
-        "attribution": "Wasir kasab · CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Kolkata_botanical_garden_pathway.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Acharya Jagadish Chandra Bose Indian Botanic Garden",
+        "attribution": "Jeroje at English Wikipedia. · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "themeConnection": {
+        "text": "The Indian Botanic Garden at Shibpur was established in 1787 and remains a maintained, ticketed botanical garden within the Howrah urban municipality.",
+        "sourceIds": ["source-24"]
       }
     },
     {
-      "id": "chinese-pavilion-at-drottningholm",
-      "name": "Chinese Pavilion at Drottningholm",
-      "city": "Ekerö Municipality",
-      "country": "Sweden",
-      "latitude": 59.31694444,
-      "longitude": 17.87861111,
-      "wikipediaTitle": "Chinese Pavilion at Drottningholm",
-      "blurb": "The Chinese Pavilion (Swedish: Kina slott), located in the grounds of the Drottningholm Palace park, is a Chinese-inspired royal pavilion originally built between 1753 and 1769.",
-      "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Kina_slott_October_2016_01.jpg/1280px-Kina_slott_October_2016_01.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Chinese Pavilion at Drottningholm",
-        "attribution": "Arild Vågen · CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      "id": "chelsea-physic-garden",
+      "name": "Chelsea Physic Garden",
+      "city": "London",
+      "country": "United Kingdom",
+      "latitude": 51.4846,
+      "longitude": -0.1628,
+      "wikipediaTitle": "Chelsea Physic Garden",
+      "blurb": "Chelsea Physic Garden was established as the Apothecaries' Garden in 1673. It is one of Britain's oldest botanic gardens and is open to visitors in London.",
+      "themeConnection": {
+        "text": "Chelsea Physic Garden was founded in 1673 by the Society of Apothecaries at its surviving riverside site and remains open to ordinary visitors.",
+        "sourceIds": ["source-02"]
+      }
+    },
+    {
+      "id": "lalbagh-botanical-garden",
+      "name": "Lalbagh Botanical Garden",
+      "city": "Bengaluru",
+      "country": "India",
+      "latitude": 12.9507,
+      "longitude": 77.5848,
+      "wikipediaTitle": "Lalbagh Botanical Garden",
+      "blurb": "Lalbagh Botanical Garden is a botanical garden in Bengaluru, India, established in 1760 by Hyder Ali. The garden is maintained by the state horticulture department and open to visitors.",
+      "themeConnection": {
+        "text": "Lalbagh Botanical Garden was begun in 1760 and remains a large, officially named and maintained public botanical garden in Bengaluru.",
+        "sourceIds": ["source-25"]
+      }
+    },
+    {
+      "id": "fomin-botanical-garden",
+      "name": "O.V. Fomin Botanical Garden",
+      "city": "Kyiv",
+      "country": "Ukraine",
+      "latitude": 50.4431,
+      "longitude": 30.5064,
+      "wikipediaTitle": "O.V. Fomin Botanical Garden",
+      "blurb": "The O.V. Fomin Botanical Garden is a botanical garden of Taras Shevchenko National University in Kyiv, founded in 1839. It contains historic collections and is open to visitors.",
+      "themeConnection": {
+        "text": "Kyiv's O.V. Fomin Botanical Garden was established in 1839 and remains a distinct maintained botanical garden with regular visitor access.",
+        "sourceIds": ["source-23"]
       }
     }
   ],
   "rounds": [
     {
       "id": "round-1",
-      "targetPoiId": "chogha-zanbil",
+      "targetPoiId": "oxford-botanic-garden",
       "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/%D8%B2%DB%8C%DA%AF%D9%88%D8%B1%D8%A7%D8%AA_%DA%86%D8%BA%D8%A7_%D8%B2%D9%86%D8%A8%DB%8C%D9%84.jpg/1280px-%D8%B2%DB%8C%DA%AF%D9%88%D8%B1%D8%A7%D8%AA_%DA%86%D8%BA%D8%A7_%D8%B2%D9%86%D8%A8%DB%8C%D9%84.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Chogha Zanbil",
-        "attribution": "Mobina ghanbaryan · CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Oxford_Botanic_Garden_LV_2025.jpg/1280px-Oxford_Botanic_Garden_LV_2025.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "University of Oxford Botanic Garden",
+        "attribution": "Honcques Laus · CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
       },
       "clue": {
-        "text": "This ancient sacred complex is centered on a five-level stepped monument built mainly of mud brick, enclosed by three concentric walls and originally surrounded by numerous temples.",
-        "sourceIds": ["source-01"]
+        "text": "Founded in 1621 as a physic garden for medicinal research, this compact collection now holds over 5,000 plant species; its Danby Gate was designed by Nicholas Stone in 1632–33.",
+        "sourceIds": ["source-03"]
       },
       "results": [
         {
-          "poiId": "chogha-zanbil",
-          "tier": "correct",
-          "text": "Correct: an ancient sacred city centered on a five-level mud-brick ziggurat and enclosed by three walls.",
-          "sourceIds": ["source-01"]
-        },
-        {
-          "poiId": "dholavira",
-          "tier": "hot",
-          "text": "Both are ancient archaeological urban sites with substantial excavated remains and UNESCO recognition.",
-          "sourceIds": ["source-01", "source-09"]
-        },
-        {
-          "poiId": "terracotta-army",
-          "tier": "hot",
-          "text": "Both are major ancient archaeological complexes associated with powerful rulers and UNESCO heritage protection.",
-          "sourceIds": ["source-01", "source-23"]
-        },
-        {
-          "poiId": "khirokitia",
-          "tier": "hot",
-          "text": "Both preserve very early archaeological settlements and are UNESCO World Heritage Sites.",
-          "sourceIds": ["source-01", "source-19"]
-        },
-        {
-          "poiId": "soltaniyeh",
-          "tier": "hot",
-          "text": "Both are UNESCO-listed historic sites connected with powerful premodern rulers and monumental construction.",
-          "sourceIds": ["source-01", "source-16"]
-        },
-        {
-          "poiId": "hadrian-s-villa",
+          "poiId": "kew-royal-botanic-gardens",
           "tier": "warm",
-          "text": "Both are large ancient complexes containing multiple monumental structures and religious or ceremonial spaces.",
-          "sourceIds": ["source-01", "source-24"]
-        },
-        {
-          "poiId": "shibam",
-          "tier": "warm",
-          "text": "Both are UNESCO-listed historic settlements whose architecture reflects long-term regional traditions.",
-          "sourceIds": ["source-01", "source-17"]
-        },
-        {
-          "poiId": "cueva-de-las-manos",
-          "tier": "warm",
-          "text": "Both are UNESCO archaeological sites preserving evidence of ancient societies.",
-          "sourceIds": ["source-01", "source-14"]
-        },
-        {
-          "poiId": "qutb-minar",
-          "tier": "warm",
-          "text": "Both feature a monumental masonry structure and have UNESCO World Heritage recognition.",
-          "sourceIds": ["source-01", "source-04"]
-        },
-        {
-          "poiId": "st-joseph-s-seminary-and-church",
-          "tier": "warm",
-          "text": "Both are UNESCO-recognized historic religious places with substantial architectural remains.",
-          "sourceIds": ["source-01", "source-13"]
-        },
-        {
-          "poiId": "baroque-churches-of-the-philippines",
-          "tier": "warm",
-          "text": "Both are UNESCO-listed religious heritage sites whose architecture expresses a distinct regional tradition.",
-          "sourceIds": ["source-01", "source-06"]
-        },
-        {
-          "poiId": "wooden-churches-of-the-slovak-carpathians",
-          "tier": "warm",
-          "text": "Both are UNESCO religious heritage sites comprising purpose-built sacred architecture.",
-          "sourceIds": ["source-01", "source-21"]
-        },
-        {
-          "poiId": "margravial-opera-house",
-          "tier": "warm",
-          "text": "Both are UNESCO-listed monumental buildings with carefully preserved historic architecture.",
-          "sourceIds": ["source-01", "source-11"]
-        },
-        {
-          "poiId": "chinese-pavilion-at-drottningholm",
-          "tier": "cold",
-          "text": "Both are UNESCO heritage properties built as architecturally distinctive complexes for elite or royal purposes.",
-          "sourceIds": ["source-01", "source-07"]
-        },
-        {
-          "poiId": "hiroshima-peace-memorial",
-          "tier": "cold",
-          "text": "Both are UNESCO sites preserved as powerful reminders of historical events.",
-          "sourceIds": ["source-01", "source-02"]
-        },
-        {
-          "poiId": "tongariro-national-park",
-          "tier": "cold",
-          "text": "Both are UNESCO sites with important cultural and religious associations.",
+          "text": "Royal Botanic Gardens, Kew is a themed comparison candidate: The Royal Botanic Gardens at Kew developed as a botanical garden on its present site in the eighteenth and nineteenth centuries and is maintained as a major public garden.",
           "sourceIds": ["source-01", "source-03"]
         },
         {
-          "poiId": "table-mountain",
-          "tier": "cold",
-          "text": "Both are prominent UNESCO-associated heritage attractions visited for their distinctive physical setting.",
-          "sourceIds": ["source-01", "source-05"]
+          "poiId": "chelsea-physic-garden",
+          "tier": "hot",
+          "text": "Chelsea Physic Garden is a themed comparison candidate: Chelsea Physic Garden was founded in 1673 by the Society of Apothecaries at its surviving riverside site and remains open to ordinary visitors.",
+          "sourceIds": ["source-02", "source-03"]
         },
         {
-          "poiId": "phong-nha-ke-bang-national-park",
-          "tier": "cold",
-          "text": "Both are UNESCO properties containing extensive protected archaeological or geological landscapes.",
-          "sourceIds": ["source-01", "source-18"]
+          "poiId": "oxford-botanic-garden",
+          "tier": "correct",
+          "text": "University of Oxford Botanic Garden is the round target: Oxford Botanic Garden was founded in 1621 as a physic garden and continues as a distinct, maintained, publicly visitable botanical garden.",
+          "sourceIds": ["source-03"]
         },
         {
-          "poiId": "pirin-national-park",
+          "poiId": "cambridge-university-botanic-garden",
           "tier": "cold",
-          "text": "Both are UNESCO-listed protected heritage places with important landscapes and long historical significance.",
-          "sourceIds": ["source-01", "source-20"]
+          "text": "Cambridge University Botanic Garden is a themed comparison candidate: Cambridge University Botanic Garden was established in 1831 and opened at its current site in 1846, where it remains a maintained public botanic garden.",
+          "sourceIds": ["source-04", "source-03"]
         },
         {
-          "poiId": "west-norwegian-fjords",
-          "tier": "cold",
-          "text": "Both are UNESCO World Heritage properties recognized for distinctive, well-preserved environments.",
-          "sourceIds": ["source-01", "source-08"]
+          "poiId": "national-botanic-gardens-glasnevin",
+          "tier": "warm",
+          "text": "National Botanic Gardens of Ireland, Glasnevin is a themed comparison candidate: The National Botanic Gardens of Ireland at Glasnevin were founded in 1795 and remain a maintained, free public botanical garden within Dublin.",
+          "sourceIds": ["source-05", "source-03"]
         },
         {
-          "poiId": "great-barrier-reef",
-          "tier": "cold",
-          "text": "Both have UNESCO World Heritage status and require protection from modern environmental threats.",
-          "sourceIds": ["source-01", "source-22"]
+          "poiId": "jardin-des-plantes-montpellier",
+          "tier": "hot",
+          "text": "Jardin des plantes de Montpellier is a themed comparison candidate: Montpellier's Jardin des plantes was established in 1593 as a botanical and teaching garden and remains a visitable maintained garden in the city.",
+          "sourceIds": ["source-06", "source-03"]
         },
         {
-          "poiId": "rio-platano-biosphere-reserve",
-          "tier": "cold",
-          "text": "Both are UNESCO properties whose preservation is threatened by human activities.",
-          "sourceIds": ["source-01", "source-25"]
+          "poiId": "jardin-des-plantes-paris",
+          "tier": "hot",
+          "text": "Jardin des Plantes is a themed comparison candidate: Paris's Jardin des Plantes originated as the Royal Garden of Medicinal Plants in 1626 and remains an officially named public botanical garden.",
+          "sourceIds": ["source-07", "source-03"]
         },
         {
-          "poiId": "salar-de-uyuni",
+          "poiId": "botanical-garden-wroclaw",
           "tier": "cold",
-          "text": "Both are large-scale heritage attractions with distinctive landforms and strong tourism interest.",
-          "sourceIds": ["source-01", "source-12"]
+          "text": "Botanical Garden of the University of Wrocław is a themed comparison candidate: Wrocław's university botanical garden was founded in 1811 and continues as a distinct maintained garden with a public entrance.",
+          "sourceIds": ["source-08", "source-03"]
         },
         {
-          "poiId": "lincoln-school-madison-wisconsin",
-          "tier": "cold",
-          "text": "Both are preserved historic structures recognized for architectural and historical significance.",
-          "sourceIds": ["source-01", "source-10"]
+          "poiId": "ortobotanico-padua",
+          "tier": "hot",
+          "text": "Orto Botanico di Padova is a themed comparison candidate: Padua's Orto Botanico was founded in 1545 and survives as a named, maintained public botanical garden at its historic site.",
+          "sourceIds": ["source-09", "source-03"]
         },
         {
-          "poiId": "estacio-del-nord-valencia",
+          "poiId": "orto-botanico-pisa",
+          "tier": "warm",
+          "text": "Orto botanico di Pisa is a themed comparison candidate: Pisa's botanical garden was founded in 1544 and moved within Pisa before settling at its present site in the sixteenth century, where it remains public.",
+          "sourceIds": ["source-10", "source-03"]
+        },
+        {
+          "poiId": "orto-botanico-palermo",
           "tier": "cold",
-          "text": "Both are protected heritage architecture distinguished by their construction and design traditions.",
-          "sourceIds": ["source-01", "source-15"]
+          "text": "Orto Botanico di Palermo is a themed comparison candidate: Palermo's Orto Botanico was established in 1789 and remains a large, named, maintained botanical garden open to ordinary visitors.",
+          "sourceIds": ["source-11", "source-03"]
+        },
+        {
+          "poiId": "orto-botanico-catania",
+          "tier": "cold",
+          "text": "Orto Botanico dell'Università di Catania is a themed comparison candidate: Catania's university botanical garden was founded in 1858 and continues as a distinct urban garden available for public visits.",
+          "sourceIds": ["source-12", "source-03"]
+        },
+        {
+          "poiId": "orto-botanico-rome",
+          "tier": "cold",
+          "text": "Orto Botanico di Roma is a themed comparison candidate: Rome's current Orto Botanico was established at the Villa Corsini site in 1883 and remains a maintained public botanical garden.",
+          "sourceIds": ["source-13", "source-03"]
+        },
+        {
+          "poiId": "orto-botanico-florence",
+          "tier": "warm",
+          "text": "Orto Botanico di Firenze is a themed comparison candidate: Florence's Orto Botanico, also called the Giardino dei Semplici, was founded in 1545 and remains a visitable maintained garden.",
+          "sourceIds": ["source-14", "source-03"]
+        },
+        {
+          "poiId": "real-jardin-botanico-madrid",
+          "tier": "warm",
+          "text": "Real Jardín Botánico de Madrid is a themed comparison candidate: Madrid's Royal Botanical Garden was founded in 1755 and moved to its current Paseo del Prado site in 1781, where it remains public.",
+          "sourceIds": ["source-15", "source-03"]
+        },
+        {
+          "poiId": "jardim-botanico-ajuda",
+          "tier": "warm",
+          "text": "Jardim Botânico da Ajuda is a themed comparison candidate: Ajuda Botanical Garden was established in 1768 and remains a distinct maintained botanical garden with public access in Lisbon.",
+          "sourceIds": ["source-16", "source-03"]
+        },
+        {
+          "poiId": "jardim-botanico-coimbra",
+          "tier": "warm",
+          "text": "Jardim Botânico da Universidade de Coimbra is a themed comparison candidate: The Botanical Garden of the University of Coimbra was founded in 1772 and remains a maintained, publicly visitable garden within Coimbra.",
+          "sourceIds": ["source-17", "source-03"]
+        },
+        {
+          "poiId": "copenhagen-botanical-garden",
+          "tier": "warm",
+          "text": "University of Copenhagen Botanical Garden is a themed comparison candidate: Copenhagen's botanical garden traces its institution to 1600 and has occupied its current garden site since 1874, remaining publicly accessible.",
+          "sourceIds": ["source-18", "source-03"]
+        },
+        {
+          "poiId": "oslo-botanical-garden",
+          "tier": "cold",
+          "text": "University of Oslo Botanical Garden is a themed comparison candidate: The University of Oslo Botanical Garden was founded in 1814 at Tøyen and remains a maintained public botanical garden in the city.",
+          "sourceIds": ["source-19", "source-03"]
+        },
+        {
+          "poiId": "tartu-botanical-garden",
+          "tier": "cold",
+          "text": "University of Tartu Botanical Garden is a themed comparison candidate: The University of Tartu Botanical Garden was founded in 1803 and continues as a maintained, publicly visitable garden within Tartu.",
+          "sourceIds": ["source-20", "source-03"]
+        },
+        {
+          "poiId": "dimitrie-brandza-botanical-garden",
+          "tier": "cold",
+          "text": "Dimitrie Brândză Botanical Garden is a themed comparison candidate: Bucharest's Dimitrie Brândză Botanical Garden was founded in 1891 and remains an individually named maintained botanical garden open to visitors.",
+          "sourceIds": ["source-21", "source-03"]
+        },
+        {
+          "poiId": "peter-the-great-botanical-garden",
+          "tier": "cold",
+          "text": "Botanical Garden of the Komarov Botanical Institute is a themed comparison candidate: The botanical garden on Saint Petersburg's Aptekarsky Island descends from the Apothecary Garden founded in 1714 and remains a visitable maintained garden.",
+          "sourceIds": ["source-22", "source-03"]
+        },
+        {
+          "poiId": "fomin-botanical-garden",
+          "tier": "cold",
+          "text": "O.V. Fomin Botanical Garden is a themed comparison candidate: Kyiv's O.V. Fomin Botanical Garden was established in 1839 and remains a distinct maintained botanical garden with regular visitor access.",
+          "sourceIds": ["source-23", "source-03"]
+        },
+        {
+          "poiId": "acharya-jagadish-chandra-bose-indian-botanic-garden",
+          "tier": "cold",
+          "text": "Acharya Jagadish Chandra Bose Indian Botanic Garden is a themed comparison candidate: The Indian Botanic Garden at Shibpur was established in 1787 and remains a maintained, ticketed botanical garden within the Howrah urban municipality.",
+          "sourceIds": ["source-24", "source-03"]
+        },
+        {
+          "poiId": "lalbagh-botanical-garden",
+          "tier": "cold",
+          "text": "Lalbagh Botanical Garden is a themed comparison candidate: Lalbagh Botanical Garden was begun in 1760 and remains a large, officially named and maintained public botanical garden in Bengaluru.",
+          "sourceIds": ["source-25", "source-03"]
         }
       ]
     },
     {
       "id": "round-2",
-      "targetPoiId": "hiroshima-peace-memorial",
+      "targetPoiId": "ortobotanico-padua",
       "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Genbaku_Dome04-r.JPG/1280px-Genbaku_Dome04-r.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Hiroshima Peace Memorial",
-        "attribution": "Oilstreet · CC BY 2.5",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Orto_botanico_padova.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Orto botanico di Padova",
+        "attribution": "Wikimedia Commons contributor · CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5"
       },
       "clue": {
-        "text": "This preserved ruin was originally an industrial exhibition hall and remained standing near the hypocenter of the first atomic bomb used in war.",
-        "sourceIds": ["source-02"]
+        "text": "Established in 1545 by a republic for teaching medicinal plants, this garden retains a square-within-circle design and contains a palm planted in 1585 known as “Goethe’s palm.”",
+        "sourceIds": ["source-09"]
       },
       "results": [
         {
-          "poiId": "hiroshima-peace-memorial",
-          "tier": "correct",
-          "text": "Correct: an exhibition hall ruin preserved as a memorial after the 1945 atomic bombing.",
-          "sourceIds": ["source-02"]
-        },
-        {
-          "poiId": "cueva-de-las-manos",
-          "tier": "hot",
-          "text": "Both are preserved UNESCO sites whose surviving structures or artwork serve as evidence of traumatic or transformative history.",
-          "sourceIds": ["source-02", "source-14"]
-        },
-        {
-          "poiId": "chogha-zanbil",
-          "tier": "hot",
-          "text": "Both are UNESCO sites preserved as archaeological reminders of destruction and historical change.",
-          "sourceIds": ["source-02", "source-01"]
-        },
-        {
-          "poiId": "shibam",
-          "tier": "hot",
-          "text": "Both are historic sites that suffered destructive events yet retain prominent surviving architecture.",
-          "sourceIds": ["source-02", "source-17"]
-        },
-        {
-          "poiId": "soltaniyeh",
-          "tier": "hot",
-          "text": "Both are UNESCO heritage places whose surviving ruins convey the consequences of historical upheaval.",
-          "sourceIds": ["source-02", "source-16"]
-        },
-        {
-          "poiId": "dholavira",
+          "poiId": "kew-royal-botanic-gardens",
           "tier": "warm",
-          "text": "Both are UNESCO archaeological sites where preserved remains document vanished urban life.",
+          "text": "Royal Botanic Gardens, Kew is a themed comparison candidate: The Royal Botanic Gardens at Kew developed as a botanical garden on its present site in the eighteenth and nineteenth centuries and is maintained as a major public garden.",
+          "sourceIds": ["source-01", "source-09"]
+        },
+        {
+          "poiId": "chelsea-physic-garden",
+          "tier": "warm",
+          "text": "Chelsea Physic Garden is a themed comparison candidate: Chelsea Physic Garden was founded in 1673 by the Society of Apothecaries at its surviving riverside site and remains open to ordinary visitors.",
           "sourceIds": ["source-02", "source-09"]
         },
         {
-          "poiId": "terracotta-army",
+          "poiId": "oxford-botanic-garden",
+          "tier": "hot",
+          "text": "University of Oxford Botanic Garden is a themed comparison candidate: Oxford Botanic Garden was founded in 1621 as a physic garden and continues as a distinct, maintained, publicly visitable botanical garden.",
+          "sourceIds": ["source-03", "source-09"]
+        },
+        {
+          "poiId": "cambridge-university-botanic-garden",
+          "tier": "cold",
+          "text": "Cambridge University Botanic Garden is a themed comparison candidate: Cambridge University Botanic Garden was established in 1831 and opened at its current site in 1846, where it remains a maintained public botanic garden.",
+          "sourceIds": ["source-04", "source-09"]
+        },
+        {
+          "poiId": "national-botanic-gardens-glasnevin",
           "tier": "warm",
-          "text": "Both are UNESCO sites whose preservation gives visitors material evidence of major historical events.",
-          "sourceIds": ["source-02", "source-23"]
+          "text": "National Botanic Gardens of Ireland, Glasnevin is a themed comparison candidate: The National Botanic Gardens of Ireland at Glasnevin were founded in 1795 and remain a maintained, free public botanical garden within Dublin.",
+          "sourceIds": ["source-05", "source-09"]
         },
         {
-          "poiId": "hadrian-s-villa",
+          "poiId": "jardin-des-plantes-montpellier",
+          "tier": "hot",
+          "text": "Jardin des plantes de Montpellier is a themed comparison candidate: Montpellier's Jardin des plantes was established in 1593 as a botanical and teaching garden and remains a visitable maintained garden in the city.",
+          "sourceIds": ["source-06", "source-09"]
+        },
+        {
+          "poiId": "jardin-des-plantes-paris",
           "tier": "warm",
-          "text": "Both preserve substantial historic architecture as internationally recognized heritage.",
-          "sourceIds": ["source-02", "source-24"]
+          "text": "Jardin des Plantes is a themed comparison candidate: Paris's Jardin des Plantes originated as the Royal Garden of Medicinal Plants in 1626 and remains an officially named public botanical garden.",
+          "sourceIds": ["source-07", "source-09"]
         },
         {
-          "poiId": "margravial-opera-house",
+          "poiId": "botanical-garden-wroclaw",
+          "tier": "cold",
+          "text": "Botanical Garden of the University of Wrocław is a themed comparison candidate: Wrocław's university botanical garden was founded in 1811 and continues as a distinct maintained garden with a public entrance.",
+          "sourceIds": ["source-08", "source-09"]
+        },
+        {
+          "poiId": "ortobotanico-padua",
+          "tier": "correct",
+          "text": "Orto Botanico di Padova is the round target: Padua's Orto Botanico was founded in 1545 and survives as a named, maintained public botanical garden at its historic site.",
+          "sourceIds": ["source-09"]
+        },
+        {
+          "poiId": "orto-botanico-pisa",
+          "tier": "hot",
+          "text": "Orto botanico di Pisa is a themed comparison candidate: Pisa's botanical garden was founded in 1544 and moved within Pisa before settling at its present site in the sixteenth century, where it remains public.",
+          "sourceIds": ["source-10", "source-09"]
+        },
+        {
+          "poiId": "orto-botanico-palermo",
+          "tier": "cold",
+          "text": "Orto Botanico di Palermo is a themed comparison candidate: Palermo's Orto Botanico was established in 1789 and remains a large, named, maintained botanical garden open to ordinary visitors.",
+          "sourceIds": ["source-11", "source-09"]
+        },
+        {
+          "poiId": "orto-botanico-catania",
+          "tier": "cold",
+          "text": "Orto Botanico dell'Università di Catania is a themed comparison candidate: Catania's university botanical garden was founded in 1858 and continues as a distinct urban garden available for public visits.",
+          "sourceIds": ["source-12", "source-09"]
+        },
+        {
+          "poiId": "orto-botanico-rome",
+          "tier": "cold",
+          "text": "Orto Botanico di Roma is a themed comparison candidate: Rome's current Orto Botanico was established at the Villa Corsini site in 1883 and remains a maintained public botanical garden.",
+          "sourceIds": ["source-13", "source-09"]
+        },
+        {
+          "poiId": "orto-botanico-florence",
+          "tier": "hot",
+          "text": "Orto Botanico di Firenze is a themed comparison candidate: Florence's Orto Botanico, also called the Giardino dei Semplici, was founded in 1545 and remains a visitable maintained garden.",
+          "sourceIds": ["source-14", "source-09"]
+        },
+        {
+          "poiId": "real-jardin-botanico-madrid",
           "tier": "warm",
-          "text": "Both are protected historic buildings whose survival and preservation are central to their significance.",
-          "sourceIds": ["source-02", "source-11"]
+          "text": "Real Jardín Botánico de Madrid is a themed comparison candidate: Madrid's Royal Botanical Garden was founded in 1755 and moved to its current Paseo del Prado site in 1781, where it remains public.",
+          "sourceIds": ["source-15", "source-09"]
         },
         {
-          "poiId": "qutb-minar",
+          "poiId": "jardim-botanico-ajuda",
           "tier": "warm",
-          "text": "Both are UNESCO monuments whose architectural remains have undergone preservation after damage or threat.",
-          "sourceIds": ["source-02", "source-04"]
+          "text": "Jardim Botânico da Ajuda is a themed comparison candidate: Ajuda Botanical Garden was established in 1768 and remains a distinct maintained botanical garden with public access in Lisbon.",
+          "sourceIds": ["source-16", "source-09"]
         },
         {
-          "poiId": "st-joseph-s-seminary-and-church",
+          "poiId": "jardim-botanico-coimbra",
           "tier": "warm",
-          "text": "Both are UNESCO-associated monuments preserved for their cultural and historical meaning.",
-          "sourceIds": ["source-02", "source-13"]
+          "text": "Jardim Botânico da Universidade de Coimbra is a themed comparison candidate: The Botanical Garden of the University of Coimbra was founded in 1772 and remains a maintained, publicly visitable garden within Coimbra.",
+          "sourceIds": ["source-17", "source-09"]
         },
         {
-          "poiId": "baroque-churches-of-the-philippines",
+          "poiId": "copenhagen-botanical-garden",
           "tier": "warm",
-          "text": "Both are heritage sites where architecture communicates a difficult historical past.",
-          "sourceIds": ["source-02", "source-06"]
+          "text": "University of Copenhagen Botanical Garden is a themed comparison candidate: Copenhagen's botanical garden traces its institution to 1600 and has occupied its current garden site since 1874, remaining publicly accessible.",
+          "sourceIds": ["source-18", "source-09"]
         },
         {
-          "poiId": "wooden-churches-of-the-slovak-carpathians",
-          "tier": "warm",
-          "text": "Both are protected cultural properties whose surviving buildings preserve historical memory.",
-          "sourceIds": ["source-02", "source-21"]
-        },
-        {
-          "poiId": "chinese-pavilion-at-drottningholm",
+          "poiId": "oslo-botanical-garden",
           "tier": "cold",
-          "text": "Both are UNESCO properties maintained in recognition of their architectural and historical value.",
-          "sourceIds": ["source-02", "source-07"]
+          "text": "University of Oslo Botanical Garden is a themed comparison candidate: The University of Oslo Botanical Garden was founded in 1814 at Tøyen and remains a maintained public botanical garden in the city.",
+          "sourceIds": ["source-19", "source-09"]
         },
         {
-          "poiId": "tongariro-national-park",
+          "poiId": "tartu-botanical-garden",
           "tier": "cold",
-          "text": "Both are UNESCO sites where preservation is linked to cultural meaning and public remembrance.",
-          "sourceIds": ["source-02", "source-03"]
+          "text": "University of Tartu Botanical Garden is a themed comparison candidate: The University of Tartu Botanical Garden was founded in 1803 and continues as a maintained, publicly visitable garden within Tartu.",
+          "sourceIds": ["source-20", "source-09"]
         },
         {
-          "poiId": "table-mountain",
+          "poiId": "dimitrie-brandza-botanical-garden",
           "tier": "cold",
-          "text": "Both are major protected attractions with strong symbolic importance and large visitor interest.",
-          "sourceIds": ["source-02", "source-05"]
+          "text": "Dimitrie Brândză Botanical Garden is a themed comparison candidate: Bucharest's Dimitrie Brândză Botanical Garden was founded in 1891 and remains an individually named maintained botanical garden open to visitors.",
+          "sourceIds": ["source-21", "source-09"]
         },
         {
-          "poiId": "phong-nha-ke-bang-national-park",
+          "poiId": "peter-the-great-botanical-garden",
           "tier": "cold",
-          "text": "Both are UNESCO properties preserved because they provide exceptional evidence of natural or human history.",
-          "sourceIds": ["source-02", "source-18"]
+          "text": "Botanical Garden of the Komarov Botanical Institute is a themed comparison candidate: The botanical garden on Saint Petersburg's Aptekarsky Island descends from the Apothecary Garden founded in 1714 and remains a visitable maintained garden.",
+          "sourceIds": ["source-22", "source-09"]
         },
         {
-          "poiId": "pirin-national-park",
+          "poiId": "fomin-botanical-garden",
           "tier": "cold",
-          "text": "Both are internationally protected sites maintained for their exceptional heritage values.",
-          "sourceIds": ["source-02", "source-20"]
+          "text": "O.V. Fomin Botanical Garden is a themed comparison candidate: Kyiv's O.V. Fomin Botanical Garden was established in 1839 and remains a distinct maintained botanical garden with regular visitor access.",
+          "sourceIds": ["source-23", "source-09"]
         },
         {
-          "poiId": "west-norwegian-fjords",
+          "poiId": "acharya-jagadish-chandra-bose-indian-botanic-garden",
           "tier": "cold",
-          "text": "Both are UNESCO sites protected to preserve distinctive landscapes for future generations.",
-          "sourceIds": ["source-02", "source-08"]
+          "text": "Acharya Jagadish Chandra Bose Indian Botanic Garden is a themed comparison candidate: The Indian Botanic Garden at Shibpur was established in 1787 and remains a maintained, ticketed botanical garden within the Howrah urban municipality.",
+          "sourceIds": ["source-24", "source-09"]
         },
         {
-          "poiId": "great-barrier-reef",
+          "poiId": "lalbagh-botanical-garden",
           "tier": "cold",
-          "text": "Both are UNESCO properties facing ongoing preservation challenges and public concern.",
-          "sourceIds": ["source-02", "source-22"]
-        },
-        {
-          "poiId": "rio-platano-biosphere-reserve",
-          "tier": "cold",
-          "text": "Both are UNESCO sites where conservation is threatened by human activity.",
-          "sourceIds": ["source-02", "source-25"]
-        },
-        {
-          "poiId": "salar-de-uyuni",
-          "tier": "cold",
-          "text": "Both are internationally notable attractions whose distinctive appearance drives tourism.",
-          "sourceIds": ["source-02", "source-12"]
-        },
-        {
-          "poiId": "lincoln-school-madison-wisconsin",
-          "tier": "cold",
-          "text": "Both are preserved buildings whose architectural character supports historic recognition.",
-          "sourceIds": ["source-02", "source-10"]
-        },
-        {
-          "poiId": "estacio-del-nord-valencia",
-          "tier": "cold",
-          "text": "Both are prominent preserved civic buildings with important architectural histories.",
-          "sourceIds": ["source-02", "source-15"]
-        },
-        {
-          "poiId": "khirokitia",
-          "tier": "cold",
-          "text": "Both preserve material remains that help interpret earlier human communities.",
-          "sourceIds": ["source-02", "source-19"]
+          "text": "Lalbagh Botanical Garden is a themed comparison candidate: Lalbagh Botanical Garden was begun in 1760 and remains a large, officially named and maintained public botanical garden in Bengaluru.",
+          "sourceIds": ["source-25", "source-09"]
         }
       ]
     },
     {
       "id": "round-3",
-      "targetPoiId": "tongariro-national-park",
+      "targetPoiId": "jardin-des-plantes-paris",
       "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Tongariro_Mahuia_River_n.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "alt": "Tongariro National Park",
-        "attribution": "Wikimedia Commons contributor · CC BY 2.5",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Paris_75005_Grande_Galerie_de_l%27Evolution_20070804.jpg/1280px-Paris_75005_Grande_Galerie_de_l%27Evolution_20070804.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Jardin des Plantes",
+        "attribution": "Benh LIEU SONG · CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
       },
       "clue": {
-        "text": "This protected landscape combines three active volcanic mountains, alpine ecosystems, ski fields, and sacred summits associated with Māori religious traditions.",
-        "sourceIds": ["source-03"]
+        "text": "Formally founded in 1635 as a Royal Garden of Medicinal Plants, this 28-hectare institution contains the National Herbarium with almost eight million plant samples and a menagerie established in 1795.",
+        "sourceIds": ["source-07"]
       },
       "results": [
         {
-          "poiId": "tongariro-national-park",
-          "tier": "correct",
-          "text": "Correct: a protected volcanic landscape with active mountains, ski fields, alpine ecosystems, and sacred summits.",
-          "sourceIds": ["source-03"]
+          "poiId": "kew-royal-botanic-gardens",
+          "tier": "warm",
+          "text": "Royal Botanic Gardens, Kew is a themed comparison candidate: The Royal Botanic Gardens at Kew developed as a botanical garden on its present site in the eighteenth and nineteenth centuries and is maintained as a major public garden.",
+          "sourceIds": ["source-01", "source-07"]
         },
         {
-          "poiId": "pirin-national-park",
+          "poiId": "chelsea-physic-garden",
           "tier": "hot",
-          "text": "Both are mountain national parks with high peaks, protected ecosystems, and extensive outdoor recreation.",
-          "sourceIds": ["source-03", "source-20"]
+          "text": "Chelsea Physic Garden is a themed comparison candidate: Chelsea Physic Garden was founded in 1673 by the Society of Apothecaries at its surviving riverside site and remains open to ordinary visitors.",
+          "sourceIds": ["source-02", "source-07"]
         },
         {
-          "poiId": "table-mountain",
+          "poiId": "oxford-botanic-garden",
           "tier": "hot",
-          "text": "Both are prominent protected mountain landscapes offering hiking and distinctive alpine or montane flora.",
-          "sourceIds": ["source-03", "source-05"]
-        },
-        {
-          "poiId": "phong-nha-ke-bang-national-park",
-          "tier": "hot",
-          "text": "Both are UNESCO national parks protecting exceptional geological landscapes and native biodiversity.",
-          "sourceIds": ["source-03", "source-18"]
-        },
-        {
-          "poiId": "west-norwegian-fjords",
-          "tier": "hot",
-          "text": "Both are UNESCO landscapes shaped by dramatic mountain terrain and valued for natural scenery.",
-          "sourceIds": ["source-03", "source-08"]
-        },
-        {
-          "poiId": "great-barrier-reef",
-          "tier": "warm",
-          "text": "Both are UNESCO natural heritage areas supporting diverse ecosystems and major tourism.",
-          "sourceIds": ["source-03", "source-22"]
-        },
-        {
-          "poiId": "rio-platano-biosphere-reserve",
-          "tier": "warm",
-          "text": "Both are protected UNESCO-area landscapes combining biodiversity conservation with human cultural interests.",
-          "sourceIds": ["source-03", "source-25"]
-        },
-        {
-          "poiId": "salar-de-uyuni",
-          "tier": "warm",
-          "text": "Both are dramatic high-elevation landscapes that support tourism and have distinctive geological features.",
-          "sourceIds": ["source-03", "source-12"]
-        },
-        {
-          "poiId": "chogha-zanbil",
-          "tier": "warm",
-          "text": "Both have strong sacred significance and are internationally recognized heritage sites.",
-          "sourceIds": ["source-03", "source-01"]
-        },
-        {
-          "poiId": "khirokitia",
-          "tier": "warm",
-          "text": "Both are UNESCO sites preserving evidence of long-standing cultural relationships with their landscapes.",
-          "sourceIds": ["source-03", "source-19"]
-        },
-        {
-          "poiId": "cueva-de-las-manos",
-          "tier": "warm",
-          "text": "Both are UNESCO sites where cultural traditions are closely connected to a dramatic natural setting.",
-          "sourceIds": ["source-03", "source-14"]
-        },
-        {
-          "poiId": "dholavira",
-          "tier": "warm",
-          "text": "Both are UNESCO sites where environmental conditions shaped human use and cultural history.",
-          "sourceIds": ["source-03", "source-09"]
-        },
-        {
-          "poiId": "shibam",
-          "tier": "warm",
-          "text": "Both are UNESCO heritage places whose built or cultural traditions reflect adaptation to their environment.",
-          "sourceIds": ["source-03", "source-17"]
-        },
-        {
-          "poiId": "hadrian-s-villa",
-          "tier": "cold",
-          "text": "Both are large UNESCO properties combining designed spaces with notable natural surroundings.",
-          "sourceIds": ["source-03", "source-24"]
-        },
-        {
-          "poiId": "qutb-minar",
-          "tier": "cold",
-          "text": "Both are UNESCO attractions with strong cultural symbolism and substantial tourism.",
-          "sourceIds": ["source-03", "source-04"]
-        },
-        {
-          "poiId": "baroque-churches-of-the-philippines",
-          "tier": "cold",
-          "text": "Both are UNESCO properties where cultural traditions influenced the character of protected places.",
-          "sourceIds": ["source-03", "source-06"]
-        },
-        {
-          "poiId": "wooden-churches-of-the-slovak-carpathians",
-          "tier": "cold",
-          "text": "Both represent regional cultural traditions preserved through heritage designation.",
-          "sourceIds": ["source-03", "source-21"]
-        },
-        {
-          "poiId": "st-joseph-s-seminary-and-church",
-          "tier": "cold",
-          "text": "Both are UNESCO-associated sites with continuing religious significance.",
-          "sourceIds": ["source-03", "source-13"]
-        },
-        {
-          "poiId": "chinese-pavilion-at-drottningholm",
-          "tier": "cold",
-          "text": "Both are protected attractions set within landscaped grounds and associated with cultural traditions.",
+          "text": "University of Oxford Botanic Garden is a themed comparison candidate: Oxford Botanic Garden was founded in 1621 as a physic garden and continues as a distinct, maintained, publicly visitable botanical garden.",
           "sourceIds": ["source-03", "source-07"]
         },
         {
-          "poiId": "margravial-opera-house",
+          "poiId": "cambridge-university-botanic-garden",
           "tier": "cold",
-          "text": "Both are internationally recognized heritage attractions visited for distinctive cultural experiences.",
-          "sourceIds": ["source-03", "source-11"]
+          "text": "Cambridge University Botanic Garden is a themed comparison candidate: Cambridge University Botanic Garden was established in 1831 and opened at its current site in 1846, where it remains a maintained public botanic garden.",
+          "sourceIds": ["source-04", "source-07"]
         },
         {
-          "poiId": "terracotta-army",
-          "tier": "cold",
-          "text": "Both are major heritage attractions with ritual or cultural significance and substantial tourism.",
-          "sourceIds": ["source-03", "source-23"]
+          "poiId": "national-botanic-gardens-glasnevin",
+          "tier": "warm",
+          "text": "National Botanic Gardens of Ireland, Glasnevin is a themed comparison candidate: The National Botanic Gardens of Ireland at Glasnevin were founded in 1795 and remain a maintained, free public botanical garden within Dublin.",
+          "sourceIds": ["source-05", "source-07"]
         },
         {
-          "poiId": "hiroshima-peace-memorial",
-          "tier": "cold",
-          "text": "Both are UNESCO sites with strong public significance beyond their physical structures.",
-          "sourceIds": ["source-03", "source-02"]
+          "poiId": "jardin-des-plantes-montpellier",
+          "tier": "hot",
+          "text": "Jardin des plantes de Montpellier is a themed comparison candidate: Montpellier's Jardin des plantes was established in 1593 as a botanical and teaching garden and remains a visitable maintained garden in the city.",
+          "sourceIds": ["source-06", "source-07"]
         },
         {
-          "poiId": "soltaniyeh",
-          "tier": "cold",
-          "text": "Both are UNESCO sites shaped by historical religious and political traditions.",
-          "sourceIds": ["source-03", "source-16"]
+          "poiId": "jardin-des-plantes-paris",
+          "tier": "correct",
+          "text": "Jardin des Plantes is the round target: Paris's Jardin des Plantes originated as the Royal Garden of Medicinal Plants in 1626 and remains an officially named public botanical garden.",
+          "sourceIds": ["source-07"]
         },
         {
-          "poiId": "lincoln-school-madison-wisconsin",
+          "poiId": "botanical-garden-wroclaw",
           "tier": "cold",
-          "text": "Both are preserved heritage places associated with public access and historic significance.",
-          "sourceIds": ["source-03", "source-10"]
+          "text": "Botanical Garden of the University of Wrocław is a themed comparison candidate: Wrocław's university botanical garden was founded in 1811 and continues as a distinct maintained garden with a public entrance.",
+          "sourceIds": ["source-08", "source-07"]
         },
         {
-          "poiId": "estacio-del-nord-valencia",
+          "poiId": "ortobotanico-padua",
+          "tier": "hot",
+          "text": "Orto Botanico di Padova is a themed comparison candidate: Padua's Orto Botanico was founded in 1545 and survives as a named, maintained public botanical garden at its historic site.",
+          "sourceIds": ["source-09", "source-07"]
+        },
+        {
+          "poiId": "orto-botanico-pisa",
+          "tier": "warm",
+          "text": "Orto botanico di Pisa is a themed comparison candidate: Pisa's botanical garden was founded in 1544 and moved within Pisa before settling at its present site in the sixteenth century, where it remains public.",
+          "sourceIds": ["source-10", "source-07"]
+        },
+        {
+          "poiId": "orto-botanico-palermo",
           "tier": "cold",
-          "text": "Both are notable visitor destinations whose architecture or landscape contributes to local identity.",
-          "sourceIds": ["source-03", "source-15"]
+          "text": "Orto Botanico di Palermo is a themed comparison candidate: Palermo's Orto Botanico was established in 1789 and remains a large, named, maintained botanical garden open to ordinary visitors.",
+          "sourceIds": ["source-11", "source-07"]
+        },
+        {
+          "poiId": "orto-botanico-catania",
+          "tier": "cold",
+          "text": "Orto Botanico dell'Università di Catania is a themed comparison candidate: Catania's university botanical garden was founded in 1858 and continues as a distinct urban garden available for public visits.",
+          "sourceIds": ["source-12", "source-07"]
+        },
+        {
+          "poiId": "orto-botanico-rome",
+          "tier": "cold",
+          "text": "Orto Botanico di Roma is a themed comparison candidate: Rome's current Orto Botanico was established at the Villa Corsini site in 1883 and remains a maintained public botanical garden.",
+          "sourceIds": ["source-13", "source-07"]
+        },
+        {
+          "poiId": "orto-botanico-florence",
+          "tier": "warm",
+          "text": "Orto Botanico di Firenze is a themed comparison candidate: Florence's Orto Botanico, also called the Giardino dei Semplici, was founded in 1545 and remains a visitable maintained garden.",
+          "sourceIds": ["source-14", "source-07"]
+        },
+        {
+          "poiId": "real-jardin-botanico-madrid",
+          "tier": "warm",
+          "text": "Real Jardín Botánico de Madrid is a themed comparison candidate: Madrid's Royal Botanical Garden was founded in 1755 and moved to its current Paseo del Prado site in 1781, where it remains public.",
+          "sourceIds": ["source-15", "source-07"]
+        },
+        {
+          "poiId": "jardim-botanico-ajuda",
+          "tier": "cold",
+          "text": "Jardim Botânico da Ajuda is a themed comparison candidate: Ajuda Botanical Garden was established in 1768 and remains a distinct maintained botanical garden with public access in Lisbon.",
+          "sourceIds": ["source-16", "source-07"]
+        },
+        {
+          "poiId": "jardim-botanico-coimbra",
+          "tier": "warm",
+          "text": "Jardim Botânico da Universidade de Coimbra is a themed comparison candidate: The Botanical Garden of the University of Coimbra was founded in 1772 and remains a maintained, publicly visitable garden within Coimbra.",
+          "sourceIds": ["source-17", "source-07"]
+        },
+        {
+          "poiId": "copenhagen-botanical-garden",
+          "tier": "warm",
+          "text": "University of Copenhagen Botanical Garden is a themed comparison candidate: Copenhagen's botanical garden traces its institution to 1600 and has occupied its current garden site since 1874, remaining publicly accessible.",
+          "sourceIds": ["source-18", "source-07"]
+        },
+        {
+          "poiId": "oslo-botanical-garden",
+          "tier": "cold",
+          "text": "University of Oslo Botanical Garden is a themed comparison candidate: The University of Oslo Botanical Garden was founded in 1814 at Tøyen and remains a maintained public botanical garden in the city.",
+          "sourceIds": ["source-19", "source-07"]
+        },
+        {
+          "poiId": "tartu-botanical-garden",
+          "tier": "cold",
+          "text": "University of Tartu Botanical Garden is a themed comparison candidate: The University of Tartu Botanical Garden was founded in 1803 and continues as a maintained, publicly visitable garden within Tartu.",
+          "sourceIds": ["source-20", "source-07"]
+        },
+        {
+          "poiId": "dimitrie-brandza-botanical-garden",
+          "tier": "cold",
+          "text": "Dimitrie Brândză Botanical Garden is a themed comparison candidate: Bucharest's Dimitrie Brândză Botanical Garden was founded in 1891 and remains an individually named maintained botanical garden open to visitors.",
+          "sourceIds": ["source-21", "source-07"]
+        },
+        {
+          "poiId": "peter-the-great-botanical-garden",
+          "tier": "warm",
+          "text": "Botanical Garden of the Komarov Botanical Institute is a themed comparison candidate: The botanical garden on Saint Petersburg's Aptekarsky Island descends from the Apothecary Garden founded in 1714 and remains a visitable maintained garden.",
+          "sourceIds": ["source-22", "source-07"]
+        },
+        {
+          "poiId": "fomin-botanical-garden",
+          "tier": "cold",
+          "text": "O.V. Fomin Botanical Garden is a themed comparison candidate: Kyiv's O.V. Fomin Botanical Garden was established in 1839 and remains a distinct maintained botanical garden with regular visitor access.",
+          "sourceIds": ["source-23", "source-07"]
+        },
+        {
+          "poiId": "acharya-jagadish-chandra-bose-indian-botanic-garden",
+          "tier": "cold",
+          "text": "Acharya Jagadish Chandra Bose Indian Botanic Garden is a themed comparison candidate: The Indian Botanic Garden at Shibpur was established in 1787 and remains a maintained, ticketed botanical garden within the Howrah urban municipality.",
+          "sourceIds": ["source-24", "source-07"]
+        },
+        {
+          "poiId": "lalbagh-botanical-garden",
+          "tier": "cold",
+          "text": "Lalbagh Botanical Garden is a themed comparison candidate: Lalbagh Botanical Garden was begun in 1760 and remains a large, officially named and maintained public botanical garden in Bengaluru.",
+          "sourceIds": ["source-25", "source-07"]
         }
       ]
     },
     {
       "id": "round-4",
-      "targetPoiId": "qutb-minar",
+      "targetPoiId": "peter-the-great-botanical-garden",
       "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Qutb_Minar_2022.jpg/1280px-Qutb_Minar_2022.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Qutb Minar",
-        "attribution": "Wasir kasab · CC BY 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Spb_Aptekarsky_Island_Botanical_Garden_asv2019-09_img1.jpg/1280px-Spb_Aptekarsky_Island_Botanical_Garden_asv2019-09_img1.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Saint Petersburg Botanical Garden",
+        "attribution": "A.Savin · FAL",
+        "licenseUrl": "http://artlibre.org/licence/lal/en"
       },
       "clue": {
-        "text": "This UNESCO monument is a tapering brick minaret and victory tower begun in 1199, with fluted shafts, balconies, and a long spiral staircase.",
-        "sourceIds": ["source-04"]
+        "text": "Beginning as an Apothecary herb garden in 1714, this institution now occupies 18.9 hectares on an island and has 25 historic greenhouses, including one 23.5 metres high.",
+        "sourceIds": ["source-22"]
       },
       "results": [
         {
-          "poiId": "qutb-minar",
-          "tier": "correct",
-          "text": "Correct: a tapering brick minaret and victory tower begun in 1199, with fluting, balconies, and a spiral staircase.",
-          "sourceIds": ["source-04"]
+          "poiId": "kew-royal-botanic-gardens",
+          "tier": "warm",
+          "text": "Royal Botanic Gardens, Kew is a themed comparison candidate: The Royal Botanic Gardens at Kew developed as a botanical garden on its present site in the eighteenth and nineteenth centuries and is maintained as a major public garden.",
+          "sourceIds": ["source-01", "source-22"]
         },
         {
-          "poiId": "soltaniyeh",
+          "poiId": "chelsea-physic-garden",
           "tier": "hot",
-          "text": "Both are UNESCO monuments associated with Islamic-era dynasties and monumental architecture.",
-          "sourceIds": ["source-04", "source-16"]
+          "text": "Chelsea Physic Garden is a themed comparison candidate: Chelsea Physic Garden was founded in 1673 by the Society of Apothecaries at its surviving riverside site and remains open to ordinary visitors.",
+          "sourceIds": ["source-02", "source-22"]
         },
         {
-          "poiId": "st-joseph-s-seminary-and-church",
+          "poiId": "oxford-botanic-garden",
           "tier": "hot",
-          "text": "Both are UNESCO-associated religious monuments with strong architectural and historical significance.",
-          "sourceIds": ["source-04", "source-13"]
+          "text": "University of Oxford Botanic Garden is a themed comparison candidate: Oxford Botanic Garden was founded in 1621 as a physic garden and continues as a distinct, maintained, publicly visitable botanical garden.",
+          "sourceIds": ["source-03", "source-22"]
         },
         {
-          "poiId": "baroque-churches-of-the-philippines",
-          "tier": "hot",
-          "text": "Both are UNESCO religious heritage sites whose architecture reflects interaction between imported and local traditions.",
-          "sourceIds": ["source-04", "source-06"]
-        },
-        {
-          "poiId": "wooden-churches-of-the-slovak-carpathians",
-          "tier": "hot",
-          "text": "Both are UNESCO religious architecture sites representing distinctive regional building traditions.",
-          "sourceIds": ["source-04", "source-21"]
-        },
-        {
-          "poiId": "chogha-zanbil",
-          "tier": "warm",
-          "text": "Both feature monumental religious architecture and are UNESCO World Heritage Sites.",
-          "sourceIds": ["source-04", "source-01"]
-        },
-        {
-          "poiId": "shibam",
-          "tier": "warm",
-          "text": "Both are UNESCO heritage places known for striking vertical architecture and historic urban form.",
-          "sourceIds": ["source-04", "source-17"]
-        },
-        {
-          "poiId": "margravial-opera-house",
-          "tier": "warm",
-          "text": "Both are UNESCO monuments celebrated for elaborate historic architecture and preservation.",
-          "sourceIds": ["source-04", "source-11"]
-        },
-        {
-          "poiId": "hadrian-s-villa",
-          "tier": "warm",
-          "text": "Both are UNESCO sites containing ambitious monumental architecture from an earlier imperial era.",
-          "sourceIds": ["source-04", "source-24"]
-        },
-        {
-          "poiId": "chinese-pavilion-at-drottningholm",
-          "tier": "warm",
-          "text": "Both are UNESCO properties built as architecturally distinctive monuments with elaborate decoration.",
-          "sourceIds": ["source-04", "source-07"]
-        },
-        {
-          "poiId": "terracotta-army",
-          "tier": "warm",
-          "text": "Both are major heritage attractions connected with powerful rulers and monumental construction.",
-          "sourceIds": ["source-04", "source-23"]
-        },
-        {
-          "poiId": "dholavira",
-          "tier": "warm",
-          "text": "Both are UNESCO archaeological sites with planned monumental construction and historic urban remains.",
-          "sourceIds": ["source-04", "source-09"]
-        },
-        {
-          "poiId": "khirokitia",
-          "tier": "warm",
-          "text": "Both preserve significant architectural evidence of earlier societies and have UNESCO status.",
-          "sourceIds": ["source-04", "source-19"]
-        },
-        {
-          "poiId": "cueva-de-las-manos",
+          "poiId": "cambridge-university-botanic-garden",
           "tier": "cold",
-          "text": "Both are UNESCO cultural sites preserving distinctive evidence of past human activity.",
-          "sourceIds": ["source-04", "source-14"]
-        },
-        {
-          "poiId": "hiroshima-peace-memorial",
-          "tier": "cold",
-          "text": "Both are UNESCO monuments whose physical form carries strong historical symbolism.",
-          "sourceIds": ["source-04", "source-02"]
-        },
-        {
-          "poiId": "tongariro-national-park",
-          "tier": "cold",
-          "text": "Both are UNESCO sites with major cultural and religious significance.",
-          "sourceIds": ["source-04", "source-03"]
-        },
-        {
-          "poiId": "table-mountain",
-          "tier": "cold",
-          "text": "Both are prominent heritage attractions defined by a striking vertical or elevated profile.",
-          "sourceIds": ["source-04", "source-05"]
-        },
-        {
-          "poiId": "phong-nha-ke-bang-national-park",
-          "tier": "cold",
-          "text": "Both are UNESCO attractions notable for distinctive geological or architectural forms.",
-          "sourceIds": ["source-04", "source-18"]
-        },
-        {
-          "poiId": "pirin-national-park",
-          "tier": "cold",
-          "text": "Both are UNESCO sites with dramatic elevated features and substantial visitor interest.",
-          "sourceIds": ["source-04", "source-20"]
-        },
-        {
-          "poiId": "west-norwegian-fjords",
-          "tier": "cold",
-          "text": "Both are UNESCO properties recognized for dramatic vertical scenery.",
-          "sourceIds": ["source-04", "source-08"]
-        },
-        {
-          "poiId": "great-barrier-reef",
-          "tier": "cold",
-          "text": "Both are major UNESCO attractions with distinctive large-scale structures and tourism.",
+          "text": "Cambridge University Botanic Garden is a themed comparison candidate: Cambridge University Botanic Garden was established in 1831 and opened at its current site in 1846, where it remains a maintained public botanic garden.",
           "sourceIds": ["source-04", "source-22"]
         },
         {
-          "poiId": "rio-platano-biosphere-reserve",
-          "tier": "cold",
-          "text": "Both are UNESCO properties requiring conservation of culturally and environmentally important places.",
-          "sourceIds": ["source-04", "source-25"]
+          "poiId": "national-botanic-gardens-glasnevin",
+          "tier": "warm",
+          "text": "National Botanic Gardens of Ireland, Glasnevin is a themed comparison candidate: The National Botanic Gardens of Ireland at Glasnevin were founded in 1795 and remain a maintained, free public botanical garden within Dublin.",
+          "sourceIds": ["source-05", "source-22"]
         },
         {
-          "poiId": "salar-de-uyuni",
-          "tier": "cold",
-          "text": "Both are visually distinctive heritage attractions with strong tourism appeal.",
-          "sourceIds": ["source-04", "source-12"]
+          "poiId": "jardin-des-plantes-montpellier",
+          "tier": "warm",
+          "text": "Jardin des plantes de Montpellier is a themed comparison candidate: Montpellier's Jardin des plantes was established in 1593 as a botanical and teaching garden and remains a visitable maintained garden in the city.",
+          "sourceIds": ["source-06", "source-22"]
         },
         {
-          "poiId": "lincoln-school-madison-wisconsin",
-          "tier": "cold",
-          "text": "Both are recognized historic buildings distinguished by their architectural design.",
-          "sourceIds": ["source-04", "source-10"]
+          "poiId": "jardin-des-plantes-paris",
+          "tier": "hot",
+          "text": "Jardin des Plantes is a themed comparison candidate: Paris's Jardin des Plantes originated as the Royal Garden of Medicinal Plants in 1626 and remains an officially named public botanical garden.",
+          "sourceIds": ["source-07", "source-22"]
         },
         {
-          "poiId": "estacio-del-nord-valencia",
+          "poiId": "botanical-garden-wroclaw",
+          "tier": "warm",
+          "text": "Botanical Garden of the University of Wrocław is a themed comparison candidate: Wrocław's university botanical garden was founded in 1811 and continues as a distinct maintained garden with a public entrance.",
+          "sourceIds": ["source-08", "source-22"]
+        },
+        {
+          "poiId": "ortobotanico-padua",
+          "tier": "hot",
+          "text": "Orto Botanico di Padova is a themed comparison candidate: Padua's Orto Botanico was founded in 1545 and survives as a named, maintained public botanical garden at its historic site.",
+          "sourceIds": ["source-09", "source-22"]
+        },
+        {
+          "poiId": "orto-botanico-pisa",
           "tier": "cold",
-          "text": "Both are prominent civic structures recognized for distinctive architecture and historic importance.",
-          "sourceIds": ["source-04", "source-15"]
+          "text": "Orto botanico di Pisa is a themed comparison candidate: Pisa's botanical garden was founded in 1544 and moved within Pisa before settling at its present site in the sixteenth century, where it remains public.",
+          "sourceIds": ["source-10", "source-22"]
+        },
+        {
+          "poiId": "orto-botanico-palermo",
+          "tier": "cold",
+          "text": "Orto Botanico di Palermo is a themed comparison candidate: Palermo's Orto Botanico was established in 1789 and remains a large, named, maintained botanical garden open to ordinary visitors.",
+          "sourceIds": ["source-11", "source-22"]
+        },
+        {
+          "poiId": "orto-botanico-catania",
+          "tier": "cold",
+          "text": "Orto Botanico dell'Università di Catania is a themed comparison candidate: Catania's university botanical garden was founded in 1858 and continues as a distinct urban garden available for public visits.",
+          "sourceIds": ["source-12", "source-22"]
+        },
+        {
+          "poiId": "orto-botanico-rome",
+          "tier": "cold",
+          "text": "Orto Botanico di Roma is a themed comparison candidate: Rome's current Orto Botanico was established at the Villa Corsini site in 1883 and remains a maintained public botanical garden.",
+          "sourceIds": ["source-13", "source-22"]
+        },
+        {
+          "poiId": "orto-botanico-florence",
+          "tier": "cold",
+          "text": "Orto Botanico di Firenze is a themed comparison candidate: Florence's Orto Botanico, also called the Giardino dei Semplici, was founded in 1545 and remains a visitable maintained garden.",
+          "sourceIds": ["source-14", "source-22"]
+        },
+        {
+          "poiId": "real-jardin-botanico-madrid",
+          "tier": "warm",
+          "text": "Real Jardín Botánico de Madrid is a themed comparison candidate: Madrid's Royal Botanical Garden was founded in 1755 and moved to its current Paseo del Prado site in 1781, where it remains public.",
+          "sourceIds": ["source-15", "source-22"]
+        },
+        {
+          "poiId": "jardim-botanico-ajuda",
+          "tier": "cold",
+          "text": "Jardim Botânico da Ajuda is a themed comparison candidate: Ajuda Botanical Garden was established in 1768 and remains a distinct maintained botanical garden with public access in Lisbon.",
+          "sourceIds": ["source-16", "source-22"]
+        },
+        {
+          "poiId": "jardim-botanico-coimbra",
+          "tier": "warm",
+          "text": "Jardim Botânico da Universidade de Coimbra is a themed comparison candidate: The Botanical Garden of the University of Coimbra was founded in 1772 and remains a maintained, publicly visitable garden within Coimbra.",
+          "sourceIds": ["source-17", "source-22"]
+        },
+        {
+          "poiId": "copenhagen-botanical-garden",
+          "tier": "warm",
+          "text": "University of Copenhagen Botanical Garden is a themed comparison candidate: Copenhagen's botanical garden traces its institution to 1600 and has occupied its current garden site since 1874, remaining publicly accessible.",
+          "sourceIds": ["source-18", "source-22"]
+        },
+        {
+          "poiId": "oslo-botanical-garden",
+          "tier": "cold",
+          "text": "University of Oslo Botanical Garden is a themed comparison candidate: The University of Oslo Botanical Garden was founded in 1814 at Tøyen and remains a maintained public botanical garden in the city.",
+          "sourceIds": ["source-19", "source-22"]
+        },
+        {
+          "poiId": "tartu-botanical-garden",
+          "tier": "cold",
+          "text": "University of Tartu Botanical Garden is a themed comparison candidate: The University of Tartu Botanical Garden was founded in 1803 and continues as a maintained, publicly visitable garden within Tartu.",
+          "sourceIds": ["source-20", "source-22"]
+        },
+        {
+          "poiId": "dimitrie-brandza-botanical-garden",
+          "tier": "cold",
+          "text": "Dimitrie Brândză Botanical Garden is a themed comparison candidate: Bucharest's Dimitrie Brândză Botanical Garden was founded in 1891 and remains an individually named maintained botanical garden open to visitors.",
+          "sourceIds": ["source-21", "source-22"]
+        },
+        {
+          "poiId": "peter-the-great-botanical-garden",
+          "tier": "correct",
+          "text": "Botanical Garden of the Komarov Botanical Institute is the round target: The botanical garden on Saint Petersburg's Aptekarsky Island descends from the Apothecary Garden founded in 1714 and remains a visitable maintained garden.",
+          "sourceIds": ["source-22"]
+        },
+        {
+          "poiId": "fomin-botanical-garden",
+          "tier": "warm",
+          "text": "O.V. Fomin Botanical Garden is a themed comparison candidate: Kyiv's O.V. Fomin Botanical Garden was established in 1839 and remains a distinct maintained botanical garden with regular visitor access.",
+          "sourceIds": ["source-23", "source-22"]
+        },
+        {
+          "poiId": "acharya-jagadish-chandra-bose-indian-botanic-garden",
+          "tier": "cold",
+          "text": "Acharya Jagadish Chandra Bose Indian Botanic Garden is a themed comparison candidate: The Indian Botanic Garden at Shibpur was established in 1787 and remains a maintained, ticketed botanical garden within the Howrah urban municipality.",
+          "sourceIds": ["source-24", "source-22"]
+        },
+        {
+          "poiId": "lalbagh-botanical-garden",
+          "tier": "cold",
+          "text": "Lalbagh Botanical Garden is a themed comparison candidate: Lalbagh Botanical Garden was begun in 1760 and remains a large, officially named and maintained public botanical garden in Bengaluru.",
+          "sourceIds": ["source-25", "source-22"]
         }
       ]
     },
     {
       "id": "round-5",
-      "targetPoiId": "table-mountain",
+      "targetPoiId": "acharya-jagadish-chandra-bose-indian-botanic-garden",
       "image": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Table_Mountain_DanieVDM.jpg/1280px-Table_Mountain_DanieVDM.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "alt": "Table Mountain",
-        "attribution": "Danie van der Merwe from Cape Town, South Africa · CC BY 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Kolkata_botanical_garden_pathway.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Acharya Jagadish Chandra Bose Indian Botanic Garden",
+        "attribution": "Jeroje at English Wikipedia. · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
       },
       "clue": {
-        "text": "This flat-topped mountain rises about a kilometre above the surrounding city, is reached by cableway or steep trails, and supports exceptionally rich endemic fynbos.",
-        "sourceIds": ["source-05"]
+        "text": "Authorized by a trading company in 1787 to develop commercially useful crops, this 109-hectare garden helped introduce Chinese tea and contains a banyan measured at over 330 metres in circumference.",
+        "sourceIds": ["source-24"]
       },
       "results": [
         {
-          "poiId": "table-mountain",
-          "tier": "correct",
-          "text": "Correct: a flat-topped mountain with a cableway, steep hiking routes, and exceptionally rich endemic fynbos.",
-          "sourceIds": ["source-05"]
-        },
-        {
-          "poiId": "tongariro-national-park",
+          "poiId": "kew-royal-botanic-gardens",
           "tier": "hot",
-          "text": "Both are major protected mountain attractions offering hiking and distinctive native ecosystems.",
-          "sourceIds": ["source-05", "source-03"]
+          "text": "Royal Botanic Gardens, Kew is a themed comparison candidate: The Royal Botanic Gardens at Kew developed as a botanical garden on its present site in the eighteenth and nineteenth centuries and is maintained as a major public garden.",
+          "sourceIds": ["source-01", "source-24"]
         },
         {
-          "poiId": "pirin-national-park",
-          "tier": "hot",
-          "text": "Both are protected mountain landscapes with high peaks, hiking, and diverse flora and fauna.",
-          "sourceIds": ["source-05", "source-20"]
-        },
-        {
-          "poiId": "west-norwegian-fjords",
-          "tier": "hot",
-          "text": "Both are UNESCO natural landscapes characterized by dramatic mountainous scenery and tourism.",
-          "sourceIds": ["source-05", "source-08"]
-        },
-        {
-          "poiId": "phong-nha-ke-bang-national-park",
-          "tier": "hot",
-          "text": "Both protect distinctive natural landforms and rich biodiversity under UNESCO recognition.",
-          "sourceIds": ["source-05", "source-18"]
-        },
-        {
-          "poiId": "great-barrier-reef",
-          "tier": "warm",
-          "text": "Both are major UNESCO natural attractions supporting exceptional biodiversity and extensive tourism.",
-          "sourceIds": ["source-05", "source-22"]
-        },
-        {
-          "poiId": "rio-platano-biosphere-reserve",
-          "tier": "warm",
-          "text": "Both are large protected natural areas with high biodiversity and conservation pressures.",
-          "sourceIds": ["source-05", "source-25"]
-        },
-        {
-          "poiId": "salar-de-uyuni",
-          "tier": "warm",
-          "text": "Both are visually striking natural landscapes that attract visitors and have distinctive geology.",
-          "sourceIds": ["source-05", "source-12"]
-        },
-        {
-          "poiId": "chogha-zanbil",
-          "tier": "warm",
-          "text": "Both are prominent heritage attractions with distinctive physical forms and strong tourism interest.",
-          "sourceIds": ["source-05", "source-01"]
-        },
-        {
-          "poiId": "khirokitia",
-          "tier": "warm",
-          "text": "Both are UNESCO sites situated in distinctive landscapes and valued for preserved heritage.",
-          "sourceIds": ["source-05", "source-19"]
-        },
-        {
-          "poiId": "cueva-de-las-manos",
-          "tier": "warm",
-          "text": "Both are protected sites where natural terrain frames an important cultural attraction.",
-          "sourceIds": ["source-05", "source-14"]
-        },
-        {
-          "poiId": "dholavira",
-          "tier": "warm",
-          "text": "Both are heritage attractions whose environmental setting is central to understanding the site.",
-          "sourceIds": ["source-05", "source-09"]
-        },
-        {
-          "poiId": "shibam",
-          "tier": "warm",
-          "text": "Both are visually distinctive heritage places strongly shaped by their surrounding environment.",
-          "sourceIds": ["source-05", "source-17"]
-        },
-        {
-          "poiId": "qutb-minar",
+          "poiId": "chelsea-physic-garden",
           "tier": "cold",
-          "text": "Both are prominent tourist landmarks recognized for an immediately distinctive silhouette.",
-          "sourceIds": ["source-05", "source-04"]
+          "text": "Chelsea Physic Garden is a themed comparison candidate: Chelsea Physic Garden was founded in 1673 by the Society of Apothecaries at its surviving riverside site and remains open to ordinary visitors.",
+          "sourceIds": ["source-02", "source-24"]
         },
         {
-          "poiId": "hadrian-s-villa",
+          "poiId": "oxford-botanic-garden",
+          "tier": "warm",
+          "text": "University of Oxford Botanic Garden is a themed comparison candidate: Oxford Botanic Garden was founded in 1621 as a physic garden and continues as a distinct, maintained, publicly visitable botanical garden.",
+          "sourceIds": ["source-03", "source-24"]
+        },
+        {
+          "poiId": "cambridge-university-botanic-garden",
           "tier": "cold",
-          "text": "Both are extensive attractions combining designed spaces with gardens or natural surroundings.",
+          "text": "Cambridge University Botanic Garden is a themed comparison candidate: Cambridge University Botanic Garden was established in 1831 and opened at its current site in 1846, where it remains a maintained public botanic garden.",
+          "sourceIds": ["source-04", "source-24"]
+        },
+        {
+          "poiId": "national-botanic-gardens-glasnevin",
+          "tier": "warm",
+          "text": "National Botanic Gardens of Ireland, Glasnevin is a themed comparison candidate: The National Botanic Gardens of Ireland at Glasnevin were founded in 1795 and remain a maintained, free public botanical garden within Dublin.",
           "sourceIds": ["source-05", "source-24"]
         },
         {
-          "poiId": "margravial-opera-house",
-          "tier": "cold",
-          "text": "Both are major visitor attractions recognized for distinctive visual and cultural character.",
-          "sourceIds": ["source-05", "source-11"]
+          "poiId": "jardin-des-plantes-montpellier",
+          "tier": "warm",
+          "text": "Jardin des plantes de Montpellier is a themed comparison candidate: Montpellier's Jardin des plantes was established in 1593 as a botanical and teaching garden and remains a visitable maintained garden in the city.",
+          "sourceIds": ["source-06", "source-24"]
         },
         {
-          "poiId": "chinese-pavilion-at-drottningholm",
-          "tier": "cold",
-          "text": "Both are notable attractions set within landscaped environments and valued for visual design.",
-          "sourceIds": ["source-05", "source-07"]
+          "poiId": "jardin-des-plantes-paris",
+          "tier": "hot",
+          "text": "Jardin des Plantes is a themed comparison candidate: Paris's Jardin des Plantes originated as the Royal Garden of Medicinal Plants in 1626 and remains an officially named public botanical garden.",
+          "sourceIds": ["source-07", "source-24"]
         },
         {
-          "poiId": "baroque-churches-of-the-philippines",
+          "poiId": "botanical-garden-wroclaw",
           "tier": "cold",
-          "text": "Both are heritage attractions whose distinctive forms contribute to regional identity.",
-          "sourceIds": ["source-05", "source-06"]
+          "text": "Botanical Garden of the University of Wrocław is a themed comparison candidate: Wrocław's university botanical garden was founded in 1811 and continues as a distinct maintained garden with a public entrance.",
+          "sourceIds": ["source-08", "source-24"]
         },
         {
-          "poiId": "wooden-churches-of-the-slovak-carpathians",
-          "tier": "cold",
-          "text": "Both preserve distinctive regional heritage and attract visitors for their unusual appearance.",
-          "sourceIds": ["source-05", "source-21"]
+          "poiId": "ortobotanico-padua",
+          "tier": "warm",
+          "text": "Orto Botanico di Padova is a themed comparison candidate: Padua's Orto Botanico was founded in 1545 and survives as a named, maintained public botanical garden at its historic site.",
+          "sourceIds": ["source-09", "source-24"]
         },
         {
-          "poiId": "st-joseph-s-seminary-and-church",
-          "tier": "cold",
-          "text": "Both are protected attractions with strong cultural significance and visitor interest.",
-          "sourceIds": ["source-05", "source-13"]
+          "poiId": "orto-botanico-pisa",
+          "tier": "warm",
+          "text": "Orto botanico di Pisa is a themed comparison candidate: Pisa's botanical garden was founded in 1544 and moved within Pisa before settling at its present site in the sixteenth century, where it remains public.",
+          "sourceIds": ["source-10", "source-24"]
         },
         {
-          "poiId": "terracotta-army",
-          "tier": "cold",
-          "text": "Both are highly visited heritage attractions with distinctive visual presentation.",
-          "sourceIds": ["source-05", "source-23"]
+          "poiId": "orto-botanico-palermo",
+          "tier": "warm",
+          "text": "Orto Botanico di Palermo is a themed comparison candidate: Palermo's Orto Botanico was established in 1789 and remains a large, named, maintained botanical garden open to ordinary visitors.",
+          "sourceIds": ["source-11", "source-24"]
         },
         {
-          "poiId": "hiroshima-peace-memorial",
+          "poiId": "orto-botanico-catania",
           "tier": "cold",
-          "text": "Both are prominent landmarks attracting visitors because of their powerful symbolic significance.",
-          "sourceIds": ["source-05", "source-02"]
+          "text": "Orto Botanico dell'Università di Catania is a themed comparison candidate: Catania's university botanical garden was founded in 1858 and continues as a distinct urban garden available for public visits.",
+          "sourceIds": ["source-12", "source-24"]
         },
         {
-          "poiId": "soltaniyeh",
+          "poiId": "orto-botanico-rome",
           "tier": "cold",
-          "text": "Both are heritage attractions with distinctive large-scale forms and historical importance.",
-          "sourceIds": ["source-05", "source-16"]
+          "text": "Orto Botanico di Roma is a themed comparison candidate: Rome's current Orto Botanico was established at the Villa Corsini site in 1883 and remains a maintained public botanical garden.",
+          "sourceIds": ["source-13", "source-24"]
         },
         {
-          "poiId": "lincoln-school-madison-wisconsin",
+          "poiId": "orto-botanico-florence",
           "tier": "cold",
-          "text": "Both are recognizable landmarks preserved for architectural and local historical significance.",
-          "sourceIds": ["source-05", "source-10"]
+          "text": "Orto Botanico di Firenze is a themed comparison candidate: Florence's Orto Botanico, also called the Giardino dei Semplici, was founded in 1545 and remains a visitable maintained garden.",
+          "sourceIds": ["source-14", "source-24"]
         },
         {
-          "poiId": "estacio-del-nord-valencia",
+          "poiId": "real-jardin-botanico-madrid",
+          "tier": "warm",
+          "text": "Real Jardín Botánico de Madrid is a themed comparison candidate: Madrid's Royal Botanical Garden was founded in 1755 and moved to its current Paseo del Prado site in 1781, where it remains public.",
+          "sourceIds": ["source-15", "source-24"]
+        },
+        {
+          "poiId": "jardim-botanico-ajuda",
+          "tier": "warm",
+          "text": "Jardim Botânico da Ajuda is a themed comparison candidate: Ajuda Botanical Garden was established in 1768 and remains a distinct maintained botanical garden with public access in Lisbon.",
+          "sourceIds": ["source-16", "source-24"]
+        },
+        {
+          "poiId": "jardim-botanico-coimbra",
           "tier": "cold",
-          "text": "Both are prominent landmarks whose distinctive design contributes to the identity of a city or region.",
-          "sourceIds": ["source-05", "source-15"]
+          "text": "Jardim Botânico da Universidade de Coimbra is a themed comparison candidate: The Botanical Garden of the University of Coimbra was founded in 1772 and remains a maintained, publicly visitable garden within Coimbra.",
+          "sourceIds": ["source-17", "source-24"]
+        },
+        {
+          "poiId": "copenhagen-botanical-garden",
+          "tier": "cold",
+          "text": "University of Copenhagen Botanical Garden is a themed comparison candidate: Copenhagen's botanical garden traces its institution to 1600 and has occupied its current garden site since 1874, remaining publicly accessible.",
+          "sourceIds": ["source-18", "source-24"]
+        },
+        {
+          "poiId": "oslo-botanical-garden",
+          "tier": "cold",
+          "text": "University of Oslo Botanical Garden is a themed comparison candidate: The University of Oslo Botanical Garden was founded in 1814 at Tøyen and remains a maintained public botanical garden in the city.",
+          "sourceIds": ["source-19", "source-24"]
+        },
+        {
+          "poiId": "tartu-botanical-garden",
+          "tier": "cold",
+          "text": "University of Tartu Botanical Garden is a themed comparison candidate: The University of Tartu Botanical Garden was founded in 1803 and continues as a maintained, publicly visitable garden within Tartu.",
+          "sourceIds": ["source-20", "source-24"]
+        },
+        {
+          "poiId": "dimitrie-brandza-botanical-garden",
+          "tier": "cold",
+          "text": "Dimitrie Brândză Botanical Garden is a themed comparison candidate: Bucharest's Dimitrie Brândză Botanical Garden was founded in 1891 and remains an individually named maintained botanical garden open to visitors.",
+          "sourceIds": ["source-21", "source-24"]
+        },
+        {
+          "poiId": "peter-the-great-botanical-garden",
+          "tier": "hot",
+          "text": "Botanical Garden of the Komarov Botanical Institute is a themed comparison candidate: The botanical garden on Saint Petersburg's Aptekarsky Island descends from the Apothecary Garden founded in 1714 and remains a visitable maintained garden.",
+          "sourceIds": ["source-22", "source-24"]
+        },
+        {
+          "poiId": "fomin-botanical-garden",
+          "tier": "cold",
+          "text": "O.V. Fomin Botanical Garden is a themed comparison candidate: Kyiv's O.V. Fomin Botanical Garden was established in 1839 and remains a distinct maintained botanical garden with regular visitor access.",
+          "sourceIds": ["source-23", "source-24"]
+        },
+        {
+          "poiId": "acharya-jagadish-chandra-bose-indian-botanic-garden",
+          "tier": "correct",
+          "text": "Acharya Jagadish Chandra Bose Indian Botanic Garden is the round target: The Indian Botanic Garden at Shibpur was established in 1787 and remains a maintained, ticketed botanical garden within the Howrah urban municipality.",
+          "sourceIds": ["source-24"]
+        },
+        {
+          "poiId": "lalbagh-botanical-garden",
+          "tier": "hot",
+          "text": "Lalbagh Botanical Garden is a themed comparison candidate: Lalbagh Botanical Garden was begun in 1760 and remains a large, officially named and maintained public botanical garden in Bengaluru.",
+          "sourceIds": ["source-25", "source-24"]
         }
       ]
     }
@@ -1240,153 +1220,183 @@
   "sources": [
     {
       "id": "source-01",
-      "title": "Chogha Zanbil",
-      "url": "https://en.wikipedia.org/wiki/Chogha_Zanbil",
-      "retrievedAt": "2026-08-14T22:48:06.401Z"
+      "title": "Royal Botanic Gardens, Kew",
+      "url": "https://en.wikipedia.org/wiki/Royal_Botanic_Gardens,_Kew",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
     },
     {
       "id": "source-02",
-      "title": "Hiroshima Peace Memorial",
-      "url": "https://en.wikipedia.org/wiki/Hiroshima_Peace_Memorial",
-      "retrievedAt": "2026-08-14T22:48:21.462Z"
+      "title": "Chelsea Physic Garden",
+      "url": "https://en.wikipedia.org/wiki/Chelsea_Physic_Garden",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
     },
     {
       "id": "source-03",
-      "title": "Tongariro National Park",
-      "url": "https://en.wikipedia.org/wiki/Tongariro_National_Park",
-      "retrievedAt": "2026-08-14T22:47:35.799Z"
+      "title": "University of Oxford Botanic Garden",
+      "url": "https://en.wikipedia.org/wiki/University_of_Oxford_Botanic_Garden",
+      "retrievedAt": "2026-08-18T02:56:01.048Z",
+      "provenance": "verified"
     },
     {
       "id": "source-04",
-      "title": "Qutb Minar",
-      "url": "https://en.wikipedia.org/wiki/Qutb_Minar",
-      "retrievedAt": "2026-08-14T22:49:04.872Z"
+      "title": "Cambridge University Botanic Garden",
+      "url": "https://en.wikipedia.org/wiki/Cambridge_University_Botanic_Garden",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
     },
     {
       "id": "source-05",
-      "title": "Table Mountain",
-      "url": "https://en.wikipedia.org/wiki/Table_Mountain",
-      "retrievedAt": "2026-08-14T22:47:28.037Z"
+      "title": "National Botanic Gardens of Ireland",
+      "url": "https://en.wikipedia.org/wiki/National_Botanic_Gardens_of_Ireland",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
     },
     {
       "id": "source-06",
-      "title": "Baroque Churches of the Philippines",
-      "url": "https://en.wikipedia.org/wiki/Baroque_Churches_of_the_Philippines",
-      "retrievedAt": "2026-08-14T22:48:04.839Z"
+      "title": "Jardin des plantes de Montpellier",
+      "url": "https://en.wikipedia.org/wiki/Jardin_des_plantes_de_Montpellier",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
     },
     {
       "id": "source-07",
-      "title": "Chinese Pavilion at Drottningholm",
-      "url": "https://en.wikipedia.org/wiki/Chinese_Pavilion_at_Drottningholm",
-      "retrievedAt": "2026-08-14T22:48:14.757Z"
+      "title": "Jardin des Plantes",
+      "url": "https://en.wikipedia.org/wiki/Jardin_des_Plantes",
+      "retrievedAt": "2026-08-18T02:56:00.990Z",
+      "provenance": "verified"
     },
     {
       "id": "source-08",
-      "title": "West Norwegian Fjords",
-      "url": "https://en.wikipedia.org/wiki/West_Norwegian_Fjords",
-      "retrievedAt": "2026-08-14T22:47:37.044Z"
+      "title": "Botanical Garden of the University of Wrocław",
+      "url": "https://en.wikipedia.org/wiki/Botanical_Garden_of_the_University_of_Wroc%C5%82aw",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
     },
     {
       "id": "source-09",
-      "title": "Dholavira",
-      "url": "https://en.wikipedia.org/wiki/Dholavira",
-      "retrievedAt": "2026-08-14T22:48:12.364Z"
+      "title": "Orto botanico di Padova",
+      "url": "https://en.wikipedia.org/wiki/Orto_botanico_di_Padova",
+      "retrievedAt": "2026-08-18T02:56:01.090Z",
+      "provenance": "verified"
     },
     {
       "id": "source-10",
-      "title": "Lincoln School (Madison, Wisconsin)",
-      "url": "https://en.wikipedia.org/wiki/Lincoln_School_(Madison,_Wisconsin)",
-      "retrievedAt": "2026-08-14T22:48:15.321Z"
+      "title": "Orto botanico di Pisa",
+      "url": "https://en.wikipedia.org/wiki/Orto_botanico_di_Pisa",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
     },
     {
       "id": "source-11",
-      "title": "Margravial Opera House",
-      "url": "https://en.wikipedia.org/wiki/Margravial_Opera_House",
-      "retrievedAt": "2026-08-14T22:48:01.413Z"
+      "title": "Orto botanico di Palermo",
+      "url": "https://en.wikipedia.org/wiki/Orto_botanico_di_Palermo",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
     },
     {
       "id": "source-12",
-      "title": "Salar de Uyuni",
-      "url": "https://en.wikipedia.org/wiki/Salar_de_Uyuni",
-      "retrievedAt": "2026-08-14T22:47:26.894Z"
+      "title": "Orto botanico dell'Università di Catania",
+      "url": "https://en.wikipedia.org/wiki/Orto_botanico_dell%27Universit%C3%A0_di_Catania",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
     },
     {
       "id": "source-13",
-      "title": "St. Joseph's Seminary and Church",
-      "url": "https://en.wikipedia.org/wiki/St._Joseph%27s_Seminary_and_Church",
-      "retrievedAt": "2026-08-14T22:48:07.591Z"
+      "title": "Orto botanico di Roma",
+      "url": "https://en.wikipedia.org/wiki/Orto_botanico_di_Roma",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
     },
     {
       "id": "source-14",
-      "title": "Cueva de las Manos",
-      "url": "https://en.wikipedia.org/wiki/Cueva_de_las_Manos",
-      "retrievedAt": "2026-08-14T22:47:37.419Z"
+      "title": "Orto botanico di Firenze",
+      "url": "https://en.wikipedia.org/wiki/Orto_botanico_di_Firenze",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
     },
     {
       "id": "source-15",
-      "title": "Estació del Nord (Valencia)",
-      "url": "https://en.wikipedia.org/wiki/Estaci%C3%B3_del_Nord_(Valencia)",
-      "retrievedAt": "2026-08-14T22:47:37.365Z"
+      "title": "Royal Botanical Garden of Madrid",
+      "url": "https://en.wikipedia.org/wiki/Royal_Botanical_Garden_of_Madrid",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
     },
     {
       "id": "source-16",
-      "title": "Soltaniyeh",
-      "url": "https://en.wikipedia.org/wiki/Soltaniyeh",
-      "retrievedAt": "2026-08-14T22:49:01.651Z"
+      "title": "Ajuda Botanical Garden",
+      "url": "https://en.wikipedia.org/wiki/Ajuda_Botanical_Garden",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
     },
     {
       "id": "source-17",
-      "title": "Shibam",
-      "url": "https://en.wikipedia.org/wiki/Shibam",
-      "retrievedAt": "2026-08-14T22:49:11.487Z"
+      "title": "Botanical Garden of the University of Coimbra",
+      "url": "https://en.wikipedia.org/wiki/Botanical_Garden_of_the_University_of_Coimbra",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
     },
     {
       "id": "source-18",
-      "title": "Phong Nha–Kẻ Bàng National Park",
-      "url": "https://en.wikipedia.org/wiki/Phong_Nha%E2%80%93K%E1%BA%BB_B%C3%A0ng_National_Park",
-      "retrievedAt": "2026-08-14T22:49:04.821Z"
+      "title": "University of Copenhagen Botanical Garden",
+      "url": "https://en.wikipedia.org/wiki/University_of_Copenhagen_Botanical_Garden",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
     },
     {
       "id": "source-19",
-      "title": "Khirokitia",
-      "url": "https://en.wikipedia.org/wiki/Khirokitia",
-      "retrievedAt": "2026-08-14T22:49:01.062Z"
+      "title": "University of Oslo Botanical Garden",
+      "url": "https://en.wikipedia.org/wiki/University_of_Oslo_Botanical_Garden",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
     },
     {
       "id": "source-20",
-      "title": "Pirin National Park",
-      "url": "https://en.wikipedia.org/wiki/Pirin_National_Park",
-      "retrievedAt": "2026-08-14T22:48:15.368Z"
+      "title": "University of Tartu Botanical Gardens",
+      "url": "https://en.wikipedia.org/wiki/University_of_Tartu_Botanical_Gardens",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
     },
     {
       "id": "source-21",
-      "title": "Wooden churches of the Slovak Carpathians",
-      "url": "https://en.wikipedia.org/wiki/Wooden_churches_of_the_Slovak_Carpathians",
-      "retrievedAt": "2026-08-14T22:47:50.347Z"
+      "title": "Dimitrie Brândză Botanical Garden",
+      "url": "https://en.wikipedia.org/wiki/Dimitrie_Br%C3%A2ndz%C4%83_Botanical_Garden",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
     },
     {
       "id": "source-22",
-      "title": "Great Barrier Reef",
-      "url": "https://en.wikipedia.org/wiki/Great_Barrier_Reef",
-      "retrievedAt": "2026-08-14T22:47:30.250Z"
+      "title": "Saint Petersburg Botanical Garden",
+      "url": "https://en.wikipedia.org/wiki/Saint_Petersburg_Botanical_Garden",
+      "retrievedAt": "2026-08-18T02:56:00.426Z",
+      "provenance": "verified"
     },
     {
       "id": "source-23",
-      "title": "Terracotta Army",
-      "url": "https://en.wikipedia.org/wiki/Terracotta_Army",
-      "retrievedAt": "2026-08-14T22:47:29.330Z"
+      "title": "O.V. Fomin Botanical Garden",
+      "url": "https://en.wikipedia.org/wiki/O.V._Fomin_Botanical_Garden",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
     },
     {
       "id": "source-24",
-      "title": "Hadrian's Villa",
-      "url": "https://en.wikipedia.org/wiki/Hadrian%27s_Villa",
-      "retrievedAt": "2026-08-14T22:47:52.684Z"
+      "title": "Acharya Jagadish Chandra Bose Indian Botanic Garden",
+      "url": "https://en.wikipedia.org/wiki/Acharya_Jagadish_Chandra_Bose_Indian_Botanic_Garden",
+      "retrievedAt": "2026-08-18T02:56:01.051Z",
+      "provenance": "verified"
     },
     {
       "id": "source-25",
-      "title": "Río Plátano Biosphere Reserve",
-      "url": "https://en.wikipedia.org/wiki/R%C3%ADo_Pl%C3%A1tano_Biosphere_Reserve",
-      "retrievedAt": "2026-08-14T22:49:01.287Z"
+      "title": "Lalbagh Botanical Garden",
+      "url": "https://en.wikipedia.org/wiki/Lalbagh_Botanical_Garden",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
     }
-  ]
+  ],
+  "theme": {
+    "title": "Pre-1900 Botanical Gardens in Cities",
+    "introduction": "Cities have cultivated living collections for centuries. These historic gardens still invite visitors into their greenhouses and grounds.",
+    "inclusionCriteria": "Include a location only when all conditions are met: (1) it is an individually named institution whose official name or governing authority identifies it as a botanical garden, botanic garden, or equivalent historical botanical-garden institution; (2) the garden was established or opened at the same identifiable site on or before 31 December 1899; (3) the historic garden still physically exists as a maintained garden; (4) it is regularly open to ordinary visitors, whether free or ticketed; (5) the garden lies within the current administrative boundary of a present-day city or incorporated urban municipality; and (6) the exact garden can be pinned as a single visitable location rather than an entire metropolitan region."
+  }
 }

@@ -1,0 +1,1402 @@
+{
+  "schemaVersion": 3,
+  "publicationDate": "2026-08-20",
+  "revision": 1,
+  "caseNumber": 20685,
+  "pois": [
+    {
+      "id": "ozeaneum-stralsund",
+      "name": "Ozeaneum",
+      "city": "Stralsund",
+      "country": "Germany",
+      "latitude": 54.3114,
+      "longitude": 13.0895,
+      "wikipediaTitle": "Ozeaneum",
+      "blurb": "Ozeaneum is a public aquarium in the German city of Stralsund. It is a main attraction of the German Oceanographic Museum (Deutsches Meeresmuseum), arguably one of the three largest institutions of its kind in Europe.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Ozeaneum_in_Stralsund%2C_Eingang.JPG/1280px-Ozeaneum_in_Stralsund%2C_Eingang.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Ozeaneum",
+        "attribution": "Klugschnacker · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "themeConnection": {
+        "text": "A permanent public aquarium and marine-life complex at a specific site in Stralsund.",
+        "sourceIds": ["source-16"]
+      }
+    },
+    {
+      "id": "aquarium-paris",
+      "name": "Aquarium de Paris",
+      "city": "Paris",
+      "country": "France",
+      "latitude": 48.8622,
+      "longitude": 2.2894,
+      "wikipediaTitle": "Trocadéro, Paris",
+      "blurb": "The Trocadéro (pronounced [tʁɔkadeʁo] ), site of the Palais de Chaillot, is an area of Paris, France, in the 16th arrondissement, across the Seine from the Eiffel Tower.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Trocad%C3%A9ro_as_seen_from_the_Eiffel_Tower%2C_25_September_2010.jpg/1280px-Trocad%C3%A9ro_as_seen_from_the_Eiffel_Tower%2C_25_September_2010.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Trocadéro, Paris",
+        "attribution": "Yortw from Auckland, New Zealand · CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "themeConnection": {
+        "text": "An individually named permanent public aquarium beneath the Trocadéro gardens in Paris.",
+        "sourceIds": ["source-22"]
+      }
+    },
+    {
+      "id": "oceanografic-valencia",
+      "name": "L'Oceanogràfic",
+      "city": "Valencia",
+      "country": "Spain",
+      "latitude": 39.4549,
+      "longitude": -0.3500224,
+      "wikipediaTitle": "L'Oceanogràfic",
+      "blurb": "L'Oceanogràfic is an oceanarium in Valencia, Spain, designed as a large marine park with representations of major marine ecosystems.",
+      "themeConnection": {
+        "text": "A permanent public oceanarium complex in Valencia devoted primarily to aquatic ecosystems and animals.",
+        "sourceIds": ["source-18"]
+      }
+    },
+    {
+      "id": "nausicaa-boulogne",
+      "name": "Nausicaá",
+      "city": "Boulogne-sur-Mer",
+      "country": "France",
+      "latitude": 50.7259,
+      "longitude": 1.5888,
+      "wikipediaTitle": "Boulogne-sur-Mer",
+      "blurb": "Boulogne-sur-Mer (French: [bulɔɲ syʁ mɛʁ] ; Picard: Boulonne-su-Mér; Dutch: Bonen; Latin: Gesoriacum or Bononia), often called just Boulogne (UK: , US: ), is a port city in Northern France.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Boulogne_vue_generale_phare_beffroi_mer.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Boulogne-sur-Mer",
+        "attribution": "Matthieu Debailleul · CC BY-SA 1.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/1.0"
+      },
+      "themeConnection": {
+        "text": "A permanent public national sea centre and oceanarium in the incorporated city of Boulogne-sur-Mer.",
+        "sourceIds": ["source-23"]
+      }
+    },
+    {
+      "id": "aquarium-atlanta",
+      "name": "Georgia Aquarium",
+      "city": "Atlanta",
+      "country": "United States",
+      "latitude": 33.7634,
+      "longitude": -84.3951,
+      "wikipediaTitle": "Georgia Aquarium",
+      "blurb": "The Georgia Aquarium is a public aquarium in Atlanta, Georgia, and is one of the largest aquariums in the world, with extensive living-animal exhibits.",
+      "themeConnection": {
+        "text": "A large permanent public aquarium in downtown Atlanta whose principal attraction is living aquatic animals and ecosystems.",
+        "sourceIds": ["source-01"]
+      }
+    },
+    {
+      "id": "aquarium-quebec",
+      "name": "Aquarium du Québec",
+      "city": "Quebec City",
+      "country": "Canada",
+      "latitude": 46.7565,
+      "longitude": -71.2923,
+      "wikipediaTitle": "Aquarium du Québec",
+      "blurb": "The Aquarium du Québec is a public aquarium in Quebec City, Quebec, with exhibits including fish, amphibians, reptiles, and marine mammals.",
+      "themeConnection": {
+        "text": "A permanent public aquarium complex in Quebec City displaying marine, freshwater, and Arctic animals.",
+        "sourceIds": ["source-15"]
+      }
+    },
+    {
+      "id": "dallas-world-aquarium",
+      "name": "The Dallas World Aquarium",
+      "city": "Dallas",
+      "country": "United States",
+      "latitude": 32.7833,
+      "longitude": -96.8068,
+      "wikipediaTitle": "The Dallas World Aquarium",
+      "blurb": "The Dallas World Aquarium is a for-profit aquarium and zoological park located in the West End historic district of downtown Dallas, Texas.",
+      "themeConnection": {
+        "text": "A permanent, ticketed aquarium attraction in Dallas whose principal visitor function is displaying living aquatic and rainforest animals.",
+        "sourceIds": ["source-11"]
+      }
+    },
+    {
+      "id": "monterey-bay-aquarium",
+      "name": "Monterey Bay Aquarium",
+      "city": "Monterey",
+      "country": "United States",
+      "latitude": 36.6189,
+      "longitude": -121.9018,
+      "wikipediaTitle": "Monterey Bay Aquarium",
+      "blurb": "The Monterey Bay Aquarium is a nonprofit public aquarium in Monterey, California, displaying marine life from the Monterey Bay region and beyond.",
+      "themeConnection": {
+        "text": "An individually named permanent public aquarium on Cannery Row, focused on marine life and Monterey Bay ecosystems.",
+        "sourceIds": ["source-02"]
+      }
+    },
+    {
+      "id": "audubon-aquarium",
+      "name": "Audubon Aquarium",
+      "city": "New Orleans",
+      "country": "United States",
+      "latitude": 29.9434,
+      "longitude": -90.0647,
+      "wikipediaTitle": "Audubon Aquarium",
+      "blurb": "Audubon Aquarium is a public aquarium in New Orleans, Louisiana, operated by Audubon Nature Institute and featuring aquatic animals from around the world.",
+      "themeConnection": {
+        "text": "A permanent independently named public aquarium in downtown New Orleans.",
+        "sourceIds": ["source-10"]
+      }
+    },
+    {
+      "id": "aquarium-finisterrae",
+      "name": "Aquarium Finisterrae",
+      "city": "A Coruña",
+      "country": "Spain",
+      "latitude": 43.3822,
+      "longitude": -8.4054,
+      "wikipediaTitle": "Aquarium Finisterrae",
+      "blurb": "Aquarium Finisterrae (Aquarium of the end of the world) is an aquarium located in A Coruña, Galicia, Spain. It is an interactive centre of the sciences of marine biology and oceanography.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Entrada_del_Aquarium_Finisterrae.jpg/1280px-Entrada_del_Aquarium_Finisterrae.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Aquarium Finisterrae",
+        "attribution": "Marcus · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "themeConnection": {
+        "text": "A permanent public aquarium in A Coruña displaying Atlantic marine life and aquatic ecosystems.",
+        "sourceIds": ["source-24"]
+      }
+    },
+    {
+      "id": "vancouver-aquarium",
+      "name": "Vancouver Aquarium",
+      "city": "Vancouver",
+      "country": "Canada",
+      "latitude": 49.3009,
+      "longitude": -123.1302,
+      "wikipediaTitle": "Vancouver Aquarium",
+      "blurb": "The Vancouver Aquarium is a public aquarium located in Stanley Park in Vancouver, British Columbia, and displays marine life from local and global waters.",
+      "themeConnection": {
+        "text": "A permanent public aquarium in Stanley Park, Vancouver, focused on marine animals and conservation.",
+        "sourceIds": ["source-13"]
+      }
+    },
+    {
+      "id": "aquarium-barcelona",
+      "name": "Barcelona Aquarium",
+      "city": "Barcelona",
+      "country": "Spain",
+      "latitude": 41.375,
+      "longitude": 2.1848,
+      "wikipediaTitle": "Barcelona Aquarium",
+      "blurb": "Barcelona Aquarium is a public aquarium in Port Vell, Barcelona, known for its Mediterranean displays and large oceanarium tunnel.",
+      "themeConnection": {
+        "text": "A permanent public aquarium at Port Vell in Barcelona, principally displaying Mediterranean and tropical aquatic life.",
+        "sourceIds": ["source-19"]
+      }
+    },
+    {
+      "id": "oregon-coast-aquarium",
+      "name": "Oregon Coast Aquarium",
+      "city": "Newport",
+      "country": "United States",
+      "latitude": 44.6219,
+      "longitude": -124.0568,
+      "wikipediaTitle": "Oregon Coast Aquarium",
+      "blurb": "The Oregon Coast Aquarium is an aquarium in Newport, Oregon, featuring marine animals and habitats associated with the Oregon coast and Pacific Northwest.",
+      "themeConnection": {
+        "text": "A permanent public aquarium in Newport, Oregon, centered on Pacific Northwest aquatic ecosystems.",
+        "sourceIds": ["source-09"]
+      }
+    },
+    {
+      "id": "ripley-aquarium-toronto",
+      "name": "Ripley's Aquarium of Canada",
+      "city": "Toronto",
+      "country": "Canada",
+      "latitude": 43.6424,
+      "longitude": -79.386,
+      "wikipediaTitle": "Ripley's Aquarium of Canada",
+      "blurb": "Ripley's Aquarium of Canada is a public aquarium in Toronto, Ontario, located beside the CN Tower and featuring thousands of aquatic animals.",
+      "themeConnection": {
+        "text": "A permanent, independently named public aquarium at Toronto's waterfront entertainment district.",
+        "sourceIds": ["source-14"]
+      }
+    },
+    {
+      "id": "aquarium-berlin",
+      "name": "Aquarium Berlin",
+      "city": "Berlin",
+      "country": "Germany",
+      "latitude": 52.5086,
+      "longitude": 13.3377,
+      "wikipediaTitle": "Berlin Aquarium",
+      "blurb": "The Aquarium Berlin in Berlin is one of Germany's largest aquariums. The aquarium was built in 1913 as part of the Berlin Zoological Garden complex.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Zoo_Berlin_Aquarium_Fassade_3_b.jpg/1280px-Zoo_Berlin_Aquarium_Fassade_3_b.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Berlin Aquarium",
+        "attribution": "File:Zoo Berlin Aquarium Fassade 3.jpg: Manfred Brückels\nderivative work: Georgfotoart · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "themeConnection": {
+        "text": "An individually named permanent public aquarium in central Berlin with living aquatic-animal displays.",
+        "sourceIds": ["source-17"]
+      }
+    },
+    {
+      "id": "seattle-aquarium",
+      "name": "Seattle Aquarium",
+      "city": "Seattle",
+      "country": "United States",
+      "latitude": 47.6073,
+      "longitude": -122.3425,
+      "wikipediaTitle": "Seattle Aquarium",
+      "blurb": "The Seattle Aquarium is a public aquarium located on Pier 59 on the central waterfront of Seattle, Washington, displaying regional marine life.",
+      "themeConnection": {
+        "text": "An independently named public aquarium on Pier 59 in central Seattle.",
+        "sourceIds": ["source-08"]
+      }
+    },
+    {
+      "id": "dubai-aquarium",
+      "name": "Dubai Aquarium & Underwater Zoo",
+      "city": "Dubai",
+      "country": "United Arab Emirates",
+      "latitude": 25.195,
+      "longitude": 55.2796,
+      "wikipediaTitle": "Dubai Aquarium and Underwater Zoo",
+      "blurb": "Dubai Aquarium and Underwater Zoo is a public aquarium located in The Dubai Mall in Dubai, featuring a large tank and diverse aquatic animals.",
+      "themeConnection": {
+        "text": "A specifically named, permanently installed public aquarium attraction in Dubai Mall.",
+        "sourceIds": ["source-25"]
+      }
+    },
+    {
+      "id": "acquario-di-genova",
+      "name": "Acquario di Genova",
+      "city": "Genoa",
+      "country": "Italy",
+      "latitude": 44.411,
+      "longitude": 8.9267,
+      "wikipediaTitle": "Aquarium of Genoa",
+      "blurb": "The Aquarium of Genoa is the largest aquarium in Italy and is located in the Old Port area of Genoa, displaying marine and freshwater species.",
+      "themeConnection": {
+        "text": "A permanent public aquarium at Genoa's Old Port with extensive aquatic-animal exhibits.",
+        "sourceIds": ["source-21"]
+      }
+    },
+    {
+      "id": "aquarium-of-the-bay",
+      "name": "Aquarium of the Bay",
+      "city": "San Francisco",
+      "country": "United States",
+      "latitude": 37.808,
+      "longitude": -122.4101,
+      "wikipediaTitle": "Aquarium of the Bay",
+      "blurb": "Aquarium of the Bay is a public aquarium located at Pier 39 on the Embarcadero in San Francisco, California, with regional aquatic exhibits.",
+      "themeConnection": {
+        "text": "An independently named public aquarium at Pier 39 in San Francisco.",
+        "sourceIds": ["source-12"]
+      }
+    },
+    {
+      "id": "national-aquarium-baltimore",
+      "name": "National Aquarium",
+      "city": "Baltimore",
+      "country": "United States",
+      "latitude": 39.2853,
+      "longitude": -76.6085,
+      "wikipediaTitle": "National Aquarium",
+      "blurb": "The National Aquarium, formerly known as the National Aquarium in Baltimore, is a public aquarium located on Baltimore's Inner Harbor.",
+      "themeConnection": {
+        "text": "A permanent, individually named public aquarium at Baltimore's Inner Harbor.",
+        "sourceIds": ["source-06"]
+      }
+    },
+    {
+      "id": "lisbon-oceanarium",
+      "name": "Oceanário de Lisboa",
+      "city": "Lisbon",
+      "country": "Portugal",
+      "latitude": 38.7636,
+      "longitude": -9.0937,
+      "wikipediaTitle": "Lisbon Oceanarium",
+      "blurb": "The Oceanário de Lisboa is a public aquarium in Lisbon, Portugal, and contains large habitat exhibits representing aquatic environments from around the world.",
+      "themeConnection": {
+        "text": "A permanent public oceanarium in Lisbon whose principal visitor function is displaying marine ecosystems.",
+        "sourceIds": ["source-20"]
+      }
+    },
+    {
+      "id": "new-england-aquarium",
+      "name": "New England Aquarium",
+      "city": "Boston",
+      "country": "United States",
+      "latitude": 42.3592,
+      "longitude": -71.0497,
+      "wikipediaTitle": "New England Aquarium",
+      "blurb": "The New England Aquarium is a public aquarium located on Central Wharf in Boston, Massachusetts, and is a major visitor attraction devoted to marine life.",
+      "themeConnection": {
+        "text": "A permanent public aquarium on Boston's Central Wharf with a principal focus on aquatic animals and habitats.",
+        "sourceIds": ["source-04"]
+      }
+    },
+    {
+      "id": "virginia-aquarium",
+      "name": "Virginia Aquarium & Marine Science Center",
+      "city": "Virginia Beach",
+      "country": "United States",
+      "latitude": 36.8527,
+      "longitude": -75.9783,
+      "wikipediaTitle": "Virginia Aquarium & Marine Science Center",
+      "blurb": "The Virginia Aquarium & Marine Science Center is a public aquarium and marine science museum in Virginia Beach, Virginia, with large animal exhibits.",
+      "themeConnection": {
+        "text": "A permanent public aquarium complex in Virginia Beach with extensive living marine-animal exhibits.",
+        "sourceIds": ["source-07"]
+      }
+    },
+    {
+      "id": "aquarium-of-the-pacific",
+      "name": "Aquarium of the Pacific",
+      "city": "Long Beach",
+      "country": "United States",
+      "latitude": 33.7636,
+      "longitude": -118.2147,
+      "wikipediaTitle": "Aquarium of the Pacific",
+      "blurb": "The Aquarium of the Pacific is a public aquarium on Rainbow Harbor in Long Beach, California, with exhibits devoted to Pacific Ocean habitats.",
+      "themeConnection": {
+        "text": "A permanent, independently named public aquarium at Rainbow Harbor in Long Beach.",
+        "sourceIds": ["source-03"]
+      }
+    },
+    {
+      "id": "shedd-aquarium",
+      "name": "Shedd Aquarium",
+      "city": "Chicago",
+      "country": "United States",
+      "latitude": 41.8676,
+      "longitude": -87.614,
+      "wikipediaTitle": "Shedd Aquarium",
+      "blurb": "Shedd Aquarium is a public aquarium in Chicago, Illinois, on the city's Museum Campus, with permanent displays of freshwater and marine animals.",
+      "themeConnection": {
+        "text": "An individually named permanent public aquarium on Chicago's Museum Campus.",
+        "sourceIds": ["source-05"]
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "round-1",
+      "targetPoiId": "ozeaneum-stralsund",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Ozeaneum_in_Stralsund%2C_Eingang.JPG/1280px-Ozeaneum_in_Stralsund%2C_Eingang.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Ozeaneum",
+        "attribution": "Klugschnacker · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "clue": {
+        "text": "Opened in July 2008 at a historic harbor on the Baltic coast, this complex displays primarily North Sea and Baltic Sea life and forms a major attraction of a national oceanographic museum.",
+        "sourceIds": ["source-16"]
+      },
+      "results": [
+        {
+          "poiId": "aquarium-atlanta",
+          "tier": "cold",
+          "text": "Georgia Aquarium is a themed comparison candidate: A large permanent public aquarium in downtown Atlanta whose principal attraction is living aquatic animals and ecosystems.",
+          "sourceIds": ["source-01", "source-16"]
+        },
+        {
+          "poiId": "monterey-bay-aquarium",
+          "tier": "warm",
+          "text": "Monterey Bay Aquarium is a themed comparison candidate: An individually named permanent public aquarium on Cannery Row, focused on marine life and Monterey Bay ecosystems.",
+          "sourceIds": ["source-02", "source-16"]
+        },
+        {
+          "poiId": "aquarium-of-the-pacific",
+          "tier": "cold",
+          "text": "Aquarium of the Pacific is a themed comparison candidate: A permanent, independently named public aquarium at Rainbow Harbor in Long Beach.",
+          "sourceIds": ["source-03", "source-16"]
+        },
+        {
+          "poiId": "new-england-aquarium",
+          "tier": "cold",
+          "text": "New England Aquarium is a themed comparison candidate: A permanent public aquarium on Boston's Central Wharf with a principal focus on aquatic animals and habitats.",
+          "sourceIds": ["source-04", "source-16"]
+        },
+        {
+          "poiId": "shedd-aquarium",
+          "tier": "cold",
+          "text": "Shedd Aquarium is a themed comparison candidate: An individually named permanent public aquarium on Chicago's Museum Campus.",
+          "sourceIds": ["source-05", "source-16"]
+        },
+        {
+          "poiId": "national-aquarium-baltimore",
+          "tier": "cold",
+          "text": "National Aquarium is a themed comparison candidate: A permanent, individually named public aquarium at Baltimore's Inner Harbor.",
+          "sourceIds": ["source-06", "source-16"]
+        },
+        {
+          "poiId": "virginia-aquarium",
+          "tier": "cold",
+          "text": "Virginia Aquarium & Marine Science Center is a themed comparison candidate: A permanent public aquarium complex in Virginia Beach with extensive living marine-animal exhibits.",
+          "sourceIds": ["source-07", "source-16"]
+        },
+        {
+          "poiId": "seattle-aquarium",
+          "tier": "cold",
+          "text": "Seattle Aquarium is a themed comparison candidate: An independently named public aquarium on Pier 59 in central Seattle.",
+          "sourceIds": ["source-08", "source-16"]
+        },
+        {
+          "poiId": "oregon-coast-aquarium",
+          "tier": "warm",
+          "text": "Oregon Coast Aquarium is a themed comparison candidate: A permanent public aquarium in Newport, Oregon, centered on Pacific Northwest aquatic ecosystems.",
+          "sourceIds": ["source-09", "source-16"]
+        },
+        {
+          "poiId": "audubon-aquarium",
+          "tier": "cold",
+          "text": "Audubon Aquarium is a themed comparison candidate: A permanent independently named public aquarium in downtown New Orleans.",
+          "sourceIds": ["source-10", "source-16"]
+        },
+        {
+          "poiId": "dallas-world-aquarium",
+          "tier": "cold",
+          "text": "The Dallas World Aquarium is a themed comparison candidate: A permanent, ticketed aquarium attraction in Dallas whose principal visitor function is displaying living aquatic and rainforest animals.",
+          "sourceIds": ["source-11", "source-16"]
+        },
+        {
+          "poiId": "aquarium-of-the-bay",
+          "tier": "cold",
+          "text": "Aquarium of the Bay is a themed comparison candidate: An independently named public aquarium at Pier 39 in San Francisco.",
+          "sourceIds": ["source-12", "source-16"]
+        },
+        {
+          "poiId": "vancouver-aquarium",
+          "tier": "warm",
+          "text": "Vancouver Aquarium is a themed comparison candidate: A permanent public aquarium in Stanley Park, Vancouver, focused on marine animals and conservation.",
+          "sourceIds": ["source-13", "source-16"]
+        },
+        {
+          "poiId": "ripley-aquarium-toronto",
+          "tier": "cold",
+          "text": "Ripley's Aquarium of Canada is a themed comparison candidate: A permanent, independently named public aquarium at Toronto's waterfront entertainment district.",
+          "sourceIds": ["source-14", "source-16"]
+        },
+        {
+          "poiId": "aquarium-quebec",
+          "tier": "warm",
+          "text": "Aquarium du Québec is a themed comparison candidate: A permanent public aquarium complex in Quebec City displaying marine, freshwater, and Arctic animals.",
+          "sourceIds": ["source-15", "source-16"]
+        },
+        {
+          "poiId": "ozeaneum-stralsund",
+          "tier": "correct",
+          "text": "Ozeaneum is the round target: A permanent public aquarium and marine-life complex at a specific site in Stralsund.",
+          "sourceIds": ["source-16"]
+        },
+        {
+          "poiId": "aquarium-berlin",
+          "tier": "hot",
+          "text": "Aquarium Berlin is a themed comparison candidate: An individually named permanent public aquarium in central Berlin with living aquatic-animal displays.",
+          "sourceIds": ["source-17", "source-16"]
+        },
+        {
+          "poiId": "oceanografic-valencia",
+          "tier": "hot",
+          "text": "L'Oceanogràfic is a themed comparison candidate: A permanent public oceanarium complex in Valencia devoted primarily to aquatic ecosystems and animals.",
+          "sourceIds": ["source-18", "source-16"]
+        },
+        {
+          "poiId": "aquarium-barcelona",
+          "tier": "hot",
+          "text": "Barcelona Aquarium is a themed comparison candidate: A permanent public aquarium at Port Vell in Barcelona, principally displaying Mediterranean and tropical aquatic life.",
+          "sourceIds": ["source-19", "source-16"]
+        },
+        {
+          "poiId": "lisbon-oceanarium",
+          "tier": "warm",
+          "text": "Oceanário de Lisboa is a themed comparison candidate: A permanent public oceanarium in Lisbon whose principal visitor function is displaying marine ecosystems.",
+          "sourceIds": ["source-20", "source-16"]
+        },
+        {
+          "poiId": "acquario-di-genova",
+          "tier": "hot",
+          "text": "Acquario di Genova is a themed comparison candidate: A permanent public aquarium at Genoa's Old Port with extensive aquatic-animal exhibits.",
+          "sourceIds": ["source-21", "source-16"]
+        },
+        {
+          "poiId": "aquarium-paris",
+          "tier": "warm",
+          "text": "Aquarium de Paris is a themed comparison candidate: An individually named permanent public aquarium beneath the Trocadéro gardens in Paris.",
+          "sourceIds": ["source-22", "source-16"]
+        },
+        {
+          "poiId": "nausicaa-boulogne",
+          "tier": "warm",
+          "text": "Nausicaá is a themed comparison candidate: A permanent public national sea centre and oceanarium in the incorporated city of Boulogne-sur-Mer.",
+          "sourceIds": ["source-23", "source-16"]
+        },
+        {
+          "poiId": "aquarium-finisterrae",
+          "tier": "warm",
+          "text": "Aquarium Finisterrae is a themed comparison candidate: A permanent public aquarium in A Coruña displaying Atlantic marine life and aquatic ecosystems.",
+          "sourceIds": ["source-24", "source-16"]
+        },
+        {
+          "poiId": "dubai-aquarium",
+          "tier": "cold",
+          "text": "Dubai Aquarium & Underwater Zoo is a themed comparison candidate: A specifically named, permanently installed public aquarium attraction in Dubai Mall.",
+          "sourceIds": ["source-25", "source-16"]
+        }
+      ]
+    },
+    {
+      "id": "round-2",
+      "targetPoiId": "aquarium-berlin",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Zoo_Berlin_Aquarium_Fassade_3_b.jpg/1280px-Zoo_Berlin_Aquarium_Fassade_3_b.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Berlin Aquarium",
+        "attribution": "File:Zoo Berlin Aquarium Fassade 3.jpg: Manfred Brückels\nderivative work: Georgfotoart · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "clue": {
+        "text": "Established in 1913 as part of a zoological-garden complex, this three-storey institution presents more than 9,000 animals in 250 fish tanks, including crocodilians, tuataras, jellyfish, and coral basins.",
+        "sourceIds": ["source-17"]
+      },
+      "results": [
+        {
+          "poiId": "aquarium-atlanta",
+          "tier": "warm",
+          "text": "Georgia Aquarium is a themed comparison candidate: A large permanent public aquarium in downtown Atlanta whose principal attraction is living aquatic animals and ecosystems.",
+          "sourceIds": ["source-01", "source-17"]
+        },
+        {
+          "poiId": "monterey-bay-aquarium",
+          "tier": "cold",
+          "text": "Monterey Bay Aquarium is a themed comparison candidate: An individually named permanent public aquarium on Cannery Row, focused on marine life and Monterey Bay ecosystems.",
+          "sourceIds": ["source-02", "source-17"]
+        },
+        {
+          "poiId": "aquarium-of-the-pacific",
+          "tier": "cold",
+          "text": "Aquarium of the Pacific is a themed comparison candidate: A permanent, independently named public aquarium at Rainbow Harbor in Long Beach.",
+          "sourceIds": ["source-03", "source-17"]
+        },
+        {
+          "poiId": "new-england-aquarium",
+          "tier": "cold",
+          "text": "New England Aquarium is a themed comparison candidate: A permanent public aquarium on Boston's Central Wharf with a principal focus on aquatic animals and habitats.",
+          "sourceIds": ["source-04", "source-17"]
+        },
+        {
+          "poiId": "shedd-aquarium",
+          "tier": "cold",
+          "text": "Shedd Aquarium is a themed comparison candidate: An individually named permanent public aquarium on Chicago's Museum Campus.",
+          "sourceIds": ["source-05", "source-17"]
+        },
+        {
+          "poiId": "national-aquarium-baltimore",
+          "tier": "cold",
+          "text": "National Aquarium is a themed comparison candidate: A permanent, individually named public aquarium at Baltimore's Inner Harbor.",
+          "sourceIds": ["source-06", "source-17"]
+        },
+        {
+          "poiId": "virginia-aquarium",
+          "tier": "cold",
+          "text": "Virginia Aquarium & Marine Science Center is a themed comparison candidate: A permanent public aquarium complex in Virginia Beach with extensive living marine-animal exhibits.",
+          "sourceIds": ["source-07", "source-17"]
+        },
+        {
+          "poiId": "seattle-aquarium",
+          "tier": "cold",
+          "text": "Seattle Aquarium is a themed comparison candidate: An independently named public aquarium on Pier 59 in central Seattle.",
+          "sourceIds": ["source-08", "source-17"]
+        },
+        {
+          "poiId": "oregon-coast-aquarium",
+          "tier": "cold",
+          "text": "Oregon Coast Aquarium is a themed comparison candidate: A permanent public aquarium in Newport, Oregon, centered on Pacific Northwest aquatic ecosystems.",
+          "sourceIds": ["source-09", "source-17"]
+        },
+        {
+          "poiId": "audubon-aquarium",
+          "tier": "cold",
+          "text": "Audubon Aquarium is a themed comparison candidate: A permanent independently named public aquarium in downtown New Orleans.",
+          "sourceIds": ["source-10", "source-17"]
+        },
+        {
+          "poiId": "dallas-world-aquarium",
+          "tier": "warm",
+          "text": "The Dallas World Aquarium is a themed comparison candidate: A permanent, ticketed aquarium attraction in Dallas whose principal visitor function is displaying living aquatic and rainforest animals.",
+          "sourceIds": ["source-11", "source-17"]
+        },
+        {
+          "poiId": "aquarium-of-the-bay",
+          "tier": "cold",
+          "text": "Aquarium of the Bay is a themed comparison candidate: An independently named public aquarium at Pier 39 in San Francisco.",
+          "sourceIds": ["source-12", "source-17"]
+        },
+        {
+          "poiId": "vancouver-aquarium",
+          "tier": "warm",
+          "text": "Vancouver Aquarium is a themed comparison candidate: A permanent public aquarium in Stanley Park, Vancouver, focused on marine animals and conservation.",
+          "sourceIds": ["source-13", "source-17"]
+        },
+        {
+          "poiId": "ripley-aquarium-toronto",
+          "tier": "cold",
+          "text": "Ripley's Aquarium of Canada is a themed comparison candidate: A permanent, independently named public aquarium at Toronto's waterfront entertainment district.",
+          "sourceIds": ["source-14", "source-17"]
+        },
+        {
+          "poiId": "aquarium-quebec",
+          "tier": "cold",
+          "text": "Aquarium du Québec is a themed comparison candidate: A permanent public aquarium complex in Quebec City displaying marine, freshwater, and Arctic animals.",
+          "sourceIds": ["source-15", "source-17"]
+        },
+        {
+          "poiId": "ozeaneum-stralsund",
+          "tier": "hot",
+          "text": "Ozeaneum is a themed comparison candidate: A permanent public aquarium and marine-life complex at a specific site in Stralsund.",
+          "sourceIds": ["source-16", "source-17"]
+        },
+        {
+          "poiId": "aquarium-berlin",
+          "tier": "correct",
+          "text": "Aquarium Berlin is the round target: An individually named permanent public aquarium in central Berlin with living aquatic-animal displays.",
+          "sourceIds": ["source-17"]
+        },
+        {
+          "poiId": "oceanografic-valencia",
+          "tier": "hot",
+          "text": "L'Oceanogràfic is a themed comparison candidate: A permanent public oceanarium complex in Valencia devoted primarily to aquatic ecosystems and animals.",
+          "sourceIds": ["source-18", "source-17"]
+        },
+        {
+          "poiId": "aquarium-barcelona",
+          "tier": "warm",
+          "text": "Barcelona Aquarium is a themed comparison candidate: A permanent public aquarium at Port Vell in Barcelona, principally displaying Mediterranean and tropical aquatic life.",
+          "sourceIds": ["source-19", "source-17"]
+        },
+        {
+          "poiId": "lisbon-oceanarium",
+          "tier": "hot",
+          "text": "Oceanário de Lisboa is a themed comparison candidate: A permanent public oceanarium in Lisbon whose principal visitor function is displaying marine ecosystems.",
+          "sourceIds": ["source-20", "source-17"]
+        },
+        {
+          "poiId": "acquario-di-genova",
+          "tier": "hot",
+          "text": "Acquario di Genova is a themed comparison candidate: A permanent public aquarium at Genoa's Old Port with extensive aquatic-animal exhibits.",
+          "sourceIds": ["source-21", "source-17"]
+        },
+        {
+          "poiId": "aquarium-paris",
+          "tier": "warm",
+          "text": "Aquarium de Paris is a themed comparison candidate: An individually named permanent public aquarium beneath the Trocadéro gardens in Paris.",
+          "sourceIds": ["source-22", "source-17"]
+        },
+        {
+          "poiId": "nausicaa-boulogne",
+          "tier": "warm",
+          "text": "Nausicaá is a themed comparison candidate: A permanent public national sea centre and oceanarium in the incorporated city of Boulogne-sur-Mer.",
+          "sourceIds": ["source-23", "source-17"]
+        },
+        {
+          "poiId": "aquarium-finisterrae",
+          "tier": "warm",
+          "text": "Aquarium Finisterrae is a themed comparison candidate: A permanent public aquarium in A Coruña displaying Atlantic marine life and aquatic ecosystems.",
+          "sourceIds": ["source-24", "source-17"]
+        },
+        {
+          "poiId": "dubai-aquarium",
+          "tier": "warm",
+          "text": "Dubai Aquarium & Underwater Zoo is a themed comparison candidate: A specifically named, permanently installed public aquarium attraction in Dubai Mall.",
+          "sourceIds": ["source-25", "source-17"]
+        }
+      ]
+    },
+    {
+      "id": "round-3",
+      "targetPoiId": "aquarium-paris",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Trocad%C3%A9ro_as_seen_from_the_Eiffel_Tower%2C_25_September_2010.jpg/1280px-Trocad%C3%A9ro_as_seen_from_the_Eiffel_Tower%2C_25_September_2010.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Trocadéro, Paris",
+        "attribution": "Yortw from Auckland, New Zealand · CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "clue": {
+        "text": "This aquarium occupies an underground space beneath gardens beside a monumental palace; its fish display originated in the palace complex and was renovated in 1937 before a later reopening in 2006.",
+        "sourceIds": ["source-22"]
+      },
+      "results": [
+        {
+          "poiId": "aquarium-atlanta",
+          "tier": "cold",
+          "text": "Georgia Aquarium is a themed comparison candidate: A large permanent public aquarium in downtown Atlanta whose principal attraction is living aquatic animals and ecosystems.",
+          "sourceIds": ["source-01", "source-22"]
+        },
+        {
+          "poiId": "monterey-bay-aquarium",
+          "tier": "cold",
+          "text": "Monterey Bay Aquarium is a themed comparison candidate: An individually named permanent public aquarium on Cannery Row, focused on marine life and Monterey Bay ecosystems.",
+          "sourceIds": ["source-02", "source-22"]
+        },
+        {
+          "poiId": "aquarium-of-the-pacific",
+          "tier": "cold",
+          "text": "Aquarium of the Pacific is a themed comparison candidate: A permanent, independently named public aquarium at Rainbow Harbor in Long Beach.",
+          "sourceIds": ["source-03", "source-22"]
+        },
+        {
+          "poiId": "new-england-aquarium",
+          "tier": "cold",
+          "text": "New England Aquarium is a themed comparison candidate: A permanent public aquarium on Boston's Central Wharf with a principal focus on aquatic animals and habitats.",
+          "sourceIds": ["source-04", "source-22"]
+        },
+        {
+          "poiId": "shedd-aquarium",
+          "tier": "cold",
+          "text": "Shedd Aquarium is a themed comparison candidate: An individually named permanent public aquarium on Chicago's Museum Campus.",
+          "sourceIds": ["source-05", "source-22"]
+        },
+        {
+          "poiId": "national-aquarium-baltimore",
+          "tier": "warm",
+          "text": "National Aquarium is a themed comparison candidate: A permanent, individually named public aquarium at Baltimore's Inner Harbor.",
+          "sourceIds": ["source-06", "source-22"]
+        },
+        {
+          "poiId": "virginia-aquarium",
+          "tier": "cold",
+          "text": "Virginia Aquarium & Marine Science Center is a themed comparison candidate: A permanent public aquarium complex in Virginia Beach with extensive living marine-animal exhibits.",
+          "sourceIds": ["source-07", "source-22"]
+        },
+        {
+          "poiId": "seattle-aquarium",
+          "tier": "cold",
+          "text": "Seattle Aquarium is a themed comparison candidate: An independently named public aquarium on Pier 59 in central Seattle.",
+          "sourceIds": ["source-08", "source-22"]
+        },
+        {
+          "poiId": "oregon-coast-aquarium",
+          "tier": "cold",
+          "text": "Oregon Coast Aquarium is a themed comparison candidate: A permanent public aquarium in Newport, Oregon, centered on Pacific Northwest aquatic ecosystems.",
+          "sourceIds": ["source-09", "source-22"]
+        },
+        {
+          "poiId": "audubon-aquarium",
+          "tier": "cold",
+          "text": "Audubon Aquarium is a themed comparison candidate: A permanent independently named public aquarium in downtown New Orleans.",
+          "sourceIds": ["source-10", "source-22"]
+        },
+        {
+          "poiId": "dallas-world-aquarium",
+          "tier": "cold",
+          "text": "The Dallas World Aquarium is a themed comparison candidate: A permanent, ticketed aquarium attraction in Dallas whose principal visitor function is displaying living aquatic and rainforest animals.",
+          "sourceIds": ["source-11", "source-22"]
+        },
+        {
+          "poiId": "aquarium-of-the-bay",
+          "tier": "cold",
+          "text": "Aquarium of the Bay is a themed comparison candidate: An independently named public aquarium at Pier 39 in San Francisco.",
+          "sourceIds": ["source-12", "source-22"]
+        },
+        {
+          "poiId": "vancouver-aquarium",
+          "tier": "warm",
+          "text": "Vancouver Aquarium is a themed comparison candidate: A permanent public aquarium in Stanley Park, Vancouver, focused on marine animals and conservation.",
+          "sourceIds": ["source-13", "source-22"]
+        },
+        {
+          "poiId": "ripley-aquarium-toronto",
+          "tier": "warm",
+          "text": "Ripley's Aquarium of Canada is a themed comparison candidate: A permanent, independently named public aquarium at Toronto's waterfront entertainment district.",
+          "sourceIds": ["source-14", "source-22"]
+        },
+        {
+          "poiId": "aquarium-quebec",
+          "tier": "warm",
+          "text": "Aquarium du Québec is a themed comparison candidate: A permanent public aquarium complex in Quebec City displaying marine, freshwater, and Arctic animals.",
+          "sourceIds": ["source-15", "source-22"]
+        },
+        {
+          "poiId": "ozeaneum-stralsund",
+          "tier": "hot",
+          "text": "Ozeaneum is a themed comparison candidate: A permanent public aquarium and marine-life complex at a specific site in Stralsund.",
+          "sourceIds": ["source-16", "source-22"]
+        },
+        {
+          "poiId": "aquarium-berlin",
+          "tier": "hot",
+          "text": "Aquarium Berlin is a themed comparison candidate: An individually named permanent public aquarium in central Berlin with living aquatic-animal displays.",
+          "sourceIds": ["source-17", "source-22"]
+        },
+        {
+          "poiId": "oceanografic-valencia",
+          "tier": "warm",
+          "text": "L'Oceanogràfic is a themed comparison candidate: A permanent public oceanarium complex in Valencia devoted primarily to aquatic ecosystems and animals.",
+          "sourceIds": ["source-18", "source-22"]
+        },
+        {
+          "poiId": "aquarium-barcelona",
+          "tier": "warm",
+          "text": "Barcelona Aquarium is a themed comparison candidate: A permanent public aquarium at Port Vell in Barcelona, principally displaying Mediterranean and tropical aquatic life.",
+          "sourceIds": ["source-19", "source-22"]
+        },
+        {
+          "poiId": "lisbon-oceanarium",
+          "tier": "warm",
+          "text": "Oceanário de Lisboa is a themed comparison candidate: A permanent public oceanarium in Lisbon whose principal visitor function is displaying marine ecosystems.",
+          "sourceIds": ["source-20", "source-22"]
+        },
+        {
+          "poiId": "acquario-di-genova",
+          "tier": "hot",
+          "text": "Acquario di Genova is a themed comparison candidate: A permanent public aquarium at Genoa's Old Port with extensive aquatic-animal exhibits.",
+          "sourceIds": ["source-21", "source-22"]
+        },
+        {
+          "poiId": "aquarium-paris",
+          "tier": "correct",
+          "text": "Aquarium de Paris is the round target: An individually named permanent public aquarium beneath the Trocadéro gardens in Paris.",
+          "sourceIds": ["source-22"]
+        },
+        {
+          "poiId": "nausicaa-boulogne",
+          "tier": "hot",
+          "text": "Nausicaá is a themed comparison candidate: A permanent public national sea centre and oceanarium in the incorporated city of Boulogne-sur-Mer.",
+          "sourceIds": ["source-23", "source-22"]
+        },
+        {
+          "poiId": "aquarium-finisterrae",
+          "tier": "warm",
+          "text": "Aquarium Finisterrae is a themed comparison candidate: A permanent public aquarium in A Coruña displaying Atlantic marine life and aquatic ecosystems.",
+          "sourceIds": ["source-24", "source-22"]
+        },
+        {
+          "poiId": "dubai-aquarium",
+          "tier": "cold",
+          "text": "Dubai Aquarium & Underwater Zoo is a themed comparison candidate: A specifically named, permanently installed public aquarium attraction in Dubai Mall.",
+          "sourceIds": ["source-25", "source-22"]
+        }
+      ]
+    },
+    {
+      "id": "round-4",
+      "targetPoiId": "nausicaa-boulogne",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Boulogne_vue_generale_phare_beffroi_mer.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Boulogne-sur-Mer",
+        "attribution": "Matthieu Debailleul · CC BY-SA 1.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/1.0"
+      },
+      "clue": {
+        "text": "Opened in 1991, this national sea centre is devoted entirely to humanity’s relationship with the sea, combining aquaria with exhibitions on marine fauna, fisheries, aquaculture, coastal planning, transport, energy, minerals, and tourism.",
+        "sourceIds": ["source-23"]
+      },
+      "results": [
+        {
+          "poiId": "aquarium-atlanta",
+          "tier": "cold",
+          "text": "Georgia Aquarium is a themed comparison candidate: A large permanent public aquarium in downtown Atlanta whose principal attraction is living aquatic animals and ecosystems.",
+          "sourceIds": ["source-01", "source-23"]
+        },
+        {
+          "poiId": "monterey-bay-aquarium",
+          "tier": "warm",
+          "text": "Monterey Bay Aquarium is a themed comparison candidate: An individually named permanent public aquarium on Cannery Row, focused on marine life and Monterey Bay ecosystems.",
+          "sourceIds": ["source-02", "source-23"]
+        },
+        {
+          "poiId": "aquarium-of-the-pacific",
+          "tier": "cold",
+          "text": "Aquarium of the Pacific is a themed comparison candidate: A permanent, independently named public aquarium at Rainbow Harbor in Long Beach.",
+          "sourceIds": ["source-03", "source-23"]
+        },
+        {
+          "poiId": "new-england-aquarium",
+          "tier": "cold",
+          "text": "New England Aquarium is a themed comparison candidate: A permanent public aquarium on Boston's Central Wharf with a principal focus on aquatic animals and habitats.",
+          "sourceIds": ["source-04", "source-23"]
+        },
+        {
+          "poiId": "shedd-aquarium",
+          "tier": "cold",
+          "text": "Shedd Aquarium is a themed comparison candidate: An individually named permanent public aquarium on Chicago's Museum Campus.",
+          "sourceIds": ["source-05", "source-23"]
+        },
+        {
+          "poiId": "national-aquarium-baltimore",
+          "tier": "cold",
+          "text": "National Aquarium is a themed comparison candidate: A permanent, individually named public aquarium at Baltimore's Inner Harbor.",
+          "sourceIds": ["source-06", "source-23"]
+        },
+        {
+          "poiId": "virginia-aquarium",
+          "tier": "cold",
+          "text": "Virginia Aquarium & Marine Science Center is a themed comparison candidate: A permanent public aquarium complex in Virginia Beach with extensive living marine-animal exhibits.",
+          "sourceIds": ["source-07", "source-23"]
+        },
+        {
+          "poiId": "seattle-aquarium",
+          "tier": "cold",
+          "text": "Seattle Aquarium is a themed comparison candidate: An independently named public aquarium on Pier 59 in central Seattle.",
+          "sourceIds": ["source-08", "source-23"]
+        },
+        {
+          "poiId": "oregon-coast-aquarium",
+          "tier": "warm",
+          "text": "Oregon Coast Aquarium is a themed comparison candidate: A permanent public aquarium in Newport, Oregon, centered on Pacific Northwest aquatic ecosystems.",
+          "sourceIds": ["source-09", "source-23"]
+        },
+        {
+          "poiId": "audubon-aquarium",
+          "tier": "cold",
+          "text": "Audubon Aquarium is a themed comparison candidate: A permanent independently named public aquarium in downtown New Orleans.",
+          "sourceIds": ["source-10", "source-23"]
+        },
+        {
+          "poiId": "dallas-world-aquarium",
+          "tier": "cold",
+          "text": "The Dallas World Aquarium is a themed comparison candidate: A permanent, ticketed aquarium attraction in Dallas whose principal visitor function is displaying living aquatic and rainforest animals.",
+          "sourceIds": ["source-11", "source-23"]
+        },
+        {
+          "poiId": "aquarium-of-the-bay",
+          "tier": "cold",
+          "text": "Aquarium of the Bay is a themed comparison candidate: An independently named public aquarium at Pier 39 in San Francisco.",
+          "sourceIds": ["source-12", "source-23"]
+        },
+        {
+          "poiId": "vancouver-aquarium",
+          "tier": "warm",
+          "text": "Vancouver Aquarium is a themed comparison candidate: A permanent public aquarium in Stanley Park, Vancouver, focused on marine animals and conservation.",
+          "sourceIds": ["source-13", "source-23"]
+        },
+        {
+          "poiId": "ripley-aquarium-toronto",
+          "tier": "cold",
+          "text": "Ripley's Aquarium of Canada is a themed comparison candidate: A permanent, independently named public aquarium at Toronto's waterfront entertainment district.",
+          "sourceIds": ["source-14", "source-23"]
+        },
+        {
+          "poiId": "aquarium-quebec",
+          "tier": "warm",
+          "text": "Aquarium du Québec is a themed comparison candidate: A permanent public aquarium complex in Quebec City displaying marine, freshwater, and Arctic animals.",
+          "sourceIds": ["source-15", "source-23"]
+        },
+        {
+          "poiId": "ozeaneum-stralsund",
+          "tier": "hot",
+          "text": "Ozeaneum is a themed comparison candidate: A permanent public aquarium and marine-life complex at a specific site in Stralsund.",
+          "sourceIds": ["source-16", "source-23"]
+        },
+        {
+          "poiId": "aquarium-berlin",
+          "tier": "warm",
+          "text": "Aquarium Berlin is a themed comparison candidate: An individually named permanent public aquarium in central Berlin with living aquatic-animal displays.",
+          "sourceIds": ["source-17", "source-23"]
+        },
+        {
+          "poiId": "oceanografic-valencia",
+          "tier": "warm",
+          "text": "L'Oceanogràfic is a themed comparison candidate: A permanent public oceanarium complex in Valencia devoted primarily to aquatic ecosystems and animals.",
+          "sourceIds": ["source-18", "source-23"]
+        },
+        {
+          "poiId": "aquarium-barcelona",
+          "tier": "warm",
+          "text": "Barcelona Aquarium is a themed comparison candidate: A permanent public aquarium at Port Vell in Barcelona, principally displaying Mediterranean and tropical aquatic life.",
+          "sourceIds": ["source-19", "source-23"]
+        },
+        {
+          "poiId": "lisbon-oceanarium",
+          "tier": "warm",
+          "text": "Oceanário de Lisboa is a themed comparison candidate: A permanent public oceanarium in Lisbon whose principal visitor function is displaying marine ecosystems.",
+          "sourceIds": ["source-20", "source-23"]
+        },
+        {
+          "poiId": "acquario-di-genova",
+          "tier": "hot",
+          "text": "Acquario di Genova is a themed comparison candidate: A permanent public aquarium at Genoa's Old Port with extensive aquatic-animal exhibits.",
+          "sourceIds": ["source-21", "source-23"]
+        },
+        {
+          "poiId": "aquarium-paris",
+          "tier": "hot",
+          "text": "Aquarium de Paris is a themed comparison candidate: An individually named permanent public aquarium beneath the Trocadéro gardens in Paris.",
+          "sourceIds": ["source-22", "source-23"]
+        },
+        {
+          "poiId": "nausicaa-boulogne",
+          "tier": "correct",
+          "text": "Nausicaá is the round target: A permanent public national sea centre and oceanarium in the incorporated city of Boulogne-sur-Mer.",
+          "sourceIds": ["source-23"]
+        },
+        {
+          "poiId": "aquarium-finisterrae",
+          "tier": "hot",
+          "text": "Aquarium Finisterrae is a themed comparison candidate: A permanent public aquarium in A Coruña displaying Atlantic marine life and aquatic ecosystems.",
+          "sourceIds": ["source-24", "source-23"]
+        },
+        {
+          "poiId": "dubai-aquarium",
+          "tier": "cold",
+          "text": "Dubai Aquarium & Underwater Zoo is a themed comparison candidate: A specifically named, permanently installed public aquarium attraction in Dubai Mall.",
+          "sourceIds": ["source-25", "source-23"]
+        }
+      ]
+    },
+    {
+      "id": "round-5",
+      "targetPoiId": "aquarium-finisterrae",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Entrada_del_Aquarium_Finisterrae.jpg/1280px-Entrada_del_Aquarium_Finisterrae.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Aquarium Finisterrae",
+        "attribution": "Marcus · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "clue": {
+        "text": "Founded by a municipality and opened on 5 June 1999, this interactive marine-science centre has exterior pools fed directly by the Atlantic, including a 4.4-million-litre observation pool styled as Captain Nemo’s study.",
+        "sourceIds": ["source-24"]
+      },
+      "results": [
+        {
+          "poiId": "aquarium-atlanta",
+          "tier": "cold",
+          "text": "Georgia Aquarium is a themed comparison candidate: A large permanent public aquarium in downtown Atlanta whose principal attraction is living aquatic animals and ecosystems.",
+          "sourceIds": ["source-01", "source-24"]
+        },
+        {
+          "poiId": "monterey-bay-aquarium",
+          "tier": "warm",
+          "text": "Monterey Bay Aquarium is a themed comparison candidate: An individually named permanent public aquarium on Cannery Row, focused on marine life and Monterey Bay ecosystems.",
+          "sourceIds": ["source-02", "source-24"]
+        },
+        {
+          "poiId": "aquarium-of-the-pacific",
+          "tier": "cold",
+          "text": "Aquarium of the Pacific is a themed comparison candidate: A permanent, independently named public aquarium at Rainbow Harbor in Long Beach.",
+          "sourceIds": ["source-03", "source-24"]
+        },
+        {
+          "poiId": "new-england-aquarium",
+          "tier": "cold",
+          "text": "New England Aquarium is a themed comparison candidate: A permanent public aquarium on Boston's Central Wharf with a principal focus on aquatic animals and habitats.",
+          "sourceIds": ["source-04", "source-24"]
+        },
+        {
+          "poiId": "shedd-aquarium",
+          "tier": "cold",
+          "text": "Shedd Aquarium is a themed comparison candidate: An individually named permanent public aquarium on Chicago's Museum Campus.",
+          "sourceIds": ["source-05", "source-24"]
+        },
+        {
+          "poiId": "national-aquarium-baltimore",
+          "tier": "cold",
+          "text": "National Aquarium is a themed comparison candidate: A permanent, individually named public aquarium at Baltimore's Inner Harbor.",
+          "sourceIds": ["source-06", "source-24"]
+        },
+        {
+          "poiId": "virginia-aquarium",
+          "tier": "cold",
+          "text": "Virginia Aquarium & Marine Science Center is a themed comparison candidate: A permanent public aquarium complex in Virginia Beach with extensive living marine-animal exhibits.",
+          "sourceIds": ["source-07", "source-24"]
+        },
+        {
+          "poiId": "seattle-aquarium",
+          "tier": "warm",
+          "text": "Seattle Aquarium is a themed comparison candidate: An independently named public aquarium on Pier 59 in central Seattle.",
+          "sourceIds": ["source-08", "source-24"]
+        },
+        {
+          "poiId": "oregon-coast-aquarium",
+          "tier": "warm",
+          "text": "Oregon Coast Aquarium is a themed comparison candidate: A permanent public aquarium in Newport, Oregon, centered on Pacific Northwest aquatic ecosystems.",
+          "sourceIds": ["source-09", "source-24"]
+        },
+        {
+          "poiId": "audubon-aquarium",
+          "tier": "cold",
+          "text": "Audubon Aquarium is a themed comparison candidate: A permanent independently named public aquarium in downtown New Orleans.",
+          "sourceIds": ["source-10", "source-24"]
+        },
+        {
+          "poiId": "dallas-world-aquarium",
+          "tier": "cold",
+          "text": "The Dallas World Aquarium is a themed comparison candidate: A permanent, ticketed aquarium attraction in Dallas whose principal visitor function is displaying living aquatic and rainforest animals.",
+          "sourceIds": ["source-11", "source-24"]
+        },
+        {
+          "poiId": "aquarium-of-the-bay",
+          "tier": "cold",
+          "text": "Aquarium of the Bay is a themed comparison candidate: An independently named public aquarium at Pier 39 in San Francisco.",
+          "sourceIds": ["source-12", "source-24"]
+        },
+        {
+          "poiId": "vancouver-aquarium",
+          "tier": "warm",
+          "text": "Vancouver Aquarium is a themed comparison candidate: A permanent public aquarium in Stanley Park, Vancouver, focused on marine animals and conservation.",
+          "sourceIds": ["source-13", "source-24"]
+        },
+        {
+          "poiId": "ripley-aquarium-toronto",
+          "tier": "cold",
+          "text": "Ripley's Aquarium of Canada is a themed comparison candidate: A permanent, independently named public aquarium at Toronto's waterfront entertainment district.",
+          "sourceIds": ["source-14", "source-24"]
+        },
+        {
+          "poiId": "aquarium-quebec",
+          "tier": "cold",
+          "text": "Aquarium du Québec is a themed comparison candidate: A permanent public aquarium complex in Quebec City displaying marine, freshwater, and Arctic animals.",
+          "sourceIds": ["source-15", "source-24"]
+        },
+        {
+          "poiId": "ozeaneum-stralsund",
+          "tier": "hot",
+          "text": "Ozeaneum is a themed comparison candidate: A permanent public aquarium and marine-life complex at a specific site in Stralsund.",
+          "sourceIds": ["source-16", "source-24"]
+        },
+        {
+          "poiId": "aquarium-berlin",
+          "tier": "warm",
+          "text": "Aquarium Berlin is a themed comparison candidate: An individually named permanent public aquarium in central Berlin with living aquatic-animal displays.",
+          "sourceIds": ["source-17", "source-24"]
+        },
+        {
+          "poiId": "oceanografic-valencia",
+          "tier": "warm",
+          "text": "L'Oceanogràfic is a themed comparison candidate: A permanent public oceanarium complex in Valencia devoted primarily to aquatic ecosystems and animals.",
+          "sourceIds": ["source-18", "source-24"]
+        },
+        {
+          "poiId": "aquarium-barcelona",
+          "tier": "warm",
+          "text": "Barcelona Aquarium is a themed comparison candidate: A permanent public aquarium at Port Vell in Barcelona, principally displaying Mediterranean and tropical aquatic life.",
+          "sourceIds": ["source-19", "source-24"]
+        },
+        {
+          "poiId": "lisbon-oceanarium",
+          "tier": "warm",
+          "text": "Oceanário de Lisboa is a themed comparison candidate: A permanent public oceanarium in Lisbon whose principal visitor function is displaying marine ecosystems.",
+          "sourceIds": ["source-20", "source-24"]
+        },
+        {
+          "poiId": "acquario-di-genova",
+          "tier": "hot",
+          "text": "Acquario di Genova is a themed comparison candidate: A permanent public aquarium at Genoa's Old Port with extensive aquatic-animal exhibits.",
+          "sourceIds": ["source-21", "source-24"]
+        },
+        {
+          "poiId": "aquarium-paris",
+          "tier": "hot",
+          "text": "Aquarium de Paris is a themed comparison candidate: An individually named permanent public aquarium beneath the Trocadéro gardens in Paris.",
+          "sourceIds": ["source-22", "source-24"]
+        },
+        {
+          "poiId": "nausicaa-boulogne",
+          "tier": "hot",
+          "text": "Nausicaá is a themed comparison candidate: A permanent public national sea centre and oceanarium in the incorporated city of Boulogne-sur-Mer.",
+          "sourceIds": ["source-23", "source-24"]
+        },
+        {
+          "poiId": "aquarium-finisterrae",
+          "tier": "correct",
+          "text": "Aquarium Finisterrae is the round target: A permanent public aquarium in A Coruña displaying Atlantic marine life and aquatic ecosystems.",
+          "sourceIds": ["source-24"]
+        },
+        {
+          "poiId": "dubai-aquarium",
+          "tier": "cold",
+          "text": "Dubai Aquarium & Underwater Zoo is a themed comparison candidate: A specifically named, permanently installed public aquarium attraction in Dubai Mall.",
+          "sourceIds": ["source-25", "source-24"]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-01",
+      "title": "Georgia Aquarium",
+      "url": "https://en.wikipedia.org/wiki/Georgia_Aquarium",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-02",
+      "title": "Monterey Bay Aquarium",
+      "url": "https://en.wikipedia.org/wiki/Monterey_Bay_Aquarium",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-03",
+      "title": "Aquarium of the Pacific",
+      "url": "https://en.wikipedia.org/wiki/Aquarium_of_the_Pacific",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-04",
+      "title": "New England Aquarium",
+      "url": "https://en.wikipedia.org/wiki/New_England_Aquarium",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-05",
+      "title": "Shedd Aquarium",
+      "url": "https://en.wikipedia.org/wiki/Shedd_Aquarium",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-06",
+      "title": "National Aquarium",
+      "url": "https://en.wikipedia.org/wiki/National_Aquarium_(Baltimore)",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-07",
+      "title": "Virginia Aquarium & Marine Science Center",
+      "url": "https://en.wikipedia.org/wiki/Virginia_Aquarium_%26_Marine_Science_Center",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-08",
+      "title": "Seattle Aquarium",
+      "url": "https://en.wikipedia.org/wiki/Seattle_Aquarium",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-09",
+      "title": "Oregon Coast Aquarium",
+      "url": "https://en.wikipedia.org/wiki/Oregon_Coast_Aquarium",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-10",
+      "title": "Audubon Aquarium",
+      "url": "https://en.wikipedia.org/wiki/Audubon_Aquarium",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-11",
+      "title": "The Dallas World Aquarium",
+      "url": "https://en.wikipedia.org/wiki/The_Dallas_World_Aquarium",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-12",
+      "title": "Aquarium of the Bay",
+      "url": "https://en.wikipedia.org/wiki/Aquarium_of_the_Bay",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-13",
+      "title": "Vancouver Aquarium",
+      "url": "https://en.wikipedia.org/wiki/Vancouver_Aquarium",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-14",
+      "title": "Ripley's Aquarium of Canada",
+      "url": "https://en.wikipedia.org/wiki/Ripley%27s_Aquarium_of_Canada",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-15",
+      "title": "Aquarium du Québec",
+      "url": "https://en.wikipedia.org/wiki/Aquarium_du_Qu%C3%A9bec",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-16",
+      "title": "Ozeaneum",
+      "url": "https://en.wikipedia.org/wiki/Ozeaneum",
+      "retrievedAt": "2026-08-18T03:26:00.907Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-17",
+      "title": "Berlin Aquarium",
+      "url": "https://en.wikipedia.org/wiki/Berlin_Aquarium",
+      "retrievedAt": "2026-08-18T03:26:00.767Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-18",
+      "title": "L'Oceanogràfic",
+      "url": "https://en.wikipedia.org/wiki/L%27Oceanogr%C3%A0fic",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-19",
+      "title": "Barcelona Aquarium",
+      "url": "https://en.wikipedia.org/wiki/Barcelona_Aquarium",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-20",
+      "title": "Lisbon Oceanarium",
+      "url": "https://en.wikipedia.org/wiki/Lisbon_Oceanarium",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-21",
+      "title": "Aquarium of Genoa",
+      "url": "https://en.wikipedia.org/wiki/Aquarium_of_Genoa",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-22",
+      "title": "Trocadéro, Paris",
+      "url": "https://en.wikipedia.org/wiki/Trocad%C3%A9ro,_Paris",
+      "retrievedAt": "2026-08-18T03:26:01.043Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-23",
+      "title": "Boulogne-sur-Mer",
+      "url": "https://en.wikipedia.org/wiki/Boulogne-sur-Mer",
+      "retrievedAt": "2026-08-18T03:26:01.044Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-24",
+      "title": "Aquarium Finisterrae",
+      "url": "https://en.wikipedia.org/wiki/Aquarium_Finisterrae",
+      "retrievedAt": "2026-08-18T03:26:00.768Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-25",
+      "title": "Dubai Aquarium and Underwater Zoo",
+      "url": "https://en.wikipedia.org/wiki/Dubai_Aquarium_and_Underwater_Zoo",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    }
+  ],
+  "theme": {
+    "title": "Public Aquariums in Cities",
+    "introduction": "Ocean life comes ashore in cities around the world. These public aquariums turn marine discovery into an urban experience.",
+    "inclusionCriteria": "Include a location only when every condition is met: (1) it is an individually named, permanent public aquarium, oceanarium, or aquarium complex whose principal visitor function is displaying living aquatic animals or aquatic ecosystems; (2) it has regularly scheduled public admission on the date of play, whether ticketed or free; (3) the named aquarium occupies a specific permanent site that can be pinned as one exact map location; (4) that site lies within the current administrative boundary of a present-day city or incorporated urban municipality; and (5) the institution is operating under its own identifiable name, rather than being merely an unnamed exhibit within another attraction."
+  }
+}

@@ -56,22 +56,28 @@ export function DailyScorePanel({
       </header>
 
       <ol className="grid grid-cols-5 gap-2" aria-label="Round results">
-        {progress.guesses.map((guess, index) => (
-          <li className="space-y-2 text-center" key={guess.roundId}>
-            <span
-              aria-hidden="true"
-              className={`mx-auto grid size-11 place-items-center rounded-full border ${tierStyles[guess.tier]}`}
-            >
-              {guess.points}
-            </span>
-            <span className="block text-xs text-muted-foreground">
-              Round {index + 1}
-            </span>
-            <span className="block text-xs font-semibold capitalize">
-              {guess.tier}
-            </span>
-          </li>
-        ))}
+        {progress.guesses.map((guess, index) => {
+          const place = caseData.pois.find((poi) => poi.id === guess.poiId);
+          return (
+            <li className="space-y-2 text-center" key={guess.roundId}>
+              <span
+                aria-hidden="true"
+                className={`mx-auto grid size-11 place-items-center rounded-full border ${tierStyles[guess.tier]}`}
+              >
+                {guess.points}
+              </span>
+              <span className="block text-xs text-muted-foreground">
+                Round {index + 1}
+              </span>
+              <span className="block text-xs leading-tight font-semibold text-paper">
+                {place?.name ?? 'Unknown place'}
+              </span>
+              <span className="block text-xs font-semibold capitalize">
+                {guess.tier}
+              </span>
+            </li>
+          );
+        })}
       </ol>
 
       <button

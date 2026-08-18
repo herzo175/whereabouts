@@ -10,6 +10,14 @@ type RoundRevealProps = {
 };
 
 function FullDossier({ poi, label }: { poi: Poi; label: string }) {
+  const themeConnection =
+    'themeConnection' in poi &&
+    typeof poi.themeConnection === 'object' &&
+    poi.themeConnection !== null &&
+    'text' in poi.themeConnection &&
+    typeof poi.themeConnection.text === 'string'
+      ? (poi.themeConnection as { text: string })
+      : undefined;
   return (
     <article className="overflow-hidden rounded-lg border border-foreground/15 bg-background">
       {poi.image ? (
@@ -50,6 +58,17 @@ function FullDossier({ poi, label }: { poi: Poi; label: string }) {
         </p>
         {poi.blurb ? (
           <p className="text-sm leading-relaxed">{poi.blurb}</p>
+        ) : null}
+        {themeConnection ? (
+          <section
+            aria-label="Why it fits today's theme"
+            className="space-y-1 border-t border-foreground/10 pt-3"
+          >
+            <h4 className="text-xs font-semibold tracking-[0.16em] text-cyan uppercase">
+              Why it fits today's theme
+            </h4>
+            <p className="text-sm leading-relaxed">{themeConnection.text}</p>
+          </section>
         ) : null}
       </div>
     </article>

@@ -1,10 +1,10 @@
-import type { FiveRoundDailyCase, Poi } from '../src/schema.js';
+import type { Poi, ThemedDailyCase } from '../src/schema.js';
 
 const timestamp = '2026-08-14T00:00:00Z';
 
 export function makeFiveRoundCase(
-  overrides: Partial<FiveRoundDailyCase> = {},
-): FiveRoundDailyCase {
+  overrides: Partial<ThemedDailyCase> = {},
+): ThemedDailyCase {
   const pois: Poi[] = Array.from({ length: 25 }, (_, index) => ({
     id: `poi-${String(index).padStart(2, '0')}`,
     name:
@@ -52,17 +52,31 @@ export function makeFiveRoundCase(
     })),
   }));
   return {
-    schemaVersion: 2,
+    schemaVersion: 3,
     publicationDate: '2026-08-14',
     revision: 1,
     caseNumber: 1,
-    pois,
     rounds,
     sources: ['source-01', 'source-02'].map((id) => ({
       id,
       title: `Fixture source ${id}`,
       url: `https://example.com/${id}`,
       retrievedAt: timestamp,
+      provenance: 'verified',
+    })),
+    theme: {
+      title: 'Railway Hotels',
+      introduction:
+        'This case follows historic hotels built to serve travelers arriving by rail.',
+      inclusionCriteria:
+        'Include places whose history is directly connected to railway travel and lodging.',
+    },
+    pois: pois.map((poi) => ({
+      ...poi,
+      themeConnection: {
+        text: `${poi.name} has a documented connection to railway hotels and their traveling guests.`,
+        sourceIds: ['source-01'],
+      },
     })),
     ...overrides,
   };

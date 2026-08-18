@@ -1,231 +1,304 @@
+import { makeFiveRoundCase } from '@whereabouts/case-content/testing';
 import { describe, expect, it, vi } from 'vitest';
 
 import {
-  attachWikipediaImages,
-  ensureImageBackedPois,
-  generateWithRetries,
-  selectPoisForDate,
-  targetExclusionsForDate,
+  generateRange,
+  parseRangeArguments,
+  type RangeHistory,
 } from './generate-range.js';
+import type { PreparedCase } from './publish-batch.js';
 
-const catalog = Array.from({ length: 75 }, (_, index) => ({
-  id: `poi-${String(index).padStart(2, '0')}`,
-  name: `Place ${index}`,
-  city: `City ${index}`,
-  country: `Country ${index}`,
-  latitude: index,
-  longitude: index,
-  wikipediaTitle: `Place ${index}`,
-  region: `Region ${index % 10}`,
-}));
-
-describe('selectPoisForDate', () => {
-  it('is reproducible for a shared daily case', () => {
-    expect(selectPoisForDate(catalog, '2026-08-14')).toEqual(
-      selectPoisForDate(catalog, '2026-08-14'),
-    );
+function prepared(
+  date: string,
+  revision = 1,
+  themeTitle = `Theme ${date}`,
+): PreparedCase {
+  const caseData = makeFiveRoundCase({
+    publicationDate: date,
+    revision,
+    caseNumber: Math.floor(Date.parse(`${date}T00:00:00Z`) / 86_400_000),
   });
+  caseData.theme = {
+    title: themeTitle,
+    introduction: 'A useful introduction to this geography theme.',
+    inclusionCriteria: 'Places that satisfy this exact geography criterion.',
+  };
+  return {
+    caseData,
+    generationReview: {
+      schemaVersion: 1,
+      publicationDate: date,
+      revision,
+      themeVerdicts: caseData.pois.map((poi) => ({
+        poiId: poi.id,
+        status: 'pass',
+        explanation: 'This candidate clearly satisfies the theme criteria.',
+        sourceIds: ['source-01'],
+      })),
+      clueVerdicts: caseData.rounds.map((round) => ({
+        roundId: round.id,
+        declaredTargetPoiId: round.targetPoiId,
+        resolvedPoiId: round.targetPoiId,
+        resolvedOffBoardAnswer: null,
+        status: 'pass',
+        explanation: 'The clue resolves directly to the declared target.',
+      })),
+      repairs: [],
+    },
+    markdownReview: `# ${date}\n`,
+  };
+}
 
-  it('selects five explicit targets without reusing a target from the prior 30 dates', () => {
-    const history = new Map(
-      Array.from({ length: 30 }, (_, index) => [
-        `2026-07-${String(index + 1).padStart(2, '0')}`,
-        [`poi-${String(index).padStart(2, '0')}`],
-      ]),
-    );
-    const excluded = targetExclusionsForDate(history, '2026-08-14');
-    const selected = selectPoisForDate(catalog, '2026-08-14', excluded);
+function history(cases: PreparedCase[] = []): RangeHistory {
+  return {
+    manifest: {
+      schemaVersion: 2,
+      cases: Object.fromEntries(
+        cases.map(({ caseData }) => [
+          caseData.publicationDate,
+          {
+            caseNumber: caseData.caseNumber,
+            revision: caseData.revision,
+            file: `./cases/${caseData.publicationDate}/v${caseData.revision}.json`,
+          },
+        ]),
+      ),
+    },
+    cases: cases.map(({ caseData }) => caseData),
+  };
+}
 
-    expect(selected.slice(0, 5)).toHaveLength(5);
-    expect(new Set(selected.slice(0, 5).map((poi) => poi.id)).size).toBe(5);
-    expect(selected.slice(0, 5).some((poi) => excluded.has(poi.id))).toBe(
-      false,
-    );
-  });
-
-  it('excludes targets already published for a new revision of the same date', () => {
-    const date = '2026-08-14';
-    const firstRevision = selectPoisForDate(catalog, date);
-    const history = new Map([
-      [date, firstRevision.slice(0, 5).map((poi) => poi.id)],
-    ]);
-    const secondRevision = selectPoisForDate(
-      catalog,
-      date,
-      targetExclusionsForDate(history, date),
-      2,
-    );
-
+describe('parseRangeArguments', () => {
+  it('parses canonical generation and missing-only buffer arguments', () => {
     expect(
-      secondRevision
-        .slice(0, 5)
-        .some((poi) =>
-          firstRevision.slice(0, 5).some((first) => first.id === poi.id),
+      parseRangeArguments(['--from', '2026-08-17', '--days', '10']),
+    ).toEqual({
+      from: '2026-08-17',
+      days: 10,
+      revision: undefined,
+      missingOnly: false,
+      theme: undefined,
+    });
+    expect(
+      parseRangeArguments([
+        '--from',
+        '2026-08-17',
+        '--days',
+        '10',
+        '--missing-only',
+        '--revision',
+        '2',
+        '--theme',
+        'Railway hotels',
+      ]),
+    ).toEqual({
+      from: '2026-08-17',
+      days: 10,
+      revision: 2,
+      missingOnly: true,
+      theme: 'Railway hotels',
+    });
+  });
+
+  it('rejects non-canonical dates and invalid day counts', () => {
+    expect(() =>
+      parseRangeArguments(['--from', '2026-2-17', '--days', '10']),
+    ).toThrow(/date/i);
+    expect(() =>
+      parseRangeArguments(['--from', '2026-02-30', '--days', '10']),
+    ).toThrow(/date/i);
+    expect(() =>
+      parseRangeArguments(['--from', '2026-08-17', '--days', '0']),
+    ).toThrow(/days/i);
+  });
+});
+
+describe('generateRange', () => {
+  it('requests exactly ten consecutive dates and publishes once as one batch', async () => {
+    const requested: Array<{ date: string; revision: number }> = [];
+    const publish = vi.fn(async () => history());
+    await generateRange(['--from', '2026-08-17', '--days', '10'], {
+      history: async () => history(),
+      listExistingCasePaths: async () => [],
+      requireUserAgent: () => 'test',
+      orchestrate: async (input) => {
+        requested.push({ date: input.date, revision: input.revision });
+        return prepared(input.date, input.revision);
+      },
+      publishBatch: publish,
+    });
+
+    expect(requested).toEqual(
+      Array.from({ length: 10 }, (_, index) => {
+        const date = new Date(Date.UTC(2026, 7, 17 + index))
+          .toISOString()
+          .slice(0, 10);
+        return { date, revision: 1 };
+      }),
+    );
+    expect(publish).toHaveBeenCalledTimes(1);
+    expect(publish.mock.calls[0]?.[0].prepared).toHaveLength(10);
+  });
+
+  it('passes an optional requested theme into orchestration', async () => {
+    const requestedThemes: Array<string | undefined> = [];
+    await generateRange(
+      ['--from', '2026-08-27', '--days', '1', '--theme', 'Railway hotels'],
+      {
+        history: async () => history(),
+        listExistingCasePaths: async () => [],
+        orchestrate: async (input) => {
+          requestedThemes.push(input.requestedTheme);
+          return prepared(input.date, input.revision);
+        },
+        publishBatch: async () => history(),
+      },
+    );
+
+    expect(requestedThemes).toEqual(['Railway hotels']);
+  });
+
+  it('skips manifested dates in missing-only mode', async () => {
+    const existing = prepared('2026-08-18');
+    const requested: string[] = [];
+    const publish = vi.fn(async () => history([existing]));
+    await generateRange(
+      ['--from', '2026-08-17', '--days', '3', '--missing-only'],
+      {
+        history: async () => history([existing]),
+        requireUserAgent: () => 'test',
+        orchestrate: async (input) => {
+          requested.push(input.date);
+          return prepared(input.date, input.revision);
+        },
+        publishBatch: publish,
+      },
+    );
+
+    expect(requested).toEqual(['2026-08-17', '2026-08-19']);
+    expect(
+      publish.mock.calls[0]?.[0].prepared.map(
+        (item) => item.caseData.publicationDate,
+      ),
+    ).toEqual(['2026-08-17', '2026-08-19']);
+  });
+
+  it('passes rolling 90 themes and 30 target IDs into each consecutive case', async () => {
+    const prior = prepared('2026-08-16', 3, 'Prior theme');
+    const seen: Array<{ date: string; themes: string[]; excluded: string[] }> =
+      [];
+    await generateRange(['--from', '2026-08-17', '--days', '2'], {
+      history: async () => history([prior]),
+      requireUserAgent: () => 'test',
+      orchestrate: async (input) => {
+        seen.push({
+          date: input.date,
+          themes: input.recentThemes.map((theme) => theme.title),
+          excluded: [...input.excludedTargetIds].sort(),
+        });
+        return prepared(input.date, input.revision, `Generated ${input.date}`);
+      },
+      publishBatch: async () => history([prior]),
+    });
+
+    const priorTargets = prior.caseData.rounds
+      .map((round) => round.targetPoiId)
+      .sort();
+    expect(seen[0]).toEqual({
+      date: '2026-08-17',
+      themes: ['Prior theme'],
+      excluded: priorTargets,
+    });
+    expect(seen[1]?.themes).toEqual(['Prior theme', 'Generated 2026-08-17']);
+    expect(seen[1]?.excluded).toEqual(priorTargets);
+  });
+
+  it('uses the requested revision, otherwise allocates the next manifest revision', async () => {
+    const existing = prepared('2026-08-17', 3);
+    const revisions: number[] = [];
+    const publish = vi.fn(async () => history([existing]));
+    await generateRange(
+      ['--from', '2026-08-17', '--days', '1', '--revision', '7'],
+      {
+        history: async () => history([existing]),
+        requireUserAgent: () => 'test',
+        orchestrate: async (input) => {
+          revisions.push(input.revision);
+          return prepared(input.date, input.revision);
+        },
+        publishBatch: publish,
+      },
+    );
+    expect(revisions).toEqual([7]);
+    expect(publish.mock.calls[0]?.[0].existingCases).toEqual([]);
+  });
+
+  it('allocates after withdrawn immutable artifacts that are absent from the manifest', async () => {
+    const revisions: number[] = [];
+    await generateRange(['--from', '2026-08-17', '--days', '1'], {
+      history: async () => history(),
+      listExistingCasePaths: async () => [
+        '/content/cases/2026-08-17/v1.json',
+        '/content/cases/2026-08-17/v3.json',
+      ],
+      orchestrate: async (input) => {
+        revisions.push(input.revision);
+        return prepared(input.date, input.revision);
+      },
+      publishBatch: async () => history(),
+    });
+
+    expect(revisions).toEqual([4]);
+  });
+
+  it('rejects an explicit revision at or below existing history before orchestration', async () => {
+    const orchestrate = vi.fn(async (input) =>
+      prepared(input.date, input.revision),
+    );
+    const publish = vi.fn(async () => history());
+    const existing = prepared('2026-08-17', 3);
+    for (const revision of [2, 3]) {
+      await expect(
+        generateRange(
+          [
+            '--from',
+            '2026-08-17',
+            '--days',
+            '1',
+            '--revision',
+            String(revision),
+          ],
+          {
+            history: async () => history([existing]),
+            listExistingCasePaths: async () => [
+              '/content/cases/2026-08-17/v3.json',
+            ],
+            orchestrate,
+            publishBatch: publish,
+          },
         ),
-    ).toBe(false);
-  });
-
-  it('uses a distinct deterministic candidate selection for each revision', () => {
-    const firstRevision = selectPoisForDate(
-      catalog,
-      '2026-08-14',
-      new Set(),
-      1,
-    );
-    const secondRevision = selectPoisForDate(
-      catalog,
-      '2026-08-14',
-      new Set(),
-      2,
-    );
-
-    expect(secondRevision).not.toEqual(firstRevision);
-  });
-
-  it('does not repeat targets during a catalog cycle', () => {
-    const history = new Map<string, string[]>();
-    const targets = Array.from({ length: catalog.length / 5 }, (_, offset) => {
-      const date = new Date(Date.UTC(2026, 7, 14 + offset))
-        .toISOString()
-        .slice(0, 10);
-      const selected = selectPoisForDate(
-        catalog,
-        date,
-        targetExclusionsForDate(history, date),
-      );
-      const targetIds = selected.slice(0, 5).map((poi) => poi.id);
-      history.set(date, targetIds);
-      return targetIds;
-    });
-
-    expect(new Set(targets.flat()).size).toBe(catalog.length);
-  });
-
-  it('does not reuse nearly the entire candidate set on adjacent days', () => {
-    const today = selectPoisForDate(catalog, '2026-08-14');
-    const tomorrow = selectPoisForDate(catalog, '2026-08-15');
-    const todayIds = new Set(today.map((poi) => poi.id));
-    const overlap = tomorrow.filter((poi) => todayIds.has(poi.id));
-
-    expect(today).toHaveLength(25);
-    expect(tomorrow).toHaveLength(25);
-    expect(overlap.length).toBeLessThanOrEqual(12);
-  });
-
-  it('caps candidates from any one region', () => {
-    const selected = selectPoisForDate(catalog, '2026-08-14');
-    const regionCounts = new Map<string, number>();
-    for (const poi of selected) {
-      regionCounts.set(poi.region, (regionCounts.get(poi.region) ?? 0) + 1);
+      ).rejects.toThrow(/revision/i);
     }
-
-    expect(Math.max(...regionCounts.values())).toBeLessThanOrEqual(3);
-  });
-});
-
-describe('attachWikipediaImages', () => {
-  it('enriches every candidate with its available attributed image', async () => {
-    const selected = catalog.slice(0, 3);
-    const fetchImage = vi.fn(async (title: string) =>
-      title === 'Place 1'
-        ? undefined
-        : {
-            url: `https://upload.wikimedia.org/${title}.jpg`,
-            alt: title,
-            attribution: 'Example contributor · CC BY-SA 4.0',
-            licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
-          },
-    );
-
-    const enriched = await attachWikipediaImages(selected, fetchImage);
-
-    expect(fetchImage).toHaveBeenCalledTimes(3);
-    expect(fetchImage).toHaveBeenNthCalledWith(1, 'Place 0');
-    expect(fetchImage).toHaveBeenNthCalledWith(2, 'Place 1');
-    expect(fetchImage).toHaveBeenNthCalledWith(3, 'Place 2');
-    expect(enriched[0]?.image?.alt).toBe('Place 0');
-    expect(enriched[1]?.image).toBeUndefined();
-    expect(enriched[2]?.image?.alt).toBe('Place 2');
+    expect(orchestrate).not.toHaveBeenCalled();
+    expect(publish).not.toHaveBeenCalled();
   });
 
-  it('deterministically replaces candidates without images from the larger catalog', async () => {
-    const selected = catalog.slice(0, 5);
-    const fetchImage = vi.fn(async (title: string) =>
-      title === 'Place 1'
-        ? undefined
-        : {
-            url: `https://upload.wikimedia.org/${title}.jpg`,
-            alt: title,
-            attribution: 'Example contributor · CC BY-SA 4.0',
-            licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
-          },
+  it('accepts an explicit revision above all existing history', async () => {
+    const revisions: number[] = [];
+    await generateRange(
+      ['--from', '2026-08-17', '--days', '1', '--revision', '4'],
+      {
+        history: async () => history([prepared('2026-08-17', 3)]),
+        listExistingCasePaths: async () => [
+          '/content/cases/2026-08-17/v3.json',
+        ],
+        orchestrate: async (input) => {
+          revisions.push(input.revision);
+          return prepared(input.date, input.revision);
+        },
+        publishBatch: async () => history(),
+      },
     );
-
-    const sourced = await ensureImageBackedPois(
-      selected,
-      catalog,
-      '2026-08-14',
-      fetchImage,
-    );
-
-    expect(sourced).toHaveLength(5);
-    expect(sourced.every((poi) => poi.image)).toBe(true);
-    expect(sourced.some((poi) => poi.id === 'poi-01')).toBe(false);
-    await expect(
-      ensureImageBackedPois(selected, catalog, '2026-08-14', fetchImage),
-    ).resolves.toEqual(sourced);
-  });
-
-  it('never promotes an excluded prior target when replacing an image-less target', async () => {
-    const selected = catalog.slice(0, 25);
-    const excluded = new Set(['poi-25', 'poi-26', 'poi-27']);
-    const fetchImage = vi.fn(async (title: string) =>
-      title === 'Place 0'
-        ? undefined
-        : {
-            url: `https://upload.wikimedia.org/${title}.jpg`,
-            alt: title,
-            attribution: 'Example contributor · CC BY-SA 4.0',
-            licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
-          },
-    );
-
-    const sourced = await ensureImageBackedPois(
-      selected,
-      catalog,
-      '2026-08-14',
-      fetchImage,
-      excluded,
-    );
-
-    expect(sourced).toHaveLength(25);
-    expect(sourced.slice(0, 5).every((poi) => poi.image)).toBe(true);
-    expect(sourced.slice(0, 5).some((poi) => excluded.has(poi.id))).toBe(false);
-  });
-});
-
-describe('generateWithRetries', () => {
-  it('retries a full generation after publication validation failures', async () => {
-    const generate = vi.fn(async () => {
-      if (generate.mock.calls.length < 3)
-        throw new Error('publication validation failed: invalid tier spread');
-      return 'published draft';
-    });
-
-    await expect(generateWithRetries(generate)).resolves.toBe(
-      'published draft',
-    );
-    expect(generate).toHaveBeenCalledTimes(3);
-  });
-
-  it('fails deterministic setup errors without retrying', async () => {
-    const generate = vi.fn(async () => {
-      throw new Error('generation requires images for all 25 POIs');
-    });
-
-    await expect(generateWithRetries(generate)).rejects.toThrow(
-      'generation requires images for all 25 POIs',
-    );
-    expect(generate).toHaveBeenCalledTimes(1);
+    expect(revisions).toEqual([4]);
   });
 });

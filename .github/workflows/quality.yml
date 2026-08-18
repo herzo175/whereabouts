@@ -24,7 +24,30 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Install Chromium
         run: pnpm --filter @whereabouts/web exec playwright install --with-deps chromium
+      - name: Calculate latest manifest publication date
+        id: manifest_date
+        run: |
+          latest="$(node <<'NODE'
+          import { readFile } from 'node:fs/promises';
+
+          const manifest = JSON.parse(await readFile('packages/case-content/content/manifest.json', 'utf8'));
+          const dates = Object.keys(manifest.cases ?? {});
+          const latest = dates.sort().at(-1) ?? new Date().toISOString().slice(0, 10);
+          process.stdout.write(latest);
+          NODE
+          )"
+          if [[ ! "$latest" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "Invalid latest manifest publication date: $latest" >&2
+            exit 1
+          fi
+          if [ "$(date -d "$latest" +%F)" != "$latest" ]; then
+            echo "Non-canonical latest manifest publication date: $latest" >&2
+            exit 1
+          fi
+          echo "latest=$latest" >> "$GITHUB_OUTPUT"
       - name: Run quality checks
+        env:
+          PUBLICATION_CEILING: ${{ steps.manifest_date.outputs.latest }}
         run: pnpm quality
       - name: Run browser tests
         run: pnpm test:e2e
