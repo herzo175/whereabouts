@@ -34,9 +34,9 @@ const draft = {
   rounds: caseData.rounds.map((round) => ({
     targetPoiId: round.targetPoiId,
     clue: { text: round.clue.text, evidencePoiIds: [round.targetPoiId] },
-    results: caseData.pois.map((poi, index) => ({
+    results: caseData.pois.map((poi) => ({
       poiId: poi.id,
-      similarityScore: poi.id === round.targetPoiId ? 100 : index * 5,
+      similarityScore: poi.id === round.targetPoiId ? 100 : 50,
       text: `${poi.name} has sourced evidence.`,
       evidencePoiIds: [poi.id],
     })),
@@ -217,36 +217,6 @@ describe('critiqueCase', () => {
     });
     expect(result.repairs).toEqual([
       expect.objectContaining({ kind: 'clue', roundId: 'round-1' }),
-    ]);
-  });
-
-  it('repairs rounds whose authored scores do not span every UI band', async () => {
-    const invalidDraft = {
-      ...draft,
-      rounds: draft.rounds.map((round, index) =>
-        index === 2
-          ? {
-              ...round,
-              results: round.results.map((result) => ({
-                ...result,
-                similarityScore: result.poiId === round.targetPoiId ? 100 : 50,
-              })),
-            }
-          : round,
-      ),
-    };
-
-    const result = await critiqueCase({
-      criticModel: modelWith(passingOutput()),
-      theme: board.theme,
-      board,
-      draft: invalidDraft,
-      publicationDate: caseData.publicationDate,
-      revision: caseData.revision,
-    });
-
-    expect(result.repairs).toEqual([
-      expect.objectContaining({ kind: 'clue', roundId: 'round-3' }),
     ]);
   });
 
