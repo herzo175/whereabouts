@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "publicationDate": "2026-08-17",
+  "revision": 2,
+  "themeVerdicts": [
+    {
+      "poiId": "brussels-grand-place",
+      "status": "pass",
+      "explanation": "Grand-Place, Brussels is an individually named active UNESCO World Heritage property physically located within Brussels, Belgium’s current national capital, and is an identifiable visitable urban landmark.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "brussels-hotel-tassel",
+      "status": "pass",
+      "explanation": "Hôtel Tassel is one of the specifically named buildings forming UNESCO’s active Major Town Houses of the Architect Victor Horta property. It is located in Brussels and is an identifiable visitable building.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "brussels-hotel-solvay",
+      "status": "pass",
+      "explanation": "Hôtel Solvay is a specifically named building in UNESCO’s active Major Town Houses of the Architect Victor Horta property, physically located within Brussels and identifiable as a visitable landmark.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "brussels-hotel-van-eetvelde",
+      "status": "pass",
+      "explanation": "Hôtel van Eetvelde is one of the four specifically named Horta town houses in the active UNESCO property. The evidence places it in Brussels, the current Belgian capital, and identifies it as a visitable historic building.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "brussels-horta-house-studio",
+      "status": "pass",
+      "explanation": "Maison and Atelier Horta is the specifically named fourth building in UNESCO’s active Horta town-houses property. It lies in Brussels and is an identifiable visitable landmark.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "berlin-museum-island",
+      "status": "pass",
+      "explanation": "Museum Island, Berlin is an individually inscribed active UNESCO World Heritage property located within Berlin, Germany’s current national capital, and is an identifiable museum complex.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "cairo-historic-cairo",
+      "status": "pass",
+      "explanation": "Historic Cairo is an individually inscribed active UNESCO property encompassing a defined historic urban area within Cairo, Egypt’s current capital, and is identifiable as a visitable district and monument area.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "kathmandu-hanuman-dhoka",
+      "status": "pass",
+      "explanation": "Hanuman Dhoka is one of the specifically named monument zones of the active Kathmandu Valley UNESCO property. It is physically located in Kathmandu and is an identifiable visitable palace-and-square complex.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "kathmandu-swayambhu",
+      "status": "pass",
+      "explanation": "Swayambhu is one of the specifically named monument zones of the active Kathmandu Valley UNESCO property. The evidence places the stupa complex within Kathmandu municipality and identifies it as a visitable landmark.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "kathmandu-boudhanath",
+      "status": "pass",
+      "explanation": "Bauddhanath is a separately named monument zone of the active Kathmandu Valley UNESCO property and is physically located within Kathmandu. It is an identifiable visitable stupa complex.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "kathmandu-pashupati",
+      "status": "pass",
+      "explanation": "Pashupati is one of UNESCO’s seven named Kathmandu Valley monument zones. The evidence places the extensive, identifiable temple precinct in Kathmandu, Nepal’s current capital, and confirms its active UNESCO recognition.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "mexico-city-barragan-house",
+      "status": "pass",
+      "explanation": "Luis Barragán House and Studio is an individually inscribed active UNESCO World Heritage property in Mexico City, the current Mexican capital, and is an identifiable visitable architectural landmark.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "brasilia-monumental-axis",
+      "status": "pass",
+      "explanation": "Brasília is an individually inscribed active UNESCO World Heritage property covering the planned modernist capital city. The evidence identifies Brasília as Brazil’s current capital and the site as a map-identifiable planned urban area.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "lima-historic-centre",
+      "status": "pass",
+      "explanation": "The Historic Centre of Lima is an individually inscribed active UNESCO property physically located in Lima, Peru’s current national capital, and is an identifiable visitable historic urban area.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "asmara-modernist-city",
+      "status": "pass",
+      "explanation": "Asmara: A Modernist African City is an individually inscribed active UNESCO property contained within Asmara, Eritrea’s current capital. It is an identifiable visitable urban landscape with a defined architectural character.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "san-marino-historic-centre",
+      "status": "pass",
+      "explanation": "The historic centre is the identifiable urban portion of the active UNESCO property San Marino Historic Centre and Mount Titano. It lies within the City of San Marino, the current national capital, and is a visitable landmark district.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "valletta-city",
+      "status": "pass",
+      "explanation": "The City of Valletta is an individually inscribed active UNESCO property occupying Malta’s current national capital and is an identifiable visitable fortified urban area.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "prague-historic-centre",
+      "status": "pass",
+      "explanation": "The Historic Centre of Prague is an individually inscribed active UNESCO property located within Prague, the current Czech national capital, and is an identifiable visitable historic urban area.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "budapest-danube-buda-castle",
+      "status": "pass",
+      "explanation": "The Budapest property is an individually named active UNESCO World Heritage property encompassing specified urban areas within Budapest, Hungary’s current capital, including the Buda Castle Quarter and Danube banks.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "tallinn-old-town",
+      "status": "pass",
+      "explanation": "The Historic Centre (Old Town) of Tallinn is an individually inscribed active UNESCO property physically located within Tallinn, Estonia’s current capital, and is an identifiable visitable historic district.",
+      "sourceIds": ["source-01"]
+    }
+  ],
+  "clueVerdicts": [
+    {
+      "roundId": "round-1",
+      "declaredTargetPoiId": "brussels-hotel-van-eetvelde",
+      "resolvedPoiId": "brussels-hotel-van-eetvelde",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The clue’s Horta attribution, Edmond van Eetvelde commission, 1895–1898 construction, octagonal rotunda, stained-glass cupola, and later extensions specifically identify Hôtel van Eetvelde.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-2",
+      "declaredTargetPoiId": "kathmandu-pashupati",
+      "resolvedPoiId": "kathmandu-pashupati",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The 246-hectare precinct, 518 mini-temples, sacred river setting, four-faced Shiva mukhalinga, two-tier pagoda, and silver-covered doors specifically identify Pashupatinath/Pashupati.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-3",
+      "declaredTargetPoiId": "brasilia-monumental-axis",
+      "resolvedPoiId": "brasilia-monumental-axis",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The 1960 replacement-capital history, Lúcio Costa’s airplane-like plan, Monumental and Residential Axes, and Three Powers Plaza specifically identify Brasília.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-4",
+      "declaredTargetPoiId": "asmara-modernist-city",
+      "resolvedPoiId": "asmara-modernist-city",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The 2017 inscription, 2,325-metre elevation, Italian modernist architecture, and winged Fiat Tagliero showroom specifically identify Asmara: A Modernist African City.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-5",
+      "declaredTargetPoiId": "san-marino-historic-centre",
+      "resolvedPoiId": "san-marino-historic-centre",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The traditional 301 foundation, Monte Titano setting, three defensive towers, steep cobbled centre, and limited cars specifically identify the Historic Centre of San Marino and Mount Titano.",
+      "resolvableWithoutExactNumbers": true
+    }
+  ],
+  "repairs": []
+}

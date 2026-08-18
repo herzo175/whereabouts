@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "publicationDate": "2026-08-20",
+  "revision": 2,
+  "themeVerdicts": [
+    {
+      "poiId": "aquarium-atlanta",
+      "status": "pass",
+      "explanation": "Georgia Aquarium is an individually named, permanent public aquarium in Atlanta with aquatic animals as its principal visitor attraction and a specific downtown site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "monterey-bay-aquarium",
+      "status": "pass",
+      "explanation": "Monterey Bay Aquarium is an individually named nonprofit public aquarium in Monterey, permanently displaying marine life at a specific Cannery Row site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "aquarium-of-the-pacific",
+      "status": "pass",
+      "explanation": "Aquarium of the Pacific is an independently named public aquarium at a permanent, specific site in Long Beach, focused on Pacific aquatic habitats.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "national-aquarium-baltimore",
+      "status": "pass",
+      "explanation": "The National Aquarium is an individually named public aquarium at a specific Inner Harbor site in Baltimore.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "seattle-aquarium",
+      "status": "pass",
+      "explanation": "Seattle Aquarium is an independently named public aquarium at Pier 59 in Seattle, displaying regional marine life at a permanent specific site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "oregon-coast-aquarium",
+      "status": "pass",
+      "explanation": "Oregon Coast Aquarium is a permanent public aquarium in Newport with marine animals and Pacific Northwest aquatic habitats as its core visitor function.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "dallas-world-aquarium",
+      "status": "pass",
+      "explanation": "The Dallas World Aquarium is a named, ticketed public aquarium in downtown Dallas. Although it also includes rainforest and zoological displays, its evidence identifies it as an aquarium attraction rather than merely an unnamed zoo exhibit.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "vancouver-aquarium",
+      "status": "pass",
+      "explanation": "Vancouver Aquarium is a named public aquarium at a specific permanent site in Stanley Park, Vancouver, displaying local and global marine life.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "ripley-aquarium-toronto",
+      "status": "pass",
+      "explanation": "Ripley's Aquarium of Canada is an independently named public aquarium at a specific Toronto site beside the CN Tower.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "aquarium-quebec",
+      "status": "pass",
+      "explanation": "Aquarium du Québec is a named public aquarium complex in Quebec City with marine, freshwater, Arctic, and other living-animal exhibits.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "ozeaneum-stralsund",
+      "status": "pass",
+      "explanation": "Ozeaneum is an individually named permanent public aquarium and marine-life complex at Stralsund's historic harbor, with aquatic displays as its principal attraction.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "aquarium-berlin",
+      "status": "pass",
+      "explanation": "Aquarium Berlin is an individually named public aquarium at a specific Berlin site. Its inclusion within the zoological-garden complex does not trigger the exclusion because it is an identifiable aquarium attraction with extensive dedicated displays.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "oceanografic-valencia",
+      "status": "pass",
+      "explanation": "L'Oceanogràfic is a permanent public oceanarium complex in Valencia devoted primarily to aquatic ecosystems and living marine animals.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "aquarium-barcelona",
+      "status": "pass",
+      "explanation": "Barcelona Aquarium is an individually named public aquarium at Port Vell in Barcelona, with Mediterranean and tropical aquatic life as its principal function.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "lisbon-oceanarium",
+      "status": "pass",
+      "explanation": "Oceanário de Lisboa is a named public oceanarium at a specific permanent Lisbon site, displaying aquatic environments and marine life.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "acquario-di-genova",
+      "status": "pass",
+      "explanation": "The Aquarium of Genoa is an individually named permanent public aquarium at Genoa's Old Port with extensive marine and freshwater displays.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "aquarium-paris",
+      "status": "pass",
+      "explanation": "Aquarium de Paris is an individually named public aquarium beneath the Trocadéro gardens at a specific Paris site. The evidence describes its aquarium history, renovation, and reopening in 2006.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "nausicaa-boulogne",
+      "status": "pass",
+      "explanation": "Nausicaá is a named permanent public national sea centre and oceanarium in the incorporated city of Boulogne-sur-Mer, combining aquaria with marine-focused exhibitions.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "aquarium-finisterrae",
+      "status": "pass",
+      "explanation": "Aquarium Finisterrae is a permanent public aquarium and marine-science centre at a specific site in A Coruña, displaying Atlantic marine life and aquatic ecosystems.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "dubai-aquarium",
+      "status": "pass",
+      "explanation": "Dubai Aquarium & Underwater Zoo is a specifically named permanent public aquarium attraction in Dubai Mall, with a large aquatic-animal display and ordinary visitor admission.",
+      "sourceIds": ["source-01"]
+    }
+  ],
+  "clueVerdicts": [
+    {
+      "roundId": "round-1",
+      "declaredTargetPoiId": "ozeaneum-stralsund",
+      "resolvedPoiId": "ozeaneum-stralsund",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The July 2008 opening, Baltic harbor location, North Sea and Baltic Sea displays, and relationship to the German Oceanographic Museum identify Ozeaneum in Stralsund.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-2",
+      "declaredTargetPoiId": "aquarium-berlin",
+      "resolvedPoiId": "aquarium-berlin",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The 1913 establishment within the zoological-garden complex, three-storey layout, more than 9,000 animals, 250 fish tanks, crocodilians, tuataras, jellyfish, and coral basins directly identify Aquarium Berlin.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-3",
+      "declaredTargetPoiId": "aquarium-paris",
+      "resolvedPoiId": "aquarium-paris",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The underground aquarium beneath the Trocadéro gardens, its origin in the palace complex, 1937 renovation, and 2006 reopening identify Aquarium de Paris.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-4",
+      "declaredTargetPoiId": "nausicaa-boulogne",
+      "resolvedPoiId": "nausicaa-boulogne",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The 1991 opening and the unusually broad sea-related exhibition scope identify Nausicaá, the French National Sea Centre in Boulogne-sur-Mer.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-5",
+      "declaredTargetPoiId": "aquarium-finisterrae",
+      "resolvedPoiId": "aquarium-finisterrae",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The municipal founding, 5 June 1999 opening, Atlantic-fed exterior pools, and 4.4-million-litre Captain Nemo observation pool identify Aquarium Finisterrae in A Coruña.",
+      "resolvableWithoutExactNumbers": true
+    }
+  ],
+  "repairs": []
+}

@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "publicationDate": "2026-08-23",
+  "revision": 2,
+  "themeVerdicts": [
+    {
+      "poiId": "adler-planetarium",
+      "status": "pass",
+      "explanation": "The supplied evidence identifies a permanent public planetarium in Chicago with multiple dome theaters, public sky shows, a fixed visitable location, and municipal operation.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "hayden-planetarium",
+      "status": "pass",
+      "explanation": "The evidence identifies the individually named Hayden Planetarium as a public planetarium theater inside the American Museum of Natural History in New York City, presenting public space shows at a fixed location.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "morrison-planetarium",
+      "status": "pass",
+      "explanation": "The Morrison Planetarium is identified as a named digital dome planetarium in San Francisco with public astronomy programming at a fixed museum site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "oschin-planetarium",
+      "status": "pass",
+      "explanation": "The evidence describes a fixed planetarium theater at Griffith Observatory in Los Angeles with frequent ticketed public shows, a purpose-built dome, and a pinned city location.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "clark-planetarium",
+      "status": "pass",
+      "explanation": "Clark Planetarium is a permanent named planetarium in Salt Lake City with a dome theater, public facilities, and a fixed visitable location; its public-program claim establishes scheduled astronomical presentations.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "fiske-planetarium",
+      "status": "pass",
+      "explanation": "Fiske is a permanent, individually named university planetarium in Boulder with a fixed 65-foot dome, public fulldome films and talks, and a pinned location within the city.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "peter-harrison-planetarium",
+      "status": "pass",
+      "explanation": "The Peter Harrison Planetarium is identified as a purpose-built fixed venue in London presenting live public planetarium shows and astronomy programs throughout the year.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "national-space-centre-planetarium",
+      "status": "pass",
+      "explanation": "The Sir Patrick Moore Planetarium is an individually named dome venue at Leicester’s National Space Centre with scheduled public astronomy presentations at a fixed city site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "zeiss-planetarium-berlin",
+      "status": "pass",
+      "explanation": "Zeiss-Großplanetarium is a permanent named public planetarium in Berlin with a dome theater and public astronomical shows.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "planetarium-hamburg",
+      "status": "pass",
+      "explanation": "Planetarium Hamburg is identified as a named public planetarium and immersive dome theater offering regular astronomy shows at a fixed Hamburg location.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "planetarium-prague",
+      "status": "pass",
+      "explanation": "Planetarium Prague is a fixed public dome planetarium in Prague with regularly scheduled astronomical programs and a pinnable venue location.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "planetarium-brno",
+      "status": "pass",
+      "explanation": "The Brno Observatory and Planetarium includes an individually identified planetarium facility with a fixed dome and public astronomy program schedule inside Brno.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "moscow-planetarium",
+      "status": "pass",
+      "explanation": "Moscow Planetarium is a permanent public planetarium complex in Moscow with astronomy halls, dome theaters, and public star shows.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "planetarium-1-saint-petersburg",
+      "status": "pass",
+      "explanation": "Planetarium No. 1 is identified as a permanent digital dome planetarium in Saint Petersburg offering public astronomy and space programs.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "planetario-de-madrid",
+      "status": "pass",
+      "explanation": "Planetario de Madrid is a city-operated permanent planetarium with purpose-built dome theaters and scheduled public astronomy shows within Madrid.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "nagoya-city-science-museum-planetarium",
+      "status": "pass",
+      "explanation": "The evidence identifies the museum’s planetarium as a named dome venue with regular ticketed public astronomy and science shows in Nagoya.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "osaka-science-museum-planetarium",
+      "status": "pass",
+      "explanation": "Osaka Science Museum contains an identifiable planetarium theater with scheduled public dome programs about astronomy and space science at a fixed Osaka site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "beijing-planetarium",
+      "status": "pass",
+      "explanation": "Beijing Planetarium is a dedicated permanent public planetarium complex in Beijing with astronomy exhibitions and scheduled dome programs.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "taipei-astronomical-museum-planetarium",
+      "status": "pass",
+      "explanation": "The Taipei Astronomical Museum includes an identifiable planetarium theater with regular public astronomy and space presentations at a fixed Taipei location.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "national-planetarium-kuala-lumpur",
+      "status": "pass",
+      "explanation": "The evidence explicitly establishes a permanent public planetarium in Kuala Lumpur, with hourly shows, paid admission, a fixed blue-domed complex, and a precise visitable location.",
+      "sourceIds": ["source-01"]
+    }
+  ],
+  "clueVerdicts": [
+    {
+      "roundId": "round-1",
+      "declaredTargetPoiId": "national-planetarium-kuala-lumpur",
+      "resolvedPoiId": "national-planetarium-kuala-lumpur",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The clue uniquely matches Kuala Lumpur’s National Planetarium: it began as a government Planetarium Division, officially opened in 1994, occupies a blue-domed hilltop complex, contains an Ariane IV engine, and connects to the National Museum.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-2",
+      "declaredTargetPoiId": "adler-planetarium",
+      "resolvedPoiId": "adler-planetarium",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The clue matches Adler Planetarium’s 1930 opening, Max Adler founding, first-planetarium-in-the-hemisphere status, three theaters, Doane Observatory, and historic scientific-instrument collection.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-3",
+      "declaredTargetPoiId": "oschin-planetarium",
+      "resolvedPoiId": "oschin-planetarium",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The clue resolves to the planetarium theater at Griffith Observatory: the free-admission observatory opened in 1935, has the 12-inch Zeiss refractor, uses a Zeiss Mark IX Universarium, and trained Apollo astronauts.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-4",
+      "declaredTargetPoiId": "clark-planetarium",
+      "resolvedPoiId": "clark-planetarium",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The clue exactly matches Clark Planetarium’s 2003 replacement of Hansen Planetarium, foundation funding, later upgrades, 55-foot dome, IMAX theater, free exhibits, and NASA-loaned Moon rock.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-5",
+      "declaredTargetPoiId": "fiske-planetarium",
+      "resolvedPoiId": "fiske-planetarium",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The clue exactly matches Fiske Planetarium’s 1975 university bequest, 65-foot geodesic dome, Megastar IIA and 8K Digital Sky 2 systems, pixel capacity, and NASA-funded fulldome productions.",
+      "resolvableWithoutExactNumbers": true
+    }
+  ],
+  "repairs": []
+}
