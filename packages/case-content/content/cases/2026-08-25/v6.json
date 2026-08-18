@@ -1,0 +1,1147 @@
+{
+  "schemaVersion": 4,
+  "publicationDate": "2026-08-25",
+  "revision": 6,
+  "caseNumber": 20690,
+  "pois": [
+    {
+      "id": "historic-walkable-bridge-008",
+      "name": "Ponte di Tiberio",
+      "city": "Rimini",
+      "country": "Italy",
+      "latitude": 44.0632,
+      "longitude": 12.565,
+      "wikipediaTitle": "Ponte di Tiberio",
+      "blurb": "The Ponte di Tiberio is a Roman bridge in Rimini, Italy. Begun under Augustus and completed under Tiberius in 21 AD, it remains a usable crossing for pedestrians.",
+      "themeConnection": {
+        "text": "Roman stone bridge over the Marecchia, completed in the early first century and still walkable.",
+        "sourceIds": ["source-06"]
+      }
+    },
+    {
+      "id": "historic-walkable-bridge-029",
+      "name": "Puente Romano",
+      "city": "Mérida",
+      "country": "Spain",
+      "latitude": 38.9162,
+      "longitude": -6.3453,
+      "wikipediaTitle": "Puente Romano (Mérida)",
+      "blurb": "The Puente Romano is an ancient Roman bridge over the Guadiana River at Mérida. Much of its historic masonry survives, and the bridge is accessible for pedestrians.",
+      "themeConnection": {
+        "text": "Long surviving Roman bridge over the Guadiana, preserved as a pedestrian crossing within Mérida.",
+        "sourceIds": ["source-18"]
+      }
+    },
+    {
+      "id": "historic-walkable-bridge-004",
+      "name": "Ponte Sant'Angelo",
+      "city": "Rome",
+      "country": "Italy",
+      "latitude": 41.903,
+      "longitude": 12.4663,
+      "wikipediaTitle": "Ponte Sant'Angelo",
+      "blurb": "Ponte Sant'Angelo, originally the Aelian Bridge or Pons Aelius, is a Roman bridge in Rome, Italy, completed in 134 AD by Roman Emperor Hadrian (Publius Aelius Hadrianus), to span the Tiber from the city centre to his newly constructed mausoleum, now the towering Castel…",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Sant%27Angelo_bridge%2C_dusk%2C_Rome%2C_Italy.jpg/1280px-Sant%27Angelo_bridge%2C_dusk%2C_Rome%2C_Italy.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Ponte Sant'Angelo",
+        "attribution": "Jebulon · CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      },
+      "themeConnection": {
+        "text": "Ancient Roman bridge substantially retaining historic fabric and now used as a pedestrian crossing to Castel Sant'Angelo.",
+        "sourceIds": ["source-04"]
+      }
+    },
+    {
+      "id": "historic-walkable-bridge-017",
+      "name": "Stone Bridge",
+      "city": "Regensburg",
+      "country": "Germany",
+      "latitude": 49.0216,
+      "longitude": 12.093,
+      "wikipediaTitle": "Stone Bridge (Regensburg)",
+      "blurb": "The Stone Bridge is a medieval bridge in Regensburg, Germany, crossing the Danube. Constructed between 1135 and 1146, it is a historic public crossing now used primarily by pedestrians.",
+      "themeConnection": {
+        "text": "Twelfth-century stone bridge over the Danube, a preserved historic pedestrian crossing in central Regensburg.",
+        "sourceIds": ["source-11"]
+      }
+    },
+    {
+      "id": "historic-walkable-bridge-003",
+      "name": "Ponte Vecchio",
+      "city": "Florence",
+      "country": "Italy",
+      "latitude": 43.7679,
+      "longitude": 11.2531,
+      "wikipediaTitle": "Ponte Vecchio",
+      "blurb": "The Ponte Vecchio is a medieval stone closed-spandrel segmental arch bridge over the Arno River in Florence. It is known for shops built along it and remains a pedestrian route.",
+      "themeConnection": {
+        "text": "Medieval enclosed stone bridge over the Arno, carrying a public pedestrian street and shops.",
+        "sourceIds": ["source-03"]
+      }
+    },
+    {
+      "id": "historic-walkable-bridge-021",
+      "name": "Brooklyn Bridge",
+      "city": "New York City",
+      "country": "United States",
+      "latitude": 40.7061,
+      "longitude": -73.9969,
+      "wikipediaTitle": "Brooklyn Bridge",
+      "blurb": "The Brooklyn Bridge is a cable-stayed suspension bridge in New York City, spanning the East River between the boroughs of Manhattan and Brooklyn.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Brooklyn_Bridge_and_the_Lower_Manhattan_skyline_from_Pebble_Beach%2C_New_York.jpg/1280px-Brooklyn_Bridge_and_the_Lower_Manhattan_skyline_from_Pebble_Beach%2C_New_York.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Brooklyn Bridge",
+        "attribution": "Christian David · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "Nineteenth-century suspension bridge over the East River with a dedicated public pedestrian promenade.",
+        "sourceIds": ["source-13"]
+      }
+    },
+    {
+      "id": "historic-walkable-bridge-002",
+      "name": "Rialto Bridge",
+      "city": "Venice",
+      "country": "Italy",
+      "latitude": 45.438,
+      "longitude": 12.3359,
+      "wikipediaTitle": "Rialto Bridge",
+      "blurb": "The Rialto Bridge is the oldest of the four bridges spanning the Grand Canal in Venice. The present stone bridge was completed in 1591 and includes pedestrian arcades and shops.",
+      "themeConnection": {
+        "text": "Late-sixteenth-century stone bridge across the Grand Canal with public pedestrian passage through its arcades.",
+        "sourceIds": ["source-02"]
+      }
+    },
+    {
+      "id": "historic-walkable-bridge-001",
+      "name": "Charles Bridge",
+      "city": "Prague",
+      "country": "Czech Republic",
+      "latitude": 50.0865,
+      "longitude": 14.4114,
+      "wikipediaTitle": "Charles Bridge",
+      "blurb": "Charles Bridge is a historic bridge that crosses the Vltava river in Prague, Czech Republic. Construction began in 1357 and the bridge has long served pedestrian movement across the river.",
+      "themeConnection": {
+        "text": "Medieval stone pedestrian bridge across the Vltava, completed in the 15th century and still open to ordinary pedestrians.",
+        "sourceIds": ["source-01"]
+      }
+    },
+    {
+      "id": "historic-walkable-bridge-027",
+      "name": "Stone Bridge",
+      "city": "Skopje",
+      "country": "North Macedonia",
+      "latitude": 42,
+      "longitude": 21.4362,
+      "wikipediaTitle": "Stone Bridge (Skopje)",
+      "blurb": "The Stone Bridge is a historic bridge across the Vardar River in Skopje. Built during the Ottoman period in the fifteenth century, it remains a public pedestrian route.",
+      "themeConnection": {
+        "text": "Fifteenth-century Ottoman stone bridge across the Vardar, preserved as a pedestrian crossing.",
+        "sourceIds": ["source-16"]
+      }
+    },
+    {
+      "id": "historic-walkable-bridge-013",
+      "name": "Ponte delle Torri",
+      "city": "Spoleto",
+      "country": "Italy",
+      "latitude": 42.7342,
+      "longitude": 12.7365,
+      "wikipediaTitle": "Ponte delle Torri",
+      "blurb": "The Ponte delle Torri is a medieval bridge and aqueduct spanning the deep ravine below Spoleto. Its elevated walkway and historic structure form a publicly accessible pedestrian route.",
+      "themeConnection": {
+        "text": "Medieval aqueduct-bridge across a ravine, now used as a public pedestrian route within Spoleto.",
+        "sourceIds": ["source-07"]
+      }
+    },
+    {
+      "id": "historic-walkable-bridge-028",
+      "name": "Puente Romano",
+      "city": "Córdoba",
+      "country": "Spain",
+      "latitude": 37.8789,
+      "longitude": -4.7794,
+      "wikipediaTitle": "Roman bridge of Córdoba",
+      "blurb": "The Roman bridge of Córdoba crosses the Guadalquivir in the historic center of Córdoba. Its origins are Roman, and the bridge is now closed to motor traffic and open to pedestrians.",
+      "themeConnection": {
+        "text": "Ancient Roman bridge across the Guadalquivir, now pedestrian-only and retaining historic piers and structure.",
+        "sourceIds": ["source-17"]
+      }
+    },
+    {
+      "id": "historic-walkable-bridge-014",
+      "name": "Roman Bridge of Aosta",
+      "city": "Aosta",
+      "country": "Italy",
+      "latitude": 45.7364,
+      "longitude": 7.324,
+      "wikipediaTitle": "Roman Bridge of Aosta",
+      "blurb": "The Roman Bridge of Aosta is an ancient stone bridge in the Italian city of Aosta. Built during the Roman period over the Buthier, it remains a visible and accessible crossing.",
+      "themeConnection": {
+        "text": "First-century Roman masonry bridge over the Buthier, retained within the city and walkable by pedestrians.",
+        "sourceIds": ["source-08"]
+      }
+    },
+    {
+      "id": "historic-walkable-bridge-006",
+      "name": "Ponte Pietra",
+      "city": "Verona",
+      "country": "Italy",
+      "latitude": 45.449,
+      "longitude": 11.0001,
+      "wikipediaTitle": "Ponte Pietra",
+      "blurb": "Ponte Pietra is a Roman arch bridge crossing the Adige River in Verona. Although repaired many times, it retains ancient and medieval elements and is open to pedestrians.",
+      "themeConnection": {
+        "text": "Ancient and medieval stone bridge across the Adige, open to pedestrian crossing and retaining substantial historic fabric.",
+        "sourceIds": ["source-05"]
+      }
+    },
+    {
+      "id": "historic-walkable-bridge-034",
+      "name": "Puente de Besalú",
+      "city": "Besalú",
+      "country": "Spain",
+      "latitude": 42.1993,
+      "longitude": 2.6988,
+      "wikipediaTitle": "Puente de Besalú",
+      "blurb": "The bridge of Besalú is a medieval fortified bridge crossing the Fluvià River in the town of Besalú. Its stone arches and gate tower form a walkable public route.",
+      "themeConnection": {
+        "text": "Medieval fortified bridge across the Fluvià, preserved at its historic site and open to pedestrians.",
+        "sourceIds": ["source-20"]
+      }
+    },
+    {
+      "id": "historic-walkable-bridge-015",
+      "name": "Pulteney Bridge",
+      "city": "Bath",
+      "country": "United Kingdom",
+      "latitude": 51.3827,
+      "longitude": -2.3588,
+      "wikipediaTitle": "Pulteney Bridge",
+      "blurb": "Pulteney Bridge is a bridge over the River Avon in Bath, England. It was completed by 1774, and connected the city with land in Bathwick which Sir William Pulteney and his family wished to develop.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Puente_Pulteney%2C_Bath%2C_Inglaterra%2C_2014-08-12%2C_DD_51.JPG/1280px-Puente_Pulteney%2C_Bath%2C_Inglaterra%2C_2014-08-12%2C_DD_51.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Pulteney Bridge",
+        "attribution": "Diego Delso · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "Eighteenth-century bridge over the River Avon with shops and an ordinary public pedestrian crossing.",
+        "sourceIds": ["source-09"]
+      }
+    },
+    {
+      "id": "historic-walkable-bridge-026",
+      "name": "Triple Bridge",
+      "city": "Ljubljana",
+      "country": "Slovenia",
+      "latitude": 46.0514,
+      "longitude": 14.506,
+      "wikipediaTitle": "Triple Bridge",
+      "blurb": "Triple Bridge is a group of three bridges across the Ljubljanica in Ljubljana. The central bridge dates from 1842, while the side pedestrian bridges were added later to form the walkable complex.",
+      "themeConnection": {
+        "text": "Historic central bridge complex whose original stone bridge dates to the nineteenth century and is pedestrian-accessible.",
+        "sourceIds": ["source-15"]
+      }
+    },
+    {
+      "id": "historic-walkable-bridge-019",
+      "name": "Krämerbrücke",
+      "city": "Erfurt",
+      "country": "Germany",
+      "latitude": 50.9785,
+      "longitude": 11.0305,
+      "wikipediaTitle": "Krämerbrücke",
+      "blurb": "The Krämerbrücke (pronounced [ˈkʁɛːmɐˌbʁʏkə]; Merchants' bridge) is a medieval arch bridge in the city of Erfurt, in Thuringia, central Germany, which is lined with half-timbered shops and houses on both sides of a cobblestone street.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Kr%C3%A4merbr%C3%BCcke_in_Erfurt_70.JPG/1280px-Kr%C3%A4merbr%C3%BCcke_in_Erfurt_70.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Krämerbrücke",
+        "attribution": "Dr. Bernd Gross · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "Medieval inhabited bridge across the Breitstrom, still functioning as a public pedestrian street.",
+        "sourceIds": ["source-12"]
+      }
+    },
+    {
+      "id": "historic-walkable-bridge-030",
+      "name": "Puente de Piedra",
+      "city": "Zaragoza",
+      "country": "Spain",
+      "latitude": 41.6586,
+      "longitude": -0.8727,
+      "wikipediaTitle": "Puente de Piedra (Zaragoza)",
+      "blurb": "The Puente de Piedra (English: Stone Bridge) is a bridge across the river Ebro in Zaragoza, Spain. The Puente de Piedra is also called the Bridge of Lions because since 1991 four lions (symbols of the city) have been placed on the pillars at each end of the bridge.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/WLM_-_2021_-_Zaragoza_-_01.jpg/1280px-WLM_-_2021_-_Zaragoza_-_01.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Puente de Piedra (Zaragoza)",
+        "attribution": "Moahim · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "Fifteenth-century stone bridge over the Ebro with current pedestrian access and historic fabric.",
+        "sourceIds": ["source-19"]
+      }
+    },
+    {
+      "id": "historic-walkable-bridge-022",
+      "name": "Eads Bridge",
+      "city": "St. Louis",
+      "country": "United States",
+      "latitude": 38.6278,
+      "longitude": -90.1828,
+      "wikipediaTitle": "Eads Bridge",
+      "blurb": "Eads Bridge is a historic steel arch bridge across the Mississippi River at St. Louis. Completed in 1874, it has a pedestrian walkway and remains an important public crossing.",
+      "themeConnection": {
+        "text": "Nineteenth-century steel arch bridge over the Mississippi with a public pedestrian and cycling walkway.",
+        "sourceIds": ["source-14"]
+      }
+    },
+    {
+      "id": "historic-walkable-bridge-016",
+      "name": "Old Bridge",
+      "city": "Heidelberg",
+      "country": "Germany",
+      "latitude": 49.4144,
+      "longitude": 8.7105,
+      "wikipediaTitle": "Old Bridge (Heidelberg)",
+      "blurb": "Heidelberg's Old Bridge is a historic stone bridge over the Neckar. The present bridge was built in 1788 and includes preserved medieval gate towers; pedestrians routinely cross it.",
+      "themeConnection": {
+        "text": "Eighteenth-century stone bridge over the Neckar, open to pedestrians and retaining historic towers and masonry.",
+        "sourceIds": ["source-10"]
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "round-1",
+      "targetPoiId": "historic-walkable-bridge-004",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Sant%27Angelo_bridge%2C_dusk%2C_Rome%2C_Italy.jpg/1280px-Sant%27Angelo_bridge%2C_dusk%2C_Rome%2C_Italy.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Ponte Sant'Angelo",
+        "attribution": "Jebulon · CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      },
+      "clue": {
+        "text": "An ancient Roman crossing faced in travertine marble spans a major river with five arches; it is now solely pedestrian and leads directly toward a historic mausoleum transformed into a castle.",
+        "sourceIds": ["source-04"]
+      },
+      "results": [
+        {
+          "poiId": "historic-walkable-bridge-001",
+          "points": 45,
+          "text": "Charles Bridge is a themed comparison candidate: Medieval stone pedestrian bridge across the Vltava, completed in the 15th century and still open to ordinary pedestrians.",
+          "sourceIds": ["source-01", "source-04"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-002",
+          "points": 31,
+          "text": "Rialto Bridge is a themed comparison candidate: Late-sixteenth-century stone bridge across the Grand Canal with public pedestrian passage through its arcades.",
+          "sourceIds": ["source-02", "source-04"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-003",
+          "points": 38,
+          "text": "Ponte Vecchio is a themed comparison candidate: Medieval enclosed stone bridge over the Arno, carrying a public pedestrian street and shops.",
+          "sourceIds": ["source-03", "source-04"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-004",
+          "points": 100,
+          "text": "Ponte Sant'Angelo is the round target: Ancient Roman bridge substantially retaining historic fabric and now used as a pedestrian crossing to Castel Sant'Angelo.",
+          "sourceIds": ["source-04"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-006",
+          "points": 66,
+          "text": "Ponte Pietra is a themed comparison candidate: Ancient and medieval stone bridge across the Adige, open to pedestrian crossing and retaining substantial historic fabric.",
+          "sourceIds": ["source-05", "source-04"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-008",
+          "points": 61,
+          "text": "Ponte di Tiberio is a themed comparison candidate: Roman stone bridge over the Marecchia, completed in the early first century and still walkable.",
+          "sourceIds": ["source-06", "source-04"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-013",
+          "points": 48,
+          "text": "Ponte delle Torri is a themed comparison candidate: Medieval aqueduct-bridge across a ravine, now used as a public pedestrian route within Spoleto.",
+          "sourceIds": ["source-07", "source-04"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-014",
+          "points": 83,
+          "text": "Roman Bridge of Aosta is a themed comparison candidate: First-century Roman masonry bridge over the Buthier, retained within the city and walkable by pedestrians.",
+          "sourceIds": ["source-08", "source-04"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-015",
+          "points": 12,
+          "text": "Pulteney Bridge is a themed comparison candidate: Eighteenth-century bridge over the River Avon with shops and an ordinary public pedestrian crossing.",
+          "sourceIds": ["source-09", "source-04"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-016",
+          "points": 18,
+          "text": "Old Bridge is a themed comparison candidate: Eighteenth-century stone bridge over the Neckar, open to pedestrians and retaining historic towers and masonry.",
+          "sourceIds": ["source-10", "source-04"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-017",
+          "points": 29,
+          "text": "Stone Bridge is a themed comparison candidate: Twelfth-century stone bridge over the Danube, a preserved historic pedestrian crossing in central Regensburg.",
+          "sourceIds": ["source-11", "source-04"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-019",
+          "points": 16,
+          "text": "Krämerbrücke is a themed comparison candidate: Medieval inhabited bridge across the Breitstrom, still functioning as a public pedestrian street.",
+          "sourceIds": ["source-12", "source-04"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-021",
+          "points": 22,
+          "text": "Brooklyn Bridge is a themed comparison candidate: Nineteenth-century suspension bridge over the East River with a dedicated public pedestrian promenade.",
+          "sourceIds": ["source-13", "source-04"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-022",
+          "points": 14,
+          "text": "Eads Bridge is a themed comparison candidate: Nineteenth-century steel arch bridge over the Mississippi with a public pedestrian and cycling walkway.",
+          "sourceIds": ["source-14", "source-04"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-026",
+          "points": 9,
+          "text": "Triple Bridge is a themed comparison candidate: Historic central bridge complex whose original stone bridge dates to the nineteenth century and is pedestrian-accessible.",
+          "sourceIds": ["source-15", "source-04"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-027",
+          "points": 54,
+          "text": "Stone Bridge is a themed comparison candidate: Fifteenth-century Ottoman stone bridge across the Vardar, preserved as a pedestrian crossing.",
+          "sourceIds": ["source-16", "source-04"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-028",
+          "points": 76,
+          "text": "Puente Romano is a themed comparison candidate: Ancient Roman bridge across the Guadalquivir, now pedestrian-only and retaining historic piers and structure.",
+          "sourceIds": ["source-17", "source-04"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-029",
+          "points": 79,
+          "text": "Puente Romano is a themed comparison candidate: Long surviving Roman bridge over the Guadiana, preserved as a pedestrian crossing within Mérida.",
+          "sourceIds": ["source-18", "source-04"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-030",
+          "points": 20,
+          "text": "Puente de Piedra is a themed comparison candidate: Fifteenth-century stone bridge over the Ebro with current pedestrian access and historic fabric.",
+          "sourceIds": ["source-19", "source-04"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-034",
+          "points": 35,
+          "text": "Puente de Besalú is a themed comparison candidate: Medieval fortified bridge across the Fluvià, preserved at its historic site and open to pedestrians.",
+          "sourceIds": ["source-20", "source-04"]
+        }
+      ]
+    },
+    {
+      "id": "round-2",
+      "targetPoiId": "historic-walkable-bridge-015",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Puente_Pulteney%2C_Bath%2C_Inglaterra%2C_2014-08-12%2C_DD_51.JPG/1280px-Puente_Pulteney%2C_Bath%2C_Inglaterra%2C_2014-08-12%2C_DD_51.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Pulteney Bridge",
+        "attribution": "Diego Delso · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "A Georgian-era bridge in Palladian style forms a narrow street lined by shops across its full span on both sides, carrying an ordinary public crossing over a river and linking an old city to land intended for a new suburb.",
+        "sourceIds": ["source-09"]
+      },
+      "results": [
+        {
+          "poiId": "historic-walkable-bridge-001",
+          "points": 15,
+          "text": "Charles Bridge is a themed comparison candidate: Medieval stone pedestrian bridge across the Vltava, completed in the 15th century and still open to ordinary pedestrians.",
+          "sourceIds": ["source-01", "source-09"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-002",
+          "points": 79,
+          "text": "Rialto Bridge is a themed comparison candidate: Late-sixteenth-century stone bridge across the Grand Canal with public pedestrian passage through its arcades.",
+          "sourceIds": ["source-02", "source-09"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-003",
+          "points": 84,
+          "text": "Ponte Vecchio is a themed comparison candidate: Medieval enclosed stone bridge over the Arno, carrying a public pedestrian street and shops.",
+          "sourceIds": ["source-03", "source-09"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-004",
+          "points": 8,
+          "text": "Ponte Sant'Angelo is a themed comparison candidate: Ancient Roman bridge substantially retaining historic fabric and now used as a pedestrian crossing to Castel Sant'Angelo.",
+          "sourceIds": ["source-04", "source-09"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-006",
+          "points": 11,
+          "text": "Ponte Pietra is a themed comparison candidate: Ancient and medieval stone bridge across the Adige, open to pedestrian crossing and retaining substantial historic fabric.",
+          "sourceIds": ["source-05", "source-09"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-008",
+          "points": 10,
+          "text": "Ponte di Tiberio is a themed comparison candidate: Roman stone bridge over the Marecchia, completed in the early first century and still walkable.",
+          "sourceIds": ["source-06", "source-09"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-013",
+          "points": 7,
+          "text": "Ponte delle Torri is a themed comparison candidate: Medieval aqueduct-bridge across a ravine, now used as a public pedestrian route within Spoleto.",
+          "sourceIds": ["source-07", "source-09"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-014",
+          "points": 6,
+          "text": "Roman Bridge of Aosta is a themed comparison candidate: First-century Roman masonry bridge over the Buthier, retained within the city and walkable by pedestrians.",
+          "sourceIds": ["source-08", "source-09"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-015",
+          "points": 100,
+          "text": "Pulteney Bridge is the round target: Eighteenth-century bridge over the River Avon with shops and an ordinary public pedestrian crossing.",
+          "sourceIds": ["source-09"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-016",
+          "points": 34,
+          "text": "Old Bridge is a themed comparison candidate: Eighteenth-century stone bridge over the Neckar, open to pedestrians and retaining historic towers and masonry.",
+          "sourceIds": ["source-10", "source-09"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-017",
+          "points": 22,
+          "text": "Stone Bridge is a themed comparison candidate: Twelfth-century stone bridge over the Danube, a preserved historic pedestrian crossing in central Regensburg.",
+          "sourceIds": ["source-11", "source-09"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-019",
+          "points": 92,
+          "text": "Krämerbrücke is a themed comparison candidate: Medieval inhabited bridge across the Breitstrom, still functioning as a public pedestrian street.",
+          "sourceIds": ["source-12", "source-09"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-021",
+          "points": 18,
+          "text": "Brooklyn Bridge is a themed comparison candidate: Nineteenth-century suspension bridge over the East River with a dedicated public pedestrian promenade.",
+          "sourceIds": ["source-13", "source-09"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-022",
+          "points": 20,
+          "text": "Eads Bridge is a themed comparison candidate: Nineteenth-century steel arch bridge over the Mississippi with a public pedestrian and cycling walkway.",
+          "sourceIds": ["source-14", "source-09"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-026",
+          "points": 28,
+          "text": "Triple Bridge is a themed comparison candidate: Historic central bridge complex whose original stone bridge dates to the nineteenth century and is pedestrian-accessible.",
+          "sourceIds": ["source-15", "source-09"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-027",
+          "points": 13,
+          "text": "Stone Bridge is a themed comparison candidate: Fifteenth-century Ottoman stone bridge across the Vardar, preserved as a pedestrian crossing.",
+          "sourceIds": ["source-16", "source-09"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-028",
+          "points": 9,
+          "text": "Puente Romano is a themed comparison candidate: Ancient Roman bridge across the Guadalquivir, now pedestrian-only and retaining historic piers and structure.",
+          "sourceIds": ["source-17", "source-09"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-029",
+          "points": 8,
+          "text": "Puente Romano is a themed comparison candidate: Long surviving Roman bridge over the Guadiana, preserved as a pedestrian crossing within Mérida.",
+          "sourceIds": ["source-18", "source-09"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-030",
+          "points": 17,
+          "text": "Puente de Piedra is a themed comparison candidate: Fifteenth-century stone bridge over the Ebro with current pedestrian access and historic fabric.",
+          "sourceIds": ["source-19", "source-09"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-034",
+          "points": 12,
+          "text": "Puente de Besalú is a themed comparison candidate: Medieval fortified bridge across the Fluvià, preserved at its historic site and open to pedestrians.",
+          "sourceIds": ["source-20", "source-09"]
+        }
+      ]
+    },
+    {
+      "id": "round-3",
+      "targetPoiId": "historic-walkable-bridge-019",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Kr%C3%A4merbr%C3%BCcke_in_Erfurt_70.JPG/1280px-Kr%C3%A4merbr%C3%BCcke_in_Erfurt_70.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Krämerbrücke",
+        "attribution": "Dr. Bernd Gross · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "A medieval stone bridge remains a public pedestrian street enclosed by continuous rows of half-timbered shops and houses; its inhabited buildings connect two town squares across a branch of a river.",
+        "sourceIds": ["source-12"]
+      },
+      "results": [
+        {
+          "poiId": "historic-walkable-bridge-001",
+          "points": 26,
+          "text": "Charles Bridge is a themed comparison candidate: Medieval stone pedestrian bridge across the Vltava, completed in the 15th century and still open to ordinary pedestrians.",
+          "sourceIds": ["source-01", "source-12"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-002",
+          "points": 64,
+          "text": "Rialto Bridge is a themed comparison candidate: Late-sixteenth-century stone bridge across the Grand Canal with public pedestrian passage through its arcades.",
+          "sourceIds": ["source-02", "source-12"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-003",
+          "points": 72,
+          "text": "Ponte Vecchio is a themed comparison candidate: Medieval enclosed stone bridge over the Arno, carrying a public pedestrian street and shops.",
+          "sourceIds": ["source-03", "source-12"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-004",
+          "points": 14,
+          "text": "Ponte Sant'Angelo is a themed comparison candidate: Ancient Roman bridge substantially retaining historic fabric and now used as a pedestrian crossing to Castel Sant'Angelo.",
+          "sourceIds": ["source-04", "source-12"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-006",
+          "points": 18,
+          "text": "Ponte Pietra is a themed comparison candidate: Ancient and medieval stone bridge across the Adige, open to pedestrian crossing and retaining substantial historic fabric.",
+          "sourceIds": ["source-05", "source-12"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-008",
+          "points": 15,
+          "text": "Ponte di Tiberio is a themed comparison candidate: Roman stone bridge over the Marecchia, completed in the early first century and still walkable.",
+          "sourceIds": ["source-06", "source-12"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-013",
+          "points": 25,
+          "text": "Ponte delle Torri is a themed comparison candidate: Medieval aqueduct-bridge across a ravine, now used as a public pedestrian route within Spoleto.",
+          "sourceIds": ["source-07", "source-12"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-014",
+          "points": 12,
+          "text": "Roman Bridge of Aosta is a themed comparison candidate: First-century Roman masonry bridge over the Buthier, retained within the city and walkable by pedestrians.",
+          "sourceIds": ["source-08", "source-12"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-015",
+          "points": 94,
+          "text": "Pulteney Bridge is a themed comparison candidate: Eighteenth-century bridge over the River Avon with shops and an ordinary public pedestrian crossing.",
+          "sourceIds": ["source-09", "source-12"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-016",
+          "points": 30,
+          "text": "Old Bridge is a themed comparison candidate: Eighteenth-century stone bridge over the Neckar, open to pedestrians and retaining historic towers and masonry.",
+          "sourceIds": ["source-10", "source-12"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-017",
+          "points": 39,
+          "text": "Stone Bridge is a themed comparison candidate: Twelfth-century stone bridge over the Danube, a preserved historic pedestrian crossing in central Regensburg.",
+          "sourceIds": ["source-11", "source-12"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-019",
+          "points": 100,
+          "text": "Krämerbrücke is the round target: Medieval inhabited bridge across the Breitstrom, still functioning as a public pedestrian street.",
+          "sourceIds": ["source-12"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-021",
+          "points": 11,
+          "text": "Brooklyn Bridge is a themed comparison candidate: Nineteenth-century suspension bridge over the East River with a dedicated public pedestrian promenade.",
+          "sourceIds": ["source-13", "source-12"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-022",
+          "points": 9,
+          "text": "Eads Bridge is a themed comparison candidate: Nineteenth-century steel arch bridge over the Mississippi with a public pedestrian and cycling walkway.",
+          "sourceIds": ["source-14", "source-12"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-026",
+          "points": 23,
+          "text": "Triple Bridge is a themed comparison candidate: Historic central bridge complex whose original stone bridge dates to the nineteenth century and is pedestrian-accessible.",
+          "sourceIds": ["source-15", "source-12"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-027",
+          "points": 17,
+          "text": "Stone Bridge is a themed comparison candidate: Fifteenth-century Ottoman stone bridge across the Vardar, preserved as a pedestrian crossing.",
+          "sourceIds": ["source-16", "source-12"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-028",
+          "points": 13,
+          "text": "Puente Romano is a themed comparison candidate: Ancient Roman bridge across the Guadalquivir, now pedestrian-only and retaining historic piers and structure.",
+          "sourceIds": ["source-17", "source-12"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-029",
+          "points": 10,
+          "text": "Puente Romano is a themed comparison candidate: Long surviving Roman bridge over the Guadiana, preserved as a pedestrian crossing within Mérida.",
+          "sourceIds": ["source-18", "source-12"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-030",
+          "points": 21,
+          "text": "Puente de Piedra is a themed comparison candidate: Fifteenth-century stone bridge over the Ebro with current pedestrian access and historic fabric.",
+          "sourceIds": ["source-19", "source-12"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-034",
+          "points": 28,
+          "text": "Puente de Besalú is a themed comparison candidate: Medieval fortified bridge across the Fluvià, preserved at its historic site and open to pedestrians.",
+          "sourceIds": ["source-20", "source-12"]
+        }
+      ]
+    },
+    {
+      "id": "round-4",
+      "targetPoiId": "historic-walkable-bridge-021",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Brooklyn_Bridge_and_the_Lower_Manhattan_skyline_from_Pebble_Beach%2C_New_York.jpg/1280px-Brooklyn_Bridge_and_the_Lower_Manhattan_skyline_from_Pebble_Beach%2C_New_York.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Brooklyn Bridge",
+        "attribution": "Christian David · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "A pioneering nineteenth-century crossing combines suspension and cable-stayed engineering with neo-Gothic stone towers, while an elevated central promenade carries pedestrians above roadways across a busy tidal river.",
+        "sourceIds": ["source-13"]
+      },
+      "results": [
+        {
+          "poiId": "historic-walkable-bridge-001",
+          "points": 18,
+          "text": "Charles Bridge is a themed comparison candidate: Medieval stone pedestrian bridge across the Vltava, completed in the 15th century and still open to ordinary pedestrians.",
+          "sourceIds": ["source-01", "source-13"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-002",
+          "points": 10,
+          "text": "Rialto Bridge is a themed comparison candidate: Late-sixteenth-century stone bridge across the Grand Canal with public pedestrian passage through its arcades.",
+          "sourceIds": ["source-02", "source-13"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-003",
+          "points": 12,
+          "text": "Ponte Vecchio is a themed comparison candidate: Medieval enclosed stone bridge over the Arno, carrying a public pedestrian street and shops.",
+          "sourceIds": ["source-03", "source-13"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-004",
+          "points": 7,
+          "text": "Ponte Sant'Angelo is a themed comparison candidate: Ancient Roman bridge substantially retaining historic fabric and now used as a pedestrian crossing to Castel Sant'Angelo.",
+          "sourceIds": ["source-04", "source-13"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-006",
+          "points": 9,
+          "text": "Ponte Pietra is a themed comparison candidate: Ancient and medieval stone bridge across the Adige, open to pedestrian crossing and retaining substantial historic fabric.",
+          "sourceIds": ["source-05", "source-13"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-008",
+          "points": 8,
+          "text": "Ponte di Tiberio is a themed comparison candidate: Roman stone bridge over the Marecchia, completed in the early first century and still walkable.",
+          "sourceIds": ["source-06", "source-13"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-013",
+          "points": 6,
+          "text": "Ponte delle Torri is a themed comparison candidate: Medieval aqueduct-bridge across a ravine, now used as a public pedestrian route within Spoleto.",
+          "sourceIds": ["source-07", "source-13"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-014",
+          "points": 5,
+          "text": "Roman Bridge of Aosta is a themed comparison candidate: First-century Roman masonry bridge over the Buthier, retained within the city and walkable by pedestrians.",
+          "sourceIds": ["source-08", "source-13"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-015",
+          "points": 13,
+          "text": "Pulteney Bridge is a themed comparison candidate: Eighteenth-century bridge over the River Avon with shops and an ordinary public pedestrian crossing.",
+          "sourceIds": ["source-09", "source-13"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-016",
+          "points": 42,
+          "text": "Old Bridge is a themed comparison candidate: Eighteenth-century stone bridge over the Neckar, open to pedestrians and retaining historic towers and masonry.",
+          "sourceIds": ["source-10", "source-13"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-017",
+          "points": 16,
+          "text": "Stone Bridge is a themed comparison candidate: Twelfth-century stone bridge over the Danube, a preserved historic pedestrian crossing in central Regensburg.",
+          "sourceIds": ["source-11", "source-13"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-019",
+          "points": 8,
+          "text": "Krämerbrücke is a themed comparison candidate: Medieval inhabited bridge across the Breitstrom, still functioning as a public pedestrian street.",
+          "sourceIds": ["source-12", "source-13"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-021",
+          "points": 100,
+          "text": "Brooklyn Bridge is the round target: Nineteenth-century suspension bridge over the East River with a dedicated public pedestrian promenade.",
+          "sourceIds": ["source-13"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-022",
+          "points": 88,
+          "text": "Eads Bridge is a themed comparison candidate: Nineteenth-century steel arch bridge over the Mississippi with a public pedestrian and cycling walkway.",
+          "sourceIds": ["source-14", "source-13"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-026",
+          "points": 19,
+          "text": "Triple Bridge is a themed comparison candidate: Historic central bridge complex whose original stone bridge dates to the nineteenth century and is pedestrian-accessible.",
+          "sourceIds": ["source-15", "source-13"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-027",
+          "points": 11,
+          "text": "Stone Bridge is a themed comparison candidate: Fifteenth-century Ottoman stone bridge across the Vardar, preserved as a pedestrian crossing.",
+          "sourceIds": ["source-16", "source-13"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-028",
+          "points": 6,
+          "text": "Puente Romano is a themed comparison candidate: Ancient Roman bridge across the Guadalquivir, now pedestrian-only and retaining historic piers and structure.",
+          "sourceIds": ["source-17", "source-13"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-029",
+          "points": 5,
+          "text": "Puente Romano is a themed comparison candidate: Long surviving Roman bridge over the Guadiana, preserved as a pedestrian crossing within Mérida.",
+          "sourceIds": ["source-18", "source-13"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-030",
+          "points": 9,
+          "text": "Puente de Piedra is a themed comparison candidate: Fifteenth-century stone bridge over the Ebro with current pedestrian access and historic fabric.",
+          "sourceIds": ["source-19", "source-13"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-034",
+          "points": 4,
+          "text": "Puente de Besalú is a themed comparison candidate: Medieval fortified bridge across the Fluvià, preserved at its historic site and open to pedestrians.",
+          "sourceIds": ["source-20", "source-13"]
+        }
+      ]
+    },
+    {
+      "id": "round-5",
+      "targetPoiId": "historic-walkable-bridge-030",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/WLM_-_2021_-_Zaragoza_-_01.jpg/1280px-WLM_-_2021_-_Zaragoza_-_01.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Puente de Piedra (Zaragoza)",
+        "attribution": "Moahim · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "A fifteenth-century stone crossing over a broad river is known as the Bridge of Lions: four civic lion statues stand on its end pillars, and historic spans were rebuilt after a devastating flood.",
+        "sourceIds": ["source-19"]
+      },
+      "results": [
+        {
+          "poiId": "historic-walkable-bridge-001",
+          "points": 20,
+          "text": "Charles Bridge is a themed comparison candidate: Medieval stone pedestrian bridge across the Vltava, completed in the 15th century and still open to ordinary pedestrians.",
+          "sourceIds": ["source-01", "source-19"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-002",
+          "points": 11,
+          "text": "Rialto Bridge is a themed comparison candidate: Late-sixteenth-century stone bridge across the Grand Canal with public pedestrian passage through its arcades.",
+          "sourceIds": ["source-02", "source-19"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-003",
+          "points": 16,
+          "text": "Ponte Vecchio is a themed comparison candidate: Medieval enclosed stone bridge over the Arno, carrying a public pedestrian street and shops.",
+          "sourceIds": ["source-03", "source-19"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-004",
+          "points": 24,
+          "text": "Ponte Sant'Angelo is a themed comparison candidate: Ancient Roman bridge substantially retaining historic fabric and now used as a pedestrian crossing to Castel Sant'Angelo.",
+          "sourceIds": ["source-04", "source-19"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-006",
+          "points": 27,
+          "text": "Ponte Pietra is a themed comparison candidate: Ancient and medieval stone bridge across the Adige, open to pedestrian crossing and retaining substantial historic fabric.",
+          "sourceIds": ["source-05", "source-19"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-008",
+          "points": 22,
+          "text": "Ponte di Tiberio is a themed comparison candidate: Roman stone bridge over the Marecchia, completed in the early first century and still walkable.",
+          "sourceIds": ["source-06", "source-19"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-013",
+          "points": 31,
+          "text": "Ponte delle Torri is a themed comparison candidate: Medieval aqueduct-bridge across a ravine, now used as a public pedestrian route within Spoleto.",
+          "sourceIds": ["source-07", "source-19"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-014",
+          "points": 18,
+          "text": "Roman Bridge of Aosta is a themed comparison candidate: First-century Roman masonry bridge over the Buthier, retained within the city and walkable by pedestrians.",
+          "sourceIds": ["source-08", "source-19"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-015",
+          "points": 14,
+          "text": "Pulteney Bridge is a themed comparison candidate: Eighteenth-century bridge over the River Avon with shops and an ordinary public pedestrian crossing.",
+          "sourceIds": ["source-09", "source-19"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-016",
+          "points": 25,
+          "text": "Old Bridge is a themed comparison candidate: Eighteenth-century stone bridge over the Neckar, open to pedestrians and retaining historic towers and masonry.",
+          "sourceIds": ["source-10", "source-19"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-017",
+          "points": 34,
+          "text": "Stone Bridge is a themed comparison candidate: Twelfth-century stone bridge over the Danube, a preserved historic pedestrian crossing in central Regensburg.",
+          "sourceIds": ["source-11", "source-19"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-019",
+          "points": 12,
+          "text": "Krämerbrücke is a themed comparison candidate: Medieval inhabited bridge across the Breitstrom, still functioning as a public pedestrian street.",
+          "sourceIds": ["source-12", "source-19"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-021",
+          "points": 8,
+          "text": "Brooklyn Bridge is a themed comparison candidate: Nineteenth-century suspension bridge over the East River with a dedicated public pedestrian promenade.",
+          "sourceIds": ["source-13", "source-19"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-022",
+          "points": 17,
+          "text": "Eads Bridge is a themed comparison candidate: Nineteenth-century steel arch bridge over the Mississippi with a public pedestrian and cycling walkway.",
+          "sourceIds": ["source-14", "source-19"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-026",
+          "points": 19,
+          "text": "Triple Bridge is a themed comparison candidate: Historic central bridge complex whose original stone bridge dates to the nineteenth century and is pedestrian-accessible.",
+          "sourceIds": ["source-15", "source-19"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-027",
+          "points": 57,
+          "text": "Stone Bridge is a themed comparison candidate: Fifteenth-century Ottoman stone bridge across the Vardar, preserved as a pedestrian crossing.",
+          "sourceIds": ["source-16", "source-19"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-028",
+          "points": 49,
+          "text": "Puente Romano is a themed comparison candidate: Ancient Roman bridge across the Guadalquivir, now pedestrian-only and retaining historic piers and structure.",
+          "sourceIds": ["source-17", "source-19"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-029",
+          "points": 63,
+          "text": "Puente Romano is a themed comparison candidate: Long surviving Roman bridge over the Guadiana, preserved as a pedestrian crossing within Mérida.",
+          "sourceIds": ["source-18", "source-19"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-030",
+          "points": 100,
+          "text": "Puente de Piedra is the round target: Fifteenth-century stone bridge over the Ebro with current pedestrian access and historic fabric.",
+          "sourceIds": ["source-19"]
+        },
+        {
+          "poiId": "historic-walkable-bridge-034",
+          "points": 74,
+          "text": "Puente de Besalú is a themed comparison candidate: Medieval fortified bridge across the Fluvià, preserved at its historic site and open to pedestrians.",
+          "sourceIds": ["source-20", "source-19"]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-01",
+      "title": "Charles Bridge",
+      "url": "https://en.wikipedia.org/wiki/Charles_Bridge",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-02",
+      "title": "Rialto Bridge",
+      "url": "https://en.wikipedia.org/wiki/Rialto_Bridge",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-03",
+      "title": "Ponte Vecchio",
+      "url": "https://en.wikipedia.org/wiki/Ponte_Vecchio",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-04",
+      "title": "Ponte Sant'Angelo",
+      "url": "https://en.wikipedia.org/wiki/Ponte_Sant%27Angelo",
+      "retrievedAt": "2026-08-18T22:13:52.766Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-05",
+      "title": "Ponte Pietra",
+      "url": "https://en.wikipedia.org/wiki/Ponte_Pietra_(Verona)",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-06",
+      "title": "Ponte di Tiberio",
+      "url": "https://en.wikipedia.org/wiki/Ponte_di_Tiberio",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-07",
+      "title": "Ponte delle Torri",
+      "url": "https://en.wikipedia.org/wiki/Ponte_delle_Torri",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-08",
+      "title": "Roman Bridge of Aosta",
+      "url": "https://en.wikipedia.org/wiki/Roman_Bridge_of_Aosta",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-09",
+      "title": "Pulteney Bridge",
+      "url": "https://en.wikipedia.org/wiki/Pulteney_Bridge",
+      "retrievedAt": "2026-08-18T22:13:52.797Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-10",
+      "title": "Old Bridge (Heidelberg)",
+      "url": "https://en.wikipedia.org/wiki/Old_Bridge_(Heidelberg)",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-11",
+      "title": "Stone Bridge (Regensburg)",
+      "url": "https://en.wikipedia.org/wiki/Stone_Bridge_(Regensburg)",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-12",
+      "title": "Krämerbrücke",
+      "url": "https://en.wikipedia.org/wiki/Kr%C3%A4merbr%C3%BCcke",
+      "retrievedAt": "2026-08-18T22:13:52.839Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-13",
+      "title": "Brooklyn Bridge",
+      "url": "https://en.wikipedia.org/wiki/Brooklyn_Bridge",
+      "retrievedAt": "2026-08-18T22:13:52.832Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-14",
+      "title": "Eads Bridge",
+      "url": "https://en.wikipedia.org/wiki/Eads_Bridge",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-15",
+      "title": "Triple Bridge",
+      "url": "https://en.wikipedia.org/wiki/Triple_Bridge",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-16",
+      "title": "Stone Bridge (Skopje)",
+      "url": "https://en.wikipedia.org/wiki/Stone_Bridge_(Skopje)",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-17",
+      "title": "Roman bridge of Córdoba",
+      "url": "https://en.wikipedia.org/wiki/Roman_bridge_of_C%C3%B3rdoba",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-18",
+      "title": "Puente Romano (Mérida)",
+      "url": "https://en.wikipedia.org/wiki/Puente_Romano_(M%C3%A9rida)",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-19",
+      "title": "Puente de Piedra (Zaragoza)",
+      "url": "https://en.wikipedia.org/wiki/Puente_de_Piedra_(Zaragoza)",
+      "retrievedAt": "2026-08-18T22:13:52.767Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-20",
+      "title": "Puente de Besalú",
+      "url": "https://en.wikipedia.org/wiki/Puente_de_Besal%C3%BA",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    }
+  ],
+  "theme": {
+    "title": "Historic Walkable Bridges in Cities",
+    "introduction": "Old spans carry footsteps over rivers, linking city streets to centuries of travel.",
+    "inclusionCriteria": "Include only a location satisfying every condition: (1) it is an individually named bridge or bridge complex whose established function is carrying people across water, a ravine, or another physical obstacle; (2) the present bridge retains substantial historic fabric and was opened, completed, or substantially rebuilt at its current site on or before 31 December 1899; (3) ordinary pedestrians can currently cross or walk onto it during normal public access, whether freely or by admission; (4) it lies within the current administrative boundary of a present-day city or incorporated urban municipality; (5) the bridge itself, rather than merely a viewpoint or surrounding district, can be pinned as one exact map location. Plausible locations include Charles Bridge (Prague), Rialto Bridge (Venice), Ponte Vecchio (Florence), Ponte Sant’Angelo (Rome), Ponte Sisto (Rome), Ponte Pietra (Verona), Ponte Scaligero (Verona), Ponte di Tiberio (Rimini), Ponte Coperto (Pavia), Pont Neuf (Paris), Pont Marie (Paris), Pont de la Tournelle (Paris), Pont Saint-Bénézet (Avignon), Pont Vieux (Albi), Pont Valentré (Cahors), Stari Most (Mostar), Krämerbrücke (Erfurt), Pulteney Bridge (Bath), Old Bridge (Heidelberg), Stone Bridge (Regensburg), Clifton Suspension Bridge (Bristol), Bridge of Sighs (Cambridge), Mathematical Bridge (Cambridge), Brooklyn Bridge (New York City), Eads Bridge (St. Louis), Széchenyi Chain Bridge (Budapest), Liberty Bridge (Budapest), Margaret Bridge (Budapest), Triple Bridge (Ljubljana), Stone Bridge (Skopje), Kintai Bridge (Iwakuni), Puente Romano (Córdoba), Puente Romano (Mérida), Puente de Piedra (Zaragoza), Puente de San Martín (Toledo), Puente de Alcántara (Toledo), Puente Nuevo (Ronda), Puente de Besalú, and Puente de la Reina Victoria (Madrid)."
+  }
+}
