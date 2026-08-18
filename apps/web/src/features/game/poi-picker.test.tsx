@@ -31,6 +31,21 @@ const pois: Poi[] = [
 ];
 
 describe('PoiPicker', () => {
+  it('hides the searchable list while the guessing globe is available', () => {
+    render(
+      <PoiPicker
+        globe={() => <div data-testid="interactive-globe" />}
+        onGuess={vi.fn()}
+        pois={pois}
+      />,
+    );
+
+    expect(screen.getByTestId('interactive-globe')).toBeVisible();
+    expect(
+      screen.queryByRole('searchbox', { name: /search locations/i }),
+    ).toBeNull();
+  });
+
   it.each([
     ['name', 'sagrada', 'Sagrada Família'],
     ['city', 'cape town', 'Table Mountain'],
@@ -113,6 +128,9 @@ describe('PoiPicker', () => {
       screen.queryByRole('button', { name: /submit this lead/i }),
     ).toBeNull();
     expect(screen.getByRole('button', { name: /^close$/i })).toBeVisible();
+    expect(
+      screen.getByRole('searchbox', { name: /search locations/i }),
+    ).toBeVisible();
   });
 
   it('marks guessed POIs as eliminated and prevents selection', async () => {

@@ -27,6 +27,7 @@ type GlobePickerProps = {
   onSelect: (poi: Poi) => void;
   reducedMotion?: boolean;
   supported?: boolean;
+  fallback?: ReactNode;
 };
 
 type GlobeErrorBoundaryProps = {
@@ -83,6 +84,7 @@ export function GlobePicker({
   onSelect,
   reducedMotion,
   supported,
+  fallback,
 }: GlobePickerProps) {
   const [canRenderGlobe, setCanRenderGlobe] = useState<boolean | null>(
     supported === false ? false : null,
@@ -101,7 +103,12 @@ export function GlobePicker({
   const showFallback = failed || canRenderGlobe === false;
 
   if (showFallback) {
-    return <output>Globe unavailable; use location list</output>;
+    return (
+      <div className="space-y-4">
+        <output>Globe unavailable; use location list</output>
+        {fallback}
+      </div>
+    );
   }
 
   if (canRenderGlobe !== true) return null;

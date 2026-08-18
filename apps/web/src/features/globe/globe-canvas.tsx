@@ -2,6 +2,7 @@
 
 import type { Poi } from '@whereabouts/case-content';
 import {
+  type ExpressionSpecification,
   type GeoJSONSource,
   type MapLayerMouseEvent,
   Map as MapLibreMap,
@@ -11,6 +12,11 @@ import { useEffect, useMemo, useRef } from 'react';
 
 export const POI_HIT_RADIUS = 24;
 export const POI_BEAM_RADIUS = 0.25;
+export const POI_BEAM_OPACITY: ExpressionSpecification = [
+  '*',
+  ['get', 'opacity'],
+  ['interpolate', ['linear'], ['zoom'], 2.4, 0, 3.2, 1],
+];
 const POI_BEAM_SEGMENTS = 16;
 
 type GlobeCanvasProps = {
@@ -171,7 +177,7 @@ export function GlobeCanvas({
         paint: {
           'fill-extrusion-color': ['get', 'color'],
           'fill-extrusion-height': ['get', 'height'],
-          'fill-extrusion-opacity': 0.82,
+          'fill-extrusion-opacity': POI_BEAM_OPACITY,
           'fill-extrusion-vertical-gradient': true,
         },
       });

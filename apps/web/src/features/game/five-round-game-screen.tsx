@@ -301,9 +301,10 @@ export function FiveRoundGameScreen({
           <PoiPicker
             disabledPoiIds={revealedTargetIds}
             dossierDetail="identity"
-            globe={(selectPoi) => (
+            globe={(selectPoi, fallback) => (
               <GlobePicker
                 disabledPoiIds={revealedTargetIds}
+                fallback={fallback}
                 onSelect={selectPoi}
                 pois={caseData.pois}
                 supported={globeSupported}
