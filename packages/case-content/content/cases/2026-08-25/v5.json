@@ -1,0 +1,1147 @@
+{
+  "schemaVersion": 4,
+  "publicationDate": "2026-08-25",
+  "revision": 5,
+  "caseNumber": 20690,
+  "pois": [
+    {
+      "id": "reading-terminal-market",
+      "name": "Reading Terminal Market",
+      "city": "Philadelphia",
+      "country": "United States",
+      "latitude": 39.9533,
+      "longitude": -75.1592,
+      "wikipediaTitle": "Reading Terminal Market",
+      "blurb": "Reading Terminal Market is an enclosed public market in Philadelphia. It opened in 1893 and continues to operate with independent vendors selling produce, meat, seafood, baked goods, prepared food, and merchandise.",
+      "themeConnection": {
+        "text": "A permanent covered public market opened in 1893 and still operating with a large range of food and merchandise stalls.",
+        "sourceIds": ["source-19"]
+      }
+    },
+    {
+      "id": "crawford-market",
+      "name": "Crawford Market",
+      "city": "Mumbai",
+      "country": "India",
+      "latitude": 18.947,
+      "longitude": 72.8314,
+      "wikipediaTitle": "Crawford Market",
+      "blurb": "Crawford Market is one of South Mumbai's most famous markets. The building was completed in 1869 and continues to function as a public market selling produce, food, and household goods.",
+      "themeConnection": {
+        "text": "A permanent covered municipal market opened in 1869 and still operating with public food, produce, household, and merchandise stalls.",
+        "sourceIds": ["source-12"]
+      }
+    },
+    {
+      "id": "mercado-central-cadiz",
+      "name": "Mercado Central de Cádiz",
+      "city": "Cádiz",
+      "country": "Spain",
+      "latitude": 36.5291,
+      "longitude": -6.2995,
+      "wikipediaTitle": "Mercado Central de Cádiz",
+      "blurb": "The Central Market of Cádiz was inaugurated in 1838 and is one of the city's principal public markets, with permanent covered galleries and stalls selling food and other goods.",
+      "themeConnection": {
+        "text": "A named covered public market whose neoclassical market building opened in 1838 and still contains food and merchandise stalls.",
+        "sourceIds": ["source-04"]
+      }
+    },
+    {
+      "id": "egyptian-spice-bazaar",
+      "name": "Egyptian Bazaar",
+      "city": "Istanbul",
+      "country": "Turkey",
+      "latitude": 41.0165,
+      "longitude": 28.9708,
+      "wikipediaTitle": "Spice Bazaar",
+      "blurb": "The Spice Bazaar (Turkish: Mısır Çarşısı, meaning \"Egyptian Bazaar\") in Istanbul, Turkey, is one of the largest bazaars in the city.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Spice_Bazaar_Istanbul_Feb_2020%2C_img_2.jpg/1280px-Spice_Bazaar_Istanbul_Feb_2020%2C_img_2.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Spice Bazaar",
+        "attribution": "Robot8A · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "A named roofed bazaar opened in the seventeenth century and still operating with public-facing food, spice, confectionery, and merchandise stalls.",
+        "sourceIds": ["source-07"]
+      }
+    },
+    {
+      "id": "tabriz-bazaar",
+      "name": "Tabriz Historic Bazaar Complex",
+      "city": "Tabriz",
+      "country": "Iran",
+      "latitude": 38.0813,
+      "longitude": 46.2919,
+      "wikipediaTitle": "Tabriz Historic Bazaar Complex",
+      "blurb": "The Bazaar of Tabriz is a historical market complex in Iran consisting of interconnected covered brick structures. It remains an active public bazaar for goods, crafts, carpets, and food.",
+      "themeConnection": {
+        "text": "A named roofed bazaar complex with medieval origins and continuing public trade in food, crafts, carpets, and merchandise.",
+        "sourceIds": ["source-08"]
+      }
+    },
+    {
+      "id": "quincy-market",
+      "name": "Quincy Market",
+      "city": "Boston",
+      "country": "United States",
+      "latitude": 42.3601,
+      "longitude": -71.0567,
+      "wikipediaTitle": "Quincy Market",
+      "blurb": "Quincy Market is a historic market complex in downtown Boston, completed in 1826. The building remains publicly accessible and contains food stalls, restaurants, and market-oriented retail.",
+      "themeConnection": {
+        "text": "A permanent covered market hall opened in 1826 and still operating as a public market with food and merchandise vendors.",
+        "sourceIds": ["source-18"]
+      }
+    },
+    {
+      "id": "eastern-market-dc",
+      "name": "Eastern Market",
+      "city": "Washington, D.C.",
+      "country": "United States",
+      "latitude": 38.8847,
+      "longitude": -76.9956,
+      "wikipediaTitle": "Eastern Market, Washington, D.C.",
+      "blurb": "The Eastern Market is a public market in the Capitol Hill neighborhood of Washington, D.C., housed in a 19th-century brick building.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Eastern_Market_-_facade.JPG/1280px-Eastern_Market_-_facade.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Eastern Market, Washington, D.C.",
+        "attribution": "AgnosticPreachersKid · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "themeConnection": {
+        "text": "A named covered public market building opened in 1873 and still operating with food, produce, and merchandise vendors.",
+        "sourceIds": ["source-20"]
+      }
+    },
+    {
+      "id": "mercado-central-santiago",
+      "name": "Mercado Central de Santiago",
+      "city": "Santiago",
+      "country": "Chile",
+      "latitude": -33.4315,
+      "longitude": -70.6514,
+      "wikipediaTitle": "Mercado Central de Santiago",
+      "blurb": "The Mercado Central de Santiago is a market in Santiago, Chile, housed in a wrought-iron building opened in 1872. It remains a public market known especially for fish, seafood, produce, and food stalls.",
+      "themeConnection": {
+        "text": "A permanent covered market opened in 1872 and still operating as a public fish, food, and merchandise market.",
+        "sourceIds": ["source-14"]
+      }
+    },
+    {
+      "id": "mercato-centrale-florence",
+      "name": "Mercato Centrale di San Lorenzo",
+      "city": "Florence",
+      "country": "Italy",
+      "latitude": 43.775,
+      "longitude": 11.2532,
+      "wikipediaTitle": "Mercato Centrale (Florence)",
+      "blurb": "The Mercato Centrale is Florence's main indoor market, housed in a nineteenth-century iron-and-glass building completed in 1874. It continues to offer food products and public market stalls.",
+      "themeConnection": {
+        "text": "A permanent covered market hall opened in 1874 and still operating with public food and specialty stalls in Florence.",
+        "sourceIds": ["source-10"]
+      }
+    },
+    {
+      "id": "new-market-kolkata",
+      "name": "New Market",
+      "city": "Kolkata",
+      "country": "India",
+      "latitude": 22.56,
+      "longitude": 88.3522,
+      "wikipediaTitle": "New Market, Kolkata",
+      "blurb": "New Market is a market in Kolkata that opened in 1874. The historic covered complex remains a busy public shopping market with stalls and shops selling food, clothing, flowers, and other goods.",
+      "themeConnection": {
+        "text": "A named Victorian covered market opened in 1874 and continuing to operate with public stalls selling food, clothing, and household goods.",
+        "sourceIds": ["source-13"]
+      }
+    },
+    {
+      "id": "mercado-modelo-recife",
+      "name": "Mercado de São José",
+      "city": "Recife",
+      "country": "Brazil",
+      "latitude": -8.0673,
+      "longitude": -34.8822,
+      "wikipediaTitle": "Mercado de São José",
+      "blurb": "Mercado de São José (in English Saint Joseph's Market) is a public market in Recife, Pernambuco, Brazil. Founded in 1871, it is the oldest Brazilian building constructed of pre-manufactured iron.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Mercado_de_S%C3%A3o_Jos%C3%A9_2017_2.jpg/1280px-Mercado_de_S%C3%A3o_Jos%C3%A9_2017_2.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Mercado de São José",
+        "attribution": "Rudá de Ourofino · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "A permanent cast-iron covered market opened in 1875 and still operating with public food, fish, craft, and merchandise stalls.",
+        "sourceIds": ["source-17"]
+      }
+    },
+    {
+      "id": "mercado-san-telmo",
+      "name": "Mercado de San Telmo",
+      "city": "Buenos Aires",
+      "country": "Argentina",
+      "latitude": -34.6207,
+      "longitude": -58.3732,
+      "wikipediaTitle": "San Telmo Market",
+      "blurb": "San Telmo Market is a covered market in Buenos Aires inaugurated in 1897. Its historic iron structure remains an operating public market with food vendors, antiques, crafts, and shops.",
+      "themeConnection": {
+        "text": "A named covered market opened in 1897 and still operating with public food, antique, craft, and merchandise vendors.",
+        "sourceIds": ["source-15"]
+      }
+    },
+    {
+      "id": "great-market-hall-budapest",
+      "name": "Great Market Hall",
+      "city": "Budapest",
+      "country": "Hungary",
+      "latitude": 47.286,
+      "longitude": 19.057,
+      "wikipediaTitle": "Great Market Hall",
+      "blurb": "The Great Market Hall or Central Market Hall, Market Hall I (Hungarian: Nagyvásárcsarnok [ˈnɒɟvaːʃaːt͡ʃɒrnok]) is the largest and oldest indoor market in Budapest, Hungary.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/VasarcsarnokFotoThalerTamas.JPG/1280px-VasarcsarnokFotoThalerTamas.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Great Market Hall",
+        "attribution": "Thaler Tamas · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "A permanent covered market hall opened in 1897 and still operating with public food, produce, craft, and merchandise stalls.",
+        "sourceIds": ["source-06"]
+      }
+    },
+    {
+      "id": "mercado-del-puerto",
+      "name": "Mercado del Puerto",
+      "city": "Montevideo",
+      "country": "Uruguay",
+      "latitude": -34.9068,
+      "longitude": -56.2108,
+      "wikipediaTitle": "Mercado del Puerto",
+      "blurb": "Mercado del Puerto is a historic market hall in Montevideo, Uruguay. It opened in 1868 in a cast-iron building and remains a public destination for food stalls, restaurants, and market trading.",
+      "themeConnection": {
+        "text": "A named nineteenth-century covered market opened in 1868 and still operating at the original site with food vendors and public market stalls.",
+        "sourceIds": ["source-16"]
+      }
+    },
+    {
+      "id": "mercat-sant-antoni",
+      "name": "Mercat de Sant Antoni",
+      "city": "Barcelona",
+      "country": "Spain",
+      "latitude": 41.3752,
+      "longitude": 2.1636,
+      "wikipediaTitle": "Mercat de Sant Antoni",
+      "blurb": "The Mercat de Sant Antoni is a market in Barcelona housed in an iron structure built in the late nineteenth century. It remains an active public market with food and other stalls.",
+      "themeConnection": {
+        "text": "A permanent iron market hall opened in 1882 and still operating as a public food and merchandise market at the same Barcelona site.",
+        "sourceIds": ["source-02"]
+      }
+    },
+    {
+      "id": "mercado-atarazanas",
+      "name": "Mercado Central de Atarazanas",
+      "city": "Málaga",
+      "country": "Spain",
+      "latitude": 36.7196,
+      "longitude": -4.4238,
+      "wikipediaTitle": "Atarazanas Market",
+      "blurb": "Atarazanas Market is a municipal market in Málaga, Spain. Its iron structure was built in the nineteenth century on the site of a former shipyard and remains a functioning food market.",
+      "themeConnection": {
+        "text": "A permanent nineteenth-century covered municipal market, operating as a public food market in Málaga's historic iron structure.",
+        "sourceIds": ["source-03"]
+      }
+    },
+    {
+      "id": "varvakios-market",
+      "name": "Varvakios Agora",
+      "city": "Athens",
+      "country": "Greece",
+      "latitude": 37.9815,
+      "longitude": 23.7279,
+      "wikipediaTitle": "Varvakios Agora",
+      "blurb": "Varvakios Agora is Athens's central covered food market. It was established in the nineteenth century and remains an active public market with butchers, fishmongers, produce sellers, and shops.",
+      "themeConnection": {
+        "text": "A named covered central market opened in 1886 and still operating with public meat, fish, produce, and grocery stalls.",
+        "sourceIds": ["source-11"]
+      }
+    },
+    {
+      "id": "sukiennice",
+      "name": "Sukiennice (Cloth Hall)",
+      "city": "Kraków",
+      "country": "Poland",
+      "latitude": 50.0617,
+      "longitude": 19.9373,
+      "wikipediaTitle": "Cloth Hall, Kraków",
+      "blurb": "Kraków's Cloth Hall has been a market building in the centre of the Main Market Square for centuries. Its ground-floor arcade remains occupied by public stalls and shops selling crafts and souvenirs.",
+      "themeConnection": {
+        "text": "A uniquely named historic covered market building whose public merchandise stalls continue a market tradition at the same Kraków site.",
+        "sourceIds": ["source-09"]
+      }
+    },
+    {
+      "id": "halles-dijon",
+      "name": "Halles centrales de Dijon",
+      "city": "Dijon",
+      "country": "France",
+      "latitude": 47.3226,
+      "longitude": 5.0418,
+      "wikipediaTitle": "Les Halles centrales de Dijon",
+      "blurb": "Les Halles centrales de Dijon are a covered market in the city centre. The market hall dates from the nineteenth century and continues to accommodate food merchants and regular public trading.",
+      "themeConnection": {
+        "text": "A permanent covered municipal market opened in the nineteenth century and still operating as a public food market in central Dijon.",
+        "sourceIds": ["source-05"]
+      }
+    },
+    {
+      "id": "leadenhall-market",
+      "name": "Leadenhall Market",
+      "city": "London",
+      "country": "United Kingdom",
+      "latitude": 51.5128,
+      "longitude": -0.0836,
+      "wikipediaTitle": "Leadenhall Market",
+      "blurb": "Leadenhall Market is a covered market in London, England, located on Gracechurch Street. It is one of the oldest markets in London, dating from the 14th century, and is located in the historic centre of the City of London financial district.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Leadenhall_Market_In_London_-_Feb_2006_rotated.jpg/1280px-Leadenhall_Market_In_London_-_Feb_2006_rotated.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Leadenhall Market",
+        "attribution": "Diliff · CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
+      },
+      "themeConnection": {
+        "text": "A roofed Victorian market with public-facing food and merchandise stalls, operating continuously as a named market at its historic City of London site.",
+        "sourceIds": ["source-01"]
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "round-1",
+      "targetPoiId": "great-market-hall-budapest",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/VasarcsarnokFotoThalerTamas.JPG/1280px-VasarcsarnokFotoThalerTamas.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Great Market Hall",
+        "attribution": "Thaler Tamas · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "A steel-framed hall with a neogothic entrance and colorful ceramic roof tiles stands beside a major bridge at the end of a famous pedestrian shopping street; its food system was created to regulate inspected produce and wholesale goods.",
+        "sourceIds": ["source-06"]
+      },
+      "results": [
+        {
+          "poiId": "leadenhall-market",
+          "points": 55,
+          "text": "Leadenhall Market is a themed comparison candidate: A roofed Victorian market with public-facing food and merchandise stalls, operating continuously as a named market at its historic City of London site.",
+          "sourceIds": ["source-01", "source-06"]
+        },
+        {
+          "poiId": "mercat-sant-antoni",
+          "points": 48,
+          "text": "Mercat de Sant Antoni is a themed comparison candidate: A permanent iron market hall opened in 1882 and still operating as a public food and merchandise market at the same Barcelona site.",
+          "sourceIds": ["source-02", "source-06"]
+        },
+        {
+          "poiId": "mercado-atarazanas",
+          "points": 60,
+          "text": "Mercado Central de Atarazanas is a themed comparison candidate: A permanent nineteenth-century covered municipal market, operating as a public food market in Málaga's historic iron structure.",
+          "sourceIds": ["source-03", "source-06"]
+        },
+        {
+          "poiId": "mercado-central-cadiz",
+          "points": 42,
+          "text": "Mercado Central de Cádiz is a themed comparison candidate: A named covered public market whose neoclassical market building opened in 1838 and still contains food and merchandise stalls.",
+          "sourceIds": ["source-04", "source-06"]
+        },
+        {
+          "poiId": "halles-dijon",
+          "points": 46,
+          "text": "Halles centrales de Dijon is a themed comparison candidate: A permanent covered municipal market opened in the nineteenth century and still operating as a public food market in central Dijon.",
+          "sourceIds": ["source-05", "source-06"]
+        },
+        {
+          "poiId": "great-market-hall-budapest",
+          "points": 100,
+          "text": "Great Market Hall is the round target: A permanent covered market hall opened in 1897 and still operating with public food, produce, craft, and merchandise stalls.",
+          "sourceIds": ["source-06"]
+        },
+        {
+          "poiId": "egyptian-spice-bazaar",
+          "points": 72,
+          "text": "Egyptian Bazaar is a themed comparison candidate: A named roofed bazaar opened in the seventeenth century and still operating with public-facing food, spice, confectionery, and merchandise stalls.",
+          "sourceIds": ["source-07", "source-06"]
+        },
+        {
+          "poiId": "tabriz-bazaar",
+          "points": 51,
+          "text": "Tabriz Historic Bazaar Complex is a themed comparison candidate: A named roofed bazaar complex with medieval origins and continuing public trade in food, crafts, carpets, and merchandise.",
+          "sourceIds": ["source-08", "source-06"]
+        },
+        {
+          "poiId": "sukiennice",
+          "points": 38,
+          "text": "Sukiennice (Cloth Hall) is a themed comparison candidate: A uniquely named historic covered market building whose public merchandise stalls continue a market tradition at the same Kraków site.",
+          "sourceIds": ["source-09", "source-06"]
+        },
+        {
+          "poiId": "mercato-centrale-florence",
+          "points": 78,
+          "text": "Mercato Centrale di San Lorenzo is a themed comparison candidate: A permanent covered market hall opened in 1874 and still operating with public food and specialty stalls in Florence.",
+          "sourceIds": ["source-10", "source-06"]
+        },
+        {
+          "poiId": "varvakios-market",
+          "points": 57,
+          "text": "Varvakios Agora is a themed comparison candidate: A named covered central market opened in 1886 and still operating with public meat, fish, produce, and grocery stalls.",
+          "sourceIds": ["source-11", "source-06"]
+        },
+        {
+          "poiId": "crawford-market",
+          "points": 44,
+          "text": "Crawford Market is a themed comparison candidate: A permanent covered municipal market opened in 1869 and still operating with public food, produce, household, and merchandise stalls.",
+          "sourceIds": ["source-12", "source-06"]
+        },
+        {
+          "poiId": "new-market-kolkata",
+          "points": 41,
+          "text": "New Market is a themed comparison candidate: A named Victorian covered market opened in 1874 and continuing to operate with public stalls selling food, clothing, and household goods.",
+          "sourceIds": ["source-13", "source-06"]
+        },
+        {
+          "poiId": "mercado-central-santiago",
+          "points": 63,
+          "text": "Mercado Central de Santiago is a themed comparison candidate: A permanent covered market opened in 1872 and still operating as a public fish, food, and merchandise market.",
+          "sourceIds": ["source-14", "source-06"]
+        },
+        {
+          "poiId": "mercado-san-telmo",
+          "points": 50,
+          "text": "Mercado de San Telmo is a themed comparison candidate: A named covered market opened in 1897 and still operating with public food, antique, craft, and merchandise vendors.",
+          "sourceIds": ["source-15", "source-06"]
+        },
+        {
+          "poiId": "mercado-del-puerto",
+          "points": 47,
+          "text": "Mercado del Puerto is a themed comparison candidate: A named nineteenth-century covered market opened in 1868 and still operating at the original site with food vendors and public market stalls.",
+          "sourceIds": ["source-16", "source-06"]
+        },
+        {
+          "poiId": "mercado-modelo-recife",
+          "points": 69,
+          "text": "Mercado de São José is a themed comparison candidate: A permanent cast-iron covered market opened in 1875 and still operating with public food, fish, craft, and merchandise stalls.",
+          "sourceIds": ["source-17", "source-06"]
+        },
+        {
+          "poiId": "quincy-market",
+          "points": 35,
+          "text": "Quincy Market is a themed comparison candidate: A permanent covered market hall opened in 1826 and still operating as a public market with food and merchandise vendors.",
+          "sourceIds": ["source-18", "source-06"]
+        },
+        {
+          "poiId": "reading-terminal-market",
+          "points": 39,
+          "text": "Reading Terminal Market is a themed comparison candidate: A permanent covered public market opened in 1893 and still operating with a large range of food and merchandise stalls.",
+          "sourceIds": ["source-19", "source-06"]
+        },
+        {
+          "poiId": "eastern-market-dc",
+          "points": 53,
+          "text": "Eastern Market is a themed comparison candidate: A named covered public market building opened in 1873 and still operating with food, produce, and merchandise vendors.",
+          "sourceIds": ["source-20", "source-06"]
+        }
+      ]
+    },
+    {
+      "id": "round-2",
+      "targetPoiId": "egyptian-spice-bazaar",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Spice_Bazaar_Istanbul_Feb_2020%2C_img_2.jpg/1280px-Spice_Bazaar_Istanbul_Feb_2020%2C_img_2.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Spice Bazaar",
+        "attribution": "Robot8A · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "An Ottoman roofed bazaar built as part of a mosque complex used rents to maintain that religious foundation; it grew from post-fire rebuilding and remains especially associated with spices, dried fruit, nuts, and sweets.",
+        "sourceIds": ["source-07"]
+      },
+      "results": [
+        {
+          "poiId": "leadenhall-market",
+          "points": 34,
+          "text": "Leadenhall Market is a themed comparison candidate: A roofed Victorian market with public-facing food and merchandise stalls, operating continuously as a named market at its historic City of London site.",
+          "sourceIds": ["source-01", "source-07"]
+        },
+        {
+          "poiId": "mercat-sant-antoni",
+          "points": 29,
+          "text": "Mercat de Sant Antoni is a themed comparison candidate: A permanent iron market hall opened in 1882 and still operating as a public food and merchandise market at the same Barcelona site.",
+          "sourceIds": ["source-02", "source-07"]
+        },
+        {
+          "poiId": "mercado-atarazanas",
+          "points": 41,
+          "text": "Mercado Central de Atarazanas is a themed comparison candidate: A permanent nineteenth-century covered municipal market, operating as a public food market in Málaga's historic iron structure.",
+          "sourceIds": ["source-03", "source-07"]
+        },
+        {
+          "poiId": "mercado-central-cadiz",
+          "points": 31,
+          "text": "Mercado Central de Cádiz is a themed comparison candidate: A named covered public market whose neoclassical market building opened in 1838 and still contains food and merchandise stalls.",
+          "sourceIds": ["source-04", "source-07"]
+        },
+        {
+          "poiId": "halles-dijon",
+          "points": 27,
+          "text": "Halles centrales de Dijon is a themed comparison candidate: A permanent covered municipal market opened in the nineteenth century and still operating as a public food market in central Dijon.",
+          "sourceIds": ["source-05", "source-07"]
+        },
+        {
+          "poiId": "great-market-hall-budapest",
+          "points": 66,
+          "text": "Great Market Hall is a themed comparison candidate: A permanent covered market hall opened in 1897 and still operating with public food, produce, craft, and merchandise stalls.",
+          "sourceIds": ["source-06", "source-07"]
+        },
+        {
+          "poiId": "egyptian-spice-bazaar",
+          "points": 100,
+          "text": "Egyptian Bazaar is the round target: A named roofed bazaar opened in the seventeenth century and still operating with public-facing food, spice, confectionery, and merchandise stalls.",
+          "sourceIds": ["source-07"]
+        },
+        {
+          "poiId": "tabriz-bazaar",
+          "points": 86,
+          "text": "Tabriz Historic Bazaar Complex is a themed comparison candidate: A named roofed bazaar complex with medieval origins and continuing public trade in food, crafts, carpets, and merchandise.",
+          "sourceIds": ["source-08", "source-07"]
+        },
+        {
+          "poiId": "sukiennice",
+          "points": 58,
+          "text": "Sukiennice (Cloth Hall) is a themed comparison candidate: A uniquely named historic covered market building whose public merchandise stalls continue a market tradition at the same Kraków site.",
+          "sourceIds": ["source-09", "source-07"]
+        },
+        {
+          "poiId": "mercato-centrale-florence",
+          "points": 45,
+          "text": "Mercato Centrale di San Lorenzo is a themed comparison candidate: A permanent covered market hall opened in 1874 and still operating with public food and specialty stalls in Florence.",
+          "sourceIds": ["source-10", "source-07"]
+        },
+        {
+          "poiId": "varvakios-market",
+          "points": 40,
+          "text": "Varvakios Agora is a themed comparison candidate: A named covered central market opened in 1886 and still operating with public meat, fish, produce, and grocery stalls.",
+          "sourceIds": ["source-11", "source-07"]
+        },
+        {
+          "poiId": "crawford-market",
+          "points": 52,
+          "text": "Crawford Market is a themed comparison candidate: A permanent covered municipal market opened in 1869 and still operating with public food, produce, household, and merchandise stalls.",
+          "sourceIds": ["source-12", "source-07"]
+        },
+        {
+          "poiId": "new-market-kolkata",
+          "points": 43,
+          "text": "New Market is a themed comparison candidate: A named Victorian covered market opened in 1874 and continuing to operate with public stalls selling food, clothing, and household goods.",
+          "sourceIds": ["source-13", "source-07"]
+        },
+        {
+          "poiId": "mercado-central-santiago",
+          "points": 24,
+          "text": "Mercado Central de Santiago is a themed comparison candidate: A permanent covered market opened in 1872 and still operating as a public fish, food, and merchandise market.",
+          "sourceIds": ["source-14", "source-07"]
+        },
+        {
+          "poiId": "mercado-san-telmo",
+          "points": 22,
+          "text": "Mercado de San Telmo is a themed comparison candidate: A named covered market opened in 1897 and still operating with public food, antique, craft, and merchandise vendors.",
+          "sourceIds": ["source-15", "source-07"]
+        },
+        {
+          "poiId": "mercado-del-puerto",
+          "points": 18,
+          "text": "Mercado del Puerto is a themed comparison candidate: A named nineteenth-century covered market opened in 1868 and still operating at the original site with food vendors and public market stalls.",
+          "sourceIds": ["source-16", "source-07"]
+        },
+        {
+          "poiId": "mercado-modelo-recife",
+          "points": 61,
+          "text": "Mercado de São José is a themed comparison candidate: A permanent cast-iron covered market opened in 1875 and still operating with public food, fish, craft, and merchandise stalls.",
+          "sourceIds": ["source-17", "source-07"]
+        },
+        {
+          "poiId": "quincy-market",
+          "points": 20,
+          "text": "Quincy Market is a themed comparison candidate: A permanent covered market hall opened in 1826 and still operating as a public market with food and merchandise vendors.",
+          "sourceIds": ["source-18", "source-07"]
+        },
+        {
+          "poiId": "reading-terminal-market",
+          "points": 25,
+          "text": "Reading Terminal Market is a themed comparison candidate: A permanent covered public market opened in 1893 and still operating with a large range of food and merchandise stalls.",
+          "sourceIds": ["source-19", "source-07"]
+        },
+        {
+          "poiId": "eastern-market-dc",
+          "points": 19,
+          "text": "Eastern Market is a themed comparison candidate: A named covered public market building opened in 1873 and still operating with food, produce, and merchandise vendors.",
+          "sourceIds": ["source-20", "source-07"]
+        }
+      ]
+    },
+    {
+      "id": "round-3",
+      "targetPoiId": "mercado-modelo-recife",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Mercado_de_S%C3%A3o_Jos%C3%A9_2017_2.jpg/1280px-Mercado_de_S%C3%A3o_Jos%C3%A9_2017_2.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Mercado de São José",
+        "attribution": "Rudá de Ourofino · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "This historic public hall is made from prefabricated cast iron and is renowned for stalls selling fish, spices, herbs, crafts, and cordel literature; it is also recognized as a national heritage site.",
+        "sourceIds": ["source-17"]
+      },
+      "results": [
+        {
+          "poiId": "leadenhall-market",
+          "points": 46,
+          "text": "Leadenhall Market is a themed comparison candidate: A roofed Victorian market with public-facing food and merchandise stalls, operating continuously as a named market at its historic City of London site.",
+          "sourceIds": ["source-01", "source-17"]
+        },
+        {
+          "poiId": "mercat-sant-antoni",
+          "points": 54,
+          "text": "Mercat de Sant Antoni is a themed comparison candidate: A permanent iron market hall opened in 1882 and still operating as a public food and merchandise market at the same Barcelona site.",
+          "sourceIds": ["source-02", "source-17"]
+        },
+        {
+          "poiId": "mercado-atarazanas",
+          "points": 76,
+          "text": "Mercado Central de Atarazanas is a themed comparison candidate: A permanent nineteenth-century covered municipal market, operating as a public food market in Málaga's historic iron structure.",
+          "sourceIds": ["source-03", "source-17"]
+        },
+        {
+          "poiId": "mercado-central-cadiz",
+          "points": 44,
+          "text": "Mercado Central de Cádiz is a themed comparison candidate: A named covered public market whose neoclassical market building opened in 1838 and still contains food and merchandise stalls.",
+          "sourceIds": ["source-04", "source-17"]
+        },
+        {
+          "poiId": "halles-dijon",
+          "points": 39,
+          "text": "Halles centrales de Dijon is a themed comparison candidate: A permanent covered municipal market opened in the nineteenth century and still operating as a public food market in central Dijon.",
+          "sourceIds": ["source-05", "source-17"]
+        },
+        {
+          "poiId": "great-market-hall-budapest",
+          "points": 73,
+          "text": "Great Market Hall is a themed comparison candidate: A permanent covered market hall opened in 1897 and still operating with public food, produce, craft, and merchandise stalls.",
+          "sourceIds": ["source-06", "source-17"]
+        },
+        {
+          "poiId": "egyptian-spice-bazaar",
+          "points": 68,
+          "text": "Egyptian Bazaar is a themed comparison candidate: A named roofed bazaar opened in the seventeenth century and still operating with public-facing food, spice, confectionery, and merchandise stalls.",
+          "sourceIds": ["source-07", "source-17"]
+        },
+        {
+          "poiId": "tabriz-bazaar",
+          "points": 49,
+          "text": "Tabriz Historic Bazaar Complex is a themed comparison candidate: A named roofed bazaar complex with medieval origins and continuing public trade in food, crafts, carpets, and merchandise.",
+          "sourceIds": ["source-08", "source-17"]
+        },
+        {
+          "poiId": "sukiennice",
+          "points": 35,
+          "text": "Sukiennice (Cloth Hall) is a themed comparison candidate: A uniquely named historic covered market building whose public merchandise stalls continue a market tradition at the same Kraków site.",
+          "sourceIds": ["source-09", "source-17"]
+        },
+        {
+          "poiId": "mercato-centrale-florence",
+          "points": 81,
+          "text": "Mercato Centrale di San Lorenzo is a themed comparison candidate: A permanent covered market hall opened in 1874 and still operating with public food and specialty stalls in Florence.",
+          "sourceIds": ["source-10", "source-17"]
+        },
+        {
+          "poiId": "varvakios-market",
+          "points": 64,
+          "text": "Varvakios Agora is a themed comparison candidate: A named covered central market opened in 1886 and still operating with public meat, fish, produce, and grocery stalls.",
+          "sourceIds": ["source-11", "source-17"]
+        },
+        {
+          "poiId": "crawford-market",
+          "points": 58,
+          "text": "Crawford Market is a themed comparison candidate: A permanent covered municipal market opened in 1869 and still operating with public food, produce, household, and merchandise stalls.",
+          "sourceIds": ["source-12", "source-17"]
+        },
+        {
+          "poiId": "new-market-kolkata",
+          "points": 43,
+          "text": "New Market is a themed comparison candidate: A named Victorian covered market opened in 1874 and continuing to operate with public stalls selling food, clothing, and household goods.",
+          "sourceIds": ["source-13", "source-17"]
+        },
+        {
+          "poiId": "mercado-central-santiago",
+          "points": 79,
+          "text": "Mercado Central de Santiago is a themed comparison candidate: A permanent covered market opened in 1872 and still operating as a public fish, food, and merchandise market.",
+          "sourceIds": ["source-14", "source-17"]
+        },
+        {
+          "poiId": "mercado-san-telmo",
+          "points": 63,
+          "text": "Mercado de San Telmo is a themed comparison candidate: A named covered market opened in 1897 and still operating with public food, antique, craft, and merchandise vendors.",
+          "sourceIds": ["source-15", "source-17"]
+        },
+        {
+          "poiId": "mercado-del-puerto",
+          "points": 74,
+          "text": "Mercado del Puerto is a themed comparison candidate: A named nineteenth-century covered market opened in 1868 and still operating at the original site with food vendors and public market stalls.",
+          "sourceIds": ["source-16", "source-17"]
+        },
+        {
+          "poiId": "mercado-modelo-recife",
+          "points": 100,
+          "text": "Mercado de São José is the round target: A permanent cast-iron covered market opened in 1875 and still operating with public food, fish, craft, and merchandise stalls.",
+          "sourceIds": ["source-17"]
+        },
+        {
+          "poiId": "quincy-market",
+          "points": 31,
+          "text": "Quincy Market is a themed comparison candidate: A permanent covered market hall opened in 1826 and still operating as a public market with food and merchandise vendors.",
+          "sourceIds": ["source-18", "source-17"]
+        },
+        {
+          "poiId": "reading-terminal-market",
+          "points": 56,
+          "text": "Reading Terminal Market is a themed comparison candidate: A permanent covered public market opened in 1893 and still operating with a large range of food and merchandise stalls.",
+          "sourceIds": ["source-19", "source-17"]
+        },
+        {
+          "poiId": "eastern-market-dc",
+          "points": 40,
+          "text": "Eastern Market is a themed comparison candidate: A named covered public market building opened in 1873 and still operating with food, produce, and merchandise vendors.",
+          "sourceIds": ["source-20", "source-17"]
+        }
+      ]
+    },
+    {
+      "id": "round-4",
+      "targetPoiId": "eastern-market-dc",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Eastern_Market_-_facade.JPG/1280px-Eastern_Market_-_facade.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Eastern Market, Washington, D.C.",
+        "attribution": "AgnosticPreachersKid · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "clue": {
+        "text": "A nineteenth-century brick public market in a Capitol Hill neighborhood was badly damaged by a major fire, then reopened after restoration that prominently reintroduced a historic skylight; its outdoor farmers’ market and arts activity continue around the building.",
+        "sourceIds": ["source-20"]
+      },
+      "results": [
+        {
+          "poiId": "leadenhall-market",
+          "points": 45,
+          "text": "Leadenhall Market is a themed comparison candidate: A roofed Victorian market with public-facing food and merchandise stalls, operating continuously as a named market at its historic City of London site.",
+          "sourceIds": ["source-01", "source-20"]
+        },
+        {
+          "poiId": "mercat-sant-antoni",
+          "points": 52,
+          "text": "Mercat de Sant Antoni is a themed comparison candidate: A permanent iron market hall opened in 1882 and still operating as a public food and merchandise market at the same Barcelona site.",
+          "sourceIds": ["source-02", "source-20"]
+        },
+        {
+          "poiId": "mercado-atarazanas",
+          "points": 38,
+          "text": "Mercado Central de Atarazanas is a themed comparison candidate: A permanent nineteenth-century covered municipal market, operating as a public food market in Málaga's historic iron structure.",
+          "sourceIds": ["source-03", "source-20"]
+        },
+        {
+          "poiId": "mercado-central-cadiz",
+          "points": 34,
+          "text": "Mercado Central de Cádiz is a themed comparison candidate: A named covered public market whose neoclassical market building opened in 1838 and still contains food and merchandise stalls.",
+          "sourceIds": ["source-04", "source-20"]
+        },
+        {
+          "poiId": "halles-dijon",
+          "points": 29,
+          "text": "Halles centrales de Dijon is a themed comparison candidate: A permanent covered municipal market opened in the nineteenth century and still operating as a public food market in central Dijon.",
+          "sourceIds": ["source-05", "source-20"]
+        },
+        {
+          "poiId": "great-market-hall-budapest",
+          "points": 47,
+          "text": "Great Market Hall is a themed comparison candidate: A permanent covered market hall opened in 1897 and still operating with public food, produce, craft, and merchandise stalls.",
+          "sourceIds": ["source-06", "source-20"]
+        },
+        {
+          "poiId": "egyptian-spice-bazaar",
+          "points": 22,
+          "text": "Egyptian Bazaar is a themed comparison candidate: A named roofed bazaar opened in the seventeenth century and still operating with public-facing food, spice, confectionery, and merchandise stalls.",
+          "sourceIds": ["source-07", "source-20"]
+        },
+        {
+          "poiId": "tabriz-bazaar",
+          "points": 18,
+          "text": "Tabriz Historic Bazaar Complex is a themed comparison candidate: A named roofed bazaar complex with medieval origins and continuing public trade in food, crafts, carpets, and merchandise.",
+          "sourceIds": ["source-08", "source-20"]
+        },
+        {
+          "poiId": "sukiennice",
+          "points": 31,
+          "text": "Sukiennice (Cloth Hall) is a themed comparison candidate: A uniquely named historic covered market building whose public merchandise stalls continue a market tradition at the same Kraków site.",
+          "sourceIds": ["source-09", "source-20"]
+        },
+        {
+          "poiId": "mercato-centrale-florence",
+          "points": 57,
+          "text": "Mercato Centrale di San Lorenzo is a themed comparison candidate: A permanent covered market hall opened in 1874 and still operating with public food and specialty stalls in Florence.",
+          "sourceIds": ["source-10", "source-20"]
+        },
+        {
+          "poiId": "varvakios-market",
+          "points": 36,
+          "text": "Varvakios Agora is a themed comparison candidate: A named covered central market opened in 1886 and still operating with public meat, fish, produce, and grocery stalls.",
+          "sourceIds": ["source-11", "source-20"]
+        },
+        {
+          "poiId": "crawford-market",
+          "points": 42,
+          "text": "Crawford Market is a themed comparison candidate: A permanent covered municipal market opened in 1869 and still operating with public food, produce, household, and merchandise stalls.",
+          "sourceIds": ["source-12", "source-20"]
+        },
+        {
+          "poiId": "new-market-kolkata",
+          "points": 61,
+          "text": "New Market is a themed comparison candidate: A named Victorian covered market opened in 1874 and continuing to operate with public stalls selling food, clothing, and household goods.",
+          "sourceIds": ["source-13", "source-20"]
+        },
+        {
+          "poiId": "mercado-central-santiago",
+          "points": 49,
+          "text": "Mercado Central de Santiago is a themed comparison candidate: A permanent covered market opened in 1872 and still operating as a public fish, food, and merchandise market.",
+          "sourceIds": ["source-14", "source-20"]
+        },
+        {
+          "poiId": "mercado-san-telmo",
+          "points": 44,
+          "text": "Mercado de San Telmo is a themed comparison candidate: A named covered market opened in 1897 and still operating with public food, antique, craft, and merchandise vendors.",
+          "sourceIds": ["source-15", "source-20"]
+        },
+        {
+          "poiId": "mercado-del-puerto",
+          "points": 28,
+          "text": "Mercado del Puerto is a themed comparison candidate: A named nineteenth-century covered market opened in 1868 and still operating at the original site with food vendors and public market stalls.",
+          "sourceIds": ["source-16", "source-20"]
+        },
+        {
+          "poiId": "mercado-modelo-recife",
+          "points": 33,
+          "text": "Mercado de São José is a themed comparison candidate: A permanent cast-iron covered market opened in 1875 and still operating with public food, fish, craft, and merchandise stalls.",
+          "sourceIds": ["source-17", "source-20"]
+        },
+        {
+          "poiId": "quincy-market",
+          "points": 65,
+          "text": "Quincy Market is a themed comparison candidate: A permanent covered market hall opened in 1826 and still operating as a public market with food and merchandise vendors.",
+          "sourceIds": ["source-18", "source-20"]
+        },
+        {
+          "poiId": "reading-terminal-market",
+          "points": 72,
+          "text": "Reading Terminal Market is a themed comparison candidate: A permanent covered public market opened in 1893 and still operating with a large range of food and merchandise stalls.",
+          "sourceIds": ["source-19", "source-20"]
+        },
+        {
+          "poiId": "eastern-market-dc",
+          "points": 100,
+          "text": "Eastern Market is the round target: A named covered public market building opened in 1873 and still operating with food, produce, and merchandise vendors.",
+          "sourceIds": ["source-20"]
+        }
+      ]
+    },
+    {
+      "id": "round-5",
+      "targetPoiId": "leadenhall-market",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Leadenhall_Market_In_London_-_Feb_2006_rotated.jpg/1280px-Leadenhall_Market_In_London_-_Feb_2006_rotated.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Leadenhall Market",
+        "attribution": "Diliff · CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
+      },
+      "clue": {
+        "text": "A roofed market on an ancient Roman-era commercial site has cobbled floors, an ornate green, maroon, and cream roof, and a double-height entrance framed by narrow Dutch-style gabled blocks; its traditional tavern serves nearby insurance workers.",
+        "sourceIds": ["source-01"]
+      },
+      "results": [
+        {
+          "poiId": "leadenhall-market",
+          "points": 100,
+          "text": "Leadenhall Market is the round target: A roofed Victorian market with public-facing food and merchandise stalls, operating continuously as a named market at its historic City of London site.",
+          "sourceIds": ["source-01"]
+        },
+        {
+          "poiId": "mercat-sant-antoni",
+          "points": 43,
+          "text": "Mercat de Sant Antoni is a themed comparison candidate: A permanent iron market hall opened in 1882 and still operating as a public food and merchandise market at the same Barcelona site.",
+          "sourceIds": ["source-02", "source-01"]
+        },
+        {
+          "poiId": "mercado-atarazanas",
+          "points": 58,
+          "text": "Mercado Central de Atarazanas is a themed comparison candidate: A permanent nineteenth-century covered municipal market, operating as a public food market in Málaga's historic iron structure.",
+          "sourceIds": ["source-03", "source-01"]
+        },
+        {
+          "poiId": "mercado-central-cadiz",
+          "points": 35,
+          "text": "Mercado Central de Cádiz is a themed comparison candidate: A named covered public market whose neoclassical market building opened in 1838 and still contains food and merchandise stalls.",
+          "sourceIds": ["source-04", "source-01"]
+        },
+        {
+          "poiId": "halles-dijon",
+          "points": 32,
+          "text": "Halles centrales de Dijon is a themed comparison candidate: A permanent covered municipal market opened in the nineteenth century and still operating as a public food market in central Dijon.",
+          "sourceIds": ["source-05", "source-01"]
+        },
+        {
+          "poiId": "great-market-hall-budapest",
+          "points": 71,
+          "text": "Great Market Hall is a themed comparison candidate: A permanent covered market hall opened in 1897 and still operating with public food, produce, craft, and merchandise stalls.",
+          "sourceIds": ["source-06", "source-01"]
+        },
+        {
+          "poiId": "egyptian-spice-bazaar",
+          "points": 39,
+          "text": "Egyptian Bazaar is a themed comparison candidate: A named roofed bazaar opened in the seventeenth century and still operating with public-facing food, spice, confectionery, and merchandise stalls.",
+          "sourceIds": ["source-07", "source-01"]
+        },
+        {
+          "poiId": "tabriz-bazaar",
+          "points": 28,
+          "text": "Tabriz Historic Bazaar Complex is a themed comparison candidate: A named roofed bazaar complex with medieval origins and continuing public trade in food, crafts, carpets, and merchandise.",
+          "sourceIds": ["source-08", "source-01"]
+        },
+        {
+          "poiId": "sukiennice",
+          "points": 66,
+          "text": "Sukiennice (Cloth Hall) is a themed comparison candidate: A uniquely named historic covered market building whose public merchandise stalls continue a market tradition at the same Kraków site.",
+          "sourceIds": ["source-09", "source-01"]
+        },
+        {
+          "poiId": "mercato-centrale-florence",
+          "points": 62,
+          "text": "Mercato Centrale di San Lorenzo is a themed comparison candidate: A permanent covered market hall opened in 1874 and still operating with public food and specialty stalls in Florence.",
+          "sourceIds": ["source-10", "source-01"]
+        },
+        {
+          "poiId": "varvakios-market",
+          "points": 41,
+          "text": "Varvakios Agora is a themed comparison candidate: A named covered central market opened in 1886 and still operating with public meat, fish, produce, and grocery stalls.",
+          "sourceIds": ["source-11", "source-01"]
+        },
+        {
+          "poiId": "crawford-market",
+          "points": 37,
+          "text": "Crawford Market is a themed comparison candidate: A permanent covered municipal market opened in 1869 and still operating with public food, produce, household, and merchandise stalls.",
+          "sourceIds": ["source-12", "source-01"]
+        },
+        {
+          "poiId": "new-market-kolkata",
+          "points": 45,
+          "text": "New Market is a themed comparison candidate: A named Victorian covered market opened in 1874 and continuing to operate with public stalls selling food, clothing, and household goods.",
+          "sourceIds": ["source-13", "source-01"]
+        },
+        {
+          "poiId": "mercado-central-santiago",
+          "points": 53,
+          "text": "Mercado Central de Santiago is a themed comparison candidate: A permanent covered market opened in 1872 and still operating as a public fish, food, and merchandise market.",
+          "sourceIds": ["source-14", "source-01"]
+        },
+        {
+          "poiId": "mercado-san-telmo",
+          "points": 49,
+          "text": "Mercado de San Telmo is a themed comparison candidate: A named covered market opened in 1897 and still operating with public food, antique, craft, and merchandise vendors.",
+          "sourceIds": ["source-15", "source-01"]
+        },
+        {
+          "poiId": "mercado-del-puerto",
+          "points": 56,
+          "text": "Mercado del Puerto is a themed comparison candidate: A named nineteenth-century covered market opened in 1868 and still operating at the original site with food vendors and public market stalls.",
+          "sourceIds": ["source-16", "source-01"]
+        },
+        {
+          "poiId": "mercado-modelo-recife",
+          "points": 26,
+          "text": "Mercado de São José is a themed comparison candidate: A permanent cast-iron covered market opened in 1875 and still operating with public food, fish, craft, and merchandise stalls.",
+          "sourceIds": ["source-17", "source-01"]
+        },
+        {
+          "poiId": "quincy-market",
+          "points": 51,
+          "text": "Quincy Market is a themed comparison candidate: A permanent covered market hall opened in 1826 and still operating as a public market with food and merchandise vendors.",
+          "sourceIds": ["source-18", "source-01"]
+        },
+        {
+          "poiId": "reading-terminal-market",
+          "points": 47,
+          "text": "Reading Terminal Market is a themed comparison candidate: A permanent covered public market opened in 1893 and still operating with a large range of food and merchandise stalls.",
+          "sourceIds": ["source-19", "source-01"]
+        },
+        {
+          "poiId": "eastern-market-dc",
+          "points": 33,
+          "text": "Eastern Market is a themed comparison candidate: A named covered public market building opened in 1873 and still operating with food, produce, and merchandise vendors.",
+          "sourceIds": ["source-20", "source-01"]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-01",
+      "title": "Leadenhall Market",
+      "url": "https://en.wikipedia.org/wiki/Leadenhall_Market",
+      "retrievedAt": "2026-08-18T22:08:07.742Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-02",
+      "title": "Mercat de Sant Antoni",
+      "url": "https://en.wikipedia.org/wiki/Mercat_de_Sant_Antoni",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-03",
+      "title": "Atarazanas Market",
+      "url": "https://en.wikipedia.org/wiki/Atarazanas_Market",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-04",
+      "title": "Mercado Central de Cádiz",
+      "url": "https://es.wikipedia.org/wiki/Mercado_Central_de_C%C3%A1diz",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-05",
+      "title": "Les Halles centrales de Dijon",
+      "url": "https://fr.wikipedia.org/wiki/Halles_centrales_de_Dijon",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-06",
+      "title": "Great Market Hall",
+      "url": "https://en.wikipedia.org/wiki/Great_Market_Hall",
+      "retrievedAt": "2026-08-18T22:08:07.089Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-07",
+      "title": "Spice Bazaar",
+      "url": "https://en.wikipedia.org/wiki/Spice_Bazaar",
+      "retrievedAt": "2026-08-18T22:08:07.039Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-08",
+      "title": "Tabriz Historic Bazaar Complex",
+      "url": "https://en.wikipedia.org/wiki/Tabriz_Historic_Bazaar_Complex",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-09",
+      "title": "Cloth Hall, Kraków",
+      "url": "https://en.wikipedia.org/wiki/Cloth_Hall,_Krak%C3%B3w",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-10",
+      "title": "Mercato Centrale (Florence)",
+      "url": "https://en.wikipedia.org/wiki/Mercato_Centrale_(Florence)",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-11",
+      "title": "Varvakios Agora",
+      "url": "https://en.wikipedia.org/wiki/Varvakios_Agora",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-12",
+      "title": "Crawford Market",
+      "url": "https://en.wikipedia.org/wiki/Crawford_Market",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-13",
+      "title": "New Market, Kolkata",
+      "url": "https://en.wikipedia.org/wiki/New_Market,_Kolkata",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-14",
+      "title": "Mercado Central de Santiago",
+      "url": "https://en.wikipedia.org/wiki/Mercado_Central_de_Santiago",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-15",
+      "title": "San Telmo Market",
+      "url": "https://en.wikipedia.org/wiki/San_Telmo_Market",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-16",
+      "title": "Mercado del Puerto",
+      "url": "https://en.wikipedia.org/wiki/Mercado_del_Puerto",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-17",
+      "title": "Mercado de São José",
+      "url": "https://en.wikipedia.org/wiki/Mercado_de_S%C3%A3o_Jos%C3%A9",
+      "retrievedAt": "2026-08-18T22:08:07.447Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-18",
+      "title": "Quincy Market",
+      "url": "https://en.wikipedia.org/wiki/Quincy_Market",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-19",
+      "title": "Reading Terminal Market",
+      "url": "https://en.wikipedia.org/wiki/Reading_Terminal_Market",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-20",
+      "title": "Eastern Market, Washington, D.C.",
+      "url": "https://en.wikipedia.org/wiki/Eastern_Market,_Washington,_D.C.",
+      "retrievedAt": "2026-08-18T22:08:07.082Z",
+      "provenance": "verified"
+    }
+  ],
+  "theme": {
+    "title": "Operating Historic Covered Markets",
+    "introduction": "Under iron, glass, and weathered stone, city markets keep their old rhythms: a daily hunt for food, craft, and human noise.",
+    "inclusionCriteria": "Include a location only when every condition is met: (1) it is an individually named permanent public market, market hall, covered market, or roofed bazaar; (2) its principal function is selling food, household goods, crafts, or other merchandise from public-facing stalls; (3) substantial permanent market structures at the current identifiable site opened for market trade on or before 31 December 1899; (4) the market still operates at that site on the date of play and is regularly accessible to ordinary visitors, whether free or ticketed; (5) it lies within the current administrative boundary of a present-day city or incorporated urban municipality; and (6) the named market, market building, or principal public entrance can be pinned as one exact map location."
+  }
+}

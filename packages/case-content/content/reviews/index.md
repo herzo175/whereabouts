@@ -2,4 +2,4 @@
 
 All semantic verdicts passed for every prepared case in this batch.
 
-- [2026-08-25 revision 4](./2026-08-25/v4.md)
+- [2026-08-25 revision 5](./2026-08-25/v5.md)
