@@ -1,4 +1,5 @@
-import type { DailyRound, Poi, RoundTier } from '@whereabouts/case-content';
+import type { DailyRound, Poi } from '@whereabouts/case-content';
+import { getScoreBand } from '@whereabouts/game-engine';
 
 type RoundRevealProps = {
   correctPoi: Poi;
@@ -6,7 +7,6 @@ type RoundRevealProps = {
   points: number;
   round: DailyRound;
   roundNumber: number;
-  tier: RoundTier;
 };
 
 function FullDossier({ poi, label }: { poi: Poi; label: string }) {
@@ -81,11 +81,11 @@ export function RoundReveal({
   points,
   round,
   roundNumber,
-  tier,
 }: RoundRevealProps) {
   const result = round.results.find(
     (candidate) => candidate.poiId === guessedPoi.id,
   );
+  const tier = getScoreBand(points);
   const formattedTier = tier[0].toUpperCase() + tier.slice(1);
 
   return (

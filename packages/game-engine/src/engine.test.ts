@@ -6,7 +6,7 @@ import {
   createFiveRoundProgress,
   GameRuleError,
   getCurrentRound,
-  getRoundScore,
+  getScoreBand,
   getTotalScore,
   submitRoundGuess,
 } from './index.js';
@@ -16,10 +16,13 @@ describe('five-round engine', () => {
     const caseData = makeFiveRoundCase();
     let progress = createFiveRoundProgress(caseData);
     expect(getCurrentRound(caseData, progress)?.id).toBe('round-1');
-    expect(getRoundScore('correct')).toBe(100);
-    expect(getRoundScore('hot')).toBe(75);
-    expect(getRoundScore('warm')).toBe(50);
-    expect(getRoundScore('cold')).toBe(25);
+    expect(getScoreBand(100)).toBe('correct');
+    expect(getScoreBand(99)).toBe('hot');
+    expect(getScoreBand(75)).toBe('hot');
+    expect(getScoreBand(74)).toBe('warm');
+    expect(getScoreBand(40)).toBe('warm');
+    expect(getScoreBand(39)).toBe('cold');
+    expect(getScoreBand(0)).toBe('cold');
 
     for (let index = 0; index < 5; index += 1) {
       progress = submitRoundGuess(
@@ -50,6 +53,25 @@ describe('five-round engine', () => {
     expect(() =>
       acknowledgeRoundReveal(acknowledgeRoundReveal(guessed)),
     ).toThrow(GameRuleError);
+  });
+
+  it('uses the exact authored candidate points instead of a fixed tier score', () => {
+    const caseData = makeFiveRoundCase();
+    const candidate = caseData.rounds[0].results[1];
+    if (!candidate) throw new Error('fixture candidate missing');
+    candidate.points = 87;
+
+    const progress = submitRoundGuess(
+      caseData,
+      createFiveRoundProgress(caseData),
+      candidate.poiId,
+    );
+
+    expect(progress.guesses[0]).toEqual({
+      roundId: 'round-1',
+      poiId: candidate.poiId,
+      points: 87,
+    });
   });
 
   it('rejects a second-round guess while the prior reveal is unacknowledged', () => {
@@ -88,13 +110,7 @@ describe('five-round engine', () => {
     expect(() =>
       getCurrentRound(caseData, {
         ...progress,
-        guesses: [{ ...progress.guesses[0], points: 25 }],
-      }),
-    ).toThrow(GameRuleError);
-    expect(() =>
-      getCurrentRound(caseData, {
-        ...progress,
-        guesses: [{ ...progress.guesses[0], tier: 'hot', points: 75 }],
+        guesses: [{ ...progress.guesses[0], points: 99 }],
       }),
     ).toThrow(GameRuleError);
     expect(() =>

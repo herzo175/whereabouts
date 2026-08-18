@@ -8,16 +8,17 @@ import { dailyCaseSchema } from './schema.js';
 describe('dailyCaseSchema', () => {
   it('accepts five distinct rounds over a shared 25-location board', () => {
     const parsed = dailyCaseSchema.parse(makeFiveRoundCase());
-    expect(parsed.schemaVersion).toBe(3);
-    if (parsed.schemaVersion !== 3) throw new Error('expected version 3');
+    expect(parsed.schemaVersion).toBe(4);
+    if (parsed.schemaVersion !== 4) throw new Error('expected version 4');
     expect(parsed.rounds).toHaveLength(5);
     expect(parsed.rounds[0]?.results).toHaveLength(25);
   });
 
-  it('accepts a sourced v3 themed case', () => {
+  it('accepts a sourced v4 themed case with authored candidate points', () => {
     const parsed = dailyCaseSchema.parse(makeFiveRoundCase());
-    expect(parsed.schemaVersion).toBe(3);
-    if (parsed.schemaVersion !== 3) throw new Error('expected version 3');
+    expect(parsed.schemaVersion).toBe(4);
+    if (parsed.schemaVersion !== 4) throw new Error('expected version 4');
+    expect(parsed.rounds[0]?.results[1]?.points).toBe(92);
     expect(parsed.theme.title).toBe('Railway Hotels');
     expect(parsed.pois[0]?.themeConnection.sourceIds).toEqual(['source-01']);
   });
@@ -57,8 +58,8 @@ describe('dailyCaseSchema', () => {
   it('rejects duplicate five-round targets', () => {
     const value = makeFiveRoundCase();
     value.rounds[1].targetPoiId = value.rounds[0].targetPoiId;
-    value.rounds[1].results[0].tier = 'correct';
-    value.rounds[1].results[1].tier = 'hot';
+    value.rounds[1].results[0].points = 100;
+    value.rounds[1].results[1].points = 99;
     expect(() => dailyCaseSchema.parse(value)).toThrow(/target.*unique/i);
   });
 
@@ -76,15 +77,23 @@ describe('dailyCaseSchema', () => {
     expect(() => dailyCaseSchema.parse(value)).toThrow(/rounds\[0\].*image/i);
   });
 
-  it('rejects a non-target marked correct', () => {
+  it('rejects a non-target awarded 100 points', () => {
     const value = makeFiveRoundCase();
-    value.rounds[0].results[1].tier = 'correct';
-    expect(() => dailyCaseSchema.parse(value)).toThrow(/correct/i);
+    value.rounds[0].results[1].points = 100;
+    expect(() => dailyCaseSchema.parse(value)).toThrow(/100|target/i);
+  });
+
+  it('rejects fractional and out-of-range candidate points', () => {
+    const value = makeFiveRoundCase();
+    value.rounds[0].results[1].points = 74.5;
+    expect(() => dailyCaseSchema.parse(value)).toThrow(/integer/i);
+    value.rounds[0].results[1].points = -1;
+    expect(() => dailyCaseSchema.parse(value)).toThrow(/0|100/i);
   });
 
   it('rejects unsupported schema versions', () => {
     const unsupported = {
-      schemaVersion: 4,
+      schemaVersion: 5,
       publicationDate: '2026-08-14',
       revision: 1,
       caseNumber: 1,

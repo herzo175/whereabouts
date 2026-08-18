@@ -1,11 +1,11 @@
 import { type BrowserContext, expect, type Page, test } from '@playwright/test';
+import { getScoreBand } from '@whereabouts/game-engine';
 
 import {
   CASE_DATE,
   CASE_STORAGE_KEY,
   disableWebGl,
   E2E_HARNESS_PATH,
-  expectedScore,
   FIRST_GUESS,
   FIRST_GUESS_RESULT,
   FIRST_ROUND,
@@ -170,12 +170,12 @@ test.describe('Whereabouts five-round desktop journeys', () => {
     await openGame(page);
     await submitLead(page, firstGuess.name);
 
-    const score = expectedScore(firstResult.tier);
+    const tier = getScoreBand(firstResult.points);
     await expect(
       page.getByRole('heading', { name: 'Round 1 revealed' }),
     ).toBeVisible();
     await expect(
-      page.getByText(new RegExp(`${firstResult.tier} · ${score} points`, 'i')),
+      page.getByText(new RegExp(`${tier} · ${firstResult.points} points`, 'i')),
     ).toBeVisible();
     await expect(page.getByText(firstResult.text)).toBeVisible();
     await expect(
@@ -199,7 +199,7 @@ test.describe('Whereabouts five-round desktop journeys', () => {
 
     await expect(page.getByText('Round 2 / 5')).toBeVisible();
     await expect(readProgress(page)).resolves.toMatchObject({
-      schemaVersion: 2,
+      schemaVersion: 3,
       guesses: [firstStoredGuess],
     });
 
@@ -252,9 +252,11 @@ test.describe('Whereabouts five-round desktop journeys', () => {
     expect(shareText).toBe(
       [
         'WHEREABOUTS',
-        completed.guesses.map((guess) => emojiByTier[guess.tier]).join(' '),
+        completed.guesses
+          .map((guess) => emojiByTier[getScoreBand(guess.points)])
+          .join(' '),
         `${total} / 500`,
-        `http://127.0.0.1:3000/${CASE_DATE}`,
+        'http://127.0.0.1:3000',
       ].join('\n'),
     );
     for (const round of caseData.rounds) {

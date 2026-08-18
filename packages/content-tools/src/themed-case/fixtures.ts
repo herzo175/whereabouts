@@ -71,7 +71,8 @@ export function buildFixtureCaseDraft(
       },
       results: board.candidates.map((candidate, index) => ({
         poiId: candidate.id,
-        similarityScore: 100 - index,
+        similarityScore:
+          candidate.id === targetPoiId ? 100 : Math.max(0, 96 - index * 4),
         text: `Evidence about ${candidate.name} and its historic public-market role.`,
         evidencePoiIds: [candidate.id],
       })),

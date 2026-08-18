@@ -103,7 +103,7 @@ describe('FiveRoundGameScreen', () => {
     expect(
       screen.getByRole('heading', { name: /round 1 revealed/i }),
     ).toBeInTheDocument();
-    expect(screen.getByText(/warm · 50 points/i)).toBeInTheDocument();
+    expect(screen.getByText(/warm · 56 points/i)).toBeInTheDocument();
     expect(
       screen.getByText(caseData.rounds[0].results[10].text),
     ).toBeInTheDocument();

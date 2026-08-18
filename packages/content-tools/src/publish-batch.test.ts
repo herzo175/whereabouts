@@ -40,14 +40,10 @@ function prepared(
     for (const [index, round] of caseData.rounds.entries()) {
       round.targetPoiId = `poi-${String(index + targetOffset).padStart(2, '0')}`;
       for (const [resultIndex, result] of round.results.entries())
-        result.tier =
+        result.points =
           result.poiId === round.targetPoiId
-            ? 'correct'
-            : resultIndex < 4
-              ? 'hot'
-              : resultIndex < 12
-                ? 'warm'
-                : 'cold';
+            ? 100
+            : Math.max(0, 96 - resultIndex * 4);
     }
   }
   return {

@@ -204,7 +204,7 @@ function rollingThemes(
     .map(([, caseData]) => caseData)
     .filter(
       (caseData): caseData is ThemedDailyCase =>
-        caseData.schemaVersion === 3 && 'theme' in caseData,
+        caseData.schemaVersion === 4 && 'theme' in caseData,
     )
     .slice(-90)
     .map(({ theme }) => ({

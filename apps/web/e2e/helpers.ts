@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'node:url';
 import type { Page } from '@playwright/test';
-import type { FiveRoundDailyCase, RoundTier } from '@whereabouts/case-content';
+import type { FiveRoundDailyCase } from '@whereabouts/case-content';
 import { makeFiveRoundCase } from '@whereabouts/case-content/testing';
 import type {
   FiveRoundGuess,
@@ -21,22 +21,11 @@ export const FIRST_ROUND_TARGET = FIRST_ROUND
     null)
   : null;
 export const FIRST_GUESS_RESULT =
-  FIRST_ROUND?.results.find((result) => result.tier !== 'correct') ?? null;
+  FIRST_ROUND?.results.find((result) => result.points !== 100) ?? null;
 export const FIRST_GUESS = FIRST_GUESS_RESULT
   ? (FIVE_ROUND_CASE.pois.find((poi) => poi.id === FIRST_GUESS_RESULT.poiId) ??
     null)
   : null;
-
-const scoreByTier: Record<RoundTier, 100 | 75 | 50 | 25> = {
-  correct: 100,
-  hot: 75,
-  warm: 50,
-  cold: 25,
-};
-
-export function expectedScore(tier: RoundTier): 100 | 75 | 50 | 25 {
-  return scoreByTier[tier];
-}
 
 export function makeFiveRoundGuess(
   caseData: FiveRoundDailyCase,
@@ -53,8 +42,7 @@ export function makeFiveRoundGuess(
   return {
     roundId: round.id,
     poiId,
-    tier: result.tier,
-    points: expectedScore(result.tier),
+    points: result.points,
   };
 }
 
@@ -63,7 +51,7 @@ export function makeCompletedFiveRoundProgress(
   completedAt = `${CASE_DATE}T12:00:00.000Z`,
 ): FiveRoundProgress {
   return {
-    schemaVersion: 2,
+    schemaVersion: 3,
     caseDate: caseData.publicationDate,
     caseRevision: caseData.revision,
     guesses: caseData.rounds.map((round, index) =>
@@ -100,7 +88,7 @@ export async function seedFiveRoundProgress(
   progress: Partial<FiveRoundProgress>,
 ): Promise<void> {
   await seedStoredProgress(page, {
-    schemaVersion: 2,
+    schemaVersion: 3,
     caseDate: CASE_DATE,
     caseRevision: CASE_REVISION,
     guesses: [],

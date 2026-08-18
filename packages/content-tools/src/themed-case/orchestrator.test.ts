@@ -92,7 +92,7 @@ describe('orchestrateThemedCase', () => {
       recentThemes: [],
       requestedTheme: 'Railway hotels',
     });
-    expect(result.caseData.schemaVersion).toBe(3);
+    expect(result.caseData.schemaVersion).toBe(4);
     expect(result.generationReview).toEqual(review);
   });
 

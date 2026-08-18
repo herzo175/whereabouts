@@ -11,7 +11,7 @@ import {
   validateGenerationReview,
 } from './generation-review.js';
 import { reviewPacket } from './review-case.js';
-import { bucketResults } from './themed-case/case-writer.js';
+import { authorResults } from './themed-case/case-writer.js';
 import type { ThemePlan } from './themed-case/contracts.js';
 import {
   type CaseDraft,
@@ -138,16 +138,16 @@ function translateDraft(
   };
 }
 
-export function bucketRoundResults(
+export function authorRoundResults(
   results: CaseDraft['rounds'][number]['results'],
   targetPoiId: string,
 ): Array<{
   poiId: string;
-  tier: 'correct' | 'hot' | 'warm' | 'cold';
+  points: number;
   text: string;
   sourceIds: string[];
 }> {
-  return bucketResults(results, targetPoiId);
+  return authorResults(results, targetPoiId);
 }
 
 export async function generateCase(
@@ -196,7 +196,7 @@ export async function generateCase(
   const translated = translateDraft(checkedDraft.data, sourceByPoiId);
   const displayPois = orderPoisForDisplay(pois, input);
   const caseData = dailyCaseSchema.parse({
-    schemaVersion: 3,
+    schemaVersion: 4,
     publicationDate: input.date,
     revision: input.revision,
     caseNumber: input.caseNumber,
@@ -215,7 +215,7 @@ export async function generateCase(
         targetPoiId: round.targetPoiId,
         image: target.image,
         clue: { text: round.clue.text, sourceIds: round.clue.evidencePoiIds },
-        results: bucketRoundResults(
+        results: authorRoundResults(
           checkedDraft.data.rounds[index]?.results ?? [],
           round.targetPoiId,
         ).map((result) => ({

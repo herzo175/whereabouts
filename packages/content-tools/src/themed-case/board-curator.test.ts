@@ -39,6 +39,30 @@ describe('curateBoard', () => {
     expect(board.targetPoiIds).toEqual(targetPoiIds);
   });
 
+  it('corrects an unknown model ID without restarting candidate research', async () => {
+    const ids = fixtureCandidates.slice(0, 25).map((candidate) => candidate.id);
+    let calls = 0;
+    const board = await curateBoard({
+      model: {
+        generate: async ({ prompt }) => {
+          calls += 1;
+          if (calls === 1)
+            return {
+              candidateIds: [...ids.slice(0, 24), 'invented-candidate'],
+              targetPoiIds: ids.slice(0, 5),
+            };
+          expect(prompt).toMatch(/unknown.*invented-candidate/i);
+          return { candidateIds: ids, targetPoiIds: ids.slice(0, 5) };
+        },
+      },
+      theme: fixtureTheme,
+      candidates: fixtureCandidates,
+    });
+
+    expect(calls).toBe(2);
+    expect(board.candidates.map((candidate) => candidate.id)).toEqual(ids);
+  });
+
   it('rejects duplicate coordinates through the board contract', async () => {
     const candidates = fixtureCandidates.map((candidate, index) =>
       index === 1

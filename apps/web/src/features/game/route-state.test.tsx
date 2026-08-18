@@ -7,15 +7,15 @@ import { AppShell, shareCurrentResult } from './app-shell';
 import { BriefingUnavailable } from './briefing-unavailable';
 
 const completedProgress: FiveRoundProgress = {
-  schemaVersion: 2,
+  schemaVersion: 3,
   caseDate: '2026-08-14',
   caseRevision: 1,
   guesses: [
-    { roundId: 'round-1', poiId: 'poi-00', tier: 'correct', points: 100 },
-    { roundId: 'round-2', poiId: 'poi-01', tier: 'correct', points: 100 },
-    { roundId: 'round-3', poiId: 'poi-02', tier: 'correct', points: 100 },
-    { roundId: 'round-4', poiId: 'poi-03', tier: 'correct', points: 100 },
-    { roundId: 'round-5', poiId: 'poi-04', tier: 'correct', points: 100 },
+    { roundId: 'round-1', poiId: 'poi-00', points: 100 },
+    { roundId: 'round-2', poiId: 'poi-01', points: 100 },
+    { roundId: 'round-3', poiId: 'poi-02', points: 100 },
+    { roundId: 'round-4', poiId: 'poi-03', points: 100 },
+    { roundId: 'round-5', poiId: 'poi-04', points: 100 },
   ],
   acknowledgedRoundCount: 5,
   completedAt: '2026-08-14T12:00:00.000Z',

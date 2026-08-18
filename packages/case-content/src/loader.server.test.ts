@@ -108,7 +108,7 @@ describe('createCaseLoader', () => {
     ]);
   });
 
-  it('loads v3 cases and lists both dates newest first', () => {
+  it('loads v4 cases and lists both dates newest first', () => {
     const manifest = {
       schemaVersion: 2,
       cases: {
@@ -132,8 +132,8 @@ describe('createCaseLoader', () => {
       }),
     });
 
-    expect(loader.loadPublishedCase('2026-08-14')?.schemaVersion).toBe(3);
-    expect(loader.loadPublishedCase('2026-08-15')?.schemaVersion).toBe(3);
+    expect(loader.loadPublishedCase('2026-08-14')?.schemaVersion).toBe(4);
+    expect(loader.loadPublishedCase('2026-08-15')?.schemaVersion).toBe(4);
     expect(loader.listPublishedCases()).toEqual([
       { date: '2026-08-15', caseNumber: 2 },
       { date: '2026-08-14', caseNumber: 1 },

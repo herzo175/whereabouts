@@ -22,7 +22,7 @@ function makeCase(overrides: Record<string, unknown> = {}) {
     },
   }));
   return {
-    schemaVersion: 3,
+    schemaVersion: 4,
     publicationDate: '2026-08-14',
     revision: 1,
     caseNumber: 1,
@@ -55,14 +55,7 @@ function makeCase(overrides: Record<string, unknown> = {}) {
       },
       results: pois.map((poi, index) => ({
         poiId: poi.id,
-        tier:
-          poi.id === target.id
-            ? 'correct'
-            : index < 5
-              ? 'hot'
-              : index < 14
-                ? 'warm'
-                : 'cold',
+        points: poi.id === target.id ? 100 : Math.max(0, 96 - index * 4),
         text:
           poi.id === target.id
             ? 'This candidate is correct.'
@@ -79,12 +72,12 @@ function messages(value: unknown): string[] {
 }
 
 describe('validateCaseForPublication', () => {
-  it('accepts a schema-valid v3 case', () => {
+  it('accepts a schema-valid v4 case', () => {
     expect(validateCaseForPublication(makeCase())).toEqual([]);
   });
 
   it('rejects malformed values as malformed', () => {
-    expect(validateCaseForPublication({ schemaVersion: 3 })[0]?.path).toBe(
+    expect(validateCaseForPublication({ schemaVersion: 4 })[0]?.path).toBe(
       'schema',
     );
   });
@@ -126,17 +119,17 @@ describe('validateCaseForPublication', () => {
     );
   });
 
-  it('rejects a round without a useful spread of similarity tiers', () => {
+  it('rejects a round without a useful spread of authored points', () => {
     const value = makeCase();
     value.rounds[0].results = value.rounds[0].results.map((result) =>
-      result.tier === 'correct' ? result : { ...result, tier: 'cold' },
+      result.points === 100 ? result : { ...result, points: 20 },
     );
 
     expect(validateCaseForPublication(value)).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
           path: 'rounds[0].results',
-          message: expect.stringMatching(/3–5 hot.*7–10 warm.*9–14 cold/i),
+          message: expect.stringMatching(/hot.*warm.*cold.*variation/i),
         }),
       ]),
     );
