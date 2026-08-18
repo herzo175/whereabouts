@@ -46,7 +46,7 @@ describe('case writer', () => {
       board: fixtureBoard,
     });
     expect(draft.rounds).toHaveLength(5);
-    expect(draft.rounds[0].results).toHaveLength(25);
+    expect(draft.rounds[0].results).toHaveLength(20);
   });
 
   it('preserves exact model-authored points for every candidate', () => {

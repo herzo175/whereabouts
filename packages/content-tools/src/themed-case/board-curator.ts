@@ -1,3 +1,4 @@
+import { DAILY_BOARD_SIZE } from '@whereabouts/case-content';
 import { z } from 'zod';
 import {
   type CuratedBoard,
@@ -8,7 +9,7 @@ import {
 import type { StructuredModel } from './model.js';
 
 const selectionSchema = z.object({
-  candidateIds: z.array(z.string()).length(25),
+  candidateIds: z.array(z.string()).length(DAILY_BOARD_SIZE),
   targetPoiIds: z.array(z.string()).length(5),
 });
 export type BoardSelection = z.infer<typeof selectionSchema>;
@@ -31,12 +32,14 @@ export async function curateBoard({
   excludedTargetIds = [],
 }: CurateBoardInput): Promise<CuratedBoard> {
   const excluded = new Set(excludedTargetIds);
-  if (candidates.length < 25)
-    throw new Error('curation requires at least 25 candidates');
+  if (candidates.length < DAILY_BOARD_SIZE)
+    throw new Error(
+      `curation requires at least ${DAILY_BOARD_SIZE} candidates`,
+    );
   const pool = new Map(
     candidates.map((candidate) => [candidate.id, candidate]),
   );
-  const prompt = `You are curating a themed geography board. Theme: ${theme.title}\nIntroduction: ${theme.introduction}\nExact inclusion criteria: ${theme.inclusionCriteria}\nExact exclusions: ${theme.exclusions.join('; ')}\nCandidate evidence (id, name, claim, coordinates):\n${candidates.map((candidate) => `${candidate.id} | ${candidate.name} | ${candidate.themeClaim} | ${candidate.latitude},${candidate.longitude}`).join('\n')}\nExcluded target IDs (never select these as targets): ${[...excluded].join(', ') || '(none)'}\nReturn only JSON with exactly 25 candidateIds and exactly 5 targetPoiIds, all IDs from this pool. Every one of the 25 must independently satisfy every inclusion criterion and no exclusion. Targets must be five distinct board IDs. Choose difficulty from meaningful within-theme distinctions, not arbitrary popularity. Do not copy or invent candidate records; IDs only.`;
+  const prompt = `You are curating a themed geography board. Theme: ${theme.title}\nIntroduction: ${theme.introduction}\nExact inclusion criteria: ${theme.inclusionCriteria}\nExact exclusions: ${theme.exclusions.join('; ')}\nCandidate evidence (id, name, claim, coordinates):\n${candidates.map((candidate) => `${candidate.id} | ${candidate.name} | ${candidate.themeClaim} | ${candidate.latitude},${candidate.longitude}`).join('\n')}\nExcluded target IDs (never select these as targets): ${[...excluded].join(', ') || '(none)'}\nReturn only JSON with exactly ${DAILY_BOARD_SIZE} candidateIds and exactly 5 targetPoiIds, all IDs from this pool. Every selected candidate must independently satisfy every inclusion criterion and no exclusion. Targets must be five distinct board IDs. Choose difficulty from meaningful within-theme distinctions, not arbitrary popularity. Do not copy or invent candidate records; IDs only.`;
   let selection: BoardSelection | undefined;
   let correction = '';
   for (let attempt = 0; attempt < 2; attempt += 1) {

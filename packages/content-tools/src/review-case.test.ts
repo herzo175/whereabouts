@@ -21,6 +21,7 @@ describe('reviewPacket', () => {
         declaredTargetPoiId: round.targetPoiId,
         resolvedPoiId: round.targetPoiId,
         resolvedOffBoardAnswer: null,
+        resolvableWithoutExactNumbers: true,
         status: 'pass' as const,
         explanation:
           'The clue evidence resolves directly to the declared board target.',
@@ -54,6 +55,7 @@ describe('reviewPacket', () => {
         declaredTargetPoiId: round.targetPoiId,
         resolvedPoiId: round.targetPoiId,
         resolvedOffBoardAnswer: null,
+        resolvableWithoutExactNumbers: true,
         status: 'pass' as const,
         explanation:
           'The clue evidence resolves directly to the declared board target.',

@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "publicationDate": "2026-08-22",
+  "revision": 2,
+  "themeVerdicts": [
+    {
+      "poiId": "london-zoo",
+      "status": "pass",
+      "explanation": "The source identifies ZSL London Zoo as a public zoological garden opened in 1828 in Regent's Park and still operating at that London site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "dublin-zoo",
+      "status": "pass",
+      "explanation": "Dublin Zoo is an individually named public zoo opened in 1831 in Phoenix Park and remains an operating animal-display institution at the site in Dublin.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "menagerie-jardin-plantes",
+      "status": "pass",
+      "explanation": "The Ménagerie is a named menagerie principally displaying living animals, formally established in 1794, located within Paris's Jardin des Plantes, and still operating with public access.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "tiergarten-schonbrunn",
+      "status": "pass",
+      "explanation": "Tiergarten Schönbrunn is a named zoo founded in 1752 in Vienna's Schönbrunn grounds and is identified as continuously operating as a public zoo.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "antwerp-zoo",
+      "status": "pass",
+      "explanation": "ZOO Antwerpen is an individually named urban zoological garden established in 1843 beside Antwerpen-Centraal and still operating with living-animal exhibits and public visitation.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "berlin-zoo",
+      "status": "pass",
+      "explanation": "The Berlin Zoological Garden opened in 1844 at its Zoological Garden site in Berlin and remains a public zoo and city attraction.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "artis-amsterdam",
+      "status": "pass",
+      "explanation": "ARTIS/Natura Artis Magistra is a named zoo founded in 1838 on its Amsterdam property, still operating publicly and displaying live animals despite also containing botanical and museum facilities.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "copenhagen-zoo",
+      "status": "pass",
+      "explanation": "Copenhagen Zoo is an individually named public zoological garden founded in 1859 and still operating at Frederiksberg in the Copenhagen urban area.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "moscow-zoo",
+      "status": "pass",
+      "explanation": "Moscow Zoo was founded in 1864, is located on its historic central Moscow site, and continues to display living animals to ordinary visitors.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "leningrad-zoo",
+      "status": "pass",
+      "explanation": "Leningrad Zoo, now in Saint Petersburg, was founded in 1865 and remains a regularly visited public zoo at its historic location.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "wroclaw-zoo",
+      "status": "pass",
+      "explanation": "Wrocław Zoo is a named zoological garden opened in 1865 within Wrocław and continues operating as a public animal collection.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "budapest-zoo",
+      "status": "pass",
+      "explanation": "Budapest Zoo and Botanical Garden opened in 1866 in Budapest's City Park and remains a public institution displaying living animals at that site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "basel-zoo",
+      "status": "pass",
+      "explanation": "Zoo Basel is a named nonprofit zoo opened in 1874 at its urban Basel site and continues receiving regular public visitors.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "cologne-zoo",
+      "status": "pass",
+      "explanation": "Cologne Zoological Garden was founded in 1860 and remains an open, public zoological garden in Cologne.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "leipzig-zoo",
+      "status": "pass",
+      "explanation": "Leipzig Zoological Garden was founded in 1878 and continues as a public zoo at its Leipzig site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "dresden-zoo",
+      "status": "pass",
+      "explanation": "Dresden Zoo was founded in 1861 in the city's Großer Garten area and remains an operating public zoo displaying living animals.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "helsinki-zoo",
+      "status": "pass",
+      "explanation": "Korkeasaari Zoo opened in 1889 on its Helsinki island site and remains a nonprofit public zoo with living-animal collections and visitor access.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "melbourne-zoo",
+      "status": "pass",
+      "explanation": "Melbourne Zoo opened in 1862 at Royal Park in Melbourne and continues operating as a major public zoological garden at that site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "adelaide-zoo",
+      "status": "pass",
+      "explanation": "Adelaide Zoo opened in 1883 and remains a regularly open public zoo displaying living animals at its Adelaide site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "alipore-zoo",
+      "status": "pass",
+      "explanation": "Alipore Zoological Gardens opened to the public in 1876 and remains an operating public zoo in Kolkata.",
+      "sourceIds": ["source-01"]
+    }
+  ],
+  "clueVerdicts": [
+    {
+      "roundId": "round-1",
+      "declaredTargetPoiId": "menagerie-jardin-plantes",
+      "resolvedPoiId": "menagerie-jardin-plantes",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The clue's 1794 French Revolution founding, transfer of animals from Versailles, and incorporation into the national natural-history institution all identify the Ménagerie du Jardin des Plantes.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-2",
+      "declaredTargetPoiId": "artis-amsterdam",
+      "resolvedPoiId": "artis-amsterdam",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The 1838 founding by three zoology enthusiasts and the combination of zoo, aquarium, planetarium, arboretum, botanical collections, and 27 historic buildings uniquely identify ARTIS.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-3",
+      "declaredTargetPoiId": "helsinki-zoo",
+      "resolvedPoiId": "helsinki-zoo",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The 1889 island opening, bridge access, nonprofit operation, named European studbooks, and wildlife hospital match Korkeasaari Zoo.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-4",
+      "declaredTargetPoiId": "dublin-zoo",
+      "resolvedPoiId": "dublin-zoo",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The clue matches Dublin Zoo's 1831 opening, Decimus Burton connection, Phoenix Park location, 46 mammals and 72 birds from London Zoo, and initial one-penny Sunday admission.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-5",
+      "declaredTargetPoiId": "antwerp-zoo",
+      "resolvedPoiId": "antwerp-zoo",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The 1843 royal-society founding, location beside Antwerpen-Centraal, 1856 Egyptian temple, and first-zoo okapi claim identify ZOO Antwerpen.",
+      "resolvableWithoutExactNumbers": true
+    }
+  ],
+  "repairs": []
+}

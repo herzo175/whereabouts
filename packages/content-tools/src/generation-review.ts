@@ -1,4 +1,5 @@
 import {
+  DAILY_BOARD_SIZE,
   dailyCaseSchema,
   type ThemedDailyCase,
 } from '@whereabouts/case-content';
@@ -18,7 +19,7 @@ export const generationReviewSchema = z.object({
         sourceIds: z.array(z.string()).min(1),
       }),
     )
-    .length(25),
+    .length(DAILY_BOARD_SIZE),
   clueVerdicts: z
     .array(
       z.object({
@@ -26,6 +27,7 @@ export const generationReviewSchema = z.object({
         declaredTargetPoiId: z.string(),
         resolvedPoiId: z.string().nullable(),
         resolvedOffBoardAnswer: z.string().nullable(),
+        resolvableWithoutExactNumbers: z.boolean(),
         status: z.enum(['pass', 'fail']),
         explanation: z.string().min(20),
       }),
@@ -123,6 +125,11 @@ export function validateGenerationReview(
         path: `clueVerdicts[${index}]`,
         message: 'Clue verdict contains an off-board answer',
       });
+    if (!verdict.resolvableWithoutExactNumbers)
+      issues.push({
+        path: `clueVerdicts[${index}]`,
+        message: 'Clue verdict depends on exact numeric recall',
+      });
     if (
       verdict.resolvedPoiId === null ||
       verdict.resolvedPoiId !== verdict.declaredTargetPoiId ||
@@ -134,6 +141,7 @@ export function validateGenerationReview(
       });
     if (
       verdict.status === 'pass' &&
+      verdict.resolvableWithoutExactNumbers &&
       verdict.resolvedPoiId === round.targetPoiId &&
       verdict.resolvedOffBoardAnswer === null
     )

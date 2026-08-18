@@ -40,6 +40,7 @@ function prepared(
         declaredTargetPoiId: round.targetPoiId,
         resolvedPoiId: round.targetPoiId,
         resolvedOffBoardAnswer: null,
+        resolvableWithoutExactNumbers: true,
         status: 'pass',
         explanation: 'The clue resolves directly to the declared target.',
       })),

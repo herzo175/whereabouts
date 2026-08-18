@@ -5,7 +5,7 @@ import {
 } from './validate-case.js';
 
 function makeCase(overrides: Record<string, unknown> = {}) {
-  const pois = Array.from({ length: 25 }, (_, index) => ({
+  const pois = Array.from({ length: 20 }, (_, index) => ({
     id: `poi-${String(index).padStart(2, '0')}`,
     name:
       index === 0 ? 'Target Place' : `Place ${String(index).padStart(2, '0')}`,

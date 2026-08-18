@@ -1,5 +1,7 @@
 export type RoundTier = 'correct' | 'cold' | 'warm' | 'hot';
 
+export const DAILY_BOARD_SIZE = 20;
+
 export type Poi = {
   id: string;
   name: string;
@@ -271,7 +273,8 @@ function parseFiveRoundDailyCase(
   const pois = array(parsed.pois, 'pois').map((poi, index) =>
     poiParser(poi, `pois[${index}]`),
   );
-  if (pois.length !== 25) fail('pois', 'must contain exactly 25 POIs');
+  if (pois.length !== DAILY_BOARD_SIZE)
+    fail('pois', `must contain exactly ${DAILY_BOARD_SIZE} POIs`);
   const poiIds = pois.map((poi) => poi.id);
   unique(poiIds, 'pois', 'POI ids');
   const knownPoiIds = new Set(poiIds);
@@ -315,8 +318,11 @@ function parseFiveRoundDailyCase(
         };
       },
     );
-    if (results.length !== 25)
-      fail(`${path}.results`, 'must contain exactly 25 candidate results');
+    if (results.length !== DAILY_BOARD_SIZE)
+      fail(
+        `${path}.results`,
+        `must contain exactly ${DAILY_BOARD_SIZE} candidate results`,
+      );
     const resultPoiIds = results.map((result) => result.poiId);
     unique(resultPoiIds, `${path}.results`, 'Result POI ids');
     if (

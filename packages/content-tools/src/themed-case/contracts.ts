@@ -1,3 +1,4 @@
+import { DAILY_BOARD_SIZE } from '@whereabouts/case-content';
 import { z } from 'zod';
 
 const nonempty = z.string().min(1);
@@ -82,7 +83,7 @@ export type CandidatePool = z.infer<typeof candidatePoolSchema>;
 export const curatedBoardSchema = z
   .object({
     theme: themePlanSchema,
-    candidates: z.array(researchedCandidateSchema).length(25),
+    candidates: z.array(researchedCandidateSchema).length(DAILY_BOARD_SIZE),
     targetPoiIds: z.array(z.string()).length(5),
   })
   .superRefine((v, ctx) => {
@@ -118,7 +119,7 @@ export const caseDraftSchema = z
             text: z.string().min(20),
             evidencePoiIds: z.array(z.string().min(1)).min(1),
           }),
-          results: z.array(scoredResultSchema).length(25),
+          results: z.array(scoredResultSchema).length(DAILY_BOARD_SIZE),
         }),
       )
       .length(5),

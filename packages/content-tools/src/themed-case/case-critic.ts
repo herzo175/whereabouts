@@ -1,4 +1,5 @@
 import {
+  DAILY_BOARD_SIZE,
   dailyCaseSchema,
   type ThemedDailyCase,
 } from '@whereabouts/case-content';
@@ -21,7 +22,8 @@ const criticOutputSchema = z.object({
   clueVerdicts: z.array(generationReviewSchema.shape.clueVerdicts.element),
 });
 const criticProviderSchema = z.object({
-  themeVerdicts: criticOutputSchema.shape.themeVerdicts.length(25),
+  themeVerdicts:
+    criticOutputSchema.shape.themeVerdicts.length(DAILY_BOARD_SIZE),
   clueVerdicts: criticOutputSchema.shape.clueVerdicts.length(5),
 });
 type CritiqueInput = {
@@ -94,8 +96,8 @@ function assembleCase(input: CritiqueInput): ThemedDailyCase {
 function prompt(input: CritiqueInput): string {
   return `You are the final adversarial critic for a themed geography case.
 Theme (including exact criteria and exclusions): ${JSON.stringify(input.theme)}
-Assess every candidate independently against every inclusion criterion and exclusion; tangential association is a failure. Resolve each clue independently from its text and evidence BEFORE comparing the answer to targetPoiId. A related place that is not the target fails. Never infer pass from missing, duplicate, malformed, or unsupported verdicts.
-Return exactly 25 themeVerdicts (one per board identity) and exactly five clueVerdicts (one per round). Off-board answers use resolvedPoiId=null and resolvedOffBoardAnswer, and fail. Pairwise similarity prose remains available for human audit but is not part of this publication gate.
+Assess every candidate independently against every inclusion criterion and exclusion; tangential association is a failure. Resolve each clue independently from its text and evidence BEFORE comparing the answer to targetPoiId. A related place that is not the target fails. For each clue, set resolvableWithoutExactNumbers=true only when the same target remains uniquely resolvable after exact years, counts, and measurements are removed or generalized; the clue must include a recognizable non-numeric discriminator. Never infer pass from missing, duplicate, malformed, or unsupported verdicts.
+Return exactly ${DAILY_BOARD_SIZE} themeVerdicts (one per board identity) and exactly five clueVerdicts (one per round). Off-board answers use resolvedPoiId=null and resolvedOffBoardAnswer, and fail. Pairwise similarity prose remains available for human audit but is not part of this publication gate.
 Board identities and evidence: ${JSON.stringify(input.board.candidates)}
 Targets: ${JSON.stringify(input.board.targetPoiIds)}
 Round identities: ${input.draft.rounds.map((round, index) => `round-${index + 1} -> ${round.targetPoiId}; clue: ${round.clue.text}`).join('\n')}
@@ -137,13 +139,12 @@ export async function critiqueCase(
   const repairs: RepairRequest[] = [];
   if (
     !output ||
-    output.themeVerdicts.length !== 25 ||
+    output.themeVerdicts.length !== DAILY_BOARD_SIZE ||
     output.clueVerdicts.length !== 5
   )
     repairs.push({
       kind: 'theme',
-      reason:
-        'The critic did not provide exactly 25 unique theme and five unique clue verdicts.',
+      reason: `The critic did not provide exactly ${DAILY_BOARD_SIZE} unique theme and five unique clue verdicts.`,
     });
   const themeByPoi = new Map<string, unknown>();
   const duplicateThemes = new Set<string>();
@@ -188,7 +189,7 @@ export async function critiqueCase(
       });
     return { ...parsed.data, sourceIds: ['source-01'] };
   });
-  if (themeByPoi.size !== 25)
+  if (themeByPoi.size !== DAILY_BOARD_SIZE)
     repairs.push({
       kind: 'theme',
       reason:
@@ -217,6 +218,7 @@ export async function critiqueCase(
           declaredTargetPoiId: round.targetPoiId,
           resolvedPoiId: null,
           resolvedOffBoardAnswer: null,
+          resolvableWithoutExactNumbers: false,
           status: 'fail' as const,
           explanation: fallback(round.id),
         };
@@ -224,6 +226,7 @@ export async function critiqueCase(
       duplicateClues.has(round.id) ||
       !parsed.success ||
       verdict.status === 'fail' ||
+      !verdict.resolvableWithoutExactNumbers ||
       verdict.resolvedOffBoardAnswer !== null ||
       verdict.resolvedPoiId !== round.targetPoiId ||
       verdict.declaredTargetPoiId !== round.targetPoiId

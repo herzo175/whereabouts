@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "publicationDate": "2026-08-25",
+  "revision": 2,
+  "themeVerdicts": [
+    {
+      "poiId": "uk-london-paddington",
+      "status": "pass",
+      "explanation": "Named railway station in London; passenger service began in 1838 and it remains an active National Rail station.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "uk-london-euston",
+      "status": "pass",
+      "explanation": "Named railway station in London; opened in 1837 and continues to handle scheduled National Rail passenger services at the established Euston site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "uk-london-kings-cross",
+      "status": "pass",
+      "explanation": "Named railway station in London; opened in 1852 and remains an active National Rail passenger station.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "uk-london-bridge",
+      "status": "pass",
+      "explanation": "Named railway station in London; first opened in 1836 and continues to provide scheduled National Rail passenger service.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "uk-london-victoria",
+      "status": "pass",
+      "explanation": "Named railway station in London; opened in 1860 and remains an active National Rail station with scheduled passenger trains.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "uk-london-waterloo",
+      "status": "pass",
+      "explanation": "Named railway station in London; opened in 1848 and remains an active commuter and regional passenger railway station.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "uk-london-fenchurch",
+      "status": "pass",
+      "explanation": "Named London terminal with four platforms on elevated islands; opened in 1841 and continues to operate scheduled c2c passenger services.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "uk-edinburgh-waverley",
+      "status": "pass",
+      "explanation": "Named railway station in Edinburgh; opened in 1866 and remains an active intercity and regional passenger station.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "uk-york",
+      "status": "pass",
+      "explanation": "Named railway station in York; the present station opened in 1877 and remains an active intercity and regional junction.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "uk-newcastle-central",
+      "status": "pass",
+      "explanation": "Named railway station in Newcastle upon Tyne; opened in 1850 and remains an active station with scheduled National Rail passenger trains.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "nl-amsterdam-centraal",
+      "status": "pass",
+      "explanation": "Named railway station in Amsterdam; opened in 1889 and remains an active domestic and international passenger station.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "be-antwerp-centraal",
+      "status": "pass",
+      "explanation": "Named railway station in Antwerp; opened in 1836 and remains an active domestic and international passenger station at the established site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "nl-utrecht-centraal",
+      "status": "pass",
+      "explanation": "Named railway station in Utrecht; the first station at the site opened in 1843, and the present hub has extensive scheduled national and international passenger service.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "de-frankfurt-hbf",
+      "status": "pass",
+      "explanation": "Named railway station in Frankfurt am Main; inaugurated in 1888 and remains an active intercity, regional, and commuter station.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "ch-zurich-hb",
+      "status": "pass",
+      "explanation": "Named railway station in Zürich; opened in 1847 and remains an active station with regular domestic, international, and regional passenger trains.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "fr-paris-nord",
+      "status": "pass",
+      "explanation": "Named railway station in Paris; opened in 1846 and remains an active regional, intercity, and international passenger station.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "fr-paris-est",
+      "status": "pass",
+      "explanation": "Named railway station in Paris; opened in 1850 and continues to serve scheduled regional and intercity passenger trains.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "fr-paris-saint-lazare",
+      "status": "pass",
+      "explanation": "Named railway station in Paris; opened in 1837 and remains an active commuter and regional passenger station.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "fr-paris-austerlitz",
+      "status": "pass",
+      "explanation": "Named railway station in Paris; passenger service began in 1840 and the station remains active with scheduled intercity and regional trains at the established site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "it-rome-termini",
+      "status": "pass",
+      "explanation": "Named railway station in Rome; began operation in 1863 and remains an active national, regional, and commuter passenger station.",
+      "sourceIds": ["source-01"]
+    }
+  ],
+  "clueVerdicts": [
+    {
+      "roundId": "round-1",
+      "declaredTargetPoiId": "uk-london-fenchurch",
+      "resolvedPoiId": "uk-london-fenchurch",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The clue independently identifies London Fenchurch Street through its 1841 opening, four platforms on two elevated islands, c2c operation, and lack of direct Underground interchange.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-2",
+      "declaredTargetPoiId": "uk-york",
+      "resolvedPoiId": "uk-york",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The clue matches York station's present opening on 25 June 1877, original 13-platform scale, curved train shed, and position on the London–Edinburgh main route.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-3",
+      "declaredTargetPoiId": "nl-utrecht-centraal",
+      "resolvedPoiId": "nl-utrecht-centraal",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The clue matches Utrecht Centraal's 1843 station origin, 16 platform tracks, more than 1,000 daily departures, and 12,500-space bicycle facility.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-4",
+      "declaredTargetPoiId": "de-frankfurt-hbf",
+      "resolvedPoiId": "de-frankfurt-hbf",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The clue matches Frankfurt Hauptbahnhof's 18 August 1888 inauguration, five train halls, 24 above-ground mainline tracks, and former status as Europe's largest station.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-5",
+      "declaredTargetPoiId": "fr-paris-austerlitz",
+      "resolvedPoiId": "fr-paris-austerlitz",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The clue matches Paris Austerlitz's 20 September 1840 opening, Callet-designed first platform, 1862–1869 rebuilding, 280-metre train shed, Metro intrusion, and 1997 monument protection.",
+      "resolvableWithoutExactNumbers": true
+    }
+  ],
+  "repairs": []
+}

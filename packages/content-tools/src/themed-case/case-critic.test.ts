@@ -59,6 +59,7 @@ function passingOutput() {
       declaredTargetPoiId: round.targetPoiId,
       resolvedPoiId: round.targetPoiId,
       resolvedOffBoardAnswer: null,
+      resolvableWithoutExactNumbers: true,
       status: 'pass',
       explanation: 'Resolving the clue independently identifies the target.',
     })),
@@ -102,15 +103,15 @@ describe('critiqueCase', () => {
     expect(properties.themeVerdicts?.items?.type).toBe('object');
     expect(properties.clueVerdicts?.items?.type).toBe('object');
     expect(properties.themeVerdicts).toMatchObject({
-      minItems: 25,
-      maxItems: 25,
+      minItems: 20,
+      maxItems: 20,
     });
     expect(properties.clueVerdicts).toMatchObject({ minItems: 5, maxItems: 5 });
     expect(properties.relationshipVerdicts).toBeUndefined();
     expect(criticPrompt).toContain(`round-1 -> ${board.targetPoiIds[0]}`);
   });
 
-  it('publishes only when all 25 themes and five clues pass', async () => {
+  it('publishes only when all 20 themes and five clues pass', async () => {
     const result = await critiqueCase({
       criticModel: modelWith(passingOutput()),
       theme: board.theme,
@@ -120,7 +121,7 @@ describe('critiqueCase', () => {
       revision: caseData.revision,
     });
     expect(result.repairs).toEqual([]);
-    expect(result.review.themeVerdicts).toHaveLength(25);
+    expect(result.review.themeVerdicts).toHaveLength(20);
     expect(result.review.clueVerdicts).toHaveLength(5);
   });
 
@@ -196,6 +197,27 @@ describe('critiqueCase', () => {
     expect(
       result.repairs.filter((repair) => repair.kind === 'clue'),
     ).toHaveLength(3);
+  });
+
+  it('repairs only a clue that depends on exact numeric recall', async () => {
+    const output = passingOutput();
+    output.clueVerdicts[0] = {
+      ...output.clueVerdicts[0],
+      resolvableWithoutExactNumbers: false,
+      explanation:
+        'The exact opening year is the only fact separating two candidates.',
+    };
+    const result = await critiqueCase({
+      criticModel: modelWith(output),
+      theme: board.theme,
+      board,
+      draft,
+      publicationDate: caseData.publicationDate,
+      revision: caseData.revision,
+    });
+    expect(result.repairs).toEqual([
+      expect.objectContaining({ kind: 'clue', roundId: 'round-1' }),
+    ]);
   });
 
   it('fails closed when required arrays are missing', async () => {

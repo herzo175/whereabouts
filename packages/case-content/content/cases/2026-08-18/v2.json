@@ -1,0 +1,1182 @@
+{
+  "schemaVersion": 4,
+  "publicationDate": "2026-08-18",
+  "revision": 2,
+  "caseNumber": 20683,
+  "pois": [
+    {
+      "id": "oxford-botanic-garden",
+      "name": "University of Oxford Botanic Garden",
+      "city": "Oxford",
+      "country": "United Kingdom",
+      "latitude": 51.7516,
+      "longitude": -1.2487,
+      "wikipediaTitle": "University of Oxford Botanic Garden",
+      "blurb": "The University of Oxford Botanic Garden is the oldest botanic garden in Great Britain and one of the oldest scientific gardens in the world.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Oxford_Botanic_Garden_LV_2025.jpg/1280px-Oxford_Botanic_Garden_LV_2025.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "University of Oxford Botanic Garden",
+        "attribution": "Honcques Laus · CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      },
+      "themeConnection": {
+        "text": "Oxford Botanic Garden was founded in 1621 as a physic garden and continues as a distinct, maintained, publicly visitable botanical garden.",
+        "sourceIds": ["source-03"]
+      }
+    },
+    {
+      "id": "peter-the-great-botanical-garden",
+      "name": "Botanical Garden of the Komarov Botanical Institute",
+      "city": "Saint Petersburg",
+      "country": "Russia",
+      "latitude": 59.9717,
+      "longitude": 30.3234,
+      "wikipediaTitle": "Saint Petersburg Botanical Garden",
+      "blurb": "The main Saint Petersburg Botanical Garden, officially known as the Russian Academy of Sciences Vladimir Komarov Botanical Institute's Botanical Garden of Peter the Great (Russian: Ботанический сад Петра Великого Ботанического института им.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Spb_Aptekarsky_Island_Botanical_Garden_asv2019-09_img1.jpg/1280px-Spb_Aptekarsky_Island_Botanical_Garden_asv2019-09_img1.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Saint Petersburg Botanical Garden",
+        "attribution": "A.Savin · FAL",
+        "licenseUrl": "http://artlibre.org/licence/lal/en"
+      },
+      "themeConnection": {
+        "text": "The botanical garden on Saint Petersburg's Aptekarsky Island descends from the Apothecary Garden founded in 1714 and remains a visitable maintained garden.",
+        "sourceIds": ["source-22"]
+      }
+    },
+    {
+      "id": "copenhagen-botanical-garden",
+      "name": "University of Copenhagen Botanical Garden",
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "latitude": 55.6879,
+      "longitude": 12.5729,
+      "wikipediaTitle": "University of Copenhagen Botanical Garden",
+      "blurb": "The University of Copenhagen Botanical Garden is a botanical garden in central Copenhagen. The present garden was laid out in 1874 and includes historic glasshouses open to visitors.",
+      "themeConnection": {
+        "text": "Copenhagen's botanical garden traces its institution to 1600 and has occupied its current garden site since 1874, remaining publicly accessible.",
+        "sourceIds": ["source-18"]
+      }
+    },
+    {
+      "id": "orto-botanico-florence",
+      "name": "Orto Botanico di Firenze",
+      "city": "Florence",
+      "country": "Italy",
+      "latitude": 43.7795,
+      "longitude": 11.2596,
+      "wikipediaTitle": "Orto botanico di Firenze",
+      "blurb": "The Orto botanico di Firenze, known as the Giardino dei Semplici, was founded in 1545 by Cosimo I de' Medici. It is a university botanical garden open to visitors.",
+      "themeConnection": {
+        "text": "Florence's Orto Botanico, also called the Giardino dei Semplici, was founded in 1545 and remains a visitable maintained garden.",
+        "sourceIds": ["source-14"]
+      }
+    },
+    {
+      "id": "real-jardin-botanico-madrid",
+      "name": "Real Jardín Botánico de Madrid",
+      "city": "Madrid",
+      "country": "Spain",
+      "latitude": 40.4117,
+      "longitude": -3.6892,
+      "wikipediaTitle": "Royal Botanical Garden of Madrid",
+      "blurb": "The Royal Botanical Garden of Madrid was founded in 1755 and moved to its present location beside the Prado Museum in 1781. It is maintained and open to visitors.",
+      "themeConnection": {
+        "text": "Madrid's Royal Botanical Garden was founded in 1755 and moved to its current Paseo del Prado site in 1781, where it remains public.",
+        "sourceIds": ["source-15"]
+      }
+    },
+    {
+      "id": "orto-botanico-palermo",
+      "name": "Orto Botanico di Palermo",
+      "city": "Palermo",
+      "country": "Italy",
+      "latitude": 38.1056,
+      "longitude": 13.371,
+      "wikipediaTitle": "Orto botanico di Palermo",
+      "blurb": "The Orto botanico di Palermo is a botanical garden in Palermo, Sicily, founded in 1789. It is administered by the University of Palermo and is open to the public.",
+      "themeConnection": {
+        "text": "Palermo's Orto Botanico was established in 1789 and remains a large, named, maintained botanical garden open to ordinary visitors.",
+        "sourceIds": ["source-11"]
+      }
+    },
+    {
+      "id": "jardim-botanico-coimbra",
+      "name": "Jardim Botânico da Universidade de Coimbra",
+      "city": "Coimbra",
+      "country": "Portugal",
+      "latitude": 40.2064,
+      "longitude": -8.4255,
+      "wikipediaTitle": "Botanical Garden of the University of Coimbra",
+      "blurb": "The Botanical Garden of the University of Coimbra was founded in 1772 by the Marquis of Pombal. It occupies terraces near the university and is open to visitors.",
+      "themeConnection": {
+        "text": "The Botanical Garden of the University of Coimbra was founded in 1772 and remains a maintained, publicly visitable garden within Coimbra.",
+        "sourceIds": ["source-17"]
+      }
+    },
+    {
+      "id": "botanical-garden-wroclaw",
+      "name": "Botanical Garden of the University of Wrocław",
+      "city": "Wrocław",
+      "country": "Poland",
+      "latitude": 51.1167,
+      "longitude": 17.0464,
+      "wikipediaTitle": "Botanical Garden of the University of Wrocław",
+      "blurb": "The Botanical Garden of the University of Wrocław was established in 1811. It occupies a historic site on the university island and is open seasonally to visitors.",
+      "themeConnection": {
+        "text": "Wrocław's university botanical garden was founded in 1811 and continues as a distinct maintained garden with a public entrance.",
+        "sourceIds": ["source-08"]
+      }
+    },
+    {
+      "id": "jardin-des-plantes-paris",
+      "name": "Jardin des Plantes",
+      "city": "Paris",
+      "country": "France",
+      "latitude": 48.843,
+      "longitude": 2.3599,
+      "wikipediaTitle": "Jardin des Plantes",
+      "blurb": "The Jardin des Plantes (French pronunciation: [ʒaʁdɛ̃ de plɑ̃t] , lit. 'Garden of the Plants'), known as the Jardin des Plantes de Paris (French: [- də paʁi]) when distinguished from those in other cities, is the main botanical garden in France.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Paris_75005_Grande_Galerie_de_l%27Evolution_20070804.jpg/1280px-Paris_75005_Grande_Galerie_de_l%27Evolution_20070804.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Jardin des Plantes",
+        "attribution": "Benh LIEU SONG · CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      },
+      "themeConnection": {
+        "text": "Paris's Jardin des Plantes originated as the Royal Garden of Medicinal Plants in 1626 and remains an officially named public botanical garden.",
+        "sourceIds": ["source-07"]
+      }
+    },
+    {
+      "id": "orto-botanico-pisa",
+      "name": "Orto botanico di Pisa",
+      "city": "Pisa",
+      "country": "Italy",
+      "latitude": 43.7216,
+      "longitude": 10.3955,
+      "wikipediaTitle": "Orto botanico di Pisa",
+      "blurb": "The Orto botanico di Pisa is a botanical garden founded in 1544 by the University of Pisa. The garden has occupied its present location since 1591 and is open to visitors.",
+      "themeConnection": {
+        "text": "Pisa's botanical garden was founded in 1544 and moved within Pisa before settling at its present site in the sixteenth century, where it remains public.",
+        "sourceIds": ["source-10"]
+      }
+    },
+    {
+      "id": "jardin-des-plantes-montpellier",
+      "name": "Jardin des plantes de Montpellier",
+      "city": "Montpellier",
+      "country": "France",
+      "latitude": 43.6168,
+      "longitude": 3.8648,
+      "wikipediaTitle": "Jardin des plantes de Montpellier",
+      "blurb": "The Jardin des plantes de Montpellier is a historic botanical garden founded in 1593 by King Henry IV. It remains beside the University of Montpellier and is open to visitors.",
+      "themeConnection": {
+        "text": "Montpellier's Jardin des plantes was established in 1593 as a botanical and teaching garden and remains a visitable maintained garden in the city.",
+        "sourceIds": ["source-06"]
+      }
+    },
+    {
+      "id": "national-botanic-gardens-glasnevin",
+      "name": "National Botanic Gardens of Ireland, Glasnevin",
+      "city": "Dublin",
+      "country": "Ireland",
+      "latitude": 53.3725,
+      "longitude": -6.2699,
+      "wikipediaTitle": "National Botanic Gardens of Ireland",
+      "blurb": "The National Botanic Gardens of Ireland are located in Glasnevin, Dublin, and were founded in 1795. The gardens are open to the public without charge.",
+      "themeConnection": {
+        "text": "The National Botanic Gardens of Ireland at Glasnevin were founded in 1795 and remain a maintained, free public botanical garden within Dublin.",
+        "sourceIds": ["source-05"]
+      }
+    },
+    {
+      "id": "ortobotanico-padua",
+      "name": "Orto Botanico di Padova",
+      "city": "Padua",
+      "country": "Italy",
+      "latitude": 45.3991,
+      "longitude": 11.8817,
+      "wikipediaTitle": "Orto botanico di Padova",
+      "blurb": "The Orto Botanico di Padova is a botanical garden in Padua, in the northeastern part of Italy. Founded in June 1545 by the Venetian Republic, it is the world's oldest academic botanical garden that is still in its original location.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Orto_botanico_padova.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Orto botanico di Padova",
+        "attribution": "Wikimedia Commons contributor · CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5"
+      },
+      "themeConnection": {
+        "text": "Padua's Orto Botanico was founded in 1545 and survives as a named, maintained public botanical garden at its historic site.",
+        "sourceIds": ["source-09"]
+      }
+    },
+    {
+      "id": "kew-royal-botanic-gardens",
+      "name": "Royal Botanic Gardens, Kew",
+      "city": "London",
+      "country": "United Kingdom",
+      "latitude": 51.4788,
+      "longitude": -0.2956,
+      "wikipediaTitle": "Royal Botanic Gardens, Kew",
+      "blurb": "The Royal Botanic Gardens, Kew, usually referred to as Kew Gardens, is a botanical garden in southwest London. It was founded in 1840 and remains a maintained public garden.",
+      "themeConnection": {
+        "text": "The Royal Botanic Gardens at Kew developed as a botanical garden on its present site in the eighteenth and nineteenth centuries and is maintained as a major public garden.",
+        "sourceIds": ["source-01"]
+      }
+    },
+    {
+      "id": "cambridge-university-botanic-garden",
+      "name": "Cambridge University Botanic Garden",
+      "city": "Cambridge",
+      "country": "United Kingdom",
+      "latitude": 52.1938,
+      "longitude": 0.1265,
+      "wikipediaTitle": "Cambridge University Botanic Garden",
+      "blurb": "Cambridge University Botanic Garden is a botanical garden of the University of Cambridge. The present garden opened in 1846 and is regularly open to visitors.",
+      "themeConnection": {
+        "text": "Cambridge University Botanic Garden was established in 1831 and opened at its current site in 1846, where it remains a maintained public botanic garden.",
+        "sourceIds": ["source-04"]
+      }
+    },
+    {
+      "id": "jardim-botanico-ajuda",
+      "name": "Jardim Botânico da Ajuda",
+      "city": "Lisbon",
+      "country": "Portugal",
+      "latitude": 38.7064,
+      "longitude": -9.1993,
+      "wikipediaTitle": "Ajuda Botanical Garden",
+      "blurb": "The Ajuda Botanical Garden is a botanical garden in Lisbon, Portugal, created in 1768. It is one of the oldest botanical gardens in Portugal and is open to the public.",
+      "themeConnection": {
+        "text": "Ajuda Botanical Garden was established in 1768 and remains a distinct maintained botanical garden with public access in Lisbon.",
+        "sourceIds": ["source-16"]
+      }
+    },
+    {
+      "id": "acharya-jagadish-chandra-bose-indian-botanic-garden",
+      "name": "Acharya Jagadish Chandra Bose Indian Botanic Garden",
+      "city": "Howrah",
+      "country": "India",
+      "latitude": 22.5575,
+      "longitude": 88.308,
+      "wikipediaTitle": "Acharya Jagadish Chandra Bose Indian Botanic Garden",
+      "blurb": "The Acharya Jagadish Chandra Bose Indian Botanic Garden, previously known as the Indian Botanic Garden, Calcutta Botanic Garden, and Royal Botanic Garden, Calcutta, is a botanical garden situated in Shibpur, Howrah near Kolkata.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Kolkata_botanical_garden_pathway.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Acharya Jagadish Chandra Bose Indian Botanic Garden",
+        "attribution": "Jeroje at English Wikipedia. · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "themeConnection": {
+        "text": "The Indian Botanic Garden at Shibpur was established in 1787 and remains a maintained, ticketed botanical garden within the Howrah urban municipality.",
+        "sourceIds": ["source-24"]
+      }
+    },
+    {
+      "id": "chelsea-physic-garden",
+      "name": "Chelsea Physic Garden",
+      "city": "London",
+      "country": "United Kingdom",
+      "latitude": 51.4846,
+      "longitude": -0.1628,
+      "wikipediaTitle": "Chelsea Physic Garden",
+      "blurb": "Chelsea Physic Garden was established as the Apothecaries' Garden in 1673. It is one of Britain's oldest botanic gardens and is open to visitors in London.",
+      "themeConnection": {
+        "text": "Chelsea Physic Garden was founded in 1673 by the Society of Apothecaries at its surviving riverside site and remains open to ordinary visitors.",
+        "sourceIds": ["source-02"]
+      }
+    },
+    {
+      "id": "lalbagh-botanical-garden",
+      "name": "Lalbagh Botanical Garden",
+      "city": "Bengaluru",
+      "country": "India",
+      "latitude": 12.9507,
+      "longitude": 77.5848,
+      "wikipediaTitle": "Lalbagh Botanical Garden",
+      "blurb": "Lalbagh Botanical Garden is a botanical garden in Bengaluru, India, established in 1760 by Hyder Ali. The garden is maintained by the state horticulture department and open to visitors.",
+      "themeConnection": {
+        "text": "Lalbagh Botanical Garden was begun in 1760 and remains a large, officially named and maintained public botanical garden in Bengaluru.",
+        "sourceIds": ["source-25"]
+      }
+    },
+    {
+      "id": "fomin-botanical-garden",
+      "name": "O.V. Fomin Botanical Garden",
+      "city": "Kyiv",
+      "country": "Ukraine",
+      "latitude": 50.4431,
+      "longitude": 30.5064,
+      "wikipediaTitle": "O.V. Fomin Botanical Garden",
+      "blurb": "The O.V. Fomin Botanical Garden is a botanical garden of Taras Shevchenko National University in Kyiv, founded in 1839. It contains historic collections and is open to visitors.",
+      "themeConnection": {
+        "text": "Kyiv's O.V. Fomin Botanical Garden was established in 1839 and remains a distinct maintained botanical garden with regular visitor access.",
+        "sourceIds": ["source-23"]
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "round-1",
+      "targetPoiId": "oxford-botanic-garden",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Oxford_Botanic_Garden_LV_2025.jpg/1280px-Oxford_Botanic_Garden_LV_2025.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "University of Oxford Botanic Garden",
+        "attribution": "Honcques Laus · CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      },
+      "clue": {
+        "text": "Founded in 1621 as a physic garden for medicinal research, this compact collection now holds over 5,000 plant species; its Danby Gate was designed by Nicholas Stone in 1632–33.",
+        "sourceIds": ["source-03"]
+      },
+      "results": [
+        {
+          "poiId": "kew-royal-botanic-gardens",
+          "text": "Royal Botanic Gardens, Kew is a themed comparison candidate: The Royal Botanic Gardens at Kew developed as a botanical garden on its present site in the eighteenth and nineteenth centuries and is maintained as a major public garden.",
+          "sourceIds": ["source-01", "source-03"],
+          "points": 72
+        },
+        {
+          "poiId": "chelsea-physic-garden",
+          "text": "Chelsea Physic Garden is a themed comparison candidate: Chelsea Physic Garden was founded in 1673 by the Society of Apothecaries at its surviving riverside site and remains open to ordinary visitors.",
+          "sourceIds": ["source-02", "source-03"],
+          "points": 96
+        },
+        {
+          "poiId": "oxford-botanic-garden",
+          "text": "University of Oxford Botanic Garden is the round target: Oxford Botanic Garden was founded in 1621 as a physic garden and continues as a distinct, maintained, publicly visitable botanical garden.",
+          "sourceIds": ["source-03"],
+          "points": 100
+        },
+        {
+          "poiId": "cambridge-university-botanic-garden",
+          "text": "Cambridge University Botanic Garden is a themed comparison candidate: Cambridge University Botanic Garden was established in 1831 and opened at its current site in 1846, where it remains a maintained public botanic garden.",
+          "sourceIds": ["source-04", "source-03"],
+          "points": 38
+        },
+        {
+          "poiId": "national-botanic-gardens-glasnevin",
+          "text": "National Botanic Gardens of Ireland, Glasnevin is a themed comparison candidate: The National Botanic Gardens of Ireland at Glasnevin were founded in 1795 and remain a maintained, free public botanical garden within Dublin.",
+          "sourceIds": ["source-05", "source-03"],
+          "points": 68
+        },
+        {
+          "poiId": "jardin-des-plantes-montpellier",
+          "text": "Jardin des plantes de Montpellier is a themed comparison candidate: Montpellier's Jardin des plantes was established in 1593 as a botanical and teaching garden and remains a visitable maintained garden in the city.",
+          "sourceIds": ["source-06", "source-03"],
+          "points": 91
+        },
+        {
+          "poiId": "jardin-des-plantes-paris",
+          "text": "Jardin des Plantes is a themed comparison candidate: Paris's Jardin des Plantes originated as the Royal Garden of Medicinal Plants in 1626 and remains an officially named public botanical garden.",
+          "sourceIds": ["source-07", "source-03"],
+          "points": 86
+        },
+        {
+          "poiId": "botanical-garden-wroclaw",
+          "text": "Botanical Garden of the University of Wrocław is a themed comparison candidate: Wrocław's university botanical garden was founded in 1811 and continues as a distinct maintained garden with a public entrance.",
+          "sourceIds": ["source-08", "source-03"],
+          "points": 35
+        },
+        {
+          "poiId": "ortobotanico-padua",
+          "text": "Orto Botanico di Padova is a themed comparison candidate: Padua's Orto Botanico was founded in 1545 and survives as a named, maintained public botanical garden at its historic site.",
+          "sourceIds": ["source-09", "source-03"],
+          "points": 81
+        },
+        {
+          "poiId": "orto-botanico-pisa",
+          "text": "Orto botanico di Pisa is a themed comparison candidate: Pisa's botanical garden was founded in 1544 and moved within Pisa before settling at its present site in the sixteenth century, where it remains public.",
+          "sourceIds": ["source-10", "source-03"],
+          "points": 64
+        },
+        {
+          "poiId": "orto-botanico-palermo",
+          "text": "Orto Botanico di Palermo is a themed comparison candidate: Palermo's Orto Botanico was established in 1789 and remains a large, named, maintained botanical garden open to ordinary visitors.",
+          "sourceIds": ["source-11", "source-03"],
+          "points": 32
+        },
+        {
+          "poiId": "orto-botanico-florence",
+          "text": "Orto Botanico di Firenze is a themed comparison candidate: Florence's Orto Botanico, also called the Giardino dei Semplici, was founded in 1545 and remains a visitable maintained garden.",
+          "sourceIds": ["source-14", "source-03"],
+          "points": 60
+        },
+        {
+          "poiId": "real-jardin-botanico-madrid",
+          "text": "Real Jardín Botánico de Madrid is a themed comparison candidate: Madrid's Royal Botanical Garden was founded in 1755 and moved to its current Paseo del Prado site in 1781, where it remains public.",
+          "sourceIds": ["source-15", "source-03"],
+          "points": 56
+        },
+        {
+          "poiId": "jardim-botanico-ajuda",
+          "text": "Jardim Botânico da Ajuda is a themed comparison candidate: Ajuda Botanical Garden was established in 1768 and remains a distinct maintained botanical garden with public access in Lisbon.",
+          "sourceIds": ["source-16", "source-03"],
+          "points": 52
+        },
+        {
+          "poiId": "jardim-botanico-coimbra",
+          "text": "Jardim Botânico da Universidade de Coimbra is a themed comparison candidate: The Botanical Garden of the University of Coimbra was founded in 1772 and remains a maintained, publicly visitable garden within Coimbra.",
+          "sourceIds": ["source-17", "source-03"],
+          "points": 48
+        },
+        {
+          "poiId": "copenhagen-botanical-garden",
+          "text": "University of Copenhagen Botanical Garden is a themed comparison candidate: Copenhagen's botanical garden traces its institution to 1600 and has occupied its current garden site since 1874, remaining publicly accessible.",
+          "sourceIds": ["source-18", "source-03"],
+          "points": 44
+        },
+        {
+          "poiId": "peter-the-great-botanical-garden",
+          "text": "Botanical Garden of the Komarov Botanical Institute is a themed comparison candidate: The botanical garden on Saint Petersburg's Aptekarsky Island descends from the Apothecary Garden founded in 1714 and remains a visitable maintained garden.",
+          "sourceIds": ["source-22", "source-03"],
+          "points": 14
+        },
+        {
+          "poiId": "fomin-botanical-garden",
+          "text": "O.V. Fomin Botanical Garden is a themed comparison candidate: Kyiv's O.V. Fomin Botanical Garden was established in 1839 and remains a distinct maintained botanical garden with regular visitor access.",
+          "sourceIds": ["source-23", "source-03"],
+          "points": 11
+        },
+        {
+          "poiId": "acharya-jagadish-chandra-bose-indian-botanic-garden",
+          "text": "Acharya Jagadish Chandra Bose Indian Botanic Garden is a themed comparison candidate: The Indian Botanic Garden at Shibpur was established in 1787 and remains a maintained, ticketed botanical garden within the Howrah urban municipality.",
+          "sourceIds": ["source-24", "source-03"],
+          "points": 8
+        },
+        {
+          "poiId": "lalbagh-botanical-garden",
+          "text": "Lalbagh Botanical Garden is a themed comparison candidate: Lalbagh Botanical Garden was begun in 1760 and remains a large, officially named and maintained public botanical garden in Bengaluru.",
+          "sourceIds": ["source-25", "source-03"],
+          "points": 5
+        }
+      ]
+    },
+    {
+      "id": "round-2",
+      "targetPoiId": "ortobotanico-padua",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Orto_botanico_padova.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Orto botanico di Padova",
+        "attribution": "Wikimedia Commons contributor · CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5"
+      },
+      "clue": {
+        "text": "Established in 1545 by a republic for teaching medicinal plants, this garden retains a square-within-circle design and contains a palm planted in 1585 known as “Goethe’s palm.”",
+        "sourceIds": ["source-09"]
+      },
+      "results": [
+        {
+          "poiId": "kew-royal-botanic-gardens",
+          "text": "Royal Botanic Gardens, Kew is a themed comparison candidate: The Royal Botanic Gardens at Kew developed as a botanical garden on its present site in the eighteenth and nineteenth centuries and is maintained as a major public garden.",
+          "sourceIds": ["source-01", "source-09"],
+          "points": 72
+        },
+        {
+          "poiId": "chelsea-physic-garden",
+          "text": "Chelsea Physic Garden is a themed comparison candidate: Chelsea Physic Garden was founded in 1673 by the Society of Apothecaries at its surviving riverside site and remains open to ordinary visitors.",
+          "sourceIds": ["source-02", "source-09"],
+          "points": 68
+        },
+        {
+          "poiId": "oxford-botanic-garden",
+          "text": "University of Oxford Botanic Garden is a themed comparison candidate: Oxford Botanic Garden was founded in 1621 as a physic garden and continues as a distinct, maintained, publicly visitable botanical garden.",
+          "sourceIds": ["source-03", "source-09"],
+          "points": 96
+        },
+        {
+          "poiId": "cambridge-university-botanic-garden",
+          "text": "Cambridge University Botanic Garden is a themed comparison candidate: Cambridge University Botanic Garden was established in 1831 and opened at its current site in 1846, where it remains a maintained public botanic garden.",
+          "sourceIds": ["source-04", "source-09"],
+          "points": 38
+        },
+        {
+          "poiId": "national-botanic-gardens-glasnevin",
+          "text": "National Botanic Gardens of Ireland, Glasnevin is a themed comparison candidate: The National Botanic Gardens of Ireland at Glasnevin were founded in 1795 and remain a maintained, free public botanical garden within Dublin.",
+          "sourceIds": ["source-05", "source-09"],
+          "points": 64
+        },
+        {
+          "poiId": "jardin-des-plantes-montpellier",
+          "text": "Jardin des plantes de Montpellier is a themed comparison candidate: Montpellier's Jardin des plantes was established in 1593 as a botanical and teaching garden and remains a visitable maintained garden in the city.",
+          "sourceIds": ["source-06", "source-09"],
+          "points": 91
+        },
+        {
+          "poiId": "jardin-des-plantes-paris",
+          "text": "Jardin des Plantes is a themed comparison candidate: Paris's Jardin des Plantes originated as the Royal Garden of Medicinal Plants in 1626 and remains an officially named public botanical garden.",
+          "sourceIds": ["source-07", "source-09"],
+          "points": 60
+        },
+        {
+          "poiId": "botanical-garden-wroclaw",
+          "text": "Botanical Garden of the University of Wrocław is a themed comparison candidate: Wrocław's university botanical garden was founded in 1811 and continues as a distinct maintained garden with a public entrance.",
+          "sourceIds": ["source-08", "source-09"],
+          "points": 35
+        },
+        {
+          "poiId": "ortobotanico-padua",
+          "text": "Orto Botanico di Padova is the round target: Padua's Orto Botanico was founded in 1545 and survives as a named, maintained public botanical garden at its historic site.",
+          "sourceIds": ["source-09"],
+          "points": 100
+        },
+        {
+          "poiId": "orto-botanico-pisa",
+          "text": "Orto botanico di Pisa is a themed comparison candidate: Pisa's botanical garden was founded in 1544 and moved within Pisa before settling at its present site in the sixteenth century, where it remains public.",
+          "sourceIds": ["source-10", "source-09"],
+          "points": 86
+        },
+        {
+          "poiId": "orto-botanico-palermo",
+          "text": "Orto Botanico di Palermo is a themed comparison candidate: Palermo's Orto Botanico was established in 1789 and remains a large, named, maintained botanical garden open to ordinary visitors.",
+          "sourceIds": ["source-11", "source-09"],
+          "points": 32
+        },
+        {
+          "poiId": "orto-botanico-florence",
+          "text": "Orto Botanico di Firenze is a themed comparison candidate: Florence's Orto Botanico, also called the Giardino dei Semplici, was founded in 1545 and remains a visitable maintained garden.",
+          "sourceIds": ["source-14", "source-09"],
+          "points": 81
+        },
+        {
+          "poiId": "real-jardin-botanico-madrid",
+          "text": "Real Jardín Botánico de Madrid is a themed comparison candidate: Madrid's Royal Botanical Garden was founded in 1755 and moved to its current Paseo del Prado site in 1781, where it remains public.",
+          "sourceIds": ["source-15", "source-09"],
+          "points": 56
+        },
+        {
+          "poiId": "jardim-botanico-ajuda",
+          "text": "Jardim Botânico da Ajuda is a themed comparison candidate: Ajuda Botanical Garden was established in 1768 and remains a distinct maintained botanical garden with public access in Lisbon.",
+          "sourceIds": ["source-16", "source-09"],
+          "points": 52
+        },
+        {
+          "poiId": "jardim-botanico-coimbra",
+          "text": "Jardim Botânico da Universidade de Coimbra is a themed comparison candidate: The Botanical Garden of the University of Coimbra was founded in 1772 and remains a maintained, publicly visitable garden within Coimbra.",
+          "sourceIds": ["source-17", "source-09"],
+          "points": 48
+        },
+        {
+          "poiId": "copenhagen-botanical-garden",
+          "text": "University of Copenhagen Botanical Garden is a themed comparison candidate: Copenhagen's botanical garden traces its institution to 1600 and has occupied its current garden site since 1874, remaining publicly accessible.",
+          "sourceIds": ["source-18", "source-09"],
+          "points": 44
+        },
+        {
+          "poiId": "peter-the-great-botanical-garden",
+          "text": "Botanical Garden of the Komarov Botanical Institute is a themed comparison candidate: The botanical garden on Saint Petersburg's Aptekarsky Island descends from the Apothecary Garden founded in 1714 and remains a visitable maintained garden.",
+          "sourceIds": ["source-22", "source-09"],
+          "points": 14
+        },
+        {
+          "poiId": "fomin-botanical-garden",
+          "text": "O.V. Fomin Botanical Garden is a themed comparison candidate: Kyiv's O.V. Fomin Botanical Garden was established in 1839 and remains a distinct maintained botanical garden with regular visitor access.",
+          "sourceIds": ["source-23", "source-09"],
+          "points": 11
+        },
+        {
+          "poiId": "acharya-jagadish-chandra-bose-indian-botanic-garden",
+          "text": "Acharya Jagadish Chandra Bose Indian Botanic Garden is a themed comparison candidate: The Indian Botanic Garden at Shibpur was established in 1787 and remains a maintained, ticketed botanical garden within the Howrah urban municipality.",
+          "sourceIds": ["source-24", "source-09"],
+          "points": 8
+        },
+        {
+          "poiId": "lalbagh-botanical-garden",
+          "text": "Lalbagh Botanical Garden is a themed comparison candidate: Lalbagh Botanical Garden was begun in 1760 and remains a large, officially named and maintained public botanical garden in Bengaluru.",
+          "sourceIds": ["source-25", "source-09"],
+          "points": 5
+        }
+      ]
+    },
+    {
+      "id": "round-3",
+      "targetPoiId": "jardin-des-plantes-paris",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Paris_75005_Grande_Galerie_de_l%27Evolution_20070804.jpg/1280px-Paris_75005_Grande_Galerie_de_l%27Evolution_20070804.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Jardin des Plantes",
+        "attribution": "Benh LIEU SONG · CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      },
+      "clue": {
+        "text": "Formally founded in 1635 as a Royal Garden of Medicinal Plants, this 28-hectare institution contains the National Herbarium with almost eight million plant samples and a menagerie established in 1795.",
+        "sourceIds": ["source-07"]
+      },
+      "results": [
+        {
+          "poiId": "kew-royal-botanic-gardens",
+          "text": "Royal Botanic Gardens, Kew is a themed comparison candidate: The Royal Botanic Gardens at Kew developed as a botanical garden on its present site in the eighteenth and nineteenth centuries and is maintained as a major public garden.",
+          "sourceIds": ["source-01", "source-07"],
+          "points": 72
+        },
+        {
+          "poiId": "chelsea-physic-garden",
+          "text": "Chelsea Physic Garden is a themed comparison candidate: Chelsea Physic Garden was founded in 1673 by the Society of Apothecaries at its surviving riverside site and remains open to ordinary visitors.",
+          "sourceIds": ["source-02", "source-07"],
+          "points": 96
+        },
+        {
+          "poiId": "oxford-botanic-garden",
+          "text": "University of Oxford Botanic Garden is a themed comparison candidate: Oxford Botanic Garden was founded in 1621 as a physic garden and continues as a distinct, maintained, publicly visitable botanical garden.",
+          "sourceIds": ["source-03", "source-07"],
+          "points": 91
+        },
+        {
+          "poiId": "cambridge-university-botanic-garden",
+          "text": "Cambridge University Botanic Garden is a themed comparison candidate: Cambridge University Botanic Garden was established in 1831 and opened at its current site in 1846, where it remains a maintained public botanic garden.",
+          "sourceIds": ["source-04", "source-07"],
+          "points": 38
+        },
+        {
+          "poiId": "national-botanic-gardens-glasnevin",
+          "text": "National Botanic Gardens of Ireland, Glasnevin is a themed comparison candidate: The National Botanic Gardens of Ireland at Glasnevin were founded in 1795 and remain a maintained, free public botanical garden within Dublin.",
+          "sourceIds": ["source-05", "source-07"],
+          "points": 68
+        },
+        {
+          "poiId": "jardin-des-plantes-montpellier",
+          "text": "Jardin des plantes de Montpellier is a themed comparison candidate: Montpellier's Jardin des plantes was established in 1593 as a botanical and teaching garden and remains a visitable maintained garden in the city.",
+          "sourceIds": ["source-06", "source-07"],
+          "points": 86
+        },
+        {
+          "poiId": "jardin-des-plantes-paris",
+          "text": "Jardin des Plantes is the round target: Paris's Jardin des Plantes originated as the Royal Garden of Medicinal Plants in 1626 and remains an officially named public botanical garden.",
+          "sourceIds": ["source-07"],
+          "points": 100
+        },
+        {
+          "poiId": "botanical-garden-wroclaw",
+          "text": "Botanical Garden of the University of Wrocław is a themed comparison candidate: Wrocław's university botanical garden was founded in 1811 and continues as a distinct maintained garden with a public entrance.",
+          "sourceIds": ["source-08", "source-07"],
+          "points": 35
+        },
+        {
+          "poiId": "ortobotanico-padua",
+          "text": "Orto Botanico di Padova is a themed comparison candidate: Padua's Orto Botanico was founded in 1545 and survives as a named, maintained public botanical garden at its historic site.",
+          "sourceIds": ["source-09", "source-07"],
+          "points": 81
+        },
+        {
+          "poiId": "orto-botanico-pisa",
+          "text": "Orto botanico di Pisa is a themed comparison candidate: Pisa's botanical garden was founded in 1544 and moved within Pisa before settling at its present site in the sixteenth century, where it remains public.",
+          "sourceIds": ["source-10", "source-07"],
+          "points": 64
+        },
+        {
+          "poiId": "orto-botanico-palermo",
+          "text": "Orto Botanico di Palermo is a themed comparison candidate: Palermo's Orto Botanico was established in 1789 and remains a large, named, maintained botanical garden open to ordinary visitors.",
+          "sourceIds": ["source-11", "source-07"],
+          "points": 32
+        },
+        {
+          "poiId": "orto-botanico-florence",
+          "text": "Orto Botanico di Firenze is a themed comparison candidate: Florence's Orto Botanico, also called the Giardino dei Semplici, was founded in 1545 and remains a visitable maintained garden.",
+          "sourceIds": ["source-14", "source-07"],
+          "points": 60
+        },
+        {
+          "poiId": "real-jardin-botanico-madrid",
+          "text": "Real Jardín Botánico de Madrid is a themed comparison candidate: Madrid's Royal Botanical Garden was founded in 1755 and moved to its current Paseo del Prado site in 1781, where it remains public.",
+          "sourceIds": ["source-15", "source-07"],
+          "points": 56
+        },
+        {
+          "poiId": "jardim-botanico-ajuda",
+          "text": "Jardim Botânico da Ajuda is a themed comparison candidate: Ajuda Botanical Garden was established in 1768 and remains a distinct maintained botanical garden with public access in Lisbon.",
+          "sourceIds": ["source-16", "source-07"],
+          "points": 23
+        },
+        {
+          "poiId": "jardim-botanico-coimbra",
+          "text": "Jardim Botânico da Universidade de Coimbra is a themed comparison candidate: The Botanical Garden of the University of Coimbra was founded in 1772 and remains a maintained, publicly visitable garden within Coimbra.",
+          "sourceIds": ["source-17", "source-07"],
+          "points": 52
+        },
+        {
+          "poiId": "copenhagen-botanical-garden",
+          "text": "University of Copenhagen Botanical Garden is a themed comparison candidate: Copenhagen's botanical garden traces its institution to 1600 and has occupied its current garden site since 1874, remaining publicly accessible.",
+          "sourceIds": ["source-18", "source-07"],
+          "points": 48
+        },
+        {
+          "poiId": "peter-the-great-botanical-garden",
+          "text": "Botanical Garden of the Komarov Botanical Institute is a themed comparison candidate: The botanical garden on Saint Petersburg's Aptekarsky Island descends from the Apothecary Garden founded in 1714 and remains a visitable maintained garden.",
+          "sourceIds": ["source-22", "source-07"],
+          "points": 44
+        },
+        {
+          "poiId": "fomin-botanical-garden",
+          "text": "O.V. Fomin Botanical Garden is a themed comparison candidate: Kyiv's O.V. Fomin Botanical Garden was established in 1839 and remains a distinct maintained botanical garden with regular visitor access.",
+          "sourceIds": ["source-23", "source-07"],
+          "points": 11
+        },
+        {
+          "poiId": "acharya-jagadish-chandra-bose-indian-botanic-garden",
+          "text": "Acharya Jagadish Chandra Bose Indian Botanic Garden is a themed comparison candidate: The Indian Botanic Garden at Shibpur was established in 1787 and remains a maintained, ticketed botanical garden within the Howrah urban municipality.",
+          "sourceIds": ["source-24", "source-07"],
+          "points": 8
+        },
+        {
+          "poiId": "lalbagh-botanical-garden",
+          "text": "Lalbagh Botanical Garden is a themed comparison candidate: Lalbagh Botanical Garden was begun in 1760 and remains a large, officially named and maintained public botanical garden in Bengaluru.",
+          "sourceIds": ["source-25", "source-07"],
+          "points": 5
+        }
+      ]
+    },
+    {
+      "id": "round-4",
+      "targetPoiId": "peter-the-great-botanical-garden",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Spb_Aptekarsky_Island_Botanical_Garden_asv2019-09_img1.jpg/1280px-Spb_Aptekarsky_Island_Botanical_Garden_asv2019-09_img1.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Saint Petersburg Botanical Garden",
+        "attribution": "A.Savin · FAL",
+        "licenseUrl": "http://artlibre.org/licence/lal/en"
+      },
+      "clue": {
+        "text": "Beginning as an Apothecary herb garden in 1714, this institution now occupies 18.9 hectares on an island and has 25 historic greenhouses, including one 23.5 metres high.",
+        "sourceIds": ["source-22"]
+      },
+      "results": [
+        {
+          "poiId": "kew-royal-botanic-gardens",
+          "text": "Royal Botanic Gardens, Kew is a themed comparison candidate: The Royal Botanic Gardens at Kew developed as a botanical garden on its present site in the eighteenth and nineteenth centuries and is maintained as a major public garden.",
+          "sourceIds": ["source-01", "source-22"],
+          "points": 72
+        },
+        {
+          "poiId": "chelsea-physic-garden",
+          "text": "Chelsea Physic Garden is a themed comparison candidate: Chelsea Physic Garden was founded in 1673 by the Society of Apothecaries at its surviving riverside site and remains open to ordinary visitors.",
+          "sourceIds": ["source-02", "source-22"],
+          "points": 96
+        },
+        {
+          "poiId": "oxford-botanic-garden",
+          "text": "University of Oxford Botanic Garden is a themed comparison candidate: Oxford Botanic Garden was founded in 1621 as a physic garden and continues as a distinct, maintained, publicly visitable botanical garden.",
+          "sourceIds": ["source-03", "source-22"],
+          "points": 91
+        },
+        {
+          "poiId": "cambridge-university-botanic-garden",
+          "text": "Cambridge University Botanic Garden is a themed comparison candidate: Cambridge University Botanic Garden was established in 1831 and opened at its current site in 1846, where it remains a maintained public botanic garden.",
+          "sourceIds": ["source-04", "source-22"],
+          "points": 38
+        },
+        {
+          "poiId": "national-botanic-gardens-glasnevin",
+          "text": "National Botanic Gardens of Ireland, Glasnevin is a themed comparison candidate: The National Botanic Gardens of Ireland at Glasnevin were founded in 1795 and remain a maintained, free public botanical garden within Dublin.",
+          "sourceIds": ["source-05", "source-22"],
+          "points": 68
+        },
+        {
+          "poiId": "jardin-des-plantes-montpellier",
+          "text": "Jardin des plantes de Montpellier is a themed comparison candidate: Montpellier's Jardin des plantes was established in 1593 as a botanical and teaching garden and remains a visitable maintained garden in the city.",
+          "sourceIds": ["source-06", "source-22"],
+          "points": 64
+        },
+        {
+          "poiId": "jardin-des-plantes-paris",
+          "text": "Jardin des Plantes is a themed comparison candidate: Paris's Jardin des Plantes originated as the Royal Garden of Medicinal Plants in 1626 and remains an officially named public botanical garden.",
+          "sourceIds": ["source-07", "source-22"],
+          "points": 86
+        },
+        {
+          "poiId": "botanical-garden-wroclaw",
+          "text": "Botanical Garden of the University of Wrocław is a themed comparison candidate: Wrocław's university botanical garden was founded in 1811 and continues as a distinct maintained garden with a public entrance.",
+          "sourceIds": ["source-08", "source-22"],
+          "points": 60
+        },
+        {
+          "poiId": "ortobotanico-padua",
+          "text": "Orto Botanico di Padova is a themed comparison candidate: Padua's Orto Botanico was founded in 1545 and survives as a named, maintained public botanical garden at its historic site.",
+          "sourceIds": ["source-09", "source-22"],
+          "points": 81
+        },
+        {
+          "poiId": "orto-botanico-pisa",
+          "text": "Orto botanico di Pisa is a themed comparison candidate: Pisa's botanical garden was founded in 1544 and moved within Pisa before settling at its present site in the sixteenth century, where it remains public.",
+          "sourceIds": ["source-10", "source-22"],
+          "points": 35
+        },
+        {
+          "poiId": "orto-botanico-palermo",
+          "text": "Orto Botanico di Palermo is a themed comparison candidate: Palermo's Orto Botanico was established in 1789 and remains a large, named, maintained botanical garden open to ordinary visitors.",
+          "sourceIds": ["source-11", "source-22"],
+          "points": 32
+        },
+        {
+          "poiId": "orto-botanico-florence",
+          "text": "Orto Botanico di Firenze is a themed comparison candidate: Florence's Orto Botanico, also called the Giardino dei Semplici, was founded in 1545 and remains a visitable maintained garden.",
+          "sourceIds": ["source-14", "source-22"],
+          "points": 23
+        },
+        {
+          "poiId": "real-jardin-botanico-madrid",
+          "text": "Real Jardín Botánico de Madrid is a themed comparison candidate: Madrid's Royal Botanical Garden was founded in 1755 and moved to its current Paseo del Prado site in 1781, where it remains public.",
+          "sourceIds": ["source-15", "source-22"],
+          "points": 56
+        },
+        {
+          "poiId": "jardim-botanico-ajuda",
+          "text": "Jardim Botânico da Ajuda is a themed comparison candidate: Ajuda Botanical Garden was established in 1768 and remains a distinct maintained botanical garden with public access in Lisbon.",
+          "sourceIds": ["source-16", "source-22"],
+          "points": 20
+        },
+        {
+          "poiId": "jardim-botanico-coimbra",
+          "text": "Jardim Botânico da Universidade de Coimbra is a themed comparison candidate: The Botanical Garden of the University of Coimbra was founded in 1772 and remains a maintained, publicly visitable garden within Coimbra.",
+          "sourceIds": ["source-17", "source-22"],
+          "points": 52
+        },
+        {
+          "poiId": "copenhagen-botanical-garden",
+          "text": "University of Copenhagen Botanical Garden is a themed comparison candidate: Copenhagen's botanical garden traces its institution to 1600 and has occupied its current garden site since 1874, remaining publicly accessible.",
+          "sourceIds": ["source-18", "source-22"],
+          "points": 48
+        },
+        {
+          "poiId": "peter-the-great-botanical-garden",
+          "text": "Botanical Garden of the Komarov Botanical Institute is the round target: The botanical garden on Saint Petersburg's Aptekarsky Island descends from the Apothecary Garden founded in 1714 and remains a visitable maintained garden.",
+          "sourceIds": ["source-22"],
+          "points": 100
+        },
+        {
+          "poiId": "fomin-botanical-garden",
+          "text": "O.V. Fomin Botanical Garden is a themed comparison candidate: Kyiv's O.V. Fomin Botanical Garden was established in 1839 and remains a distinct maintained botanical garden with regular visitor access.",
+          "sourceIds": ["source-23", "source-22"],
+          "points": 44
+        },
+        {
+          "poiId": "acharya-jagadish-chandra-bose-indian-botanic-garden",
+          "text": "Acharya Jagadish Chandra Bose Indian Botanic Garden is a themed comparison candidate: The Indian Botanic Garden at Shibpur was established in 1787 and remains a maintained, ticketed botanical garden within the Howrah urban municipality.",
+          "sourceIds": ["source-24", "source-22"],
+          "points": 8
+        },
+        {
+          "poiId": "lalbagh-botanical-garden",
+          "text": "Lalbagh Botanical Garden is a themed comparison candidate: Lalbagh Botanical Garden was begun in 1760 and remains a large, officially named and maintained public botanical garden in Bengaluru.",
+          "sourceIds": ["source-25", "source-22"],
+          "points": 5
+        }
+      ]
+    },
+    {
+      "id": "round-5",
+      "targetPoiId": "acharya-jagadish-chandra-bose-indian-botanic-garden",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Kolkata_botanical_garden_pathway.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Acharya Jagadish Chandra Bose Indian Botanic Garden",
+        "attribution": "Jeroje at English Wikipedia. · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "clue": {
+        "text": "Authorized by a trading company in 1787 to develop commercially useful crops, this 109-hectare garden helped introduce Chinese tea and contains a banyan measured at over 330 metres in circumference.",
+        "sourceIds": ["source-24"]
+      },
+      "results": [
+        {
+          "poiId": "kew-royal-botanic-gardens",
+          "text": "Royal Botanic Gardens, Kew is a themed comparison candidate: The Royal Botanic Gardens at Kew developed as a botanical garden on its present site in the eighteenth and nineteenth centuries and is maintained as a major public garden.",
+          "sourceIds": ["source-01", "source-24"],
+          "points": 96
+        },
+        {
+          "poiId": "chelsea-physic-garden",
+          "text": "Chelsea Physic Garden is a themed comparison candidate: Chelsea Physic Garden was founded in 1673 by the Society of Apothecaries at its surviving riverside site and remains open to ordinary visitors.",
+          "sourceIds": ["source-02", "source-24"],
+          "points": 38
+        },
+        {
+          "poiId": "oxford-botanic-garden",
+          "text": "University of Oxford Botanic Garden is a themed comparison candidate: Oxford Botanic Garden was founded in 1621 as a physic garden and continues as a distinct, maintained, publicly visitable botanical garden.",
+          "sourceIds": ["source-03", "source-24"],
+          "points": 72
+        },
+        {
+          "poiId": "cambridge-university-botanic-garden",
+          "text": "Cambridge University Botanic Garden is a themed comparison candidate: Cambridge University Botanic Garden was established in 1831 and opened at its current site in 1846, where it remains a maintained public botanic garden.",
+          "sourceIds": ["source-04", "source-24"],
+          "points": 35
+        },
+        {
+          "poiId": "national-botanic-gardens-glasnevin",
+          "text": "National Botanic Gardens of Ireland, Glasnevin is a themed comparison candidate: The National Botanic Gardens of Ireland at Glasnevin were founded in 1795 and remain a maintained, free public botanical garden within Dublin.",
+          "sourceIds": ["source-05", "source-24"],
+          "points": 68
+        },
+        {
+          "poiId": "jardin-des-plantes-montpellier",
+          "text": "Jardin des plantes de Montpellier is a themed comparison candidate: Montpellier's Jardin des plantes was established in 1593 as a botanical and teaching garden and remains a visitable maintained garden in the city.",
+          "sourceIds": ["source-06", "source-24"],
+          "points": 64
+        },
+        {
+          "poiId": "jardin-des-plantes-paris",
+          "text": "Jardin des Plantes is a themed comparison candidate: Paris's Jardin des Plantes originated as the Royal Garden of Medicinal Plants in 1626 and remains an officially named public botanical garden.",
+          "sourceIds": ["source-07", "source-24"],
+          "points": 91
+        },
+        {
+          "poiId": "botanical-garden-wroclaw",
+          "text": "Botanical Garden of the University of Wrocław is a themed comparison candidate: Wrocław's university botanical garden was founded in 1811 and continues as a distinct maintained garden with a public entrance.",
+          "sourceIds": ["source-08", "source-24"],
+          "points": 32
+        },
+        {
+          "poiId": "ortobotanico-padua",
+          "text": "Orto Botanico di Padova is a themed comparison candidate: Padua's Orto Botanico was founded in 1545 and survives as a named, maintained public botanical garden at its historic site.",
+          "sourceIds": ["source-09", "source-24"],
+          "points": 60
+        },
+        {
+          "poiId": "orto-botanico-pisa",
+          "text": "Orto botanico di Pisa is a themed comparison candidate: Pisa's botanical garden was founded in 1544 and moved within Pisa before settling at its present site in the sixteenth century, where it remains public.",
+          "sourceIds": ["source-10", "source-24"],
+          "points": 56
+        },
+        {
+          "poiId": "orto-botanico-palermo",
+          "text": "Orto Botanico di Palermo is a themed comparison candidate: Palermo's Orto Botanico was established in 1789 and remains a large, named, maintained botanical garden open to ordinary visitors.",
+          "sourceIds": ["source-11", "source-24"],
+          "points": 52
+        },
+        {
+          "poiId": "orto-botanico-florence",
+          "text": "Orto Botanico di Firenze is a themed comparison candidate: Florence's Orto Botanico, also called the Giardino dei Semplici, was founded in 1545 and remains a visitable maintained garden.",
+          "sourceIds": ["source-14", "source-24"],
+          "points": 23
+        },
+        {
+          "poiId": "real-jardin-botanico-madrid",
+          "text": "Real Jardín Botánico de Madrid is a themed comparison candidate: Madrid's Royal Botanical Garden was founded in 1755 and moved to its current Paseo del Prado site in 1781, where it remains public.",
+          "sourceIds": ["source-15", "source-24"],
+          "points": 48
+        },
+        {
+          "poiId": "jardim-botanico-ajuda",
+          "text": "Jardim Botânico da Ajuda is a themed comparison candidate: Ajuda Botanical Garden was established in 1768 and remains a distinct maintained botanical garden with public access in Lisbon.",
+          "sourceIds": ["source-16", "source-24"],
+          "points": 44
+        },
+        {
+          "poiId": "jardim-botanico-coimbra",
+          "text": "Jardim Botânico da Universidade de Coimbra is a themed comparison candidate: The Botanical Garden of the University of Coimbra was founded in 1772 and remains a maintained, publicly visitable garden within Coimbra.",
+          "sourceIds": ["source-17", "source-24"],
+          "points": 20
+        },
+        {
+          "poiId": "copenhagen-botanical-garden",
+          "text": "University of Copenhagen Botanical Garden is a themed comparison candidate: Copenhagen's botanical garden traces its institution to 1600 and has occupied its current garden site since 1874, remaining publicly accessible.",
+          "sourceIds": ["source-18", "source-24"],
+          "points": 17
+        },
+        {
+          "poiId": "peter-the-great-botanical-garden",
+          "text": "Botanical Garden of the Komarov Botanical Institute is a themed comparison candidate: The botanical garden on Saint Petersburg's Aptekarsky Island descends from the Apothecary Garden founded in 1714 and remains a visitable maintained garden.",
+          "sourceIds": ["source-22", "source-24"],
+          "points": 86
+        },
+        {
+          "poiId": "fomin-botanical-garden",
+          "text": "O.V. Fomin Botanical Garden is a themed comparison candidate: Kyiv's O.V. Fomin Botanical Garden was established in 1839 and remains a distinct maintained botanical garden with regular visitor access.",
+          "sourceIds": ["source-23", "source-24"],
+          "points": 5
+        },
+        {
+          "poiId": "acharya-jagadish-chandra-bose-indian-botanic-garden",
+          "text": "Acharya Jagadish Chandra Bose Indian Botanic Garden is the round target: The Indian Botanic Garden at Shibpur was established in 1787 and remains a maintained, ticketed botanical garden within the Howrah urban municipality.",
+          "sourceIds": ["source-24"],
+          "points": 100
+        },
+        {
+          "poiId": "lalbagh-botanical-garden",
+          "text": "Lalbagh Botanical Garden is a themed comparison candidate: Lalbagh Botanical Garden was begun in 1760 and remains a large, officially named and maintained public botanical garden in Bengaluru.",
+          "sourceIds": ["source-25", "source-24"],
+          "points": 81
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-01",
+      "title": "Royal Botanic Gardens, Kew",
+      "url": "https://en.wikipedia.org/wiki/Royal_Botanic_Gardens,_Kew",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-02",
+      "title": "Chelsea Physic Garden",
+      "url": "https://en.wikipedia.org/wiki/Chelsea_Physic_Garden",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-03",
+      "title": "University of Oxford Botanic Garden",
+      "url": "https://en.wikipedia.org/wiki/University_of_Oxford_Botanic_Garden",
+      "retrievedAt": "2026-08-18T02:56:01.048Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-04",
+      "title": "Cambridge University Botanic Garden",
+      "url": "https://en.wikipedia.org/wiki/Cambridge_University_Botanic_Garden",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-05",
+      "title": "National Botanic Gardens of Ireland",
+      "url": "https://en.wikipedia.org/wiki/National_Botanic_Gardens_of_Ireland",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-06",
+      "title": "Jardin des plantes de Montpellier",
+      "url": "https://en.wikipedia.org/wiki/Jardin_des_plantes_de_Montpellier",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-07",
+      "title": "Jardin des Plantes",
+      "url": "https://en.wikipedia.org/wiki/Jardin_des_Plantes",
+      "retrievedAt": "2026-08-18T02:56:00.990Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-08",
+      "title": "Botanical Garden of the University of Wrocław",
+      "url": "https://en.wikipedia.org/wiki/Botanical_Garden_of_the_University_of_Wroc%C5%82aw",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-09",
+      "title": "Orto botanico di Padova",
+      "url": "https://en.wikipedia.org/wiki/Orto_botanico_di_Padova",
+      "retrievedAt": "2026-08-18T02:56:01.090Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-10",
+      "title": "Orto botanico di Pisa",
+      "url": "https://en.wikipedia.org/wiki/Orto_botanico_di_Pisa",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-11",
+      "title": "Orto botanico di Palermo",
+      "url": "https://en.wikipedia.org/wiki/Orto_botanico_di_Palermo",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-12",
+      "title": "Orto botanico dell'Università di Catania",
+      "url": "https://en.wikipedia.org/wiki/Orto_botanico_dell%27Universit%C3%A0_di_Catania",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-13",
+      "title": "Orto botanico di Roma",
+      "url": "https://en.wikipedia.org/wiki/Orto_botanico_di_Roma",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-14",
+      "title": "Orto botanico di Firenze",
+      "url": "https://en.wikipedia.org/wiki/Orto_botanico_di_Firenze",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-15",
+      "title": "Royal Botanical Garden of Madrid",
+      "url": "https://en.wikipedia.org/wiki/Royal_Botanical_Garden_of_Madrid",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-16",
+      "title": "Ajuda Botanical Garden",
+      "url": "https://en.wikipedia.org/wiki/Ajuda_Botanical_Garden",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-17",
+      "title": "Botanical Garden of the University of Coimbra",
+      "url": "https://en.wikipedia.org/wiki/Botanical_Garden_of_the_University_of_Coimbra",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-18",
+      "title": "University of Copenhagen Botanical Garden",
+      "url": "https://en.wikipedia.org/wiki/University_of_Copenhagen_Botanical_Garden",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-19",
+      "title": "University of Oslo Botanical Garden",
+      "url": "https://en.wikipedia.org/wiki/University_of_Oslo_Botanical_Garden",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-20",
+      "title": "University of Tartu Botanical Gardens",
+      "url": "https://en.wikipedia.org/wiki/University_of_Tartu_Botanical_Gardens",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-21",
+      "title": "Dimitrie Brândză Botanical Garden",
+      "url": "https://en.wikipedia.org/wiki/Dimitrie_Br%C3%A2ndz%C4%83_Botanical_Garden",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-22",
+      "title": "Saint Petersburg Botanical Garden",
+      "url": "https://en.wikipedia.org/wiki/Saint_Petersburg_Botanical_Garden",
+      "retrievedAt": "2026-08-18T02:56:00.426Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-23",
+      "title": "O.V. Fomin Botanical Garden",
+      "url": "https://en.wikipedia.org/wiki/O.V._Fomin_Botanical_Garden",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-24",
+      "title": "Acharya Jagadish Chandra Bose Indian Botanic Garden",
+      "url": "https://en.wikipedia.org/wiki/Acharya_Jagadish_Chandra_Bose_Indian_Botanic_Garden",
+      "retrievedAt": "2026-08-18T02:56:01.051Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-25",
+      "title": "Lalbagh Botanical Garden",
+      "url": "https://en.wikipedia.org/wiki/Lalbagh_Botanical_Garden",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    }
+  ],
+  "theme": {
+    "title": "Pre-1900 Botanical Gardens in Cities",
+    "introduction": "Cities have cultivated living collections for centuries. These historic gardens still invite visitors into their greenhouses and grounds.",
+    "inclusionCriteria": "Include a location only when all conditions are met: (1) it is an individually named institution whose official name or governing authority identifies it as a botanical garden, botanic garden, or equivalent historical botanical-garden institution; (2) the garden was established or opened at the same identifiable site on or before 31 December 1899; (3) the historic garden still physically exists as a maintained garden; (4) it is regularly open to ordinary visitors, whether free or ticketed; (5) the garden lies within the current administrative boundary of a present-day city or incorporated urban municipality; and (6) the exact garden can be pinned as a single visitable location rather than an entire metropolitan region."
+  }
+}

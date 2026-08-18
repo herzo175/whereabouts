@@ -3,8 +3,8 @@ import { curateBoard } from './board-curator.js';
 import { fixtureCandidates, fixtureTheme } from './fixtures.js';
 
 describe('curateBoard', () => {
-  it('reconstructs a 25-record board from model IDs and preserves target order', async () => {
-    const ids = fixtureCandidates.slice(0, 25).map((candidate) => candidate.id);
+  it('reconstructs a 20-record board from model IDs and preserves target order', async () => {
+    const ids = fixtureCandidates.slice(0, 20).map((candidate) => candidate.id);
     const model = {
       generate: async () => ({
         candidateIds: ids,
@@ -21,8 +21,8 @@ describe('curateBoard', () => {
   });
 
   it('swaps valid selected targets onto the board when the model omits them', async () => {
-    const ids = fixtureCandidates.slice(0, 25).map((candidate) => candidate.id);
-    const omittedTarget = fixtureCandidates[25].id;
+    const ids = fixtureCandidates.slice(0, 20).map((candidate) => candidate.id);
+    const omittedTarget = fixtureCandidates[20].id;
     const targetPoiIds = [...ids.slice(0, 4), omittedTarget];
     const board = await curateBoard({
       model: {
@@ -32,7 +32,7 @@ describe('curateBoard', () => {
       candidates: fixtureCandidates,
     });
 
-    expect(board.candidates).toHaveLength(25);
+    expect(board.candidates).toHaveLength(20);
     expect(board.candidates.map((candidate) => candidate.id)).toContain(
       omittedTarget,
     );
@@ -40,7 +40,7 @@ describe('curateBoard', () => {
   });
 
   it('corrects an unknown model ID without restarting candidate research', async () => {
-    const ids = fixtureCandidates.slice(0, 25).map((candidate) => candidate.id);
+    const ids = fixtureCandidates.slice(0, 20).map((candidate) => candidate.id);
     let calls = 0;
     const board = await curateBoard({
       model: {
@@ -48,7 +48,7 @@ describe('curateBoard', () => {
           calls += 1;
           if (calls === 1)
             return {
-              candidateIds: [...ids.slice(0, 24), 'invented-candidate'],
+              candidateIds: [...ids.slice(0, 19), 'invented-candidate'],
               targetPoiIds: ids.slice(0, 5),
             };
           expect(prompt).toMatch(/unknown.*invented-candidate/i);
@@ -73,7 +73,7 @@ describe('curateBoard', () => {
           }
         : candidate,
     );
-    const ids = candidates.slice(0, 25).map((candidate) => candidate.id);
+    const ids = candidates.slice(0, 20).map((candidate) => candidate.id);
     await expect(
       curateBoard({
         model: {
@@ -97,7 +97,7 @@ describe('curateBoard', () => {
           }
         : candidate,
     );
-    const ids = candidates.slice(0, 25).map((candidate) => candidate.id);
+    const ids = candidates.slice(0, 20).map((candidate) => candidate.id);
     const board = await curateBoard({
       model: {
         generate: async () => ({

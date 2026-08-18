@@ -23,6 +23,7 @@ const review: GenerationReview = {
     declaredTargetPoiId: targetPoiId,
     resolvedPoiId: targetPoiId,
     resolvedOffBoardAnswer: null,
+    resolvableWithoutExactNumbers: true,
     status: 'pass',
     explanation:
       'The clue resolves independently to the declared board target.',
@@ -56,7 +57,7 @@ describe('generateCase', () => {
     const prepared = await generateCase(input);
     expect(prepared.caseData.schemaVersion).toBe(4);
     expect(prepared.caseData.theme.title).toBe(fixtureTheme.title);
-    expect(prepared.caseData.pois).toHaveLength(25);
+    expect(prepared.caseData.pois).toHaveLength(20);
     expect(prepared.caseData.rounds.map((round) => round.targetPoiId)).toEqual(
       fixtureBoard.targetPoiIds,
     );
@@ -85,7 +86,7 @@ describe('generateCase', () => {
       prepared.caseData.sources.filter(
         (source) => source.provenance === 'model',
       ),
-    ).toHaveLength(20);
+    ).toHaveLength(15);
     expect(prepared.markdownReview).toContain('provenance: verified');
     expect(prepared.markdownReview).toContain('provenance: model');
   });

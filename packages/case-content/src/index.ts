@@ -11,4 +11,9 @@ export type {
   ThemedDailyCase,
   ThemedPoi,
 } from './schema.js';
-export { dailyCaseSchema, poiSchema, sourceSchema } from './schema.js';
+export {
+  DAILY_BOARD_SIZE,
+  dailyCaseSchema,
+  poiSchema,
+  sourceSchema,
+} from './schema.js';
