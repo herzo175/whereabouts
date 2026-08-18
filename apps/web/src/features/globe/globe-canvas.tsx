@@ -17,9 +17,9 @@ export const POI_BEAM_OPACITY: ExpressionSpecification = [
   ['linear'],
   ['zoom'],
   2.4,
-  0,
-  3.2,
   0.82,
+  3.2,
+  0,
 ];
 const POI_BEAM_SEGMENTS = 16;
 

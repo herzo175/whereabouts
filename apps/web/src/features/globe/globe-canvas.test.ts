@@ -16,15 +16,15 @@ describe('globe point hit targets', () => {
     expect(POI_BEAM_RADIUS * 2).toBeLessThanOrEqual(0.6);
   });
 
-  it('fades beams away at continent-scale zoom levels', () => {
+  it('shows beams at high altitude and fades them away when zooming in', () => {
     expect(POI_BEAM_OPACITY).toEqual([
       'interpolate',
       ['linear'],
       ['zoom'],
       2.4,
-      0,
-      3.2,
       0.82,
+      3.2,
+      0,
     ]);
   });
 });
