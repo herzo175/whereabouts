@@ -44,11 +44,14 @@ const tierDotStyles = {
 
 function FiveRoundHeader({ progress }: { progress: FiveRoundProgress }) {
   return (
-    <header className="space-y-3 border-b border-rule pb-3 sm:space-y-5 sm:pb-6">
+    <header className="space-y-3 border-b border-rule pb-3 text-center sm:space-y-5 sm:pb-6 sm:text-left">
       <h1 className="font-serif text-3xl tracking-tight text-paper sm:text-5xl">
         Whereabouts
       </h1>
-      <ol className="flex gap-3 sm:gap-4" aria-label="Daily round progress">
+      <ol
+        className="flex justify-center gap-3 sm:justify-start sm:gap-4"
+        aria-label="Daily round progress"
+      >
         {Array.from({ length: 5 }, (_, index) => {
           const guess = progress.guesses[index];
           const tier = guess ? getScoreBand(guess.points) : undefined;

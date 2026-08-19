@@ -19,7 +19,7 @@ On mobile:
 
 Mobile alignment should vary with the job of the content instead of defaulting
 every section to the same left edge. Presentation-oriented blocks—the game
-masthead and progress dots, theme introduction, round-reveal headline, and
+masthead and progress dots, theme label and title, round-reveal headline, and
 final score headline—are centered below the small-screen breakpoint. Dense or
 sequential content—clues, authored relationships, dossiers, result navigation,
 field-guide entries, and long-form copy—remains left-aligned. At the existing

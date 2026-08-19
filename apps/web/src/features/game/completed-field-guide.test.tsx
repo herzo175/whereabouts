@@ -34,12 +34,20 @@ describe('CompletedFieldGuide', () => {
       />,
     );
 
-    const disclosure = screen.getByText(/field guide/i);
-    expect(disclosure.parentElement).not.toHaveAttribute('open');
-    expect(screen.getByText(/20 candidate locations/i)).toBeVisible();
+    const disclosure = screen.getByText('Field guide').closest('summary');
+    expect(disclosure).not.toBeNull();
+    expect(disclosure?.parentElement).not.toHaveAttribute('open');
+    expect(disclosure).toHaveClass('min-h-11', 'w-full');
+    expect(screen.getByText('20 candidate locations')).toBeVisible();
+    expect(screen.getByText('Show locations')).toBeVisible();
+    expect(disclosure?.querySelector('svg')).toHaveClass(
+      'group-open:rotate-180',
+    );
     expect(screen.queryByRole('list')).toBeNull();
 
+    if (!disclosure) throw new Error('missing field-guide disclosure');
     await user.click(disclosure);
+    expect(screen.getByText('Hide locations')).toBeVisible();
     const names = screen
       .getAllByRole('listitem')
       .map((item) => item.querySelector('button > span > span')?.textContent);

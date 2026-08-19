@@ -125,10 +125,9 @@ async function assertCompletedFieldGuide(
   page: Page,
   caseData: typeof FIVE_ROUND_CASE,
 ): Promise<void> {
-  const fieldGuideToggle = page.getByText(
-    `Field guide (${caseData.pois.length} candidate locations)`,
-  );
+  const fieldGuideToggle = page.getByText('Show locations', { exact: true });
   await fieldGuideToggle.click();
+  await expect(page.getByText('Hide locations', { exact: true })).toBeVisible();
   const candidates = page.getByRole('list', { name: 'Candidate locations' });
   await expect(candidates).toBeVisible();
   await expect(candidates.locator('li')).toHaveCount(caseData.pois.length);

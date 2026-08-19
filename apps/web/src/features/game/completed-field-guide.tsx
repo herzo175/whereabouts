@@ -1,4 +1,5 @@
 import type { DailyRound, Poi } from '@whereabouts/case-content';
+import { ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 
 import { PoiDossier } from './poi-dossier';
@@ -90,10 +91,24 @@ export function CompletedFieldGuide({
         onToggle={(event) => setIsOpen(event.currentTarget.open)}
       >
         <summary
-          className="cursor-pointer list-none rounded-sm py-3 pr-2 text-sm font-semibold tracking-[0.14em] text-brass uppercase marker:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
+          className="flex min-h-11 w-full cursor-pointer list-none items-center justify-between gap-3 rounded-sm py-3 pr-2 marker:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
           id="completed-field-guide-heading"
         >
-          Field guide ({ordered.length} candidate locations)
+          <span className="min-w-0">
+            <span className="block text-sm font-semibold tracking-[0.14em] text-brass uppercase">
+              Field guide
+            </span>
+            <span className="block text-xs text-paper/65">
+              {ordered.length} candidate locations
+            </span>
+          </span>
+          <span className="flex shrink-0 items-center gap-1.5 text-sm font-semibold text-cyan">
+            {isOpen ? 'Hide locations' : 'Show locations'}
+            <ChevronDown
+              aria-hidden="true"
+              className="size-5 transition-transform group-open:rotate-180"
+            />
+          </span>
         </summary>
         {isOpen ? (
           <ul className="mt-2 divide-y-0" aria-label="Candidate locations">

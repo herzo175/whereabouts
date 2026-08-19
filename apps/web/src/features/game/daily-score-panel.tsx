@@ -44,7 +44,7 @@ export function DailyScorePanel({
 
   return (
     <section aria-labelledby="daily-score-title" className="space-y-6">
-      <header className="space-y-2 border-b border-rule pb-5">
+      <header className="space-y-2 border-b border-rule pb-5 text-center sm:text-left">
         <p className="text-xs font-semibold tracking-[0.18em] text-cyan uppercase">
           All five rounds complete
         </p>

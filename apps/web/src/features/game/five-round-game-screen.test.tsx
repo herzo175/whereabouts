@@ -44,6 +44,13 @@ describe('FiveRoundGameScreen', () => {
     expect(
       await screen.findByRole('heading', { name: 'Railway Hotels' }),
     ).toBeVisible();
+    const masthead = screen.getByRole('heading', {
+      name: 'Whereabouts',
+    }).parentElement;
+    expect(masthead).toHaveClass('text-center', 'sm:text-left');
+    expect(
+      screen.getByRole('list', { name: /daily round progress/i }),
+    ).toHaveClass('justify-center', 'sm:justify-start');
     expect(screen.getByText(caseData.theme.introduction)).toBeVisible();
     expect(screen.queryByText(guessedPoi.themeConnection.text)).toBeNull();
 
@@ -102,9 +109,14 @@ describe('FiveRoundGameScreen', () => {
 
     await user.click(screen.getByRole('button', { name: /submit this lead/i }));
 
-    expect(
-      screen.getByRole('heading', { name: /round 1 revealed/i }),
-    ).toBeInTheDocument();
+    const revealHeading = screen.getByRole('heading', {
+      name: /round 1 revealed/i,
+    });
+    expect(revealHeading).toBeInTheDocument();
+    expect(revealHeading.closest('header')).toHaveClass(
+      'text-center',
+      'sm:text-left',
+    );
     expect(screen.getByText(/warm · 56 points/i)).toBeInTheDocument();
     expect(
       screen.getByText(caseData.rounds[0].results[10].text),
@@ -160,7 +172,7 @@ describe('FiveRoundGameScreen', () => {
     expect(screen.getByText('500 / 500')).toBeVisible();
     expect(screen.getAllByText(/^correct$/i)).toHaveLength(5);
     const fieldGuide = screen.getByText(/field guide/i);
-    expect(fieldGuide.parentElement).not.toHaveAttribute('open');
+    expect(fieldGuide.closest('details')).not.toHaveAttribute('open');
     expect(
       screen.queryByRole('list', { name: /candidate locations/i }),
     ).toBeNull();

@@ -30,6 +30,10 @@ describe('DailyScorePanel', () => {
       />,
     );
 
+    expect(
+      screen.getByRole('heading', { name: /daily score/i }).closest('header'),
+    ).toHaveClass('text-center', 'sm:text-left');
+
     for (const round of caseData.rounds) {
       const place = caseData.pois.find((poi) => poi.id === round.targetPoiId);
       expect(place).toBeDefined();
