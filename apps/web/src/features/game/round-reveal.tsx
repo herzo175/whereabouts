@@ -1,5 +1,6 @@
 import type { DailyRound, Poi } from '@whereabouts/case-content';
 import { getScoreBand } from '@whereabouts/game-engine';
+import type { CSSProperties } from 'react';
 
 type RoundRevealProps = {
   correctPoi: Poi;
@@ -19,6 +20,41 @@ const dossierStyles = {
     label: 'text-brass',
   },
 } as const;
+
+const confettiPieces = [
+  { delay: 0, drift: '1rem', emoji: '🌍', id: 'globe-left', left: 7 },
+  { delay: 70, drift: '-1.5rem', emoji: '✨', id: 'sparkle-left', left: 19 },
+  { delay: 25, drift: '1rem', emoji: '📍', id: 'pin-left', left: 32 },
+  { delay: 110, drift: '-1rem', emoji: '🧭', id: 'compass-left', left: 44 },
+  { delay: 45, drift: '1rem', emoji: '✨', id: 'sparkle-right', left: 57 },
+  { delay: 120, drift: '-1.25rem', emoji: '🌍', id: 'globe-right', left: 69 },
+  { delay: 15, drift: '1rem', emoji: '🧭', id: 'compass-right', left: 82 },
+  { delay: 85, drift: '-1rem', emoji: '📍', id: 'pin-right', left: 93 },
+];
+
+function CorrectConfetti() {
+  return (
+    <div
+      aria-hidden="true"
+      className="result-confetti pointer-events-none fixed inset-x-0 top-0 z-50 h-48 overflow-hidden motion-reduce:hidden"
+      data-testid="correct-confetti"
+    >
+      {confettiPieces.map((piece) => {
+        const style = {
+          '--confetti-drift': piece.drift,
+          animationDelay: `${piece.delay}ms`,
+          left: `${piece.left}%`,
+        } as CSSProperties;
+
+        return (
+          <span key={piece.id} style={style}>
+            {piece.emoji}
+          </span>
+        );
+      })}
+    </div>
+  );
+}
 
 function FullDossier({
   poi,
@@ -108,13 +144,28 @@ export function RoundReveal({
 
   return (
     <section aria-label={`Round ${roundNumber} reveal`} className="space-y-5">
+      {guessedCorrectly ? <CorrectConfetti /> : null}
       <header className="space-y-2 border-b border-rule pb-5 text-center sm:text-left">
         <p className="text-xs font-semibold tracking-[0.18em] text-cyan uppercase">
           Round {roundNumber} / 5
         </p>
-        <h2 className="font-serif text-3xl text-paper">
-          Round {roundNumber} revealed
+        <h2
+          className={`font-serif text-3xl ${guessedCorrectly ? 'text-emerald-200' : 'text-brass'}`}
+        >
+          {guessedCorrectly ? (
+            <>
+              <span aria-hidden="true">🎉 </span>
+              Correct!
+            </>
+          ) : (
+            'Not quite'
+          )}
         </h2>
+        <p className="text-sm text-paper">
+          {guessedCorrectly
+            ? `You found ${correctPoi.name}.`
+            : `The correct location was ${correctPoi.name}.`}
+        </p>
         <p className="text-sm font-semibold tracking-wide text-brass uppercase">
           {formattedTier} · {points} points
         </p>

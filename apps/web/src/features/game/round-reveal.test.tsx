@@ -31,6 +31,11 @@ describe('RoundReveal', () => {
       />,
     );
 
+    expect(screen.getByRole('heading', { name: 'Not quite' })).toBeVisible();
+    expect(
+      screen.getByText(`The correct location was ${correctPoi.name}.`),
+    ).toBeVisible();
+    expect(screen.queryByTestId('correct-confetti')).toBeNull();
     const dossiers = screen.getAllByRole('article', { name: /location:/i });
     expect(dossiers).toHaveLength(2);
     expect(dossiers[0]).toHaveAccessibleName(
@@ -62,6 +67,11 @@ describe('RoundReveal', () => {
       />,
     );
 
+    expect(screen.getByRole('heading', { name: 'Correct!' })).toBeVisible();
+    expect(screen.getByText(`You found ${correctPoi.name}.`)).toBeVisible();
+    expect(screen.getByTestId('correct-confetti')).toHaveClass(
+      'motion-reduce:hidden',
+    );
     const dossiers = screen.getAllByRole('article', { name: /location:/i });
     expect(dossiers).toHaveLength(1);
     expect(dossiers[0]).toHaveAccessibleName(

@@ -39,3 +39,28 @@
     }
   }
 }
+
+@keyframes result-confetti-fall {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -2rem, 0) rotate(0deg) scale(0.7);
+  }
+
+  16% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--confetti-drift), 12rem, 0) rotate(300deg)
+      scale(1);
+  }
+}
+
+.result-confetti > span {
+  --confetti-drift: 1rem;
+  position: absolute;
+  top: -2rem;
+  font-size: 1.35rem;
+  animation: result-confetti-fall 760ms cubic-bezier(0.2, 0.8, 0.35, 1) forwards;
+}

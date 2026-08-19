@@ -252,7 +252,7 @@ test.describe('Whereabouts five-round desktop journeys', () => {
 
     const tier = getScoreBand(firstResult.points);
     await expect(
-      page.getByRole('heading', { name: 'Round 1 revealed' }),
+      page.getByRole('heading', { name: 'Not quite' }),
     ).toBeVisible();
     await expect(
       page.getByText(new RegExp(`${tier} · ${firstResult.points} points`, 'i')),
@@ -394,7 +394,7 @@ test.describe('Whereabouts five-round desktop journeys', () => {
 
     await submitLead(page, firstGuess.name);
     await expect(
-      page.getByRole('heading', { name: 'Round 1 revealed' }),
+      page.getByRole('heading', { name: 'Not quite' }),
     ).toBeVisible();
   });
 });

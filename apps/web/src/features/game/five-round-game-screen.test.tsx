@@ -108,7 +108,7 @@ describe('FiveRoundGameScreen', () => {
     await user.click(screen.getByRole('button', { name: /submit this lead/i }));
 
     const revealHeading = screen.getByRole('heading', {
-      name: /round 1 revealed/i,
+      name: /not quite/i,
     });
     expect(revealHeading).toBeInTheDocument();
     expect(revealHeading.closest('header')).toHaveClass(
@@ -203,7 +203,7 @@ describe('FiveRoundGameScreen', () => {
       screen.getByRole('button', { name: /back to previous result/i }),
     );
     expect(
-      screen.getByRole('heading', { name: /round 5 revealed/i }),
+      screen.getByRole('region', { name: /round 5 reveal/i }),
     ).toBeVisible();
     await user.click(
       screen.getByRole('button', { name: /return to daily summary/i }),
@@ -232,7 +232,7 @@ describe('FiveRoundGameScreen', () => {
     );
 
     expect(
-      await screen.findByRole('heading', { name: /round 1 revealed/i }),
+      await screen.findByRole('heading', { name: /not quite/i }),
     ).toBeVisible();
     expect(screen.getByRole('button', { name: /next round/i })).toBeVisible();
   });
@@ -267,21 +267,21 @@ describe('FiveRoundGameScreen', () => {
       screen.getByRole('button', { name: /back to previous result/i }),
     );
     expect(
-      screen.getByRole('heading', { name: /round 2 revealed/i }),
+      screen.getByRole('region', { name: /round 2 reveal/i }),
     ).toBeVisible();
 
     await user.click(
       screen.getByRole('button', { name: /back to round 1 result/i }),
     );
     expect(
-      screen.getByRole('heading', { name: /round 1 revealed/i }),
+      screen.getByRole('region', { name: /round 1 reveal/i }),
     ).toBeVisible();
 
     await user.click(
       screen.getByRole('button', { name: /forward to round 2 result/i }),
     );
     expect(
-      screen.getByRole('heading', { name: /round 2 revealed/i }),
+      screen.getByRole('region', { name: /round 2 reveal/i }),
     ).toBeVisible();
 
     await user.click(
