@@ -28,7 +28,7 @@ function makeStorage(initial?: Record<string, string>): Storage {
 }
 
 describe('FiveRoundGameScreen', () => {
-  it("shows today's theme before a guess and both dossier connections after submission", async () => {
+  it("shows today's theme before a guess and the correct dossier connection after submission", async () => {
     const user = userEvent.setup();
     const caseData = makeFiveRoundCase();
     const guessedPoi = caseData.pois[10];
@@ -61,10 +61,8 @@ describe('FiveRoundGameScreen', () => {
     );
     await user.click(screen.getByRole('button', { name: /submit this lead/i }));
 
-    expect(screen.getAllByText("Why it fits today's theme")).toHaveLength(2);
-    expect(screen.getAllByText(guessedPoi.themeConnection.text)).toHaveLength(
-      1,
-    );
+    expect(screen.getAllByText("Why it fits today's theme")).toHaveLength(1);
+    expect(screen.queryByText(guessedPoi.themeConnection.text)).toBeNull();
     const correctPoi = caseData.pois.find(
       (poi) => poi.id === caseData.rounds[0].targetPoiId,
     );

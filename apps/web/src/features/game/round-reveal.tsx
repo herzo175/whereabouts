@@ -9,7 +9,28 @@ type RoundRevealProps = {
   roundNumber: number;
 };
 
-function FullDossier({ poi, label }: { poi: Poi; label: string }) {
+const dossierStyles = {
+  correct: {
+    card: 'border-emerald-300/50 bg-emerald-400/10',
+    label: 'text-emerald-200',
+  },
+  guess: {
+    card: 'border-brass/40 bg-brass/10',
+    label: 'text-brass',
+  },
+} as const;
+
+function FullDossier({
+  poi,
+  label,
+  showThemeConnection = false,
+  variant,
+}: {
+  poi: Poi;
+  label: string;
+  showThemeConnection?: boolean;
+  variant: keyof typeof dossierStyles;
+}) {
   const themeConnection =
     'themeConnection' in poi &&
     typeof poi.themeConnection === 'object' &&
@@ -18,8 +39,13 @@ function FullDossier({ poi, label }: { poi: Poi; label: string }) {
     typeof poi.themeConnection.text === 'string'
       ? (poi.themeConnection as { text: string })
       : undefined;
+  const styles = dossierStyles[variant];
+
   return (
-    <article className="overflow-hidden rounded-lg border border-foreground/15 bg-background">
+    <article
+      aria-label={`${label}: ${poi.name}`}
+      className={`overflow-hidden rounded-lg border ${styles.card}`}
+    >
       {poi.image ? (
         <figure>
           <img
@@ -38,7 +64,9 @@ function FullDossier({ poi, label }: { poi: Poi; label: string }) {
         </div>
       )}
       <div className="space-y-2 p-4">
-        <p className="text-xs font-semibold tracking-[0.16em] text-muted-foreground uppercase">
+        <p
+          className={`text-xs font-semibold tracking-[0.16em] uppercase ${styles.label}`}
+        >
           {label}
         </p>
         <h3 className="text-xl font-semibold">{poi.name}</h3>
@@ -48,7 +76,7 @@ function FullDossier({ poi, label }: { poi: Poi; label: string }) {
         {poi.blurb ? (
           <p className="text-sm leading-relaxed">{poi.blurb}</p>
         ) : null}
-        {themeConnection ? (
+        {showThemeConnection && themeConnection ? (
           <section
             aria-label="Why it fits today's theme"
             className="space-y-1 border-t border-foreground/10 pt-3"
@@ -76,6 +104,7 @@ export function RoundReveal({
   );
   const tier = getScoreBand(points);
   const formattedTier = tier[0].toUpperCase() + tier.slice(1);
+  const guessedCorrectly = guessedPoi.id === correctPoi.id;
 
   return (
     <section aria-label={`Round ${roundNumber} reveal`} className="space-y-5">
@@ -99,8 +128,15 @@ export function RoundReveal({
         </article>
       ) : null}
       <div className="grid gap-4 sm:grid-cols-2">
-        <FullDossier label="Your location" poi={guessedPoi} />
-        <FullDossier label="Correct location" poi={correctPoi} />
+        <FullDossier
+          label="Correct location"
+          poi={correctPoi}
+          showThemeConnection
+          variant="correct"
+        />
+        {guessedCorrectly ? null : (
+          <FullDossier label="Your location" poi={guessedPoi} variant="guess" />
+        )}
       </div>
     </section>
   );
