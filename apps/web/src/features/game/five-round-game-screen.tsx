@@ -272,15 +272,6 @@ export function FiveRoundGameScreen({
           <ThemeBriefing theme={caseData.theme} />
         ) : null}
         <RoundBriefing round={currentRound} roundNumber={roundNumber} />
-        {progress.guesses.length > 0 ? (
-          <button
-            className="min-h-12 rounded-md border border-rule px-5 text-sm font-semibold text-paper hover:border-paper/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
-            onClick={openLatestReveal}
-            type="button"
-          >
-            Back to previous result
-          </button>
-        ) : null}
         <section
           aria-label="Choose a location"
           className="border-t border-rule pt-3 sm:pt-6"
@@ -300,6 +291,17 @@ export function FiveRoundGameScreen({
             onGuess={submitGuess}
             pois={caseData.pois}
           />
+          {progress.guesses.length > 0 ? (
+            <nav aria-label="Round history" className="mt-4">
+              <button
+                className="min-h-12 w-full rounded-md border border-rule px-5 text-sm font-semibold text-paper hover:border-paper/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan sm:w-auto"
+                onClick={openLatestReveal}
+                type="button"
+              >
+                Back to previous result
+              </button>
+            </nav>
+          ) : null}
         </section>
       </div>
     </main>

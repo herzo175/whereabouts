@@ -263,9 +263,16 @@ describe('FiveRoundGameScreen', () => {
     );
 
     expect(await screen.findByText('Round 3 / 5')).toBeVisible();
-    await user.click(
-      screen.getByRole('button', { name: /back to previous result/i }),
-    );
+    const previousResultButton = screen.getByRole('button', {
+      name: /back to previous result/i,
+    });
+    expect(
+      screen
+        .getAllByRole('region', { name: /choose a location/i })
+        .some((region) => region.contains(previousResultButton)),
+    ).toBe(true);
+    expect(previousResultButton).toHaveClass('w-full', 'sm:w-auto');
+    await user.click(previousResultButton);
     expect(
       screen.getByRole('region', { name: /round 2 reveal/i }),
     ).toBeVisible();
