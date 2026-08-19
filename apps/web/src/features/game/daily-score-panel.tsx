@@ -56,7 +56,10 @@ export function DailyScorePanel({
         </p>
       </header>
 
-      <ol className="grid grid-cols-5 gap-2" aria-label="Round results">
+      <ol
+        className="grid grid-cols-2 gap-x-3 gap-y-4 sm:grid-cols-5 sm:gap-2"
+        aria-label="Round results"
+      >
         {progress.guesses.map((guess, index) => {
           const place = caseData.pois.find((poi) => poi.id === guess.poiId);
           const tier = getScoreBand(guess.points);

@@ -308,7 +308,38 @@ test.describe('Whereabouts five-round mobile journey', () => {
 
   test.beforeEach(async ({ page }) => {
     await setClock(page);
-    await disableWebGl(page);
+  });
+
+  test('keeps the clue and most of the globe in the first mobile viewport', async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto(`${E2E_HARNESS_PATH}?globe=1`);
+    await expect(
+      page.getByRole('img', { name: /round 1 target photograph/i }),
+    ).toBeVisible();
+    const globe = page.getByTestId('globe-canvas');
+    await expect(globe).toBeVisible();
+
+    const measurement = await globe.evaluate((element) => {
+      const rect = element.getBoundingClientRect();
+      return {
+        documentWidth: document.documentElement.scrollWidth,
+        viewportWidth: window.innerWidth,
+        visibleGlobeHeight: Math.max(
+          0,
+          Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0),
+        ),
+        globeHeight: rect.height,
+      };
+    });
+
+    expect(measurement.documentWidth).toBeLessThanOrEqual(
+      measurement.viewportWidth,
+    );
+    expect(measurement.visibleGlobeHeight).toBeGreaterThanOrEqual(
+      measurement.globeHeight * 0.6,
+    );
   });
 
   test('plays the complete daily game on mobile', async ({ page }) => {

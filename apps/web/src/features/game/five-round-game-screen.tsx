@@ -44,11 +44,11 @@ const tierDotStyles = {
 
 function FiveRoundHeader({ progress }: { progress: FiveRoundProgress }) {
   return (
-    <header className="space-y-5 border-b border-rule pb-6">
-      <h1 className="font-serif text-4xl tracking-tight text-paper sm:text-5xl">
+    <header className="space-y-3 border-b border-rule pb-3 sm:space-y-5 sm:pb-6">
+      <h1 className="font-serif text-3xl tracking-tight text-paper sm:text-5xl">
         Whereabouts
       </h1>
-      <ol className="flex gap-4" aria-label="Daily round progress">
+      <ol className="flex gap-3 sm:gap-4" aria-label="Daily round progress">
         {Array.from({ length: 5 }, (_, index) => {
           const guess = progress.guesses[index];
           const tier = guess ? getScoreBand(guess.points) : undefined;
@@ -60,7 +60,7 @@ function FiveRoundHeader({ progress }: { progress: FiveRoundProgress }) {
                     ? `Round ${index + 1}: ${tier}, ${guess.points} points`
                     : `Round ${index + 1}: not played`
                 }
-                className={`block size-8 rounded-full border-2 ${tier ? tierDotStyles[tier] : 'border-rule bg-transparent'}`}
+                className={`block size-6 rounded-full border-2 sm:size-8 ${tier ? tierDotStyles[tier] : 'border-rule bg-transparent'}`}
                 role="img"
               />
             </li>
@@ -158,8 +158,8 @@ export function FiveRoundGameScreen({
       const latestRevealIsPending =
         progress.guesses.length > progress.acknowledgedRoundCount;
       return (
-        <main className="min-h-screen bg-background px-4 py-5 text-paper sm:px-6 sm:py-8">
-          <div className="mx-auto max-w-2xl space-y-6">
+        <main className="min-h-screen bg-background px-4 py-3 text-paper sm:px-6 sm:py-8">
+          <div className="mx-auto max-w-2xl space-y-3 sm:space-y-6">
             <FiveRoundHeader progress={progress} />
             {caseData.schemaVersion === 4 ? (
               <ThemeBriefing theme={caseData.theme} />
@@ -232,8 +232,8 @@ export function FiveRoundGameScreen({
 
   if (!currentRound) {
     return (
-      <main className="min-h-screen bg-background px-4 py-5 text-paper sm:px-6 sm:py-8">
-        <div className="mx-auto max-w-2xl space-y-6">
+      <main className="min-h-screen bg-background px-4 py-3 text-paper sm:px-6 sm:py-8">
+        <div className="mx-auto max-w-2xl space-y-3 sm:space-y-6">
           <FiveRoundHeader progress={progress} />
           {caseData.schemaVersion === 4 ? (
             <ThemeBriefing theme={caseData.theme} />
@@ -262,8 +262,8 @@ export function FiveRoundGameScreen({
 
   const roundNumber = progress.guesses.length + 1;
   return (
-    <main className="min-h-screen bg-background px-4 py-5 text-paper sm:px-6 sm:py-8">
-      <div className="mx-auto max-w-2xl space-y-6">
+    <main className="min-h-screen bg-background px-4 py-3 text-paper sm:px-6 sm:py-8">
+      <div className="mx-auto max-w-2xl space-y-3 sm:space-y-6">
         <FiveRoundHeader progress={progress} />
         {caseData.schemaVersion === 4 ? (
           <ThemeBriefing theme={caseData.theme} />
@@ -280,7 +280,7 @@ export function FiveRoundGameScreen({
         ) : null}
         <section
           aria-label="Choose a location"
-          className="border-t border-rule pt-6"
+          className="border-t border-rule pt-3 sm:pt-6"
         >
           <PoiPicker
             disabledPoiIds={revealedTargetIds}
