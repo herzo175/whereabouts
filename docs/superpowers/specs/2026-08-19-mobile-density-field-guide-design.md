@@ -17,6 +17,15 @@ On mobile:
 - at a 390 by 844 CSS-pixel viewport, the clue and at least 60 percent of the globe fit before the first scroll; and
 - horizontal overflow is not permitted.
 
+Mobile alignment should vary with the job of the content instead of defaulting
+every section to the same left edge. Presentation-oriented blocks—the game
+masthead and progress dots, theme introduction, round-reveal headline, and
+final score headline—are centered below the small-screen breakpoint. Dense or
+sequential content—clues, authored relationships, dossiers, result navigation,
+field-guide entries, and long-form copy—remains left-aligned. At the existing
+`sm` breakpoint, the presentation blocks return to their current left-aligned
+desktop composition.
+
 Tablet and desktop layouts may retain more breathing room, but should also remove spacing that does not improve hierarchy or comprehension.
 
 ## Gameplay image attribution
@@ -31,7 +40,7 @@ The completed view includes a compact field guide containing every candidate loc
 
 The five answer locations appear first in round order. All remaining candidates follow alphabetically by display name. Duplicate entries are not allowed.
 
-The field guide is collapsed by default at every viewport size using a keyboard-accessible disclosure control. The summary communicates the candidate count dynamically. Expanding it reveals the complete list without navigating away from the result. Opening a dossier does not navigate away or expand the list item inline; closing it restores focus to the selected entry.
+The field guide is collapsed by default at every viewport size using a keyboard-accessible disclosure control. The full-width summary row contains the field-guide label and dynamic candidate count, explicit `Show locations`/`Hide locations` state copy, and a chevron that rotates when open. The icon is decorative because native disclosure semantics already expose state to assistive technology. Expanding the guide reveals the complete list without navigating away from the result. Opening a dossier does not navigate away or expand the list item inline; closing it restores focus to the selected entry.
 
 Existing factual sources remain a separate section. Wikipedia links supplement the source list rather than replacing it.
 
@@ -56,6 +65,8 @@ The implementation supports only the five-round game format. Remaining legacy ty
 
 - All active and completed images retain meaningful alt text.
 - Disclosure state is exposed through native semantics or equivalent accessible state.
+- The entire field-guide summary row is a minimum-44-pixel touch target with a
+  visible open/closed affordance that does not rely on color alone.
 - Field-guide entries, available Wikipedia links, and all license links have descriptive accessible names and visible keyboard focus styles.
 - Touch targets remain at least 44 by 44 CSS pixels even as visual spacing becomes denser.
 - Long location names and translated titles wrap without horizontal scrolling.
@@ -70,6 +81,8 @@ Component tests cover:
 - exactly one field-guide entry per candidate;
 - answer-first ordering and alphabetical ordering of remaining candidates;
 - collapsed disclosure behavior;
+- explicit open/closed field-guide copy and chevron state;
+- selective mobile centering with desktop left-alignment preserved;
 - opening a full dossier from every entry and restoring focus when it closes;
 - image, blurb, optional Wikipedia link, and photo-credit rendering in the completed dossier;
 - graceful full-dossier behavior when the optional image or blurb is absent;
