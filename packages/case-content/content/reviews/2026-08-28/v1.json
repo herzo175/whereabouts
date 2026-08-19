@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "publicationDate": "2026-08-28",
+  "revision": 1,
+  "themeVerdicts": [
+    {
+      "poiId": "royal-opera-house-london",
+      "status": "pass",
+      "explanation": "The evidence identifies an individually named opera and ballet venue in London, traces the institution and site to the 1732 Theatre Royal, documents the surviving 1858 theatre nucleus and later reconstruction, and states that it remains regularly operating with a fixed public building. No exclusion applies.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "palais-garnier",
+      "status": "pass",
+      "explanation": "The Palais Garnier is an individually named historic opera house in Paris, completed and opened in 1875, and the evidence states that it continues to host opera, ballet, and other performances as part of the Paris Opera programme.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "vienna-state-opera",
+      "status": "pass",
+      "explanation": "The Vienna State Opera is a named opera house in Vienna that opened as the Court Opera in 1869 and continues to present a large regular public programme of opera and ballet in a fixed building.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "hungarian-state-opera",
+      "status": "pass",
+      "explanation": "The Hungarian State Opera House is a named Budapest opera venue opened in 1884. The evidence states that it remains an important venue for regularly presented opera and ballet performances.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "estates-theatre",
+      "status": "pass",
+      "explanation": "Estates Theatre is an individually named, preserved Neoclassical theatre in Prague that opened in 1783 and currently presents drama, ballet, and opera through the National Theatre programme. It is a fixed public venue with no stated exclusion trigger.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "bolshoi-theatre",
+      "status": "pass",
+      "explanation": "The Bolshoi Theatre is a named Moscow opera and ballet institution whose present building opened in 1856 after earlier Bolshoi theatres occupied the same site, and it remains publicly programmed.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "mariinsky-theatre",
+      "status": "pass",
+      "explanation": "The Mariinsky Theatre is an individually named Saint Petersburg venue for opera and ballet. Its historic main building opened in 1860 and the evidence states that its companies continue to present performances there.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "odesa-opera",
+      "status": "pass",
+      "explanation": "The Odesa National Academic Opera and Ballet Theatre is a fixed, named Odesa venue whose present building opened in 1887 and remains active for opera and ballet performances.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "teatro-alla-scala",
+      "status": "pass",
+      "explanation": "La Scala is an individually named Milan opera house inaugurated in 1778 on the site of the Teatro Ducale, with regular opera and ballet seasons continuing at the fixed venue.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "teatro-di-san-carlo",
+      "status": "pass",
+      "explanation": "Teatro di San Carlo is a named Naples opera house opened in 1737, rebuilt at the same site after the 1816 rehearsal-fire destruction, and supported by regular opera and ballet seasons in a fixed public building.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "teatro-argentina",
+      "status": "pass",
+      "explanation": "Teatro Argentina is an individually named Roman opera house and theatre inaugurated in 1732. The evidence states that it remains a functioning public venue for scheduled drama, opera, and other live performance.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "teatro-massimo",
+      "status": "pass",
+      "explanation": "Teatro Massimo is a named Palermo opera and performing-arts venue opened in 1897, within the cutoff, and the evidence states that it continues to present publicly scheduled productions.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "teatro-comunale-bologna",
+      "status": "pass",
+      "explanation": "Teatro Comunale di Bologna is a named opera house whose first performance occurred in 1763. It remains active at its historic Bologna site with regular opera and concert seasons.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "teatro-espanol",
+      "status": "pass",
+      "explanation": "Teatro Español is an individually named municipal theatre in Madrid, with theatrical use of the identifiable site traced to the sixteenth century, and it continues to present regular dramatic productions in a fixed venue.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "gran-teatre-del-liceu",
+      "status": "pass",
+      "explanation": "The Gran Teatre del Liceu is a named Barcelona opera house opened in 1847. Despite rebuilding after fires, it remains an operating venue at the established La Rambla site with regular opera and ballet performances.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "teatro-nacional-sao-carlos",
+      "status": "pass",
+      "explanation": "Teatro Nacional de São Carlos is a named Lisbon opera house inaugurated in 1793 and still operating as a permanent public venue with regular opera and musical performances.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "manoel-theatre",
+      "status": "pass",
+      "explanation": "The Manoel Theatre is an individually named Valletta theatre commissioned as a public theatre in 1731 and opened for performance in 1732. The evidence documents its fixed auditorium, current management, and regularly presented theatre, opera, recitals, and other musical programmes.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "teatro-amazonas",
+      "status": "pass",
+      "explanation": "Teatro Amazonas is a named Manaus opera house inaugurated in 1896. The evidence identifies its fixed building and states that it hosts the opera festival, Amazonas Philharmonic performances, concerts, choirs, and other performances, supporting current operation as a public performance venue.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "teatro-nacional-sucre",
+      "status": "pass",
+      "explanation": "Teatro Nacional Sucre is a named Quito theatre opened in 1886 and restored at the same site. It remains an active fixed venue for theatre, opera, dance, and music.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "teatro-de-cristobal-colon",
+      "status": "pass",
+      "explanation": "Teatro de Cristóbal Colón is an individually named national theatre in Bogotá, inaugurated in 1892, that continues to present theatre, opera, ballet, and other live performances in a fixed public venue.",
+      "sourceIds": ["source-01"]
+    }
+  ],
+  "clueVerdicts": [
+    {
+      "roundId": "round-1",
+      "declaredTargetPoiId": "royal-opera-house-london",
+      "resolvedPoiId": "royal-opera-house-london",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The Covent Garden location, successive theatre fires, surviving historic auditorium and façade, and later reconstruction uniquely identify the Royal Opera House. The identification remains unique without the exact years."
+    },
+    {
+      "roundId": "round-2",
+      "declaredTargetPoiId": "estates-theatre",
+      "resolvedPoiId": "estates-theatre",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The preserved Neoclassical Prague theatre, aristocratic Enlightenment origin, and Mozart’s Don Giovanni premiere uniquely identify Estates Theatre. Those non-numeric markers remain sufficient without exact dates."
+    },
+    {
+      "roundId": "round-3",
+      "declaredTargetPoiId": "teatro-di-san-carlo",
+      "resolvedPoiId": "teatro-di-san-carlo",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The Bourbon connection, adjacent palace and piazza, horseshoe auditorium, and rebuilding after a rehearsal fire uniquely identify Teatro di San Carlo. Exact dates are unnecessary."
+    },
+    {
+      "roundId": "round-4",
+      "declaredTargetPoiId": "manoel-theatre",
+      "resolvedPoiId": "manoel-theatre",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The Knights Hospitaller commission, small oval auditorium, wooden gold-leaf boxes, and trompe-l’œil ceiling are distinctive identifiers of the Manoel Theatre and remain decisive without measurements or dates."
+    },
+    {
+      "roundId": "round-5",
+      "declaredTargetPoiId": "teatro-amazonas",
+      "resolvedPoiId": "teatro-amazonas",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The Manaus rainforest setting, rubber-boom origin, Renaissance Revival design, national-colour tiled dome, and imported European materials uniquely identify Teatro Amazonas without relying on exact numbers."
+    }
+  ],
+  "repairs": []
+}
