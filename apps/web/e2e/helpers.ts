@@ -1,21 +1,15 @@
 import { fileURLToPath } from 'node:url';
 import type { Page } from '@playwright/test';
 import type { FiveRoundDailyCase } from '@whereabouts/case-content';
-import { makeFiveRoundCase } from '@whereabouts/case-content/testing';
 import type {
   FiveRoundGuess,
   FiveRoundProgress,
 } from '@whereabouts/game-engine';
 
-const fixtureCase = makeFiveRoundCase();
-export const FIVE_ROUND_CASE = {
-  ...fixtureCase,
-  pois: fixtureCase.pois.map((poi, index) => {
-    if (index !== 5) return poi;
-    const { wikipediaTitle: _title, ...candidate } = poi;
-    return candidate;
-  }),
-};
+import { FIVE_ROUND_CASE } from './fixture';
+
+export { FIVE_ROUND_CASE };
+
 export const CASE_DATE = FIVE_ROUND_CASE.publicationDate;
 export const CASE_REVISION = FIVE_ROUND_CASE.revision;
 export const CASE_STORAGE_KEY = `whereabouts:case:${CASE_DATE}`;
