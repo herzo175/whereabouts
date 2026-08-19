@@ -147,7 +147,7 @@ describe('FiveRoundGameScreen', () => {
     expect(screen.queryByRole('link', { name: /license/i })).toBeNull();
     expect(screen.getByText('Target Place')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /next round/i })).toHaveClass(
-      'flex-1',
+      'w-full',
     );
 
     await user.click(screen.getByRole('button', { name: /next round/i }));
@@ -323,20 +323,25 @@ describe('FiveRoundGameScreen', () => {
     const returnToCurrentRound = screen.getByRole('button', {
       name: /return to round 4/i,
     });
-    expect(returnToCurrentRound).toHaveClass('flex-1');
+    expect(returnToCurrentRound).toHaveClass('w-full');
 
     await user.click(
       screen.getByRole('button', { name: /forward to round 2 result/i }),
     );
-    expect(
-      screen.getByRole('button', { name: /back to round 1 result/i }),
-    ).toHaveClass('flex-1');
-    expect(
-      screen.getByRole('button', { name: /forward to round 3 result/i }),
-    ).toHaveClass('flex-1');
-    expect(
-      screen.getByRole('button', { name: /return to round 4/i }),
-    ).toHaveClass('flex-1');
+    const backButton = screen.getByRole('button', {
+      name: /back to round 1 result/i,
+    });
+    const forwardButton = screen.getByRole('button', {
+      name: /forward to round 3 result/i,
+    });
+    const currentRoundButton = screen.getByRole('button', {
+      name: /return to round 4/i,
+    });
+    expect(backButton).toHaveClass('flex-1');
+    expect(forwardButton).toHaveClass('flex-1');
+    expect(backButton.parentElement).toBe(forwardButton.parentElement);
+    expect(currentRoundButton).toHaveClass('w-full');
+    expect(currentRoundButton.parentElement).not.toBe(backButton.parentElement);
     await user.click(
       screen.getByRole('button', { name: /return to round 4/i }),
     );

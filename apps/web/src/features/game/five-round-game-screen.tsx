@@ -204,38 +204,40 @@ export function FiveRoundGameScreen({
               round={revealedRound}
               roundNumber={viewedRevealIndex + 1}
             />
-            <nav aria-label="Result history" className="flex w-full gap-3">
-              {viewedRevealIndex > 0 ? (
-                <button
-                  aria-label={`Back to round ${viewedRevealIndex} result`}
-                  className="min-h-12 flex-1 rounded-md border border-rule px-5 text-sm font-semibold text-paper hover:border-paper/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
-                  onClick={() =>
-                    setViewedRevealIndex((index) =>
-                      index === null ? null : index - 1,
-                    )
-                  }
-                  type="button"
-                >
-                  Back
-                </button>
-              ) : null}
-              {!isLatestReveal ? (
-                <button
-                  aria-label={`Forward to round ${viewedRevealIndex + 2} result`}
-                  className="min-h-12 flex-1 rounded-md border border-rule px-5 text-sm font-semibold text-paper hover:border-paper/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
-                  onClick={() =>
-                    setViewedRevealIndex((index) =>
-                      index === null ? null : index + 1,
-                    )
-                  }
-                  type="button"
-                >
-                  Forward
-                </button>
-              ) : null}
+            <nav aria-label="Result history" className="w-full space-y-3">
+              <div className="flex w-full gap-3">
+                {viewedRevealIndex > 0 ? (
+                  <button
+                    aria-label={`Back to round ${viewedRevealIndex} result`}
+                    className="min-h-12 flex-1 rounded-md border border-rule px-5 text-sm font-semibold text-paper hover:border-paper/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
+                    onClick={() =>
+                      setViewedRevealIndex((index) =>
+                        index === null ? null : index - 1,
+                      )
+                    }
+                    type="button"
+                  >
+                    Back
+                  </button>
+                ) : null}
+                {!isLatestReveal ? (
+                  <button
+                    aria-label={`Forward to round ${viewedRevealIndex + 2} result`}
+                    className="min-h-12 flex-1 rounded-md border border-rule px-5 text-sm font-semibold text-paper hover:border-paper/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
+                    onClick={() =>
+                      setViewedRevealIndex((index) =>
+                        index === null ? null : index + 1,
+                      )
+                    }
+                    type="button"
+                  >
+                    Forward
+                  </button>
+                ) : null}
+              </div>
               {isLatestReveal && latestRevealIsPending ? (
                 <button
-                  className="min-h-12 flex-1 rounded-md bg-paper px-5 text-sm font-semibold text-ink hover:bg-paper/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
+                  className="min-h-12 w-full rounded-md bg-paper px-5 text-sm font-semibold text-ink hover:bg-paper/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
                   onClick={acknowledgeReveal}
                   type="button"
                 >
@@ -248,7 +250,7 @@ export function FiveRoundGameScreen({
                       ? `Return to round ${progress.guesses.length + 1}`
                       : 'Return to daily summary'
                   }
-                  className="min-h-12 flex-1 rounded-md bg-paper px-5 text-sm font-semibold text-ink hover:bg-paper/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
+                  className="min-h-12 w-full rounded-md bg-paper px-5 text-sm font-semibold text-ink hover:bg-paper/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
                   onClick={() => setViewedRevealIndex(null)}
                   type="button"
                 >
