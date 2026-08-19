@@ -83,6 +83,8 @@ describe('FiveRoundGameScreen', () => {
     expect(
       screen.getByRole('img', { name: /round 1 target photograph/i }),
     ).toHaveAttribute('src', caseData.rounds[0].image.url);
+    expect(screen.queryByText(caseData.rounds[0].image.attribution)).toBeNull();
+    expect(screen.queryByRole('link', { name: /license/i })).toBeNull();
     expect(screen.getByText(caseData.rounds[0].clue.text)).toBeInTheDocument();
 
     const search = screen.getByRole('searchbox', { name: /search locations/i });
@@ -107,6 +109,8 @@ describe('FiveRoundGameScreen', () => {
     expect(
       screen.getByText(caseData.rounds[0].results[10].text),
     ).toBeInTheDocument();
+    expect(screen.queryByText(caseData.rounds[0].image.attribution)).toBeNull();
+    expect(screen.queryByRole('link', { name: /license/i })).toBeNull();
     expect(screen.getByText('Target Place')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /next round/i })).toBeVisible();
 
@@ -155,11 +159,28 @@ describe('FiveRoundGameScreen', () => {
     ).toBeVisible();
     expect(screen.getByText('500 / 500')).toBeVisible();
     expect(screen.getAllByText(/^correct$/i)).toHaveLength(5);
+    const fieldGuide = screen.getByText(/field guide/i);
+    expect(fieldGuide.parentElement).not.toHaveAttribute('open');
     expect(
-      screen.getByRole('list', { name: /matching locations/i }),
-    ).toBeVisible();
-    expect(screen.getByText(/globe unavailable/i)).toBeVisible();
-
+      screen.queryByRole('list', { name: /candidate locations/i }),
+    ).toBeNull();
+    expect(
+      screen.queryByRole('link', {
+        name: 'Photo license for Target Place',
+      }),
+    ).toBeNull();
+    expect(
+      screen.queryByRole('link', {
+        name: 'Wikipedia article for Target Place',
+      }),
+    ).toBeNull();
+    await user.click(fieldGuide);
+    expect(
+      screen.getByRole('link', { name: 'Photo license for Target Place' }),
+    ).toHaveAttribute('href', caseData.rounds[0].image.licenseUrl);
+    expect(
+      screen.getByRole('link', { name: 'Wikipedia article for Target Place' }),
+    ).toHaveAttribute('href', 'https://en.wikipedia.org/wiki/Place_0');
     await user.click(screen.getByRole('button', { name: /copy result/i }));
     expect(onShare).toHaveBeenCalledWith(caseData, completed);
     expect(screen.getByRole('button', { name: /copied/i })).toBeVisible();

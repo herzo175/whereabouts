@@ -13,6 +13,7 @@ import {
 import { useEffect, useState } from 'react';
 
 import { GlobePicker } from '../globe/globe-picker';
+import { CompletedFieldGuide } from './completed-field-guide';
 import { DailyScorePanel } from './daily-score-panel';
 import { PoiPicker } from './poi-picker';
 import { RoundBriefing } from './round-briefing';
@@ -249,29 +250,11 @@ export function FiveRoundGameScreen({
           >
             Back to previous result
           </button>
-          <section
-            aria-labelledby="explore-case-locations"
-            className="space-y-4 border-t border-rule pt-6"
-          >
-            <h2
-              className="font-serif text-3xl text-paper"
-              id="explore-case-locations"
-            >
-              Explore locations
-            </h2>
-            <PoiPicker
-              globe={(selectPoi) => (
-                <GlobePicker
-                  disabledPoiIds={new Set<string>()}
-                  onSelect={selectPoi}
-                  pois={caseData.pois}
-                  supported={globeSupported}
-                />
-              )}
-              mode="browse"
-              pois={caseData.pois}
-            />
-          </section>
+          <CompletedFieldGuide
+            answerIds={caseData.rounds.map((round) => round.targetPoiId)}
+            candidates={caseData.pois}
+            rounds={caseData.rounds}
+          />
         </div>
       </main>
     );

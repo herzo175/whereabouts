@@ -27,17 +27,6 @@ function FullDossier({ poi, label }: { poi: Poi; label: string }) {
             className="h-40 w-full object-cover"
             src={poi.image.url}
           />
-          <figcaption className="border-b border-foreground/10 px-3 py-2 text-xs text-muted-foreground">
-            {poi.image.attribution}{' '}
-            <a
-              className="text-cyan underline decoration-brass underline-offset-2"
-              href={poi.image.licenseUrl}
-              rel="noreferrer"
-              target="_blank"
-            >
-              License
-            </a>
-          </figcaption>
         </figure>
       ) : (
         <div
