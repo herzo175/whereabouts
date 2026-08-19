@@ -55,7 +55,7 @@ describe('route state', () => {
     });
 
     expect(writeText).toHaveBeenCalledWith(
-      'WHEREABOUTS\n🟢 🟢 🟢 🟢 🟢\n500 / 500\nhttps://whereabouts.test',
+      'WHEREABOUTS\nAugust 14, 2026\n🟢 🟢 🟢 🟢 🟢\n500 / 500\nhttps://whereabouts.test',
     );
     expect(onStatus).toHaveBeenCalledWith('copied');
   });

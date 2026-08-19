@@ -12,6 +12,13 @@ const tokenEmoji = {
   correct: '🟢',
 } as const;
 
+const shareDateFormatter = new Intl.DateTimeFormat('en-US', {
+  day: 'numeric',
+  month: 'long',
+  timeZone: 'UTC',
+  year: 'numeric',
+});
+
 type ShareNavigator = {
   /** Present on many browsers but intentionally unused: results are copied. */
   share?: (data: { text: string }) => Promise<void>;
@@ -51,6 +58,9 @@ export function buildShareText(
   const normalizedOrigin = origin.replace(/\/+$/, '');
   return [
     'WHEREABOUTS',
+    shareDateFormatter.format(
+      new Date(`${caseData.publicationDate}T00:00:00Z`),
+    ),
     progress.guesses
       .map((guess) => tokenEmoji[getScoreBand(guess.points)])
       .join(' '),
