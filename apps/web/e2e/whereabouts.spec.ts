@@ -1,4 +1,10 @@
-import { type BrowserContext, expect, type Page, test } from '@playwright/test';
+import {
+  type BrowserContext,
+  expect,
+  type Locator,
+  type Page,
+  test,
+} from '@playwright/test';
 import { getScoreBand } from '@whereabouts/game-engine';
 
 import {
@@ -71,15 +77,26 @@ async function openGame(page: Page): Promise<void> {
   ).toBeVisible();
 }
 
+async function expectTouchTarget(locator: Locator): Promise<void> {
+  await expect(locator).toBeVisible();
+  const box = await locator.boundingBox();
+  if (!box) throw new Error('Expected a visible touch target bounding box');
+  expect(box.width).toBeGreaterThanOrEqual(44);
+  expect(box.height).toBeGreaterThanOrEqual(44);
+}
+
 async function submitLead(page: Page, name: string): Promise<void> {
   await page.getByRole('searchbox', { name: 'Search locations' }).fill(name);
-  await page
+  const location = page
     .getByRole('list', { name: 'Matching locations' })
-    .getByRole('button', { name: new RegExp(name) })
-    .click();
+    .getByRole('button', { name: new RegExp(name) });
+  await expectTouchTarget(location);
+  await location.click();
   const dossier = page.getByRole('dialog');
   await expect(dossier.getByRole('heading', { name })).toBeVisible();
-  await dossier.getByRole('button', { name: 'Submit this lead' }).click();
+  const submit = dossier.getByRole('button', { name: 'Submit this lead' });
+  await expectTouchTarget(submit);
+  await submit.click();
 }
 
 async function playPerfectDailyGame(page: Page): Promise<void> {
@@ -142,6 +159,10 @@ test.describe('Whereabouts five-round desktop journeys', () => {
     await expect(
       page.getByRole('img', { name: 'Round 1 target photograph' }),
     ).toHaveAttribute('src', firstRound.image.url);
+    await expect(page.getByText(firstRound.image.attribution)).toHaveCount(0);
+    await expect(
+      page.getByRole('link', { name: /photo license/i }),
+    ).toHaveCount(0);
 
     await page
       .getByRole('searchbox', { name: 'Search locations' })
@@ -265,6 +286,59 @@ test.describe('Whereabouts five-round desktop journeys', () => {
     }
   });
 
+  test('expands the completed field guide with every candidate and available link', async ({
+    page,
+  }) => {
+    const { caseData } = requireFiveRoundFixture();
+    await seedFiveRoundProgress(page, makeCompletedFiveRoundProgress(caseData));
+    await openGame(page);
+
+    const fieldGuideToggle = page.getByText(
+      `Field guide (${caseData.pois.length} candidate locations)`,
+    );
+    await fieldGuideToggle.click();
+    const candidates = page.getByRole('list', { name: 'Candidate locations' });
+    await expect(candidates).toBeVisible();
+    await expect(candidates.locator('li')).toHaveCount(caseData.pois.length);
+
+    const availableWikipedia = caseData.pois.filter(
+      (candidate) => candidate.wikipediaTitle,
+    );
+    await expect(
+      candidates.getByRole('link', { name: /Wikipedia article for/ }),
+    ).toHaveCount(availableWikipedia.length);
+    for (const candidate of caseData.pois) {
+      await expect(
+        candidates.getByText(candidate.name, { exact: true }),
+      ).toBeVisible();
+      const wikipedia = candidates.getByRole('link', {
+        name: `Wikipedia article for ${candidate.name}`,
+      });
+      if (candidate.wikipediaTitle) {
+        await expect(wikipedia).toHaveAttribute(
+          'href',
+          `https://en.wikipedia.org/wiki/${encodeURIComponent(candidate.wikipediaTitle.replace(/ /g, '_'))}`,
+        );
+      } else {
+        await expect(wikipedia).toHaveCount(0);
+      }
+    }
+
+    const photoLicenses = candidates.getByRole('link', {
+      name: /Photo license for/,
+    });
+    await expect(photoLicenses).toHaveCount(5);
+    for (const round of caseData.rounds) {
+      const target = caseData.pois.find((poi) => poi.id === round.targetPoiId);
+      if (!target) throw new Error(`Missing target for ${round.id}`);
+      await expect(
+        candidates.getByRole('link', {
+          name: `Photo license for ${target.name}`,
+        }),
+      ).toHaveAttribute('href', round.image.licenseUrl);
+    }
+  });
+
   test('plays all five rounds and accumulates the final score', async ({
     page,
   }) => {
@@ -279,11 +353,18 @@ test.describe('Whereabouts five-round desktop journeys', () => {
       page.getByRole('heading', { name: 'Briefing unavailable' }),
     ).toBeVisible();
     await expect(page.getByText(unpublishedDate)).toBeVisible();
+    await expect(page.getByRole('button', { name: /archive/i })).toHaveCount(0);
+    await expect(page.getByRole('link', { name: /archive/i })).toHaveCount(0);
+    await expect(
+      page.getByRole('link', { name: /today.s case/i }),
+    ).toHaveAttribute('href', '/');
 
     await page.goto('/2026-02-30');
     await expect(
       page.getByRole('heading', { name: /not found/i }),
     ).toBeVisible();
+    await expect(page.getByRole('button', { name: /archive/i })).toHaveCount(0);
+    await expect(page.getByRole('link', { name: /archive/i })).toHaveCount(0);
   });
 
   test('falls back to the location list when WebGL is unavailable', async ({
@@ -318,6 +399,8 @@ test.describe('Whereabouts five-round mobile journey', () => {
     await expect(
       page.getByRole('img', { name: /round 1 target photograph/i }),
     ).toBeVisible();
+    const { firstRound } = requireFiveRoundFixture();
+    await expect(page.getByText(firstRound.clue.text)).toBeVisible();
     const globe = page.getByTestId('globe-canvas');
     await expect(globe).toBeVisible();
 
