@@ -175,12 +175,16 @@ describe('FiveRoundGameScreen', () => {
       }),
     ).toBeNull();
     await user.click(fieldGuide);
+    await user.click(
+      screen.getByRole('button', { name: 'Open Target Place dossier' }),
+    );
     expect(
-      screen.getByRole('link', { name: 'Photo license for Target Place' }),
+      screen.getByRole('link', { name: 'Target Place photo license' }),
     ).toHaveAttribute('href', caseData.rounds[0].image.licenseUrl);
     expect(
-      screen.getByRole('link', { name: 'Wikipedia article for Target Place' }),
+      screen.getByRole('link', { name: 'Read Target Place on Wikipedia' }),
     ).toHaveAttribute('href', 'https://en.wikipedia.org/wiki/Place_0');
+    await user.click(screen.getByRole('button', { name: /^close$/i }));
     await user.click(screen.getByRole('button', { name: /copy result/i }));
     expect(onShare).toHaveBeenCalledWith(caseData, completed);
     expect(screen.getByRole('button', { name: /copied/i })).toBeVisible();

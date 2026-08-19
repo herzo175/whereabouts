@@ -1,6 +1,8 @@
 import type { DailyRound, Poi } from '@whereabouts/case-content';
 import { useState } from 'react';
 
+import { PoiDossier } from './poi-dossier';
+
 type CompletedFieldGuideProps = {
   candidates: Poi[];
   answerIds: string[];
@@ -32,43 +34,33 @@ function orderedCandidates(candidates: Poi[], answerIds: string[]): Poi[] {
   return [...answers, ...remainder];
 }
 
-function FieldGuideEntry({ poi, round }: { poi: Poi; round?: DailyRound }) {
-  const wikipediaUrl = wikipediaArticleUrl(poi.wikipediaTitle);
+function FieldGuideEntry({
+  poi,
+  onSelect,
+}: {
+  poi: Poi;
+  onSelect: () => void;
+}) {
   return (
-    <li className="space-y-1 border-b border-foreground/10 py-3 last:border-b-0">
-      <div className="flex min-w-0 flex-wrap items-baseline gap-x-3 gap-y-1">
-        <span className="min-w-0 wrap-break-word font-serif text-lg text-paper">
-          {poi.name}
+    <li className="border-b border-foreground/10 last:border-b-0">
+      <button
+        aria-label={`Open ${poi.name} dossier`}
+        className="flex min-h-11 w-full items-center justify-between gap-3 py-3 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
+        onClick={onSelect}
+        type="button"
+      >
+        <span className="min-w-0">
+          <span className="block min-w-0 wrap-break-word font-serif text-lg text-paper">
+            {poi.name}
+          </span>
+          <span className="block text-sm text-paper/65">
+            {poi.city}, {poi.country}
+          </span>
         </span>
-        <span className="text-sm text-paper/65">
-          {poi.city}, {poi.country}
+        <span aria-hidden="true" className="shrink-0 text-sm text-cyan">
+          View
         </span>
-        {wikipediaUrl ? (
-          <a
-            aria-label={`Wikipedia article for ${poi.name}`}
-            className="min-h-11 py-2 text-sm text-cyan underline decoration-brass underline-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
-            href={wikipediaUrl}
-            rel="noreferrer"
-            target="_blank"
-          >
-            Wikipedia
-          </a>
-        ) : null}
-      </div>
-      {round ? (
-        <p className="text-xs leading-relaxed text-paper/65">
-          {round.image.attribution}{' '}
-          <a
-            aria-label={`Photo license for ${poi.name}`}
-            className="inline-flex min-h-11 items-center px-1 text-cyan underline decoration-brass underline-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
-            href={round.image.licenseUrl}
-            rel="noreferrer"
-            target="_blank"
-          >
-            Photo license
-          </a>
-        </p>
-      ) : null}
+      </button>
     </li>
   );
 }
@@ -79,10 +71,14 @@ export function CompletedFieldGuide({
   rounds,
 }: CompletedFieldGuideProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedPoi, setSelectedPoi] = useState<Poi | null>(null);
   const ordered = orderedCandidates(candidates, answerIds);
   const roundByPoiId = new Map(
     rounds.map((round) => [round.targetPoiId, round] as const),
   );
+  const selectedRound = selectedPoi
+    ? roundByPoiId.get(selectedPoi.id)
+    : undefined;
 
   return (
     <section
@@ -104,13 +100,23 @@ export function CompletedFieldGuide({
             {ordered.map((poi) => (
               <FieldGuideEntry
                 key={poi.id}
+                onSelect={() => setSelectedPoi(poi)}
                 poi={poi}
-                round={roundByPoiId.get(poi.id)}
               />
             ))}
           </ul>
         ) : null}
       </details>
+      <PoiDossier
+        detail="full"
+        imageOverride={selectedRound?.image}
+        onOpenChange={(open) => {
+          if (!open) setSelectedPoi(null);
+        }}
+        open={selectedPoi !== null}
+        poi={selectedPoi}
+        wikipediaUrl={wikipediaArticleUrl(selectedPoi?.wikipediaTitle)}
+      />
     </section>
   );
 }

@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { makeFiveRoundCase } from '@whereabouts/case-content/testing';
 import { describe, expect, it } from 'vitest';
@@ -42,7 +42,7 @@ describe('CompletedFieldGuide', () => {
     await user.click(disclosure);
     const names = screen
       .getAllByRole('listitem')
-      .map((item) => item.querySelector('span')?.textContent);
+      .map((item) => item.querySelector('button > span > span')?.textContent);
     const answerNames = answerIds.map(
       (id) => caseData.pois.find((poi) => poi.id === id)?.name,
     );
@@ -55,16 +55,15 @@ describe('CompletedFieldGuide', () => {
     expect(new Set(names).size).toBe(caseData.pois.length);
   });
 
-  it('shows optional Wikipedia links and answer photo attribution without requiring a POI image', async () => {
+  it('opens a full answer dossier and restores focus to its card', async () => {
     const user = userEvent.setup();
     const caseData = makeFiveRoundCase();
     const answerIds = caseData.rounds.map((round) => round.targetPoiId);
     const firstAnswer = caseData.pois.find((poi) => poi.id === answerIds[0]);
     if (!firstAnswer) throw new Error('missing fixture answer');
-    const candidates = caseData.pois.map((poi, index) =>
-      index === 0
-        ? { ...poi, wikipediaTitle: undefined, image: undefined }
-        : poi,
+    const blurb = 'A concise account of this location and its history.';
+    const candidates = caseData.pois.map((poi) =>
+      poi.id === firstAnswer.id ? { ...poi, blurb, image: undefined } : poi,
     );
     render(
       <CompletedFieldGuide
@@ -75,21 +74,67 @@ describe('CompletedFieldGuide', () => {
     );
     await user.click(screen.getByText(/field guide/i));
 
-    expect(
-      screen.queryByRole('link', {
-        name: `Wikipedia article for ${firstAnswer.name}`,
-      }),
-    ).toBeNull();
-    const photoLicense = screen.getByRole('link', {
-      name: `Photo license for ${firstAnswer.name}`,
+    const entry = screen.getByRole('button', {
+      name: `Open ${firstAnswer.name} dossier`,
     });
-    expect(photoLicense).toHaveAttribute(
-      'href',
-      caseData.rounds[0].image.licenseUrl,
-    );
-    expect(photoLicense).toHaveClass('inline-flex', 'min-h-11', 'items-center');
+    expect(entry).toHaveClass('min-h-11');
+    await user.click(entry);
+
+    const dialog = screen.getByRole('dialog', { name: firstAnswer.name });
+    expect(within(dialog).getByText(blurb)).toBeVisible();
     expect(
-      screen.getAllByText(caseData.rounds[0].image.attribution),
-    ).toHaveLength(5);
+      within(dialog).getByRole('img', {
+        name: caseData.rounds[0].image.alt,
+      }),
+    ).toHaveAttribute('src', caseData.rounds[0].image.url);
+    expect(
+      within(dialog).getByRole('link', {
+        name: `Read ${firstAnswer.name} on Wikipedia`,
+      }),
+    ).toBeVisible();
+    expect(
+      within(dialog).getByText(caseData.rounds[0].image.attribution),
+    ).toBeVisible();
+    expect(
+      within(dialog).getByRole('link', {
+        name: `${firstAnswer.name} photo license`,
+      }),
+    ).toHaveAttribute('href', caseData.rounds[0].image.licenseUrl);
+
+    await user.click(
+      within(dialog).getByRole('button', { name: /^close$/i }),
+    );
+    expect(entry).toHaveFocus();
+  });
+
+  it('omits Wikipedia when an opened candidate has no article', async () => {
+    const user = userEvent.setup();
+    const caseData = makeFiveRoundCase();
+    const answerIds = caseData.rounds.map((round) => round.targetPoiId);
+    const candidateWithoutArticle = {
+      ...caseData.pois[5],
+      wikipediaTitle: undefined,
+    };
+    const candidates = caseData.pois.map((poi) =>
+      poi.id === candidateWithoutArticle.id ? candidateWithoutArticle : poi,
+    );
+    render(
+      <CompletedFieldGuide
+        answerIds={answerIds}
+        candidates={candidates}
+        rounds={caseData.rounds}
+      />,
+    );
+    await user.click(screen.getByText(/field guide/i));
+    await user.click(
+      screen.getByRole('button', {
+        name: `Open ${candidateWithoutArticle.name} dossier`,
+      }),
+    );
+
+    const dialog = screen.getByRole('dialog', {
+      name: candidateWithoutArticle.name,
+    });
+    expect(within(dialog).queryByRole('link', { name: /wikipedia/i })).toBeNull();
   });
 });
