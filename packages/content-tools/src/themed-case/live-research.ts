@@ -135,7 +135,9 @@ export function createWikimediaResearch(deps: Dependencies = {}): LiveResearch {
         .toLocaleLowerCase()
         .replace(/[^a-z0-9]/g, '');
     const resolvedTitle = compact(page.title);
-    const identities = [candidate.name, candidate.wikipediaTitle].map(compact);
+    const identities = [candidate.name, candidate.wikipediaTitle]
+      .filter((value): value is string => typeof value === 'string')
+      .map(compact);
     if (
       !identities.some(
         (identity) =>
@@ -180,7 +182,9 @@ export function createWikimediaResearch(deps: Dependencies = {}): LiveResearch {
         attempted.add(key);
         return hydrateTitle(candidate, title);
       };
-      const direct = await tryTitle(candidate.wikipediaTitle);
+      const direct = candidate.wikipediaTitle
+        ? await tryTitle(candidate.wikipediaTitle)
+        : null;
       if (direct) return direct;
       const query = `${candidate.name} ${candidate.city} ${candidate.country}`;
       const results = await search(query, 3);

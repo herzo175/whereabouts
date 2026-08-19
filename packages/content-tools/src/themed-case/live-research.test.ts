@@ -1,5 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import { validateCaseDraftAgainstBoard } from './contracts.js';
+import {
+  type ResearchedCandidate,
+  validateCaseDraftAgainstBoard,
+} from './contracts.js';
 import { fixtureBoard, fixtureCaseDraft } from './fixtures.js';
 import {
   createWikimediaResearch,
@@ -9,7 +12,7 @@ import {
 function response(body: unknown): Response {
   return new Response(JSON.stringify(body), { status: 200 });
 }
-const candidate = {
+const candidate: ResearchedCandidate = {
   id: 'old-town',
   name: 'Old Town',
   city: 'Prague',
@@ -134,6 +137,25 @@ describe('Wikimedia research', () => {
     });
     expect(urls.some((url) => url.includes('wikidata.org'))).toBe(false);
     expect(urls).toHaveLength(3);
+  });
+
+  it('searches by identity when a candidate has no Wikipedia title', async () => {
+    const calls: string[] = [];
+    const research = createWikimediaResearch({
+      fetch: async (input) => {
+        const url = String(input);
+        calls.push(url);
+        if (url.includes('list=search'))
+          return response({ query: { search: [] } });
+        throw new Error(`unexpected URL ${url}`);
+      },
+      userAgent: 'test-agent',
+    });
+    const { wikipediaTitle: _title, ...candidateWithoutArticle } = candidate;
+
+    await expect(research.hydrate(candidateWithoutArticle)).resolves.toBeNull();
+    expect(calls).toHaveLength(1);
+    expect(calls[0]).toContain('list=search');
   });
   it('returns null when source extract or attributed image is missing', async () => {
     const fetch: ResearchFetch = async (input) => {

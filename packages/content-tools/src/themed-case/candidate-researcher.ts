@@ -21,7 +21,7 @@ const modelCandidateSchema = z.object({
   name: z.string().min(2),
   city: z.string().min(1),
   country: z.string().min(2),
-  wikipediaTitle: z.string().min(2),
+  wikipediaTitle: z.string().min(2).optional(),
   themeClaim: z.string().min(20),
   latitude: z.number().min(-90).max(90),
   longitude: z.number().min(-180).max(180),
@@ -42,8 +42,8 @@ const proposalResponseSchema = z.object({
 const canonicalTitle = (title: string) =>
   title.trim().replaceAll('_', ' ').replace(/\s+/g, ' ').toLocaleLowerCase();
 
-const canonicalId = (id: string, title: string) => {
-  const value = (id || title).normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
+const canonicalId = (id: string) => {
+  const value = id.normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
   return value
     .toLocaleLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
@@ -79,6 +79,7 @@ export async function researchCandidates(input: {
     'For every proposal include reliable coordinates, a source URL, and a source extract of at least 100 characters. These are model evidence for later human audit, not independently verified facts. Do not invent a source or claim certainty when you do not know it.',
     "Set each proposal source provenance to 'model'; the pipeline ignores any other value from the model.",
     'Do not include an image; target images are verified separately after curation.',
+    'Include wikipediaTitle only when you know the specific English Wikipedia article title; otherwise omit it.',
     'Keep all candidates tightly within the theme. Do not add generic famous places as easy distractors.',
   ].join('\n');
   const generated = await input.model.generate({
@@ -92,7 +93,7 @@ export async function researchCandidates(input: {
     if (!parsed.success) continue;
     proposals.push({
       ...parsed.data,
-      id: canonicalId(parsed.data.id, parsed.data.wikipediaTitle),
+      id: canonicalId(parsed.data.id),
     });
   }
 
@@ -103,18 +104,24 @@ export async function researchCandidates(input: {
   for (const proposal of proposals) {
     const normalized = {
       ...proposal,
-      id: canonicalId(proposal.id, proposal.wikipediaTitle),
+      id: canonicalId(proposal.id),
       source: { ...proposal.source, provenance: 'model' as const },
     };
     const candidate = researchedCandidateSchema.safeParse(normalized);
     if (!candidate.success) continue;
     const value = candidate.data;
-    const titleKey = canonicalTitle(value.wikipediaTitle);
+    const titleKey = value.wikipediaTitle
+      ? canonicalTitle(value.wikipediaTitle)
+      : undefined;
     const coordinateKey = `${value.latitude.toFixed(4)},${value.longitude.toFixed(4)}`;
-    const id = canonicalId(value.id, value.wikipediaTitle);
-    if (titles.has(titleKey) || coordinates.has(coordinateKey) || ids.has(id))
+    const id = canonicalId(value.id);
+    if (
+      (titleKey !== undefined && titles.has(titleKey)) ||
+      coordinates.has(coordinateKey) ||
+      ids.has(id)
+    )
       continue;
-    titles.add(titleKey);
+    if (titleKey !== undefined) titles.add(titleKey);
     coordinates.add(coordinateKey);
     ids.add(id);
     researched.push({ ...value, id });
@@ -148,10 +155,11 @@ export async function hydrateBoardTargets(input: {
   const canonicalTitle = (title: string) =>
     title.trim().replaceAll('_', ' ').replace(/\s+/g, ' ').toLocaleLowerCase();
   const originalTitleOwners = new Map(
-    input.board.candidates.map((candidate) => [
-      canonicalTitle(candidate.wikipediaTitle),
-      candidate.id,
-    ]),
+    input.board.candidates.flatMap((candidate) =>
+      candidate.wikipediaTitle
+        ? [[canonicalTitle(candidate.wikipediaTitle), candidate.id] as const]
+        : [],
+    ),
   );
   const hydratedPageOwners = new Map<string, string>();
 

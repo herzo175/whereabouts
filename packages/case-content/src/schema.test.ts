@@ -23,6 +23,15 @@ describe('dailyCaseSchema', () => {
     expect(parsed.pois[0]?.themeConnection.sourceIds).toEqual(['source-01']);
   });
 
+  it('accepts a candidate without Wikipedia metadata', () => {
+    const value = makeFiveRoundCase();
+    delete (value.pois[10] as { wikipediaTitle?: string }).wikipediaTitle;
+
+    const parsed = dailyCaseSchema.parse(value);
+
+    expect(parsed.pois[10]?.wikipediaTitle).toBeUndefined();
+  });
+
   it('rejects a player introduction longer than 160 characters', () => {
     const value = makeFiveRoundCase();
     value.theme.introduction = 'A'.repeat(161);

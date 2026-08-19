@@ -185,7 +185,9 @@ export async function generateCase(
     country: candidate.country,
     latitude: candidate.latitude,
     longitude: candidate.longitude,
-    wikipediaTitle: candidate.wikipediaTitle,
+    ...(candidate.wikipediaTitle
+      ? { wikipediaTitle: candidate.wikipediaTitle }
+      : {}),
     blurb: buildPoiBlurb(candidate.source.extract),
     image: candidate.image,
     themeConnection: {

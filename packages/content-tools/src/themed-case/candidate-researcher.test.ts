@@ -35,7 +35,7 @@ const hydrated = (
   latitude: Number((index / 10).toFixed(4)),
   longitude: Number((index / 10 + 20).toFixed(4)),
   source: {
-    title: candidate.wikipediaTitle,
+    title: candidate.wikipediaTitle ?? candidate.name,
     url: `https://example.test/${index}`,
     retrievedAt: '2026-01-01T00:00:00.000Z',
     provenance: 'verified',
@@ -74,6 +74,24 @@ describe('researchCandidates', () => {
       },
     });
     expect(pool.candidates).toHaveLength(40);
+  });
+
+  it('keeps model candidates that do not provide Wikipedia metadata', async () => {
+    const candidates = Array.from({ length: 40 }, (_, index) => {
+      const { wikipediaTitle: _title, ...candidate } = proposal(index);
+      return candidate;
+    });
+    const pool = await researchCandidates({
+      theme: fixtureTheme,
+      model: {
+        generate: async () => ({ theme: fixtureTheme, candidates }),
+      },
+    });
+
+    expect(pool.candidates).toHaveLength(40);
+    expect(
+      pool.candidates.every((candidate) => !candidate.wikipediaTitle),
+    ).toBe(true);
   });
 
   it('forces model provenance even when the model claims verification', async () => {

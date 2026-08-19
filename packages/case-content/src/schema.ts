@@ -9,7 +9,7 @@ export type Poi = {
   country: string;
   latitude: number;
   longitude: number;
-  wikipediaTitle: string;
+  wikipediaTitle?: string;
   blurb?: string;
   image?: {
     url: string;
@@ -193,7 +193,15 @@ function parsePoi(value: unknown, path: string): Poi {
     country: string(parsed.country, `${path}.country`, 2),
     latitude: numberInRange(parsed.latitude, `${path}.latitude`, -90, 90),
     longitude: numberInRange(parsed.longitude, `${path}.longitude`, -180, 180),
-    wikipediaTitle: string(parsed.wikipediaTitle, `${path}.wikipediaTitle`),
+    ...(parsed.wikipediaTitle === undefined
+      ? {}
+      : {
+          wikipediaTitle: string(
+            parsed.wikipediaTitle,
+            `${path}.wikipediaTitle`,
+            2,
+          ),
+        }),
     ...(parsed.blurb === undefined
       ? {}
       : { blurb: string(parsed.blurb, `${path}.blurb`, 20) }),

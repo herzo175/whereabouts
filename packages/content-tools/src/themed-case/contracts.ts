@@ -3,8 +3,12 @@ import { z } from 'zod';
 
 const nonempty = z.string().min(1);
 const unique = (values: string[]) => new Set(values).size === values.length;
-const uniqueBy = (items: Array<{ id: string; wikipediaTitle: string }>) =>
-  unique(items.map((x) => x.id)) && unique(items.map((x) => x.wikipediaTitle));
+const uniqueBy = (items: Array<{ id: string; wikipediaTitle?: string }>) => {
+  const titles = items.flatMap((item) =>
+    item.wikipediaTitle ? [item.wikipediaTitle] : [],
+  );
+  return unique(items.map((item) => item.id)) && unique(titles);
+};
 
 export const themePlanSchema = z.object({
   title: z.string().min(3),
@@ -19,7 +23,7 @@ const candidateIdentitySchema = z.object({
   name: z.string().min(2),
   city: z.string().min(1),
   country: z.string().min(2),
-  wikipediaTitle: z.string().min(2),
+  wikipediaTitle: z.string().min(2).optional(),
   themeClaim: z.string().min(20),
 });
 const candidateEvidenceSchema = z.object({
@@ -63,9 +67,9 @@ export const candidateProposalPoolSchema = z
       });
   });
 export type CandidateProposalPool = z.infer<typeof candidateProposalPoolSchema>;
-export const hydratedCandidateSchema = candidateIdentitySchema.merge(
-  candidateEvidenceSchema,
-);
+export const hydratedCandidateSchema = candidateIdentitySchema
+  .extend({ wikipediaTitle: z.string().min(2) })
+  .merge(candidateEvidenceSchema);
 export type HydratedCandidate = z.infer<typeof hydratedCandidateSchema>;
 export const candidatePoolSchema = z
   .object({
