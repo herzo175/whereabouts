@@ -133,42 +133,52 @@ async function assertCompletedFieldGuide(
   await expect(candidates).toBeVisible();
   await expect(candidates.locator('li')).toHaveCount(caseData.pois.length);
 
-  const availableWikipedia = caseData.pois.filter(
-    (candidate) => candidate.wikipediaTitle,
-  );
-  await expect(
-    candidates.getByRole('link', { name: /Wikipedia article for/ }),
-  ).toHaveCount(availableWikipedia.length);
   for (const candidate of caseData.pois) {
     await expect(
-      candidates.getByText(candidate.name, { exact: true }),
+      candidates.getByRole('button', {
+        name: `Open ${candidate.name} dossier`,
+      }),
     ).toBeVisible();
-    const wikipedia = candidates.getByRole('link', {
-      name: `Wikipedia article for ${candidate.name}`,
-    });
-    if (candidate.wikipediaTitle) {
-      await expect(wikipedia).toHaveAttribute(
-        'href',
-        `https://en.wikipedia.org/wiki/${encodeURIComponent(candidate.wikipediaTitle.replace(/ /g, '_'))}`,
-      );
-    } else {
-      await expect(wikipedia).toHaveCount(0);
-    }
   }
 
-  const photoLicenses = candidates.getByRole('link', {
-    name: /Photo license for/,
-  });
-  await expect(photoLicenses).toHaveCount(5);
-  for (const round of caseData.rounds) {
-    const target = caseData.pois.find((poi) => poi.id === round.targetPoiId);
-    if (!target) throw new Error(`Missing target for ${round.id}`);
-    await expect(
-      candidates.getByRole('link', {
-        name: `Photo license for ${target.name}`,
-      }),
-    ).toHaveAttribute('href', round.image.licenseUrl);
-  }
+  const firstRound = caseData.rounds[0];
+  const firstAnswer = caseData.pois.find(
+    (candidate) => candidate.id === firstRound?.targetPoiId,
+  );
+  if (!firstRound || !firstAnswer)
+    throw new Error('Missing first answer fixture');
+  await candidates
+    .getByRole('button', { name: `Open ${firstAnswer.name} dossier` })
+    .click();
+  let dialog = page.getByRole('dialog', { name: firstAnswer.name });
+  await expect(
+    dialog.getByRole('img', { name: firstRound.image.alt }),
+  ).toBeVisible();
+  if (firstAnswer.blurb)
+    await expect(dialog.getByText(firstAnswer.blurb)).toBeVisible();
+  await expect(
+    dialog.getByRole('link', {
+      name: `Read ${firstAnswer.name} on Wikipedia`,
+    }),
+  ).toBeVisible();
+  await expect(dialog.getByText(firstRound.image.attribution)).toBeVisible();
+  await expect(
+    dialog.getByRole('link', {
+      name: `${firstAnswer.name} photo license`,
+    }),
+  ).toHaveAttribute('href', firstRound.image.licenseUrl);
+  await dialog.getByRole('button', { name: /^close$/i }).click();
+
+  const withoutArticle = caseData.pois.find(
+    (candidate) => !candidate.wikipediaTitle,
+  );
+  if (!withoutArticle) throw new Error('Missing title-less candidate fixture');
+  await candidates
+    .getByRole('button', { name: `Open ${withoutArticle.name} dossier` })
+    .click();
+  dialog = page.getByRole('dialog', { name: withoutArticle.name });
+  await expect(dialog.getByRole('link', { name: /wikipedia/i })).toHaveCount(0);
+  await dialog.getByRole('button', { name: /^close$/i }).click();
 }
 
 const emojiByTier = {

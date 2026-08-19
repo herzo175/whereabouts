@@ -43,10 +43,7 @@ describe('PoiDossier', () => {
     expect(screen.getByText(poi.blurb ?? '')).toBeVisible();
     expect(
       screen.getByRole('link', { name: /target place on wikipedia/i }),
-    ).toHaveAttribute(
-      'href',
-      'https://en.wikipedia.org/wiki/Target_Place',
-    );
+    ).toHaveAttribute('href', 'https://en.wikipedia.org/wiki/Target_Place');
     expect(screen.getByText(image.attribution)).toBeVisible();
     expect(
       screen.getByRole('link', { name: /target place photo license/i }),

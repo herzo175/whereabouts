@@ -101,9 +101,7 @@ describe('CompletedFieldGuide', () => {
       }),
     ).toHaveAttribute('href', caseData.rounds[0].image.licenseUrl);
 
-    await user.click(
-      within(dialog).getByRole('button', { name: /^close$/i }),
-    );
+    await user.click(within(dialog).getByRole('button', { name: /^close$/i }));
     expect(entry).toHaveFocus();
   });
 
@@ -135,6 +133,8 @@ describe('CompletedFieldGuide', () => {
     const dialog = screen.getByRole('dialog', {
       name: candidateWithoutArticle.name,
     });
-    expect(within(dialog).queryByRole('link', { name: /wikipedia/i })).toBeNull();
+    expect(
+      within(dialog).queryByRole('link', { name: /wikipedia/i }),
+    ).toBeNull();
   });
 });
