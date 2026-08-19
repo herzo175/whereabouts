@@ -111,10 +111,18 @@ describe('FiveRoundGameScreen', () => {
       name: /not quite/i,
     });
     expect(revealHeading).toBeInTheDocument();
-    expect(revealHeading.closest('header')).toHaveClass(
-      'text-center',
-      'sm:text-left',
-    );
+    expect(revealHeading.closest('header')).toHaveClass('text-center');
+    expect(revealHeading.closest('header')).not.toHaveClass('sm:text-left');
+    const revealMasthead = screen.getByRole('heading', {
+      name: 'Whereabouts',
+    }).parentElement;
+    expect(revealMasthead).toHaveClass('text-center');
+    expect(revealMasthead).not.toHaveClass('sm:text-left');
+    const revealTheme = screen.getByRole('heading', {
+      name: caseData.theme.title,
+    });
+    expect(revealTheme).toHaveClass('text-center');
+    expect(revealTheme).not.toHaveClass('sm:text-left');
     expect(screen.getByText(/warm · 56 points/i)).toBeInTheDocument();
     expect(
       screen.getByText(caseData.rounds[0].results[10].text),
@@ -122,7 +130,9 @@ describe('FiveRoundGameScreen', () => {
     expect(screen.queryByText(caseData.rounds[0].image.attribution)).toBeNull();
     expect(screen.queryByRole('link', { name: /license/i })).toBeNull();
     expect(screen.getByText('Target Place')).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /next round/i })).toBeVisible();
+    expect(screen.getByRole('button', { name: /next round/i })).toHaveClass(
+      'flex-1',
+    );
 
     await user.click(screen.getByRole('button', { name: /next round/i }));
 

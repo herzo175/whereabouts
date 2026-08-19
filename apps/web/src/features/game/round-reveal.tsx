@@ -145,7 +145,7 @@ export function RoundReveal({
   return (
     <section aria-label={`Round ${roundNumber} reveal`} className="space-y-5">
       {guessedCorrectly ? <CorrectConfetti /> : null}
-      <header className="space-y-2 border-b border-rule pb-5 text-center sm:text-left">
+      <header className="space-y-2 border-b border-rule pb-5 text-center">
         <p className="text-xs font-semibold tracking-[0.18em] text-cyan uppercase">
           Round {roundNumber} / 5
         </p>

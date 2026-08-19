@@ -42,14 +42,22 @@ const tierDotStyles = {
   cold: 'border-sky-200 bg-sky-400',
 } as const;
 
-function FiveRoundHeader({ progress }: { progress: FiveRoundProgress }) {
+function FiveRoundHeader({
+  centered = false,
+  progress,
+}: {
+  centered?: boolean;
+  progress: FiveRoundProgress;
+}) {
   return (
-    <header className="space-y-3 border-b border-rule pb-3 text-center sm:space-y-5 sm:pb-6 sm:text-left">
+    <header
+      className={`space-y-3 border-b border-rule pb-3 text-center sm:space-y-5 sm:pb-6 ${centered ? '' : 'sm:text-left'}`}
+    >
       <h1 className="font-serif text-3xl tracking-tight text-paper sm:text-5xl">
         Whereabouts
       </h1>
       <ol
-        className="flex justify-center gap-3 sm:justify-start sm:gap-4"
+        className={`flex justify-center gap-3 sm:gap-4 ${centered ? '' : 'sm:justify-start'}`}
         aria-label="Daily round progress"
       >
         {Array.from({ length: 5 }, (_, index) => {
@@ -163,9 +171,9 @@ export function FiveRoundGameScreen({
       return (
         <main className="min-h-screen bg-background px-4 py-3 text-paper sm:px-6 sm:py-8">
           <div className="mx-auto max-w-2xl space-y-3 sm:space-y-6">
-            <FiveRoundHeader progress={progress} />
+            <FiveRoundHeader centered progress={progress} />
             {caseData.schemaVersion === 4 ? (
-              <ThemeBriefing theme={caseData.theme} />
+              <ThemeBriefing centered theme={caseData.theme} />
             ) : null}
             <RoundReveal
               correctPoi={correctPoi}
@@ -174,11 +182,11 @@ export function FiveRoundGameScreen({
               round={revealedRound}
               roundNumber={viewedRevealIndex + 1}
             />
-            <nav aria-label="Result history" className="flex gap-3">
+            <nav aria-label="Result history" className="flex w-full gap-3">
               {viewedRevealIndex > 0 ? (
                 <button
                   aria-label={`Back to round ${viewedRevealIndex} result`}
-                  className="min-h-12 rounded-md border border-rule px-5 text-sm font-semibold text-paper hover:border-paper/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
+                  className="min-h-12 flex-1 rounded-md border border-rule px-5 text-sm font-semibold text-paper hover:border-paper/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
                   onClick={() =>
                     setViewedRevealIndex((index) =>
                       index === null ? null : index - 1,
@@ -192,7 +200,7 @@ export function FiveRoundGameScreen({
               {!isLatestReveal ? (
                 <button
                   aria-label={`Forward to round ${viewedRevealIndex + 2} result`}
-                  className="min-h-12 rounded-md bg-paper px-5 text-sm font-semibold text-ink hover:bg-paper/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
+                  className="min-h-12 flex-1 rounded-md bg-paper px-5 text-sm font-semibold text-ink hover:bg-paper/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
                   onClick={() =>
                     setViewedRevealIndex((index) =>
                       index === null ? null : index + 1,
@@ -204,7 +212,7 @@ export function FiveRoundGameScreen({
                 </button>
               ) : latestRevealIsPending ? (
                 <button
-                  className="min-h-12 rounded-md bg-paper px-5 text-sm font-semibold text-ink hover:bg-paper/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
+                  className="min-h-12 flex-1 rounded-md bg-paper px-5 text-sm font-semibold text-ink hover:bg-paper/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
                   onClick={acknowledgeReveal}
                   type="button"
                 >
@@ -217,7 +225,7 @@ export function FiveRoundGameScreen({
                       ? `Return to round ${progress.guesses.length + 1}`
                       : 'Return to daily summary'
                   }
-                  className="min-h-12 rounded-md bg-paper px-5 text-sm font-semibold text-ink hover:bg-paper/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
+                  className="min-h-12 flex-1 rounded-md bg-paper px-5 text-sm font-semibold text-ink hover:bg-paper/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
                   onClick={() => setViewedRevealIndex(null)}
                   type="button"
                 >
