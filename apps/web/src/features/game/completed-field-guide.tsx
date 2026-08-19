@@ -60,7 +60,7 @@ function FieldGuideEntry({ poi, round }: { poi: Poi; round?: DailyRound }) {
           {round.image.attribution}{' '}
           <a
             aria-label={`Photo license for ${poi.name}`}
-            className="text-cyan underline decoration-brass underline-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
+            className="inline-flex min-h-11 items-center px-1 text-cyan underline decoration-brass underline-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
             href={round.image.licenseUrl}
             rel="noreferrer"
             target="_blank"

@@ -80,11 +80,14 @@ describe('CompletedFieldGuide', () => {
         name: `Wikipedia article for ${firstAnswer.name}`,
       }),
     ).toBeNull();
-    expect(
-      screen.getByRole('link', {
-        name: `Photo license for ${firstAnswer.name}`,
-      }),
-    ).toHaveAttribute('href', caseData.rounds[0].image.licenseUrl);
+    const photoLicense = screen.getByRole('link', {
+      name: `Photo license for ${firstAnswer.name}`,
+    });
+    expect(photoLicense).toHaveAttribute(
+      'href',
+      caseData.rounds[0].image.licenseUrl,
+    );
+    expect(photoLicense).toHaveClass('inline-flex', 'min-h-11', 'items-center');
     expect(
       screen.getAllByText(caseData.rounds[0].image.attribution),
     ).toHaveLength(5);
