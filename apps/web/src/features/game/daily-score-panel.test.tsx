@@ -48,7 +48,7 @@ describe('DailyScorePanel', () => {
           screen.getByRole('button', {
             name: new RegExp(`Open round \\d location dossier: ${place.name}`),
           }),
-        ).toHaveClass('h-full');
+        ).toHaveClass('grid', 'h-full', 'grid-rows-[auto_auto_1fr_auto]');
       }
     }
 
