@@ -1,0 +1,1147 @@
+{
+  "schemaVersion": 4,
+  "publicationDate": "2026-08-28",
+  "revision": 1,
+  "caseNumber": 20693,
+  "pois": [
+    {
+      "id": "teatro-nacional-sao-carlos",
+      "name": "Teatro Nacional de São Carlos",
+      "city": "Lisbon",
+      "country": "Portugal",
+      "latitude": 38.71,
+      "longitude": -9.1424,
+      "wikipediaTitle": "Teatro Nacional de São Carlos",
+      "blurb": "The Teatro Nacional de São Carlos is an opera house in Lisbon, Portugal. It was inaugurated in 1793 and remains the country’s principal historic venue for opera performances.",
+      "themeConnection": {
+        "text": "São Carlos opened in 1793 and continues as Lisbon’s permanent public opera house with regular opera and musical performances.",
+        "sourceIds": ["source-16"]
+      }
+    },
+    {
+      "id": "odesa-opera",
+      "name": "Odesa National Academic Opera and Ballet Theatre",
+      "city": "Odesa",
+      "country": "Ukraine",
+      "latitude": 46.4857,
+      "longitude": 30.738,
+      "wikipediaTitle": "Odesa National Academic Theater of Opera and Ballet",
+      "blurb": "The Odesa National Academic Theater of Opera and Ballet is the oldest theatre in Odesa, Ukraine. Its present building opened in 1887 and remains an active venue for opera and ballet.",
+      "themeConnection": {
+        "text": "The Odesa Opera occupies the theatre site established in the nineteenth century, with the current building opened in 1887 and an ongoing opera and ballet programme.",
+        "sourceIds": ["source-08"]
+      }
+    },
+    {
+      "id": "estates-theatre",
+      "name": "Estates Theatre",
+      "city": "Prague",
+      "country": "Czech Republic",
+      "latitude": 50.0875,
+      "longitude": 14.423,
+      "wikipediaTitle": "Estates Theatre",
+      "blurb": "The Estates Theatre (in Czech: Stavovské divadlo) is a historic theatre in Prague, Czech Republic.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Stavovsk%C3%A9_divadlo_vstup_2.jpg/1280px-Stavovsk%C3%A9_divadlo_vstup_2.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Estates Theatre",
+        "attribution": "VitVit · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "Estates Theatre is a historic Prague theatre opened in 1783 that remains a functioning public venue within the National Theatre’s regular programme.",
+        "sourceIds": ["source-05"]
+      }
+    },
+    {
+      "id": "teatro-di-san-carlo",
+      "name": "Teatro di San Carlo",
+      "city": "Naples",
+      "country": "Italy",
+      "latitude": 40.8386,
+      "longitude": 14.2497,
+      "wikipediaTitle": "Teatro di San Carlo",
+      "blurb": "The Real Teatro di San Carlo (\"Royal Theatre of Saint Charles\"), as originally named by the Bourbon monarchy but today known simply as the Teatro (di) San Carlo, is a historic opera house in Naples, Italy, connected to the Royal Palace and adjacent to the Piazza del Plebiscito.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Teatro_de_San_Carlos%2C_N%C3%A1poles%2C_Italia%2C_2023-03-25%2C_DD_184-186_HDR.jpg/1280px-Teatro_de_San_Carlos%2C_N%C3%A1poles%2C_Italia%2C_2023-03-25%2C_DD_184-186_HDR.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Teatro di San Carlo",
+        "attribution": "Diego Delso · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "Teatro di San Carlo opened in 1737 and continues to operate as a permanent Naples opera house with regular public performances.",
+        "sourceIds": ["source-10"]
+      }
+    },
+    {
+      "id": "teatro-argentina",
+      "name": "Teatro Argentina",
+      "city": "Rome",
+      "country": "Italy",
+      "latitude": 41.8948,
+      "longitude": 12.4767,
+      "wikipediaTitle": "Teatro Argentina",
+      "blurb": "The Teatro Argentina is an opera house and theatre in Rome, Italy. It was inaugurated in 1732 and continues to function as one of the city’s principal venues for live performance.",
+      "themeConnection": {
+        "text": "Teatro Argentina is a Roman theatre opened in 1732 and remains a functioning public venue presenting scheduled drama, opera, and other live theatre.",
+        "sourceIds": ["source-11"]
+      }
+    },
+    {
+      "id": "teatro-amazonas",
+      "name": "Teatro Amazonas",
+      "city": "Manaus",
+      "country": "Brazil",
+      "latitude": -3.1303,
+      "longitude": -60.0233,
+      "wikipediaTitle": "Amazon Theatre",
+      "blurb": "The Amazon Theatre (Portuguese: Teatro Amazonas) is an opera house located in Manaus, Brazil, in the heart of the Amazon rainforest.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Noite_no_Teatro_Amazonas_%28cropped%29.jpg/1280px-Noite_no_Teatro_Amazonas_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Amazon Theatre",
+        "attribution": "Susan Valentim · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "Teatro Amazonas opened in 1896 and remains a fixed Manaus opera and theatre venue that presents publicly scheduled performances.",
+        "sourceIds": ["source-18"]
+      }
+    },
+    {
+      "id": "royal-opera-house-london",
+      "name": "Royal Opera House",
+      "city": "London",
+      "country": "United Kingdom",
+      "latitude": 51.5132,
+      "longitude": -0.1226,
+      "wikipediaTitle": "Royal Opera House",
+      "blurb": "The Royal Opera House (ROH) is a theatre in Covent Garden, central London. The building is often referred to as simply Covent Garden, after a previous use of the site.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Royal_Opera_House_and_ballerina.jpg/1280px-Royal_Opera_House_and_ballerina.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Royal Opera House",
+        "attribution": "Russ London (talk) · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "themeConnection": {
+        "text": "The Royal Opera House occupies the Covent Garden site of earlier theatre buildings dating to the eighteenth century and remains a regularly operating venue for opera and ballet.",
+        "sourceIds": ["source-01"]
+      }
+    },
+    {
+      "id": "teatro-espanol",
+      "name": "Teatro Español",
+      "city": "Madrid",
+      "country": "Spain",
+      "latitude": 40.4136,
+      "longitude": -3.7005,
+      "wikipediaTitle": "Teatro Español",
+      "blurb": "The Teatro Español is a public theatre in Madrid, Spain. The site has been used for theatrical performances since the sixteenth century, and the current theatre presents regular dramatic productions.",
+      "themeConnection": {
+        "text": "Teatro Español is Madrid’s historic municipal theatre, tracing public performances at the site to 1583 and continuing as a regular drama venue.",
+        "sourceIds": ["source-14"]
+      }
+    },
+    {
+      "id": "manoel-theatre",
+      "name": "Manoel Theatre",
+      "city": "Valletta",
+      "country": "Malta",
+      "latitude": 35.8994,
+      "longitude": 14.5125,
+      "wikipediaTitle": "Manoel Theatre",
+      "blurb": "Teatru Manoel (Maltese for \"Manoel Theatre\"; Italian: Teatro Manoel) is a theatre and important performing arts venue in Malta.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Manoel_theatre_%2812843882153%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Manoel Theatre",
+        "attribution": "R Muscat · CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      "themeConnection": {
+        "text": "The Manoel Theatre opened in 1732 and remains a permanent Valletta performance venue with public programmes of theatre, opera, and music.",
+        "sourceIds": ["source-17"]
+      }
+    },
+    {
+      "id": "teatro-massimo",
+      "name": "Teatro Massimo",
+      "city": "Palermo",
+      "country": "Italy",
+      "latitude": 38.1204,
+      "longitude": 13.3574,
+      "wikipediaTitle": "Teatro Massimo",
+      "blurb": "The Teatro Massimo is an opera house and performing arts venue in Palermo, Sicily. It was opened in 1897 and is Italy’s largest theatre building, still presenting performances.",
+      "themeConnection": {
+        "text": "Teatro Massimo opened in 1897 and remains Palermo’s permanent opera and performance venue, with publicly scheduled productions.",
+        "sourceIds": ["source-12"]
+      }
+    },
+    {
+      "id": "vienna-state-opera",
+      "name": "Vienna State Opera",
+      "city": "Vienna",
+      "country": "Austria",
+      "latitude": 48.203,
+      "longitude": 16.3698,
+      "wikipediaTitle": "Vienna State Opera",
+      "blurb": "The Vienna State Opera is an opera house and opera company based in Vienna, Austria. The building opened as the Vienna Court Opera in 1869 and presents a large annual programme.",
+      "themeConnection": {
+        "text": "The Vienna State Opera opened in 1869 as the Court Opera and remains a permanent opera and ballet house with a regular public season.",
+        "sourceIds": ["source-03"]
+      }
+    },
+    {
+      "id": "bolshoi-theatre",
+      "name": "Bolshoi Theatre",
+      "city": "Moscow",
+      "country": "Russia",
+      "latitude": 55.7601,
+      "longitude": 37.6187,
+      "wikipediaTitle": "Bolshoi Theatre",
+      "blurb": "The Bolshoi Theatre is a historic theatre in Moscow, Russia, designed for opera and ballet performances. The present building opened in 1856 after earlier Bolshoi theatres occupied the site.",
+      "themeConnection": {
+        "text": "The Bolshoi Theatre is a continuously recognized Moscow opera and ballet institution whose present building opened in 1856 and remains publicly programmed.",
+        "sourceIds": ["source-06"]
+      }
+    },
+    {
+      "id": "teatro-nacional-sucre",
+      "name": "Teatro Nacional Sucre",
+      "city": "Quito",
+      "country": "Ecuador",
+      "latitude": -0.2202,
+      "longitude": -78.5126,
+      "wikipediaTitle": "Teatro Nacional Sucre",
+      "blurb": "The Teatro Nacional Sucre is a theatre in Quito, Ecuador, named for Antonio José de Sucre. It opened in 1886 and is an active venue for theatre, opera, dance, and music.",
+      "themeConnection": {
+        "text": "Teatro Nacional Sucre opened in 1886 and, following restoration at the same site, operates as Quito’s permanent public theatre.",
+        "sourceIds": ["source-19"]
+      }
+    },
+    {
+      "id": "teatro-de-cristobal-colon",
+      "name": "Teatro de Cristóbal Colón",
+      "city": "Bogotá",
+      "country": "Colombia",
+      "latitude": 4.5962,
+      "longitude": -74.0734,
+      "wikipediaTitle": "Teatro de Cristóbal Colón",
+      "blurb": "The Teatro de Cristóbal Colón is Colombia’s national theatre, located in Bogotá. It was inaugurated in 1892 and continues to present theatre, opera, ballet, and other live performances.",
+      "themeConnection": {
+        "text": "Bogotá’s Teatro de Cristóbal Colón opened in 1892 and remains a permanent public theatre for opera, ballet, concerts, and dramatic performance.",
+        "sourceIds": ["source-20"]
+      }
+    },
+    {
+      "id": "hungarian-state-opera",
+      "name": "Hungarian State Opera",
+      "city": "Budapest",
+      "country": "Hungary",
+      "latitude": 47.5029,
+      "longitude": 19.0581,
+      "wikipediaTitle": "Hungarian State Opera House",
+      "blurb": "The Hungarian State Opera House is a neo-Renaissance opera house located in central Budapest. It opened in 1884 and remains an important venue for opera and ballet performances.",
+      "themeConnection": {
+        "text": "The Hungarian State Opera House opened in 1884 and remains Budapest’s principal permanent venue for scheduled opera and ballet performances.",
+        "sourceIds": ["source-04"]
+      }
+    },
+    {
+      "id": "teatro-alla-scala",
+      "name": "Teatro alla Scala",
+      "city": "Milan",
+      "country": "Italy",
+      "latitude": 45.4689,
+      "longitude": 9.1899,
+      "wikipediaTitle": "La Scala",
+      "blurb": "La Scala is an opera house in Milan, Italy. The theatre was inaugurated in 1778 and has remained a major venue for opera and ballet, with regular scheduled seasons.",
+      "themeConnection": {
+        "text": "La Scala opened in 1778 on the site of the Teatro Ducale and remains one of Milan’s permanent public opera and ballet venues.",
+        "sourceIds": ["source-09"]
+      }
+    },
+    {
+      "id": "mariinsky-theatre",
+      "name": "Mariinsky Theatre",
+      "city": "Saint Petersburg",
+      "country": "Russia",
+      "latitude": 59.9258,
+      "longitude": 30.295,
+      "wikipediaTitle": "Mariinsky Theatre",
+      "blurb": "The Mariinsky Theatre is a historic theatre of opera and ballet in Saint Petersburg, Russia. It opened in 1860 and continues to present performances by its opera and ballet companies.",
+      "themeConnection": {
+        "text": "The Mariinsky Theatre’s historic main building opened in 1860 and remains a permanent public venue for opera and ballet in Saint Petersburg.",
+        "sourceIds": ["source-07"]
+      }
+    },
+    {
+      "id": "gran-teatre-del-liceu",
+      "name": "Gran Teatre del Liceu",
+      "city": "Barcelona",
+      "country": "Spain",
+      "latitude": 41.3802,
+      "longitude": 2.173,
+      "wikipediaTitle": "Gran Teatre del Liceu",
+      "blurb": "The Gran Teatre del Liceu is an opera house on La Rambla in Barcelona. It opened in 1847, was rebuilt after fires, and continues to present regular opera and ballet performances.",
+      "themeConnection": {
+        "text": "The Liceu opened in 1847 and, despite rebuilding after fires, remains an operating Barcelona opera house at the established La Rambla site.",
+        "sourceIds": ["source-15"]
+      }
+    },
+    {
+      "id": "teatro-comunale-bologna",
+      "name": "Teatro Comunale di Bologna",
+      "city": "Bologna",
+      "country": "Italy",
+      "latitude": 44.496,
+      "longitude": 11.35,
+      "wikipediaTitle": "Teatro Comunale di Bologna",
+      "blurb": "The Teatro Comunale di Bologna is an opera house in Bologna, Italy. Its first performance took place in 1763, and the theatre remains active with regular opera and concert seasons.",
+      "themeConnection": {
+        "text": "Teatro Comunale di Bologna opened in 1763 and continues to operate as a public opera venue at its historic city-centre site.",
+        "sourceIds": ["source-13"]
+      }
+    },
+    {
+      "id": "palais-garnier",
+      "name": "Palais Garnier",
+      "city": "Paris",
+      "country": "France",
+      "latitude": 48.8719,
+      "longitude": 2.3316,
+      "wikipediaTitle": "Palais Garnier",
+      "blurb": "The Palais Garnier is a historic opera house in Paris, France. It was built from 1861 to 1875 for the Paris Opera and continues to host opera, ballet, and other performances.",
+      "themeConnection": {
+        "text": "The Palais Garnier is a permanent opera and ballet venue opened in 1875 and remains part of the Paris Opera’s publicly programmed performance network.",
+        "sourceIds": ["source-02"]
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "round-1",
+      "targetPoiId": "royal-opera-house-london",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Royal_Opera_House_and_ballerina.jpg/1280px-Royal_Opera_House_and_ballerina.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Royal Opera House",
+        "attribution": "Russ London (talk) · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "clue": {
+        "text": "A regularly operating opera-and-ballet house occupies a Covent Garden site whose earlier theatres were destroyed by fires; its surviving 1858 façade and horseshoe auditorium were extensively reconstructed in the 1990s.",
+        "sourceIds": ["source-01"]
+      },
+      "results": [
+        {
+          "poiId": "royal-opera-house-london",
+          "points": 100,
+          "text": "Royal Opera House is the round target: The Royal Opera House occupies the Covent Garden site of earlier theatre buildings dating to the eighteenth century and remains a regularly operating venue for opera and ballet.",
+          "sourceIds": ["source-01"]
+        },
+        {
+          "poiId": "palais-garnier",
+          "points": 82,
+          "text": "Palais Garnier is a themed comparison candidate: The Palais Garnier is a permanent opera and ballet venue opened in 1875 and remains part of the Paris Opera’s publicly programmed performance network.",
+          "sourceIds": ["source-02", "source-01"]
+        },
+        {
+          "poiId": "vienna-state-opera",
+          "points": 78,
+          "text": "Vienna State Opera is a themed comparison candidate: The Vienna State Opera opened in 1869 as the Court Opera and remains a permanent opera and ballet house with a regular public season.",
+          "sourceIds": ["source-03", "source-01"]
+        },
+        {
+          "poiId": "hungarian-state-opera",
+          "points": 70,
+          "text": "Hungarian State Opera is a themed comparison candidate: The Hungarian State Opera House opened in 1884 and remains Budapest’s principal permanent venue for scheduled opera and ballet performances.",
+          "sourceIds": ["source-04", "source-01"]
+        },
+        {
+          "poiId": "estates-theatre",
+          "points": 55,
+          "text": "Estates Theatre is a themed comparison candidate: Estates Theatre is a historic Prague theatre opened in 1783 that remains a functioning public venue within the National Theatre’s regular programme.",
+          "sourceIds": ["source-05", "source-01"]
+        },
+        {
+          "poiId": "bolshoi-theatre",
+          "points": 52,
+          "text": "Bolshoi Theatre is a themed comparison candidate: The Bolshoi Theatre is a continuously recognized Moscow opera and ballet institution whose present building opened in 1856 and remains publicly programmed.",
+          "sourceIds": ["source-06", "source-01"]
+        },
+        {
+          "poiId": "mariinsky-theatre",
+          "points": 48,
+          "text": "Mariinsky Theatre is a themed comparison candidate: The Mariinsky Theatre’s historic main building opened in 1860 and remains a permanent public venue for opera and ballet in Saint Petersburg.",
+          "sourceIds": ["source-07", "source-01"]
+        },
+        {
+          "poiId": "odesa-opera",
+          "points": 44,
+          "text": "Odesa National Academic Opera and Ballet Theatre is a themed comparison candidate: The Odesa Opera occupies the theatre site established in the nineteenth century, with the current building opened in 1887 and an ongoing opera and ballet programme.",
+          "sourceIds": ["source-08", "source-01"]
+        },
+        {
+          "poiId": "teatro-alla-scala",
+          "points": 65,
+          "text": "Teatro alla Scala is a themed comparison candidate: La Scala opened in 1778 on the site of the Teatro Ducale and remains one of Milan’s permanent public opera and ballet venues.",
+          "sourceIds": ["source-09", "source-01"]
+        },
+        {
+          "poiId": "teatro-di-san-carlo",
+          "points": 61,
+          "text": "Teatro di San Carlo is a themed comparison candidate: Teatro di San Carlo opened in 1737 and continues to operate as a permanent Naples opera house with regular public performances.",
+          "sourceIds": ["source-10", "source-01"]
+        },
+        {
+          "poiId": "teatro-argentina",
+          "points": 38,
+          "text": "Teatro Argentina is a themed comparison candidate: Teatro Argentina is a Roman theatre opened in 1732 and remains a functioning public venue presenting scheduled drama, opera, and other live theatre.",
+          "sourceIds": ["source-11", "source-01"]
+        },
+        {
+          "poiId": "teatro-massimo",
+          "points": 57,
+          "text": "Teatro Massimo is a themed comparison candidate: Teatro Massimo opened in 1897 and remains Palermo’s permanent opera and performance venue, with publicly scheduled productions.",
+          "sourceIds": ["source-12", "source-01"]
+        },
+        {
+          "poiId": "teatro-comunale-bologna",
+          "points": 42,
+          "text": "Teatro Comunale di Bologna is a themed comparison candidate: Teatro Comunale di Bologna opened in 1763 and continues to operate as a public opera venue at its historic city-centre site.",
+          "sourceIds": ["source-13", "source-01"]
+        },
+        {
+          "poiId": "teatro-espanol",
+          "points": 29,
+          "text": "Teatro Español is a themed comparison candidate: Teatro Español is Madrid’s historic municipal theatre, tracing public performances at the site to 1583 and continuing as a regular drama venue.",
+          "sourceIds": ["source-14", "source-01"]
+        },
+        {
+          "poiId": "gran-teatre-del-liceu",
+          "points": 73,
+          "text": "Gran Teatre del Liceu is a themed comparison candidate: The Liceu opened in 1847 and, despite rebuilding after fires, remains an operating Barcelona opera house at the established La Rambla site.",
+          "sourceIds": ["source-15", "source-01"]
+        },
+        {
+          "poiId": "teatro-nacional-sao-carlos",
+          "points": 46,
+          "text": "Teatro Nacional de São Carlos is a themed comparison candidate: São Carlos opened in 1793 and continues as Lisbon’s permanent public opera house with regular opera and musical performances.",
+          "sourceIds": ["source-16", "source-01"]
+        },
+        {
+          "poiId": "manoel-theatre",
+          "points": 35,
+          "text": "Manoel Theatre is a themed comparison candidate: The Manoel Theatre opened in 1732 and remains a permanent Valletta performance venue with public programmes of theatre, opera, and music.",
+          "sourceIds": ["source-17", "source-01"]
+        },
+        {
+          "poiId": "teatro-amazonas",
+          "points": 50,
+          "text": "Teatro Amazonas is a themed comparison candidate: Teatro Amazonas opened in 1896 and remains a fixed Manaus opera and theatre venue that presents publicly scheduled performances.",
+          "sourceIds": ["source-18", "source-01"]
+        },
+        {
+          "poiId": "teatro-nacional-sucre",
+          "points": 25,
+          "text": "Teatro Nacional Sucre is a themed comparison candidate: Teatro Nacional Sucre opened in 1886 and, following restoration at the same site, operates as Quito’s permanent public theatre.",
+          "sourceIds": ["source-19", "source-01"]
+        },
+        {
+          "poiId": "teatro-de-cristobal-colon",
+          "points": 33,
+          "text": "Teatro de Cristóbal Colón is a themed comparison candidate: Bogotá’s Teatro de Cristóbal Colón opened in 1892 and remains a permanent public theatre for opera, ballet, concerts, and dramatic performance.",
+          "sourceIds": ["source-20", "source-01"]
+        }
+      ]
+    },
+    {
+      "id": "round-2",
+      "targetPoiId": "estates-theatre",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Stavovsk%C3%A9_divadlo_vstup_2.jpg/1280px-Stavovsk%C3%A9_divadlo_vstup_2.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Estates Theatre",
+        "attribution": "VitVit · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "A preserved Neoclassical public theatre, built for an aristocrat during the Enlightenment, is strongly associated with Mozart: he conducted the premiere of Don Giovanni there, and its opera programme still focuses on his work.",
+        "sourceIds": ["source-05"]
+      },
+      "results": [
+        {
+          "poiId": "royal-opera-house-london",
+          "points": 34,
+          "text": "Royal Opera House is a themed comparison candidate: The Royal Opera House occupies the Covent Garden site of earlier theatre buildings dating to the eighteenth century and remains a regularly operating venue for opera and ballet.",
+          "sourceIds": ["source-01", "source-05"]
+        },
+        {
+          "poiId": "palais-garnier",
+          "points": 31,
+          "text": "Palais Garnier is a themed comparison candidate: The Palais Garnier is a permanent opera and ballet venue opened in 1875 and remains part of the Paris Opera’s publicly programmed performance network.",
+          "sourceIds": ["source-02", "source-05"]
+        },
+        {
+          "poiId": "vienna-state-opera",
+          "points": 39,
+          "text": "Vienna State Opera is a themed comparison candidate: The Vienna State Opera opened in 1869 as the Court Opera and remains a permanent opera and ballet house with a regular public season.",
+          "sourceIds": ["source-03", "source-05"]
+        },
+        {
+          "poiId": "hungarian-state-opera",
+          "points": 28,
+          "text": "Hungarian State Opera is a themed comparison candidate: The Hungarian State Opera House opened in 1884 and remains Budapest’s principal permanent venue for scheduled opera and ballet performances.",
+          "sourceIds": ["source-04", "source-05"]
+        },
+        {
+          "poiId": "estates-theatre",
+          "points": 100,
+          "text": "Estates Theatre is the round target: Estates Theatre is a historic Prague theatre opened in 1783 that remains a functioning public venue within the National Theatre’s regular programme.",
+          "sourceIds": ["source-05"]
+        },
+        {
+          "poiId": "bolshoi-theatre",
+          "points": 24,
+          "text": "Bolshoi Theatre is a themed comparison candidate: The Bolshoi Theatre is a continuously recognized Moscow opera and ballet institution whose present building opened in 1856 and remains publicly programmed.",
+          "sourceIds": ["source-06", "source-05"]
+        },
+        {
+          "poiId": "mariinsky-theatre",
+          "points": 22,
+          "text": "Mariinsky Theatre is a themed comparison candidate: The Mariinsky Theatre’s historic main building opened in 1860 and remains a permanent public venue for opera and ballet in Saint Petersburg.",
+          "sourceIds": ["source-07", "source-05"]
+        },
+        {
+          "poiId": "odesa-opera",
+          "points": 20,
+          "text": "Odesa National Academic Opera and Ballet Theatre is a themed comparison candidate: The Odesa Opera occupies the theatre site established in the nineteenth century, with the current building opened in 1887 and an ongoing opera and ballet programme.",
+          "sourceIds": ["source-08", "source-05"]
+        },
+        {
+          "poiId": "teatro-alla-scala",
+          "points": 47,
+          "text": "Teatro alla Scala is a themed comparison candidate: La Scala opened in 1778 on the site of the Teatro Ducale and remains one of Milan’s permanent public opera and ballet venues.",
+          "sourceIds": ["source-09", "source-05"]
+        },
+        {
+          "poiId": "teatro-di-san-carlo",
+          "points": 54,
+          "text": "Teatro di San Carlo is a themed comparison candidate: Teatro di San Carlo opened in 1737 and continues to operate as a permanent Naples opera house with regular public performances.",
+          "sourceIds": ["source-10", "source-05"]
+        },
+        {
+          "poiId": "teatro-argentina",
+          "points": 19,
+          "text": "Teatro Argentina is a themed comparison candidate: Teatro Argentina is a Roman theatre opened in 1732 and remains a functioning public venue presenting scheduled drama, opera, and other live theatre.",
+          "sourceIds": ["source-11", "source-05"]
+        },
+        {
+          "poiId": "teatro-massimo",
+          "points": 18,
+          "text": "Teatro Massimo is a themed comparison candidate: Teatro Massimo opened in 1897 and remains Palermo’s permanent opera and performance venue, with publicly scheduled productions.",
+          "sourceIds": ["source-12", "source-05"]
+        },
+        {
+          "poiId": "teatro-comunale-bologna",
+          "points": 44,
+          "text": "Teatro Comunale di Bologna is a themed comparison candidate: Teatro Comunale di Bologna opened in 1763 and continues to operate as a public opera venue at its historic city-centre site.",
+          "sourceIds": ["source-13", "source-05"]
+        },
+        {
+          "poiId": "teatro-espanol",
+          "points": 41,
+          "text": "Teatro Español is a themed comparison candidate: Teatro Español is Madrid’s historic municipal theatre, tracing public performances at the site to 1583 and continuing as a regular drama venue.",
+          "sourceIds": ["source-14", "source-05"]
+        },
+        {
+          "poiId": "gran-teatre-del-liceu",
+          "points": 26,
+          "text": "Gran Teatre del Liceu is a themed comparison candidate: The Liceu opened in 1847 and, despite rebuilding after fires, remains an operating Barcelona opera house at the established La Rambla site.",
+          "sourceIds": ["source-15", "source-05"]
+        },
+        {
+          "poiId": "teatro-nacional-sao-carlos",
+          "points": 43,
+          "text": "Teatro Nacional de São Carlos is a themed comparison candidate: São Carlos opened in 1793 and continues as Lisbon’s permanent public opera house with regular opera and musical performances.",
+          "sourceIds": ["source-16", "source-05"]
+        },
+        {
+          "poiId": "manoel-theatre",
+          "points": 52,
+          "text": "Manoel Theatre is a themed comparison candidate: The Manoel Theatre opened in 1732 and remains a permanent Valletta performance venue with public programmes of theatre, opera, and music.",
+          "sourceIds": ["source-17", "source-05"]
+        },
+        {
+          "poiId": "teatro-amazonas",
+          "points": 12,
+          "text": "Teatro Amazonas is a themed comparison candidate: Teatro Amazonas opened in 1896 and remains a fixed Manaus opera and theatre venue that presents publicly scheduled performances.",
+          "sourceIds": ["source-18", "source-05"]
+        },
+        {
+          "poiId": "teatro-nacional-sucre",
+          "points": 10,
+          "text": "Teatro Nacional Sucre is a themed comparison candidate: Teatro Nacional Sucre opened in 1886 and, following restoration at the same site, operates as Quito’s permanent public theatre.",
+          "sourceIds": ["source-19", "source-05"]
+        },
+        {
+          "poiId": "teatro-de-cristobal-colon",
+          "points": 15,
+          "text": "Teatro de Cristóbal Colón is a themed comparison candidate: Bogotá’s Teatro de Cristóbal Colón opened in 1892 and remains a permanent public theatre for opera, ballet, concerts, and dramatic performance.",
+          "sourceIds": ["source-20", "source-05"]
+        }
+      ]
+    },
+    {
+      "id": "round-3",
+      "targetPoiId": "teatro-di-san-carlo",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Teatro_de_San_Carlos%2C_N%C3%A1poles%2C_Italia%2C_2023-03-25%2C_DD_184-186_HDR.jpg/1280px-Teatro_de_San_Carlos%2C_N%C3%A1poles%2C_Italia%2C_2023-03-25%2C_DD_184-186_HDR.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Teatro di San Carlo",
+        "attribution": "Diego Delso · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "A royal opera house is connected to a Bourbon palace and a prominent piazza, and its 18th-century horseshoe auditorium was rebuilt after a rehearsal fire; it remains a permanent opera venue.",
+        "sourceIds": ["source-10"]
+      },
+      "results": [
+        {
+          "poiId": "royal-opera-house-london",
+          "points": 48,
+          "text": "Royal Opera House is a themed comparison candidate: The Royal Opera House occupies the Covent Garden site of earlier theatre buildings dating to the eighteenth century and remains a regularly operating venue for opera and ballet.",
+          "sourceIds": ["source-01", "source-10"]
+        },
+        {
+          "poiId": "palais-garnier",
+          "points": 45,
+          "text": "Palais Garnier is a themed comparison candidate: The Palais Garnier is a permanent opera and ballet venue opened in 1875 and remains part of the Paris Opera’s publicly programmed performance network.",
+          "sourceIds": ["source-02", "source-10"]
+        },
+        {
+          "poiId": "vienna-state-opera",
+          "points": 51,
+          "text": "Vienna State Opera is a themed comparison candidate: The Vienna State Opera opened in 1869 as the Court Opera and remains a permanent opera and ballet house with a regular public season.",
+          "sourceIds": ["source-03", "source-10"]
+        },
+        {
+          "poiId": "hungarian-state-opera",
+          "points": 37,
+          "text": "Hungarian State Opera is a themed comparison candidate: The Hungarian State Opera House opened in 1884 and remains Budapest’s principal permanent venue for scheduled opera and ballet performances.",
+          "sourceIds": ["source-04", "source-10"]
+        },
+        {
+          "poiId": "estates-theatre",
+          "points": 58,
+          "text": "Estates Theatre is a themed comparison candidate: Estates Theatre is a historic Prague theatre opened in 1783 that remains a functioning public venue within the National Theatre’s regular programme.",
+          "sourceIds": ["source-05", "source-10"]
+        },
+        {
+          "poiId": "bolshoi-theatre",
+          "points": 35,
+          "text": "Bolshoi Theatre is a themed comparison candidate: The Bolshoi Theatre is a continuously recognized Moscow opera and ballet institution whose present building opened in 1856 and remains publicly programmed.",
+          "sourceIds": ["source-06", "source-10"]
+        },
+        {
+          "poiId": "mariinsky-theatre",
+          "points": 41,
+          "text": "Mariinsky Theatre is a themed comparison candidate: The Mariinsky Theatre’s historic main building opened in 1860 and remains a permanent public venue for opera and ballet in Saint Petersburg.",
+          "sourceIds": ["source-07", "source-10"]
+        },
+        {
+          "poiId": "odesa-opera",
+          "points": 32,
+          "text": "Odesa National Academic Opera and Ballet Theatre is a themed comparison candidate: The Odesa Opera occupies the theatre site established in the nineteenth century, with the current building opened in 1887 and an ongoing opera and ballet programme.",
+          "sourceIds": ["source-08", "source-10"]
+        },
+        {
+          "poiId": "teatro-alla-scala",
+          "points": 74,
+          "text": "Teatro alla Scala is a themed comparison candidate: La Scala opened in 1778 on the site of the Teatro Ducale and remains one of Milan’s permanent public opera and ballet venues.",
+          "sourceIds": ["source-09", "source-10"]
+        },
+        {
+          "poiId": "teatro-di-san-carlo",
+          "points": 100,
+          "text": "Teatro di San Carlo is the round target: Teatro di San Carlo opened in 1737 and continues to operate as a permanent Naples opera house with regular public performances.",
+          "sourceIds": ["source-10"]
+        },
+        {
+          "poiId": "teatro-argentina",
+          "points": 53,
+          "text": "Teatro Argentina is a themed comparison candidate: Teatro Argentina is a Roman theatre opened in 1732 and remains a functioning public venue presenting scheduled drama, opera, and other live theatre.",
+          "sourceIds": ["source-11", "source-10"]
+        },
+        {
+          "poiId": "teatro-massimo",
+          "points": 47,
+          "text": "Teatro Massimo is a themed comparison candidate: Teatro Massimo opened in 1897 and remains Palermo’s permanent opera and performance venue, with publicly scheduled productions.",
+          "sourceIds": ["source-12", "source-10"]
+        },
+        {
+          "poiId": "teatro-comunale-bologna",
+          "points": 62,
+          "text": "Teatro Comunale di Bologna is a themed comparison candidate: Teatro Comunale di Bologna opened in 1763 and continues to operate as a public opera venue at its historic city-centre site.",
+          "sourceIds": ["source-13", "source-10"]
+        },
+        {
+          "poiId": "teatro-espanol",
+          "points": 18,
+          "text": "Teatro Español is a themed comparison candidate: Teatro Español is Madrid’s historic municipal theatre, tracing public performances at the site to 1583 and continuing as a regular drama venue.",
+          "sourceIds": ["source-14", "source-10"]
+        },
+        {
+          "poiId": "gran-teatre-del-liceu",
+          "points": 43,
+          "text": "Gran Teatre del Liceu is a themed comparison candidate: The Liceu opened in 1847 and, despite rebuilding after fires, remains an operating Barcelona opera house at the established La Rambla site.",
+          "sourceIds": ["source-15", "source-10"]
+        },
+        {
+          "poiId": "teatro-nacional-sao-carlos",
+          "points": 69,
+          "text": "Teatro Nacional de São Carlos is a themed comparison candidate: São Carlos opened in 1793 and continues as Lisbon’s permanent public opera house with regular opera and musical performances.",
+          "sourceIds": ["source-16", "source-10"]
+        },
+        {
+          "poiId": "manoel-theatre",
+          "points": 56,
+          "text": "Manoel Theatre is a themed comparison candidate: The Manoel Theatre opened in 1732 and remains a permanent Valletta performance venue with public programmes of theatre, opera, and music.",
+          "sourceIds": ["source-17", "source-10"]
+        },
+        {
+          "poiId": "teatro-amazonas",
+          "points": 29,
+          "text": "Teatro Amazonas is a themed comparison candidate: Teatro Amazonas opened in 1896 and remains a fixed Manaus opera and theatre venue that presents publicly scheduled performances.",
+          "sourceIds": ["source-18", "source-10"]
+        },
+        {
+          "poiId": "teatro-nacional-sucre",
+          "points": 21,
+          "text": "Teatro Nacional Sucre is a themed comparison candidate: Teatro Nacional Sucre opened in 1886 and, following restoration at the same site, operates as Quito’s permanent public theatre.",
+          "sourceIds": ["source-19", "source-10"]
+        },
+        {
+          "poiId": "teatro-de-cristobal-colon",
+          "points": 25,
+          "text": "Teatro de Cristóbal Colón is a themed comparison candidate: Bogotá’s Teatro de Cristóbal Colón opened in 1892 and remains a permanent public theatre for opera, ballet, concerts, and dramatic performance.",
+          "sourceIds": ["source-20", "source-10"]
+        }
+      ]
+    },
+    {
+      "id": "round-4",
+      "targetPoiId": "manoel-theatre",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Manoel_theatre_%2812843882153%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "alt": "Manoel Theatre",
+        "attribution": "R Muscat · CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      "clue": {
+        "text": "A small public theatre commissioned by a Knights Hospitaller grand master has an oval auditorium with wooden, gold-leaf boxes and a trompe-l'œil ceiling; it remains a working venue for theatre, opera, and music.",
+        "sourceIds": ["source-17"]
+      },
+      "results": [
+        {
+          "poiId": "royal-opera-house-london",
+          "points": 24,
+          "text": "Royal Opera House is a themed comparison candidate: The Royal Opera House occupies the Covent Garden site of earlier theatre buildings dating to the eighteenth century and remains a regularly operating venue for opera and ballet.",
+          "sourceIds": ["source-01", "source-17"]
+        },
+        {
+          "poiId": "palais-garnier",
+          "points": 20,
+          "text": "Palais Garnier is a themed comparison candidate: The Palais Garnier is a permanent opera and ballet venue opened in 1875 and remains part of the Paris Opera’s publicly programmed performance network.",
+          "sourceIds": ["source-02", "source-17"]
+        },
+        {
+          "poiId": "vienna-state-opera",
+          "points": 22,
+          "text": "Vienna State Opera is a themed comparison candidate: The Vienna State Opera opened in 1869 as the Court Opera and remains a permanent opera and ballet house with a regular public season.",
+          "sourceIds": ["source-03", "source-17"]
+        },
+        {
+          "poiId": "hungarian-state-opera",
+          "points": 17,
+          "text": "Hungarian State Opera is a themed comparison candidate: The Hungarian State Opera House opened in 1884 and remains Budapest’s principal permanent venue for scheduled opera and ballet performances.",
+          "sourceIds": ["source-04", "source-17"]
+        },
+        {
+          "poiId": "estates-theatre",
+          "points": 52,
+          "text": "Estates Theatre is a themed comparison candidate: Estates Theatre is a historic Prague theatre opened in 1783 that remains a functioning public venue within the National Theatre’s regular programme.",
+          "sourceIds": ["source-05", "source-17"]
+        },
+        {
+          "poiId": "bolshoi-theatre",
+          "points": 16,
+          "text": "Bolshoi Theatre is a themed comparison candidate: The Bolshoi Theatre is a continuously recognized Moscow opera and ballet institution whose present building opened in 1856 and remains publicly programmed.",
+          "sourceIds": ["source-06", "source-17"]
+        },
+        {
+          "poiId": "mariinsky-theatre",
+          "points": 19,
+          "text": "Mariinsky Theatre is a themed comparison candidate: The Mariinsky Theatre’s historic main building opened in 1860 and remains a permanent public venue for opera and ballet in Saint Petersburg.",
+          "sourceIds": ["source-07", "source-17"]
+        },
+        {
+          "poiId": "odesa-opera",
+          "points": 14,
+          "text": "Odesa National Academic Opera and Ballet Theatre is a themed comparison candidate: The Odesa Opera occupies the theatre site established in the nineteenth century, with the current building opened in 1887 and an ongoing opera and ballet programme.",
+          "sourceIds": ["source-08", "source-17"]
+        },
+        {
+          "poiId": "teatro-alla-scala",
+          "points": 61,
+          "text": "Teatro alla Scala is a themed comparison candidate: La Scala opened in 1778 on the site of the Teatro Ducale and remains one of Milan’s permanent public opera and ballet venues.",
+          "sourceIds": ["source-09", "source-17"]
+        },
+        {
+          "poiId": "teatro-di-san-carlo",
+          "points": 66,
+          "text": "Teatro di San Carlo is a themed comparison candidate: Teatro di San Carlo opened in 1737 and continues to operate as a permanent Naples opera house with regular public performances.",
+          "sourceIds": ["source-10", "source-17"]
+        },
+        {
+          "poiId": "teatro-argentina",
+          "points": 32,
+          "text": "Teatro Argentina is a themed comparison candidate: Teatro Argentina is a Roman theatre opened in 1732 and remains a functioning public venue presenting scheduled drama, opera, and other live theatre.",
+          "sourceIds": ["source-11", "source-17"]
+        },
+        {
+          "poiId": "teatro-massimo",
+          "points": 27,
+          "text": "Teatro Massimo is a themed comparison candidate: Teatro Massimo opened in 1897 and remains Palermo’s permanent opera and performance venue, with publicly scheduled productions.",
+          "sourceIds": ["source-12", "source-17"]
+        },
+        {
+          "poiId": "teatro-comunale-bologna",
+          "points": 45,
+          "text": "Teatro Comunale di Bologna is a themed comparison candidate: Teatro Comunale di Bologna opened in 1763 and continues to operate as a public opera venue at its historic city-centre site.",
+          "sourceIds": ["source-13", "source-17"]
+        },
+        {
+          "poiId": "teatro-espanol",
+          "points": 34,
+          "text": "Teatro Español is a themed comparison candidate: Teatro Español is Madrid’s historic municipal theatre, tracing public performances at the site to 1583 and continuing as a regular drama venue.",
+          "sourceIds": ["source-14", "source-17"]
+        },
+        {
+          "poiId": "gran-teatre-del-liceu",
+          "points": 21,
+          "text": "Gran Teatre del Liceu is a themed comparison candidate: The Liceu opened in 1847 and, despite rebuilding after fires, remains an operating Barcelona opera house at the established La Rambla site.",
+          "sourceIds": ["source-15", "source-17"]
+        },
+        {
+          "poiId": "teatro-nacional-sao-carlos",
+          "points": 49,
+          "text": "Teatro Nacional de São Carlos is a themed comparison candidate: São Carlos opened in 1793 and continues as Lisbon’s permanent public opera house with regular opera and musical performances.",
+          "sourceIds": ["source-16", "source-17"]
+        },
+        {
+          "poiId": "manoel-theatre",
+          "points": 100,
+          "text": "Manoel Theatre is the round target: The Manoel Theatre opened in 1732 and remains a permanent Valletta performance venue with public programmes of theatre, opera, and music.",
+          "sourceIds": ["source-17"]
+        },
+        {
+          "poiId": "teatro-amazonas",
+          "points": 39,
+          "text": "Teatro Amazonas is a themed comparison candidate: Teatro Amazonas opened in 1896 and remains a fixed Manaus opera and theatre venue that presents publicly scheduled performances.",
+          "sourceIds": ["source-18", "source-17"]
+        },
+        {
+          "poiId": "teatro-nacional-sucre",
+          "points": 12,
+          "text": "Teatro Nacional Sucre is a themed comparison candidate: Teatro Nacional Sucre opened in 1886 and, following restoration at the same site, operates as Quito’s permanent public theatre.",
+          "sourceIds": ["source-19", "source-17"]
+        },
+        {
+          "poiId": "teatro-de-cristobal-colon",
+          "points": 15,
+          "text": "Teatro de Cristóbal Colón is a themed comparison candidate: Bogotá’s Teatro de Cristóbal Colón opened in 1892 and remains a permanent public theatre for opera, ballet, concerts, and dramatic performance.",
+          "sourceIds": ["source-20", "source-17"]
+        }
+      ]
+    },
+    {
+      "id": "round-5",
+      "targetPoiId": "teatro-amazonas",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Noite_no_Teatro_Amazonas_%28cropped%29.jpg/1280px-Noite_no_Teatro_Amazonas_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Amazon Theatre",
+        "attribution": "Susan Valentim · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "A Renaissance Revival opera house built during a rubber boom stands in the heart of a rainforest; its dome uses national-colour ceramic tiles, while imported European marble, steel, and chandeliers enrich the interior.",
+        "sourceIds": ["source-18"]
+      },
+      "results": [
+        {
+          "poiId": "royal-opera-house-london",
+          "points": 23,
+          "text": "Royal Opera House is a themed comparison candidate: The Royal Opera House occupies the Covent Garden site of earlier theatre buildings dating to the eighteenth century and remains a regularly operating venue for opera and ballet.",
+          "sourceIds": ["source-01", "source-18"]
+        },
+        {
+          "poiId": "palais-garnier",
+          "points": 49,
+          "text": "Palais Garnier is a themed comparison candidate: The Palais Garnier is a permanent opera and ballet venue opened in 1875 and remains part of the Paris Opera’s publicly programmed performance network.",
+          "sourceIds": ["source-02", "source-18"]
+        },
+        {
+          "poiId": "vienna-state-opera",
+          "points": 31,
+          "text": "Vienna State Opera is a themed comparison candidate: The Vienna State Opera opened in 1869 as the Court Opera and remains a permanent opera and ballet house with a regular public season.",
+          "sourceIds": ["source-03", "source-18"]
+        },
+        {
+          "poiId": "hungarian-state-opera",
+          "points": 35,
+          "text": "Hungarian State Opera is a themed comparison candidate: The Hungarian State Opera House opened in 1884 and remains Budapest’s principal permanent venue for scheduled opera and ballet performances.",
+          "sourceIds": ["source-04", "source-18"]
+        },
+        {
+          "poiId": "estates-theatre",
+          "points": 18,
+          "text": "Estates Theatre is a themed comparison candidate: Estates Theatre is a historic Prague theatre opened in 1783 that remains a functioning public venue within the National Theatre’s regular programme.",
+          "sourceIds": ["source-05", "source-18"]
+        },
+        {
+          "poiId": "bolshoi-theatre",
+          "points": 27,
+          "text": "Bolshoi Theatre is a themed comparison candidate: The Bolshoi Theatre is a continuously recognized Moscow opera and ballet institution whose present building opened in 1856 and remains publicly programmed.",
+          "sourceIds": ["source-06", "source-18"]
+        },
+        {
+          "poiId": "mariinsky-theatre",
+          "points": 25,
+          "text": "Mariinsky Theatre is a themed comparison candidate: The Mariinsky Theatre’s historic main building opened in 1860 and remains a permanent public venue for opera and ballet in Saint Petersburg.",
+          "sourceIds": ["source-07", "source-18"]
+        },
+        {
+          "poiId": "odesa-opera",
+          "points": 42,
+          "text": "Odesa National Academic Opera and Ballet Theatre is a themed comparison candidate: The Odesa Opera occupies the theatre site established in the nineteenth century, with the current building opened in 1887 and an ongoing opera and ballet programme.",
+          "sourceIds": ["source-08", "source-18"]
+        },
+        {
+          "poiId": "teatro-alla-scala",
+          "points": 46,
+          "text": "Teatro alla Scala is a themed comparison candidate: La Scala opened in 1778 on the site of the Teatro Ducale and remains one of Milan’s permanent public opera and ballet venues.",
+          "sourceIds": ["source-09", "source-18"]
+        },
+        {
+          "poiId": "teatro-di-san-carlo",
+          "points": 51,
+          "text": "Teatro di San Carlo is a themed comparison candidate: Teatro di San Carlo opened in 1737 and continues to operate as a permanent Naples opera house with regular public performances.",
+          "sourceIds": ["source-10", "source-18"]
+        },
+        {
+          "poiId": "teatro-argentina",
+          "points": 16,
+          "text": "Teatro Argentina is a themed comparison candidate: Teatro Argentina is a Roman theatre opened in 1732 and remains a functioning public venue presenting scheduled drama, opera, and other live theatre.",
+          "sourceIds": ["source-11", "source-18"]
+        },
+        {
+          "poiId": "teatro-massimo",
+          "points": 37,
+          "text": "Teatro Massimo is a themed comparison candidate: Teatro Massimo opened in 1897 and remains Palermo’s permanent opera and performance venue, with publicly scheduled productions.",
+          "sourceIds": ["source-12", "source-18"]
+        },
+        {
+          "poiId": "teatro-comunale-bologna",
+          "points": 21,
+          "text": "Teatro Comunale di Bologna is a themed comparison candidate: Teatro Comunale di Bologna opened in 1763 and continues to operate as a public opera venue at its historic city-centre site.",
+          "sourceIds": ["source-13", "source-18"]
+        },
+        {
+          "poiId": "teatro-espanol",
+          "points": 14,
+          "text": "Teatro Español is a themed comparison candidate: Teatro Español is Madrid’s historic municipal theatre, tracing public performances at the site to 1583 and continuing as a regular drama venue.",
+          "sourceIds": ["source-14", "source-18"]
+        },
+        {
+          "poiId": "gran-teatre-del-liceu",
+          "points": 44,
+          "text": "Gran Teatre del Liceu is a themed comparison candidate: The Liceu opened in 1847 and, despite rebuilding after fires, remains an operating Barcelona opera house at the established La Rambla site.",
+          "sourceIds": ["source-15", "source-18"]
+        },
+        {
+          "poiId": "teatro-nacional-sao-carlos",
+          "points": 39,
+          "text": "Teatro Nacional de São Carlos is a themed comparison candidate: São Carlos opened in 1793 and continues as Lisbon’s permanent public opera house with regular opera and musical performances.",
+          "sourceIds": ["source-16", "source-18"]
+        },
+        {
+          "poiId": "manoel-theatre",
+          "points": 28,
+          "text": "Manoel Theatre is a themed comparison candidate: The Manoel Theatre opened in 1732 and remains a permanent Valletta performance venue with public programmes of theatre, opera, and music.",
+          "sourceIds": ["source-17", "source-18"]
+        },
+        {
+          "poiId": "teatro-amazonas",
+          "points": 100,
+          "text": "Teatro Amazonas is the round target: Teatro Amazonas opened in 1896 and remains a fixed Manaus opera and theatre venue that presents publicly scheduled performances.",
+          "sourceIds": ["source-18"]
+        },
+        {
+          "poiId": "teatro-nacional-sucre",
+          "points": 34,
+          "text": "Teatro Nacional Sucre is a themed comparison candidate: Teatro Nacional Sucre opened in 1886 and, following restoration at the same site, operates as Quito’s permanent public theatre.",
+          "sourceIds": ["source-19", "source-18"]
+        },
+        {
+          "poiId": "teatro-de-cristobal-colon",
+          "points": 32,
+          "text": "Teatro de Cristóbal Colón is a themed comparison candidate: Bogotá’s Teatro de Cristóbal Colón opened in 1892 and remains a permanent public theatre for opera, ballet, concerts, and dramatic performance.",
+          "sourceIds": ["source-20", "source-18"]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-01",
+      "title": "Royal Opera House",
+      "url": "https://en.wikipedia.org/wiki/Royal_Opera_House",
+      "retrievedAt": "2026-08-19T04:32:58.644Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-02",
+      "title": "Palais Garnier",
+      "url": "https://en.wikipedia.org/wiki/Palais_Garnier",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-03",
+      "title": "Vienna State Opera",
+      "url": "https://en.wikipedia.org/wiki/Vienna_State_Opera",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-04",
+      "title": "Hungarian State Opera House",
+      "url": "https://en.wikipedia.org/wiki/Hungarian_State_Opera_House",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-05",
+      "title": "Estates Theatre",
+      "url": "https://en.wikipedia.org/wiki/Estates_Theatre",
+      "retrievedAt": "2026-08-19T04:32:58.632Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-06",
+      "title": "Bolshoi Theatre",
+      "url": "https://en.wikipedia.org/wiki/Bolshoi_Theatre",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-07",
+      "title": "Mariinsky Theatre",
+      "url": "https://en.wikipedia.org/wiki/Mariinsky_Theatre",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-08",
+      "title": "Odesa National Academic Theater of Opera and Ballet",
+      "url": "https://en.wikipedia.org/wiki/Odesa_National_Academic_Theater_of_Opera_and_Ballet",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-09",
+      "title": "La Scala",
+      "url": "https://en.wikipedia.org/wiki/La_Scala",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-10",
+      "title": "Teatro di San Carlo",
+      "url": "https://en.wikipedia.org/wiki/Teatro_di_San_Carlo",
+      "retrievedAt": "2026-08-19T04:32:58.655Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-11",
+      "title": "Teatro Argentina",
+      "url": "https://en.wikipedia.org/wiki/Teatro_Argentina",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-12",
+      "title": "Teatro Massimo",
+      "url": "https://en.wikipedia.org/wiki/Teatro_Massimo",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-13",
+      "title": "Teatro Comunale di Bologna",
+      "url": "https://en.wikipedia.org/wiki/Teatro_Comunale_di_Bologna",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-14",
+      "title": "Teatro Español",
+      "url": "https://en.wikipedia.org/wiki/Teatro_Espa%C3%B1ol",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-15",
+      "title": "Gran Teatre del Liceu",
+      "url": "https://en.wikipedia.org/wiki/Gran_Teatre_del_Liceu",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-16",
+      "title": "Teatro Nacional de São Carlos",
+      "url": "https://en.wikipedia.org/wiki/Teatro_Nacional_de_S%C3%A3o_Carlos",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-17",
+      "title": "Manoel Theatre",
+      "url": "https://en.wikipedia.org/wiki/Manoel_Theatre",
+      "retrievedAt": "2026-08-19T04:32:58.939Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-18",
+      "title": "Amazon Theatre",
+      "url": "https://en.wikipedia.org/wiki/Amazon_Theatre",
+      "retrievedAt": "2026-08-19T04:32:58.641Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-19",
+      "title": "Teatro Nacional Sucre",
+      "url": "https://en.wikipedia.org/wiki/Teatro_Nacional_Sucre",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-20",
+      "title": "Teatro de Cristóbal Colón",
+      "url": "https://en.wikipedia.org/wiki/Teatro_de_Crist%C3%B3bal_Col%C3%B3n",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    }
+  ],
+  "theme": {
+    "title": "Operating Pre-1900 Theatres in Cities",
+    "introduction": "Across old city streets, stage doors still open onto velvet, brass, and living echoes of centuries of performance.",
+    "inclusionCriteria": "Include a location only when every condition is met: (1) it is an individually named theatre, opera house, playhouse, or equivalent venue whose principal function is presenting live theatrical, operatic, ballet, or musical performances; (2) the named venue or its continuously recognized predecessor began public performance at the same identifiable site on or before 31 December 1899; (3) the venue currently operates as a permanent performance venue and has regularly scheduled public performances on the date of play; (4) the venue occupies a fixed, mappable building or complex with a public entrance that can be treated as one exact location; (5) it lies within the current administrative boundary of a present-day city or incorporated urban municipality; and (6) ordinary members of the public can attend performances, whether ticketed or free. Rebuilt venues qualify when the theatre institution or venue remains at the same identifiable site. The theme has at least 35 plausible locations, including: Royal Opera House (London); Theatre Royal Drury Lane (London); Theatre Royal Haymarket (London); Bristol Old Vic (Bristol); Palais Garnier (Paris); Comédie-Française, Salle Richelieu (Paris); Théâtre du Châtelet (Paris); Vienna State Opera (Vienna); Hungarian State Opera (Budapest); Estates Theatre (Prague); National Theatre (Prague); Bolshoi Theatre (Moscow); Mariinsky Theatre (Saint Petersburg); Odesa National Academic Opera and Ballet Theatre (Odesa); Teatro alla Scala (Milan); Teatro di San Carlo (Naples); Teatro Argentina (Rome); Teatro Massimo (Palermo); Teatro Olimpico (Vicenza); Teatro Comunale di Bologna (Bologna); Teatro Español (Madrid); Teatro de la Zarzuela (Madrid); Teatro Real (Madrid); Gran Teatre del Liceu (Barcelona); Teatro Nacional de São Carlos (Lisbon); Teatro Nacional D. Maria II (Lisbon); Manoel Theatre (Valletta); Teatro Amazonas (Manaus); Teatro Nacional Sucre (Quito); Teatro de Cristóbal Colón (Bogotá); Teatro Municipal de Santiago (Santiago); Teatro Solís (Montevideo); Teatro Degollado (Guadalajara); Teatro Morelos (Aguascalientes); Teatro de la Paz (San Luis Potosí); Teatro Calderón (Valladolid); Teatro Arriaga (Bilbao); Teatro Romea (Murcia); Teatro Principal (Zaragoza); Teatro Municipal de Valparaíso (Valparaíso); Tbilisi Opera and Ballet Theatre (Tbilisi); Teatro de la República (Querétaro); Grand Theatre of Warsaw (Warsaw); Teatro Regio (Turin)."
+  }
+}

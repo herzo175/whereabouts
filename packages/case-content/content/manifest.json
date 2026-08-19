@@ -50,6 +50,16 @@
       "caseNumber": 20691,
       "revision": 3,
       "file": "./cases/2026-08-26/v3.json"
+    },
+    "2026-08-27": {
+      "caseNumber": 20692,
+      "revision": 1,
+      "file": "./cases/2026-08-27/v1.json"
+    },
+    "2026-08-28": {
+      "caseNumber": 20693,
+      "revision": 1,
+      "file": "./cases/2026-08-28/v1.json"
     }
   }
 }
