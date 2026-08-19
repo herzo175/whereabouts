@@ -4,18 +4,22 @@ import { useEffect, useId, useRef, useState } from 'react';
 
 type PoiDossierProps = {
   detail?: 'full' | 'identity';
+  imageOverride?: Poi['image'];
   poi: Poi | null;
   open: boolean;
   onOpenChange: (open: boolean) => void;
   onConfirm?: () => void;
+  wikipediaUrl?: string;
 };
 
 export function PoiDossier({
   detail = 'full',
+  imageOverride,
   poi,
   open,
   onOpenChange,
   onConfirm,
+  wikipediaUrl,
 }: PoiDossierProps) {
   const dialogRef = useRef<HTMLDivElement>(null);
   const previouslyFocusedRef = useRef<HTMLElement | null>(null);
@@ -67,6 +71,8 @@ export function PoiDossier({
 
   if (!open || !poi) return null;
 
+  const image = imageOverride ?? poi.image;
+
   const submit = () => {
     if (isSubmitting || !onConfirm) return;
     setIsSubmitting(true);
@@ -104,12 +110,26 @@ export function PoiDossier({
           </button>
         </div>
 
-        {detail === 'full' && poi.image ? (
-          <img
-            alt={poi.image.alt}
-            className="h-44 w-full object-cover"
-            src={poi.image.url}
-          />
+        {detail === 'full' && image ? (
+          <figure>
+            <img
+              alt={image.alt}
+              className="h-44 w-full object-cover"
+              src={image.url}
+            />
+            <figcaption className="px-5 py-2 text-xs leading-relaxed text-muted-foreground">
+              {image.attribution}{' '}
+              <a
+                aria-label={`${poi.name} photo license`}
+                className="inline-flex min-h-11 items-center text-foreground underline decoration-foreground/40 underline-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/30"
+                href={image.licenseUrl}
+                rel="noreferrer"
+                target="_blank"
+              >
+                Photo license
+              </a>
+            </figcaption>
+          </figure>
         ) : detail === 'full' ? (
           <div
             aria-label="Archival image unavailable"
@@ -129,6 +149,17 @@ export function PoiDossier({
             <p className="pt-2 text-sm leading-relaxed text-foreground/85">
               {poi.blurb}
             </p>
+          ) : null}
+          {detail === 'full' && wikipediaUrl ? (
+            <a
+              aria-label={`Read ${poi.name} on Wikipedia`}
+              className="inline-flex min-h-11 items-center text-sm font-semibold text-foreground underline decoration-foreground/40 underline-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/30"
+              href={wikipediaUrl}
+              rel="noreferrer"
+              target="_blank"
+            >
+              Wikipedia
+            </a>
           ) : null}
         </div>
 
