@@ -222,7 +222,7 @@ export function FiveRoundGameScreen({
               {!isLatestReveal ? (
                 <button
                   aria-label={`Forward to round ${viewedRevealIndex + 2} result`}
-                  className="min-h-12 flex-1 rounded-md bg-paper px-5 text-sm font-semibold text-ink hover:bg-paper/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
+                  className="min-h-12 flex-1 rounded-md border border-rule px-5 text-sm font-semibold text-paper hover:border-paper/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
                   onClick={() =>
                     setViewedRevealIndex((index) =>
                       index === null ? null : index + 1,
@@ -232,7 +232,8 @@ export function FiveRoundGameScreen({
                 >
                   Forward
                 </button>
-              ) : latestRevealIsPending ? (
+              ) : null}
+              {isLatestReveal && latestRevealIsPending ? (
                 <button
                   className="min-h-12 flex-1 rounded-md bg-paper px-5 text-sm font-semibold text-ink hover:bg-paper/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
                   onClick={acknowledgeReveal}

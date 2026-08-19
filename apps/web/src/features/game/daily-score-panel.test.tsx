@@ -42,7 +42,14 @@ describe('DailyScorePanel', () => {
     for (const round of caseData.rounds) {
       const place = caseData.pois.find((poi) => poi.id === round.targetPoiId);
       expect(place).toBeDefined();
-      if (place) expect(screen.getByText(place.name)).toBeVisible();
+      if (place) {
+        expect(screen.getByText(place.name)).toBeVisible();
+        expect(
+          screen.getByRole('button', {
+            name: new RegExp(`Open round \\d location dossier: ${place.name}`),
+          }),
+        ).toHaveClass('h-full');
+      }
     }
 
     const firstRound = caseData.rounds[0];

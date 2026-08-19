@@ -288,7 +288,7 @@ describe('FiveRoundGameScreen', () => {
     const user = userEvent.setup();
     const caseData = makeFiveRoundCase();
     const progress = caseData.rounds
-      .slice(0, 2)
+      .slice(0, 3)
       .reduce(
         (current, round) =>
           acknowledgeRoundReveal(
@@ -309,23 +309,36 @@ describe('FiveRoundGameScreen', () => {
       />,
     );
 
-    expect(await screen.findByText('Round 3 / 5')).toBeVisible();
+    expect(await screen.findByText('Round 4 / 5')).toBeVisible();
     expect(
       screen.getByRole('button', { name: /view round 1 result/i }),
     ).toBeVisible();
-    expect(screen.queryByRole('button', { name: /round 3/i })).toBeNull();
+    expect(screen.queryByRole('button', { name: /round 4/i })).toBeNull();
     await user.click(
       screen.getByRole('button', { name: /view round 1 result/i }),
     );
     expect(
       screen.getByRole('region', { name: /round 1 reveal/i }),
     ).toBeVisible();
+    const returnToCurrentRound = screen.getByRole('button', {
+      name: /return to round 4/i,
+    });
+    expect(returnToCurrentRound).toHaveClass('flex-1');
 
     await user.click(
       screen.getByRole('button', { name: /forward to round 2 result/i }),
     );
+    expect(
+      screen.getByRole('button', { name: /back to round 1 result/i }),
+    ).toHaveClass('flex-1');
+    expect(
+      screen.getByRole('button', { name: /forward to round 3 result/i }),
+    ).toHaveClass('flex-1');
+    expect(
+      screen.getByRole('button', { name: /return to round 4/i }),
+    ).toHaveClass('flex-1');
     await user.click(
-      screen.getByRole('button', { name: /return to round 3/i }),
+      screen.getByRole('button', { name: /return to round 4/i }),
     );
     const previousResultButton = screen.getByRole('button', {
       name: /back to previous result/i,
@@ -339,27 +352,27 @@ describe('FiveRoundGameScreen', () => {
     expect(previousResultButton).not.toHaveClass('sm:w-auto');
     await user.click(previousResultButton);
     expect(
-      screen.getByRole('region', { name: /round 2 reveal/i }),
+      screen.getByRole('region', { name: /round 3 reveal/i }),
     ).toBeVisible();
 
     await user.click(
-      screen.getByRole('button', { name: /back to round 1 result/i }),
-    );
-    expect(
-      screen.getByRole('region', { name: /round 1 reveal/i }),
-    ).toBeVisible();
-
-    await user.click(
-      screen.getByRole('button', { name: /forward to round 2 result/i }),
+      screen.getByRole('button', { name: /back to round 2 result/i }),
     );
     expect(
       screen.getByRole('region', { name: /round 2 reveal/i }),
     ).toBeVisible();
 
     await user.click(
-      screen.getByRole('button', { name: /return to round 3/i }),
+      screen.getByRole('button', { name: /forward to round 3 result/i }),
     );
-    expect(screen.getByText('Round 3 / 5')).toBeVisible();
+    expect(
+      screen.getByRole('region', { name: /round 3 reveal/i }),
+    ).toBeVisible();
+
+    await user.click(
+      screen.getByRole('button', { name: /return to round 4/i }),
+    );
+    expect(screen.getByText('Round 4 / 5')).toBeVisible();
     expect(storage.setItem).not.toHaveBeenCalled();
   });
 });

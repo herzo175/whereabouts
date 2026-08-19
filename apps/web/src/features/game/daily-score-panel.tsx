@@ -82,7 +82,7 @@ export function DailyScorePanel({
             <li key={guess.roundId}>
               <button
                 aria-label={`Open round ${index + 1} location dossier: ${place?.name ?? 'Unknown place'}`}
-                className="group w-full space-y-2 rounded-md py-1 text-center hover:bg-paper/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan disabled:cursor-not-allowed"
+                className="group h-full w-full space-y-2 rounded-md py-1 text-center hover:bg-paper/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan disabled:cursor-not-allowed"
                 disabled={!place}
                 onClick={() => setSelectedGuessIndex(index)}
                 type="button"
