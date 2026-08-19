@@ -1,11 +1,7 @@
 import { createFileRoute, notFound } from '@tanstack/react-router';
-import { formatLocalDate, parseCaseDate } from '@whereabouts/browser-state';
-import { useEffect, useState } from 'react';
+import { parseCaseDate } from '@whereabouts/browser-state';
 
-import {
-  getPublishedCase,
-  getPublishedCaseIndex,
-} from '../features/cases/case-functions';
+import { getPublishedCase } from '../features/cases/case-functions';
 import { AppShell } from '../features/game/app-shell';
 
 function parseCanonicalDate(value: string): string {
@@ -19,12 +15,8 @@ export const Route = createFileRoute('/$date')({
     parse: (params) => ({ date: parseCanonicalDate(params.date) }),
   },
   loader: async ({ params }) => {
-    const [caseData, publishedCases] = await Promise.all([
-      getPublishedCase({ data: { date: params.date } }),
-      getPublishedCaseIndex(),
-    ]);
-
-    return { caseData, publishedCases };
+    const caseData = await getPublishedCase({ data: { date: params.date } });
+    return { caseData, date: params.date };
   },
   notFoundComponent: InvalidDate,
   component: CaseRoute,
@@ -47,20 +39,7 @@ function InvalidDate() {
 }
 
 function CaseRoute() {
-  const { caseData, publishedCases } = Route.useLoaderData();
-  const { date } = Route.useParams();
-  const [today, setToday] = useState('');
+  const { caseData, date } = Route.useLoaderData();
 
-  useEffect(() => {
-    setToday(formatLocalDate(new Date()));
-  }, []);
-
-  return (
-    <AppShell
-      caseData={caseData}
-      date={date}
-      publishedCases={publishedCases}
-      today={today}
-    />
-  );
+  return <AppShell caseData={caseData} date={date} />;
 }

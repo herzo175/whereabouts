@@ -2,7 +2,6 @@ import type { FiveRoundDailyCase } from '@whereabouts/case-content';
 import type { FiveRoundProgress } from '@whereabouts/game-engine';
 import { useState } from 'react';
 
-import { ArchiveDrawer, type PublishedCase } from './archive-drawer';
 import { BriefingUnavailable } from './briefing-unavailable';
 import { FiveRoundGameScreen } from './five-round-game-screen';
 import { buildShareText, type ShareResult, shareResult } from './share';
@@ -41,8 +40,6 @@ export async function shareCurrentResult({
 type AppShellProps = {
   caseData: FiveRoundDailyCase | null;
   date: string;
-  publishedCases: PublishedCase[];
-  today: string;
 };
 
 function shareStatusMessage(status: ShareStatus): string {
@@ -56,13 +53,7 @@ function shareStatusMessage(status: ShareStatus): string {
   }
 }
 
-export function AppShell({
-  caseData,
-  date,
-  publishedCases,
-  today,
-}: AppShellProps) {
-  const [archiveOpen, setArchiveOpen] = useState(false);
+export function AppShell({ caseData, date }: AppShellProps) {
   const [shareStatus, setShareStatus] = useState<ShareStatus>();
 
   const shareCase = async (
@@ -89,17 +80,8 @@ export function AppShell({
       {caseData ? (
         <FiveRoundGameScreen caseData={caseData} onShare={shareCase} />
       ) : (
-        <BriefingUnavailable
-          date={date}
-          onOpenArchive={() => setArchiveOpen(true)}
-        />
+        <BriefingUnavailable date={date} />
       )}
-      <ArchiveDrawer
-        onOpenChange={setArchiveOpen}
-        open={archiveOpen}
-        publishedCases={publishedCases}
-        today={today}
-      />
       <p aria-live="polite" className="sr-only">
         {shareStatusMessage(shareStatus)}
       </p>

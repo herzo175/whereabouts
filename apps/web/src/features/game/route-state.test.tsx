@@ -22,30 +22,23 @@ const completedProgress: FiveRoundProgress = {
 };
 
 describe('route state', () => {
-  it('keeps archive controls out of the active briefing', () => {
-    render(
-      <AppShell
-        caseData={makeFiveRoundCase()}
-        date="2026-08-14"
-        publishedCases={[{ date: '2026-08-14', caseNumber: 1 }]}
-        today="2026-08-14"
-      />,
-    );
+  it('keeps retired controls out of the active briefing', () => {
+    render(<AppShell caseData={makeFiveRoundCase()} date="2026-08-14" />);
 
-    expect(
-      screen.queryByRole('button', { name: /open case archive/i }),
-    ).toBeNull();
+    expect(screen.queryByRole('button', { name: /open case/i })).toBeNull();
   });
 
   it('presents an unpublished valid date as an unavailable briefing', () => {
-    render(<BriefingUnavailable date="2026-08-15" onOpenArchive={vi.fn()} />);
+    render(<BriefingUnavailable date="2026-08-15" />);
 
     expect(
       screen.getByRole('heading', { name: /briefing unavailable/i }),
     ).toBeVisible();
-    expect(
-      screen.getByRole('button', { name: /open case archive/i }),
-    ).toBeVisible();
+    expect(screen.queryByRole('button')).toBeNull();
+    expect(screen.getByRole('link', { name: /today’s case/i })).toHaveAttribute(
+      'href',
+      '/',
+    );
   });
 
   it('builds and copies the current route result using the browser origin', async () => {

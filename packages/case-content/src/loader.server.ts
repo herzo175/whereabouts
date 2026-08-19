@@ -17,8 +17,6 @@ type CaseManifest = {
 
 type CaseModules = Record<string, unknown>;
 
-type PublishedCaseIndex = { date: string; caseNumber: number };
-
 const datePattern = /^\d{4}-\d{2}-\d{2}$/;
 
 export class CaseContentError extends Error {
@@ -120,19 +118,12 @@ function parseCaseArtifact(
 
 export function createCaseLoader(manifestValue: unknown, modules: CaseModules) {
   const parsedManifest = parseManifest(manifestValue);
-  const publishedCases = Object.entries(parsedManifest.cases)
-    .map(([date, entry]) => ({ date, caseNumber: entry.caseNumber }))
-    .sort((left, right) => right.date.localeCompare(left.date));
-
   return {
     loadPublishedCase(date: string): DailyCase | null {
       if (!isDate(date)) fail(`Invalid publication date: ${date}`);
       const entry = parsedManifest.cases[date];
       if (entry === undefined) return null;
       return parseCaseArtifact(resolveModule(modules, entry.file), date, entry);
-    },
-    listPublishedCases(): PublishedCaseIndex[] {
-      return publishedCases.map((entry) => ({ ...entry }));
     },
   };
 }
@@ -145,4 +136,3 @@ const caseModules = import.meta.glob('../content/cases/**/*.json', {
 const loader = createCaseLoader(manifest, caseModules);
 
 export const loadPublishedCase = loader.loadPublishedCase;
-export const listPublishedCases = loader.listPublishedCases;

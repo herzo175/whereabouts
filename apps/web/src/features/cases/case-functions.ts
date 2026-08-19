@@ -27,12 +27,3 @@ export const getPublishedCase = createServerFn({ method: 'GET' })
     );
     return loadPublishedCase(data.date);
   });
-
-export const getPublishedCaseIndex = createServerFn({ method: 'GET' }).handler(
-  async () => {
-    const { listPublishedCases } = await import(
-      '@whereabouts/case-content/server'
-    );
-    return listPublishedCases();
-  },
-);
