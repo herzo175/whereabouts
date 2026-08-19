@@ -77,6 +77,7 @@ describe('RoundReveal', () => {
     expect(dossiers[0]).toHaveAccessibleName(
       `Correct location: ${correctPoi.name}`,
     );
+    expect(dossiers[0].parentElement).not.toHaveClass('sm:grid-cols-2');
     expect(screen.queryByText('Your location')).toBeNull();
     expect(
       within(dossiers[0]).getByText("Why it fits today's theme"),
