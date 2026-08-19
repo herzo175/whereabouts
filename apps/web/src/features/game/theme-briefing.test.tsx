@@ -12,14 +12,14 @@ describe('ThemeBriefing', () => {
     expect(screen.getByRole('heading', { name: theme.title })).toBeVisible();
     expect(screen.getByText(theme.introduction)).toBeVisible();
     expect(screen.getByRole('region', { name: theme.title })).toBeVisible();
-    expect(screen.getByText("Today's theme")).toHaveClass(
-      'text-center',
-      'sm:text-left',
-    );
+    expect(screen.getByText("Today's theme")).toHaveClass('text-center');
+    expect(screen.getByText("Today's theme")).not.toHaveClass('sm:text-left');
     expect(screen.getByRole('heading', { name: theme.title })).toHaveClass(
       'text-center',
+    );
+    expect(screen.getByRole('heading', { name: theme.title })).not.toHaveClass(
       'sm:text-left',
     );
-    expect(screen.getByText(theme.introduction)).toHaveClass('text-left');
+    expect(screen.getByText(theme.introduction)).toHaveClass('text-center');
   });
 });

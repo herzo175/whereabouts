@@ -59,13 +59,13 @@ export function DailyScorePanel({
 
   return (
     <section aria-labelledby="daily-score-title" className="space-y-6">
-      <header className="space-y-2 border-b border-rule pb-5 text-center sm:text-left">
+      <header className="space-y-2 border-b border-rule pb-5 text-center">
         <p className="text-xs font-semibold tracking-[0.18em] text-cyan uppercase">
           All five rounds complete
         </p>
-        <h1 className="font-serif text-4xl" id="daily-score-title">
+        <h2 className="font-serif text-4xl" id="daily-score-title">
           Daily score
-        </h1>
+        </h2>
         <p className="text-2xl font-semibold text-brass">
           {getTotalScore(progress)} / 500
         </p>

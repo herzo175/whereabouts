@@ -9,6 +9,7 @@
   --color-brass: oklch(0.75 0.12 79);
   --color-cyan: oklch(0.72 0.045 218);
   --color-rule: oklch(0.52 0.035 218 / 0.5);
+  --color-globe-canvas: #071520;
   --font-serif: Georgia, Cambria, "Times New Roman", serif;
 }
 
@@ -37,6 +38,17 @@
     html {
       scroll-behavior: auto;
     }
+  }
+}
+
+@layer components {
+  .archival-image-fallback {
+    background: linear-gradient(
+      135deg,
+      color-mix(in oklch, var(--color-cyan) 32%, var(--color-background)),
+      var(--color-background) 52%,
+      color-mix(in oklch, var(--color-brass) 52%, var(--color-background))
+    );
   }
 }
 

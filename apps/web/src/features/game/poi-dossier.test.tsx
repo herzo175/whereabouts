@@ -40,6 +40,13 @@ describe('PoiDossier', () => {
       'src',
       image.url,
     );
+    expect(screen.getByRole('img', { name: image.alt })).toHaveAttribute(
+      'width',
+      '1200',
+    );
+    const dialog = screen.getByRole('dialog', { name: poi.name });
+    expect(dialog).toHaveClass('flex', 'max-h-[100svh]');
+    expect(dialog.querySelector('.overflow-y-auto')).not.toBeNull();
     expect(screen.getByText(poi.blurb ?? '')).toBeVisible();
     expect(
       screen.getByRole('link', { name: /target place on wikipedia/i }),

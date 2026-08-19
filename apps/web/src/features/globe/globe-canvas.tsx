@@ -22,6 +22,15 @@ export const POI_BEAM_OPACITY: ExpressionSpecification = [
   0,
 ];
 const POI_BEAM_SEGMENTS = 16;
+const globePalette = {
+  background: '#0b2632',
+  beamDisabled: '#59666a',
+  hitTarget: '#ffffff',
+  marker: '#4fd1c5',
+  markerDisabled: '#737373',
+  markerSelected: '#f7c948',
+  markerStroke: '#e8f7f5',
+} as const;
 
 type GlobeCanvasProps = {
   pois: Poi[];
@@ -49,7 +58,11 @@ function pointData(
         },
         properties: {
           id: poi.id,
-          color: disabled ? '#737373' : selected ? '#f7c948' : '#4fd1c5',
+          color: disabled
+            ? globePalette.markerDisabled
+            : selected
+              ? globePalette.markerSelected
+              : globePalette.marker,
           radius: selected ? 10 : 8,
         },
       };
@@ -86,7 +99,11 @@ function beamData(
           coordinates: [ring],
         },
         properties: {
-          color: disabled ? '#59666a' : selected ? '#f7c948' : '#4fd1c5',
+          color: disabled
+            ? globePalette.beamDisabled
+            : selected
+              ? globePalette.markerSelected
+              : globePalette.marker,
           height: disabled ? 350_000 : selected ? 1_800_000 : 1_250_000,
           opacity: disabled ? 0.18 : selected ? 0.8 : 0.48,
         },
@@ -148,7 +165,7 @@ export function GlobeCanvas({
           {
             id: 'globe-background',
             type: 'background',
-            paint: { 'background-color': '#0b2632' },
+            paint: { 'background-color': globePalette.background },
           },
           {
             id: 'earth-texture',
@@ -201,7 +218,7 @@ export function GlobeCanvas({
         type: 'circle',
         source: 'candidates',
         paint: {
-          'circle-color': '#ffffff',
+          'circle-color': globePalette.hitTarget,
           'circle-opacity': 0.01,
           'circle-radius': POI_HIT_RADIUS,
         },
@@ -213,7 +230,7 @@ export function GlobeCanvas({
         paint: {
           'circle-color': ['get', 'color'],
           'circle-radius': ['get', 'radius'],
-          'circle-stroke-color': '#e8f7f5',
+          'circle-stroke-color': globePalette.markerStroke,
           'circle-stroke-width': 2,
         },
       });
@@ -262,7 +279,7 @@ export function GlobeCanvas({
   return (
     <div
       aria-label="Interactive globe with candidate locations"
-      className="h-[clamp(15rem,55vw,26.25rem)] max-h-[55svh] min-h-60 overflow-hidden rounded-lg border border-foreground/15 bg-[#071520]"
+      className="h-[clamp(15rem,55vw,26.25rem)] max-h-[55svh] min-h-60 overflow-hidden rounded-lg border border-foreground/15 bg-globe-canvas"
       data-testid="globe-canvas"
       ref={containerRef}
       role="application"

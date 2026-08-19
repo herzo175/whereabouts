@@ -43,23 +43,21 @@ const tierDotStyles = {
 } as const;
 
 function FiveRoundHeader({
-  centered = false,
+  activeRoundIndex,
   onSelectRound,
   progress,
 }: {
-  centered?: boolean;
+  activeRoundIndex: number | null;
   onSelectRound: (index: number) => void;
   progress: FiveRoundProgress;
 }) {
   return (
-    <header
-      className={`space-y-3 border-b border-rule pb-3 text-center sm:space-y-5 sm:pb-6 ${centered ? '' : 'sm:text-left'}`}
-    >
+    <header className="space-y-3 border-b border-rule pb-3 text-center sm:space-y-5 sm:pb-6">
       <h1 className="font-serif text-3xl tracking-tight text-paper sm:text-5xl">
         Whereabouts
       </h1>
       <ol
-        className={`flex justify-center gap-3 sm:gap-4 ${centered ? '' : 'sm:justify-start'}`}
+        className="flex justify-center gap-3 sm:gap-4"
         aria-label="Daily round progress"
       >
         {Array.from({ length: 5 }, (_, index) => {
@@ -69,8 +67,9 @@ function FiveRoundHeader({
             <li key={`round-${index + 1}`}>
               {guess && tier ? (
                 <button
+                  aria-current={activeRoundIndex === index ? 'step' : undefined}
                   aria-label={`View round ${index + 1} result: ${tier}, ${guess.points} points`}
-                  className="grid size-11 place-items-center rounded-full hover:bg-paper/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
+                  className={`grid size-11 place-items-center rounded-full hover:bg-paper/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan ${activeRoundIndex === index ? 'bg-paper/10 ring-2 ring-cyan' : ''}`}
                   onClick={() => onSelectRound(index)}
                   type="button"
                 >
@@ -167,9 +166,11 @@ export function FiveRoundGameScreen({
 
   if (!isReady) {
     return (
-      <output aria-live="polite" className="text-sm text-cyan">
-        Opening daily field file…
-      </output>
+      <main className="grid min-h-screen place-items-center bg-background px-6 text-paper">
+        <output aria-live="polite" className="text-sm text-cyan">
+          Opening daily field file…
+        </output>
+      </main>
     );
   }
 
@@ -189,12 +190,12 @@ export function FiveRoundGameScreen({
         <main className="min-h-screen bg-background px-4 py-3 text-paper sm:px-6 sm:py-8">
           <div className="mx-auto max-w-2xl space-y-3 sm:space-y-6">
             <FiveRoundHeader
-              centered
+              activeRoundIndex={viewedRevealIndex}
               onSelectRound={setViewedRevealIndex}
               progress={progress}
             />
             {caseData.schemaVersion === 4 ? (
-              <ThemeBriefing centered theme={caseData.theme} />
+              <ThemeBriefing theme={caseData.theme} />
             ) : null}
             <RoundReveal
               correctPoi={correctPoi}
@@ -267,6 +268,7 @@ export function FiveRoundGameScreen({
       <main className="min-h-screen bg-background px-4 py-3 text-paper sm:px-6 sm:py-8">
         <div className="mx-auto max-w-2xl space-y-3 sm:space-y-6">
           <FiveRoundHeader
+            activeRoundIndex={null}
             onSelectRound={setViewedRevealIndex}
             progress={progress}
           />
@@ -300,6 +302,7 @@ export function FiveRoundGameScreen({
     <main className="min-h-screen bg-background px-4 py-3 text-paper sm:px-6 sm:py-8">
       <div className="mx-auto max-w-2xl space-y-3 sm:space-y-6">
         <FiveRoundHeader
+          activeRoundIndex={null}
           onSelectRound={setViewedRevealIndex}
           progress={progress}
         />

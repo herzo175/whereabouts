@@ -106,7 +106,7 @@ async function playPerfectDailyGame(page: Page): Promise<void> {
     if (!target) throw new Error(`Missing target for round ${index + 1}`);
     await submitLead(page, target.name);
     await expect(
-      page.getByRole('heading', { name: `Round ${index + 1} revealed` }),
+      page.getByRole('region', { name: `Round ${index + 1} reveal` }),
     ).toBeVisible();
     await expect(page.getByText('Correct · 100 points')).toBeVisible();
     await page
@@ -332,6 +332,7 @@ test.describe('Whereabouts five-round desktop journeys', () => {
     expect(shareText).toBe(
       [
         'WHEREABOUTS',
+        'August 14, 2026',
         completed.guesses
           .map((guess) => emojiByTier[getScoreBand(guess.points)])
           .join(' '),

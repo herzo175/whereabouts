@@ -34,9 +34,10 @@ describe('DailyScorePanel', () => {
       />,
     );
 
-    expect(
-      screen.getByRole('heading', { name: /daily score/i }).closest('header'),
-    ).toHaveClass('text-center', 'sm:text-left');
+    const scoreHeading = screen.getByRole('heading', { name: /daily score/i });
+    expect(scoreHeading.tagName).toBe('H2');
+    expect(scoreHeading.closest('header')).toHaveClass('text-center');
+    expect(scoreHeading.closest('header')).not.toHaveClass('sm:text-left');
 
     for (const round of caseData.rounds) {
       const place = caseData.pois.find((poi) => poi.id === round.targetPoiId);

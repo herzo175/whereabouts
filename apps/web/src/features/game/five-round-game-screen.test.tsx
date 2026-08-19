@@ -6,6 +6,7 @@ import {
   createFiveRoundProgress,
   submitRoundGuess,
 } from '@whereabouts/game-engine';
+import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it, vi } from 'vitest';
 
 import { FiveRoundGameScreen } from './five-round-game-screen';
@@ -47,10 +48,14 @@ describe('FiveRoundGameScreen', () => {
     const masthead = screen.getByRole('heading', {
       name: 'Whereabouts',
     }).parentElement;
-    expect(masthead).toHaveClass('text-center', 'sm:text-left');
+    expect(masthead).toHaveClass('text-center');
+    expect(masthead).not.toHaveClass('sm:text-left');
     expect(
       screen.getByRole('list', { name: /daily round progress/i }),
-    ).toHaveClass('justify-center', 'sm:justify-start');
+    ).toHaveClass('justify-center');
+    expect(
+      screen.getByRole('list', { name: /daily round progress/i }),
+    ).not.toHaveClass('sm:justify-start');
     expect(screen.getByText(caseData.theme.introduction)).toBeVisible();
     expect(screen.queryByText(guessedPoi.themeConnection.text)).toBeNull();
 
@@ -84,13 +89,21 @@ describe('FiveRoundGameScreen', () => {
       />,
     );
 
-    expect(await screen.findByText('Round 1 / 5')).toBeInTheDocument();
-    expect(
-      screen.getByRole('img', { name: /round 1 target photograph/i }),
-    ).toHaveAttribute('src', caseData.rounds[0].image.url);
+    const roundLabel = await screen.findByText('Round 1 / 5');
+    expect(roundLabel).toHaveClass('text-center');
+    const roundImage = screen.getByRole('img', {
+      name: /round 1 target photograph/i,
+    });
+    expect(roundImage).toHaveAttribute('src', caseData.rounds[0].image.url);
+    expect(roundImage).toHaveAttribute('width', '1200');
+    expect(roundImage).toHaveAttribute('height', '675');
+    expect(roundImage).toHaveAttribute('fetchpriority', 'high');
     expect(screen.queryByText(caseData.rounds[0].image.attribution)).toBeNull();
     expect(screen.queryByRole('link', { name: /license/i })).toBeNull();
     expect(screen.getByText(caseData.rounds[0].clue.text)).toBeInTheDocument();
+    expect(
+      screen.getByText(caseData.rounds[0].clue.text).closest('article'),
+    ).toHaveClass('rounded-lg');
 
     const search = screen.getByRole('searchbox', { name: /search locations/i });
     await user.clear(search);
@@ -123,6 +136,9 @@ describe('FiveRoundGameScreen', () => {
     });
     expect(revealTheme).toHaveClass('text-center');
     expect(revealTheme).not.toHaveClass('sm:text-left');
+    expect(
+      screen.getByRole('button', { name: /view round 1 result/i }),
+    ).toHaveAttribute('aria-current', 'step');
     expect(screen.getByText(/warm · 56 points/i)).toBeInTheDocument();
     expect(
       screen.getByText(caseData.rounds[0].results[10].text),
@@ -177,6 +193,7 @@ describe('FiveRoundGameScreen', () => {
     expect(
       await screen.findByRole('heading', { name: /daily score/i }),
     ).toBeVisible();
+    expect(screen.getAllByRole('heading', { level: 1 })).toHaveLength(1);
     expect(screen.getByText('500 / 500')).toBeVisible();
     expect(screen.getAllByText(/^correct$/i)).toHaveLength(5);
     const fieldGuide = screen.getByText(/field guide/i);
@@ -247,6 +264,24 @@ describe('FiveRoundGameScreen', () => {
       await screen.findByRole('heading', { name: /not quite/i }),
     ).toBeVisible();
     expect(screen.getByRole('button', { name: /next round/i })).toBeVisible();
+  });
+
+  it('centers the hydration loading state in the page shell', () => {
+    const markup = renderToStaticMarkup(
+      <FiveRoundGameScreen
+        caseData={makeFiveRoundCase()}
+        globeSupported={false}
+        storage={makeStorage()}
+      />,
+    );
+    const container = document.createElement('div');
+    container.innerHTML = markup;
+
+    expect(container.querySelector('main')).toHaveClass(
+      'grid',
+      'min-h-screen',
+      'place-items-center',
+    );
   });
 
   it('navigates backward and forward through previous results without changing progress', async () => {

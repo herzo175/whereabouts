@@ -89,13 +89,16 @@ function FullDossier({
           <img
             alt={poi.image.alt}
             className={`h-40 w-full object-cover ${wide ? 'sm:h-full sm:min-h-64' : ''}`}
+            decoding="async"
+            height={675}
             src={poi.image.url}
+            width={1200}
           />
         </figure>
       ) : (
         <div
           aria-label={`Image unavailable for ${poi.name}`}
-          className={`grid h-32 place-items-center bg-[linear-gradient(135deg,rgba(29,78,70,0.95),rgba(13,25,36,1)_52%,rgba(135,104,44,0.72))] text-xs tracking-wide text-paper/70 uppercase ${wide ? 'sm:h-full sm:min-h-64' : ''}`}
+          className={`archival-image-fallback grid h-32 place-items-center text-xs tracking-wide text-paper/70 uppercase ${wide ? 'sm:h-full sm:min-h-64' : ''}`}
           role="img"
         >
           Archival image unavailable

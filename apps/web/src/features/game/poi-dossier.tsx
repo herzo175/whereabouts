@@ -91,11 +91,11 @@ export function PoiDossier({
         aria-describedby={descriptionId}
         aria-labelledby={titleId}
         aria-modal="true"
-        className="relative z-10 w-full max-w-lg overflow-hidden rounded-t-xl border border-foreground/15 bg-background shadow-2xl sm:rounded-xl"
+        className="relative z-10 flex max-h-[100svh] w-full max-w-lg flex-col overflow-hidden rounded-t-xl border border-foreground/15 bg-background shadow-2xl sm:max-h-[calc(100svh-3rem)] sm:rounded-xl"
         ref={dialogRef}
         role="dialog"
       >
-        <div className="flex items-center justify-between border-b border-foreground/10 px-5 py-4">
+        <div className="flex shrink-0 items-center justify-between border-b border-foreground/10 px-5 py-4">
           <p className="text-xs font-semibold tracking-[0.18em] text-muted-foreground uppercase">
             Location dossier
           </p>
@@ -110,60 +110,65 @@ export function PoiDossier({
           </button>
         </div>
 
-        {detail === 'full' && image ? (
-          <figure>
-            <img
-              alt={image.alt}
-              className="h-44 w-full object-cover"
-              src={image.url}
+        <div className="min-h-0 overflow-y-auto overscroll-contain">
+          {detail === 'full' && image ? (
+            <figure>
+              <img
+                alt={image.alt}
+                className="h-44 w-full object-cover"
+                decoding="async"
+                height={675}
+                src={image.url}
+                width={1200}
+              />
+              <figcaption className="px-5 py-2 text-xs leading-relaxed text-muted-foreground">
+                {image.attribution}{' '}
+                <a
+                  aria-label={`${poi.name} photo license`}
+                  className="inline-flex min-h-11 items-center text-foreground underline decoration-foreground/40 underline-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/30"
+                  href={image.licenseUrl}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Photo license
+                </a>
+              </figcaption>
+            </figure>
+          ) : detail === 'full' ? (
+            <div
+              aria-label="Archival image unavailable"
+              className="archival-image-fallback h-28"
+              role="img"
             />
-            <figcaption className="px-5 py-2 text-xs leading-relaxed text-muted-foreground">
-              {image.attribution}{' '}
+          ) : null}
+
+          <div className="space-y-2 px-5 py-5">
+            <h2 className="text-2xl font-semibold tracking-tight" id={titleId}>
+              {poi.name}
+            </h2>
+            <p className="text-base text-muted-foreground" id={descriptionId}>
+              {poi.city}, {poi.country}
+            </p>
+            {detail === 'full' && poi.blurb ? (
+              <p className="pt-2 text-sm leading-relaxed text-foreground/85">
+                {poi.blurb}
+              </p>
+            ) : null}
+            {detail === 'full' && wikipediaUrl ? (
               <a
-                aria-label={`${poi.name} photo license`}
-                className="inline-flex min-h-11 items-center text-foreground underline decoration-foreground/40 underline-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/30"
-                href={image.licenseUrl}
+                aria-label={`Read ${poi.name} on Wikipedia`}
+                className="inline-flex min-h-11 items-center text-sm font-semibold text-foreground underline decoration-foreground/40 underline-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/30"
+                href={wikipediaUrl}
                 rel="noreferrer"
                 target="_blank"
               >
-                Photo license
+                Wikipedia
               </a>
-            </figcaption>
-          </figure>
-        ) : detail === 'full' ? (
-          <div
-            aria-label="Archival image unavailable"
-            className="h-28 bg-[linear-gradient(135deg,rgba(29,78,70,0.95),rgba(13,25,36,1)_52%,rgba(135,104,44,0.72))]"
-            role="img"
-          />
-        ) : null}
-
-        <div className="space-y-2 px-5 py-5">
-          <h2 className="text-2xl font-semibold tracking-tight" id={titleId}>
-            {poi.name}
-          </h2>
-          <p className="text-base text-muted-foreground" id={descriptionId}>
-            {poi.city}, {poi.country}
-          </p>
-          {detail === 'full' && poi.blurb ? (
-            <p className="pt-2 text-sm leading-relaxed text-foreground/85">
-              {poi.blurb}
-            </p>
-          ) : null}
-          {detail === 'full' && wikipediaUrl ? (
-            <a
-              aria-label={`Read ${poi.name} on Wikipedia`}
-              className="inline-flex min-h-11 items-center text-sm font-semibold text-foreground underline decoration-foreground/40 underline-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/30"
-              href={wikipediaUrl}
-              rel="noreferrer"
-              target="_blank"
-            >
-              Wikipedia
-            </a>
-          ) : null}
+            ) : null}
+          </div>
         </div>
 
-        <div className="flex flex-col-reverse gap-2 border-t border-foreground/10 p-4 sm:flex-row sm:justify-end">
+        <div className="flex shrink-0 flex-col-reverse gap-2 border-t border-foreground/10 p-4 sm:flex-row sm:justify-end">
           <button
             className="min-h-12 rounded-md px-5 text-sm font-medium text-muted-foreground hover:bg-foreground/[0.06] hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/30"
             onClick={() => onOpenChange(false)}
