@@ -243,7 +243,7 @@ test.describe('Whereabouts five-round desktop journeys', () => {
       await expect(dossier.getByText(firstGuess.blurb)).toHaveCount(0);
   });
 
-  test('reveals the authored similarity and both dossiers after one guess', async ({
+  test('reveals the score and both dossiers after one guess', async ({
     page,
   }) => {
     const { firstGuess, firstResult, firstTarget } = requireFiveRoundFixture();
@@ -257,7 +257,7 @@ test.describe('Whereabouts five-round desktop journeys', () => {
     await expect(
       page.getByText(new RegExp(`${tier} · ${firstResult.points} points`, 'i')),
     ).toBeVisible();
-    await expect(page.getByText(firstResult.text)).toBeVisible();
+    await expect(page.getByText(firstResult.text)).toHaveCount(0);
     await expect(
       page.getByRole('heading', { name: firstGuess.name }),
     ).toBeVisible();

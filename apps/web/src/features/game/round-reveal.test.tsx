@@ -15,8 +15,8 @@ function getFixture() {
 }
 
 describe('RoundReveal', () => {
-  it('shows the correct location first and keeps theme rationale off the guess', () => {
-    const { caseData, correctPoi, round } = getFixture();
+  it('shows the correct location first without explanatory sections', () => {
+    const { caseData, correctPoi } = getFixture();
     const guessedPoi = caseData.pois.find((poi) => poi.id !== correctPoi.id);
 
     if (!guessedPoi) throw new Error('Expected an incorrect candidate POI');
@@ -26,7 +26,6 @@ describe('RoundReveal', () => {
         correctPoi={correctPoi}
         guessedPoi={guessedPoi}
         points={56}
-        round={round}
         roundNumber={1}
       />,
     );
@@ -46,23 +45,18 @@ describe('RoundReveal', () => {
     );
     expect(dossiers[0]).toHaveClass('border-emerald-300/50');
     expect(dossiers[1]).toHaveClass('border-brass/40');
-    expect(
-      within(dossiers[0]).getByText("Why it fits today's theme"),
-    ).toBeVisible();
-    expect(
-      within(dossiers[1]).queryByText("Why it fits today's theme"),
-    ).toBeNull();
+    expect(screen.queryByText("Why it fits today's theme")).toBeNull();
+    expect(screen.queryByText('Authored relationship')).toBeNull();
   });
 
   it('shows one correct-location card when the guess is correct', () => {
-    const { correctPoi, round } = getFixture();
+    const { correctPoi } = getFixture();
 
     render(
       <RoundReveal
         correctPoi={correctPoi}
         guessedPoi={correctPoi}
         points={100}
-        round={round}
         roundNumber={1}
       />,
     );
@@ -81,8 +75,7 @@ describe('RoundReveal', () => {
     expect(dossiers[0]).toHaveClass('sm:grid-cols-[minmax(14rem,2fr)_3fr]');
     expect(within(dossiers[0]).getByRole('img')).toHaveClass('sm:h-full');
     expect(screen.queryByText('Your location')).toBeNull();
-    expect(
-      within(dossiers[0]).getByText("Why it fits today's theme"),
-    ).toBeVisible();
+    expect(screen.queryByText("Why it fits today's theme")).toBeNull();
+    expect(screen.queryByText('Authored relationship')).toBeNull();
   });
 });

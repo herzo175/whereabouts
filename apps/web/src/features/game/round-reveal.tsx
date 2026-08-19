@@ -1,4 +1,4 @@
-import type { DailyRound, Poi } from '@whereabouts/case-content';
+import type { Poi } from '@whereabouts/case-content';
 import { getScoreBand } from '@whereabouts/game-engine';
 import type { CSSProperties } from 'react';
 
@@ -6,7 +6,6 @@ type RoundRevealProps = {
   correctPoi: Poi;
   guessedPoi: Poi;
   points: number;
-  round: DailyRound;
   roundNumber: number;
 };
 
@@ -59,24 +58,14 @@ function CorrectConfetti() {
 function FullDossier({
   poi,
   label,
-  showThemeConnection = false,
   variant,
   wide = false,
 }: {
   poi: Poi;
   label: string;
-  showThemeConnection?: boolean;
   variant: keyof typeof dossierStyles;
   wide?: boolean;
 }) {
-  const themeConnection =
-    'themeConnection' in poi &&
-    typeof poi.themeConnection === 'object' &&
-    poi.themeConnection !== null &&
-    'text' in poi.themeConnection &&
-    typeof poi.themeConnection.text === 'string'
-      ? (poi.themeConnection as { text: string })
-      : undefined;
   const styles = dossierStyles[variant];
 
   return (
@@ -117,17 +106,6 @@ function FullDossier({
         {poi.blurb ? (
           <p className="text-sm leading-relaxed">{poi.blurb}</p>
         ) : null}
-        {showThemeConnection && themeConnection ? (
-          <section
-            aria-label="Why it fits today's theme"
-            className="space-y-1 border-t border-foreground/10 pt-3"
-          >
-            <h4 className="text-xs font-semibold tracking-[0.16em] text-cyan uppercase">
-              Why it fits today's theme
-            </h4>
-            <p className="text-sm leading-relaxed">{themeConnection.text}</p>
-          </section>
-        ) : null}
       </div>
     </article>
   );
@@ -137,12 +115,8 @@ export function RoundReveal({
   correctPoi,
   guessedPoi,
   points,
-  round,
   roundNumber,
 }: RoundRevealProps) {
-  const result = round.results.find(
-    (candidate) => candidate.poiId === guessedPoi.id,
-  );
   const tier = getScoreBand(points);
   const formattedTier = tier[0].toUpperCase() + tier.slice(1);
   const guessedCorrectly = guessedPoi.id === correctPoi.id;
@@ -175,19 +149,10 @@ export function RoundReveal({
           {formattedTier} · {points} points
         </p>
       </header>
-      {result ? (
-        <article className="rounded-lg border border-brass/40 bg-brass/10 p-4">
-          <p className="text-xs font-semibold tracking-[0.16em] text-brass uppercase">
-            Authored relationship
-          </p>
-          <p className="mt-2 leading-relaxed text-paper">{result.text}</p>
-        </article>
-      ) : null}
       <div className={`grid gap-4 ${guessedCorrectly ? '' : 'sm:grid-cols-2'}`}>
         <FullDossier
           label="Correct location"
           poi={correctPoi}
-          showThemeConnection
           variant="correct"
           wide={guessedCorrectly}
         />

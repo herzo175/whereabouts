@@ -29,7 +29,7 @@ function makeStorage(initial?: Record<string, string>): Storage {
 }
 
 describe('FiveRoundGameScreen', () => {
-  it("shows today's theme before a guess and the correct dossier connection after submission", async () => {
+  it("shows today's theme before a guess without repeating its rationale after submission", async () => {
     const user = userEvent.setup();
     const caseData = makeFiveRoundCase();
     const guessedPoi = caseData.pois[10];
@@ -66,17 +66,17 @@ describe('FiveRoundGameScreen', () => {
     );
     await user.click(screen.getByRole('button', { name: /submit this lead/i }));
 
-    expect(screen.getAllByText("Why it fits today's theme")).toHaveLength(1);
+    expect(screen.queryByText("Why it fits today's theme")).toBeNull();
     expect(screen.queryByText(guessedPoi.themeConnection.text)).toBeNull();
     const correctPoi = caseData.pois.find(
       (poi) => poi.id === caseData.rounds[0].targetPoiId,
     );
     expect(correctPoi).toBeDefined();
     if (!correctPoi) return;
-    expect(screen.getByText(correctPoi.themeConnection.text)).toBeVisible();
+    expect(screen.queryByText(correctPoi.themeConnection.text)).toBeNull();
   });
 
-  it('shows a neutral briefing, then reveals the scored relationship before the next round', async () => {
+  it('shows a neutral briefing, then reveals the score before the next round', async () => {
     const user = userEvent.setup();
     const caseData = makeFiveRoundCase();
     const guessedPoi = caseData.pois[10];
@@ -140,9 +140,7 @@ describe('FiveRoundGameScreen', () => {
       screen.getByRole('button', { name: /view round 1 result/i }),
     ).toHaveAttribute('aria-current', 'step');
     expect(screen.getByText(/warm · 56 points/i)).toBeInTheDocument();
-    expect(
-      screen.getByText(caseData.rounds[0].results[10].text),
-    ).toBeInTheDocument();
+    expect(screen.queryByText(caseData.rounds[0].results[10].text)).toBeNull();
     expect(screen.queryByText(caseData.rounds[0].image.attribution)).toBeNull();
     expect(screen.queryByRole('link', { name: /license/i })).toBeNull();
     expect(screen.getByText('Target Place')).toBeInTheDocument();

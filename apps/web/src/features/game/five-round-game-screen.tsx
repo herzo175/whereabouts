@@ -201,7 +201,6 @@ export function FiveRoundGameScreen({
               correctPoi={correctPoi}
               guessedPoi={guessedPoi}
               points={viewedGuess.points}
-              round={revealedRound}
               roundNumber={viewedRevealIndex + 1}
             />
             <nav aria-label="Result history" className="w-full space-y-3">
