@@ -14,6 +14,10 @@ describe('DailyScorePanel', () => {
   it('offers selectable share text when clipboard copying fails', async () => {
     const user = userEvent.setup();
     const caseData = makeFiveRoundCase();
+    caseData.pois[0] = {
+      ...caseData.pois[0],
+      blurb: 'A concise account of the first location.',
+    };
     const progress = caseData.rounds.reduce(
       (current, round) =>
         acknowledgeRoundReveal(
@@ -39,6 +43,32 @@ describe('DailyScorePanel', () => {
       expect(place).toBeDefined();
       if (place) expect(screen.getByText(place.name)).toBeVisible();
     }
+
+    const firstRound = caseData.rounds[0];
+    const firstPlace = caseData.pois.find(
+      (poi) => poi.id === firstRound.targetPoiId,
+    );
+    expect(firstPlace).toBeDefined();
+    if (!firstPlace) return;
+
+    await user.click(
+      screen.getByRole('button', {
+        name: `Open round 1 location dossier: ${firstPlace.name}`,
+      }),
+    );
+    expect(screen.getByRole('dialog', { name: firstPlace.name })).toBeVisible();
+    expect(
+      screen.getByText('A concise account of the first location.'),
+    ).toBeVisible();
+    expect(
+      screen.getByRole('img', { name: firstRound.image.alt }),
+    ).toHaveAttribute('src', firstRound.image.url);
+    expect(
+      screen.getByRole('link', {
+        name: `Read ${firstPlace.name} on Wikipedia`,
+      }),
+    ).toBeVisible();
+    await user.click(screen.getByRole('button', { name: /^close$/i }));
 
     await user.click(screen.getByRole('button', { name: /copy result/i }));
 

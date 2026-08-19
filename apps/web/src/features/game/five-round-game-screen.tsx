@@ -44,9 +44,11 @@ const tierDotStyles = {
 
 function FiveRoundHeader({
   centered = false,
+  onSelectRound,
   progress,
 }: {
   centered?: boolean;
+  onSelectRound: (index: number) => void;
   progress: FiveRoundProgress;
 }) {
   return (
@@ -65,15 +67,30 @@ function FiveRoundHeader({
           const tier = guess ? getScoreBand(guess.points) : undefined;
           return (
             <li key={`round-${index + 1}`}>
-              <span
-                aria-label={
-                  guess
-                    ? `Round ${index + 1}: ${tier}, ${guess.points} points`
-                    : `Round ${index + 1}: not played`
-                }
-                className={`block size-6 rounded-full border-2 sm:size-8 ${tier ? tierDotStyles[tier] : 'border-rule bg-transparent'}`}
-                role="img"
-              />
+              {guess && tier ? (
+                <button
+                  aria-label={`View round ${index + 1} result: ${tier}, ${guess.points} points`}
+                  className="grid size-11 place-items-center rounded-full hover:bg-paper/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
+                  onClick={() => onSelectRound(index)}
+                  type="button"
+                >
+                  <span
+                    aria-hidden="true"
+                    className={`block size-6 rounded-full border-2 sm:size-8 ${tierDotStyles[tier]}`}
+                  />
+                </button>
+              ) : (
+                <span
+                  aria-label={`Round ${index + 1}: not played`}
+                  className="grid size-11 place-items-center"
+                  role="img"
+                >
+                  <span
+                    aria-hidden="true"
+                    className="block size-6 rounded-full border-2 border-rule bg-transparent sm:size-8"
+                  />
+                </span>
+              )}
             </li>
           );
         })}
@@ -171,7 +188,11 @@ export function FiveRoundGameScreen({
       return (
         <main className="min-h-screen bg-background px-4 py-3 text-paper sm:px-6 sm:py-8">
           <div className="mx-auto max-w-2xl space-y-3 sm:space-y-6">
-            <FiveRoundHeader centered progress={progress} />
+            <FiveRoundHeader
+              centered
+              onSelectRound={setViewedRevealIndex}
+              progress={progress}
+            />
             {caseData.schemaVersion === 4 ? (
               <ThemeBriefing centered theme={caseData.theme} />
             ) : null}
@@ -245,7 +266,10 @@ export function FiveRoundGameScreen({
     return (
       <main className="min-h-screen bg-background px-4 py-3 text-paper sm:px-6 sm:py-8">
         <div className="mx-auto max-w-2xl space-y-3 sm:space-y-6">
-          <FiveRoundHeader progress={progress} />
+          <FiveRoundHeader
+            onSelectRound={setViewedRevealIndex}
+            progress={progress}
+          />
           {caseData.schemaVersion === 4 ? (
             <ThemeBriefing theme={caseData.theme} />
           ) : null}
@@ -255,7 +279,7 @@ export function FiveRoundGameScreen({
             progress={progress}
           />
           <button
-            className="min-h-12 rounded-md border border-rule px-5 text-sm font-semibold text-paper hover:border-paper/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
+            className="min-h-12 w-full rounded-md border border-rule px-5 text-sm font-semibold text-paper hover:border-paper/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
             onClick={openLatestReveal}
             type="button"
           >
@@ -275,7 +299,10 @@ export function FiveRoundGameScreen({
   return (
     <main className="min-h-screen bg-background px-4 py-3 text-paper sm:px-6 sm:py-8">
       <div className="mx-auto max-w-2xl space-y-3 sm:space-y-6">
-        <FiveRoundHeader progress={progress} />
+        <FiveRoundHeader
+          onSelectRound={setViewedRevealIndex}
+          progress={progress}
+        />
         {caseData.schemaVersion === 4 ? (
           <ThemeBriefing theme={caseData.theme} />
         ) : null}

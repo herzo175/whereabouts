@@ -209,9 +209,11 @@ describe('FiveRoundGameScreen', () => {
     expect(onShare).toHaveBeenCalledWith(caseData, completed);
     expect(screen.getByRole('button', { name: /copied/i })).toBeVisible();
 
-    await user.click(
-      screen.getByRole('button', { name: /back to previous result/i }),
-    );
+    const previousResultButton = screen.getByRole('button', {
+      name: /back to previous result/i,
+    });
+    expect(previousResultButton).toHaveClass('w-full');
+    await user.click(previousResultButton);
     expect(
       screen.getByRole('region', { name: /round 5 reveal/i }),
     ).toBeVisible();
@@ -273,6 +275,23 @@ describe('FiveRoundGameScreen', () => {
     );
 
     expect(await screen.findByText('Round 3 / 5')).toBeVisible();
+    expect(
+      screen.getByRole('button', { name: /view round 1 result/i }),
+    ).toBeVisible();
+    expect(screen.queryByRole('button', { name: /round 3/i })).toBeNull();
+    await user.click(
+      screen.getByRole('button', { name: /view round 1 result/i }),
+    );
+    expect(
+      screen.getByRole('region', { name: /round 1 reveal/i }),
+    ).toBeVisible();
+
+    await user.click(
+      screen.getByRole('button', { name: /forward to round 2 result/i }),
+    );
+    await user.click(
+      screen.getByRole('button', { name: /return to round 3/i }),
+    );
     const previousResultButton = screen.getByRole('button', {
       name: /back to previous result/i,
     });

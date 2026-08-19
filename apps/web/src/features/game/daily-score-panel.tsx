@@ -5,6 +5,8 @@ import {
   getTotalScore,
 } from '@whereabouts/game-engine';
 import { useState } from 'react';
+import { wikipediaArticleUrl } from './completed-field-guide';
+import { PoiDossier } from './poi-dossier';
 import { buildShareText } from './share';
 
 type DailyScorePanelProps = {
@@ -31,6 +33,19 @@ export function DailyScorePanel({
   const [copyState, setCopyState] = useState<
     'idle' | 'copying' | 'copied' | 'error'
   >('idle');
+  const [selectedGuessIndex, setSelectedGuessIndex] = useState<number | null>(
+    null,
+  );
+  const selectedGuess =
+    selectedGuessIndex === null
+      ? undefined
+      : progress.guesses[selectedGuessIndex];
+  const selectedPoi = selectedGuess
+    ? caseData.pois.find((poi) => poi.id === selectedGuess.poiId)
+    : undefined;
+  const selectedRound = selectedGuess
+    ? caseData.rounds.find((round) => round.id === selectedGuess.roundId)
+    : undefined;
 
   const copyResult = async () => {
     setCopyState('copying');
@@ -64,26 +79,50 @@ export function DailyScorePanel({
           const place = caseData.pois.find((poi) => poi.id === guess.poiId);
           const tier = getScoreBand(guess.points);
           return (
-            <li className="space-y-2 text-center" key={guess.roundId}>
-              <span
-                aria-hidden="true"
-                className={`mx-auto grid size-11 place-items-center rounded-full border ${tierStyles[tier]}`}
+            <li key={guess.roundId}>
+              <button
+                aria-label={`Open round ${index + 1} location dossier: ${place?.name ?? 'Unknown place'}`}
+                className="group w-full space-y-2 rounded-md py-1 text-center hover:bg-paper/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan disabled:cursor-not-allowed"
+                disabled={!place}
+                onClick={() => setSelectedGuessIndex(index)}
+                type="button"
               >
-                {guess.points}
-              </span>
-              <span className="block text-xs text-muted-foreground">
-                Round {index + 1}
-              </span>
-              <span className="block text-xs leading-tight font-semibold text-paper">
-                {place?.name ?? 'Unknown place'}
-              </span>
-              <span className="block text-xs font-semibold capitalize">
-                {tier}
-              </span>
+                <span
+                  aria-hidden="true"
+                  className={`mx-auto grid size-11 place-items-center rounded-full border transition-transform group-hover:scale-105 ${tierStyles[tier]}`}
+                >
+                  {guess.points}
+                </span>
+                <span className="block text-xs text-muted-foreground">
+                  Round {index + 1}
+                </span>
+                <span className="block text-xs leading-tight font-semibold text-paper">
+                  {place?.name ?? 'Unknown place'}
+                </span>
+                <span className="block text-xs font-semibold capitalize">
+                  {tier}
+                </span>
+              </button>
             </li>
           );
         })}
       </ol>
+
+      <PoiDossier
+        imageOverride={
+          selectedPoi &&
+          selectedRound &&
+          selectedPoi.id === selectedRound.targetPoiId
+            ? selectedRound.image
+            : undefined
+        }
+        onOpenChange={(open) => {
+          if (!open) setSelectedGuessIndex(null);
+        }}
+        open={selectedPoi !== undefined}
+        poi={selectedPoi ?? null}
+        wikipediaUrl={wikipediaArticleUrl(selectedPoi?.wikipediaTitle)}
+      />
 
       <button
         className="min-h-12 w-full rounded-md border border-brass bg-brass px-5 text-sm font-bold tracking-[0.12em] text-ink uppercase hover:bg-paper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brass"
