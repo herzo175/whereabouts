@@ -7,7 +7,15 @@ import type {
   FiveRoundProgress,
 } from '@whereabouts/game-engine';
 
-export const FIVE_ROUND_CASE = makeFiveRoundCase();
+const fixtureCase = makeFiveRoundCase();
+export const FIVE_ROUND_CASE = {
+  ...fixtureCase,
+  pois: fixtureCase.pois.map((poi, index) => {
+    if (index !== 5) return poi;
+    const { wikipediaTitle: _title, ...candidate } = poi;
+    return candidate;
+  }),
+};
 export const CASE_DATE = FIVE_ROUND_CASE.publicationDate;
 export const CASE_REVISION = FIVE_ROUND_CASE.revision;
 export const CASE_STORAGE_KEY = `whereabouts:case:${CASE_DATE}`;

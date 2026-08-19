@@ -121,6 +121,56 @@ async function playPerfectDailyGame(page: Page): Promise<void> {
   await expect(page.getByText('500 / 500')).toBeVisible();
 }
 
+async function assertCompletedFieldGuide(
+  page: Page,
+  caseData: typeof FIVE_ROUND_CASE,
+): Promise<void> {
+  const fieldGuideToggle = page.getByText(
+    `Field guide (${caseData.pois.length} candidate locations)`,
+  );
+  await fieldGuideToggle.click();
+  const candidates = page.getByRole('list', { name: 'Candidate locations' });
+  await expect(candidates).toBeVisible();
+  await expect(candidates.locator('li')).toHaveCount(caseData.pois.length);
+
+  const availableWikipedia = caseData.pois.filter(
+    (candidate) => candidate.wikipediaTitle,
+  );
+  await expect(
+    candidates.getByRole('link', { name: /Wikipedia article for/ }),
+  ).toHaveCount(availableWikipedia.length);
+  for (const candidate of caseData.pois) {
+    await expect(
+      candidates.getByText(candidate.name, { exact: true }),
+    ).toBeVisible();
+    const wikipedia = candidates.getByRole('link', {
+      name: `Wikipedia article for ${candidate.name}`,
+    });
+    if (candidate.wikipediaTitle) {
+      await expect(wikipedia).toHaveAttribute(
+        'href',
+        `https://en.wikipedia.org/wiki/${encodeURIComponent(candidate.wikipediaTitle.replace(/ /g, '_'))}`,
+      );
+    } else {
+      await expect(wikipedia).toHaveCount(0);
+    }
+  }
+
+  const photoLicenses = candidates.getByRole('link', {
+    name: /Photo license for/,
+  });
+  await expect(photoLicenses).toHaveCount(5);
+  for (const round of caseData.rounds) {
+    const target = caseData.pois.find((poi) => poi.id === round.targetPoiId);
+    if (!target) throw new Error(`Missing target for ${round.id}`);
+    await expect(
+      candidates.getByRole('link', {
+        name: `Photo license for ${target.name}`,
+      }),
+    ).toHaveAttribute('href', round.image.licenseUrl);
+  }
+}
+
 const emojiByTier = {
   correct: '🟢',
   hot: '🟠',
@@ -292,51 +342,7 @@ test.describe('Whereabouts five-round desktop journeys', () => {
     const { caseData } = requireFiveRoundFixture();
     await seedFiveRoundProgress(page, makeCompletedFiveRoundProgress(caseData));
     await openGame(page);
-
-    const fieldGuideToggle = page.getByText(
-      `Field guide (${caseData.pois.length} candidate locations)`,
-    );
-    await fieldGuideToggle.click();
-    const candidates = page.getByRole('list', { name: 'Candidate locations' });
-    await expect(candidates).toBeVisible();
-    await expect(candidates.locator('li')).toHaveCount(caseData.pois.length);
-
-    const availableWikipedia = caseData.pois.filter(
-      (candidate) => candidate.wikipediaTitle,
-    );
-    await expect(
-      candidates.getByRole('link', { name: /Wikipedia article for/ }),
-    ).toHaveCount(availableWikipedia.length);
-    for (const candidate of caseData.pois) {
-      await expect(
-        candidates.getByText(candidate.name, { exact: true }),
-      ).toBeVisible();
-      const wikipedia = candidates.getByRole('link', {
-        name: `Wikipedia article for ${candidate.name}`,
-      });
-      if (candidate.wikipediaTitle) {
-        await expect(wikipedia).toHaveAttribute(
-          'href',
-          `https://en.wikipedia.org/wiki/${encodeURIComponent(candidate.wikipediaTitle.replace(/ /g, '_'))}`,
-        );
-      } else {
-        await expect(wikipedia).toHaveCount(0);
-      }
-    }
-
-    const photoLicenses = candidates.getByRole('link', {
-      name: /Photo license for/,
-    });
-    await expect(photoLicenses).toHaveCount(5);
-    for (const round of caseData.rounds) {
-      const target = caseData.pois.find((poi) => poi.id === round.targetPoiId);
-      if (!target) throw new Error(`Missing target for ${round.id}`);
-      await expect(
-        candidates.getByRole('link', {
-          name: `Photo license for ${target.name}`,
-        }),
-      ).toHaveAttribute('href', round.image.licenseUrl);
-    }
+    await assertCompletedFieldGuide(page, caseData);
   });
 
   test('plays all five rounds and accumulates the final score', async ({
@@ -426,7 +432,9 @@ test.describe('Whereabouts five-round mobile journey', () => {
   });
 
   test('plays the complete daily game on mobile', async ({ page }) => {
+    const { caseData } = requireFiveRoundFixture();
     await openGame(page);
     await playPerfectDailyGame(page);
+    await assertCompletedFieldGuide(page, caseData);
   });
 });
