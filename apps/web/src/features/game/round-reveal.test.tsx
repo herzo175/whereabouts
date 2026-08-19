@@ -78,6 +78,8 @@ describe('RoundReveal', () => {
       `Correct location: ${correctPoi.name}`,
     );
     expect(dossiers[0].parentElement).not.toHaveClass('sm:grid-cols-2');
+    expect(dossiers[0]).toHaveClass('sm:grid-cols-[minmax(14rem,2fr)_3fr]');
+    expect(within(dossiers[0]).getByRole('img')).toHaveClass('sm:h-full');
     expect(screen.queryByText('Your location')).toBeNull();
     expect(
       within(dossiers[0]).getByText("Why it fits today's theme"),

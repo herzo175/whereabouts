@@ -61,11 +61,13 @@ function FullDossier({
   label,
   showThemeConnection = false,
   variant,
+  wide = false,
 }: {
   poi: Poi;
   label: string;
   showThemeConnection?: boolean;
   variant: keyof typeof dossierStyles;
+  wide?: boolean;
 }) {
   const themeConnection =
     'themeConnection' in poi &&
@@ -80,20 +82,20 @@ function FullDossier({
   return (
     <article
       aria-label={`${label}: ${poi.name}`}
-      className={`overflow-hidden rounded-lg border ${styles.card}`}
+      className={`overflow-hidden rounded-lg border ${styles.card} ${wide ? 'sm:grid sm:grid-cols-[minmax(14rem,2fr)_3fr]' : ''}`}
     >
       {poi.image ? (
-        <figure>
+        <figure className={wide ? 'sm:h-full' : undefined}>
           <img
             alt={poi.image.alt}
-            className="h-40 w-full object-cover"
+            className={`h-40 w-full object-cover ${wide ? 'sm:h-full sm:min-h-64' : ''}`}
             src={poi.image.url}
           />
         </figure>
       ) : (
         <div
           aria-label={`Image unavailable for ${poi.name}`}
-          className="grid h-32 place-items-center bg-[linear-gradient(135deg,rgba(29,78,70,0.95),rgba(13,25,36,1)_52%,rgba(135,104,44,0.72))] text-xs tracking-wide text-paper/70 uppercase"
+          className={`grid h-32 place-items-center bg-[linear-gradient(135deg,rgba(29,78,70,0.95),rgba(13,25,36,1)_52%,rgba(135,104,44,0.72))] text-xs tracking-wide text-paper/70 uppercase ${wide ? 'sm:h-full sm:min-h-64' : ''}`}
           role="img"
         >
           Archival image unavailable
@@ -184,6 +186,7 @@ export function RoundReveal({
           poi={correctPoi}
           showThemeConnection
           variant="correct"
+          wide={guessedCorrectly}
         />
         {guessedCorrectly ? null : (
           <FullDossier label="Your location" poi={guessedPoi} variant="guess" />
