@@ -271,7 +271,8 @@ describe('FiveRoundGameScreen', () => {
         .getAllByRole('region', { name: /choose a location/i })
         .some((region) => region.contains(previousResultButton)),
     ).toBe(true);
-    expect(previousResultButton).toHaveClass('w-full', 'sm:w-auto');
+    expect(previousResultButton).toHaveClass('w-full');
+    expect(previousResultButton).not.toHaveClass('sm:w-auto');
     await user.click(previousResultButton);
     expect(
       screen.getByRole('region', { name: /round 2 reveal/i }),

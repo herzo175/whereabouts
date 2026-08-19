@@ -294,7 +294,7 @@ export function FiveRoundGameScreen({
           {progress.guesses.length > 0 ? (
             <nav aria-label="Round history" className="mt-4">
               <button
-                className="min-h-12 w-full rounded-md border border-rule px-5 text-sm font-semibold text-paper hover:border-paper/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan sm:w-auto"
+                className="min-h-12 w-full rounded-md border border-rule px-5 text-sm font-semibold text-paper hover:border-paper/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
                 onClick={openLatestReveal}
                 type="button"
               >
