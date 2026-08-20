@@ -24,7 +24,6 @@ import {
   setClock,
 } from './helpers';
 
-const casePath = `/${CASE_DATE}`;
 const completedAt = `${CASE_DATE}T12:00:00.000Z`;
 
 function requireFiveRoundFixture() {
@@ -195,12 +194,12 @@ test.describe('Whereabouts five-round desktop journeys', () => {
     await mockClipboard(context, page);
   });
 
-  test('redirects the root route to today and reports the empty publication', async ({
+  test('keeps the root route while reporting today’s empty publication', async ({
     page,
   }) => {
     await page.goto('/');
 
-    await expect(page).toHaveURL(new RegExp(`${casePath}$`));
+    await expect(page).toHaveURL(/\/$/);
     await expect(
       page.getByRole('heading', { name: 'Briefing unavailable' }),
     ).toBeVisible();
