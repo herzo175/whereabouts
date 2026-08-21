@@ -1,0 +1,1182 @@
+{
+  "schemaVersion": 4,
+  "publicationDate": "2026-08-23",
+  "revision": 3,
+  "caseNumber": 20688,
+  "pois": [
+    {
+      "id": "national-space-centre-planetarium",
+      "name": "Sir Patrick Moore Planetarium",
+      "city": "Leicester",
+      "country": "United Kingdom",
+      "latitude": 52.6508,
+      "longitude": -1.1285,
+      "wikipediaTitle": "National Space Centre",
+      "blurb": "The National Space Centre in Leicester includes the Sir Patrick Moore Planetarium, a large dome venue used for public astronomy presentations.",
+      "themeConnection": {
+        "text": "Individually named planetarium at the National Space Centre with public scheduled shows.",
+        "sourceIds": ["source-08"]
+      }
+    },
+    {
+      "id": "planetarium-brno",
+      "name": "Brno Observatory and Planetarium",
+      "city": "Brno",
+      "country": "Czech Republic",
+      "latitude": 49.2079,
+      "longitude": 16.5988,
+      "wikipediaTitle": "Brno Observatory and Planetarium",
+      "blurb": "The Brno Observatory and Planetarium is a public institution whose planetarium presents astronomy shows and educational programmes for visitors.",
+      "themeConnection": {
+        "text": "Named municipal planetarium facility with a fixed dome and public program schedule.",
+        "sourceIds": ["source-12"]
+      }
+    },
+    {
+      "id": "planetarium-prague",
+      "name": "Planetarium Prague",
+      "city": "Prague",
+      "country": "Czech Republic",
+      "latitude": 50.1042,
+      "longitude": 14.4305,
+      "wikipediaTitle": "Planetarium Prague",
+      "blurb": "Planetarium Prague is a public planetarium in the capital city, presenting educational and astronomical programmes in a large dome theater.",
+      "themeConnection": {
+        "text": "Fixed public planetarium venue in Stromovka with regularly scheduled astronomical programs.",
+        "sourceIds": ["source-11"]
+      }
+    },
+    {
+      "id": "taipei-astronomical-museum-planetarium",
+      "name": "Taipei Astronomical Museum Planetarium",
+      "city": "Taipei",
+      "country": "Taiwan",
+      "latitude": 25.0964,
+      "longitude": 121.5169,
+      "wikipediaTitle": "Taipei Astronomical Museum",
+      "blurb": "Taipei Astronomical Museum includes a planetarium theater where visitors receive public presentations about astronomy and the exploration of space.",
+      "themeConnection": {
+        "text": "Public astronomical museum with a named planetarium theater and regular public sessions.",
+        "sourceIds": ["source-22"]
+      }
+    },
+    {
+      "id": "national-planetarium-kuala-lumpur",
+      "name": "National Planetarium",
+      "city": "Kuala Lumpur",
+      "country": "Malaysia",
+      "latitude": 3.1418,
+      "longitude": 101.6865,
+      "wikipediaTitle": "National Planetarium",
+      "blurb": "The National Planetarium (Malay: Planetarium Negara) is the national planetarium of Malaysia. It is a blue-domed structure that is situated on top of a hill in the Lake Gardens at Jalan Perdana, Kuala Lumpur.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Planetarium_Negara.jpg/1280px-Planetarium_Negara.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "National Planetarium",
+        "attribution": "Sergey from Novosibirsk, Russia · CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      "themeConnection": {
+        "text": "Dedicated national public planetarium with a dome theater in Kuala Lumpur.",
+        "sourceIds": ["source-23"]
+      }
+    },
+    {
+      "id": "morrison-planetarium",
+      "name": "Morrison Planetarium",
+      "city": "San Francisco",
+      "country": "United States",
+      "latitude": 37.7699,
+      "longitude": -122.4661,
+      "wikipediaTitle": "Morrison Planetarium",
+      "blurb": "The Morrison Planetarium is a digital planetarium located within the California Academy of Sciences in San Francisco, California, and presents astronomy programs.",
+      "themeConnection": {
+        "text": "Named dome planetarium at the California Academy of Sciences with public astronomy programming.",
+        "sourceIds": ["source-03"]
+      }
+    },
+    {
+      "id": "clark-planetarium",
+      "name": "Clark Planetarium",
+      "city": "Salt Lake City",
+      "country": "United States",
+      "latitude": 40.7699,
+      "longitude": -111.9012,
+      "wikipediaTitle": "Clark Planetarium",
+      "blurb": "The Clark Planetarium is a planetarium and science museum situated within The Gateway at the intersection of 400 West and 100 South in downtown Salt Lake City, Utah, United States.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Clark_Planetarium_at_The_Gateway.JPG/1280px-Clark_Planetarium_at_The_Gateway.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Clark Planetarium",
+        "attribution": "An Errant Knight · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "Standalone public planetarium with a dome theater and scheduled astronomical presentations.",
+        "sourceIds": ["source-05"]
+      }
+    },
+    {
+      "id": "nagoya-city-science-museum-planetarium",
+      "name": "Nagoya City Science Museum Planetarium",
+      "city": "Nagoya",
+      "country": "Japan",
+      "latitude": 35.1665,
+      "longitude": 136.899,
+      "wikipediaTitle": "Nagoya City Science Museum",
+      "blurb": "Nagoya City Science Museum contains one of the world's largest planetarium domes and regularly presents public astronomy and science shows.",
+      "themeConnection": {
+        "text": "Named planetarium theater within a public science museum, with regular ticketed shows.",
+        "sourceIds": ["source-17"]
+      }
+    },
+    {
+      "id": "fiske-planetarium",
+      "name": "Fiske Planetarium",
+      "city": "Boulder",
+      "country": "United States",
+      "latitude": 40.0068,
+      "longitude": -105.2636,
+      "wikipediaTitle": "Fiske Planetarium",
+      "blurb": "Fiske Planetarium (est. 1975) is one of the largest planetariums in the United States. They offer fulldome films, live talks, laser and liquid sky music shows, as well as public gatherings for astronomical and NASA-related events.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Fiske_Planetarium_%282022%29.jpg/1280px-Fiske_Planetarium_%282022%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Fiske Planetarium",
+        "attribution": "Nwest21 · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "University planetarium with a fixed dome theater and public shows in Boulder.",
+        "sourceIds": ["source-06"]
+      }
+    },
+    {
+      "id": "moscow-planetarium",
+      "name": "Moscow Planetarium",
+      "city": "Moscow",
+      "country": "Russia",
+      "latitude": 55.7615,
+      "longitude": 37.5832,
+      "wikipediaTitle": "Moscow Planetarium",
+      "blurb": "Moscow Planetarium is a public planetarium in Moscow with halls and dome theaters devoted to astronomy education and public star shows.",
+      "themeConnection": {
+        "text": "Major permanent public planetarium with multiple astronomy theaters in Moscow.",
+        "sourceIds": ["source-13"]
+      }
+    },
+    {
+      "id": "hayden-planetarium",
+      "name": "Hayden Planetarium",
+      "city": "New York City",
+      "country": "United States",
+      "latitude": 40.7813,
+      "longitude": -73.9735,
+      "wikipediaTitle": "Hayden Planetarium",
+      "blurb": "The Hayden Planetarium is a planetarium located in the Rose Center for Earth and Space at the American Museum of Natural History in Manhattan.",
+      "themeConnection": {
+        "text": "Individually named planetarium theater inside the American Museum of Natural History with public space shows.",
+        "sourceIds": ["source-02"]
+      }
+    },
+    {
+      "id": "planetario-de-madrid",
+      "name": "Planetario de Madrid",
+      "city": "Madrid",
+      "country": "Spain",
+      "latitude": 40.3913,
+      "longitude": -3.6952,
+      "wikipediaTitle": "Planetario de Madrid",
+      "blurb": "The Planetario de Madrid is a public planetarium operated by the city of Madrid, presenting astronomy shows and educational activities in its dome.",
+      "themeConnection": {
+        "text": "Municipal public planetarium with purpose-built dome theaters and scheduled astronomy shows.",
+        "sourceIds": ["source-15"]
+      }
+    },
+    {
+      "id": "planetarium-1-saint-petersburg",
+      "name": "Planetarium No. 1",
+      "city": "Saint Petersburg",
+      "country": "Russia",
+      "latitude": 59.9127,
+      "longitude": 30.3308,
+      "wikipediaTitle": "Planetarium No. 1",
+      "blurb": "Planetarium No. 1 is a large digital planetarium in Saint Petersburg, offering public programs about astronomy, space and the night sky.",
+      "themeConnection": {
+        "text": "Permanent public dome planetarium in Saint Petersburg with immersive astronomy shows.",
+        "sourceIds": ["source-14"]
+      }
+    },
+    {
+      "id": "adler-planetarium",
+      "name": "Adler Planetarium",
+      "city": "Chicago",
+      "country": "United States",
+      "latitude": 41.8663,
+      "longitude": -87.6068,
+      "wikipediaTitle": "Adler Planetarium",
+      "blurb": "The Adler Planetarium is a municipal public museum for astronomy in Chicago, Illinois, United States. It is operated by the Chicago Park District, a municipal government agency of the City of Chicago.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Adler_Planetarium_E.jpg/1280px-Adler_Planetarium_E.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Adler Planetarium",
+        "attribution": "Sea Cow · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "Named public planetarium with multiple dome theaters and regularly scheduled astronomy shows.",
+        "sourceIds": ["source-01"]
+      }
+    },
+    {
+      "id": "osaka-science-museum-planetarium",
+      "name": "Osaka Science Museum Planetarium",
+      "city": "Osaka",
+      "country": "Japan",
+      "latitude": 34.6913,
+      "longitude": 135.4914,
+      "wikipediaTitle": "Osaka Science Museum",
+      "blurb": "The Osaka Science Museum includes a planetarium that offers public shows about astronomy and space science in a dedicated dome theater.",
+      "themeConnection": {
+        "text": "Public planetarium theater within Osaka Science Museum with scheduled dome programs.",
+        "sourceIds": ["source-18"]
+      }
+    },
+    {
+      "id": "oschin-planetarium",
+      "name": "Samuel Oschin Planetarium",
+      "city": "Los Angeles",
+      "country": "United States",
+      "latitude": 34.1184,
+      "longitude": -118.3004,
+      "wikipediaTitle": "Griffith Observatory",
+      "blurb": "Griffith Observatory is an observatory in Los Angeles, California, on the south-facing slope of Mount Hollywood in Griffith Park.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Griffith_observatory_2006.jpg/1280px-Griffith_observatory_2006.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Griffith Observatory",
+        "attribution": "Matthew Field · CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
+      },
+      "themeConnection": {
+        "text": "Named planetarium theater at Griffith Observatory offering regular public astronomy shows.",
+        "sourceIds": ["source-04"]
+      }
+    },
+    {
+      "id": "zeiss-planetarium-berlin",
+      "name": "Zeiss-Großplanetarium",
+      "city": "Berlin",
+      "country": "Germany",
+      "latitude": 52.5487,
+      "longitude": 13.4345,
+      "wikipediaTitle": "Zeiss-Großplanetarium",
+      "blurb": "The Zeiss-Großplanetarium is a planetarium in Berlin that presents public astronomical shows, lectures and cultural programmes under its dome.",
+      "themeConnection": {
+        "text": "Permanent public Zeiss planetarium with a dome theater and scheduled astronomical shows.",
+        "sourceIds": ["source-09"]
+      }
+    },
+    {
+      "id": "beijing-planetarium",
+      "name": "Beijing Planetarium",
+      "city": "Beijing",
+      "country": "China",
+      "latitude": 39.9487,
+      "longitude": 116.3433,
+      "wikipediaTitle": "Beijing Planetarium",
+      "blurb": "Beijing Planetarium is a public planetarium in the Chinese capital, featuring astronomical exhibitions and dome theater programs for visitors.",
+      "themeConnection": {
+        "text": "Dedicated public planetarium complex in Beijing with astronomy theaters and scheduled shows.",
+        "sourceIds": ["source-21"]
+      }
+    },
+    {
+      "id": "peter-harrison-planetarium",
+      "name": "Peter Harrison Planetarium",
+      "city": "London",
+      "country": "United Kingdom",
+      "latitude": 51.4769,
+      "longitude": 0.0005,
+      "wikipediaTitle": "Peter Harrison Planetarium",
+      "blurb": "The Peter Harrison Planetarium at the Royal Observatory Greenwich presents live planetarium shows and astronomy programmes for visitors throughout the year.",
+      "themeConnection": {
+        "text": "Purpose-built public planetarium at the Royal Observatory Greenwich with regular shows.",
+        "sourceIds": ["source-07"]
+      }
+    },
+    {
+      "id": "planetarium-hamburg",
+      "name": "Planetarium Hamburg",
+      "city": "Hamburg",
+      "country": "Germany",
+      "latitude": 53.6044,
+      "longitude": 10.0048,
+      "wikipediaTitle": "Planetarium Hamburg",
+      "blurb": "The Planetarium Hamburg is a public planetarium in Hamburg, Germany, offering regular astronomy shows and immersive presentations in its dome.",
+      "themeConnection": {
+        "text": "Named public planetarium and immersive dome theater in Hamburg.",
+        "sourceIds": ["source-10"]
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "round-1",
+      "targetPoiId": "national-planetarium-kuala-lumpur",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Planetarium_Negara.jpg/1280px-Planetarium_Negara.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "National Planetarium",
+        "attribution": "Sergey from Novosibirsk, Russia · CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      "clue": {
+        "text": "This blue-domed astronomy center grew from a government program and crowns a hill connected by footbridge to a national museum. Its exhibits include hardware from the launch of the country’s first satellite.",
+        "sourceIds": ["source-23"]
+      },
+      "results": [
+        {
+          "poiId": "adler-planetarium",
+          "text": "Adler Planetarium is a themed comparison candidate: Named public planetarium with multiple dome theaters and regularly scheduled astronomy shows.",
+          "sourceIds": ["source-01", "source-23"],
+          "points": 38
+        },
+        {
+          "poiId": "hayden-planetarium",
+          "text": "Hayden Planetarium is a themed comparison candidate: Individually named planetarium theater inside the American Museum of Natural History with public space shows.",
+          "sourceIds": ["source-02", "source-23"],
+          "points": 35
+        },
+        {
+          "poiId": "morrison-planetarium",
+          "text": "Morrison Planetarium is a themed comparison candidate: Named dome planetarium at the California Academy of Sciences with public astronomy programming.",
+          "sourceIds": ["source-03", "source-23"],
+          "points": 32
+        },
+        {
+          "poiId": "oschin-planetarium",
+          "text": "Samuel Oschin Planetarium is a themed comparison candidate: Named planetarium theater at Griffith Observatory offering regular public astronomy shows.",
+          "sourceIds": ["source-04", "source-23"],
+          "points": 29
+        },
+        {
+          "poiId": "clark-planetarium",
+          "text": "Clark Planetarium is a themed comparison candidate: Standalone public planetarium with a dome theater and scheduled astronomical presentations.",
+          "sourceIds": ["source-05", "source-23"],
+          "points": 26
+        },
+        {
+          "poiId": "fiske-planetarium",
+          "text": "Fiske Planetarium is a themed comparison candidate: University planetarium with a fixed dome theater and public shows in Boulder.",
+          "sourceIds": ["source-06", "source-23"],
+          "points": 23
+        },
+        {
+          "poiId": "peter-harrison-planetarium",
+          "text": "Peter Harrison Planetarium is a themed comparison candidate: Purpose-built public planetarium at the Royal Observatory Greenwich with regular shows.",
+          "sourceIds": ["source-07", "source-23"],
+          "points": 20
+        },
+        {
+          "poiId": "national-space-centre-planetarium",
+          "text": "Sir Patrick Moore Planetarium is a themed comparison candidate: Individually named planetarium at the National Space Centre with public scheduled shows.",
+          "sourceIds": ["source-08", "source-23"],
+          "points": 17
+        },
+        {
+          "poiId": "zeiss-planetarium-berlin",
+          "text": "Zeiss-Großplanetarium is a themed comparison candidate: Permanent public Zeiss planetarium with a dome theater and scheduled astronomical shows.",
+          "sourceIds": ["source-09", "source-23"],
+          "points": 14
+        },
+        {
+          "poiId": "planetarium-hamburg",
+          "text": "Planetarium Hamburg is a themed comparison candidate: Named public planetarium and immersive dome theater in Hamburg.",
+          "sourceIds": ["source-10", "source-23"],
+          "points": 72
+        },
+        {
+          "poiId": "planetarium-prague",
+          "text": "Planetarium Prague is a themed comparison candidate: Fixed public planetarium venue in Stromovka with regularly scheduled astronomical programs.",
+          "sourceIds": ["source-11", "source-23"],
+          "points": 68
+        },
+        {
+          "poiId": "planetarium-brno",
+          "text": "Brno Observatory and Planetarium is a themed comparison candidate: Named municipal planetarium facility with a fixed dome and public program schedule.",
+          "sourceIds": ["source-12", "source-23"],
+          "points": 64
+        },
+        {
+          "poiId": "moscow-planetarium",
+          "text": "Moscow Planetarium is a themed comparison candidate: Major permanent public planetarium with multiple astronomy theaters in Moscow.",
+          "sourceIds": ["source-13", "source-23"],
+          "points": 96
+        },
+        {
+          "poiId": "planetarium-1-saint-petersburg",
+          "text": "Planetarium No. 1 is a themed comparison candidate: Permanent public dome planetarium in Saint Petersburg with immersive astronomy shows.",
+          "sourceIds": ["source-14", "source-23"],
+          "points": 60
+        },
+        {
+          "poiId": "planetario-de-madrid",
+          "text": "Planetario de Madrid is a themed comparison candidate: Municipal public planetarium with purpose-built dome theaters and scheduled astronomy shows.",
+          "sourceIds": ["source-15", "source-23"],
+          "points": 91
+        },
+        {
+          "poiId": "nagoya-city-science-museum-planetarium",
+          "text": "Nagoya City Science Museum Planetarium is a themed comparison candidate: Named planetarium theater within a public science museum, with regular ticketed shows.",
+          "sourceIds": ["source-17", "source-23"],
+          "points": 52
+        },
+        {
+          "poiId": "osaka-science-museum-planetarium",
+          "text": "Osaka Science Museum Planetarium is a themed comparison candidate: Public planetarium theater within Osaka Science Museum with scheduled dome programs.",
+          "sourceIds": ["source-18", "source-23"],
+          "points": 48
+        },
+        {
+          "poiId": "beijing-planetarium",
+          "text": "Beijing Planetarium is a themed comparison candidate: Dedicated public planetarium complex in Beijing with astronomy theaters and scheduled shows.",
+          "sourceIds": ["source-21", "source-23"],
+          "points": 86
+        },
+        {
+          "poiId": "taipei-astronomical-museum-planetarium",
+          "text": "Taipei Astronomical Museum Planetarium is a themed comparison candidate: Public astronomical museum with a named planetarium theater and regular public sessions.",
+          "sourceIds": ["source-22", "source-23"],
+          "points": 81
+        },
+        {
+          "poiId": "national-planetarium-kuala-lumpur",
+          "text": "National Planetarium is the round target: Dedicated national public planetarium with a dome theater in Kuala Lumpur.",
+          "sourceIds": ["source-23"],
+          "points": 100
+        }
+      ]
+    },
+    {
+      "id": "round-2",
+      "targetPoiId": "adler-planetarium",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Adler_Planetarium_E.jpg/1280px-Adler_Planetarium_E.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Adler Planetarium",
+        "attribution": "Sea Cow · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "Created by a local philanthropist between the world wars, this was the first planetarium in the Western Hemisphere. It pairs public sky theaters with a working observatory and a major collection of historic astronomical instruments.",
+        "sourceIds": ["source-01"]
+      },
+      "results": [
+        {
+          "poiId": "adler-planetarium",
+          "text": "Adler Planetarium is the round target: Named public planetarium with multiple dome theaters and regularly scheduled astronomy shows.",
+          "sourceIds": ["source-01"],
+          "points": 100
+        },
+        {
+          "poiId": "hayden-planetarium",
+          "text": "Hayden Planetarium is a themed comparison candidate: Individually named planetarium theater inside the American Museum of Natural History with public space shows.",
+          "sourceIds": ["source-02", "source-01"],
+          "points": 96
+        },
+        {
+          "poiId": "morrison-planetarium",
+          "text": "Morrison Planetarium is a themed comparison candidate: Named dome planetarium at the California Academy of Sciences with public astronomy programming.",
+          "sourceIds": ["source-03", "source-01"],
+          "points": 91
+        },
+        {
+          "poiId": "oschin-planetarium",
+          "text": "Samuel Oschin Planetarium is a themed comparison candidate: Named planetarium theater at Griffith Observatory offering regular public astronomy shows.",
+          "sourceIds": ["source-04", "source-01"],
+          "points": 86
+        },
+        {
+          "poiId": "clark-planetarium",
+          "text": "Clark Planetarium is a themed comparison candidate: Standalone public planetarium with a dome theater and scheduled astronomical presentations.",
+          "sourceIds": ["source-05", "source-01"],
+          "points": 72
+        },
+        {
+          "poiId": "fiske-planetarium",
+          "text": "Fiske Planetarium is a themed comparison candidate: University planetarium with a fixed dome theater and public shows in Boulder.",
+          "sourceIds": ["source-06", "source-01"],
+          "points": 81
+        },
+        {
+          "poiId": "peter-harrison-planetarium",
+          "text": "Peter Harrison Planetarium is a themed comparison candidate: Purpose-built public planetarium at the Royal Observatory Greenwich with regular shows.",
+          "sourceIds": ["source-07", "source-01"],
+          "points": 38
+        },
+        {
+          "poiId": "national-space-centre-planetarium",
+          "text": "Sir Patrick Moore Planetarium is a themed comparison candidate: Individually named planetarium at the National Space Centre with public scheduled shows.",
+          "sourceIds": ["source-08", "source-01"],
+          "points": 35
+        },
+        {
+          "poiId": "zeiss-planetarium-berlin",
+          "text": "Zeiss-Großplanetarium is a themed comparison candidate: Permanent public Zeiss planetarium with a dome theater and scheduled astronomical shows.",
+          "sourceIds": ["source-09", "source-01"],
+          "points": 32
+        },
+        {
+          "poiId": "planetarium-hamburg",
+          "text": "Planetarium Hamburg is a themed comparison candidate: Named public planetarium and immersive dome theater in Hamburg.",
+          "sourceIds": ["source-10", "source-01"],
+          "points": 68
+        },
+        {
+          "poiId": "planetarium-prague",
+          "text": "Planetarium Prague is a themed comparison candidate: Fixed public planetarium venue in Stromovka with regularly scheduled astronomical programs.",
+          "sourceIds": ["source-11", "source-01"],
+          "points": 64
+        },
+        {
+          "poiId": "planetarium-brno",
+          "text": "Brno Observatory and Planetarium is a themed comparison candidate: Named municipal planetarium facility with a fixed dome and public program schedule.",
+          "sourceIds": ["source-12", "source-01"],
+          "points": 29
+        },
+        {
+          "poiId": "moscow-planetarium",
+          "text": "Moscow Planetarium is a themed comparison candidate: Major permanent public planetarium with multiple astronomy theaters in Moscow.",
+          "sourceIds": ["source-13", "source-01"],
+          "points": 60
+        },
+        {
+          "poiId": "planetarium-1-saint-petersburg",
+          "text": "Planetarium No. 1 is a themed comparison candidate: Permanent public dome planetarium in Saint Petersburg with immersive astronomy shows.",
+          "sourceIds": ["source-14", "source-01"],
+          "points": 56
+        },
+        {
+          "poiId": "planetario-de-madrid",
+          "text": "Planetario de Madrid is a themed comparison candidate: Municipal public planetarium with purpose-built dome theaters and scheduled astronomy shows.",
+          "sourceIds": ["source-15", "source-01"],
+          "points": 26
+        },
+        {
+          "poiId": "nagoya-city-science-museum-planetarium",
+          "text": "Nagoya City Science Museum Planetarium is a themed comparison candidate: Named planetarium theater within a public science museum, with regular ticketed shows.",
+          "sourceIds": ["source-17", "source-01"],
+          "points": 52
+        },
+        {
+          "poiId": "osaka-science-museum-planetarium",
+          "text": "Osaka Science Museum Planetarium is a themed comparison candidate: Public planetarium theater within Osaka Science Museum with scheduled dome programs.",
+          "sourceIds": ["source-18", "source-01"],
+          "points": 20
+        },
+        {
+          "poiId": "beijing-planetarium",
+          "text": "Beijing Planetarium is a themed comparison candidate: Dedicated public planetarium complex in Beijing with astronomy theaters and scheduled shows.",
+          "sourceIds": ["source-21", "source-01"],
+          "points": 48
+        },
+        {
+          "poiId": "taipei-astronomical-museum-planetarium",
+          "text": "Taipei Astronomical Museum Planetarium is a themed comparison candidate: Public astronomical museum with a named planetarium theater and regular public sessions.",
+          "sourceIds": ["source-22", "source-01"],
+          "points": 11
+        },
+        {
+          "poiId": "national-planetarium-kuala-lumpur",
+          "text": "National Planetarium is a themed comparison candidate: Dedicated national public planetarium with a dome theater in Kuala Lumpur.",
+          "sourceIds": ["source-23", "source-01"],
+          "points": 44
+        }
+      ]
+    },
+    {
+      "id": "round-3",
+      "targetPoiId": "oschin-planetarium",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Griffith_observatory_2006.jpg/1280px-Griffith_observatory_2006.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Griffith Observatory",
+        "attribution": "Matthew Field · CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
+      },
+      "clue": {
+        "text": "Inside a free public observatory from the 1930s, this theater carries on a mission to make astronomy accessible. The surrounding observatory later trained Apollo astronauts in celestial navigation.",
+        "sourceIds": ["source-04"]
+      },
+      "results": [
+        {
+          "poiId": "adler-planetarium",
+          "text": "Adler Planetarium is a themed comparison candidate: Named public planetarium with multiple dome theaters and regularly scheduled astronomy shows.",
+          "sourceIds": ["source-01", "source-04"],
+          "points": 96
+        },
+        {
+          "poiId": "hayden-planetarium",
+          "text": "Hayden Planetarium is a themed comparison candidate: Individually named planetarium theater inside the American Museum of Natural History with public space shows.",
+          "sourceIds": ["source-02", "source-04"],
+          "points": 91
+        },
+        {
+          "poiId": "morrison-planetarium",
+          "text": "Morrison Planetarium is a themed comparison candidate: Named dome planetarium at the California Academy of Sciences with public astronomy programming.",
+          "sourceIds": ["source-03", "source-04"],
+          "points": 86
+        },
+        {
+          "poiId": "oschin-planetarium",
+          "text": "Samuel Oschin Planetarium is the round target: Named planetarium theater at Griffith Observatory offering regular public astronomy shows.",
+          "sourceIds": ["source-04"],
+          "points": 100
+        },
+        {
+          "poiId": "clark-planetarium",
+          "text": "Clark Planetarium is a themed comparison candidate: Standalone public planetarium with a dome theater and scheduled astronomical presentations.",
+          "sourceIds": ["source-05", "source-04"],
+          "points": 72
+        },
+        {
+          "poiId": "fiske-planetarium",
+          "text": "Fiske Planetarium is a themed comparison candidate: University planetarium with a fixed dome theater and public shows in Boulder.",
+          "sourceIds": ["source-06", "source-04"],
+          "points": 81
+        },
+        {
+          "poiId": "peter-harrison-planetarium",
+          "text": "Peter Harrison Planetarium is a themed comparison candidate: Purpose-built public planetarium at the Royal Observatory Greenwich with regular shows.",
+          "sourceIds": ["source-07", "source-04"],
+          "points": 68
+        },
+        {
+          "poiId": "national-space-centre-planetarium",
+          "text": "Sir Patrick Moore Planetarium is a themed comparison candidate: Individually named planetarium at the National Space Centre with public scheduled shows.",
+          "sourceIds": ["source-08", "source-04"],
+          "points": 64
+        },
+        {
+          "poiId": "zeiss-planetarium-berlin",
+          "text": "Zeiss-Großplanetarium is a themed comparison candidate: Permanent public Zeiss planetarium with a dome theater and scheduled astronomical shows.",
+          "sourceIds": ["source-09", "source-04"],
+          "points": 60
+        },
+        {
+          "poiId": "planetarium-hamburg",
+          "text": "Planetarium Hamburg is a themed comparison candidate: Named public planetarium and immersive dome theater in Hamburg.",
+          "sourceIds": ["source-10", "source-04"],
+          "points": 56
+        },
+        {
+          "poiId": "planetarium-prague",
+          "text": "Planetarium Prague is a themed comparison candidate: Fixed public planetarium venue in Stromovka with regularly scheduled astronomical programs.",
+          "sourceIds": ["source-11", "source-04"],
+          "points": 52
+        },
+        {
+          "poiId": "planetarium-brno",
+          "text": "Brno Observatory and Planetarium is a themed comparison candidate: Named municipal planetarium facility with a fixed dome and public program schedule.",
+          "sourceIds": ["source-12", "source-04"],
+          "points": 48
+        },
+        {
+          "poiId": "moscow-planetarium",
+          "text": "Moscow Planetarium is a themed comparison candidate: Major permanent public planetarium with multiple astronomy theaters in Moscow.",
+          "sourceIds": ["source-13", "source-04"],
+          "points": 38
+        },
+        {
+          "poiId": "planetarium-1-saint-petersburg",
+          "text": "Planetarium No. 1 is a themed comparison candidate: Permanent public dome planetarium in Saint Petersburg with immersive astronomy shows.",
+          "sourceIds": ["source-14", "source-04"],
+          "points": 35
+        },
+        {
+          "poiId": "planetario-de-madrid",
+          "text": "Planetario de Madrid is a themed comparison candidate: Municipal public planetarium with purpose-built dome theaters and scheduled astronomy shows.",
+          "sourceIds": ["source-15", "source-04"],
+          "points": 32
+        },
+        {
+          "poiId": "nagoya-city-science-museum-planetarium",
+          "text": "Nagoya City Science Museum Planetarium is a themed comparison candidate: Named planetarium theater within a public science museum, with regular ticketed shows.",
+          "sourceIds": ["source-17", "source-04"],
+          "points": 26
+        },
+        {
+          "poiId": "osaka-science-museum-planetarium",
+          "text": "Osaka Science Museum Planetarium is a themed comparison candidate: Public planetarium theater within Osaka Science Museum with scheduled dome programs.",
+          "sourceIds": ["source-18", "source-04"],
+          "points": 23
+        },
+        {
+          "poiId": "beijing-planetarium",
+          "text": "Beijing Planetarium is a themed comparison candidate: Dedicated public planetarium complex in Beijing with astronomy theaters and scheduled shows.",
+          "sourceIds": ["source-21", "source-04"],
+          "points": 14
+        },
+        {
+          "poiId": "taipei-astronomical-museum-planetarium",
+          "text": "Taipei Astronomical Museum Planetarium is a themed comparison candidate: Public astronomical museum with a named planetarium theater and regular public sessions.",
+          "sourceIds": ["source-22", "source-04"],
+          "points": 11
+        },
+        {
+          "poiId": "national-planetarium-kuala-lumpur",
+          "text": "National Planetarium is a themed comparison candidate: Dedicated national public planetarium with a dome theater in Kuala Lumpur.",
+          "sourceIds": ["source-23", "source-04"],
+          "points": 44
+        }
+      ]
+    },
+    {
+      "id": "round-4",
+      "targetPoiId": "clark-planetarium",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Clark_Planetarium_at_The_Gateway.JPG/1280px-Clark_Planetarium_at_The_Gateway.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Clark Planetarium",
+        "attribution": "An Errant Knight · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "This downtown science venue replaced an older civic planetarium at the start of the twenty-first century. Alongside its dome and giant-screen theater, free exhibits include a Moon rock on loan from NASA.",
+        "sourceIds": ["source-05"]
+      },
+      "results": [
+        {
+          "poiId": "adler-planetarium",
+          "text": "Adler Planetarium is a themed comparison candidate: Named public planetarium with multiple dome theaters and regularly scheduled astronomy shows.",
+          "sourceIds": ["source-01", "source-05"],
+          "points": 96
+        },
+        {
+          "poiId": "hayden-planetarium",
+          "text": "Hayden Planetarium is a themed comparison candidate: Individually named planetarium theater inside the American Museum of Natural History with public space shows.",
+          "sourceIds": ["source-02", "source-05"],
+          "points": 72
+        },
+        {
+          "poiId": "morrison-planetarium",
+          "text": "Morrison Planetarium is a themed comparison candidate: Named dome planetarium at the California Academy of Sciences with public astronomy programming.",
+          "sourceIds": ["source-03", "source-05"],
+          "points": 91
+        },
+        {
+          "poiId": "oschin-planetarium",
+          "text": "Samuel Oschin Planetarium is a themed comparison candidate: Named planetarium theater at Griffith Observatory offering regular public astronomy shows.",
+          "sourceIds": ["source-04", "source-05"],
+          "points": 86
+        },
+        {
+          "poiId": "clark-planetarium",
+          "text": "Clark Planetarium is the round target: Standalone public planetarium with a dome theater and scheduled astronomical presentations.",
+          "sourceIds": ["source-05"],
+          "points": 100
+        },
+        {
+          "poiId": "fiske-planetarium",
+          "text": "Fiske Planetarium is a themed comparison candidate: University planetarium with a fixed dome theater and public shows in Boulder.",
+          "sourceIds": ["source-06", "source-05"],
+          "points": 81
+        },
+        {
+          "poiId": "peter-harrison-planetarium",
+          "text": "Peter Harrison Planetarium is a themed comparison candidate: Purpose-built public planetarium at the Royal Observatory Greenwich with regular shows.",
+          "sourceIds": ["source-07", "source-05"],
+          "points": 38
+        },
+        {
+          "poiId": "national-space-centre-planetarium",
+          "text": "Sir Patrick Moore Planetarium is a themed comparison candidate: Individually named planetarium at the National Space Centre with public scheduled shows.",
+          "sourceIds": ["source-08", "source-05"],
+          "points": 35
+        },
+        {
+          "poiId": "zeiss-planetarium-berlin",
+          "text": "Zeiss-Großplanetarium is a themed comparison candidate: Permanent public Zeiss planetarium with a dome theater and scheduled astronomical shows.",
+          "sourceIds": ["source-09", "source-05"],
+          "points": 32
+        },
+        {
+          "poiId": "planetarium-hamburg",
+          "text": "Planetarium Hamburg is a themed comparison candidate: Named public planetarium and immersive dome theater in Hamburg.",
+          "sourceIds": ["source-10", "source-05"],
+          "points": 29
+        },
+        {
+          "poiId": "planetarium-prague",
+          "text": "Planetarium Prague is a themed comparison candidate: Fixed public planetarium venue in Stromovka with regularly scheduled astronomical programs.",
+          "sourceIds": ["source-11", "source-05"],
+          "points": 26
+        },
+        {
+          "poiId": "planetarium-brno",
+          "text": "Brno Observatory and Planetarium is a themed comparison candidate: Named municipal planetarium facility with a fixed dome and public program schedule.",
+          "sourceIds": ["source-12", "source-05"],
+          "points": 23
+        },
+        {
+          "poiId": "moscow-planetarium",
+          "text": "Moscow Planetarium is a themed comparison candidate: Major permanent public planetarium with multiple astronomy theaters in Moscow.",
+          "sourceIds": ["source-13", "source-05"],
+          "points": 20
+        },
+        {
+          "poiId": "planetarium-1-saint-petersburg",
+          "text": "Planetarium No. 1 is a themed comparison candidate: Permanent public dome planetarium in Saint Petersburg with immersive astronomy shows.",
+          "sourceIds": ["source-14", "source-05"],
+          "points": 17
+        },
+        {
+          "poiId": "planetario-de-madrid",
+          "text": "Planetario de Madrid is a themed comparison candidate: Municipal public planetarium with purpose-built dome theaters and scheduled astronomy shows.",
+          "sourceIds": ["source-15", "source-05"],
+          "points": 14
+        },
+        {
+          "poiId": "nagoya-city-science-museum-planetarium",
+          "text": "Nagoya City Science Museum Planetarium is a themed comparison candidate: Named planetarium theater within a public science museum, with regular ticketed shows.",
+          "sourceIds": ["source-17", "source-05"],
+          "points": 68
+        },
+        {
+          "poiId": "osaka-science-museum-planetarium",
+          "text": "Osaka Science Museum Planetarium is a themed comparison candidate: Public planetarium theater within Osaka Science Museum with scheduled dome programs.",
+          "sourceIds": ["source-18", "source-05"],
+          "points": 64
+        },
+        {
+          "poiId": "beijing-planetarium",
+          "text": "Beijing Planetarium is a themed comparison candidate: Dedicated public planetarium complex in Beijing with astronomy theaters and scheduled shows.",
+          "sourceIds": ["source-21", "source-05"],
+          "points": 52
+        },
+        {
+          "poiId": "taipei-astronomical-museum-planetarium",
+          "text": "Taipei Astronomical Museum Planetarium is a themed comparison candidate: Public astronomical museum with a named planetarium theater and regular public sessions.",
+          "sourceIds": ["source-22", "source-05"],
+          "points": 48
+        },
+        {
+          "poiId": "national-planetarium-kuala-lumpur",
+          "text": "National Planetarium is a themed comparison candidate: Dedicated national public planetarium with a dome theater in Kuala Lumpur.",
+          "sourceIds": ["source-23", "source-05"],
+          "points": 44
+        }
+      ]
+    },
+    {
+      "id": "round-5",
+      "targetPoiId": "fiske-planetarium",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Fiske_Planetarium_%282022%29.jpg/1280px-Fiske_Planetarium_%282022%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Fiske Planetarium",
+        "attribution": "Nwest21 · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "A university alumnus’s bequest created this campus planetarium in the 1970s. Beneath its geodesic dome, it combines an optical star projector with modern digital shows and has produced NASA-funded fulldome films.",
+        "sourceIds": ["source-06"]
+      },
+      "results": [
+        {
+          "poiId": "adler-planetarium",
+          "text": "Adler Planetarium is a themed comparison candidate: Named public planetarium with multiple dome theaters and regularly scheduled astronomy shows.",
+          "sourceIds": ["source-01", "source-06"],
+          "points": 96
+        },
+        {
+          "poiId": "hayden-planetarium",
+          "text": "Hayden Planetarium is a themed comparison candidate: Individually named planetarium theater inside the American Museum of Natural History with public space shows.",
+          "sourceIds": ["source-02", "source-06"],
+          "points": 72
+        },
+        {
+          "poiId": "morrison-planetarium",
+          "text": "Morrison Planetarium is a themed comparison candidate: Named dome planetarium at the California Academy of Sciences with public astronomy programming.",
+          "sourceIds": ["source-03", "source-06"],
+          "points": 91
+        },
+        {
+          "poiId": "oschin-planetarium",
+          "text": "Samuel Oschin Planetarium is a themed comparison candidate: Named planetarium theater at Griffith Observatory offering regular public astronomy shows.",
+          "sourceIds": ["source-04", "source-06"],
+          "points": 86
+        },
+        {
+          "poiId": "clark-planetarium",
+          "text": "Clark Planetarium is a themed comparison candidate: Standalone public planetarium with a dome theater and scheduled astronomical presentations.",
+          "sourceIds": ["source-05", "source-06"],
+          "points": 81
+        },
+        {
+          "poiId": "fiske-planetarium",
+          "text": "Fiske Planetarium is the round target: University planetarium with a fixed dome theater and public shows in Boulder.",
+          "sourceIds": ["source-06"],
+          "points": 100
+        },
+        {
+          "poiId": "peter-harrison-planetarium",
+          "text": "Peter Harrison Planetarium is a themed comparison candidate: Purpose-built public planetarium at the Royal Observatory Greenwich with regular shows.",
+          "sourceIds": ["source-07", "source-06"],
+          "points": 68
+        },
+        {
+          "poiId": "national-space-centre-planetarium",
+          "text": "Sir Patrick Moore Planetarium is a themed comparison candidate: Individually named planetarium at the National Space Centre with public scheduled shows.",
+          "sourceIds": ["source-08", "source-06"],
+          "points": 64
+        },
+        {
+          "poiId": "zeiss-planetarium-berlin",
+          "text": "Zeiss-Großplanetarium is a themed comparison candidate: Permanent public Zeiss planetarium with a dome theater and scheduled astronomical shows.",
+          "sourceIds": ["source-09", "source-06"],
+          "points": 60
+        },
+        {
+          "poiId": "planetarium-hamburg",
+          "text": "Planetarium Hamburg is a themed comparison candidate: Named public planetarium and immersive dome theater in Hamburg.",
+          "sourceIds": ["source-10", "source-06"],
+          "points": 56
+        },
+        {
+          "poiId": "planetarium-prague",
+          "text": "Planetarium Prague is a themed comparison candidate: Fixed public planetarium venue in Stromovka with regularly scheduled astronomical programs.",
+          "sourceIds": ["source-11", "source-06"],
+          "points": 52
+        },
+        {
+          "poiId": "planetarium-brno",
+          "text": "Brno Observatory and Planetarium is a themed comparison candidate: Named municipal planetarium facility with a fixed dome and public program schedule.",
+          "sourceIds": ["source-12", "source-06"],
+          "points": 48
+        },
+        {
+          "poiId": "moscow-planetarium",
+          "text": "Moscow Planetarium is a themed comparison candidate: Major permanent public planetarium with multiple astronomy theaters in Moscow.",
+          "sourceIds": ["source-13", "source-06"],
+          "points": 38
+        },
+        {
+          "poiId": "planetarium-1-saint-petersburg",
+          "text": "Planetarium No. 1 is a themed comparison candidate: Permanent public dome planetarium in Saint Petersburg with immersive astronomy shows.",
+          "sourceIds": ["source-14", "source-06"],
+          "points": 35
+        },
+        {
+          "poiId": "planetario-de-madrid",
+          "text": "Planetario de Madrid is a themed comparison candidate: Municipal public planetarium with purpose-built dome theaters and scheduled astronomy shows.",
+          "sourceIds": ["source-15", "source-06"],
+          "points": 32
+        },
+        {
+          "poiId": "nagoya-city-science-museum-planetarium",
+          "text": "Nagoya City Science Museum Planetarium is a themed comparison candidate: Named planetarium theater within a public science museum, with regular ticketed shows.",
+          "sourceIds": ["source-17", "source-06"],
+          "points": 26
+        },
+        {
+          "poiId": "osaka-science-museum-planetarium",
+          "text": "Osaka Science Museum Planetarium is a themed comparison candidate: Public planetarium theater within Osaka Science Museum with scheduled dome programs.",
+          "sourceIds": ["source-18", "source-06"],
+          "points": 23
+        },
+        {
+          "poiId": "beijing-planetarium",
+          "text": "Beijing Planetarium is a themed comparison candidate: Dedicated public planetarium complex in Beijing with astronomy theaters and scheduled shows.",
+          "sourceIds": ["source-21", "source-06"],
+          "points": 14
+        },
+        {
+          "poiId": "taipei-astronomical-museum-planetarium",
+          "text": "Taipei Astronomical Museum Planetarium is a themed comparison candidate: Public astronomical museum with a named planetarium theater and regular public sessions.",
+          "sourceIds": ["source-22", "source-06"],
+          "points": 11
+        },
+        {
+          "poiId": "national-planetarium-kuala-lumpur",
+          "text": "National Planetarium is a themed comparison candidate: Dedicated national public planetarium with a dome theater in Kuala Lumpur.",
+          "sourceIds": ["source-23", "source-06"],
+          "points": 44
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-01",
+      "title": "Adler Planetarium",
+      "url": "https://en.wikipedia.org/wiki/Adler_Planetarium",
+      "retrievedAt": "2026-08-18T04:31:01.054Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-02",
+      "title": "Hayden Planetarium",
+      "url": "https://en.wikipedia.org/wiki/Hayden_Planetarium",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-03",
+      "title": "Morrison Planetarium",
+      "url": "https://en.wikipedia.org/wiki/Morrison_Planetarium",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-04",
+      "title": "Griffith Observatory",
+      "url": "https://en.wikipedia.org/wiki/Griffith_Observatory",
+      "retrievedAt": "2026-08-18T04:32:00.239Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-05",
+      "title": "Clark Planetarium",
+      "url": "https://en.wikipedia.org/wiki/Clark_Planetarium",
+      "retrievedAt": "2026-08-18T04:32:00.169Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-06",
+      "title": "Fiske Planetarium",
+      "url": "https://en.wikipedia.org/wiki/Fiske_Planetarium",
+      "retrievedAt": "2026-08-18T04:33:00.882Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-07",
+      "title": "Peter Harrison Planetarium",
+      "url": "https://www.rmg.co.uk/whats-on/planetarium",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-08",
+      "title": "National Space Centre",
+      "url": "https://en.wikipedia.org/wiki/National_Space_Centre",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-09",
+      "title": "Zeiss-Großplanetarium",
+      "url": "https://en.wikipedia.org/wiki/Zeiss-Gro%C3%9Fplanetarium",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-10",
+      "title": "Planetarium Hamburg",
+      "url": "https://en.wikipedia.org/wiki/Planetarium_Hamburg",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-11",
+      "title": "Planetarium Prague",
+      "url": "https://en.wikipedia.org/wiki/Planetarium_Prague",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-12",
+      "title": "Brno Observatory and Planetarium",
+      "url": "https://en.wikipedia.org/wiki/Brno_Observatory_and_Planetarium",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-13",
+      "title": "Moscow Planetarium",
+      "url": "https://en.wikipedia.org/wiki/Moscow_Planetarium",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-14",
+      "title": "Planetarium No. 1",
+      "url": "https://en.wikipedia.org/wiki/Planetarium_No._1",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-15",
+      "title": "Planetario de Madrid",
+      "url": "https://en.wikipedia.org/wiki/Planetario_de_Madrid",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-16",
+      "title": "Planetario di Roma",
+      "url": "https://www.comune.roma.it/web/it/planetario.page",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-17",
+      "title": "Nagoya City Science Museum",
+      "url": "https://en.wikipedia.org/wiki/Nagoya_City_Science_Museum",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-18",
+      "title": "Osaka Science Museum",
+      "url": "https://en.wikipedia.org/wiki/Osaka_Science_Museum",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-19",
+      "title": "Fukuoka City Science Museum",
+      "url": "https://en.wikipedia.org/wiki/Fukuoka_City_Science_Museum",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-20",
+      "title": "Sapporo Science Center",
+      "url": "https://en.wikipedia.org/wiki/Sapporo_Science_Center",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-21",
+      "title": "Beijing Planetarium",
+      "url": "https://en.wikipedia.org/wiki/Beijing_Planetarium",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-22",
+      "title": "Taipei Astronomical Museum",
+      "url": "https://en.wikipedia.org/wiki/Taipei_Astronomical_Museum",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-23",
+      "title": "National Planetarium",
+      "url": "https://en.wikipedia.org/wiki/National_Planetarium",
+      "retrievedAt": "2026-08-18T04:29:00.816Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-24",
+      "title": "Planetario de Bogotá",
+      "url": "https://en.wikipedia.org/wiki/Planetario_de_Bogot%C3%A1",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-25",
+      "title": "Planetario Galileo Galilei",
+      "url": "https://en.wikipedia.org/wiki/Planetario_Galileo_Galilei",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    }
+  ],
+  "theme": {
+    "title": "Operating Public Planetariums in Cities",
+    "introduction": "The night sky has long found a home beneath city domes. These public planetariums bring the universe within reach.",
+    "inclusionCriteria": "Include a location only when every condition is met: (1) it is an individually named, permanent planetarium venue, planetarium theater, or equivalent facility whose principal public function is presenting astronomical or space-science shows in a dome or other purpose-built immersive theater; (2) it has regularly scheduled public sessions or shows and ordinary public admission, whether ticketed or free, on the date of play; (3) the named venue is physically operating at a fixed site rather than being mobile or temporary; (4) the site lies within the current administrative boundary of a present-day city or incorporated urban municipality; and (5) the exact planetarium venue or its entrance can be pinned as one visitable map location. A planetarium located inside a museum or science center qualifies if the planetarium itself has an identifiable name and public program."
+  }
+}

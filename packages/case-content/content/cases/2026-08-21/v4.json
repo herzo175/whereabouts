@@ -1,0 +1,1182 @@
+{
+  "schemaVersion": 4,
+  "publicationDate": "2026-08-21",
+  "revision": 4,
+  "caseNumber": 20686,
+  "pois": [
+    {
+      "id": "telluride-gondola",
+      "name": "Telluride Gondola – Telluride Station",
+      "city": "Telluride",
+      "country": "United States",
+      "latitude": 37.9375,
+      "longitude": -107.8067,
+      "wikipediaTitle": "Telluride Ski Resort",
+      "blurb": "Telluride Ski Resort is a ski resort located in Mountain Village, southwest Colorado, United States.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Telluride_Ski_Resort%2C_Col._%288645173834%29.jpg/1280px-Telluride_Ski_Resort%2C_Col._%288645173834%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Telluride Ski Resort",
+        "attribution": "Murray Foubister · CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      "themeConnection": {
+        "text": "Operating free public gondola with a named terminal in the incorporated town of Telluride; it serves town access as well as recreation.",
+        "sourceIds": ["source-18"]
+      }
+    },
+    {
+      "id": "santo-domingo-teleferico",
+      "name": "Santo Domingo Teleférico – Gualey Station",
+      "city": "Santo Domingo",
+      "country": "Dominican Republic",
+      "latitude": 18.4988,
+      "longitude": -69.8827,
+      "wikipediaTitle": "Santo Domingo Metro",
+      "blurb": "The Santo Domingo cable car is an aerial public-transit line serving neighborhoods of Santo Domingo, with passenger gondolas and several named stations.",
+      "themeConnection": {
+        "text": "Operating urban gondola transit system with a named terminal in Santo Domingo.",
+        "sourceIds": ["source-07"]
+      }
+    },
+    {
+      "id": "quito-teleferiqo",
+      "name": "Quito Teleférico – Plaza de los Cebollas",
+      "city": "Quito",
+      "country": "Ecuador",
+      "latitude": -0.1857,
+      "longitude": -78.5167,
+      "wikipediaTitle": "TelefériQo",
+      "blurb": "The TelefériQo is a gondola lift in Quito ascending from the city toward Pichincha volcano, operating as a public visitor attraction with passenger cabins.",
+      "themeConnection": {
+        "text": "Regularly open visitor gondola attraction with its lower terminal inside Quito.",
+        "sourceIds": ["source-05"]
+      }
+    },
+    {
+      "id": "merida-teleferico-barinitas",
+      "name": "Mérida Cable Car – Barinitas Station",
+      "city": "Mérida",
+      "country": "Venezuela",
+      "latitude": 8.5917,
+      "longitude": -71.1425,
+      "wikipediaTitle": "Mérida cable car",
+      "blurb": "The Mérida cable car in Venezuela is a passenger aerial tramway beginning at Barinitas in the city and ascending toward Pico Espejo.",
+      "themeConnection": {
+        "text": "Operating long-span passenger cableway with its urban lower terminal in Mérida.",
+        "sourceIds": ["source-10"]
+      }
+    },
+    {
+      "id": "yeosu-maritime-cable-car",
+      "name": "Yeosu Maritime Cable Car – Dolsan Park Station",
+      "city": "Yeosu",
+      "country": "South Korea",
+      "latitude": 34.7272,
+      "longitude": 127.7411,
+      "wikipediaTitle": "Yeosu Maritime Cable Car",
+      "blurb": "The Yeosu Maritime Cable Car (Korean: 여수 해상케이블카) is an gondola lift in Yeosu, South Jeolla Province, South Korea. The lift connects the Dolsan Park on the island Dolsando to Jasan Park on the mainland.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yeosu_Maritime_Cable_Car_View.jpg/1280px-Yeosu_Maritime_Cable_Car_View.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Yeosu Maritime Cable Car",
+        "attribution": "Toobigtokale · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "Operating passenger cableway over Yeosu harbor with a named terminal inside Yeosu.",
+        "sourceIds": ["source-23"]
+      }
+    },
+    {
+      "id": "singapore-cable-car-mount-faber",
+      "name": "Singapore Cable Car – Mount Faber Station",
+      "city": "Singapore",
+      "country": "Singapore",
+      "latitude": 1.2722,
+      "longitude": 103.8179,
+      "wikipediaTitle": "Singapore Cable Car",
+      "blurb": "The Singapore Cable Car is a gondola lift in Singapore, providing an aerial link from Mount Faber (Faber Peak Singapore) on Singapore Island to the resort island of Sentosa across the Keppel Harbour.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Singapore_cable_car_Mount_Faber_1.jpg/1280px-Singapore_cable_car_Mount_Faber_1.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Singapore Cable Car",
+        "attribution": "kallerna · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "Operating visitor and public passenger gondola service from a named station in Singapore.",
+        "sourceIds": ["source-19"]
+      }
+    },
+    {
+      "id": "caracas-teleferico-warairarepano",
+      "name": "Teleférico Warairarepano – Maripérez Station",
+      "city": "Caracas",
+      "country": "Venezuela",
+      "latitude": 10.5037,
+      "longitude": -66.8832,
+      "wikipediaTitle": "Teleférico de Caracas",
+      "blurb": "The Caracas cable car, now known as Teleférico Warairarepano, carries passengers from the city into El Ávila National Park as a visitor service.",
+      "themeConnection": {
+        "text": "Named lower station of an operating passenger cableway connecting Caracas with El Ávila visitor areas.",
+        "sourceIds": ["source-09"]
+      }
+    },
+    {
+      "id": "busan-songdo-cable-car",
+      "name": "Busan Air Cruise – Songdo Bay Station",
+      "city": "Busan",
+      "country": "South Korea",
+      "latitude": 35.0769,
+      "longitude": 129.0228,
+      "wikipediaTitle": "Busan Air Cruise",
+      "blurb": "Busan Air Cruise, formerly Songdo Cable Car, is an aerial gondola attraction crossing Songdo Bay and carrying regular passenger traffic in Busan.",
+      "themeConnection": {
+        "text": "Regularly operating public visitor gondola crossing with a named station in Busan.",
+        "sourceIds": ["source-22"]
+      }
+    },
+    {
+      "id": "manizales-cable-areeo",
+      "name": "Manizales Cable Aéreo – Fundadores Station",
+      "city": "Manizales",
+      "country": "Colombia",
+      "latitude": 5.0684,
+      "longitude": -75.5172,
+      "wikipediaTitle": "Manizales Gondola Lift",
+      "blurb": "The Manizales Gondola Lift, known in Spanish as Cable Aéreo Manizales, is a gondola lift system implemented in the cities of Manizales and Villamaría, Colombia for urban public transport.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Cable_A%C3%A9reo_de_Manizales-_Colombia.png/1280px-Cable_A%C3%A9reo_de_Manizales-_Colombia.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Manizales Gondola Lift",
+        "attribution": "Sebastian Jiménez · CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "themeConnection": {
+        "text": "Operating urban aerial cableway linking a named terminal in central Manizales with Villamaría.",
+        "sourceIds": ["source-04"]
+      }
+    },
+    {
+      "id": "guayaquil-aerovia-julian-coronel",
+      "name": "Aerovía Guayaquil – Julián Coronel Station",
+      "city": "Guayaquil",
+      "country": "Ecuador",
+      "latitude": -2.1819,
+      "longitude": -79.8862,
+      "wikipediaTitle": "Aerovía",
+      "blurb": "Aerovía is an aerial cable-car public transport system in Guayaquil, Ecuador, carrying passengers between Guayaquil and Durán on scheduled service.",
+      "themeConnection": {
+        "text": "Operating urban aerial gondola system with a named passenger station in Guayaquil.",
+        "sourceIds": ["source-06"]
+      }
+    },
+    {
+      "id": "seoul-namsan-cable-car",
+      "name": "Namsan Cable Car – Hoehyeon Station",
+      "city": "Seoul",
+      "country": "South Korea",
+      "latitude": 37.5558,
+      "longitude": 126.9817,
+      "wikipediaTitle": "Namsan cable car",
+      "blurb": "The Namsan Cable Car is an aerial cable car in Seoul carrying visitors between the Hoehyeon-area lower station and Namsan Mountain.",
+      "themeConnection": {
+        "text": "Operating visitor aerial cable car with a named lower station in Seoul.",
+        "sourceIds": ["source-21"]
+      }
+    },
+    {
+      "id": "rio-sugarloaf-bondinho",
+      "name": "Bondinho do Pão de Açúcar – Praia Vermelha Station",
+      "city": "Rio de Janeiro",
+      "country": "Brazil",
+      "latitude": -22.9507,
+      "longitude": -43.1579,
+      "wikipediaTitle": "Sugarloaf Mountain Cable Car",
+      "blurb": "The Sugarloaf Mountain Cable Car, also called Bondinho, is an aerial tramway carrying visitors between stations in Rio de Janeiro, Brazil.",
+      "themeConnection": {
+        "text": "Operating public aerial tramway visitor service from a named station in Rio de Janeiro.",
+        "sourceIds": ["source-08"]
+      }
+    },
+    {
+      "id": "la-paz-mi-teleferico-central",
+      "name": "Mi Teleférico – Línea Roja, Estación Central",
+      "city": "La Paz",
+      "country": "Bolivia",
+      "latitude": -16.49535,
+      "longitude": -68.1477,
+      "wikipediaTitle": "Mi Teleférico",
+      "blurb": "Mi Teleférico is an urban transit gondola-lift system serving La Paz and El Alto, Bolivia, with multiple lines and stations used for regular public transportation.",
+      "themeConnection": {
+        "text": "Operating urban gondola line with scheduled public passenger service from a named station in central La Paz.",
+        "sourceIds": ["source-01"]
+      }
+    },
+    {
+      "id": "hakodate-ropeway",
+      "name": "Hakodate Ropeway – Sanroku Station",
+      "city": "Hakodate",
+      "country": "Japan",
+      "latitude": 41.7592,
+      "longitude": 140.7146,
+      "wikipediaTitle": "Mount Hakodate Ropeway",
+      "blurb": "The Mt. Hakodate Ropeway (函館山ロープウェイ, Hakodateyama Rōpuwei) is the name of an aerial lift, as well as its operator. The line climbs Mount Hakodate in Hakodate, Japan.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Mt-Hakodate-Ropeway-05.jpg/1280px-Mt-Hakodate-Ropeway-05.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Mount Hakodate Ropeway",
+        "attribution": "J o · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "themeConnection": {
+        "text": "Operating visitor aerial ropeway with a named lower station in Hakodate.",
+        "sourceIds": ["source-24"]
+      }
+    },
+    {
+      "id": "palm-springs-aerial-tramway",
+      "name": "Palm Springs Aerial Tramway – Valley Station",
+      "city": "Palm Springs",
+      "country": "United States",
+      "latitude": 33.8264,
+      "longitude": -116.6157,
+      "wikipediaTitle": "Palm Springs Aerial Tramway",
+      "blurb": "The Palm Springs Aerial Tramway carries visitors in rotating aerial tramcars from the Valley Station in Palm Springs up Mount San Jacinto.",
+      "themeConnection": {
+        "text": "Regularly open visitor aerial tramway with its lower station in Palm Springs.",
+        "sourceIds": ["source-17"]
+      }
+    },
+    {
+      "id": "london-air-line",
+      "name": "IFS Cloud Cable Car – Royal Docks Station",
+      "city": "London",
+      "country": "United Kingdom",
+      "latitude": 51.5081,
+      "longitude": 0.0207,
+      "wikipediaTitle": "London Cable Car",
+      "blurb": "The London Cable Car is a gondola lift across the River Thames, operating between Greenwich Peninsula and the Royal Docks as a public passenger service.",
+      "themeConnection": {
+        "text": "Operating urban cable car with a named station inside London and regular passenger service.",
+        "sourceIds": ["source-16"]
+      }
+    },
+    {
+      "id": "taipei-maokong-gondola",
+      "name": "Maokong Gondola – Taipei Zoo Station",
+      "city": "Taipei",
+      "country": "Taiwan",
+      "latitude": 24.9982,
+      "longitude": 121.5801,
+      "wikipediaTitle": "Maokong Gondola",
+      "blurb": "The Maokong Gondola is a passenger gondola lift in Taipei, Taiwan, connecting Taipei Zoo with Maokong through several named stations.",
+      "themeConnection": {
+        "text": "Operating urban gondola visitor and transit service with a named terminal in Taipei.",
+        "sourceIds": ["source-20"]
+      }
+    },
+    {
+      "id": "hong-kong-ngong-ping-360",
+      "name": "Ngong Ping 360 – Tung Chung Station",
+      "city": "Hong Kong",
+      "country": "China",
+      "latitude": 22.2896,
+      "longitude": 113.9412,
+      "wikipediaTitle": "Ngong Ping 360",
+      "blurb": "Ngong Ping 360 is a gondola lift on Lantau Island, Hong Kong, carrying visitors between Tung Chung and Ngong Ping on scheduled service.",
+      "themeConnection": {
+        "text": "Operating visitor gondola service with a named terminal in the urban municipality of Hong Kong.",
+        "sourceIds": ["source-25"]
+      }
+    },
+    {
+      "id": "medellin-metrocable-k",
+      "name": "Medellín Metrocable Line K – Acevedo Station",
+      "city": "Medellín",
+      "country": "Colombia",
+      "latitude": 6.2847,
+      "longitude": -75.5636,
+      "wikipediaTitle": "Medellín Metro",
+      "blurb": "The Medellín Metro system includes Metrocable aerial gondola lines that provide regular public transportation between metro stations and hillside neighborhoods.",
+      "themeConnection": {
+        "text": "Operating urban passenger gondola line integrated with Medellín Metro at the named Acevedo station.",
+        "sourceIds": ["source-02"]
+      }
+    },
+    {
+      "id": "new-york-roosevelt-island-tram",
+      "name": "Roosevelt Island Tramway – Manhattan Station",
+      "city": "New York City",
+      "country": "United States",
+      "latitude": 40.7606,
+      "longitude": -73.9588,
+      "wikipediaTitle": "Roosevelt Island Tramway",
+      "blurb": "The Roosevelt Island Tramway is an aerial tramway in New York City carrying passengers between Manhattan and Roosevelt Island as public transportation.",
+      "themeConnection": {
+        "text": "Operating scheduled public aerial tramway linking Manhattan and Roosevelt Island.",
+        "sourceIds": ["source-15"]
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "round-1",
+      "targetPoiId": "manizales-cable-areeo",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Cable_A%C3%A9reo_de_Manizales-_Colombia.png/1280px-Cable_A%C3%A9reo_de_Manizales-_Colombia.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Manizales Gondola Lift",
+        "attribution": "Sebastian Jiménez · CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "clue": {
+        "text": "Unlike a sightseeing lift, this cableway grew into an everyday transit network, carrying passengers from a city-center terminal across steep mountain terrain to a neighboring municipality.",
+        "sourceIds": ["source-04"]
+      },
+      "results": [
+        {
+          "poiId": "telluride-gondola",
+          "text": "Telluride Gondola – Telluride Station is a themed comparison candidate: Operating free public gondola with a named terminal in the incorporated town of Telluride; it serves town access as well as recreation.",
+          "sourceIds": ["source-18", "source-04"],
+          "points": 52
+        },
+        {
+          "poiId": "santo-domingo-teleferico",
+          "text": "Santo Domingo Teleférico – Gualey Station is a themed comparison candidate: Operating urban gondola transit system with a named terminal in Santo Domingo.",
+          "sourceIds": ["source-07", "source-04"],
+          "points": 81
+        },
+        {
+          "poiId": "quito-teleferiqo",
+          "text": "Quito Teleférico – Plaza de los Cebollas is a themed comparison candidate: Regularly open visitor gondola attraction with its lower terminal inside Quito.",
+          "sourceIds": ["source-05", "source-04"],
+          "points": 35
+        },
+        {
+          "poiId": "merida-teleferico-barinitas",
+          "text": "Mérida Cable Car – Barinitas Station is a themed comparison candidate: Operating long-span passenger cableway with its urban lower terminal in Mérida.",
+          "sourceIds": ["source-10", "source-04"],
+          "points": 26
+        },
+        {
+          "poiId": "yeosu-maritime-cable-car",
+          "text": "Yeosu Maritime Cable Car – Dolsan Park Station is a themed comparison candidate: Operating passenger cableway over Yeosu harbor with a named terminal inside Yeosu.",
+          "sourceIds": ["source-23", "source-04"],
+          "points": 44
+        },
+        {
+          "poiId": "singapore-cable-car-mount-faber",
+          "text": "Singapore Cable Car – Mount Faber Station is a themed comparison candidate: Operating visitor and public passenger gondola service from a named station in Singapore.",
+          "sourceIds": ["source-19", "source-04"],
+          "points": 17
+        },
+        {
+          "poiId": "caracas-teleferico-warairarepano",
+          "text": "Teleférico Warairarepano – Maripérez Station is a themed comparison candidate: Named lower station of an operating passenger cableway connecting Caracas with El Ávila visitor areas.",
+          "sourceIds": ["source-09", "source-04"],
+          "points": 29
+        },
+        {
+          "poiId": "busan-songdo-cable-car",
+          "text": "Busan Air Cruise – Songdo Bay Station is a themed comparison candidate: Regularly operating public visitor gondola crossing with a named station in Busan.",
+          "sourceIds": ["source-22", "source-04"],
+          "points": 11
+        },
+        {
+          "poiId": "manizales-cable-areeo",
+          "text": "Manizales Cable Aéreo – Fundadores Station is the round target: Operating urban aerial cableway linking a named terminal in central Manizales with Villamaría.",
+          "sourceIds": ["source-04"],
+          "points": 100
+        },
+        {
+          "poiId": "guayaquil-aerovia-julian-coronel",
+          "text": "Aerovía Guayaquil – Julián Coronel Station is a themed comparison candidate: Operating urban aerial gondola system with a named passenger station in Guayaquil.",
+          "sourceIds": ["source-06", "source-04"],
+          "points": 86
+        },
+        {
+          "poiId": "seoul-namsan-cable-car",
+          "text": "Namsan Cable Car – Hoehyeon Station is a themed comparison candidate: Operating visitor aerial cable car with a named lower station in Seoul.",
+          "sourceIds": ["source-21", "source-04"],
+          "points": 14
+        },
+        {
+          "poiId": "rio-sugarloaf-bondinho",
+          "text": "Bondinho do Pão de Açúcar – Praia Vermelha Station is a themed comparison candidate: Operating public aerial tramway visitor service from a named station in Rio de Janeiro.",
+          "sourceIds": ["source-08", "source-04"],
+          "points": 32
+        },
+        {
+          "poiId": "la-paz-mi-teleferico-central",
+          "text": "Mi Teleférico – Línea Roja, Estación Central is a themed comparison candidate: Operating urban gondola line with scheduled public passenger service from a named station in central La Paz.",
+          "sourceIds": ["source-01", "source-04"],
+          "points": 38
+        },
+        {
+          "poiId": "hakodate-ropeway",
+          "text": "Hakodate Ropeway – Sanroku Station is a themed comparison candidate: Operating visitor aerial ropeway with a named lower station in Hakodate.",
+          "sourceIds": ["source-24", "source-04"],
+          "points": 8
+        },
+        {
+          "poiId": "palm-springs-aerial-tramway",
+          "text": "Palm Springs Aerial Tramway – Valley Station is a themed comparison candidate: Regularly open visitor aerial tramway with its lower station in Palm Springs.",
+          "sourceIds": ["source-17", "source-04"],
+          "points": 20
+        },
+        {
+          "poiId": "london-air-line",
+          "text": "IFS Cloud Cable Car – Royal Docks Station is a themed comparison candidate: Operating urban cable car with a named station inside London and regular passenger service.",
+          "sourceIds": ["source-16", "source-04"],
+          "points": 56
+        },
+        {
+          "poiId": "taipei-maokong-gondola",
+          "text": "Maokong Gondola – Taipei Zoo Station is a themed comparison candidate: Operating urban gondola visitor and transit service with a named terminal in Taipei.",
+          "sourceIds": ["source-20", "source-04"],
+          "points": 48
+        },
+        {
+          "poiId": "hong-kong-ngong-ping-360",
+          "text": "Ngong Ping 360 – Tung Chung Station is a themed comparison candidate: Operating visitor gondola service with a named terminal in the urban municipality of Hong Kong.",
+          "sourceIds": ["source-25", "source-04"],
+          "points": 5
+        },
+        {
+          "poiId": "medellin-metrocable-k",
+          "text": "Medellín Metrocable Line K – Acevedo Station is a themed comparison candidate: Operating urban passenger gondola line integrated with Medellín Metro at the named Acevedo station.",
+          "sourceIds": ["source-02", "source-04"],
+          "points": 96
+        },
+        {
+          "poiId": "new-york-roosevelt-island-tram",
+          "text": "Roosevelt Island Tramway – Manhattan Station is a themed comparison candidate: Operating scheduled public aerial tramway linking Manhattan and Roosevelt Island.",
+          "sourceIds": ["source-15", "source-04"],
+          "points": 60
+        }
+      ]
+    },
+    {
+      "id": "round-2",
+      "targetPoiId": "telluride-gondola",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Telluride_Ski_Resort%2C_Col._%288645173834%29.jpg/1280px-Telluride_Ski_Resort%2C_Col._%288645173834%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Telluride Ski Resort",
+        "attribution": "Murray Foubister · CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      "clue": {
+        "text": "This free gondola links a historic mountain town with a newer alpine community across a ski area, serving as both public transportation and a visitor lift.",
+        "sourceIds": ["source-18"]
+      },
+      "results": [
+        {
+          "poiId": "telluride-gondola",
+          "text": "Telluride Gondola – Telluride Station is the round target: Operating free public gondola with a named terminal in the incorporated town of Telluride; it serves town access as well as recreation.",
+          "sourceIds": ["source-18"],
+          "points": 100
+        },
+        {
+          "poiId": "santo-domingo-teleferico",
+          "text": "Santo Domingo Teleférico – Gualey Station is a themed comparison candidate: Operating urban gondola transit system with a named terminal in Santo Domingo.",
+          "sourceIds": ["source-07", "source-18"],
+          "points": 29
+        },
+        {
+          "poiId": "quito-teleferiqo",
+          "text": "Quito Teleférico – Plaza de los Cebollas is a themed comparison candidate: Regularly open visitor gondola attraction with its lower terminal inside Quito.",
+          "sourceIds": ["source-05", "source-18"],
+          "points": 72
+        },
+        {
+          "poiId": "merida-teleferico-barinitas",
+          "text": "Mérida Cable Car – Barinitas Station is a themed comparison candidate: Operating long-span passenger cableway with its urban lower terminal in Mérida.",
+          "sourceIds": ["source-10", "source-18"],
+          "points": 60
+        },
+        {
+          "poiId": "yeosu-maritime-cable-car",
+          "text": "Yeosu Maritime Cable Car – Dolsan Park Station is a themed comparison candidate: Operating passenger cableway over Yeosu harbor with a named terminal inside Yeosu.",
+          "sourceIds": ["source-23", "source-18"],
+          "points": 48
+        },
+        {
+          "poiId": "singapore-cable-car-mount-faber",
+          "text": "Singapore Cable Car – Mount Faber Station is a themed comparison candidate: Operating visitor and public passenger gondola service from a named station in Singapore.",
+          "sourceIds": ["source-19", "source-18"],
+          "points": 8
+        },
+        {
+          "poiId": "caracas-teleferico-warairarepano",
+          "text": "Teleférico Warairarepano – Maripérez Station is a themed comparison candidate: Named lower station of an operating passenger cableway connecting Caracas with El Ávila visitor areas.",
+          "sourceIds": ["source-09", "source-18"],
+          "points": 64
+        },
+        {
+          "poiId": "busan-songdo-cable-car",
+          "text": "Busan Air Cruise – Songdo Bay Station is a themed comparison candidate: Regularly operating public visitor gondola crossing with a named station in Busan.",
+          "sourceIds": ["source-22", "source-18"],
+          "points": 5
+        },
+        {
+          "poiId": "manizales-cable-areeo",
+          "text": "Manizales Cable Aéreo – Fundadores Station is a themed comparison candidate: Operating urban aerial cableway linking a named terminal in central Manizales with Villamaría.",
+          "sourceIds": ["source-04", "source-18"],
+          "points": 91
+        },
+        {
+          "poiId": "guayaquil-aerovia-julian-coronel",
+          "text": "Aerovía Guayaquil – Julián Coronel Station is a themed comparison candidate: Operating urban aerial gondola system with a named passenger station in Guayaquil.",
+          "sourceIds": ["source-06", "source-18"],
+          "points": 32
+        },
+        {
+          "poiId": "seoul-namsan-cable-car",
+          "text": "Namsan Cable Car – Hoehyeon Station is a themed comparison candidate: Operating visitor aerial cable car with a named lower station in Seoul.",
+          "sourceIds": ["source-21", "source-18"],
+          "points": 52
+        },
+        {
+          "poiId": "rio-sugarloaf-bondinho",
+          "text": "Bondinho do Pão de Açúcar – Praia Vermelha Station is a themed comparison candidate: Operating public aerial tramway visitor service from a named station in Rio de Janeiro.",
+          "sourceIds": ["source-08", "source-18"],
+          "points": 68
+        },
+        {
+          "poiId": "la-paz-mi-teleferico-central",
+          "text": "Mi Teleférico – Línea Roja, Estación Central is a themed comparison candidate: Operating urban gondola line with scheduled public passenger service from a named station in central La Paz.",
+          "sourceIds": ["source-01", "source-18"],
+          "points": 38
+        },
+        {
+          "poiId": "hakodate-ropeway",
+          "text": "Hakodate Ropeway – Sanroku Station is a themed comparison candidate: Operating visitor aerial ropeway with a named lower station in Hakodate.",
+          "sourceIds": ["source-24", "source-18"],
+          "points": 44
+        },
+        {
+          "poiId": "palm-springs-aerial-tramway",
+          "text": "Palm Springs Aerial Tramway – Valley Station is a themed comparison candidate: Regularly open visitor aerial tramway with its lower station in Palm Springs.",
+          "sourceIds": ["source-17", "source-18"],
+          "points": 56
+        },
+        {
+          "poiId": "london-air-line",
+          "text": "IFS Cloud Cable Car – Royal Docks Station is a themed comparison candidate: Operating urban cable car with a named station inside London and regular passenger service.",
+          "sourceIds": ["source-16", "source-18"],
+          "points": 11
+        },
+        {
+          "poiId": "taipei-maokong-gondola",
+          "text": "Maokong Gondola – Taipei Zoo Station is a themed comparison candidate: Operating urban gondola visitor and transit service with a named terminal in Taipei.",
+          "sourceIds": ["source-20", "source-18"],
+          "points": 86
+        },
+        {
+          "poiId": "hong-kong-ngong-ping-360",
+          "text": "Ngong Ping 360 – Tung Chung Station is a themed comparison candidate: Operating visitor gondola service with a named terminal in the urban municipality of Hong Kong.",
+          "sourceIds": ["source-25", "source-18"],
+          "points": 81
+        },
+        {
+          "poiId": "medellin-metrocable-k",
+          "text": "Medellín Metrocable Line K – Acevedo Station is a themed comparison candidate: Operating urban passenger gondola line integrated with Medellín Metro at the named Acevedo station.",
+          "sourceIds": ["source-02", "source-18"],
+          "points": 35
+        },
+        {
+          "poiId": "new-york-roosevelt-island-tram",
+          "text": "Roosevelt Island Tramway – Manhattan Station is a themed comparison candidate: Operating scheduled public aerial tramway linking Manhattan and Roosevelt Island.",
+          "sourceIds": ["source-15", "source-18"],
+          "points": 14
+        }
+      ]
+    },
+    {
+      "id": "round-3",
+      "targetPoiId": "yeosu-maritime-cable-car",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yeosu_Maritime_Cable_Car_View.jpg/1280px-Yeosu_Maritime_Cable_Car_View.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Yeosu Maritime Cable Car",
+        "attribution": "Toobigtokale · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "This gondola made transport history as the first in its country to cross open water, linking an island park with a mainland park above a harbor; some cabins have transparent floors.",
+        "sourceIds": ["source-23"]
+      },
+      "results": [
+        {
+          "poiId": "telluride-gondola",
+          "text": "Telluride Gondola – Telluride Station is a themed comparison candidate: Operating free public gondola with a named terminal in the incorporated town of Telluride; it serves town access as well as recreation.",
+          "sourceIds": ["source-18", "source-23"],
+          "points": 56
+        },
+        {
+          "poiId": "santo-domingo-teleferico",
+          "text": "Santo Domingo Teleférico – Gualey Station is a themed comparison candidate: Operating urban gondola transit system with a named terminal in Santo Domingo.",
+          "sourceIds": ["source-07", "source-23"],
+          "points": 23
+        },
+        {
+          "poiId": "quito-teleferiqo",
+          "text": "Quito Teleférico – Plaza de los Cebollas is a themed comparison candidate: Regularly open visitor gondola attraction with its lower terminal inside Quito.",
+          "sourceIds": ["source-05", "source-23"],
+          "points": 72
+        },
+        {
+          "poiId": "merida-teleferico-barinitas",
+          "text": "Mérida Cable Car – Barinitas Station is a themed comparison candidate: Operating long-span passenger cableway with its urban lower terminal in Mérida.",
+          "sourceIds": ["source-10", "source-23"],
+          "points": 20
+        },
+        {
+          "poiId": "yeosu-maritime-cable-car",
+          "text": "Yeosu Maritime Cable Car – Dolsan Park Station is the round target: Operating passenger cableway over Yeosu harbor with a named terminal inside Yeosu.",
+          "sourceIds": ["source-23"],
+          "points": 100
+        },
+        {
+          "poiId": "singapore-cable-car-mount-faber",
+          "text": "Singapore Cable Car – Mount Faber Station is a themed comparison candidate: Operating visitor and public passenger gondola service from a named station in Singapore.",
+          "sourceIds": ["source-19", "source-23"],
+          "points": 91
+        },
+        {
+          "poiId": "caracas-teleferico-warairarepano",
+          "text": "Teleférico Warairarepano – Maripérez Station is a themed comparison candidate: Named lower station of an operating passenger cableway connecting Caracas with El Ávila visitor areas.",
+          "sourceIds": ["source-09", "source-23"],
+          "points": 64
+        },
+        {
+          "poiId": "busan-songdo-cable-car",
+          "text": "Busan Air Cruise – Songdo Bay Station is a themed comparison candidate: Regularly operating public visitor gondola crossing with a named station in Busan.",
+          "sourceIds": ["source-22", "source-23"],
+          "points": 86
+        },
+        {
+          "poiId": "manizales-cable-areeo",
+          "text": "Manizales Cable Aéreo – Fundadores Station is a themed comparison candidate: Operating urban aerial cableway linking a named terminal in central Manizales with Villamaría.",
+          "sourceIds": ["source-04", "source-23"],
+          "points": 29
+        },
+        {
+          "poiId": "guayaquil-aerovia-julian-coronel",
+          "text": "Aerovía Guayaquil – Julián Coronel Station is a themed comparison candidate: Operating urban aerial gondola system with a named passenger station in Guayaquil.",
+          "sourceIds": ["source-06", "source-23"],
+          "points": 26
+        },
+        {
+          "poiId": "seoul-namsan-cable-car",
+          "text": "Namsan Cable Car – Hoehyeon Station is a themed comparison candidate: Operating visitor aerial cable car with a named lower station in Seoul.",
+          "sourceIds": ["source-21", "source-23"],
+          "points": 48
+        },
+        {
+          "poiId": "rio-sugarloaf-bondinho",
+          "text": "Bondinho do Pão de Açúcar – Praia Vermelha Station is a themed comparison candidate: Operating public aerial tramway visitor service from a named station in Rio de Janeiro.",
+          "sourceIds": ["source-08", "source-23"],
+          "points": 68
+        },
+        {
+          "poiId": "la-paz-mi-teleferico-central",
+          "text": "Mi Teleférico – Línea Roja, Estación Central is a themed comparison candidate: Operating urban gondola line with scheduled public passenger service from a named station in central La Paz.",
+          "sourceIds": ["source-01", "source-23"],
+          "points": 38
+        },
+        {
+          "poiId": "hakodate-ropeway",
+          "text": "Hakodate Ropeway – Sanroku Station is a themed comparison candidate: Operating visitor aerial ropeway with a named lower station in Hakodate.",
+          "sourceIds": ["source-24", "source-23"],
+          "points": 44
+        },
+        {
+          "poiId": "palm-springs-aerial-tramway",
+          "text": "Palm Springs Aerial Tramway – Valley Station is a themed comparison candidate: Regularly open visitor aerial tramway with its lower station in Palm Springs.",
+          "sourceIds": ["source-17", "source-23"],
+          "points": 5
+        },
+        {
+          "poiId": "london-air-line",
+          "text": "IFS Cloud Cable Car – Royal Docks Station is a themed comparison candidate: Operating urban cable car with a named station inside London and regular passenger service.",
+          "sourceIds": ["source-16", "source-23"],
+          "points": 96
+        },
+        {
+          "poiId": "taipei-maokong-gondola",
+          "text": "Maokong Gondola – Taipei Zoo Station is a themed comparison candidate: Operating urban gondola visitor and transit service with a named terminal in Taipei.",
+          "sourceIds": ["source-20", "source-23"],
+          "points": 52
+        },
+        {
+          "poiId": "hong-kong-ngong-ping-360",
+          "text": "Ngong Ping 360 – Tung Chung Station is a themed comparison candidate: Operating visitor gondola service with a named terminal in the urban municipality of Hong Kong.",
+          "sourceIds": ["source-25", "source-23"],
+          "points": 81
+        },
+        {
+          "poiId": "medellin-metrocable-k",
+          "text": "Medellín Metrocable Line K – Acevedo Station is a themed comparison candidate: Operating urban passenger gondola line integrated with Medellín Metro at the named Acevedo station.",
+          "sourceIds": ["source-02", "source-23"],
+          "points": 35
+        },
+        {
+          "poiId": "new-york-roosevelt-island-tram",
+          "text": "Roosevelt Island Tramway – Manhattan Station is a themed comparison candidate: Operating scheduled public aerial tramway linking Manhattan and Roosevelt Island.",
+          "sourceIds": ["source-15", "source-23"],
+          "points": 8
+        }
+      ]
+    },
+    {
+      "id": "round-4",
+      "targetPoiId": "hakodate-ropeway",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Mt-Hakodate-Ropeway-05.jpg/1280px-Mt-Hakodate-Ropeway-05.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Mount Hakodate Ropeway",
+        "attribution": "J o · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "clue": {
+        "text": "For generations, visitors have used this short aerial tram to reach a mountaintop celebrated for its night panorama over a city pinched between two bays.",
+        "sourceIds": ["source-24"]
+      },
+      "results": [
+        {
+          "poiId": "telluride-gondola",
+          "text": "Telluride Gondola – Telluride Station is a themed comparison candidate: Operating free public gondola with a named terminal in the incorporated town of Telluride; it serves town access as well as recreation.",
+          "sourceIds": ["source-18", "source-24"],
+          "points": 64
+        },
+        {
+          "poiId": "santo-domingo-teleferico",
+          "text": "Santo Domingo Teleférico – Gualey Station is a themed comparison candidate: Operating urban gondola transit system with a named terminal in Santo Domingo.",
+          "sourceIds": ["source-07", "source-24"],
+          "points": 23
+        },
+        {
+          "poiId": "quito-teleferiqo",
+          "text": "Quito Teleférico – Plaza de los Cebollas is a themed comparison candidate: Regularly open visitor gondola attraction with its lower terminal inside Quito.",
+          "sourceIds": ["source-05", "source-24"],
+          "points": 72
+        },
+        {
+          "poiId": "merida-teleferico-barinitas",
+          "text": "Mérida Cable Car – Barinitas Station is a themed comparison candidate: Operating long-span passenger cableway with its urban lower terminal in Mérida.",
+          "sourceIds": ["source-10", "source-24"],
+          "points": 91
+        },
+        {
+          "poiId": "yeosu-maritime-cable-car",
+          "text": "Yeosu Maritime Cable Car – Dolsan Park Station is a themed comparison candidate: Operating passenger cableway over Yeosu harbor with a named terminal inside Yeosu.",
+          "sourceIds": ["source-23", "source-24"],
+          "points": 48
+        },
+        {
+          "poiId": "singapore-cable-car-mount-faber",
+          "text": "Singapore Cable Car – Mount Faber Station is a themed comparison candidate: Operating visitor and public passenger gondola service from a named station in Singapore.",
+          "sourceIds": ["source-19", "source-24"],
+          "points": 60
+        },
+        {
+          "poiId": "caracas-teleferico-warairarepano",
+          "text": "Teleférico Warairarepano – Maripérez Station is a themed comparison candidate: Named lower station of an operating passenger cableway connecting Caracas with El Ávila visitor areas.",
+          "sourceIds": ["source-09", "source-24"],
+          "points": 68
+        },
+        {
+          "poiId": "busan-songdo-cable-car",
+          "text": "Busan Air Cruise – Songdo Bay Station is a themed comparison candidate: Regularly operating public visitor gondola crossing with a named station in Busan.",
+          "sourceIds": ["source-22", "source-24"],
+          "points": 52
+        },
+        {
+          "poiId": "manizales-cable-areeo",
+          "text": "Manizales Cable Aéreo – Fundadores Station is a themed comparison candidate: Operating urban aerial cableway linking a named terminal in central Manizales with Villamaría.",
+          "sourceIds": ["source-04", "source-24"],
+          "points": 29
+        },
+        {
+          "poiId": "guayaquil-aerovia-julian-coronel",
+          "text": "Aerovía Guayaquil – Julián Coronel Station is a themed comparison candidate: Operating urban aerial gondola system with a named passenger station in Guayaquil.",
+          "sourceIds": ["source-06", "source-24"],
+          "points": 26
+        },
+        {
+          "poiId": "seoul-namsan-cable-car",
+          "text": "Namsan Cable Car – Hoehyeon Station is a themed comparison candidate: Operating visitor aerial cable car with a named lower station in Seoul.",
+          "sourceIds": ["source-21", "source-24"],
+          "points": 81
+        },
+        {
+          "poiId": "rio-sugarloaf-bondinho",
+          "text": "Bondinho do Pão de Açúcar – Praia Vermelha Station is a themed comparison candidate: Operating public aerial tramway visitor service from a named station in Rio de Janeiro.",
+          "sourceIds": ["source-08", "source-24"],
+          "points": 96
+        },
+        {
+          "poiId": "la-paz-mi-teleferico-central",
+          "text": "Mi Teleférico – Línea Roja, Estación Central is a themed comparison candidate: Operating urban gondola line with scheduled public passenger service from a named station in central La Paz.",
+          "sourceIds": ["source-01", "source-24"],
+          "points": 38
+        },
+        {
+          "poiId": "hakodate-ropeway",
+          "text": "Hakodate Ropeway – Sanroku Station is the round target: Operating visitor aerial ropeway with a named lower station in Hakodate.",
+          "sourceIds": ["source-24"],
+          "points": 100
+        },
+        {
+          "poiId": "palm-springs-aerial-tramway",
+          "text": "Palm Springs Aerial Tramway – Valley Station is a themed comparison candidate: Regularly open visitor aerial tramway with its lower station in Palm Springs.",
+          "sourceIds": ["source-17", "source-24"],
+          "points": 86
+        },
+        {
+          "poiId": "london-air-line",
+          "text": "IFS Cloud Cable Car – Royal Docks Station is a themed comparison candidate: Operating urban cable car with a named station inside London and regular passenger service.",
+          "sourceIds": ["source-16", "source-24"],
+          "points": 5
+        },
+        {
+          "poiId": "taipei-maokong-gondola",
+          "text": "Maokong Gondola – Taipei Zoo Station is a themed comparison candidate: Operating urban gondola visitor and transit service with a named terminal in Taipei.",
+          "sourceIds": ["source-20", "source-24"],
+          "points": 56
+        },
+        {
+          "poiId": "hong-kong-ngong-ping-360",
+          "text": "Ngong Ping 360 – Tung Chung Station is a themed comparison candidate: Operating visitor gondola service with a named terminal in the urban municipality of Hong Kong.",
+          "sourceIds": ["source-25", "source-24"],
+          "points": 44
+        },
+        {
+          "poiId": "medellin-metrocable-k",
+          "text": "Medellín Metrocable Line K – Acevedo Station is a themed comparison candidate: Operating urban passenger gondola line integrated with Medellín Metro at the named Acevedo station.",
+          "sourceIds": ["source-02", "source-24"],
+          "points": 35
+        },
+        {
+          "poiId": "new-york-roosevelt-island-tram",
+          "text": "Roosevelt Island Tramway – Manhattan Station is a themed comparison candidate: Operating scheduled public aerial tramway linking Manhattan and Roosevelt Island.",
+          "sourceIds": ["source-15", "source-24"],
+          "points": 8
+        }
+      ]
+    },
+    {
+      "id": "round-5",
+      "targetPoiId": "singapore-cable-car-mount-faber",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Singapore_cable_car_Mount_Faber_1.jpg/1280px-Singapore_cable_car_Mount_Faber_1.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Singapore Cable Car",
+        "attribution": "kallerna · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "One of the earliest cableways built to cross a harbor, this gondola was created in the 1970s to link a wooded hilltop with a resort island and later introduced glass-bottom cabins.",
+        "sourceIds": ["source-19"]
+      },
+      "results": [
+        {
+          "poiId": "telluride-gondola",
+          "text": "Telluride Gondola – Telluride Station is a themed comparison candidate: Operating free public gondola with a named terminal in the incorporated town of Telluride; it serves town access as well as recreation.",
+          "sourceIds": ["source-18", "source-19"],
+          "points": 56
+        },
+        {
+          "poiId": "santo-domingo-teleferico",
+          "text": "Santo Domingo Teleférico – Gualey Station is a themed comparison candidate: Operating urban gondola transit system with a named terminal in Santo Domingo.",
+          "sourceIds": ["source-07", "source-19"],
+          "points": 23
+        },
+        {
+          "poiId": "quito-teleferiqo",
+          "text": "Quito Teleférico – Plaza de los Cebollas is a themed comparison candidate: Regularly open visitor gondola attraction with its lower terminal inside Quito.",
+          "sourceIds": ["source-05", "source-19"],
+          "points": 72
+        },
+        {
+          "poiId": "merida-teleferico-barinitas",
+          "text": "Mérida Cable Car – Barinitas Station is a themed comparison candidate: Operating long-span passenger cableway with its urban lower terminal in Mérida.",
+          "sourceIds": ["source-10", "source-19"],
+          "points": 20
+        },
+        {
+          "poiId": "yeosu-maritime-cable-car",
+          "text": "Yeosu Maritime Cable Car – Dolsan Park Station is a themed comparison candidate: Operating passenger cableway over Yeosu harbor with a named terminal inside Yeosu.",
+          "sourceIds": ["source-23", "source-19"],
+          "points": 86
+        },
+        {
+          "poiId": "singapore-cable-car-mount-faber",
+          "text": "Singapore Cable Car – Mount Faber Station is the round target: Operating visitor and public passenger gondola service from a named station in Singapore.",
+          "sourceIds": ["source-19"],
+          "points": 100
+        },
+        {
+          "poiId": "caracas-teleferico-warairarepano",
+          "text": "Teleférico Warairarepano – Maripérez Station is a themed comparison candidate: Named lower station of an operating passenger cableway connecting Caracas with El Ávila visitor areas.",
+          "sourceIds": ["source-09", "source-19"],
+          "points": 64
+        },
+        {
+          "poiId": "busan-songdo-cable-car",
+          "text": "Busan Air Cruise – Songdo Bay Station is a themed comparison candidate: Regularly operating public visitor gondola crossing with a named station in Busan.",
+          "sourceIds": ["source-22", "source-19"],
+          "points": 91
+        },
+        {
+          "poiId": "manizales-cable-areeo",
+          "text": "Manizales Cable Aéreo – Fundadores Station is a themed comparison candidate: Operating urban aerial cableway linking a named terminal in central Manizales with Villamaría.",
+          "sourceIds": ["source-04", "source-19"],
+          "points": 29
+        },
+        {
+          "poiId": "guayaquil-aerovia-julian-coronel",
+          "text": "Aerovía Guayaquil – Julián Coronel Station is a themed comparison candidate: Operating urban aerial gondola system with a named passenger station in Guayaquil.",
+          "sourceIds": ["source-06", "source-19"],
+          "points": 26
+        },
+        {
+          "poiId": "seoul-namsan-cable-car",
+          "text": "Namsan Cable Car – Hoehyeon Station is a themed comparison candidate: Operating visitor aerial cable car with a named lower station in Seoul.",
+          "sourceIds": ["source-21", "source-19"],
+          "points": 48
+        },
+        {
+          "poiId": "rio-sugarloaf-bondinho",
+          "text": "Bondinho do Pão de Açúcar – Praia Vermelha Station is a themed comparison candidate: Operating public aerial tramway visitor service from a named station in Rio de Janeiro.",
+          "sourceIds": ["source-08", "source-19"],
+          "points": 68
+        },
+        {
+          "poiId": "la-paz-mi-teleferico-central",
+          "text": "Mi Teleférico – Línea Roja, Estación Central is a themed comparison candidate: Operating urban gondola line with scheduled public passenger service from a named station in central La Paz.",
+          "sourceIds": ["source-01", "source-19"],
+          "points": 38
+        },
+        {
+          "poiId": "hakodate-ropeway",
+          "text": "Hakodate Ropeway – Sanroku Station is a themed comparison candidate: Operating visitor aerial ropeway with a named lower station in Hakodate.",
+          "sourceIds": ["source-24", "source-19"],
+          "points": 44
+        },
+        {
+          "poiId": "palm-springs-aerial-tramway",
+          "text": "Palm Springs Aerial Tramway – Valley Station is a themed comparison candidate: Regularly open visitor aerial tramway with its lower station in Palm Springs.",
+          "sourceIds": ["source-17", "source-19"],
+          "points": 5
+        },
+        {
+          "poiId": "london-air-line",
+          "text": "IFS Cloud Cable Car – Royal Docks Station is a themed comparison candidate: Operating urban cable car with a named station inside London and regular passenger service.",
+          "sourceIds": ["source-16", "source-19"],
+          "points": 96
+        },
+        {
+          "poiId": "taipei-maokong-gondola",
+          "text": "Maokong Gondola – Taipei Zoo Station is a themed comparison candidate: Operating urban gondola visitor and transit service with a named terminal in Taipei.",
+          "sourceIds": ["source-20", "source-19"],
+          "points": 52
+        },
+        {
+          "poiId": "hong-kong-ngong-ping-360",
+          "text": "Ngong Ping 360 – Tung Chung Station is a themed comparison candidate: Operating visitor gondola service with a named terminal in the urban municipality of Hong Kong.",
+          "sourceIds": ["source-25", "source-19"],
+          "points": 81
+        },
+        {
+          "poiId": "medellin-metrocable-k",
+          "text": "Medellín Metrocable Line K – Acevedo Station is a themed comparison candidate: Operating urban passenger gondola line integrated with Medellín Metro at the named Acevedo station.",
+          "sourceIds": ["source-02", "source-19"],
+          "points": 35
+        },
+        {
+          "poiId": "new-york-roosevelt-island-tram",
+          "text": "Roosevelt Island Tramway – Manhattan Station is a themed comparison candidate: Operating scheduled public aerial tramway linking Manhattan and Roosevelt Island.",
+          "sourceIds": ["source-15", "source-19"],
+          "points": 8
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-01",
+      "title": "Mi Teleférico",
+      "url": "https://en.wikipedia.org/wiki/Mi_Telef%C3%A9rico",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-02",
+      "title": "Medellín Metro",
+      "url": "https://en.wikipedia.org/wiki/Medell%C3%ADn_Metro",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-03",
+      "title": "Medellín Metrocable",
+      "url": "https://en.wikipedia.org/wiki/Medell%C3%ADn_Metrocable",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-04",
+      "title": "Manizales Gondola Lift",
+      "url": "https://en.wikipedia.org/wiki/Manizales_Gondola_Lift",
+      "retrievedAt": "2026-08-18T03:54:00.787Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-05",
+      "title": "TelefériQo",
+      "url": "https://en.wikipedia.org/wiki/Telef%C3%A9riQo",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-06",
+      "title": "Aerovía",
+      "url": "https://en.wikipedia.org/wiki/Aerov%C3%ADa",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-07",
+      "title": "Santo Domingo Metro",
+      "url": "https://en.wikipedia.org/wiki/Santo_Domingo_Metro",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-08",
+      "title": "Sugarloaf Mountain Cable Car",
+      "url": "https://en.wikipedia.org/wiki/Sugarloaf_Mountain_Cable_Car",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-09",
+      "title": "Teleférico de Caracas",
+      "url": "https://en.wikipedia.org/wiki/Telef%C3%A9rico_de_Caracas",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-10",
+      "title": "Mérida cable car",
+      "url": "https://en.wikipedia.org/wiki/M%C3%A9rida_cable_car",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-11",
+      "title": "Cablebús",
+      "url": "https://en.wikipedia.org/wiki/Cableb%C3%BAs",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-12",
+      "title": "Mexicable",
+      "url": "https://en.wikipedia.org/wiki/Mexicable",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-13",
+      "title": "Puebla Cable Car",
+      "url": "https://en.wikipedia.org/wiki/Puebla_Cable_Car",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-14",
+      "title": "Portland Aerial Tram",
+      "url": "https://en.wikipedia.org/wiki/Portland_Aerial_Tram",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-15",
+      "title": "Roosevelt Island Tramway",
+      "url": "https://en.wikipedia.org/wiki/Roosevelt_Island_Tramway",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-16",
+      "title": "London Cable Car",
+      "url": "https://en.wikipedia.org/wiki/London_Cable_Car",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-17",
+      "title": "Palm Springs Aerial Tramway",
+      "url": "https://en.wikipedia.org/wiki/Palm_Springs_Aerial_Tramway",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-18",
+      "title": "Telluride Ski Resort",
+      "url": "https://en.wikipedia.org/wiki/Telluride_Ski_Resort",
+      "retrievedAt": "2026-08-18T03:54:00.793Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-19",
+      "title": "Singapore Cable Car",
+      "url": "https://en.wikipedia.org/wiki/Singapore_Cable_Car",
+      "retrievedAt": "2026-08-18T03:53:51.194Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-20",
+      "title": "Maokong Gondola",
+      "url": "https://en.wikipedia.org/wiki/Maokong_Gondola",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-21",
+      "title": "Namsan cable car",
+      "url": "https://en.wikipedia.org/wiki/Namsan_cable_car",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-22",
+      "title": "Busan Air Cruise",
+      "url": "https://en.wikipedia.org/wiki/Busan_Air_Cruise",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-23",
+      "title": "Yeosu Maritime Cable Car",
+      "url": "https://en.wikipedia.org/wiki/Yeosu_Maritime_Cable_Car",
+      "retrievedAt": "2026-08-18T03:54:00.356Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-24",
+      "title": "Mount Hakodate Ropeway",
+      "url": "https://en.wikipedia.org/wiki/Mount_Hakodate_Ropeway",
+      "retrievedAt": "2026-08-18T03:54:00.710Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-25",
+      "title": "Ngong Ping 360",
+      "url": "https://en.wikipedia.org/wiki/Ngong_Ping_360",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    }
+  ],
+  "theme": {
+    "title": "Operating Aerial Passenger Cableways in Cities",
+    "introduction": "Above busy streets, cable cars trace unlikely paths through the sky. These urban aerial routes still carry passengers today.",
+    "inclusionCriteria": "Include a location only when every condition is met: (1) it is an individually named aerial passenger cableway, gondola lift, aerial tramway, cable car, teleférico, téléphérique, telecabine, or equivalent service; (2) passenger cabins, cars, or gondolas travel suspended above the ground on an overhead cable system rather than on rails; (3) it provides regularly scheduled public passenger service on the date of play, whether ordinary urban transit or a regularly open visitor attraction; (4) at least one named terminal or station lies within the current administrative boundary of a present-day city or incorporated urban municipality; and (5) the cableway, line, or a specific station can be pinned as one exact, visitable map location."
+  }
+}

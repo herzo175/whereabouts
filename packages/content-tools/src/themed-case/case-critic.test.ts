@@ -109,6 +109,12 @@ describe('critiqueCase', () => {
     expect(properties.clueVerdicts).toMatchObject({ minItems: 5, maxItems: 5 });
     expect(properties.relationshipVerdicts).toBeUndefined();
     expect(criticPrompt).toContain(`round-1 -> ${board.targetPoiIds[0]}`);
+    expect(criticPrompt).toContain('general-interest player');
+    expect(criticPrompt).toContain('recognizable historical narrative');
+    expect(criticPrompt).toContain(
+      'obscure proper names, exact figures, or technical specifications',
+    );
+    expect(criticPrompt).toContain('must not be a dead giveaway');
   });
 
   it('publishes only when all 20 themes and five clues pass', async () => {

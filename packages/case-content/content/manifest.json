@@ -23,23 +23,23 @@
     },
     "2026-08-21": {
       "caseNumber": 20686,
-      "revision": 3,
-      "file": "./cases/2026-08-21/v3.json"
+      "revision": 4,
+      "file": "./cases/2026-08-21/v4.json"
     },
     "2026-08-22": {
       "caseNumber": 20687,
-      "revision": 2,
-      "file": "./cases/2026-08-22/v2.json"
+      "revision": 3,
+      "file": "./cases/2026-08-22/v3.json"
     },
     "2026-08-23": {
       "caseNumber": 20688,
-      "revision": 2,
-      "file": "./cases/2026-08-23/v2.json"
+      "revision": 3,
+      "file": "./cases/2026-08-23/v3.json"
     },
     "2026-08-24": {
       "caseNumber": 20689,
-      "revision": 3,
-      "file": "./cases/2026-08-24/v3.json"
+      "revision": 4,
+      "file": "./cases/2026-08-24/v4.json"
     },
     "2026-08-25": {
       "caseNumber": 20690,
@@ -48,13 +48,13 @@
     },
     "2026-08-26": {
       "caseNumber": 20691,
-      "revision": 3,
-      "file": "./cases/2026-08-26/v3.json"
+      "revision": 4,
+      "file": "./cases/2026-08-26/v4.json"
     },
     "2026-08-27": {
       "caseNumber": 20692,
-      "revision": 1,
-      "file": "./cases/2026-08-27/v1.json"
+      "revision": 2,
+      "file": "./cases/2026-08-27/v2.json"
     },
     "2026-08-28": {
       "caseNumber": 20693,

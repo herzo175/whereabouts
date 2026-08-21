@@ -9,9 +9,11 @@ import { fixtureBoard, fixtureCaseDraft } from './fixtures.js';
 
 describe('case writer', () => {
   it('writes and validates a complete board-aware draft', async () => {
+    let writerPrompt = '';
     const draft = await writeCaseDraft({
       model: {
-        generate: async ({ schema }) => {
+        generate: async ({ schema, prompt }) => {
+          writerPrompt = prompt;
           const json = z.toJSONSchema(schema) as {
             properties?: {
               rounds?: {
@@ -47,6 +49,13 @@ describe('case writer', () => {
     });
     expect(draft.rounds).toHaveLength(5);
     expect(draft.rounds[0].results).toHaveLength(20);
+    expect(writerPrompt).toContain(
+      'Lead with a broadly recognizable historical story',
+    );
+    expect(writerPrompt).toContain(
+      'Do not make obscure proper names, exact dates, measurements, capacities, counts, or technical specifications necessary',
+    );
+    expect(writerPrompt).toContain('must not directly reveal the location');
   });
 
   it('preserves exact model-authored points for every candidate', () => {

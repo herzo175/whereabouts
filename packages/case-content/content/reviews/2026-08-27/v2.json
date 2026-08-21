@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "publicationDate": "2026-08-27",
+  "revision": 2,
+  "themeVerdicts": [
+    {
+      "poiId": "st-pancras-international",
+      "status": "pass",
+      "explanation": "Individually named heavy-rail terminus at a fixed public station site in London; passenger service began there in 1868 and scheduled Eurostar, East Midlands Railway, Southeastern, and Thameslink trains currently serve it.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "liverpool-lime-street",
+      "status": "pass",
+      "explanation": "Individually named heavy-rail terminus within Liverpool, opened for passenger service in 1836, with continuing scheduled intercity and regional passenger service at a mappable public station.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "manchester-victoria",
+      "status": "pass",
+      "explanation": "Named heavy-rail passenger station in Manchester, opened in 1844 and currently serving scheduled regional and intercity trains from a fixed public concourse.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "glasgow-central",
+      "status": "pass",
+      "explanation": "Named heavy-rail terminal within Glasgow; the station opened in 1879 and remains an active scheduled passenger station at a fixed, identifiable site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "edinburgh-waverley",
+      "status": "pass",
+      "explanation": "Individually named central heavy-rail station in Edinburgh, with passenger railway use beginning in 1866 and continuing scheduled passenger service.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "york-railway-station",
+      "status": "pass",
+      "explanation": "Named heavy-rail passenger station within York, opened in 1850 and still served by regular main-line passenger trains at a fixed public station site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "bristol-temple-meads",
+      "status": "pass",
+      "explanation": "Individually named heavy-rail terminal in Bristol; passenger service began in 1840 and scheduled regional and long-distance trains continue to serve its public station.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "brighton-railway-station",
+      "status": "pass",
+      "explanation": "Named heavy-rail passenger station in Brighton, opened in 1840 and continuing to provide regular scheduled passenger service from a fixed public site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "paris-gare-du-nord",
+      "status": "pass",
+      "explanation": "Individually named heavy-rail terminus within Paris. Passenger service began at the predecessor station on the same site in 1846; the current station is an active public terminal with mainline and international services.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "amsterdam-centraal",
+      "status": "pass",
+      "explanation": "Named heavy-rail passenger station within Amsterdam, opened in 1889 and still serving regular domestic and international trains at a fixed public station site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "zurich-hauptbahnhof",
+      "status": "pass",
+      "explanation": "Individually named heavy-rail station in Zürich; the site began passenger service in 1847 and remains an active national and international passenger hub with recognizable concourses and platforms.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "bern-railway-station",
+      "status": "pass",
+      "explanation": "Named heavy-rail passenger station within Bern, opened in 1858 and currently serving scheduled national and international passenger trains from a fixed central site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "stockholm-central",
+      "status": "pass",
+      "explanation": "Individually named heavy-rail station within Stockholm, opened in 1871 and currently serving scheduled regional, long-distance, and international trains at a fixed public station.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "krakow-glowny",
+      "status": "pass",
+      "explanation": "Named heavy-rail passenger station in Kraków, opened in 1847 and continuing to serve scheduled passenger trains from an identifiable central station complex.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "wroclaw-glowny",
+      "status": "pass",
+      "explanation": "Individually named heavy-rail terminal in Wrocław; passenger railway service began in 1842 and scheduled regional and long-distance trains still operate there.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "prague-main-station",
+      "status": "pass",
+      "explanation": "Named heavy-rail passenger station within Prague; the site began passenger railway service in 1871 and remains an active domestic and international station.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "budapest-keleti",
+      "status": "pass",
+      "explanation": "Individually named heavy-rail terminal in Budapest, opened in 1884 and still operating with scheduled passenger trains from a fixed public station site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "ljubljana-railway-station",
+      "status": "pass",
+      "explanation": "Named principal heavy-rail passenger station within Ljubljana, opened in 1849 and continuing to serve scheduled domestic and international passenger trains.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "bucharest-nord",
+      "status": "pass",
+      "explanation": "Individually named heavy-rail terminal within Bucharest, opened in 1872 and still serving scheduled domestic and international passenger services at a recognizable public station.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "sofia-central",
+      "status": "pass",
+      "explanation": "Named heavy-rail passenger terminal within Sofia. Its immediately identifiable predecessor began service in 1888 at the same site, and the replacement terminal remains active with scheduled public passenger trains and a fixed public entrance.",
+      "sourceIds": ["source-01"]
+    }
+  ],
+  "clueVerdicts": [
+    {
+      "roundId": "round-1",
+      "declaredTargetPoiId": "st-pancras-international",
+      "resolvedPoiId": "st-pancras-international",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The Gothic hotel façade, single-span iron train shed, preservation campaign, and later Channel Tunnel role identify St Pancras International without relying on a campaigner’s name."
+    },
+    {
+      "roundId": "round-2",
+      "declaredTargetPoiId": "paris-gare-du-nord",
+      "resolvedPoiId": "paris-gare-du-nord",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The triumphal-arch façade with sculptures of served cities, cross-Channel role, and layered regional and metro connections identify Gare du Nord without relying on its architect’s name."
+    },
+    {
+      "roundId": "round-3",
+      "declaredTargetPoiId": "zurich-hauptbahnhof",
+      "resolvedPoiId": "zurich-hauptbahnhof",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The first Swiss railway terminus, neo-Renaissance station at the end of Bahnhofstrasse, river crossing beneath the station, layered platforms, and ShopVille arcade form a unique discriminator for Zürich Hauptbahnhof."
+    },
+    {
+      "roundId": "round-4",
+      "declaredTargetPoiId": "stockholm-central",
+      "resolvedPoiId": "stockholm-central",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The heritage-listed former track hall used as a waiting hall, royal waiting room, landscape murals, T-Centralen link, and relocation of commuter trains uniquely identify Stockholm Central Station."
+    },
+    {
+      "roundId": "round-5",
+      "declaredTargetPoiId": "sofia-central",
+      "resolvedPoiId": "sofia-central",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The domestically engineered railway origin, same-site replacement with a white-marble terminal, adjacent central bus station, renovation, and former Vitosha-facing façade uniquely identify Sofia Central Station even without exact years or counts."
+    }
+  ],
+  "repairs": [
+    {
+      "stage": "clue-accessibility",
+      "summary": "Rewrote clue prose around recognizable historical narratives and removed reliance on obscure names, exact figures, and technical specifications."
+    }
+  ]
+}

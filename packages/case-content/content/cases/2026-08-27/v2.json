@@ -1,0 +1,1147 @@
+{
+  "schemaVersion": 4,
+  "publicationDate": "2026-08-27",
+  "revision": 2,
+  "caseNumber": 20692,
+  "pois": [
+    {
+      "id": "edinburgh-waverley",
+      "name": "Edinburgh Waverley",
+      "city": "Edinburgh",
+      "country": "United Kingdom",
+      "latitude": 55.9521,
+      "longitude": -3.189,
+      "wikipediaTitle": "Edinburgh Waverley railway station",
+      "blurb": "Edinburgh Waverley railway station opened in 1866 and remains the principal railway station serving scheduled passenger trains in Edinburgh.",
+      "themeConnection": {
+        "text": "The station site entered passenger railway use in 1866 and remains an active central-city station.",
+        "sourceIds": ["source-05"]
+      }
+    },
+    {
+      "id": "st-pancras-international",
+      "name": "St Pancras International",
+      "city": "London",
+      "country": "United Kingdom",
+      "latitude": 51.5319,
+      "longitude": -0.1263,
+      "wikipediaTitle": "St Pancras railway station",
+      "blurb": "St Pancras International () is a major central London railway terminus on Euston Road in the London Borough of Camden. It is the terminus for Eurostar services from Belgium, France and the Netherlands to the UK.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/St_Pancras_Railway_Station_2012-06-23.jpg/1280px-St_Pancras_Railway_Station_2012-06-23.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "St Pancras railway station",
+        "attribution": "Colin · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "themeConnection": {
+        "text": "Passenger railway service began at the site in 1868, and the station remains an active heavy-rail terminal.",
+        "sourceIds": ["source-01"]
+      }
+    },
+    {
+      "id": "prague-main-station",
+      "name": "Praha hlavní nádraží",
+      "city": "Prague",
+      "country": "Czech Republic",
+      "latitude": 50.083,
+      "longitude": 14.435,
+      "wikipediaTitle": "Praha hlavní nádraží",
+      "blurb": "Praha hlavní nádraží opened in 1871 and continues to serve scheduled domestic and international passenger railway services.",
+      "themeConnection": {
+        "text": "The station site began passenger railway service in 1871 and remains Prague's principal active rail station.",
+        "sourceIds": ["source-16"]
+      }
+    },
+    {
+      "id": "brighton-railway-station",
+      "name": "Brighton railway station",
+      "city": "Brighton",
+      "country": "United Kingdom",
+      "latitude": 50.8329,
+      "longitude": -0.1411,
+      "wikipediaTitle": "Brighton railway station",
+      "blurb": "Brighton railway station opened in 1840 and continues to provide regular scheduled passenger services in the city.",
+      "themeConnection": {
+        "text": "Brighton station opened in 1840 and remains an active public passenger railway station.",
+        "sourceIds": ["source-08"]
+      }
+    },
+    {
+      "id": "amsterdam-centraal",
+      "name": "Amsterdam Centraal",
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "latitude": 52.3789,
+      "longitude": 4.9003,
+      "wikipediaTitle": "Amsterdam Centraal railway station",
+      "blurb": "Amsterdam Centraal railway station opened in 1889 and continues to handle regular domestic and international passenger trains.",
+      "themeConnection": {
+        "text": "Amsterdam Centraal opened in 1889 and remains the city's principal operating passenger railway station.",
+        "sourceIds": ["source-10"]
+      }
+    },
+    {
+      "id": "glasgow-central",
+      "name": "Glasgow Central",
+      "city": "Glasgow",
+      "country": "United Kingdom",
+      "latitude": 55.8598,
+      "longitude": -4.2581,
+      "wikipediaTitle": "Glasgow Central station",
+      "blurb": "Glasgow Central station opened in 1879 and continues to operate as one of Scotland's busiest scheduled passenger railway stations.",
+      "themeConnection": {
+        "text": "The present station opened in 1879 and remains a major active passenger railway terminus.",
+        "sourceIds": ["source-04"]
+      }
+    },
+    {
+      "id": "paris-gare-du-nord",
+      "name": "Gare du Nord",
+      "city": "Paris",
+      "country": "France",
+      "latitude": 48.8809,
+      "longitude": 2.3553,
+      "wikipediaTitle": "Gare du Nord",
+      "blurb": "The Gare du Nord (pronounced [ɡaʁ dy nɔːʁ]; English: North Station), officially Paris-Nord, is one of the seven large mainline railway station termini in Paris, France, and Europe's busiest railway station.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Gare-de-Paris-Nord-2026-06-msu--2418.jpg/1280px-Gare-de-Paris-Nord-2026-06-msu--2418.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Gare du Nord",
+        "attribution": "Matthias Süßen · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "The first Gare du Nord opened in 1846; the present station site remains an active heavy-rail terminal.",
+        "sourceIds": ["source-09"]
+      }
+    },
+    {
+      "id": "bern-railway-station",
+      "name": "Bern railway station",
+      "city": "Bern",
+      "country": "Switzerland",
+      "latitude": 46.948,
+      "longitude": 7.439,
+      "wikipediaTitle": "Bern railway station",
+      "blurb": "Bern railway station opened in 1858 and remains an active central Swiss station serving regular national and international passengers.",
+      "themeConnection": {
+        "text": "Bern's railway station opened in 1858 and continues to serve scheduled passenger trains.",
+        "sourceIds": ["source-12"]
+      }
+    },
+    {
+      "id": "krakow-glowny",
+      "name": "Kraków Główny",
+      "city": "Kraków",
+      "country": "Poland",
+      "latitude": 50.0671,
+      "longitude": 19.945,
+      "wikipediaTitle": "Kraków Główny railway station",
+      "blurb": "Kraków Główny railway station opened in 1847 and continues to serve regular scheduled passenger trains in central Kraków.",
+      "themeConnection": {
+        "text": "The station opened in 1847 and remains an operating heavy-rail passenger station.",
+        "sourceIds": ["source-14"]
+      }
+    },
+    {
+      "id": "liverpool-lime-street",
+      "name": "Liverpool Lime Street",
+      "city": "Liverpool",
+      "country": "United Kingdom",
+      "latitude": 53.4073,
+      "longitude": -2.9778,
+      "wikipediaTitle": "Liverpool Lime Street railway station",
+      "blurb": "Liverpool Lime Street station opened in 1836 and is the city's main railway terminus, with continuing scheduled passenger services.",
+      "themeConnection": {
+        "text": "The station opened in 1836 and continues to handle scheduled intercity and regional passenger trains.",
+        "sourceIds": ["source-02"]
+      }
+    },
+    {
+      "id": "sofia-central",
+      "name": "Sofia Central Station",
+      "city": "Sofia",
+      "country": "Bulgaria",
+      "latitude": 42.711,
+      "longitude": 23.321,
+      "wikipediaTitle": "Sofia Central Station",
+      "blurb": "The Sofia Central Railway Station (Bulgarian: Централна железопътна гара София, romanized: Tsentralna zhelezopatna gara Sofiya) is the main passenger railway station of Sofia, the capital of Bulgaria, as well as the largest railway station in the country.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Central_Railway_Station_Sofia_2012_PD_36.jpg/1280px-Central_Railway_Station_Sofia_2012_PD_36.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Sofia Central Station",
+        "attribution": "Bin im Garten · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "themeConnection": {
+        "text": "The station opened in 1888 and remains the principal operating heavy-rail passenger terminal in Sofia.",
+        "sourceIds": ["source-20"]
+      }
+    },
+    {
+      "id": "ljubljana-railway-station",
+      "name": "Ljubljana railway station",
+      "city": "Ljubljana",
+      "country": "Slovenia",
+      "latitude": 46.0564,
+      "longitude": 14.5058,
+      "wikipediaTitle": "Ljubljana railway station",
+      "blurb": "Ljubljana railway station opened in 1849 and continues to serve regularly scheduled domestic and international passenger trains.",
+      "themeConnection": {
+        "text": "The station opened in 1849 and remains the operating principal passenger railway station of Ljubljana.",
+        "sourceIds": ["source-18"]
+      }
+    },
+    {
+      "id": "wroclaw-glowny",
+      "name": "Wrocław Główny",
+      "city": "Wrocław",
+      "country": "Poland",
+      "latitude": 51.0987,
+      "longitude": 17.0367,
+      "wikipediaTitle": "Wrocław Główny railway station",
+      "blurb": "Wrocław Główny railway station opened in 1842 and remains a busy operating station for scheduled regional and long-distance trains.",
+      "themeConnection": {
+        "text": "Passenger railway service began in 1842, and the station remains an active city terminal.",
+        "sourceIds": ["source-15"]
+      }
+    },
+    {
+      "id": "stockholm-central",
+      "name": "Stockholm Central Station",
+      "city": "Stockholm",
+      "country": "Sweden",
+      "latitude": 59.33,
+      "longitude": 18.058,
+      "wikipediaTitle": "Stockholm Central Station",
+      "blurb": "Stockholm Central Station (Swedish: Stockholms centralstation), is the main railway station in Stockholm, and largest railway station in Sweden in terms of passenger numbers and train traffic.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Stockholm_dworzec_2.jpg/1280px-Stockholm_dworzec_2.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Stockholm Central Station",
+        "attribution": "Andrzej Otrębski · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "Stockholm Central opened in 1871 and remains the city's active main-line passenger station.",
+        "sourceIds": ["source-13"]
+      }
+    },
+    {
+      "id": "budapest-keleti",
+      "name": "Budapest Keleti",
+      "city": "Budapest",
+      "country": "Hungary",
+      "latitude": 47.5008,
+      "longitude": 19.0831,
+      "wikipediaTitle": "Keleti railway station",
+      "blurb": "Keleti railway station opened in 1884 and continues to operate as a major Budapest terminus for scheduled passenger trains.",
+      "themeConnection": {
+        "text": "Keleti station opened in 1884 and remains an active Budapest passenger terminal.",
+        "sourceIds": ["source-17"]
+      }
+    },
+    {
+      "id": "york-railway-station",
+      "name": "York railway station",
+      "city": "York",
+      "country": "United Kingdom",
+      "latitude": 53.958,
+      "longitude": -1.093,
+      "wikipediaTitle": "York railway station",
+      "blurb": "York railway station opened in 1850 and remains an important operating station on Britain's East Coast Main Line for passenger services.",
+      "themeConnection": {
+        "text": "York station opened in 1850 and continues to serve regular main-line passenger trains.",
+        "sourceIds": ["source-06"]
+      }
+    },
+    {
+      "id": "manchester-victoria",
+      "name": "Manchester Victoria",
+      "city": "Manchester",
+      "country": "United Kingdom",
+      "latitude": 53.4875,
+      "longitude": -2.2426,
+      "wikipediaTitle": "Manchester Victoria station",
+      "blurb": "Manchester Victoria station opened in 1844 and continues to serve scheduled regional and intercity passenger trains in central Manchester.",
+      "themeConnection": {
+        "text": "Manchester Victoria opened in 1844 and remains an operating heavy-rail passenger station.",
+        "sourceIds": ["source-03"]
+      }
+    },
+    {
+      "id": "bristol-temple-meads",
+      "name": "Bristol Temple Meads",
+      "city": "Bristol",
+      "country": "United Kingdom",
+      "latitude": 51.449,
+      "longitude": -2.5813,
+      "wikipediaTitle": "Bristol Temple Meads railway station",
+      "blurb": "Bristol Temple Meads railway station opened in 1840 and continues to serve scheduled regional and long-distance passenger trains.",
+      "themeConnection": {
+        "text": "Passenger service began in 1840, and the station remains Bristol's principal heavy-rail passenger terminal.",
+        "sourceIds": ["source-07"]
+      }
+    },
+    {
+      "id": "zurich-hauptbahnhof",
+      "name": "Zürich Hauptbahnhof",
+      "city": "Zürich",
+      "country": "Switzerland",
+      "latitude": 47.3782,
+      "longitude": 8.5402,
+      "wikipediaTitle": "Zürich Hauptbahnhof",
+      "blurb": "Zürich Hauptbahnhof, often shortened to Zürich HB or just HB, and known in English as Zurich Main Station, is the largest railway station in Switzerland and one of the busiest in Europe.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Zuerich_Hauptbahnhof-2.jpg/1280px-Zuerich_Hauptbahnhof-2.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Zürich Hauptbahnhof",
+        "attribution": "Ikiwaner · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "themeConnection": {
+        "text": "The first station opened in 1847, and the present site remains Switzerland's principal active passenger terminal.",
+        "sourceIds": ["source-11"]
+      }
+    },
+    {
+      "id": "bucharest-nord",
+      "name": "București Nord",
+      "city": "Bucharest",
+      "country": "Romania",
+      "latitude": 44.4478,
+      "longitude": 26.0767,
+      "wikipediaTitle": "Bucharest North railway station",
+      "blurb": "Bucharest North railway station opened in 1872 and continues to serve scheduled domestic and international passenger railway services.",
+      "themeConnection": {
+        "text": "Bucharest North opened in 1872 and remains the city's active main passenger railway terminal.",
+        "sourceIds": ["source-19"]
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "round-1",
+      "targetPoiId": "st-pancras-international",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/St_Pancras_Railway_Station_2012-06-23.jpg/1280px-St_Pancras_Railway_Station_2012-06-23.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "St Pancras railway station",
+        "attribution": "Colin · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "clue": {
+        "text": "A preserved Victorian terminus combines an ornate Gothic hotel façade with a remarkable single-span iron train shed. A celebrated public campaign saved it from demolition before it became a Channel Tunnel high-speed gateway.",
+        "sourceIds": ["source-01"]
+      },
+      "results": [
+        {
+          "poiId": "st-pancras-international",
+          "points": 100,
+          "text": "St Pancras International is the round target: Passenger railway service began at the site in 1868, and the station remains an active heavy-rail terminal.",
+          "sourceIds": ["source-01"]
+        },
+        {
+          "poiId": "liverpool-lime-street",
+          "points": 18,
+          "text": "Liverpool Lime Street is a themed comparison candidate: The station opened in 1836 and continues to handle scheduled intercity and regional passenger trains.",
+          "sourceIds": ["source-02", "source-01"]
+        },
+        {
+          "poiId": "manchester-victoria",
+          "points": 16,
+          "text": "Manchester Victoria is a themed comparison candidate: Manchester Victoria opened in 1844 and remains an operating heavy-rail passenger station.",
+          "sourceIds": ["source-03", "source-01"]
+        },
+        {
+          "poiId": "glasgow-central",
+          "points": 28,
+          "text": "Glasgow Central is a themed comparison candidate: The present station opened in 1879 and remains a major active passenger railway terminus.",
+          "sourceIds": ["source-04", "source-01"]
+        },
+        {
+          "poiId": "edinburgh-waverley",
+          "points": 38,
+          "text": "Edinburgh Waverley is a themed comparison candidate: The station site entered passenger railway use in 1866 and remains an active central-city station.",
+          "sourceIds": ["source-05", "source-01"]
+        },
+        {
+          "poiId": "york-railway-station",
+          "points": 31,
+          "text": "York railway station is a themed comparison candidate: York station opened in 1850 and continues to serve regular main-line passenger trains.",
+          "sourceIds": ["source-06", "source-01"]
+        },
+        {
+          "poiId": "bristol-temple-meads",
+          "points": 24,
+          "text": "Bristol Temple Meads is a themed comparison candidate: Passenger service began in 1840, and the station remains Bristol's principal heavy-rail passenger terminal.",
+          "sourceIds": ["source-07", "source-01"]
+        },
+        {
+          "poiId": "brighton-railway-station",
+          "points": 15,
+          "text": "Brighton railway station is a themed comparison candidate: Brighton station opened in 1840 and remains an active public passenger railway station.",
+          "sourceIds": ["source-08", "source-01"]
+        },
+        {
+          "poiId": "paris-gare-du-nord",
+          "points": 83,
+          "text": "Gare du Nord is a themed comparison candidate: The first Gare du Nord opened in 1846; the present station site remains an active heavy-rail terminal.",
+          "sourceIds": ["source-09", "source-01"]
+        },
+        {
+          "poiId": "amsterdam-centraal",
+          "points": 54,
+          "text": "Amsterdam Centraal is a themed comparison candidate: Amsterdam Centraal opened in 1889 and remains the city's principal operating passenger railway station.",
+          "sourceIds": ["source-10", "source-01"]
+        },
+        {
+          "poiId": "zurich-hauptbahnhof",
+          "points": 47,
+          "text": "Zürich Hauptbahnhof is a themed comparison candidate: The first station opened in 1847, and the present site remains Switzerland's principal active passenger terminal.",
+          "sourceIds": ["source-11", "source-01"]
+        },
+        {
+          "poiId": "bern-railway-station",
+          "points": 12,
+          "text": "Bern railway station is a themed comparison candidate: Bern's railway station opened in 1858 and continues to serve scheduled passenger trains.",
+          "sourceIds": ["source-12", "source-01"]
+        },
+        {
+          "poiId": "stockholm-central",
+          "points": 36,
+          "text": "Stockholm Central Station is a themed comparison candidate: Stockholm Central opened in 1871 and remains the city's active main-line passenger station.",
+          "sourceIds": ["source-13", "source-01"]
+        },
+        {
+          "poiId": "krakow-glowny",
+          "points": 10,
+          "text": "Kraków Główny is a themed comparison candidate: The station opened in 1847 and remains an operating heavy-rail passenger station.",
+          "sourceIds": ["source-14", "source-01"]
+        },
+        {
+          "poiId": "wroclaw-glowny",
+          "points": 9,
+          "text": "Wrocław Główny is a themed comparison candidate: Passenger railway service began in 1842, and the station remains an active city terminal.",
+          "sourceIds": ["source-15", "source-01"]
+        },
+        {
+          "poiId": "prague-main-station",
+          "points": 22,
+          "text": "Praha hlavní nádraží is a themed comparison candidate: The station site began passenger railway service in 1871 and remains Prague's principal active rail station.",
+          "sourceIds": ["source-16", "source-01"]
+        },
+        {
+          "poiId": "budapest-keleti",
+          "points": 34,
+          "text": "Budapest Keleti is a themed comparison candidate: Keleti station opened in 1884 and remains an active Budapest passenger terminal.",
+          "sourceIds": ["source-17", "source-01"]
+        },
+        {
+          "poiId": "ljubljana-railway-station",
+          "points": 8,
+          "text": "Ljubljana railway station is a themed comparison candidate: The station opened in 1849 and remains the operating principal passenger railway station of Ljubljana.",
+          "sourceIds": ["source-18", "source-01"]
+        },
+        {
+          "poiId": "bucharest-nord",
+          "points": 20,
+          "text": "București Nord is a themed comparison candidate: Bucharest North opened in 1872 and remains the city's active main passenger railway terminal.",
+          "sourceIds": ["source-19", "source-01"]
+        },
+        {
+          "poiId": "sofia-central",
+          "points": 42,
+          "text": "Sofia Central Station is a themed comparison candidate: The station opened in 1888 and remains the principal operating heavy-rail passenger terminal in Sofia.",
+          "sourceIds": ["source-20", "source-01"]
+        }
+      ]
+    },
+    {
+      "id": "round-2",
+      "targetPoiId": "paris-gare-du-nord",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Gare-de-Paris-Nord-2026-06-msu--2418.jpg/1280px-Gare-de-Paris-Nord-2026-06-msu--2418.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Gare du Nord",
+        "attribution": "Matthias Süßen · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "This grand terminus is marked by a triumphal-arch façade lined with allegorical sculptures of cities served by its railway. It later became a major cross-Channel gateway, with deep regional and metro connections below.",
+        "sourceIds": ["source-09"]
+      },
+      "results": [
+        {
+          "poiId": "st-pancras-international",
+          "points": 86,
+          "text": "St Pancras International is a themed comparison candidate: Passenger railway service began at the site in 1868, and the station remains an active heavy-rail terminal.",
+          "sourceIds": ["source-01", "source-09"]
+        },
+        {
+          "poiId": "liverpool-lime-street",
+          "points": 12,
+          "text": "Liverpool Lime Street is a themed comparison candidate: The station opened in 1836 and continues to handle scheduled intercity and regional passenger trains.",
+          "sourceIds": ["source-02", "source-09"]
+        },
+        {
+          "poiId": "manchester-victoria",
+          "points": 14,
+          "text": "Manchester Victoria is a themed comparison candidate: Manchester Victoria opened in 1844 and remains an operating heavy-rail passenger station.",
+          "sourceIds": ["source-03", "source-09"]
+        },
+        {
+          "poiId": "glasgow-central",
+          "points": 19,
+          "text": "Glasgow Central is a themed comparison candidate: The present station opened in 1879 and remains a major active passenger railway terminus.",
+          "sourceIds": ["source-04", "source-09"]
+        },
+        {
+          "poiId": "edinburgh-waverley",
+          "points": 25,
+          "text": "Edinburgh Waverley is a themed comparison candidate: The station site entered passenger railway use in 1866 and remains an active central-city station.",
+          "sourceIds": ["source-05", "source-09"]
+        },
+        {
+          "poiId": "york-railway-station",
+          "points": 17,
+          "text": "York railway station is a themed comparison candidate: York station opened in 1850 and continues to serve regular main-line passenger trains.",
+          "sourceIds": ["source-06", "source-09"]
+        },
+        {
+          "poiId": "bristol-temple-meads",
+          "points": 11,
+          "text": "Bristol Temple Meads is a themed comparison candidate: Passenger service began in 1840, and the station remains Bristol's principal heavy-rail passenger terminal.",
+          "sourceIds": ["source-07", "source-09"]
+        },
+        {
+          "poiId": "brighton-railway-station",
+          "points": 10,
+          "text": "Brighton railway station is a themed comparison candidate: Brighton station opened in 1840 and remains an active public passenger railway station.",
+          "sourceIds": ["source-08", "source-09"]
+        },
+        {
+          "poiId": "paris-gare-du-nord",
+          "points": 100,
+          "text": "Gare du Nord is the round target: The first Gare du Nord opened in 1846; the present station site remains an active heavy-rail terminal.",
+          "sourceIds": ["source-09"]
+        },
+        {
+          "poiId": "amsterdam-centraal",
+          "points": 63,
+          "text": "Amsterdam Centraal is a themed comparison candidate: Amsterdam Centraal opened in 1889 and remains the city's principal operating passenger railway station.",
+          "sourceIds": ["source-10", "source-09"]
+        },
+        {
+          "poiId": "zurich-hauptbahnhof",
+          "points": 45,
+          "text": "Zürich Hauptbahnhof is a themed comparison candidate: The first station opened in 1847, and the present site remains Switzerland's principal active passenger terminal.",
+          "sourceIds": ["source-11", "source-09"]
+        },
+        {
+          "poiId": "bern-railway-station",
+          "points": 9,
+          "text": "Bern railway station is a themed comparison candidate: Bern's railway station opened in 1858 and continues to serve scheduled passenger trains.",
+          "sourceIds": ["source-12", "source-09"]
+        },
+        {
+          "poiId": "stockholm-central",
+          "points": 29,
+          "text": "Stockholm Central Station is a themed comparison candidate: Stockholm Central opened in 1871 and remains the city's active main-line passenger station.",
+          "sourceIds": ["source-13", "source-09"]
+        },
+        {
+          "poiId": "krakow-glowny",
+          "points": 21,
+          "text": "Kraków Główny is a themed comparison candidate: The station opened in 1847 and remains an operating heavy-rail passenger station.",
+          "sourceIds": ["source-14", "source-09"]
+        },
+        {
+          "poiId": "wroclaw-glowny",
+          "points": 24,
+          "text": "Wrocław Główny is a themed comparison candidate: Passenger railway service began in 1842, and the station remains an active city terminal.",
+          "sourceIds": ["source-15", "source-09"]
+        },
+        {
+          "poiId": "prague-main-station",
+          "points": 35,
+          "text": "Praha hlavní nádraží is a themed comparison candidate: The station site began passenger railway service in 1871 and remains Prague's principal active rail station.",
+          "sourceIds": ["source-16", "source-09"]
+        },
+        {
+          "poiId": "budapest-keleti",
+          "points": 57,
+          "text": "Budapest Keleti is a themed comparison candidate: Keleti station opened in 1884 and remains an active Budapest passenger terminal.",
+          "sourceIds": ["source-17", "source-09"]
+        },
+        {
+          "poiId": "ljubljana-railway-station",
+          "points": 13,
+          "text": "Ljubljana railway station is a themed comparison candidate: The station opened in 1849 and remains the operating principal passenger railway station of Ljubljana.",
+          "sourceIds": ["source-18", "source-09"]
+        },
+        {
+          "poiId": "bucharest-nord",
+          "points": 39,
+          "text": "București Nord is a themed comparison candidate: Bucharest North opened in 1872 and remains the city's active main passenger railway terminal.",
+          "sourceIds": ["source-19", "source-09"]
+        },
+        {
+          "poiId": "sofia-central",
+          "points": 31,
+          "text": "Sofia Central Station is a themed comparison candidate: The station opened in 1888 and remains the principal operating heavy-rail passenger terminal in Sofia.",
+          "sourceIds": ["source-20", "source-09"]
+        }
+      ]
+    },
+    {
+      "id": "round-3",
+      "targetPoiId": "zurich-hauptbahnhof",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Zuerich_Hauptbahnhof-2.jpg/1280px-Zuerich_Hauptbahnhof-2.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Zürich Hauptbahnhof",
+        "attribution": "Ikiwaner · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "clue": {
+        "text": "The country’s first railway terminus grew into a neo-Renaissance hub at the end of a principal shopping street. Its layered complex is unusually crossed by a river in tunnel, with terminal platforms above and through platforms below, alongside the ShopVille arcade.",
+        "sourceIds": ["source-11"]
+      },
+      "results": [
+        {
+          "poiId": "st-pancras-international",
+          "points": 52,
+          "text": "St Pancras International is a themed comparison candidate: Passenger railway service began at the site in 1868, and the station remains an active heavy-rail terminal.",
+          "sourceIds": ["source-01", "source-11"]
+        },
+        {
+          "poiId": "liverpool-lime-street",
+          "points": 13,
+          "text": "Liverpool Lime Street is a themed comparison candidate: The station opened in 1836 and continues to handle scheduled intercity and regional passenger trains.",
+          "sourceIds": ["source-02", "source-11"]
+        },
+        {
+          "poiId": "manchester-victoria",
+          "points": 15,
+          "text": "Manchester Victoria is a themed comparison candidate: Manchester Victoria opened in 1844 and remains an operating heavy-rail passenger station.",
+          "sourceIds": ["source-03", "source-11"]
+        },
+        {
+          "poiId": "glasgow-central",
+          "points": 27,
+          "text": "Glasgow Central is a themed comparison candidate: The present station opened in 1879 and remains a major active passenger railway terminus.",
+          "sourceIds": ["source-04", "source-11"]
+        },
+        {
+          "poiId": "edinburgh-waverley",
+          "points": 33,
+          "text": "Edinburgh Waverley is a themed comparison candidate: The station site entered passenger railway use in 1866 and remains an active central-city station.",
+          "sourceIds": ["source-05", "source-11"]
+        },
+        {
+          "poiId": "york-railway-station",
+          "points": 18,
+          "text": "York railway station is a themed comparison candidate: York station opened in 1850 and continues to serve regular main-line passenger trains.",
+          "sourceIds": ["source-06", "source-11"]
+        },
+        {
+          "poiId": "bristol-temple-meads",
+          "points": 20,
+          "text": "Bristol Temple Meads is a themed comparison candidate: Passenger service began in 1840, and the station remains Bristol's principal heavy-rail passenger terminal.",
+          "sourceIds": ["source-07", "source-11"]
+        },
+        {
+          "poiId": "brighton-railway-station",
+          "points": 11,
+          "text": "Brighton railway station is a themed comparison candidate: Brighton station opened in 1840 and remains an active public passenger railway station.",
+          "sourceIds": ["source-08", "source-11"]
+        },
+        {
+          "poiId": "paris-gare-du-nord",
+          "points": 48,
+          "text": "Gare du Nord is a themed comparison candidate: The first Gare du Nord opened in 1846; the present station site remains an active heavy-rail terminal.",
+          "sourceIds": ["source-09", "source-11"]
+        },
+        {
+          "poiId": "amsterdam-centraal",
+          "points": 41,
+          "text": "Amsterdam Centraal is a themed comparison candidate: Amsterdam Centraal opened in 1889 and remains the city's principal operating passenger railway station.",
+          "sourceIds": ["source-10", "source-11"]
+        },
+        {
+          "poiId": "zurich-hauptbahnhof",
+          "points": 100,
+          "text": "Zürich Hauptbahnhof is the round target: The first station opened in 1847, and the present site remains Switzerland's principal active passenger terminal.",
+          "sourceIds": ["source-11"]
+        },
+        {
+          "poiId": "bern-railway-station",
+          "points": 74,
+          "text": "Bern railway station is a themed comparison candidate: Bern's railway station opened in 1858 and continues to serve scheduled passenger trains.",
+          "sourceIds": ["source-12", "source-11"]
+        },
+        {
+          "poiId": "stockholm-central",
+          "points": 43,
+          "text": "Stockholm Central Station is a themed comparison candidate: Stockholm Central opened in 1871 and remains the city's active main-line passenger station.",
+          "sourceIds": ["source-13", "source-11"]
+        },
+        {
+          "poiId": "krakow-glowny",
+          "points": 16,
+          "text": "Kraków Główny is a themed comparison candidate: The station opened in 1847 and remains an operating heavy-rail passenger station.",
+          "sourceIds": ["source-14", "source-11"]
+        },
+        {
+          "poiId": "wroclaw-glowny",
+          "points": 14,
+          "text": "Wrocław Główny is a themed comparison candidate: Passenger railway service began in 1842, and the station remains an active city terminal.",
+          "sourceIds": ["source-15", "source-11"]
+        },
+        {
+          "poiId": "prague-main-station",
+          "points": 32,
+          "text": "Praha hlavní nádraží is a themed comparison candidate: The station site began passenger railway service in 1871 and remains Prague's principal active rail station.",
+          "sourceIds": ["source-16", "source-11"]
+        },
+        {
+          "poiId": "budapest-keleti",
+          "points": 29,
+          "text": "Budapest Keleti is a themed comparison candidate: Keleti station opened in 1884 and remains an active Budapest passenger terminal.",
+          "sourceIds": ["source-17", "source-11"]
+        },
+        {
+          "poiId": "ljubljana-railway-station",
+          "points": 22,
+          "text": "Ljubljana railway station is a themed comparison candidate: The station opened in 1849 and remains the operating principal passenger railway station of Ljubljana.",
+          "sourceIds": ["source-18", "source-11"]
+        },
+        {
+          "poiId": "bucharest-nord",
+          "points": 17,
+          "text": "București Nord is a themed comparison candidate: Bucharest North opened in 1872 and remains the city's active main passenger railway terminal.",
+          "sourceIds": ["source-19", "source-11"]
+        },
+        {
+          "poiId": "sofia-central",
+          "points": 26,
+          "text": "Sofia Central Station is a themed comparison candidate: The station opened in 1888 and remains the principal operating heavy-rail passenger terminal in Sofia.",
+          "sourceIds": ["source-20", "source-11"]
+        }
+      ]
+    },
+    {
+      "id": "round-4",
+      "targetPoiId": "stockholm-central",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Stockholm_dworzec_2.jpg/1280px-Stockholm_dworzec_2.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Stockholm Central Station",
+        "attribution": "Andrzej Otrębski · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "This central terminus has a heritage-listed building whose former track hall became a long waiting hall in a 1920s redesign. Its royal waiting room and landscape murals complement an underground pedestrian link to T-Centralen; commuter trains later moved to a separate underground station.",
+        "sourceIds": ["source-13"]
+      },
+      "results": [
+        {
+          "poiId": "st-pancras-international",
+          "points": 48,
+          "text": "St Pancras International is a themed comparison candidate: Passenger railway service began at the site in 1868, and the station remains an active heavy-rail terminal.",
+          "sourceIds": ["source-01", "source-13"]
+        },
+        {
+          "poiId": "liverpool-lime-street",
+          "points": 12,
+          "text": "Liverpool Lime Street is a themed comparison candidate: The station opened in 1836 and continues to handle scheduled intercity and regional passenger trains.",
+          "sourceIds": ["source-02", "source-13"]
+        },
+        {
+          "poiId": "manchester-victoria",
+          "points": 18,
+          "text": "Manchester Victoria is a themed comparison candidate: Manchester Victoria opened in 1844 and remains an operating heavy-rail passenger station.",
+          "sourceIds": ["source-03", "source-13"]
+        },
+        {
+          "poiId": "glasgow-central",
+          "points": 25,
+          "text": "Glasgow Central is a themed comparison candidate: The present station opened in 1879 and remains a major active passenger railway terminus.",
+          "sourceIds": ["source-04", "source-13"]
+        },
+        {
+          "poiId": "edinburgh-waverley",
+          "points": 31,
+          "text": "Edinburgh Waverley is a themed comparison candidate: The station site entered passenger railway use in 1866 and remains an active central-city station.",
+          "sourceIds": ["source-05", "source-13"]
+        },
+        {
+          "poiId": "york-railway-station",
+          "points": 16,
+          "text": "York railway station is a themed comparison candidate: York station opened in 1850 and continues to serve regular main-line passenger trains.",
+          "sourceIds": ["source-06", "source-13"]
+        },
+        {
+          "poiId": "bristol-temple-meads",
+          "points": 15,
+          "text": "Bristol Temple Meads is a themed comparison candidate: Passenger service began in 1840, and the station remains Bristol's principal heavy-rail passenger terminal.",
+          "sourceIds": ["source-07", "source-13"]
+        },
+        {
+          "poiId": "brighton-railway-station",
+          "points": 10,
+          "text": "Brighton railway station is a themed comparison candidate: Brighton station opened in 1840 and remains an active public passenger railway station.",
+          "sourceIds": ["source-08", "source-13"]
+        },
+        {
+          "poiId": "paris-gare-du-nord",
+          "points": 44,
+          "text": "Gare du Nord is a themed comparison candidate: The first Gare du Nord opened in 1846; the present station site remains an active heavy-rail terminal.",
+          "sourceIds": ["source-09", "source-13"]
+        },
+        {
+          "poiId": "amsterdam-centraal",
+          "points": 38,
+          "text": "Amsterdam Centraal is a themed comparison candidate: Amsterdam Centraal opened in 1889 and remains the city's principal operating passenger railway station.",
+          "sourceIds": ["source-10", "source-13"]
+        },
+        {
+          "poiId": "zurich-hauptbahnhof",
+          "points": 57,
+          "text": "Zürich Hauptbahnhof is a themed comparison candidate: The first station opened in 1847, and the present site remains Switzerland's principal active passenger terminal.",
+          "sourceIds": ["source-11", "source-13"]
+        },
+        {
+          "poiId": "bern-railway-station",
+          "points": 21,
+          "text": "Bern railway station is a themed comparison candidate: Bern's railway station opened in 1858 and continues to serve scheduled passenger trains.",
+          "sourceIds": ["source-12", "source-13"]
+        },
+        {
+          "poiId": "stockholm-central",
+          "points": 100,
+          "text": "Stockholm Central Station is the round target: Stockholm Central opened in 1871 and remains the city's active main-line passenger station.",
+          "sourceIds": ["source-13"]
+        },
+        {
+          "poiId": "krakow-glowny",
+          "points": 14,
+          "text": "Kraków Główny is a themed comparison candidate: The station opened in 1847 and remains an operating heavy-rail passenger station.",
+          "sourceIds": ["source-14", "source-13"]
+        },
+        {
+          "poiId": "wroclaw-glowny",
+          "points": 19,
+          "text": "Wrocław Główny is a themed comparison candidate: Passenger railway service began in 1842, and the station remains an active city terminal.",
+          "sourceIds": ["source-15", "source-13"]
+        },
+        {
+          "poiId": "prague-main-station",
+          "points": 29,
+          "text": "Praha hlavní nádraží is a themed comparison candidate: The station site began passenger railway service in 1871 and remains Prague's principal active rail station.",
+          "sourceIds": ["source-16", "source-13"]
+        },
+        {
+          "poiId": "budapest-keleti",
+          "points": 26,
+          "text": "Budapest Keleti is a themed comparison candidate: Keleti station opened in 1884 and remains an active Budapest passenger terminal.",
+          "sourceIds": ["source-17", "source-13"]
+        },
+        {
+          "poiId": "ljubljana-railway-station",
+          "points": 9,
+          "text": "Ljubljana railway station is a themed comparison candidate: The station opened in 1849 and remains the operating principal passenger railway station of Ljubljana.",
+          "sourceIds": ["source-18", "source-13"]
+        },
+        {
+          "poiId": "bucharest-nord",
+          "points": 13,
+          "text": "București Nord is a themed comparison candidate: Bucharest North opened in 1872 and remains the city's active main passenger railway terminal.",
+          "sourceIds": ["source-19", "source-13"]
+        },
+        {
+          "poiId": "sofia-central",
+          "points": 34,
+          "text": "Sofia Central Station is a themed comparison candidate: The station opened in 1888 and remains the principal operating heavy-rail passenger terminal in Sofia.",
+          "sourceIds": ["source-20", "source-13"]
+        }
+      ]
+    },
+    {
+      "id": "round-5",
+      "targetPoiId": "sofia-central",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Central_Railway_Station_Sofia_2012_PD_36.jpg/1280px-Central_Railway_Station_Sofia_2012_PD_36.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Sofia Central Station",
+        "attribution": "Bin im Garten · CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "clue": {
+        "text": "A national railway’s first fully domestically engineered line was served by the original terminus, later replaced on the same site by a large modern terminal making extensive use of white marble. The complex stands beside a central bus station, was substantially renovated in 2016, and its old façade faced a mountain.",
+        "sourceIds": ["source-20"]
+      },
+      "results": [
+        {
+          "poiId": "st-pancras-international",
+          "points": 29,
+          "text": "St Pancras International is a themed comparison candidate: Passenger railway service began at the site in 1868, and the station remains an active heavy-rail terminal.",
+          "sourceIds": ["source-01", "source-20"]
+        },
+        {
+          "poiId": "liverpool-lime-street",
+          "points": 10,
+          "text": "Liverpool Lime Street is a themed comparison candidate: The station opened in 1836 and continues to handle scheduled intercity and regional passenger trains.",
+          "sourceIds": ["source-02", "source-20"]
+        },
+        {
+          "poiId": "manchester-victoria",
+          "points": 12,
+          "text": "Manchester Victoria is a themed comparison candidate: Manchester Victoria opened in 1844 and remains an operating heavy-rail passenger station.",
+          "sourceIds": ["source-03", "source-20"]
+        },
+        {
+          "poiId": "glasgow-central",
+          "points": 18,
+          "text": "Glasgow Central is a themed comparison candidate: The present station opened in 1879 and remains a major active passenger railway terminus.",
+          "sourceIds": ["source-04", "source-20"]
+        },
+        {
+          "poiId": "edinburgh-waverley",
+          "points": 20,
+          "text": "Edinburgh Waverley is a themed comparison candidate: The station site entered passenger railway use in 1866 and remains an active central-city station.",
+          "sourceIds": ["source-05", "source-20"]
+        },
+        {
+          "poiId": "york-railway-station",
+          "points": 8,
+          "text": "York railway station is a themed comparison candidate: York station opened in 1850 and continues to serve regular main-line passenger trains.",
+          "sourceIds": ["source-06", "source-20"]
+        },
+        {
+          "poiId": "bristol-temple-meads",
+          "points": 14,
+          "text": "Bristol Temple Meads is a themed comparison candidate: Passenger service began in 1840, and the station remains Bristol's principal heavy-rail passenger terminal.",
+          "sourceIds": ["source-07", "source-20"]
+        },
+        {
+          "poiId": "brighton-railway-station",
+          "points": 7,
+          "text": "Brighton railway station is a themed comparison candidate: Brighton station opened in 1840 and remains an active public passenger railway station.",
+          "sourceIds": ["source-08", "source-20"]
+        },
+        {
+          "poiId": "paris-gare-du-nord",
+          "points": 36,
+          "text": "Gare du Nord is a themed comparison candidate: The first Gare du Nord opened in 1846; the present station site remains an active heavy-rail terminal.",
+          "sourceIds": ["source-09", "source-20"]
+        },
+        {
+          "poiId": "amsterdam-centraal",
+          "points": 22,
+          "text": "Amsterdam Centraal is a themed comparison candidate: Amsterdam Centraal opened in 1889 and remains the city's principal operating passenger railway station.",
+          "sourceIds": ["source-10", "source-20"]
+        },
+        {
+          "poiId": "zurich-hauptbahnhof",
+          "points": 31,
+          "text": "Zürich Hauptbahnhof is a themed comparison candidate: The first station opened in 1847, and the present site remains Switzerland's principal active passenger terminal.",
+          "sourceIds": ["source-11", "source-20"]
+        },
+        {
+          "poiId": "bern-railway-station",
+          "points": 17,
+          "text": "Bern railway station is a themed comparison candidate: Bern's railway station opened in 1858 and continues to serve scheduled passenger trains.",
+          "sourceIds": ["source-12", "source-20"]
+        },
+        {
+          "poiId": "stockholm-central",
+          "points": 27,
+          "text": "Stockholm Central Station is a themed comparison candidate: Stockholm Central opened in 1871 and remains the city's active main-line passenger station.",
+          "sourceIds": ["source-13", "source-20"]
+        },
+        {
+          "poiId": "krakow-glowny",
+          "points": 34,
+          "text": "Kraków Główny is a themed comparison candidate: The station opened in 1847 and remains an operating heavy-rail passenger station.",
+          "sourceIds": ["source-14", "source-20"]
+        },
+        {
+          "poiId": "wroclaw-glowny",
+          "points": 42,
+          "text": "Wrocław Główny is a themed comparison candidate: Passenger railway service began in 1842, and the station remains an active city terminal.",
+          "sourceIds": ["source-15", "source-20"]
+        },
+        {
+          "poiId": "prague-main-station",
+          "points": 39,
+          "text": "Praha hlavní nádraží is a themed comparison candidate: The station site began passenger railway service in 1871 and remains Prague's principal active rail station.",
+          "sourceIds": ["source-16", "source-20"]
+        },
+        {
+          "poiId": "budapest-keleti",
+          "points": 45,
+          "text": "Budapest Keleti is a themed comparison candidate: Keleti station opened in 1884 and remains an active Budapest passenger terminal.",
+          "sourceIds": ["source-17", "source-20"]
+        },
+        {
+          "poiId": "ljubljana-railway-station",
+          "points": 24,
+          "text": "Ljubljana railway station is a themed comparison candidate: The station opened in 1849 and remains the operating principal passenger railway station of Ljubljana.",
+          "sourceIds": ["source-18", "source-20"]
+        },
+        {
+          "poiId": "bucharest-nord",
+          "points": 68,
+          "text": "București Nord is a themed comparison candidate: Bucharest North opened in 1872 and remains the city's active main passenger railway terminal.",
+          "sourceIds": ["source-19", "source-20"]
+        },
+        {
+          "poiId": "sofia-central",
+          "points": 100,
+          "text": "Sofia Central Station is the round target: The station opened in 1888 and remains the principal operating heavy-rail passenger terminal in Sofia.",
+          "sourceIds": ["source-20"]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-01",
+      "title": "St Pancras railway station",
+      "url": "https://en.wikipedia.org/wiki/St_Pancras_railway_station",
+      "retrievedAt": "2026-08-19T04:30:53.881Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-02",
+      "title": "Liverpool Lime Street railway station",
+      "url": "https://en.wikipedia.org/wiki/Liverpool_Lime_Street_railway_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-03",
+      "title": "Manchester Victoria station",
+      "url": "https://en.wikipedia.org/wiki/Manchester_Victoria_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-04",
+      "title": "Glasgow Central station",
+      "url": "https://en.wikipedia.org/wiki/Glasgow_Central_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-05",
+      "title": "Edinburgh Waverley railway station",
+      "url": "https://en.wikipedia.org/wiki/Edinburgh_Waverley_railway_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-06",
+      "title": "York railway station",
+      "url": "https://en.wikipedia.org/wiki/York_railway_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-07",
+      "title": "Bristol Temple Meads railway station",
+      "url": "https://en.wikipedia.org/wiki/Bristol_Temple_Meads_railway_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-08",
+      "title": "Brighton railway station",
+      "url": "https://en.wikipedia.org/wiki/Brighton_railway_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-09",
+      "title": "Gare du Nord",
+      "url": "https://en.wikipedia.org/wiki/Gare_du_Nord",
+      "retrievedAt": "2026-08-19T04:30:53.903Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-10",
+      "title": "Amsterdam Centraal railway station",
+      "url": "https://en.wikipedia.org/wiki/Amsterdam_Centraal_railway_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-11",
+      "title": "Zürich Hauptbahnhof",
+      "url": "https://en.wikipedia.org/wiki/Z%C3%BCrich_Hauptbahnhof",
+      "retrievedAt": "2026-08-19T04:30:54.135Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-12",
+      "title": "Bern railway station",
+      "url": "https://en.wikipedia.org/wiki/Bern_railway_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-13",
+      "title": "Stockholm Central Station",
+      "url": "https://en.wikipedia.org/wiki/Stockholm_Central_Station",
+      "retrievedAt": "2026-08-19T04:30:53.915Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-14",
+      "title": "Kraków Główny railway station",
+      "url": "https://en.wikipedia.org/wiki/Krak%C3%B3w_G%C5%82%C3%B3wny_railway_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-15",
+      "title": "Wrocław Główny railway station",
+      "url": "https://en.wikipedia.org/wiki/Wroc%C5%82aw_G%C5%82%C3%B3wny_railway_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-16",
+      "title": "Praha hlavní nádraží",
+      "url": "https://en.wikipedia.org/wiki/Praha_hlavn%C3%AD_n%C3%A1dra%C5%BE%C3%AD",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-17",
+      "title": "Keleti railway station",
+      "url": "https://en.wikipedia.org/wiki/Keleti_railway_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-18",
+      "title": "Ljubljana railway station",
+      "url": "https://en.wikipedia.org/wiki/Ljubljana_railway_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-19",
+      "title": "Bucharest North railway station",
+      "url": "https://en.wikipedia.org/wiki/Bucharest_North_railway_station",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-20",
+      "title": "Sofia Central Station",
+      "url": "https://en.wikipedia.org/wiki/Sofia_Central_Station",
+      "retrievedAt": "2026-08-19T04:30:53.899Z",
+      "provenance": "verified"
+    }
+  ],
+  "theme": {
+    "title": "Operating Pre-1900 Railway Stations in Cities",
+    "introduction": "Steel, glass, and old platforms gather the world’s city stories. Find stations where yesterday’s railways still welcome today’s travelers.",
+    "inclusionCriteria": "Include a location only when every condition is met: (1) it is an individually named heavy-rail passenger station or terminal; (2) the station or its immediately identifiable predecessor began railway passenger service at the same site on or before 31 December 1899; (3) regularly scheduled public passenger trains currently serve that station on the date of play; (4) the station occupies a fixed, mappable site with a recognizable public entrance or concourse; (5) it lies within the current administrative boundary of a present-day city or incorporated urban municipality; and (6) the exact station, rather than an entire rail district or line, can be used as the game location. Plausible locations include St Pancras International, King’s Cross, London Paddington, London Waterloo, Liverpool Lime Street, Manchester Victoria, Glasgow Central, Edinburgh Waverley, York railway station, Bristol Temple Meads, Brighton railway station, Gare du Nord, Gare de l’Est, Gare Saint-Lazare, Gare d’Austerlitz, Amsterdam Centraal, Zürich Hauptbahnhof, Bern railway station, Stockholm Central Station, Kraków Główny, Wrocław Główny, Prague Main Railway Station, Budapest Keleti, Budapest Nyugati, Ljubljana railway station, Bratislava hlavná stanica, București Nord, Sofia Central Station, Roma Termini, Wien Praterstern, Trieste Centrale, Leningradsky railway station, Sirkeci railway station, Ramses Station, Alexandria Misr railway station, Chhatrapati Shivaji Maharaj Terminus, Sealdah railway station, Chennai Central, Rio de Janeiro Central do Brasil, Buenos Aires Constitución, and Buenos Aires Once."
+  }
+}

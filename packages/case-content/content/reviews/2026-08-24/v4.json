@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "publicationDate": "2026-08-24",
+  "revision": 4,
+  "themeVerdicts": [
+    {
+      "poiId": "obs-025",
+      "status": "pass",
+      "explanation": "Dubai Frame is a purpose-built landmark observatory in Zabeel Park with a public elevated Sky Deck and viewing bridge, a fixed visitor facility within Dubai.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-001",
+      "status": "pass",
+      "explanation": "The Empire State Building is a landmark skyscraper with individually named public observatories on the 86th and 102nd floors, a fixed visitor entrance, and regularly operating public admission in New York City.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-039",
+      "status": "pass",
+      "explanation": "Sky100 is a named indoor 360-degree public observation deck on the 100th floor of the International Commerce Centre in Hong Kong, reached through dedicated high-speed lifts.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-009",
+      "status": "pass",
+      "explanation": "The Space Needle is a purpose-built landmark observation tower in Seattle with publicly accessible elevated viewing levels and a fixed visitor facility.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-018",
+      "status": "pass",
+      "explanation": "Shanghai Tower has dedicated public sightseeing decks on floors 118 and 119, with regular public access in Shanghai and a fixed observation-deck facility.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-006",
+      "status": "pass",
+      "explanation": "Skydeck Chicago is a named public observation deck on the 103rd floor of Willis Tower, a high-rise in Chicago, with fixed visitor access.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-021",
+      "status": "pass",
+      "explanation": "Macau Tower provides named, ticketed public observation levels and an outdoor viewing platform in the landmark tower within Macau.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-015",
+      "status": "pass",
+      "explanation": "Shibuya Sky is a named public rooftop observation facility atop the Shibuya Scramble Square high-rise, with an exact visitor location in Tokyo.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-019",
+      "status": "pass",
+      "explanation": "Canton Tower is a purpose-built landmark observation and communications tower with multiple public indoor and outdoor viewing decks in Guangzhou.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-017",
+      "status": "pass",
+      "explanation": "Harukas 300 is a named public observation facility spanning floors 58–60 of Abeno Harukas in Osaka.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-010",
+      "status": "pass",
+      "explanation": "Vancouver Lookout is a dedicated public observation deck atop Harbour Centre, a high-rise in Vancouver, reached through a fixed visitor facility.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-020",
+      "status": "pass",
+      "explanation": "Taipei 101 has dedicated public indoor and outdoor observation decks on elevated floors of the landmark skyscraper in Taipei.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-008",
+      "status": "pass",
+      "explanation": "The CN Tower is a purpose-built landmark tower with named public viewing levels including the LookOut Level and SkyPod, located within Toronto.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-022",
+      "status": "pass",
+      "explanation": "Kuala Lumpur Tower contains dedicated public observation facilities, including an enclosed deck and Sky Deck, in a freestanding landmark tower within Kuala Lumpur.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-013",
+      "status": "pass",
+      "explanation": "Tokyo Skytree's Tembo Deck and Tembo Galleria are named public observation levels in a landmark tower in Tokyo, with fixed public admission facilities.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "obs-040",
+      "status": "pass",
+      "explanation": "Seoul Sky is a named public observation facility on floors 117–123 of Lotte World Tower, a landmark high-rise in Seoul.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "rotterdam-euromast",
+      "status": "pass",
+      "explanation": "This landmark observation tower admits the public to panoramic viewing levels above Rotterdam. The verified source and mapped coordinates support its inclusion in this board.",
+      "sourceIds": ["source-26"]
+    },
+    {
+      "poiId": "london-view-from-the-shard",
+      "status": "pass",
+      "explanation": "This ticketed public observatory occupies the upper floors of the landmark Shard high-rise in London. The verified source and mapped coordinates support its inclusion in this board.",
+      "sourceIds": ["source-27"]
+    },
+    {
+      "poiId": "berlin-tv-tower",
+      "status": "pass",
+      "explanation": "This landmark television tower offers scheduled public admission to its panoramic observation level above Berlin. The verified source and mapped coordinates support its inclusion in this board.",
+      "sourceIds": ["source-28"]
+    },
+    {
+      "poiId": "melbourne-eureka-skydeck",
+      "status": "pass",
+      "explanation": "This public observation deck occupies the upper levels of the landmark Eureka Tower in Melbourne. The verified source and mapped coordinates support its inclusion in this board.",
+      "sourceIds": ["source-29"]
+    }
+  ],
+  "clueVerdicts": [
+    {
+      "roundId": "round-1",
+      "declaredTargetPoiId": "obs-009",
+      "resolvedPoiId": "obs-009",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The Space Age world’s fair origin, slender futuristic tower, saucer-like deck, and former fairground setting identify the Space Needle without exact heights or travel times.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-2",
+      "declaredTargetPoiId": "obs-018",
+      "resolvedPoiId": "obs-018",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The twisting vertical-city design, national height record, fast elevators, and exceptionally high indoor deck identify the Shanghai Tower observation deck without requiring exact figures.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-3",
+      "declaredTargetPoiId": "obs-025",
+      "resolvedPoiId": "obs-025",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The giant picture-frame design and bridge framing contrasting views of old and new districts identify the Dubai Frame observation deck without measurements.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-4",
+      "declaredTargetPoiId": "obs-039",
+      "resolvedPoiId": "obs-039",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The early-2010s opening, international commerce tower, indoor full-circle view, and express-lift access identify Sky100 without relying on a floor number or travel time.",
+      "resolvableWithoutExactNumbers": true
+    },
+    {
+      "roundId": "round-5",
+      "declaredTargetPoiId": "obs-001",
+      "resolvedPoiId": "obs-001",
+      "resolvedOffBoardAnswer": null,
+      "status": "pass",
+      "explanation": "The Great Depression construction story, Art Deco design, former world-height record, open-air deck, and broadcast mast identify the Empire State Building Observatory without exact dimensions.",
+      "resolvableWithoutExactNumbers": true
+    }
+  ],
+  "repairs": [
+    {
+      "stage": "candidate-spacing",
+      "summary": "Replaced clustered distractors and rescored all relationships to enforce the 10 km minimum."
+    },
+    {
+      "stage": "clue-accessibility",
+      "summary": "Rewrote clue prose around recognizable historical narratives and removed reliance on obscure names, exact figures, and technical specifications."
+    }
+  ]
+}
