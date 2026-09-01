@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "publicationDate": "2026-09-01",
+  "revision": 1,
+  "themeVerdicts": [
+    {
+      "poiId": "historic-city-hall-001",
+      "status": "pass",
+      "explanation": "New York City Hall is an individually named municipal hall, opened in 1812, and remains a fixed, mappable building housing the mayor's office, City Council chambers, and other original governmental functions within New York City.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-city-hall-002",
+      "status": "pass",
+      "explanation": "Charleston City Hall is an individually named city hall completed in 1804. The supplied evidence states that it remains the official municipal building and houses Charleston's government, with a fixed civic location inside the city.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-city-hall-003",
+      "status": "pass",
+      "explanation": "New Orleans City Hall is a named municipal-government building completed in 1853. It remains the seat of New Orleans municipal government and is a fixed, individually identifiable building within the city.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-city-hall-004",
+      "status": "pass",
+      "explanation": "Baltimore City Hall is an individually named city hall completed in 1875 and still houses the mayor's office and city administration at a fixed civic site within Baltimore.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-city-hall-005",
+      "status": "pass",
+      "explanation": "Cincinnati City Hall is a named municipal hall completed in 1893 and continues to house city offices and council functions at its identifiable site within Cincinnati.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-city-hall-006",
+      "status": "pass",
+      "explanation": "St. Louis City Hall is an individually named city hall completed in 1893 and remains an active municipal building containing the mayor, city council, and administrative functions within the independent city of St. Louis.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-city-hall-007",
+      "status": "pass",
+      "explanation": "Providence City Hall is a named city hall completed in 1878 and remains occupied by the mayor, city departments, and other core municipal functions at a fixed site in Providence.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-city-hall-008",
+      "status": "pass",
+      "explanation": "Milwaukee City Hall is an individually named municipal hall completed in 1895 and remains the principal building for the mayor, city offices, and council facilities within Milwaukee.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-city-hall-009",
+      "status": "pass",
+      "explanation": "Montreal City Hall is a named city hall completed in 1878 and remains the seat of municipal government, including the mayor's office and important civic functions, at a fixed site in Montreal.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-city-hall-010",
+      "status": "pass",
+      "explanation": "Quebec City Hall is an individually named city hall opened in 1896 and continues to serve as the seat of the mayor and municipal government at an identifiable site within Quebec City.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-city-hall-011",
+      "status": "pass",
+      "explanation": "Guildhall is a clearly equivalent, individually named municipal hall for the City of London. Its current building and recognized predecessor occupy the same site from well before 1900, and it remains the ceremonial and administrative centre and headquarters of the City of London Corporation, with an identifiable public entrance and civic complex.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-city-hall-012",
+      "status": "pass",
+      "explanation": "Birmingham Council House is a clearly equivalent named municipal hall completed in 1879. It remains a working seat of Birmingham City Council with council chambers and municipal offices at a fixed site within Birmingham.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-city-hall-013",
+      "status": "pass",
+      "explanation": "Sheffield Town Hall is an individually named municipal hall completed in 1897 and continues to support Sheffield City Council meetings, administration, and official civic functions at its identifiable city site.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-city-hall-014",
+      "status": "pass",
+      "explanation": "Edinburgh City Chambers is a clearly equivalent named municipal hall with eighteenth-century origins and historic fabric. It remains the headquarters of the City of Edinburgh Council and an active municipal complex within Edinburgh.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-city-hall-015",
+      "status": "pass",
+      "explanation": "Glasgow City Chambers is an individually named equivalent municipal hall opened in 1888. It remains the headquarters and principal civic complex of Glasgow City Council, with continuing council and administrative use.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-city-hall-017",
+      "status": "pass",
+      "explanation": "The Hôtel de Ville de Paris is an individually named city hall on a site continuously used for Paris municipal administration since 1357. Although reconstructed after the 1871 fire, the recognized civic site and predecessor continuity satisfy the pre-1900 condition; it remains the seat of the mayor and local government.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-city-hall-018",
+      "status": "pass",
+      "explanation": "Brussels Town Hall is an individually named historic municipal hall built in the fifteenth century and remains the official town hall of the City of Brussels, with a fixed recognizable building on the Grand Place.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-city-hall-019",
+      "status": "pass",
+      "explanation": "Antwerp City Hall is an individually named municipal hall erected between 1561 and 1565. Despite later restoration and interior alterations, it remains the city's municipal hall at a fixed, identifiable site on the Grote Markt.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-city-hall-020",
+      "status": "pass",
+      "explanation": "Ghent City Hall is an individually named historic municipal complex incorporating fifteenth- and sixteenth-century buildings. It remains the working seat of Ghent's municipal government at a recognizable civic site within the city.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-city-hall-021",
+      "status": "pass",
+      "explanation": "Luxembourg City Hall is an individually named city hall completed in 1838 and first used for city council business that year. It remains the centre of Luxembourg City's local government, including the mayor's office, at a fixed entrance on Place Guillaume II.",
+      "sourceIds": ["source-01"]
+    }
+  ],
+  "clueVerdicts": [
+    {
+      "roundId": "round-1",
+      "declaredTargetPoiId": "historic-city-hall-001",
+      "resolvedPoiId": "historic-city-hall-001",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The Lincoln lying-in-state episode, grand rotunda, original municipal role, and distinctive public-park setting identify New York City Hall over the board. The clue does not state the target's name, city, country, or an unmistakable branded identifier, and remains identifiable without exact dates or counts."
+    },
+    {
+      "roundId": "round-2",
+      "declaredTargetPoiId": "historic-city-hall-011",
+      "resolvedPoiId": "historic-city-hall-011",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The Roman amphitheatre remains, medieval great hall, Great Fire, wartime destruction, and continuing City of London Corporation functions form a distinctive historical narrative for Guildhall. These qualitative clues are sufficient without exact dates or measurements and do not directly name the target."
+    },
+    {
+      "roundId": "round-3",
+      "declaredTargetPoiId": "historic-city-hall-017",
+      "resolvedPoiId": "historic-city-hall-017",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The Paris Commune headquarters, burning of the archives, reconstruction in a larger Renaissance form, and liberation speech from the building's balcony uniquely identify the Paris Hôtel de Ville among the board. The target is not named, and exact years are unnecessary."
+    },
+    {
+      "roundId": "round-4",
+      "declaredTargetPoiId": "historic-city-hall-019",
+      "resolvedPoiId": "historic-city-hall-019",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The wealthy northern trading port, Flemish-Italian Renaissance design, Spanish Fury assault, restoration, and location on the principal market square distinguish Antwerp City Hall from the other candidates. The identification remains possible without exact dates or figures and the clue avoids naming the city."
+    },
+    {
+      "roundId": "round-5",
+      "declaredTargetPoiId": "historic-city-hall-021",
+      "resolvedPoiId": "historic-city-hall-021",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The constitutional assembly, first European Coal and Steel Community meeting, capital-square setting, mayoral office, and diplomatic use uniquely resolve to Luxembourg City Hall. The clue contains no target name or direct city identifier and does not depend on exact numbers."
+    }
+  ],
+  "repairs": []
+}
