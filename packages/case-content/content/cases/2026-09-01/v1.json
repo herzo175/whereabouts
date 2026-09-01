@@ -1,0 +1,1147 @@
+{
+  "schemaVersion": 4,
+  "publicationDate": "2026-09-01",
+  "revision": 1,
+  "caseNumber": 20697,
+  "pois": [
+    {
+      "id": "historic-city-hall-008",
+      "name": "Milwaukee City Hall",
+      "city": "Milwaukee",
+      "country": "United States",
+      "latitude": 43.038902,
+      "longitude": -87.906473,
+      "wikipediaTitle": "Milwaukee City Hall",
+      "blurb": "Milwaukee City Hall is the seat of the municipal government of Milwaukee, Wisconsin. The Flemish Renaissance Revival building was completed in 1895 and still contains city offices and council facilities.",
+      "themeConnection": {
+        "text": "Milwaukee City Hall was completed in 1895 and remains the principal building for the city's mayor and municipal government.",
+        "sourceIds": ["source-08"]
+      }
+    },
+    {
+      "id": "historic-city-hall-020",
+      "name": "Ghent City Hall",
+      "city": "Ghent",
+      "country": "Belgium",
+      "latitude": 51.053833,
+      "longitude": 3.725012,
+      "wikipediaTitle": "Ghent City Hall",
+      "blurb": "Ghent City Hall is the historic municipal hall of Ghent, Belgium. Its surviving complex includes fifteenth- and sixteenth-century buildings and continues to house official city administration and civic functions.",
+      "themeConnection": {
+        "text": "Ghent City Hall incorporates medieval and Renaissance sections and remains the working seat of Ghent's municipal government.",
+        "sourceIds": ["source-19"]
+      }
+    },
+    {
+      "id": "historic-city-hall-007",
+      "name": "Providence City Hall",
+      "city": "Providence",
+      "country": "United States",
+      "latitude": 41.824074,
+      "longitude": -71.412019,
+      "wikipediaTitle": "Providence City Hall",
+      "blurb": "Providence City Hall is a historic city hall in Providence, Rhode Island. Completed in 1878, the building remains occupied by the mayor, city departments, and other core municipal functions.",
+      "themeConnection": {
+        "text": "Providence City Hall was completed in 1878 and continues to serve as the city's municipal headquarters.",
+        "sourceIds": ["source-07"]
+      }
+    },
+    {
+      "id": "historic-city-hall-017",
+      "name": "Hôtel de Ville de Paris",
+      "city": "Paris",
+      "country": "France",
+      "latitude": 48.856614,
+      "longitude": 2.352222,
+      "wikipediaTitle": "Hôtel de Ville, Paris",
+      "blurb": "The Hôtel de Ville (French: [otɛl də vil] ; French for 'City Hall') is the city hall of Paris, France, standing on the Place de l'Hôtel-de-Ville – Esplanade de la Libération in the 4th arrondissement.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/H%C3%B4tel_ville_fa%C3%A7ade_principale_Paris_11.jpg/1280px-H%C3%B4tel_ville_fa%C3%A7ade_principale_Paris_11.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Hôtel de Ville, Paris",
+        "attribution": "Chabe01 · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "Paris's Hôtel de Ville was rebuilt and completed in 1882 and remains the seat of the Mayor of Paris and city administration.",
+        "sourceIds": ["source-16"]
+      }
+    },
+    {
+      "id": "historic-city-hall-002",
+      "name": "Charleston City Hall",
+      "city": "Charleston",
+      "country": "United States",
+      "latitude": 32.776474,
+      "longitude": -79.931051,
+      "wikipediaTitle": "Charleston City Hall (South Carolina)",
+      "blurb": "Charleston City Hall is a historic municipal building in Charleston, South Carolina. Completed in 1804, it remains the official city hall and accommodates the offices and chambers of the city government.",
+      "themeConnection": {
+        "text": "Charleston City Hall was completed in 1804 and continues to house the municipal government of Charleston.",
+        "sourceIds": ["source-02"]
+      }
+    },
+    {
+      "id": "historic-city-hall-018",
+      "name": "Brussels Town Hall",
+      "city": "Brussels",
+      "country": "Belgium",
+      "latitude": 50.846733,
+      "longitude": 4.352492,
+      "wikipediaTitle": "Brussels Town Hall",
+      "blurb": "Brussels Town Hall is a Gothic building on the Grand Place and remains the town hall of the City of Brussels. It continues to provide the municipality's principal ceremonial and official civic functions.",
+      "themeConnection": {
+        "text": "Brussels Town Hall was built in the fifteenth century and remains the official municipal hall of the City of Brussels.",
+        "sourceIds": ["source-17"]
+      }
+    },
+    {
+      "id": "historic-city-hall-015",
+      "name": "Glasgow City Chambers",
+      "city": "Glasgow",
+      "country": "United Kingdom",
+      "latitude": 55.860916,
+      "longitude": -4.248879,
+      "wikipediaTitle": "Glasgow City Chambers",
+      "blurb": "Glasgow City Chambers is the headquarters of Glasgow City Council. Opened in 1888, the building remains the city's principal civic complex, with council chambers, offices, and continuing municipal use.",
+      "themeConnection": {
+        "text": "Glasgow City Chambers opened in 1888 and continue to house the city's elected council and municipal administration.",
+        "sourceIds": ["source-15"]
+      }
+    },
+    {
+      "id": "historic-city-hall-013",
+      "name": "Sheffield Town Hall",
+      "city": "Sheffield",
+      "country": "United Kingdom",
+      "latitude": 53.379889,
+      "longitude": -1.487222,
+      "wikipediaTitle": "Sheffield Town Hall",
+      "blurb": "Sheffield Town Hall is a municipal building in Sheffield, England. Completed in 1897, it continues to be used by Sheffield City Council for council meetings, civic administration, and official functions.",
+      "themeConnection": {
+        "text": "Sheffield Town Hall was completed in 1897 and continues to house Sheffield City Council's civic functions.",
+        "sourceIds": ["source-13"]
+      }
+    },
+    {
+      "id": "historic-city-hall-004",
+      "name": "Baltimore City Hall",
+      "city": "Baltimore",
+      "country": "United States",
+      "latitude": 39.290384,
+      "longitude": -76.612189,
+      "wikipediaTitle": "Baltimore City Hall",
+      "blurb": "Baltimore City Hall is the official seat of government for the City of Baltimore. Its Second Empire building was completed in 1875 and still houses the mayor's office and city administration.",
+      "themeConnection": {
+        "text": "Baltimore City Hall, completed in 1875, continues to contain the offices of the mayor and Baltimore municipal government.",
+        "sourceIds": ["source-04"]
+      }
+    },
+    {
+      "id": "historic-city-hall-010",
+      "name": "Quebec City Hall",
+      "city": "Quebec City",
+      "country": "Canada",
+      "latitude": 46.813878,
+      "longitude": -71.207981,
+      "wikipediaTitle": "Quebec City Hall",
+      "blurb": "Quebec City Hall is the city hall of Quebec City, Quebec. The historic building opened in 1896 and continues to serve as the seat of the mayor and the municipal government.",
+      "themeConnection": {
+        "text": "Quebec City Hall opened in 1896 and remains the official building of Quebec City's municipal administration.",
+        "sourceIds": ["source-10"]
+      }
+    },
+    {
+      "id": "historic-city-hall-005",
+      "name": "Cincinnati City Hall",
+      "city": "Cincinnati",
+      "country": "United States",
+      "latitude": 39.103118,
+      "longitude": -84.513356,
+      "wikipediaTitle": "Cincinnati City Hall",
+      "blurb": "Cincinnati City Hall is the seat of the municipal government of Cincinnati, Ohio. The Richardsonian Romanesque building was completed in 1893 and continues to house city offices and council functions.",
+      "themeConnection": {
+        "text": "Cincinnati City Hall was completed in 1893 and remains the working seat of Cincinnati's city government.",
+        "sourceIds": ["source-05"]
+      }
+    },
+    {
+      "id": "historic-city-hall-021",
+      "name": "Luxembourg City Hall",
+      "city": "Luxembourg City",
+      "country": "Luxembourg",
+      "latitude": 49.611622,
+      "longitude": 6.132922,
+      "wikipediaTitle": "Luxembourg City Hall",
+      "blurb": "Luxembourg City Hall (French: Hôtel de ville de Luxembourg [otɛl də vil də lyksɑ̃buʁ]; Luxembourgish: Stadhaus Stad Lëtzebuerg) is the city hall of Luxembourg City, in southern Luxembourg.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Luxembourg_City_Hall_%2854540726309%29.jpg/1280px-Luxembourg_City_Hall_%2854540726309%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Luxembourg City Hall",
+        "attribution": "Pierre Blaché from Paris, France · CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      },
+      "themeConnection": {
+        "text": "Luxembourg City Hall dates from the nineteenth century and remains the seat of the municipal government of Luxembourg City.",
+        "sourceIds": ["source-20"]
+      }
+    },
+    {
+      "id": "historic-city-hall-003",
+      "name": "New Orleans City Hall",
+      "city": "New Orleans",
+      "country": "United States",
+      "latitude": 29.951065,
+      "longitude": -90.071533,
+      "wikipediaTitle": "New Orleans City Hall",
+      "blurb": "New Orleans City Hall is the seat of the municipal government of New Orleans, Louisiana. The building was completed in 1853 and continues to provide official city offices and civic rooms.",
+      "themeConnection": {
+        "text": "The present New Orleans City Hall was completed in 1853 and remains the official municipal-government building.",
+        "sourceIds": ["source-03"]
+      }
+    },
+    {
+      "id": "historic-city-hall-006",
+      "name": "St. Louis City Hall",
+      "city": "St. Louis",
+      "country": "United States",
+      "latitude": 38.627205,
+      "longitude": -90.199404,
+      "wikipediaTitle": "St. Louis City Hall",
+      "blurb": "St. Louis City Hall is the seat of government for the independent city of St. Louis, Missouri. Completed in 1893, it remains an active municipal building with city offices and council chambers.",
+      "themeConnection": {
+        "text": "St. Louis City Hall was completed in 1893 and still houses the mayor, city council, and municipal administration.",
+        "sourceIds": ["source-06"]
+      }
+    },
+    {
+      "id": "historic-city-hall-009",
+      "name": "Montreal City Hall",
+      "city": "Montreal",
+      "country": "Canada",
+      "latitude": 45.508794,
+      "longitude": -73.554024,
+      "wikipediaTitle": "Montreal City Hall",
+      "blurb": "Montreal City Hall is a historic building in Old Montreal and the seat of the municipal government. Completed in 1878, it continues to accommodate the mayor and important city-government functions.",
+      "themeConnection": {
+        "text": "Montreal City Hall was completed in 1878 and continues to house the mayor's office and municipal civic functions.",
+        "sourceIds": ["source-09"]
+      }
+    },
+    {
+      "id": "historic-city-hall-014",
+      "name": "Edinburgh City Chambers",
+      "city": "Edinburgh",
+      "country": "United Kingdom",
+      "latitude": 55.950794,
+      "longitude": -3.188458,
+      "wikipediaTitle": "City Chambers, Edinburgh",
+      "blurb": "The City Chambers in Edinburgh are the headquarters of the City of Edinburgh Council. The complex includes historic eighteenth-century fabric and remains an active municipal building with council and administrative functions.",
+      "themeConnection": {
+        "text": "Edinburgh City Chambers originated in the eighteenth century and remain the headquarters of the City of Edinburgh Council.",
+        "sourceIds": ["source-14"]
+      }
+    },
+    {
+      "id": "historic-city-hall-019",
+      "name": "Antwerp City Hall",
+      "city": "Antwerp",
+      "country": "Belgium",
+      "latitude": 51.221392,
+      "longitude": 4.399722,
+      "wikipediaTitle": "Antwerp City Hall",
+      "blurb": "The City Hall (Dutch: ) of Antwerp, Belgium, stands on the western side of that city's Grote Markt (main square).",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Antwerpen_Stadhuis_crop1_2006-05-28.jpg/1280px-Antwerpen_Stadhuis_crop1_2006-05-28.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Antwerp City Hall",
+        "attribution": "No machine-readable author provided. Klaus with K assumed (based on copyright claims). · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "themeConnection": {
+        "text": "Antwerp City Hall was completed in 1565 and continues to serve as the city's municipal hall.",
+        "sourceIds": ["source-18"]
+      }
+    },
+    {
+      "id": "historic-city-hall-001",
+      "name": "New York City Hall",
+      "city": "New York City",
+      "country": "United States",
+      "latitude": 40.712743,
+      "longitude": -74.005965,
+      "wikipediaTitle": "New York City Hall",
+      "blurb": "New York City Hall is the seat of New York City government, located at the center of City Hall Park in the Civic Center area of Lower Manhattan, between Broadway, Park Row, and Chambers Street.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/New_York_City_Hall_exterior%2C_October_2016.jpg/1280px-New_York_City_Hall_exterior%2C_October_2016.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "New York City Hall",
+        "attribution": "MusikAnimal · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "Completed in 1812, New York City Hall remains the seat of the city's mayor and municipal government.",
+        "sourceIds": ["source-01"]
+      }
+    },
+    {
+      "id": "historic-city-hall-012",
+      "name": "Birmingham Council House",
+      "city": "Birmingham",
+      "country": "United Kingdom",
+      "latitude": 52.479722,
+      "longitude": -1.902778,
+      "wikipediaTitle": "Council House, Birmingham",
+      "blurb": "The Council House is the seat of local government in Birmingham, England. Completed in 1879, it remains a working civic building containing council chambers, municipal offices, and official reception spaces.",
+      "themeConnection": {
+        "text": "Birmingham Council House was completed in 1879 and remains a working seat of Birmingham City Council.",
+        "sourceIds": ["source-12"]
+      }
+    },
+    {
+      "id": "historic-city-hall-011",
+      "name": "Guildhall",
+      "city": "London",
+      "country": "United Kingdom",
+      "latitude": 51.515461,
+      "longitude": -0.091707,
+      "wikipediaTitle": "Guildhall, London",
+      "blurb": "Guildhall is a municipal building in the City of London, England. It is off Gresham and Basinghall streets, in the wards of Bassishaw and Cheap.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Guildhall%2C_Londres%2C_Inglaterra%2C_2014-08-11%2C_DD_139.JPG/1280px-Guildhall%2C_Londres%2C_Inglaterra%2C_2014-08-11%2C_DD_139.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Guildhall, London",
+        "attribution": "Diego Delso · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "London's Guildhall is the historic municipal hall of the City of London and remains the headquarters of its civic corporation.",
+        "sourceIds": ["source-11"]
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "round-1",
+      "targetPoiId": "historic-city-hall-001",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/New_York_City_Hall_exterior%2C_October_2016.jpg/1280px-New_York_City_Hall_exterior%2C_October_2016.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "New York City Hall",
+        "attribution": "MusikAnimal · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "In the early republic, this civic building became a stage for national mourning when Abraham Lincoln’s coffin lay in state beneath its grand rotunda. It is still the oldest American city hall carrying out its original governmental role, with a mayor’s office and council chambers in a formal, columned building set in a public park.",
+        "sourceIds": ["source-01"]
+      },
+      "results": [
+        {
+          "poiId": "historic-city-hall-001",
+          "points": 100,
+          "text": "New York City Hall is the round target: Completed in 1812, New York City Hall remains the seat of the city's mayor and municipal government.",
+          "sourceIds": ["source-01"]
+        },
+        {
+          "poiId": "historic-city-hall-002",
+          "points": 72,
+          "text": "Charleston City Hall is a themed comparison candidate: Charleston City Hall was completed in 1804 and continues to house the municipal government of Charleston.",
+          "sourceIds": ["source-02", "source-01"]
+        },
+        {
+          "poiId": "historic-city-hall-003",
+          "points": 18,
+          "text": "New Orleans City Hall is a themed comparison candidate: The present New Orleans City Hall was completed in 1853 and remains the official municipal-government building.",
+          "sourceIds": ["source-03", "source-01"]
+        },
+        {
+          "poiId": "historic-city-hall-004",
+          "points": 16,
+          "text": "Baltimore City Hall is a themed comparison candidate: Baltimore City Hall, completed in 1875, continues to contain the offices of the mayor and Baltimore municipal government.",
+          "sourceIds": ["source-04", "source-01"]
+        },
+        {
+          "poiId": "historic-city-hall-005",
+          "points": 22,
+          "text": "Cincinnati City Hall is a themed comparison candidate: Cincinnati City Hall was completed in 1893 and remains the working seat of Cincinnati's city government.",
+          "sourceIds": ["source-05", "source-01"]
+        },
+        {
+          "poiId": "historic-city-hall-006",
+          "points": 20,
+          "text": "St. Louis City Hall is a themed comparison candidate: St. Louis City Hall was completed in 1893 and still houses the mayor, city council, and municipal administration.",
+          "sourceIds": ["source-06", "source-01"]
+        },
+        {
+          "poiId": "historic-city-hall-007",
+          "points": 34,
+          "text": "Providence City Hall is a themed comparison candidate: Providence City Hall was completed in 1878 and continues to serve as the city's municipal headquarters.",
+          "sourceIds": ["source-07", "source-01"]
+        },
+        {
+          "poiId": "historic-city-hall-008",
+          "points": 12,
+          "text": "Milwaukee City Hall is a themed comparison candidate: Milwaukee City Hall was completed in 1895 and remains the principal building for the city's mayor and municipal government.",
+          "sourceIds": ["source-08", "source-01"]
+        },
+        {
+          "poiId": "historic-city-hall-009",
+          "points": 28,
+          "text": "Montreal City Hall is a themed comparison candidate: Montreal City Hall was completed in 1878 and continues to house the mayor's office and municipal civic functions.",
+          "sourceIds": ["source-09", "source-01"]
+        },
+        {
+          "poiId": "historic-city-hall-010",
+          "points": 25,
+          "text": "Quebec City Hall is a themed comparison candidate: Quebec City Hall opened in 1896 and remains the official building of Quebec City's municipal administration.",
+          "sourceIds": ["source-10", "source-01"]
+        },
+        {
+          "poiId": "historic-city-hall-011",
+          "points": 48,
+          "text": "Guildhall is a themed comparison candidate: London's Guildhall is the historic municipal hall of the City of London and remains the headquarters of its civic corporation.",
+          "sourceIds": ["source-11", "source-01"]
+        },
+        {
+          "poiId": "historic-city-hall-012",
+          "points": 15,
+          "text": "Birmingham Council House is a themed comparison candidate: Birmingham Council House was completed in 1879 and remains a working seat of Birmingham City Council.",
+          "sourceIds": ["source-12", "source-01"]
+        },
+        {
+          "poiId": "historic-city-hall-013",
+          "points": 11,
+          "text": "Sheffield Town Hall is a themed comparison candidate: Sheffield Town Hall was completed in 1897 and continues to house Sheffield City Council's civic functions.",
+          "sourceIds": ["source-13", "source-01"]
+        },
+        {
+          "poiId": "historic-city-hall-014",
+          "points": 63,
+          "text": "Edinburgh City Chambers is a themed comparison candidate: Edinburgh City Chambers originated in the eighteenth century and remain the headquarters of the City of Edinburgh Council.",
+          "sourceIds": ["source-14", "source-01"]
+        },
+        {
+          "poiId": "historic-city-hall-015",
+          "points": 14,
+          "text": "Glasgow City Chambers is a themed comparison candidate: Glasgow City Chambers opened in 1888 and continue to house the city's elected council and municipal administration.",
+          "sourceIds": ["source-15", "source-01"]
+        },
+        {
+          "poiId": "historic-city-hall-017",
+          "points": 45,
+          "text": "Hôtel de Ville de Paris is a themed comparison candidate: Paris's Hôtel de Ville was rebuilt and completed in 1882 and remains the seat of the Mayor of Paris and city administration.",
+          "sourceIds": ["source-16", "source-01"]
+        },
+        {
+          "poiId": "historic-city-hall-018",
+          "points": 31,
+          "text": "Brussels Town Hall is a themed comparison candidate: Brussels Town Hall was built in the fifteenth century and remains the official municipal hall of the City of Brussels.",
+          "sourceIds": ["source-17", "source-01"]
+        },
+        {
+          "poiId": "historic-city-hall-019",
+          "points": 40,
+          "text": "Antwerp City Hall is a themed comparison candidate: Antwerp City Hall was completed in 1565 and continues to serve as the city's municipal hall.",
+          "sourceIds": ["source-18", "source-01"]
+        },
+        {
+          "poiId": "historic-city-hall-020",
+          "points": 37,
+          "text": "Ghent City Hall is a themed comparison candidate: Ghent City Hall incorporates medieval and Renaissance sections and remains the working seat of Ghent's municipal government.",
+          "sourceIds": ["source-19", "source-01"]
+        },
+        {
+          "poiId": "historic-city-hall-021",
+          "points": 29,
+          "text": "Luxembourg City Hall is a themed comparison candidate: Luxembourg City Hall dates from the nineteenth century and remains the seat of the municipal government of Luxembourg City.",
+          "sourceIds": ["source-20", "source-01"]
+        }
+      ]
+    },
+    {
+      "id": "round-2",
+      "targetPoiId": "historic-city-hall-011",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Guildhall%2C_Londres%2C_Inglaterra%2C_2014-08-11%2C_DD_139.JPG/1280px-Guildhall%2C_Londres%2C_Inglaterra%2C_2014-08-11%2C_DD_139.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Guildhall, London",
+        "attribution": "Diego Delso · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "This civic hall sits above the remains of a Roman amphitheatre and preserves a medieval great hall. It survived both the Great Fire and wartime destruction, yet remains the ceremonial and administrative headquarters of the corporation governing the historic financial core, hosting trials, banquets, and public events.",
+        "sourceIds": ["source-11"]
+      },
+      "results": [
+        {
+          "poiId": "historic-city-hall-001",
+          "points": 35,
+          "text": "New York City Hall is a themed comparison candidate: Completed in 1812, New York City Hall remains the seat of the city's mayor and municipal government.",
+          "sourceIds": ["source-01", "source-11"]
+        },
+        {
+          "poiId": "historic-city-hall-002",
+          "points": 18,
+          "text": "Charleston City Hall is a themed comparison candidate: Charleston City Hall was completed in 1804 and continues to house the municipal government of Charleston.",
+          "sourceIds": ["source-02", "source-11"]
+        },
+        {
+          "poiId": "historic-city-hall-003",
+          "points": 14,
+          "text": "New Orleans City Hall is a themed comparison candidate: The present New Orleans City Hall was completed in 1853 and remains the official municipal-government building.",
+          "sourceIds": ["source-03", "source-11"]
+        },
+        {
+          "poiId": "historic-city-hall-004",
+          "points": 12,
+          "text": "Baltimore City Hall is a themed comparison candidate: Baltimore City Hall, completed in 1875, continues to contain the offices of the mayor and Baltimore municipal government.",
+          "sourceIds": ["source-04", "source-11"]
+        },
+        {
+          "poiId": "historic-city-hall-005",
+          "points": 16,
+          "text": "Cincinnati City Hall is a themed comparison candidate: Cincinnati City Hall was completed in 1893 and remains the working seat of Cincinnati's city government.",
+          "sourceIds": ["source-05", "source-11"]
+        },
+        {
+          "poiId": "historic-city-hall-006",
+          "points": 15,
+          "text": "St. Louis City Hall is a themed comparison candidate: St. Louis City Hall was completed in 1893 and still houses the mayor, city council, and municipal administration.",
+          "sourceIds": ["source-06", "source-11"]
+        },
+        {
+          "poiId": "historic-city-hall-007",
+          "points": 21,
+          "text": "Providence City Hall is a themed comparison candidate: Providence City Hall was completed in 1878 and continues to serve as the city's municipal headquarters.",
+          "sourceIds": ["source-07", "source-11"]
+        },
+        {
+          "poiId": "historic-city-hall-008",
+          "points": 13,
+          "text": "Milwaukee City Hall is a themed comparison candidate: Milwaukee City Hall was completed in 1895 and remains the principal building for the city's mayor and municipal government.",
+          "sourceIds": ["source-08", "source-11"]
+        },
+        {
+          "poiId": "historic-city-hall-009",
+          "points": 46,
+          "text": "Montreal City Hall is a themed comparison candidate: Montreal City Hall was completed in 1878 and continues to house the mayor's office and municipal civic functions.",
+          "sourceIds": ["source-09", "source-11"]
+        },
+        {
+          "poiId": "historic-city-hall-010",
+          "points": 39,
+          "text": "Quebec City Hall is a themed comparison candidate: Quebec City Hall opened in 1896 and remains the official building of Quebec City's municipal administration.",
+          "sourceIds": ["source-10", "source-11"]
+        },
+        {
+          "poiId": "historic-city-hall-011",
+          "points": 100,
+          "text": "Guildhall is the round target: London's Guildhall is the historic municipal hall of the City of London and remains the headquarters of its civic corporation.",
+          "sourceIds": ["source-11"]
+        },
+        {
+          "poiId": "historic-city-hall-012",
+          "points": 58,
+          "text": "Birmingham Council House is a themed comparison candidate: Birmingham Council House was completed in 1879 and remains a working seat of Birmingham City Council.",
+          "sourceIds": ["source-12", "source-11"]
+        },
+        {
+          "poiId": "historic-city-hall-013",
+          "points": 42,
+          "text": "Sheffield Town Hall is a themed comparison candidate: Sheffield Town Hall was completed in 1897 and continues to house Sheffield City Council's civic functions.",
+          "sourceIds": ["source-13", "source-11"]
+        },
+        {
+          "poiId": "historic-city-hall-014",
+          "points": 67,
+          "text": "Edinburgh City Chambers is a themed comparison candidate: Edinburgh City Chambers originated in the eighteenth century and remain the headquarters of the City of Edinburgh Council.",
+          "sourceIds": ["source-14", "source-11"]
+        },
+        {
+          "poiId": "historic-city-hall-015",
+          "points": 49,
+          "text": "Glasgow City Chambers is a themed comparison candidate: Glasgow City Chambers opened in 1888 and continue to house the city's elected council and municipal administration.",
+          "sourceIds": ["source-15", "source-11"]
+        },
+        {
+          "poiId": "historic-city-hall-017",
+          "points": 52,
+          "text": "Hôtel de Ville de Paris is a themed comparison candidate: Paris's Hôtel de Ville was rebuilt and completed in 1882 and remains the seat of the Mayor of Paris and city administration.",
+          "sourceIds": ["source-16", "source-11"]
+        },
+        {
+          "poiId": "historic-city-hall-018",
+          "points": 74,
+          "text": "Brussels Town Hall is a themed comparison candidate: Brussels Town Hall was built in the fifteenth century and remains the official municipal hall of the City of Brussels.",
+          "sourceIds": ["source-17", "source-11"]
+        },
+        {
+          "poiId": "historic-city-hall-019",
+          "points": 61,
+          "text": "Antwerp City Hall is a themed comparison candidate: Antwerp City Hall was completed in 1565 and continues to serve as the city's municipal hall.",
+          "sourceIds": ["source-18", "source-11"]
+        },
+        {
+          "poiId": "historic-city-hall-020",
+          "points": 70,
+          "text": "Ghent City Hall is a themed comparison candidate: Ghent City Hall incorporates medieval and Renaissance sections and remains the working seat of Ghent's municipal government.",
+          "sourceIds": ["source-19", "source-11"]
+        },
+        {
+          "poiId": "historic-city-hall-021",
+          "points": 33,
+          "text": "Luxembourg City Hall is a themed comparison candidate: Luxembourg City Hall dates from the nineteenth century and remains the seat of the municipal government of Luxembourg City.",
+          "sourceIds": ["source-20", "source-11"]
+        }
+      ]
+    },
+    {
+      "id": "round-3",
+      "targetPoiId": "historic-city-hall-017",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/H%C3%B4tel_ville_fa%C3%A7ade_principale_Paris_11.jpg/1280px-H%C3%B4tel_ville_fa%C3%A7ade_principale_Paris_11.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Hôtel de Ville, Paris",
+        "attribution": "Chabe01 · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "A revolutionary government used this municipal palace as its headquarters before retreating forces set it ablaze, destroying the city archives. Rebuilt with a larger version of its Renaissance exterior, it remains the seat of local government and later became famous as the balcony from which a national leader proclaimed liberation.",
+        "sourceIds": ["source-16"]
+      },
+      "results": [
+        {
+          "poiId": "historic-city-hall-001",
+          "points": 44,
+          "text": "New York City Hall is a themed comparison candidate: Completed in 1812, New York City Hall remains the seat of the city's mayor and municipal government.",
+          "sourceIds": ["source-01", "source-16"]
+        },
+        {
+          "poiId": "historic-city-hall-002",
+          "points": 17,
+          "text": "Charleston City Hall is a themed comparison candidate: Charleston City Hall was completed in 1804 and continues to house the municipal government of Charleston.",
+          "sourceIds": ["source-02", "source-16"]
+        },
+        {
+          "poiId": "historic-city-hall-003",
+          "points": 19,
+          "text": "New Orleans City Hall is a themed comparison candidate: The present New Orleans City Hall was completed in 1853 and remains the official municipal-government building.",
+          "sourceIds": ["source-03", "source-16"]
+        },
+        {
+          "poiId": "historic-city-hall-004",
+          "points": 13,
+          "text": "Baltimore City Hall is a themed comparison candidate: Baltimore City Hall, completed in 1875, continues to contain the offices of the mayor and Baltimore municipal government.",
+          "sourceIds": ["source-04", "source-16"]
+        },
+        {
+          "poiId": "historic-city-hall-005",
+          "points": 15,
+          "text": "Cincinnati City Hall is a themed comparison candidate: Cincinnati City Hall was completed in 1893 and remains the working seat of Cincinnati's city government.",
+          "sourceIds": ["source-05", "source-16"]
+        },
+        {
+          "poiId": "historic-city-hall-006",
+          "points": 14,
+          "text": "St. Louis City Hall is a themed comparison candidate: St. Louis City Hall was completed in 1893 and still houses the mayor, city council, and municipal administration.",
+          "sourceIds": ["source-06", "source-16"]
+        },
+        {
+          "poiId": "historic-city-hall-007",
+          "points": 22,
+          "text": "Providence City Hall is a themed comparison candidate: Providence City Hall was completed in 1878 and continues to serve as the city's municipal headquarters.",
+          "sourceIds": ["source-07", "source-16"]
+        },
+        {
+          "poiId": "historic-city-hall-008",
+          "points": 11,
+          "text": "Milwaukee City Hall is a themed comparison candidate: Milwaukee City Hall was completed in 1895 and remains the principal building for the city's mayor and municipal government.",
+          "sourceIds": ["source-08", "source-16"]
+        },
+        {
+          "poiId": "historic-city-hall-009",
+          "points": 55,
+          "text": "Montreal City Hall is a themed comparison candidate: Montreal City Hall was completed in 1878 and continues to house the mayor's office and municipal civic functions.",
+          "sourceIds": ["source-09", "source-16"]
+        },
+        {
+          "poiId": "historic-city-hall-010",
+          "points": 47,
+          "text": "Quebec City Hall is a themed comparison candidate: Quebec City Hall opened in 1896 and remains the official building of Quebec City's municipal administration.",
+          "sourceIds": ["source-10", "source-16"]
+        },
+        {
+          "poiId": "historic-city-hall-011",
+          "points": 64,
+          "text": "Guildhall is a themed comparison candidate: London's Guildhall is the historic municipal hall of the City of London and remains the headquarters of its civic corporation.",
+          "sourceIds": ["source-11", "source-16"]
+        },
+        {
+          "poiId": "historic-city-hall-012",
+          "points": 36,
+          "text": "Birmingham Council House is a themed comparison candidate: Birmingham Council House was completed in 1879 and remains a working seat of Birmingham City Council.",
+          "sourceIds": ["source-12", "source-16"]
+        },
+        {
+          "poiId": "historic-city-hall-013",
+          "points": 31,
+          "text": "Sheffield Town Hall is a themed comparison candidate: Sheffield Town Hall was completed in 1897 and continues to house Sheffield City Council's civic functions.",
+          "sourceIds": ["source-13", "source-16"]
+        },
+        {
+          "poiId": "historic-city-hall-014",
+          "points": 50,
+          "text": "Edinburgh City Chambers is a themed comparison candidate: Edinburgh City Chambers originated in the eighteenth century and remain the headquarters of the City of Edinburgh Council.",
+          "sourceIds": ["source-14", "source-16"]
+        },
+        {
+          "poiId": "historic-city-hall-015",
+          "points": 29,
+          "text": "Glasgow City Chambers is a themed comparison candidate: Glasgow City Chambers opened in 1888 and continue to house the city's elected council and municipal administration.",
+          "sourceIds": ["source-15", "source-16"]
+        },
+        {
+          "poiId": "historic-city-hall-017",
+          "points": 100,
+          "text": "Hôtel de Ville de Paris is the round target: Paris's Hôtel de Ville was rebuilt and completed in 1882 and remains the seat of the Mayor of Paris and city administration.",
+          "sourceIds": ["source-16"]
+        },
+        {
+          "poiId": "historic-city-hall-018",
+          "points": 45,
+          "text": "Brussels Town Hall is a themed comparison candidate: Brussels Town Hall was built in the fifteenth century and remains the official municipal hall of the City of Brussels.",
+          "sourceIds": ["source-17", "source-16"]
+        },
+        {
+          "poiId": "historic-city-hall-019",
+          "points": 59,
+          "text": "Antwerp City Hall is a themed comparison candidate: Antwerp City Hall was completed in 1565 and continues to serve as the city's municipal hall.",
+          "sourceIds": ["source-18", "source-16"]
+        },
+        {
+          "poiId": "historic-city-hall-020",
+          "points": 38,
+          "text": "Ghent City Hall is a themed comparison candidate: Ghent City Hall incorporates medieval and Renaissance sections and remains the working seat of Ghent's municipal government.",
+          "sourceIds": ["source-19", "source-16"]
+        },
+        {
+          "poiId": "historic-city-hall-021",
+          "points": 34,
+          "text": "Luxembourg City Hall is a themed comparison candidate: Luxembourg City Hall dates from the nineteenth century and remains the seat of the municipal government of Luxembourg City.",
+          "sourceIds": ["source-20", "source-16"]
+        }
+      ]
+    },
+    {
+      "id": "round-4",
+      "targetPoiId": "historic-city-hall-019",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Antwerpen_Stadhuis_crop1_2006-05-28.jpg/1280px-Antwerpen_Stadhuis_crop1_2006-05-28.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Antwerp City Hall",
+        "attribution": "No machine-readable author provided. Klaus with K assumed (based on copyright claims). · CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "clue": {
+        "text": "When a northern European trading port grew extraordinarily wealthy, its officials replaced a small medieval hall with an ambitious Renaissance building blending local Flemish and Italian ideas. The civic landmark was soon burned during a notorious imperial assault, restored, and still stands on the city’s principal market square.",
+        "sourceIds": ["source-18"]
+      },
+      "results": [
+        {
+          "poiId": "historic-city-hall-001",
+          "points": 28,
+          "text": "New York City Hall is a themed comparison candidate: Completed in 1812, New York City Hall remains the seat of the city's mayor and municipal government.",
+          "sourceIds": ["source-01", "source-18"]
+        },
+        {
+          "poiId": "historic-city-hall-002",
+          "points": 16,
+          "text": "Charleston City Hall is a themed comparison candidate: Charleston City Hall was completed in 1804 and continues to house the municipal government of Charleston.",
+          "sourceIds": ["source-02", "source-18"]
+        },
+        {
+          "poiId": "historic-city-hall-003",
+          "points": 12,
+          "text": "New Orleans City Hall is a themed comparison candidate: The present New Orleans City Hall was completed in 1853 and remains the official municipal-government building.",
+          "sourceIds": ["source-03", "source-18"]
+        },
+        {
+          "poiId": "historic-city-hall-004",
+          "points": 10,
+          "text": "Baltimore City Hall is a themed comparison candidate: Baltimore City Hall, completed in 1875, continues to contain the offices of the mayor and Baltimore municipal government.",
+          "sourceIds": ["source-04", "source-18"]
+        },
+        {
+          "poiId": "historic-city-hall-005",
+          "points": 13,
+          "text": "Cincinnati City Hall is a themed comparison candidate: Cincinnati City Hall was completed in 1893 and remains the working seat of Cincinnati's city government.",
+          "sourceIds": ["source-05", "source-18"]
+        },
+        {
+          "poiId": "historic-city-hall-006",
+          "points": 11,
+          "text": "St. Louis City Hall is a themed comparison candidate: St. Louis City Hall was completed in 1893 and still houses the mayor, city council, and municipal administration.",
+          "sourceIds": ["source-06", "source-18"]
+        },
+        {
+          "poiId": "historic-city-hall-007",
+          "points": 19,
+          "text": "Providence City Hall is a themed comparison candidate: Providence City Hall was completed in 1878 and continues to serve as the city's municipal headquarters.",
+          "sourceIds": ["source-07", "source-18"]
+        },
+        {
+          "poiId": "historic-city-hall-008",
+          "points": 9,
+          "text": "Milwaukee City Hall is a themed comparison candidate: Milwaukee City Hall was completed in 1895 and remains the principal building for the city's mayor and municipal government.",
+          "sourceIds": ["source-08", "source-18"]
+        },
+        {
+          "poiId": "historic-city-hall-009",
+          "points": 39,
+          "text": "Montreal City Hall is a themed comparison candidate: Montreal City Hall was completed in 1878 and continues to house the mayor's office and municipal civic functions.",
+          "sourceIds": ["source-09", "source-18"]
+        },
+        {
+          "poiId": "historic-city-hall-010",
+          "points": 35,
+          "text": "Quebec City Hall is a themed comparison candidate: Quebec City Hall opened in 1896 and remains the official building of Quebec City's municipal administration.",
+          "sourceIds": ["source-10", "source-18"]
+        },
+        {
+          "poiId": "historic-city-hall-011",
+          "points": 58,
+          "text": "Guildhall is a themed comparison candidate: London's Guildhall is the historic municipal hall of the City of London and remains the headquarters of its civic corporation.",
+          "sourceIds": ["source-11", "source-18"]
+        },
+        {
+          "poiId": "historic-city-hall-012",
+          "points": 27,
+          "text": "Birmingham Council House is a themed comparison candidate: Birmingham Council House was completed in 1879 and remains a working seat of Birmingham City Council.",
+          "sourceIds": ["source-12", "source-18"]
+        },
+        {
+          "poiId": "historic-city-hall-013",
+          "points": 23,
+          "text": "Sheffield Town Hall is a themed comparison candidate: Sheffield Town Hall was completed in 1897 and continues to house Sheffield City Council's civic functions.",
+          "sourceIds": ["source-13", "source-18"]
+        },
+        {
+          "poiId": "historic-city-hall-014",
+          "points": 41,
+          "text": "Edinburgh City Chambers is a themed comparison candidate: Edinburgh City Chambers originated in the eighteenth century and remain the headquarters of the City of Edinburgh Council.",
+          "sourceIds": ["source-14", "source-18"]
+        },
+        {
+          "poiId": "historic-city-hall-015",
+          "points": 21,
+          "text": "Glasgow City Chambers is a themed comparison candidate: Glasgow City Chambers opened in 1888 and continue to house the city's elected council and municipal administration.",
+          "sourceIds": ["source-15", "source-18"]
+        },
+        {
+          "poiId": "historic-city-hall-017",
+          "points": 63,
+          "text": "Hôtel de Ville de Paris is a themed comparison candidate: Paris's Hôtel de Ville was rebuilt and completed in 1882 and remains the seat of the Mayor of Paris and city administration.",
+          "sourceIds": ["source-16", "source-18"]
+        },
+        {
+          "poiId": "historic-city-hall-018",
+          "points": 76,
+          "text": "Brussels Town Hall is a themed comparison candidate: Brussels Town Hall was built in the fifteenth century and remains the official municipal hall of the City of Brussels.",
+          "sourceIds": ["source-17", "source-18"]
+        },
+        {
+          "poiId": "historic-city-hall-019",
+          "points": 100,
+          "text": "Antwerp City Hall is the round target: Antwerp City Hall was completed in 1565 and continues to serve as the city's municipal hall.",
+          "sourceIds": ["source-18"]
+        },
+        {
+          "poiId": "historic-city-hall-020",
+          "points": 82,
+          "text": "Ghent City Hall is a themed comparison candidate: Ghent City Hall incorporates medieval and Renaissance sections and remains the working seat of Ghent's municipal government.",
+          "sourceIds": ["source-19", "source-18"]
+        },
+        {
+          "poiId": "historic-city-hall-021",
+          "points": 43,
+          "text": "Luxembourg City Hall is a themed comparison candidate: Luxembourg City Hall dates from the nineteenth century and remains the seat of the municipal government of Luxembourg City.",
+          "sourceIds": ["source-20", "source-18"]
+        }
+      ]
+    },
+    {
+      "id": "round-5",
+      "targetPoiId": "historic-city-hall-021",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Luxembourg_City_Hall_%2854540726309%29.jpg/1280px-Luxembourg_City_Hall_%2854540726309%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Luxembourg City Hall",
+        "attribution": "Pierre Blaché from Paris, France · CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      },
+      "clue": {
+        "text": "This modest two-storey neoclassical hall became more than a local office: it hosted the assembly that drafted a new national constitution and later the first meeting of the European Coal and Steel Community. Set on the capital’s main square, it remains a mayoral workplace and a venue for foreign dignitaries.",
+        "sourceIds": ["source-20"]
+      },
+      "results": [
+        {
+          "poiId": "historic-city-hall-001",
+          "points": 24,
+          "text": "New York City Hall is a themed comparison candidate: Completed in 1812, New York City Hall remains the seat of the city's mayor and municipal government.",
+          "sourceIds": ["source-01", "source-20"]
+        },
+        {
+          "poiId": "historic-city-hall-002",
+          "points": 14,
+          "text": "Charleston City Hall is a themed comparison candidate: Charleston City Hall was completed in 1804 and continues to house the municipal government of Charleston.",
+          "sourceIds": ["source-02", "source-20"]
+        },
+        {
+          "poiId": "historic-city-hall-003",
+          "points": 11,
+          "text": "New Orleans City Hall is a themed comparison candidate: The present New Orleans City Hall was completed in 1853 and remains the official municipal-government building.",
+          "sourceIds": ["source-03", "source-20"]
+        },
+        {
+          "poiId": "historic-city-hall-004",
+          "points": 9,
+          "text": "Baltimore City Hall is a themed comparison candidate: Baltimore City Hall, completed in 1875, continues to contain the offices of the mayor and Baltimore municipal government.",
+          "sourceIds": ["source-04", "source-20"]
+        },
+        {
+          "poiId": "historic-city-hall-005",
+          "points": 12,
+          "text": "Cincinnati City Hall is a themed comparison candidate: Cincinnati City Hall was completed in 1893 and remains the working seat of Cincinnati's city government.",
+          "sourceIds": ["source-05", "source-20"]
+        },
+        {
+          "poiId": "historic-city-hall-006",
+          "points": 10,
+          "text": "St. Louis City Hall is a themed comparison candidate: St. Louis City Hall was completed in 1893 and still houses the mayor, city council, and municipal administration.",
+          "sourceIds": ["source-06", "source-20"]
+        },
+        {
+          "poiId": "historic-city-hall-007",
+          "points": 18,
+          "text": "Providence City Hall is a themed comparison candidate: Providence City Hall was completed in 1878 and continues to serve as the city's municipal headquarters.",
+          "sourceIds": ["source-07", "source-20"]
+        },
+        {
+          "poiId": "historic-city-hall-008",
+          "points": 8,
+          "text": "Milwaukee City Hall is a themed comparison candidate: Milwaukee City Hall was completed in 1895 and remains the principal building for the city's mayor and municipal government.",
+          "sourceIds": ["source-08", "source-20"]
+        },
+        {
+          "poiId": "historic-city-hall-009",
+          "points": 45,
+          "text": "Montreal City Hall is a themed comparison candidate: Montreal City Hall was completed in 1878 and continues to house the mayor's office and municipal civic functions.",
+          "sourceIds": ["source-09", "source-20"]
+        },
+        {
+          "poiId": "historic-city-hall-010",
+          "points": 42,
+          "text": "Quebec City Hall is a themed comparison candidate: Quebec City Hall opened in 1896 and remains the official building of Quebec City's municipal administration.",
+          "sourceIds": ["source-10", "source-20"]
+        },
+        {
+          "poiId": "historic-city-hall-011",
+          "points": 36,
+          "text": "Guildhall is a themed comparison candidate: London's Guildhall is the historic municipal hall of the City of London and remains the headquarters of its civic corporation.",
+          "sourceIds": ["source-11", "source-20"]
+        },
+        {
+          "poiId": "historic-city-hall-012",
+          "points": 22,
+          "text": "Birmingham Council House is a themed comparison candidate: Birmingham Council House was completed in 1879 and remains a working seat of Birmingham City Council.",
+          "sourceIds": ["source-12", "source-20"]
+        },
+        {
+          "poiId": "historic-city-hall-013",
+          "points": 17,
+          "text": "Sheffield Town Hall is a themed comparison candidate: Sheffield Town Hall was completed in 1897 and continues to house Sheffield City Council's civic functions.",
+          "sourceIds": ["source-13", "source-20"]
+        },
+        {
+          "poiId": "historic-city-hall-014",
+          "points": 62,
+          "text": "Edinburgh City Chambers is a themed comparison candidate: Edinburgh City Chambers originated in the eighteenth century and remain the headquarters of the City of Edinburgh Council.",
+          "sourceIds": ["source-14", "source-20"]
+        },
+        {
+          "poiId": "historic-city-hall-015",
+          "points": 29,
+          "text": "Glasgow City Chambers is a themed comparison candidate: Glasgow City Chambers opened in 1888 and continue to house the city's elected council and municipal administration.",
+          "sourceIds": ["source-15", "source-20"]
+        },
+        {
+          "poiId": "historic-city-hall-017",
+          "points": 71,
+          "text": "Hôtel de Ville de Paris is a themed comparison candidate: Paris's Hôtel de Ville was rebuilt and completed in 1882 and remains the seat of the Mayor of Paris and city administration.",
+          "sourceIds": ["source-16", "source-20"]
+        },
+        {
+          "poiId": "historic-city-hall-018",
+          "points": 33,
+          "text": "Brussels Town Hall is a themed comparison candidate: Brussels Town Hall was built in the fifteenth century and remains the official municipal hall of the City of Brussels.",
+          "sourceIds": ["source-17", "source-20"]
+        },
+        {
+          "poiId": "historic-city-hall-019",
+          "points": 37,
+          "text": "Antwerp City Hall is a themed comparison candidate: Antwerp City Hall was completed in 1565 and continues to serve as the city's municipal hall.",
+          "sourceIds": ["source-18", "source-20"]
+        },
+        {
+          "poiId": "historic-city-hall-020",
+          "points": 26,
+          "text": "Ghent City Hall is a themed comparison candidate: Ghent City Hall incorporates medieval and Renaissance sections and remains the working seat of Ghent's municipal government.",
+          "sourceIds": ["source-19", "source-20"]
+        },
+        {
+          "poiId": "historic-city-hall-021",
+          "points": 100,
+          "text": "Luxembourg City Hall is the round target: Luxembourg City Hall dates from the nineteenth century and remains the seat of the municipal government of Luxembourg City.",
+          "sourceIds": ["source-20"]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-01",
+      "title": "New York City Hall",
+      "url": "https://en.wikipedia.org/wiki/New_York_City_Hall",
+      "retrievedAt": "2026-09-01T18:43:45.380Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-02",
+      "title": "Charleston City Hall",
+      "url": "https://en.wikipedia.org/wiki/Charleston_City_Hall_(South_Carolina)",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-03",
+      "title": "New Orleans City Hall",
+      "url": "https://en.wikipedia.org/wiki/New_Orleans_City_Hall",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-04",
+      "title": "Baltimore City Hall",
+      "url": "https://en.wikipedia.org/wiki/Baltimore_City_Hall",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-05",
+      "title": "Cincinnati City Hall",
+      "url": "https://en.wikipedia.org/wiki/Cincinnati_City_Hall",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-06",
+      "title": "St. Louis City Hall",
+      "url": "https://en.wikipedia.org/wiki/St._Louis_City_Hall",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-07",
+      "title": "Providence City Hall",
+      "url": "https://en.wikipedia.org/wiki/Providence_City_Hall",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-08",
+      "title": "Milwaukee City Hall",
+      "url": "https://en.wikipedia.org/wiki/Milwaukee_City_Hall",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-09",
+      "title": "Montreal City Hall",
+      "url": "https://en.wikipedia.org/wiki/Montreal_City_Hall",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-10",
+      "title": "Quebec City Hall",
+      "url": "https://en.wikipedia.org/wiki/Quebec_City_Hall",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-11",
+      "title": "Guildhall, London",
+      "url": "https://en.wikipedia.org/wiki/Guildhall,_London",
+      "retrievedAt": "2026-09-01T18:43:45.231Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-12",
+      "title": "Council House, Birmingham",
+      "url": "https://en.wikipedia.org/wiki/Council_House,_Birmingham",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-13",
+      "title": "Sheffield Town Hall",
+      "url": "https://en.wikipedia.org/wiki/Sheffield_Town_Hall",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-14",
+      "title": "City Chambers, Edinburgh",
+      "url": "https://en.wikipedia.org/wiki/City_Chambers,_Edinburgh",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-15",
+      "title": "Glasgow City Chambers",
+      "url": "https://en.wikipedia.org/wiki/Glasgow_City_Chambers",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-16",
+      "title": "Hôtel de Ville, Paris",
+      "url": "https://en.wikipedia.org/wiki/H%C3%B4tel_de_Ville,_Paris",
+      "retrievedAt": "2026-09-01T18:43:45.228Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-17",
+      "title": "Brussels Town Hall",
+      "url": "https://en.wikipedia.org/wiki/Brussels_Town_Hall",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-18",
+      "title": "Antwerp City Hall",
+      "url": "https://en.wikipedia.org/wiki/Antwerp_City_Hall",
+      "retrievedAt": "2026-09-01T18:43:45.610Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-19",
+      "title": "Ghent City Hall",
+      "url": "https://en.wikipedia.org/wiki/Ghent_City_Hall",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-20",
+      "title": "Luxembourg City Hall",
+      "url": "https://en.wikipedia.org/wiki/Luxembourg_City_Hall",
+      "retrievedAt": "2026-09-01T18:43:45.319Z",
+      "provenance": "verified"
+    }
+  ],
+  "theme": {
+    "title": "Historic Working City Halls",
+    "introduction": "Stone towers, clocklit chambers, and civic squares still anchor the daily life of cities around the world.",
+    "inclusionCriteria": "Include a location only when every condition is met: (1) it is an individually named city hall, town hall, municipal hall, Rathaus, hôtel de ville, ayuntamiento, palazzo comunale, or clearly equivalent building; (2) the present building, or a continuously recognized predecessor occupying the same identifiable site, was completed, opened for civic use, or first established there on or before 31 December 1899; (3) the building still houses the government of its present-day city or incorporated municipality, including the mayor’s office, council chamber, municipal administration, or another official core civic function, on the date of play; (4) it occupies a fixed, individually mappable building or contiguous civic complex with a recognizable exterior or public entrance; (5) the site lies within the current administrative boundary of a present-day city or incorporated urban municipality; and (6) the location is identifiable by its official civic name rather than only by a surrounding square, district, palace, or administrative campus. The worldwide set should provide at least 35 plausible locations across many cities and countries."
+  }
+}
