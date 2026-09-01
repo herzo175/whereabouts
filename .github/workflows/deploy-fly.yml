@@ -4,6 +4,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      ref:
+        description: Commit to verify and deploy
+        required: false
+        type: string
   workflow_call:
     inputs:
       ref:

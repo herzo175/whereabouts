@@ -2,6 +2,8 @@ name: Quality
 
 on:
   pull_request:
+    paths-ignore:
+      - 'packages/case-content/content/**'
   push:
     branches: [main]
 

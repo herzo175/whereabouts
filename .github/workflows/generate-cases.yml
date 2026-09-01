@@ -17,6 +17,7 @@ on:
         type: string
 
 permissions:
+  actions: write
   contents: write
   pull-requests: write
 
@@ -155,3 +156,9 @@ jobs:
             exit 1
           fi
           gh pr merge --squash "$PR_URL"
+          MERGE_SHA="$(gh pr view "$PR_URL" --json mergeCommit --jq '.mergeCommit.oid')"
+          if [[ ! "$MERGE_SHA" =~ ^[0-9a-f]{40}$ ]]; then
+            echo "Invalid generated-content merge commit: $MERGE_SHA" >&2
+            exit 1
+          fi
+          gh workflow run deploy-fly.yml --ref main -f ref="$MERGE_SHA"
