@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "publicationDate": "2026-08-29",
+  "revision": 1,
+  "themeVerdicts": [
+    {
+      "poiId": "historic-public-library-001",
+      "status": "pass",
+      "explanation": "The Boston Public Library is a named municipal public library founded in the nineteenth century. Its Central Library is a fixed, mappable Copley Square facility with public reading rooms, circulating and reference collections, and ordinary visitor services; its principal function remains library service.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-public-library-002",
+      "status": "pass",
+      "explanation": "The New York Public Library is a separately chartered public-serving institution established in 1895. Its Stephen A. Schwarzman Building is a fixed flagship facility with public reading rooms and collections accessible to visitors, and it remains principally a library despite private philanthropic governance.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-public-library-003",
+      "status": "pass",
+      "explanation": "The Free Library of Philadelphia was chartered in 1891 and opened for public service in 1894. Parkway Central Library is a fixed, identifiable public library facility offering lending, reference, reading, and public collection access; special collections do not displace its principal public-library function.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-public-library-004",
+      "status": "pass",
+      "explanation": "Chicago Public Library is identified as a municipal public library established in 1873. The Harold Washington Library Center is its fixed central facility with public collections, reference assistance, computers, and reading spaces, satisfying the public-access and continuing-library-service requirements.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-public-library-005",
+      "status": "pass",
+      "explanation": "Cleveland Public Library is a named public library system founded in 1869. Its downtown Main Library and Louis Stokes Wing form an identifiable fixed public facility with circulating and reference collections, service departments, and reading areas.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-public-library-006",
+      "status": "pass",
+      "explanation": "Detroit Public Library was founded in 1865 and remains the city's public library. Its Main Library is a fixed facility with public collections, reference services, exhibition areas, and reading rooms accessible to ordinary visitors.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-public-library-007",
+      "status": "pass",
+      "explanation": "The Enoch Pratt Free Library is a named public library founded in 1882. Its Central Library is a fixed Baltimore facility providing books, periodicals, reference help, technology, and reading areas for public users.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-public-library-008",
+      "status": "pass",
+      "explanation": "Milwaukee Public Library was founded in 1878 and continues as a public library institution. Its Central Library is a single identifiable public facility with circulating and reference services, collections, programs, and reading rooms.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-public-library-009",
+      "status": "pass",
+      "explanation": "St. Louis Public Library is a named municipal public library founded in 1865. Central Library is a fixed downtown facility with public service desks, books and periodicals, reference help, programs, and supervised reading areas.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-public-library-010",
+      "status": "pass",
+      "explanation": "Worcester Public Library is a named public library founded in 1859. Its Main Library is a fixed public-serving facility with collections, reference assistance, public computers, programming, and reading facilities.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-public-library-011",
+      "status": "pass",
+      "explanation": "Hartford Public Library traces its public-library foundation to 1774 and continues operating a central facility. The Main Library provides ordinary public access to books, periodicals, reference services, computers, programs, and reading areas.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-public-library-012",
+      "status": "pass",
+      "explanation": "Newark Public Library was established in 1888 and remains a named public library institution. Its downtown Main Library is a fixed facility with circulating and reference collections, public service departments, programs, and reading rooms.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-public-library-013",
+      "status": "pass",
+      "explanation": "Toronto's public library was established through the 1883 free-library movement, following earlier Mechanics' Institute service. The Toronto Reference Library is a fixed, independently identifiable public facility with collections, special collections, technology, and visitor-accessible reading areas.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-public-library-014",
+      "status": "pass",
+      "explanation": "Vancouver Public Library has documented institutional origins in 1887 and continues as a public library system. Its Central Library is a fixed facility offering lending and reference collections, public computers, programs, and reading areas.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-public-library-015",
+      "status": "pass",
+      "explanation": "Halifax public library service originated in the nineteenth century, with the supplied evidence identifying its public-library foundation as 1864. Halifax Central Library is a fixed operating public facility with lending, reference, and reading services for ordinary visitors.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-public-library-016",
+      "status": "pass",
+      "explanation": "Birmingham's municipal public library provision began in 1865 and continues through its central facilities. The Library of Birmingham is a fixed public-serving library open to ordinary visitors for lending, reference, local-studies, and reading services.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-public-library-017",
+      "status": "pass",
+      "explanation": "Manchester Free Library was founded in 1852, and the continuing municipal service operates at Manchester Central Library. The facility provides public collections, lending and reference services, reading rooms, and service desks.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-public-library-018",
+      "status": "pass",
+      "explanation": "Liverpool's first public library opened in 1852, establishing the qualifying historic public-library service. Liverpool Central Library is a fixed operating facility with public lending, reference, local-history, and reading services.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-public-library-019",
+      "status": "pass",
+      "explanation": "The independently named Mitchell Library was established in 1877 as Glasgow's public reference library. Its fixed North Street complex remains freely open to the public, includes reference and lending library services, and is principally a library rather than an archive or theatre.",
+      "sourceIds": ["source-01"]
+    },
+    {
+      "poiId": "historic-public-library-020",
+      "status": "pass",
+      "explanation": "Edinburgh Central Library follows a public-library foundation in 1887 and opened for service in 1890. It remains a fixed municipal public library with lending, reference, local-studies, and visitor-accessible reading facilities.",
+      "sourceIds": ["source-01"]
+    }
+  ],
+  "clueVerdicts": [
+    {
+      "roundId": "round-1",
+      "declaredTargetPoiId": "historic-public-library-001",
+      "resolvedPoiId": "historic-public-library-001",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The clue points to the Boston Public Library through its municipal free-library origins, research collections, Renaissance-inspired McKim building, attached later Boylston Street building, civic-square setting, and extensive branches. Those historical and architectural features distinguish it from the board without relying on exact figures or naming the target."
+    },
+    {
+      "roundId": "round-2",
+      "declaredTargetPoiId": "historic-public-library-002",
+      "resolvedPoiId": "historic-public-library-002",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The merger of Astor, Lenox, Tilden, and grassroots collections, the reservoir site, enormous reading room, guardian lions, and shared public-private support form a recognizable narrative for the New York Public Library. The target remains identifiable without exact dates, dimensions, or counts, and the clue does not state the target name or city."
+    },
+    {
+      "roundId": "round-3",
+      "declaredTargetPoiId": "historic-public-library-013",
+      "resolvedPoiId": "historic-public-library-013",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The Mechanics' Institute origin, referendum, unusually broad neighborhood network, bookmobiles, musical-instrument lending, technology hubs, and special-collections centre collectively distinguish Toronto Public Library. The identification survives removal of exact figures and years without using a forbidden city or target identifier."
+    },
+    {
+      "roundId": "round-4",
+      "declaredTargetPoiId": "historic-public-library-019",
+      "resolvedPoiId": "historic-public-library-019",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The tobacco philanthropist, copper dome, bronze Literature figure, incorporation of a surviving concert-hall façade, theatre, and city archives create a distinctive historical narrative for the Mitchell Library. Exact dates or measurements are unnecessary, and the clue avoids naming the target or Glasgow."
+    },
+    {
+      "roundId": "round-5",
+      "declaredTargetPoiId": "historic-public-library-003",
+      "resolvedPoiId": "historic-public-library-003",
+      "resolvedOffBoardAnswer": null,
+      "resolvableWithoutExactNumbers": true,
+      "status": "pass",
+      "explanation": "The 'free to all' founding promise, disputed bequest, cramped City Hall beginning, Beaux-Arts central building and civic setting, Dickens collection, and stuffed raven distinctly identify the Free Library of Philadelphia. The distinctive narrative remains usable without exact numbers or years and does not explicitly disclose the target name or city."
+    }
+  ],
+  "repairs": []
+}
