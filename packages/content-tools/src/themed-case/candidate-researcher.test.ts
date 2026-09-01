@@ -67,6 +67,12 @@ describe('researchCandidates', () => {
           expect(jsonSchema).toContain(
             '"extract":{"type":"string","minLength":100}',
           );
+          expect(jsonSchema).toContain(
+            '"wikipediaTitle":{"anyOf":[{"type":"string","minLength":2},{"type":"null"}]}',
+          );
+          expect(jsonSchema).toContain(
+            '"required":["id","name","city","country","wikipediaTitle","themeClaim","latitude","longitude","source"]',
+          );
           expect(jsonSchema).not.toContain('"format":"uri"');
           expect(jsonSchema).not.toContain('"format":"date-time"');
           return { theme: fixtureTheme, candidates };
@@ -76,11 +82,11 @@ describe('researchCandidates', () => {
     expect(pool.candidates).toHaveLength(40);
   });
 
-  it('keeps model candidates that do not provide Wikipedia metadata', async () => {
-    const candidates = Array.from({ length: 40 }, (_, index) => {
-      const { wikipediaTitle: _title, ...candidate } = proposal(index);
-      return candidate;
-    });
+  it('normalizes null Wikipedia metadata out of model candidates', async () => {
+    const candidates = Array.from({ length: 40 }, (_, index) => ({
+      ...proposal(index),
+      wikipediaTitle: null,
+    }));
     const pool = await researchCandidates({
       theme: fixtureTheme,
       model: {
