@@ -21,7 +21,7 @@ const modelCandidateSchema = z.object({
   name: z.string().min(2),
   city: z.string().min(1),
   country: z.string().min(2),
-  wikipediaTitle: z.string().min(2).optional(),
+  wikipediaTitle: z.string().min(2).nullable(),
   themeClaim: z.string().min(20),
   latitude: z.number().min(-90).max(90),
   longitude: z.number().min(-180).max(180),
@@ -79,7 +79,7 @@ export async function researchCandidates(input: {
     'For every proposal include reliable coordinates, a source URL, and a source extract of at least 100 characters. These are model evidence for later human audit, not independently verified facts. Do not invent a source or claim certainty when you do not know it.',
     "Set each proposal source provenance to 'model'; the pipeline ignores any other value from the model.",
     'Do not include an image; target images are verified separately after curation.',
-    'Include wikipediaTitle only when you know the specific English Wikipedia article title; otherwise omit it.',
+    'Set wikipediaTitle to the specific English Wikipedia article title when you know it; otherwise set it to null.',
     'Keep all candidates tightly within the theme. Do not add generic famous places as easy distractors.',
   ].join('\n');
   const generated = await input.model.generate({
@@ -89,7 +89,11 @@ export async function researchCandidates(input: {
   });
   const proposals: ResearchedCandidate[] = [];
   for (const value of generated.candidates) {
-    const parsed = researchedCandidateSchema.safeParse(value);
+    const { wikipediaTitle, ...candidate } = value;
+    const parsed = researchedCandidateSchema.safeParse({
+      ...candidate,
+      ...(wikipediaTitle === null ? {} : { wikipediaTitle }),
+    });
     if (!parsed.success) continue;
     proposals.push({
       ...parsed.data,

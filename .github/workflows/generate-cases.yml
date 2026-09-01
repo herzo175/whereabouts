@@ -2,9 +2,9 @@ name: Generate case buffer
 
 on:
   schedule:
-    # GitHub Actions cron is UTC. Run at both possible UTC midnight-Eastern
-    # offsets, then let the guard below select the actual midnight run.
-    - cron: '0 4,5 * * *'
+    # GitHub Actions cron is UTC. Buffer maintenance does not require an exact
+    # midnight start, and delayed scheduled runs must still execute.
+    - cron: '0 5 * * *'
   workflow_dispatch:
     inputs:
       theme:
@@ -28,32 +28,19 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - name: Check for midnight Eastern
-        id: schedule
-        run: |
-          if [ "$(TZ=America/New_York date +%H)" = "00" ]; then
-            echo "run=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "run=false" >> "$GITHUB_OUTPUT"
-          fi
-      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           ref: main
-      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v4
         with:
           version: 10.30.0
-      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: pnpm
-      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        name: Install dependencies
+      - name: Install dependencies
         run: pnpm install --frozen-lockfile
-      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        name: Calculate and validate Eastern publication dates
+      - name: Calculate and validate Eastern publication dates
         id: dates
         env:
           REQUESTED_DATE: ${{ inputs.date || '' }}
@@ -95,8 +82,7 @@ jobs:
           echo "end=$END_DATE" >> "$GITHUB_OUTPUT"
           echo "days=$DAYS" >> "$GITHUB_OUTPUT"
           echo "ceiling=$PUBLICATION_CEILING" >> "$GITHUB_OUTPUT"
-      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        name: Create generated-content branch
+      - name: Create generated-content branch
         env:
           CONTENT_BRANCH: content/generated-buffer-${{ github.run_id }}
         run: |
@@ -105,8 +91,7 @@ jobs:
             exit 1
           fi
           git switch --create "$CONTENT_BRANCH" origin/main
-      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        name: Generate requested case or maintain buffer
+      - name: Generate requested case or maintain buffer
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY || secrets.openrouter_api_key }}
           WIKIMEDIA_USER_AGENT: ${{ secrets.WIKIMEDIA_USER_AGENT || 'Whereabouts/1.0 (https://github.com/herzo175/whereabouts)' }}
@@ -124,11 +109,9 @@ jobs:
           else
             pnpm content:prepare-buffer -- "${ARGS[@]}"
           fi
-      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        name: Format generated case content
+      - name: Format generated case content
         run: pnpm exec biome format --write packages/case-content/content
-      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        name: Validate generated publication buffer
+      - name: Validate generated publication buffer
         env:
           PUBLICATION_CEILING: ${{ steps.dates.outputs.ceiling }}
         run: |
@@ -138,8 +121,7 @@ jobs:
           fi
           pnpm content:validate
           pnpm quality
-      - if: github.event_name == 'workflow_dispatch' || steps.schedule.outputs.run == 'true'
-        name: Commit and publish generated buffer pull request
+      - name: Commit and publish generated buffer pull request
         env:
           CONTENT_BRANCH: content/generated-buffer-${{ github.run_id }}
           START_DATE: ${{ steps.dates.outputs.start }}

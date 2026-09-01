@@ -7,6 +7,15 @@ const workflowUrl = new URL(
 );
 
 describe('generate cases workflow', () => {
+  it('runs one daily schedule without a runner wall-clock guard', async () => {
+    const workflow = await readFile(workflowUrl, 'utf8');
+
+    expect(workflow).toContain("- cron: '0 5 * * *'");
+    expect(workflow).not.toContain("cron: '0 4,5 * * *'");
+    expect(workflow).not.toContain('Check for midnight Eastern');
+    expect(workflow).not.toContain('steps.schedule.outputs.run');
+  });
+
   it('generates a new revision for manual dispatches and only fills missing scheduled dates', async () => {
     const workflow = await readFile(workflowUrl, 'utf8');
     const generationStep = workflow.slice(
