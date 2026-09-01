@@ -1,0 +1,1147 @@
+{
+  "schemaVersion": 4,
+  "publicationDate": "2026-08-29",
+  "revision": 1,
+  "caseNumber": 20694,
+  "pois": [
+    {
+      "id": "historic-public-library-005",
+      "name": "Cleveland Public Library – Louis Stokes Wing and Main Library",
+      "city": "Cleveland",
+      "country": "United States",
+      "latitude": 41.499783,
+      "longitude": -81.694972,
+      "wikipediaTitle": "Cleveland Public Library",
+      "blurb": "Cleveland Public Library is a public library system serving Cleveland, Ohio, founded in 1869. Its downtown Main Library provides public access to circulating and reference collections, research services, public computers, and reading rooms.",
+      "themeConnection": {
+        "text": "Cleveland Public Library was founded in 1869 and continues operating as the city’s public library, with public service departments and reading areas at its downtown main facility.",
+        "sourceIds": ["source-05"]
+      }
+    },
+    {
+      "id": "historic-public-library-016",
+      "name": "Birmingham Central Library",
+      "city": "Birmingham",
+      "country": "United Kingdom",
+      "latitude": 52.479663,
+      "longitude": -1.908459,
+      "wikipediaTitle": "Birmingham Library",
+      "blurb": "Birmingham's first public library opened in 1865, and Birmingham has continued municipal library provision through successive central facilities. The Library of Birmingham provides public lending, reference, local studies, and reading services.",
+      "themeConnection": {
+        "text": "Birmingham’s public library service was established in 1865 and continues at the Library of Birmingham, a fixed municipal facility open to ordinary visitors for collections and reading services.",
+        "sourceIds": ["source-16"]
+      }
+    },
+    {
+      "id": "historic-public-library-008",
+      "name": "Milwaukee Public Library – Central Library",
+      "city": "Milwaukee",
+      "country": "United States",
+      "latitude": 43.039097,
+      "longitude": -87.906731,
+      "wikipediaTitle": "Milwaukee Public Library",
+      "blurb": "Milwaukee Public Library is a public library system serving Milwaukee, Wisconsin, founded in 1878. The Central Library is a public facility with circulating collections, reference departments, public programs, and reading rooms.",
+      "themeConnection": {
+        "text": "Milwaukee Public Library was founded in 1878 and its historic Central Library continues to provide ordinary public access to lending, reference, and reading services.",
+        "sourceIds": ["source-08"]
+      }
+    },
+    {
+      "id": "historic-public-library-007",
+      "name": "Enoch Pratt Free Library – Central Library",
+      "city": "Baltimore",
+      "country": "United States",
+      "latitude": 39.295211,
+      "longitude": -76.616711,
+      "wikipediaTitle": "Enoch Pratt Free Library",
+      "blurb": "The Enoch Pratt Free Library is a public library system serving Baltimore, Maryland, founded in 1882. Its Central Library is a public service facility offering books, periodicals, reference assistance, technology, and reading areas.",
+      "themeConnection": {
+        "text": "The Enoch Pratt Free Library was established in 1882 and remains Baltimore’s public library, with its Central Library providing public collections, reference help, and reading spaces.",
+        "sourceIds": ["source-07"]
+      }
+    },
+    {
+      "id": "historic-public-library-017",
+      "name": "Manchester Central Library",
+      "city": "Manchester",
+      "country": "United Kingdom",
+      "latitude": 53.479461,
+      "longitude": -2.24462,
+      "wikipediaTitle": "Manchester Central Library",
+      "blurb": "Manchester Central Library is the headquarters of Manchester Libraries. Manchester Free Library was established in 1852, and the current central public library provides lending, reference, local studies, public computers, and reading rooms.",
+      "themeConnection": {
+        "text": "Manchester Free Library was founded in 1852 and the continuing municipal library service operates at Manchester Central Library with public collections, reading rooms, and service desks.",
+        "sourceIds": ["source-17"]
+      }
+    },
+    {
+      "id": "historic-public-library-011",
+      "name": "Hartford Public Library – Main Library",
+      "city": "Hartford",
+      "country": "United States",
+      "latitude": 41.764693,
+      "longitude": -72.673284,
+      "wikipediaTitle": "Hartford Public Library",
+      "blurb": "Hartford Public Library is the public library of Hartford, Connecticut, with origins in 1774. The Main Library provides public access to books, periodicals, reference services, public computers, programming, and reading areas.",
+      "themeConnection": {
+        "text": "Hartford Public Library traces its public-library foundation to 1774 and continues to operate a central public library facility with ordinary visitor access to collections and services.",
+        "sourceIds": ["source-11"]
+      }
+    },
+    {
+      "id": "historic-public-library-013",
+      "name": "Toronto Public Library – Toronto Reference Library",
+      "city": "Toronto",
+      "country": "Canada",
+      "latitude": 43.671081,
+      "longitude": -79.386299,
+      "wikipediaTitle": "Toronto Public Library",
+      "blurb": "Toronto Public Library (TPL) is a public library system in Toronto, Ontario.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Toronto_Public_Library_Logo.png/1280px-Toronto_Public_Library_Logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Toronto Public Library",
+        "attribution": "Toronto Public Library · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Toronto_Public_Library_Logo.png"
+      },
+      "themeConnection": {
+        "text": "Toronto Public Library was founded in 1883 and remains a public municipal library; the Toronto Reference Library is an identifiable public facility with collection access and reading rooms.",
+        "sourceIds": ["source-13"]
+      }
+    },
+    {
+      "id": "historic-public-library-014",
+      "name": "Vancouver Public Library – Central Library",
+      "city": "Vancouver",
+      "country": "Canada",
+      "latitude": 49.279842,
+      "longitude": -123.116469,
+      "wikipediaTitle": "Vancouver Public Library",
+      "blurb": "Vancouver Public Library is the public library system of Vancouver, British Columbia, with origins in 1887. Its Central Library provides public access to lending and reference collections, public computers, programs, and reading areas.",
+      "themeConnection": {
+        "text": "Vancouver Public Library traces its institutional foundation to 1887 and continues as a public library at its Central Library, where visitors use collections and public service areas.",
+        "sourceIds": ["source-14"]
+      }
+    },
+    {
+      "id": "historic-public-library-004",
+      "name": "Chicago Public Library – Harold Washington Library Center",
+      "city": "Chicago",
+      "country": "United States",
+      "latitude": 41.876211,
+      "longitude": -87.628297,
+      "wikipediaTitle": "Chicago Public Library",
+      "blurb": "The Chicago Public Library is the public library system serving Chicago, Illinois, established in 1873. The Harold Washington Library Center is its central public facility, offering collections, reference assistance, public computers, and reading spaces.",
+      "themeConnection": {
+        "text": "Chicago Public Library was established in 1873 and remains a municipal public library system; its principal Harold Washington Library Center provides public access to collections and reading areas.",
+        "sourceIds": ["source-04"]
+      }
+    },
+    {
+      "id": "historic-public-library-009",
+      "name": "St. Louis Public Library – Central Library",
+      "city": "St. Louis",
+      "country": "United States",
+      "latitude": 38.630916,
+      "longitude": -90.191389,
+      "wikipediaTitle": "St. Louis Public Library",
+      "blurb": "The St. Louis Public Library is a public library system serving St. Louis, Missouri, founded in 1865. Central Library is its downtown public facility and provides books, periodicals, reference help, public programs, and reading spaces.",
+      "themeConnection": {
+        "text": "St. Louis Public Library was founded in 1865 and continues as a municipal public library; the Central Library provides public service desks, collections, and supervised reading areas.",
+        "sourceIds": ["source-09"]
+      }
+    },
+    {
+      "id": "historic-public-library-018",
+      "name": "Liverpool Central Library",
+      "city": "Liverpool",
+      "country": "United Kingdom",
+      "latitude": 53.41076,
+      "longitude": -2.97933,
+      "wikipediaTitle": "Liverpool Central Library",
+      "blurb": "Liverpool Central Library is the main library of Liverpool Libraries. Liverpool's first public library opened in 1852, and the present central facility provides public lending, reference, local history, archival-library, and reading services.",
+      "themeConnection": {
+        "text": "Liverpool’s public library service was founded in 1852 and continues at Liverpool Central Library, where ordinary visitors can use public collections, reference services, and reading spaces.",
+        "sourceIds": ["source-18"]
+      }
+    },
+    {
+      "id": "historic-public-library-001",
+      "name": "Boston Public Library – Central Library",
+      "city": "Boston",
+      "country": "United States",
+      "latitude": 42.349298,
+      "longitude": -71.078472,
+      "wikipediaTitle": "Boston Public Library",
+      "blurb": "The Boston Public Library (BPL) is a municipal public library system in Boston, Massachusetts, founded in 1848.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Seal_of_the_Boston_Public_Library.svg/1280px-Seal_of_the_Boston_Public_Library.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Boston Public Library",
+        "attribution": "Designed by Augustus Saint-GaudensPhotographed by Edward Stevens, Clerk of Works;traced by Simtropolitan · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Seal_of_the_Boston_Public_Library.svg"
+      },
+      "themeConnection": {
+        "text": "The Boston Public Library was established in 1848 as a municipal public library and continues operating public reading rooms and service areas at its Copley Square facility.",
+        "sourceIds": ["source-01"]
+      }
+    },
+    {
+      "id": "historic-public-library-020",
+      "name": "Edinburgh Central Library",
+      "city": "Edinburgh",
+      "country": "United Kingdom",
+      "latitude": 55.948546,
+      "longitude": -3.191454,
+      "wikipediaTitle": "Edinburgh Central Library",
+      "blurb": "Edinburgh Central Library is the main public library of the City of Edinburgh Libraries. The service was established in 1887, and the central library remains open to the public with lending, reference, local studies, and reading facilities.",
+      "themeConnection": {
+        "text": "Edinburgh Central Library opened in 1890 following a public-library foundation in 1887 and continues operating as a municipal public library with visitor-accessible collections and reading rooms.",
+        "sourceIds": ["source-20"]
+      }
+    },
+    {
+      "id": "historic-public-library-010",
+      "name": "Worcester Public Library – Main Library",
+      "city": "Worcester",
+      "country": "United States",
+      "latitude": 42.26211,
+      "longitude": -71.80242,
+      "wikipediaTitle": "Worcester Public Library",
+      "blurb": "Worcester Public Library is the public library system of Worcester, Massachusetts, founded in 1859. Its Main Library serves the public with books, periodicals, reference assistance, public computers, programming, and reading rooms.",
+      "themeConnection": {
+        "text": "Worcester Public Library was founded in 1859 and continues operating its Main Library as a public-serving institution with collections, public desks, and reading facilities.",
+        "sourceIds": ["source-10"]
+      }
+    },
+    {
+      "id": "historic-public-library-019",
+      "name": "Mitchell Library",
+      "city": "Glasgow",
+      "country": "United Kingdom",
+      "latitude": 55.862337,
+      "longitude": -4.267119,
+      "wikipediaTitle": "Mitchell Library",
+      "blurb": "The Mitchell Library is a large public library located in the Charing Cross area of Glasgow, Scotland. It is the largest public reference library in Europe, and the centre of Glasgow's public library system.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Mitchell_library.jpg/1280px-Mitchell_library.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Mitchell Library",
+        "attribution": "No machine-readable author provided. Andeggs~commonswiki assumed (based on copyright claims). · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Mitchell_library.jpg"
+      },
+      "themeConnection": {
+        "text": "The Mitchell Library was established as Glasgow’s public reference library in 1877 and remains an independently named public library facility with public reading and reference areas.",
+        "sourceIds": ["source-19"]
+      }
+    },
+    {
+      "id": "historic-public-library-003",
+      "name": "Free Library of Philadelphia – Parkway Central Library",
+      "city": "Philadelphia",
+      "country": "United States",
+      "latitude": 39.965811,
+      "longitude": -75.171959,
+      "wikipediaTitle": "Free Library of Philadelphia",
+      "blurb": "The Free Library of Philadelphia is the public library system that serves the city of Philadelphia, Pennsylvania. It is the 16th-largest public library system in the United States.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/The_Free_Library_of_Philadelphia_%2853574634710%29.jpg/1280px-The_Free_Library_of_Philadelphia_%2853574634710%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Free Library of Philadelphia",
+        "attribution": "ajay_suresh · CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "themeConnection": {
+        "text": "The Free Library of Philadelphia was founded in 1891 and continues as a public library at the Parkway Central Library, where ordinary visitors can use public collections and reading facilities.",
+        "sourceIds": ["source-03"]
+      }
+    },
+    {
+      "id": "historic-public-library-006",
+      "name": "Detroit Public Library – Main Library",
+      "city": "Detroit",
+      "country": "United States",
+      "latitude": 42.381411,
+      "longitude": -83.078104,
+      "wikipediaTitle": "Detroit Public Library",
+      "blurb": "The Detroit Public Library is the public library system of Detroit, Michigan, founded in 1865. The Main Library on Woodward Avenue contains public collections, reference services, exhibition areas, and reading rooms.",
+      "themeConnection": {
+        "text": "Detroit Public Library was founded in 1865 and still operates its Main Library as a public-serving municipal library with ordinary visitor access to collections and reading rooms.",
+        "sourceIds": ["source-06"]
+      }
+    },
+    {
+      "id": "historic-public-library-015",
+      "name": "Halifax Central Library",
+      "city": "Halifax",
+      "country": "Canada",
+      "latitude": 44.642673,
+      "longitude": -63.575335,
+      "wikipediaTitle": "Halifax Public Libraries",
+      "blurb": "Halifax Public Libraries developed from the Halifax Mechanics' Institute library established in 1830s and public library service founded in 1864. The Central Library is an operating public facility with lending, reference, and reading services.",
+      "themeConnection": {
+        "text": "Halifax Public Libraries originated in 1864 and remains a public library institution; its Central Library is a fixed public facility with ordinary access to collections and reading areas.",
+        "sourceIds": ["source-15"]
+      }
+    },
+    {
+      "id": "historic-public-library-012",
+      "name": "Newark Public Library – Main Library",
+      "city": "Newark",
+      "country": "United States",
+      "latitude": 40.74026,
+      "longitude": -74.171663,
+      "wikipediaTitle": "Newark Public Library",
+      "blurb": "The Newark Public Library is a public library system serving Newark, New Jersey, founded in 1888. Its Main Library is a public facility with circulating and reference collections, public service departments, programs, and reading rooms.",
+      "themeConnection": {
+        "text": "Newark Public Library was established in 1888 and remains a public library institution with a downtown Main Library offering public collections, reference services, and reading space.",
+        "sourceIds": ["source-12"]
+      }
+    },
+    {
+      "id": "historic-public-library-002",
+      "name": "New York Public Library – Stephen A. Schwarzman Building",
+      "city": "New York",
+      "country": "United States",
+      "latitude": 40.753182,
+      "longitude": -73.982253,
+      "wikipediaTitle": "New York Public Library",
+      "blurb": "The New York Public Library (NYPL) is a chartered public library system in New York City, United States.",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Public_Building_Library.jpg/1280px-Public_Building_Library.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "New York Public Library",
+        "attribution": "Hanzon · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "themeConnection": {
+        "text": "The New York Public Library was established in 1895 and remains a public library institution with ordinary visitor access to service areas and reading rooms at the Fifth Avenue flagship.",
+        "sourceIds": ["source-02"]
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "round-1",
+      "targetPoiId": "historic-public-library-001",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Seal_of_the_Boston_Public_Library.svg/1280px-Seal_of_the_Boston_Public_Library.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Boston Public Library",
+        "attribution": "Designed by Augustus Saint-GaudensPhotographed by Edward Stevens, Clerk of Works;traced by Simtropolitan · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Seal_of_the_Boston_Public_Library.svg"
+      },
+      "clue": {
+        "text": "Born from a mid-19th-century municipal idea of free learning, this flagship grew into a research powerhouse while still welcoming ordinary readers. Its central complex pairs a Renaissance-inspired research building with a later companion, faces a celebrated civic square, and is known for a vast rare-book and manuscript trove alongside neighborhood branches.",
+        "sourceIds": ["source-01"]
+      },
+      "results": [
+        {
+          "poiId": "historic-public-library-001",
+          "points": 100,
+          "text": "Boston Public Library – Central Library is the round target: The Boston Public Library was established in 1848 as a municipal public library and continues operating public reading rooms and service areas at its Copley Square facility.",
+          "sourceIds": ["source-01"]
+        },
+        {
+          "poiId": "historic-public-library-002",
+          "points": 85,
+          "text": "New York Public Library – Stephen A. Schwarzman Building is a themed comparison candidate: The New York Public Library was established in 1895 and remains a public library institution with ordinary visitor access to service areas and reading rooms at the Fifth Avenue flagship.",
+          "sourceIds": ["source-02", "source-01"]
+        },
+        {
+          "poiId": "historic-public-library-003",
+          "points": 79,
+          "text": "Free Library of Philadelphia – Parkway Central Library is a themed comparison candidate: The Free Library of Philadelphia was founded in 1891 and continues as a public library at the Parkway Central Library, where ordinary visitors can use public collections and reading facilities.",
+          "sourceIds": ["source-03", "source-01"]
+        },
+        {
+          "poiId": "historic-public-library-004",
+          "points": 33,
+          "text": "Chicago Public Library – Harold Washington Library Center is a themed comparison candidate: Chicago Public Library was established in 1873 and remains a municipal public library system; its principal Harold Washington Library Center provides public access to collections and reading areas.",
+          "sourceIds": ["source-04", "source-01"]
+        },
+        {
+          "poiId": "historic-public-library-005",
+          "points": 31,
+          "text": "Cleveland Public Library – Louis Stokes Wing and Main Library is a themed comparison candidate: Cleveland Public Library was founded in 1869 and continues operating as the city’s public library, with public service departments and reading areas at its downtown main facility.",
+          "sourceIds": ["source-05", "source-01"]
+        },
+        {
+          "poiId": "historic-public-library-006",
+          "points": 29,
+          "text": "Detroit Public Library – Main Library is a themed comparison candidate: Detroit Public Library was founded in 1865 and still operates its Main Library as a public-serving municipal library with ordinary visitor access to collections and reading rooms.",
+          "sourceIds": ["source-06", "source-01"]
+        },
+        {
+          "poiId": "historic-public-library-007",
+          "points": 41,
+          "text": "Enoch Pratt Free Library – Central Library is a themed comparison candidate: The Enoch Pratt Free Library was established in 1882 and remains Baltimore’s public library, with its Central Library providing public collections, reference help, and reading spaces.",
+          "sourceIds": ["source-07", "source-01"]
+        },
+        {
+          "poiId": "historic-public-library-008",
+          "points": 38,
+          "text": "Milwaukee Public Library – Central Library is a themed comparison candidate: Milwaukee Public Library was founded in 1878 and its historic Central Library continues to provide ordinary public access to lending, reference, and reading services.",
+          "sourceIds": ["source-08", "source-01"]
+        },
+        {
+          "poiId": "historic-public-library-009",
+          "points": 35,
+          "text": "St. Louis Public Library – Central Library is a themed comparison candidate: St. Louis Public Library was founded in 1865 and continues as a municipal public library; the Central Library provides public service desks, collections, and supervised reading areas.",
+          "sourceIds": ["source-09", "source-01"]
+        },
+        {
+          "poiId": "historic-public-library-010",
+          "points": 26,
+          "text": "Worcester Public Library – Main Library is a themed comparison candidate: Worcester Public Library was founded in 1859 and continues operating its Main Library as a public-serving institution with collections, public desks, and reading facilities.",
+          "sourceIds": ["source-10", "source-01"]
+        },
+        {
+          "poiId": "historic-public-library-011",
+          "points": 23,
+          "text": "Hartford Public Library – Main Library is a themed comparison candidate: Hartford Public Library traces its public-library foundation to 1774 and continues to operate a central public library facility with ordinary visitor access to collections and services.",
+          "sourceIds": ["source-11", "source-01"]
+        },
+        {
+          "poiId": "historic-public-library-012",
+          "points": 20,
+          "text": "Newark Public Library – Main Library is a themed comparison candidate: Newark Public Library was established in 1888 and remains a public library institution with a downtown Main Library offering public collections, reference services, and reading space.",
+          "sourceIds": ["source-12", "source-01"]
+        },
+        {
+          "poiId": "historic-public-library-013",
+          "points": 57,
+          "text": "Toronto Public Library – Toronto Reference Library is a themed comparison candidate: Toronto Public Library was founded in 1883 and remains a public municipal library; the Toronto Reference Library is an identifiable public facility with collection access and reading rooms.",
+          "sourceIds": ["source-13", "source-01"]
+        },
+        {
+          "poiId": "historic-public-library-014",
+          "points": 17,
+          "text": "Vancouver Public Library – Central Library is a themed comparison candidate: Vancouver Public Library traces its institutional foundation to 1887 and continues as a public library at its Central Library, where visitors use collections and public service areas.",
+          "sourceIds": ["source-14", "source-01"]
+        },
+        {
+          "poiId": "historic-public-library-015",
+          "points": 12,
+          "text": "Halifax Central Library is a themed comparison candidate: Halifax Public Libraries originated in 1864 and remains a public library institution; its Central Library is a fixed public facility with ordinary access to collections and reading areas.",
+          "sourceIds": ["source-15", "source-01"]
+        },
+        {
+          "poiId": "historic-public-library-016",
+          "points": 48,
+          "text": "Birmingham Central Library is a themed comparison candidate: Birmingham’s public library service was established in 1865 and continues at the Library of Birmingham, a fixed municipal facility open to ordinary visitors for collections and reading services.",
+          "sourceIds": ["source-16", "source-01"]
+        },
+        {
+          "poiId": "historic-public-library-017",
+          "points": 53,
+          "text": "Manchester Central Library is a themed comparison candidate: Manchester Free Library was founded in 1852 and the continuing municipal library service operates at Manchester Central Library with public collections, reading rooms, and service desks.",
+          "sourceIds": ["source-17", "source-01"]
+        },
+        {
+          "poiId": "historic-public-library-018",
+          "points": 51,
+          "text": "Liverpool Central Library is a themed comparison candidate: Liverpool’s public library service was founded in 1852 and continues at Liverpool Central Library, where ordinary visitors can use public collections, reference services, and reading spaces.",
+          "sourceIds": ["source-18", "source-01"]
+        },
+        {
+          "poiId": "historic-public-library-019",
+          "points": 64,
+          "text": "Mitchell Library is a themed comparison candidate: The Mitchell Library was established as Glasgow’s public reference library in 1877 and remains an independently named public library facility with public reading and reference areas.",
+          "sourceIds": ["source-19", "source-01"]
+        },
+        {
+          "poiId": "historic-public-library-020",
+          "points": 44,
+          "text": "Edinburgh Central Library is a themed comparison candidate: Edinburgh Central Library opened in 1890 following a public-library foundation in 1887 and continues operating as a municipal public library with visitor-accessible collections and reading rooms.",
+          "sourceIds": ["source-20", "source-01"]
+        }
+      ]
+    },
+    {
+      "id": "round-2",
+      "targetPoiId": "historic-public-library-002",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Public_Building_Library.jpg/1280px-Public_Building_Library.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "New York Public Library",
+        "attribution": "Hanzon · CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "clue": {
+        "text": "A grand public institution emerged when several elite and grassroots collections were joined by a bequest intended to serve everyone. Its monumental Beaux-Arts home rose above an old reservoir site, with a famously immense reading room and guardian sculptures, while private philanthropy and city support still share the burden of service.",
+        "sourceIds": ["source-02"]
+      },
+      "results": [
+        {
+          "poiId": "historic-public-library-001",
+          "points": 88,
+          "text": "Boston Public Library – Central Library is a themed comparison candidate: The Boston Public Library was established in 1848 as a municipal public library and continues operating public reading rooms and service areas at its Copley Square facility.",
+          "sourceIds": ["source-01", "source-02"]
+        },
+        {
+          "poiId": "historic-public-library-002",
+          "points": 100,
+          "text": "New York Public Library – Stephen A. Schwarzman Building is the round target: The New York Public Library was established in 1895 and remains a public library institution with ordinary visitor access to service areas and reading rooms at the Fifth Avenue flagship.",
+          "sourceIds": ["source-02"]
+        },
+        {
+          "poiId": "historic-public-library-003",
+          "points": 76,
+          "text": "Free Library of Philadelphia – Parkway Central Library is a themed comparison candidate: The Free Library of Philadelphia was founded in 1891 and continues as a public library at the Parkway Central Library, where ordinary visitors can use public collections and reading facilities.",
+          "sourceIds": ["source-03", "source-02"]
+        },
+        {
+          "poiId": "historic-public-library-004",
+          "points": 32,
+          "text": "Chicago Public Library – Harold Washington Library Center is a themed comparison candidate: Chicago Public Library was established in 1873 and remains a municipal public library system; its principal Harold Washington Library Center provides public access to collections and reading areas.",
+          "sourceIds": ["source-04", "source-02"]
+        },
+        {
+          "poiId": "historic-public-library-005",
+          "points": 30,
+          "text": "Cleveland Public Library – Louis Stokes Wing and Main Library is a themed comparison candidate: Cleveland Public Library was founded in 1869 and continues operating as the city’s public library, with public service departments and reading areas at its downtown main facility.",
+          "sourceIds": ["source-05", "source-02"]
+        },
+        {
+          "poiId": "historic-public-library-006",
+          "points": 28,
+          "text": "Detroit Public Library – Main Library is a themed comparison candidate: Detroit Public Library was founded in 1865 and still operates its Main Library as a public-serving municipal library with ordinary visitor access to collections and reading rooms.",
+          "sourceIds": ["source-06", "source-02"]
+        },
+        {
+          "poiId": "historic-public-library-007",
+          "points": 39,
+          "text": "Enoch Pratt Free Library – Central Library is a themed comparison candidate: The Enoch Pratt Free Library was established in 1882 and remains Baltimore’s public library, with its Central Library providing public collections, reference help, and reading spaces.",
+          "sourceIds": ["source-07", "source-02"]
+        },
+        {
+          "poiId": "historic-public-library-008",
+          "points": 36,
+          "text": "Milwaukee Public Library – Central Library is a themed comparison candidate: Milwaukee Public Library was founded in 1878 and its historic Central Library continues to provide ordinary public access to lending, reference, and reading services.",
+          "sourceIds": ["source-08", "source-02"]
+        },
+        {
+          "poiId": "historic-public-library-009",
+          "points": 34,
+          "text": "St. Louis Public Library – Central Library is a themed comparison candidate: St. Louis Public Library was founded in 1865 and continues as a municipal public library; the Central Library provides public service desks, collections, and supervised reading areas.",
+          "sourceIds": ["source-09", "source-02"]
+        },
+        {
+          "poiId": "historic-public-library-010",
+          "points": 22,
+          "text": "Worcester Public Library – Main Library is a themed comparison candidate: Worcester Public Library was founded in 1859 and continues operating its Main Library as a public-serving institution with collections, public desks, and reading facilities.",
+          "sourceIds": ["source-10", "source-02"]
+        },
+        {
+          "poiId": "historic-public-library-011",
+          "points": 19,
+          "text": "Hartford Public Library – Main Library is a themed comparison candidate: Hartford Public Library traces its public-library foundation to 1774 and continues to operate a central public library facility with ordinary visitor access to collections and services.",
+          "sourceIds": ["source-11", "source-02"]
+        },
+        {
+          "poiId": "historic-public-library-012",
+          "points": 25,
+          "text": "Newark Public Library – Main Library is a themed comparison candidate: Newark Public Library was established in 1888 and remains a public library institution with a downtown Main Library offering public collections, reference services, and reading space.",
+          "sourceIds": ["source-12", "source-02"]
+        },
+        {
+          "poiId": "historic-public-library-013",
+          "points": 54,
+          "text": "Toronto Public Library – Toronto Reference Library is a themed comparison candidate: Toronto Public Library was founded in 1883 and remains a public municipal library; the Toronto Reference Library is an identifiable public facility with collection access and reading rooms.",
+          "sourceIds": ["source-13", "source-02"]
+        },
+        {
+          "poiId": "historic-public-library-014",
+          "points": 16,
+          "text": "Vancouver Public Library – Central Library is a themed comparison candidate: Vancouver Public Library traces its institutional foundation to 1887 and continues as a public library at its Central Library, where visitors use collections and public service areas.",
+          "sourceIds": ["source-14", "source-02"]
+        },
+        {
+          "poiId": "historic-public-library-015",
+          "points": 10,
+          "text": "Halifax Central Library is a themed comparison candidate: Halifax Public Libraries originated in 1864 and remains a public library institution; its Central Library is a fixed public facility with ordinary access to collections and reading areas.",
+          "sourceIds": ["source-15", "source-02"]
+        },
+        {
+          "poiId": "historic-public-library-016",
+          "points": 47,
+          "text": "Birmingham Central Library is a themed comparison candidate: Birmingham’s public library service was established in 1865 and continues at the Library of Birmingham, a fixed municipal facility open to ordinary visitors for collections and reading services.",
+          "sourceIds": ["source-16", "source-02"]
+        },
+        {
+          "poiId": "historic-public-library-017",
+          "points": 50,
+          "text": "Manchester Central Library is a themed comparison candidate: Manchester Free Library was founded in 1852 and the continuing municipal library service operates at Manchester Central Library with public collections, reading rooms, and service desks.",
+          "sourceIds": ["source-17", "source-02"]
+        },
+        {
+          "poiId": "historic-public-library-018",
+          "points": 45,
+          "text": "Liverpool Central Library is a themed comparison candidate: Liverpool’s public library service was founded in 1852 and continues at Liverpool Central Library, where ordinary visitors can use public collections, reference services, and reading spaces.",
+          "sourceIds": ["source-18", "source-02"]
+        },
+        {
+          "poiId": "historic-public-library-019",
+          "points": 61,
+          "text": "Mitchell Library is a themed comparison candidate: The Mitchell Library was established as Glasgow’s public reference library in 1877 and remains an independently named public library facility with public reading and reference areas.",
+          "sourceIds": ["source-19", "source-02"]
+        },
+        {
+          "poiId": "historic-public-library-020",
+          "points": 42,
+          "text": "Edinburgh Central Library is a themed comparison candidate: Edinburgh Central Library opened in 1890 following a public-library foundation in 1887 and continues operating as a municipal public library with visitor-accessible collections and reading rooms.",
+          "sourceIds": ["source-20", "source-02"]
+        }
+      ]
+    },
+    {
+      "id": "round-3",
+      "targetPoiId": "historic-public-library-013",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Toronto_Public_Library_Logo.png/1280px-Toronto_Public_Library_Logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Toronto Public Library",
+        "attribution": "Toronto Public Library · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Toronto_Public_Library_Logo.png"
+      },
+      "clue": {
+        "text": "A public-library movement here began with a mechanics’ institute and won legitimacy through a citywide campaign and referendum. It later became an unusually extensive neighborhood network, adapting service to a multicultural population with bookmobiles, borrowable musical instruments, technology hubs, and a special-collections centre in its reference flagship.",
+        "sourceIds": ["source-13"]
+      },
+      "results": [
+        {
+          "poiId": "historic-public-library-001",
+          "points": 61,
+          "text": "Boston Public Library – Central Library is a themed comparison candidate: The Boston Public Library was established in 1848 as a municipal public library and continues operating public reading rooms and service areas at its Copley Square facility.",
+          "sourceIds": ["source-01", "source-13"]
+        },
+        {
+          "poiId": "historic-public-library-002",
+          "points": 70,
+          "text": "New York Public Library – Stephen A. Schwarzman Building is a themed comparison candidate: The New York Public Library was established in 1895 and remains a public library institution with ordinary visitor access to service areas and reading rooms at the Fifth Avenue flagship.",
+          "sourceIds": ["source-02", "source-13"]
+        },
+        {
+          "poiId": "historic-public-library-003",
+          "points": 58,
+          "text": "Free Library of Philadelphia – Parkway Central Library is a themed comparison candidate: The Free Library of Philadelphia was founded in 1891 and continues as a public library at the Parkway Central Library, where ordinary visitors can use public collections and reading facilities.",
+          "sourceIds": ["source-03", "source-13"]
+        },
+        {
+          "poiId": "historic-public-library-004",
+          "points": 49,
+          "text": "Chicago Public Library – Harold Washington Library Center is a themed comparison candidate: Chicago Public Library was established in 1873 and remains a municipal public library system; its principal Harold Washington Library Center provides public access to collections and reading areas.",
+          "sourceIds": ["source-04", "source-13"]
+        },
+        {
+          "poiId": "historic-public-library-005",
+          "points": 44,
+          "text": "Cleveland Public Library – Louis Stokes Wing and Main Library is a themed comparison candidate: Cleveland Public Library was founded in 1869 and continues operating as the city’s public library, with public service departments and reading areas at its downtown main facility.",
+          "sourceIds": ["source-05", "source-13"]
+        },
+        {
+          "poiId": "historic-public-library-006",
+          "points": 40,
+          "text": "Detroit Public Library – Main Library is a themed comparison candidate: Detroit Public Library was founded in 1865 and still operates its Main Library as a public-serving municipal library with ordinary visitor access to collections and reading rooms.",
+          "sourceIds": ["source-06", "source-13"]
+        },
+        {
+          "poiId": "historic-public-library-007",
+          "points": 38,
+          "text": "Enoch Pratt Free Library – Central Library is a themed comparison candidate: The Enoch Pratt Free Library was established in 1882 and remains Baltimore’s public library, with its Central Library providing public collections, reference help, and reading spaces.",
+          "sourceIds": ["source-07", "source-13"]
+        },
+        {
+          "poiId": "historic-public-library-008",
+          "points": 36,
+          "text": "Milwaukee Public Library – Central Library is a themed comparison candidate: Milwaukee Public Library was founded in 1878 and its historic Central Library continues to provide ordinary public access to lending, reference, and reading services.",
+          "sourceIds": ["source-08", "source-13"]
+        },
+        {
+          "poiId": "historic-public-library-009",
+          "points": 34,
+          "text": "St. Louis Public Library – Central Library is a themed comparison candidate: St. Louis Public Library was founded in 1865 and continues as a municipal public library; the Central Library provides public service desks, collections, and supervised reading areas.",
+          "sourceIds": ["source-09", "source-13"]
+        },
+        {
+          "poiId": "historic-public-library-010",
+          "points": 31,
+          "text": "Worcester Public Library – Main Library is a themed comparison candidate: Worcester Public Library was founded in 1859 and continues operating its Main Library as a public-serving institution with collections, public desks, and reading facilities.",
+          "sourceIds": ["source-10", "source-13"]
+        },
+        {
+          "poiId": "historic-public-library-011",
+          "points": 29,
+          "text": "Hartford Public Library – Main Library is a themed comparison candidate: Hartford Public Library traces its public-library foundation to 1774 and continues to operate a central public library facility with ordinary visitor access to collections and services.",
+          "sourceIds": ["source-11", "source-13"]
+        },
+        {
+          "poiId": "historic-public-library-012",
+          "points": 27,
+          "text": "Newark Public Library – Main Library is a themed comparison candidate: Newark Public Library was established in 1888 and remains a public library institution with a downtown Main Library offering public collections, reference services, and reading space.",
+          "sourceIds": ["source-12", "source-13"]
+        },
+        {
+          "poiId": "historic-public-library-013",
+          "points": 100,
+          "text": "Toronto Public Library – Toronto Reference Library is the round target: Toronto Public Library was founded in 1883 and remains a public municipal library; the Toronto Reference Library is an identifiable public facility with collection access and reading rooms.",
+          "sourceIds": ["source-13"]
+        },
+        {
+          "poiId": "historic-public-library-014",
+          "points": 64,
+          "text": "Vancouver Public Library – Central Library is a themed comparison candidate: Vancouver Public Library traces its institutional foundation to 1887 and continues as a public library at its Central Library, where visitors use collections and public service areas.",
+          "sourceIds": ["source-14", "source-13"]
+        },
+        {
+          "poiId": "historic-public-library-015",
+          "points": 24,
+          "text": "Halifax Central Library is a themed comparison candidate: Halifax Public Libraries originated in 1864 and remains a public library institution; its Central Library is a fixed public facility with ordinary access to collections and reading areas.",
+          "sourceIds": ["source-15", "source-13"]
+        },
+        {
+          "poiId": "historic-public-library-016",
+          "points": 22,
+          "text": "Birmingham Central Library is a themed comparison candidate: Birmingham’s public library service was established in 1865 and continues at the Library of Birmingham, a fixed municipal facility open to ordinary visitors for collections and reading services.",
+          "sourceIds": ["source-16", "source-13"]
+        },
+        {
+          "poiId": "historic-public-library-017",
+          "points": 20,
+          "text": "Manchester Central Library is a themed comparison candidate: Manchester Free Library was founded in 1852 and the continuing municipal library service operates at Manchester Central Library with public collections, reading rooms, and service desks.",
+          "sourceIds": ["source-17", "source-13"]
+        },
+        {
+          "poiId": "historic-public-library-018",
+          "points": 18,
+          "text": "Liverpool Central Library is a themed comparison candidate: Liverpool’s public library service was founded in 1852 and continues at Liverpool Central Library, where ordinary visitors can use public collections, reference services, and reading spaces.",
+          "sourceIds": ["source-18", "source-13"]
+        },
+        {
+          "poiId": "historic-public-library-019",
+          "points": 26,
+          "text": "Mitchell Library is a themed comparison candidate: The Mitchell Library was established as Glasgow’s public reference library in 1877 and remains an independently named public library facility with public reading and reference areas.",
+          "sourceIds": ["source-19", "source-13"]
+        },
+        {
+          "poiId": "historic-public-library-020",
+          "points": 15,
+          "text": "Edinburgh Central Library is a themed comparison candidate: Edinburgh Central Library opened in 1890 following a public-library foundation in 1887 and continues operating as a municipal public library with visitor-accessible collections and reading rooms.",
+          "sourceIds": ["source-20", "source-13"]
+        }
+      ]
+    },
+    {
+      "id": "round-4",
+      "targetPoiId": "historic-public-library-019",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Mitchell_library.jpg/1280px-Mitchell_library.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Mitchell Library",
+        "attribution": "No machine-readable author provided. Andeggs~commonswiki assumed (based on copyright claims). · Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Mitchell_library.jpg"
+      },
+      "clue": {
+        "text": "A wealthy tobacco producer’s bequest created a reference library that became a major civic knowledge centre. Its Edwardian Baroque home is marked by a copper dome and a symbolic bronze figure; after a neighboring concert hall burned, the surviving façade was absorbed into a later extension that now also contains a theatre and city archives.",
+        "sourceIds": ["source-19"]
+      },
+      "results": [
+        {
+          "poiId": "historic-public-library-001",
+          "points": 63,
+          "text": "Boston Public Library – Central Library is a themed comparison candidate: The Boston Public Library was established in 1848 as a municipal public library and continues operating public reading rooms and service areas at its Copley Square facility.",
+          "sourceIds": ["source-01", "source-19"]
+        },
+        {
+          "poiId": "historic-public-library-002",
+          "points": 60,
+          "text": "New York Public Library – Stephen A. Schwarzman Building is a themed comparison candidate: The New York Public Library was established in 1895 and remains a public library institution with ordinary visitor access to service areas and reading rooms at the Fifth Avenue flagship.",
+          "sourceIds": ["source-02", "source-19"]
+        },
+        {
+          "poiId": "historic-public-library-003",
+          "points": 55,
+          "text": "Free Library of Philadelphia – Parkway Central Library is a themed comparison candidate: The Free Library of Philadelphia was founded in 1891 and continues as a public library at the Parkway Central Library, where ordinary visitors can use public collections and reading facilities.",
+          "sourceIds": ["source-03", "source-19"]
+        },
+        {
+          "poiId": "historic-public-library-004",
+          "points": 43,
+          "text": "Chicago Public Library – Harold Washington Library Center is a themed comparison candidate: Chicago Public Library was established in 1873 and remains a municipal public library system; its principal Harold Washington Library Center provides public access to collections and reading areas.",
+          "sourceIds": ["source-04", "source-19"]
+        },
+        {
+          "poiId": "historic-public-library-005",
+          "points": 39,
+          "text": "Cleveland Public Library – Louis Stokes Wing and Main Library is a themed comparison candidate: Cleveland Public Library was founded in 1869 and continues operating as the city’s public library, with public service departments and reading areas at its downtown main facility.",
+          "sourceIds": ["source-05", "source-19"]
+        },
+        {
+          "poiId": "historic-public-library-006",
+          "points": 37,
+          "text": "Detroit Public Library – Main Library is a themed comparison candidate: Detroit Public Library was founded in 1865 and still operates its Main Library as a public-serving municipal library with ordinary visitor access to collections and reading rooms.",
+          "sourceIds": ["source-06", "source-19"]
+        },
+        {
+          "poiId": "historic-public-library-007",
+          "points": 35,
+          "text": "Enoch Pratt Free Library – Central Library is a themed comparison candidate: The Enoch Pratt Free Library was established in 1882 and remains Baltimore’s public library, with its Central Library providing public collections, reference help, and reading spaces.",
+          "sourceIds": ["source-07", "source-19"]
+        },
+        {
+          "poiId": "historic-public-library-008",
+          "points": 33,
+          "text": "Milwaukee Public Library – Central Library is a themed comparison candidate: Milwaukee Public Library was founded in 1878 and its historic Central Library continues to provide ordinary public access to lending, reference, and reading services.",
+          "sourceIds": ["source-08", "source-19"]
+        },
+        {
+          "poiId": "historic-public-library-009",
+          "points": 31,
+          "text": "St. Louis Public Library – Central Library is a themed comparison candidate: St. Louis Public Library was founded in 1865 and continues as a municipal public library; the Central Library provides public service desks, collections, and supervised reading areas.",
+          "sourceIds": ["source-09", "source-19"]
+        },
+        {
+          "poiId": "historic-public-library-010",
+          "points": 28,
+          "text": "Worcester Public Library – Main Library is a themed comparison candidate: Worcester Public Library was founded in 1859 and continues operating its Main Library as a public-serving institution with collections, public desks, and reading facilities.",
+          "sourceIds": ["source-10", "source-19"]
+        },
+        {
+          "poiId": "historic-public-library-011",
+          "points": 26,
+          "text": "Hartford Public Library – Main Library is a themed comparison candidate: Hartford Public Library traces its public-library foundation to 1774 and continues to operate a central public library facility with ordinary visitor access to collections and services.",
+          "sourceIds": ["source-11", "source-19"]
+        },
+        {
+          "poiId": "historic-public-library-012",
+          "points": 24,
+          "text": "Newark Public Library – Main Library is a themed comparison candidate: Newark Public Library was established in 1888 and remains a public library institution with a downtown Main Library offering public collections, reference services, and reading space.",
+          "sourceIds": ["source-12", "source-19"]
+        },
+        {
+          "poiId": "historic-public-library-013",
+          "points": 41,
+          "text": "Toronto Public Library – Toronto Reference Library is a themed comparison candidate: Toronto Public Library was founded in 1883 and remains a public municipal library; the Toronto Reference Library is an identifiable public facility with collection access and reading rooms.",
+          "sourceIds": ["source-13", "source-19"]
+        },
+        {
+          "poiId": "historic-public-library-014",
+          "points": 46,
+          "text": "Vancouver Public Library – Central Library is a themed comparison candidate: Vancouver Public Library traces its institutional foundation to 1887 and continues as a public library at its Central Library, where visitors use collections and public service areas.",
+          "sourceIds": ["source-14", "source-19"]
+        },
+        {
+          "poiId": "historic-public-library-015",
+          "points": 21,
+          "text": "Halifax Central Library is a themed comparison candidate: Halifax Public Libraries originated in 1864 and remains a public library institution; its Central Library is a fixed public facility with ordinary access to collections and reading areas.",
+          "sourceIds": ["source-15", "source-19"]
+        },
+        {
+          "poiId": "historic-public-library-016",
+          "points": 52,
+          "text": "Birmingham Central Library is a themed comparison candidate: Birmingham’s public library service was established in 1865 and continues at the Library of Birmingham, a fixed municipal facility open to ordinary visitors for collections and reading services.",
+          "sourceIds": ["source-16", "source-19"]
+        },
+        {
+          "poiId": "historic-public-library-017",
+          "points": 57,
+          "text": "Manchester Central Library is a themed comparison candidate: Manchester Free Library was founded in 1852 and the continuing municipal library service operates at Manchester Central Library with public collections, reading rooms, and service desks.",
+          "sourceIds": ["source-17", "source-19"]
+        },
+        {
+          "poiId": "historic-public-library-018",
+          "points": 54,
+          "text": "Liverpool Central Library is a themed comparison candidate: Liverpool’s public library service was founded in 1852 and continues at Liverpool Central Library, where ordinary visitors can use public collections, reference services, and reading spaces.",
+          "sourceIds": ["source-18", "source-19"]
+        },
+        {
+          "poiId": "historic-public-library-019",
+          "points": 100,
+          "text": "Mitchell Library is the round target: The Mitchell Library was established as Glasgow’s public reference library in 1877 and remains an independently named public library facility with public reading and reference areas.",
+          "sourceIds": ["source-19"]
+        },
+        {
+          "poiId": "historic-public-library-020",
+          "points": 18,
+          "text": "Edinburgh Central Library is a themed comparison candidate: Edinburgh Central Library opened in 1890 following a public-library foundation in 1887 and continues operating as a municipal public library with visitor-accessible collections and reading rooms.",
+          "sourceIds": ["source-20", "source-19"]
+        }
+      ]
+    },
+    {
+      "id": "round-5",
+      "targetPoiId": "historic-public-library-003",
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/The_Free_Library_of_Philadelphia_%2853574634710%29.jpg/1280px-The_Free_Library_of_Philadelphia_%2853574634710%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "alt": "Free Library of Philadelphia",
+        "attribution": "ajay_suresh · CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "clue": {
+        "text": "This institution’s founding promise was a library “free to all,” but a disputed bequest first had to survive a legal fight and the collection began in cramped municipal rooms. Its eventual central home is a grand Beaux-Arts landmark arranged with a neighboring civic building in a Parisian-style setting, and its special collections include a celebrated novelist’s papers and stuffed pet raven.",
+        "sourceIds": ["source-03"]
+      },
+      "results": [
+        {
+          "poiId": "historic-public-library-001",
+          "points": 72,
+          "text": "Boston Public Library – Central Library is a themed comparison candidate: The Boston Public Library was established in 1848 as a municipal public library and continues operating public reading rooms and service areas at its Copley Square facility.",
+          "sourceIds": ["source-01", "source-03"]
+        },
+        {
+          "poiId": "historic-public-library-002",
+          "points": 77,
+          "text": "New York Public Library – Stephen A. Schwarzman Building is a themed comparison candidate: The New York Public Library was established in 1895 and remains a public library institution with ordinary visitor access to service areas and reading rooms at the Fifth Avenue flagship.",
+          "sourceIds": ["source-02", "source-03"]
+        },
+        {
+          "poiId": "historic-public-library-003",
+          "points": 100,
+          "text": "Free Library of Philadelphia – Parkway Central Library is the round target: The Free Library of Philadelphia was founded in 1891 and continues as a public library at the Parkway Central Library, where ordinary visitors can use public collections and reading facilities.",
+          "sourceIds": ["source-03"]
+        },
+        {
+          "poiId": "historic-public-library-004",
+          "points": 45,
+          "text": "Chicago Public Library – Harold Washington Library Center is a themed comparison candidate: Chicago Public Library was established in 1873 and remains a municipal public library system; its principal Harold Washington Library Center provides public access to collections and reading areas.",
+          "sourceIds": ["source-04", "source-03"]
+        },
+        {
+          "poiId": "historic-public-library-005",
+          "points": 40,
+          "text": "Cleveland Public Library – Louis Stokes Wing and Main Library is a themed comparison candidate: Cleveland Public Library was founded in 1869 and continues operating as the city’s public library, with public service departments and reading areas at its downtown main facility.",
+          "sourceIds": ["source-05", "source-03"]
+        },
+        {
+          "poiId": "historic-public-library-006",
+          "points": 37,
+          "text": "Detroit Public Library – Main Library is a themed comparison candidate: Detroit Public Library was founded in 1865 and still operates its Main Library as a public-serving municipal library with ordinary visitor access to collections and reading rooms.",
+          "sourceIds": ["source-06", "source-03"]
+        },
+        {
+          "poiId": "historic-public-library-007",
+          "points": 35,
+          "text": "Enoch Pratt Free Library – Central Library is a themed comparison candidate: The Enoch Pratt Free Library was established in 1882 and remains Baltimore’s public library, with its Central Library providing public collections, reference help, and reading spaces.",
+          "sourceIds": ["source-07", "source-03"]
+        },
+        {
+          "poiId": "historic-public-library-008",
+          "points": 33,
+          "text": "Milwaukee Public Library – Central Library is a themed comparison candidate: Milwaukee Public Library was founded in 1878 and its historic Central Library continues to provide ordinary public access to lending, reference, and reading services.",
+          "sourceIds": ["source-08", "source-03"]
+        },
+        {
+          "poiId": "historic-public-library-009",
+          "points": 31,
+          "text": "St. Louis Public Library – Central Library is a themed comparison candidate: St. Louis Public Library was founded in 1865 and continues as a municipal public library; the Central Library provides public service desks, collections, and supervised reading areas.",
+          "sourceIds": ["source-09", "source-03"]
+        },
+        {
+          "poiId": "historic-public-library-010",
+          "points": 28,
+          "text": "Worcester Public Library – Main Library is a themed comparison candidate: Worcester Public Library was founded in 1859 and continues operating its Main Library as a public-serving institution with collections, public desks, and reading facilities.",
+          "sourceIds": ["source-10", "source-03"]
+        },
+        {
+          "poiId": "historic-public-library-011",
+          "points": 25,
+          "text": "Hartford Public Library – Main Library is a themed comparison candidate: Hartford Public Library traces its public-library foundation to 1774 and continues to operate a central public library facility with ordinary visitor access to collections and services.",
+          "sourceIds": ["source-11", "source-03"]
+        },
+        {
+          "poiId": "historic-public-library-012",
+          "points": 23,
+          "text": "Newark Public Library – Main Library is a themed comparison candidate: Newark Public Library was established in 1888 and remains a public library institution with a downtown Main Library offering public collections, reference services, and reading space.",
+          "sourceIds": ["source-12", "source-03"]
+        },
+        {
+          "poiId": "historic-public-library-013",
+          "points": 51,
+          "text": "Toronto Public Library – Toronto Reference Library is a themed comparison candidate: Toronto Public Library was founded in 1883 and remains a public municipal library; the Toronto Reference Library is an identifiable public facility with collection access and reading rooms.",
+          "sourceIds": ["source-13", "source-03"]
+        },
+        {
+          "poiId": "historic-public-library-014",
+          "points": 19,
+          "text": "Vancouver Public Library – Central Library is a themed comparison candidate: Vancouver Public Library traces its institutional foundation to 1887 and continues as a public library at its Central Library, where visitors use collections and public service areas.",
+          "sourceIds": ["source-14", "source-03"]
+        },
+        {
+          "poiId": "historic-public-library-015",
+          "points": 17,
+          "text": "Halifax Central Library is a themed comparison candidate: Halifax Public Libraries originated in 1864 and remains a public library institution; its Central Library is a fixed public facility with ordinary access to collections and reading areas.",
+          "sourceIds": ["source-15", "source-03"]
+        },
+        {
+          "poiId": "historic-public-library-016",
+          "points": 48,
+          "text": "Birmingham Central Library is a themed comparison candidate: Birmingham’s public library service was established in 1865 and continues at the Library of Birmingham, a fixed municipal facility open to ordinary visitors for collections and reading services.",
+          "sourceIds": ["source-16", "source-03"]
+        },
+        {
+          "poiId": "historic-public-library-017",
+          "points": 44,
+          "text": "Manchester Central Library is a themed comparison candidate: Manchester Free Library was founded in 1852 and the continuing municipal library service operates at Manchester Central Library with public collections, reading rooms, and service desks.",
+          "sourceIds": ["source-17", "source-03"]
+        },
+        {
+          "poiId": "historic-public-library-018",
+          "points": 46,
+          "text": "Liverpool Central Library is a themed comparison candidate: Liverpool’s public library service was founded in 1852 and continues at Liverpool Central Library, where ordinary visitors can use public collections, reference services, and reading spaces.",
+          "sourceIds": ["source-18", "source-03"]
+        },
+        {
+          "poiId": "historic-public-library-019",
+          "points": 53,
+          "text": "Mitchell Library is a themed comparison candidate: The Mitchell Library was established as Glasgow’s public reference library in 1877 and remains an independently named public library facility with public reading and reference areas.",
+          "sourceIds": ["source-19", "source-03"]
+        },
+        {
+          "poiId": "historic-public-library-020",
+          "points": 14,
+          "text": "Edinburgh Central Library is a themed comparison candidate: Edinburgh Central Library opened in 1890 following a public-library foundation in 1887 and continues operating as a municipal public library with visitor-accessible collections and reading rooms.",
+          "sourceIds": ["source-20", "source-03"]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-01",
+      "title": "Boston Public Library",
+      "url": "https://en.wikipedia.org/wiki/Boston_Public_Library",
+      "retrievedAt": "2026-09-01T18:26:12.201Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-02",
+      "title": "New York Public Library",
+      "url": "https://en.wikipedia.org/wiki/New_York_Public_Library",
+      "retrievedAt": "2026-09-01T18:26:12.103Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-03",
+      "title": "Free Library of Philadelphia",
+      "url": "https://en.wikipedia.org/wiki/Free_Library_of_Philadelphia",
+      "retrievedAt": "2026-09-01T18:26:13.379Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-04",
+      "title": "Chicago Public Library",
+      "url": "https://en.wikipedia.org/wiki/Chicago_Public_Library",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-05",
+      "title": "Cleveland Public Library",
+      "url": "https://en.wikipedia.org/wiki/Cleveland_Public_Library",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-06",
+      "title": "Detroit Public Library",
+      "url": "https://en.wikipedia.org/wiki/Detroit_Public_Library",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-07",
+      "title": "Enoch Pratt Free Library",
+      "url": "https://en.wikipedia.org/wiki/Enoch_Pratt_Free_Library",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-08",
+      "title": "Milwaukee Public Library",
+      "url": "https://en.wikipedia.org/wiki/Milwaukee_Public_Library",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-09",
+      "title": "St. Louis Public Library",
+      "url": "https://en.wikipedia.org/wiki/St._Louis_Public_Library",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-10",
+      "title": "Worcester Public Library",
+      "url": "https://en.wikipedia.org/wiki/Worcester_Public_Library",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-11",
+      "title": "Hartford Public Library",
+      "url": "https://en.wikipedia.org/wiki/Hartford_Public_Library",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-12",
+      "title": "Newark Public Library",
+      "url": "https://en.wikipedia.org/wiki/Newark_Public_Library",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-13",
+      "title": "Toronto Public Library",
+      "url": "https://en.wikipedia.org/wiki/Toronto_Public_Library",
+      "retrievedAt": "2026-09-01T18:26:12.338Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-14",
+      "title": "Vancouver Public Library",
+      "url": "https://en.wikipedia.org/wiki/Vancouver_Public_Library",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-15",
+      "title": "Halifax Public Libraries",
+      "url": "https://en.wikipedia.org/wiki/Halifax_Public_Libraries",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-16",
+      "title": "Birmingham Library",
+      "url": "https://en.wikipedia.org/wiki/Birmingham_Library",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-17",
+      "title": "Manchester Central Library",
+      "url": "https://en.wikipedia.org/wiki/Manchester_Central_Library",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-18",
+      "title": "Liverpool Central Library",
+      "url": "https://en.wikipedia.org/wiki/Liverpool_Central_Library",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    },
+    {
+      "id": "source-19",
+      "title": "Mitchell Library",
+      "url": "https://en.wikipedia.org/wiki/Mitchell_Library",
+      "retrievedAt": "2026-09-01T18:26:12.252Z",
+      "provenance": "verified"
+    },
+    {
+      "id": "source-20",
+      "title": "Edinburgh Central Library",
+      "url": "https://en.wikipedia.org/wiki/Edinburgh_Central_Library",
+      "retrievedAt": "2025-02-14T00:00:00Z",
+      "provenance": "model"
+    }
+  ],
+  "theme": {
+    "title": "Historic Public Libraries in Cities",
+    "introduction": "Quiet halls gather the memory of whole cities: grand reading rooms, worn steps, and shelves that have welcomed generations of curious visitors.",
+    "inclusionCriteria": "Include a location only when every condition is met: (1) it is an individually named, permanent public-serving library institution, such as a city, municipal, national, state, or provincial library; (2) the institution was founded, chartered, or opened for library service on or before 31 December 1899; (3) it still operates as a library at a fixed site on the date of play; (4) ordinary visitors can enter a public service area, reading room, reference room, or equivalent during published or customary hours, subject only to routine registration, identification, or bag-check requirements; (5) the site lies within the current administrative boundary of a present-day city or incorporated urban municipality; (6) the principal library facility or independently named library occupies a single mappable location with a recognizable public entrance; and (7) its principal function remains providing public access to books, periodicals, or other library collections, whether by lending, reference use, or supervised reading."
+  }
+}

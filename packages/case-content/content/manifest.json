@@ -60,6 +60,11 @@
       "caseNumber": 20693,
       "revision": 1,
       "file": "./cases/2026-08-28/v1.json"
+    },
+    "2026-08-29": {
+      "caseNumber": 20694,
+      "revision": 1,
+      "file": "./cases/2026-08-29/v1.json"
     }
   }
 }
